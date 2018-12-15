@@ -1,0 +1,27 @@
+Lightning launcher é uma alternativa rápida, leve e totalmente customizável para a homescreen (tela inicial) do Android.
+
+Principais funcionalidades:
+- grande variedade de layouts: grid, colunas, horizonal, vertical, posicionamento livre...
+- customização praticamente infinita: troque o texto, ícones, fontes, cores, alinhamento, tamanhos e tudo mais.
+- conceito inovador: sua tela é como uma superfície infinita onde apps e widgets podem ser posicionados em qualquer lugar.
+- cada item (app, atalho, widget,...) pode ser customizado individualmente, girado, ter sua área ajustada, etc. seja para aumentar a legibilidade ou simplesmente por diversão ;)
+- suporte para pastas sofisticadas: elas podem inclusive conter widgets ou outras pastas, possibilitando layouts complexos. Cada pasta é inteiramente customizável, desde o layout até o tema visual.
+- suporte para atalhos (incl. via softkeys) e gestos: associe atalhos conforme a sua preferência e inicie aplicativos através de gestos.
+- feito a partir do zero com o objetivo de ser o mais rápido, econômico e usar menos memória RAM. Com mais memória RAM livre, seus aplicativos rodam mais rápido, e a sua bateria dura mais.
+- e muito, muito mais...
+
+E MAIS: Lightning Launcher é GRÁTIS, não possui banners, não precisa de permissão de acesso à internet e nem root. Não existe uma versão full/pro/HD. Todo o poder de customização do Lightning Launcher está disponível em um único aplicativo, pequeno e bastante eficiente. Ainda assim, se você quiser, pode conferir os aplicativos extra que aumentam as funcionalidades do Lightning Launcher. Comprando qualquer um deles você ajuda a manter o projeto vivo... e também ajuda este humilde desenvolvedor, que quer fazer desde app o *melhor* launcher de todos.
+
+Todos os comentários, sugestões e relatos de bugs são bem-vindos. Os comentários no Google Play são difíceis de acompanhar, por fazer envie quaisquer perguntas/sugestões/bugs para pierrox@pierrox.net.
+
+Visite nossa página no facebook (http://www.facebook.com/LightningLauncher) para acompanhar o status do desenvolvimento, sugerir novos recursos, fazer perguntas ou simplesmente bater um papo.
+
+Lightning Launcher: SUA homescreen, SEU estilo!
+
+Divirta-se!
+
+Permissões:
+- CALL_PHONE: necessária para criar atalhos de discagem. Essa permissão é usada por todos os launchers que suportam atalhos para contatos. Prometo que o Lightning Launcher não vai sair discando sozinho :)
+- EXPAND_STATUS_BAR: como diz o nome, usada na ação "mostrar barra de status"
+- SET_WALLPAPER_HINTS: usada internamente para configurar o tamanho do wallpaper.
+- e só!

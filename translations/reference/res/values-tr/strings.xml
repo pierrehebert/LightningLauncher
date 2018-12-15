@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Başlatıcı - Türkçe</string>
+<string name="pack_name_short">Türkçe</string>
+<string name="tranlator_name">Burhan Keleş - klsburhan@hotmail.com</string>
+
+<string name="description">Lightning son derece özelleştirilebilen bâriz bir şekilde hızlı olan bir başlatıcıdır.\nAz hafıza kullanır ve asla yavaşlamaz.\n\nArtık sayfalarla sınırlı değilsiniz. Bundan böyle, masaüstünüz sonsuz bir tuval üzerindeki güzel bir sanat çalışması.\nİmkânlar sonsuz.\n\nBüyük özellikler şunları ihtivâ eder:\n•Dikey ve yatay yönler için farklı düzenler ızgara boyutları\n•Paneller, mevcûd sayfanızın üstünde olan kaydırılabilir masaüstleri\n•Öğeleri sabitleme\n•Kutu ayarları: arka plan rengini özelleştirme, sınırlar, ve herhangi bir öğenin kenar boşlukları\n•Hür mod: Bir ızgara mı? Nedir? Hür mod çizgilerden kurtulmanızı, ve öğeleri döndürmenizi mümkün kılar\n•Çoklu masaüstü ızgaraları\n•22 farklı hareket ile 29 farklı eylem (kısayollar ile de yapılabilir)\n•Masaüstlerinizden birini kilit ekranınız olarak kullanın! (sâdece beta)\n•Durma noktaları: Lightning\'e kaydırmayı ne zaman durduracağını söyleyin\n•Özel kaydırma yönleri\n•Aşağıdakiler de dâhil olmak üzere herhangi bir öğe üzerinde tam hâkimiyet:\n1. metin yazı tipi, gölge ve renk\n2. galerinizden özel simgeler, ölçekleme\n3. simgenin etikete ne kadar ve hangi tarafının yakın olacağını belirleme\n4. arka plan olarak .9.png desteği ile kutu ayarları (bu ciddî bir şey. .9\'lar havalıdır.)\n5. şeffaflık, ve herhangi bir eylemi başlatmak için yön hareketleri (meselâ Chrome simgesi üzerinde yukarı kaydırmak Dolphin Tarayıcı\'yı başlatır)\n•Özel masaüstünüzü tam yedekleme veyâ bir tarz olarak seçenekleri kaydedin\n•Düzeninizi APK olarak çıkartın\n------\nLightning, KitKat\'da mevcûd olan durum ve gezinti çubuklarının şefaflığını destekler.\n------\nTasker ve benzerleri gibi güçlü araçlarda olduğu gibi, Lightning biraz öğrenme eğrisine sâhibtir. Fakat ortada Lightning\'in gücünü sunan başka bir başlatıcı yok.\n\nHücum!\n\nİstediğiniz yorumu, tavsiyeyi, ve hatâ raporlarını gönderebilirsiniz.\nBana e-posta gönderebilirsiniz, Pierre Hébert, pierrox@pierrox.net.\nArzu ederseniz, diğer kullanıcılardan geri bildirim almak, özellikleri tartışmak, sorularınıza cevap bulmak, veyâ beta test grubuna katılmak için G+ sayfamıza katılın.\nHerhangi bir ayara uzun basarak çevrimiçi yardım dosyalarına erişebilirsiniz.</string>
+
+
+<string name="start_activity_error">Uygulama başlatılamadı</string>
+<string name="menu_add">Öğe ilâve et...</string>
+<string name="menu_settings">Android</string>
+<string name="menu_customize">Lightning ayarları</string>
+<string name="menu_customize_folder">Klasör</string>
+<string name="menu_objects_layout">Düzenle</string>
+<string name="dialog_action_title">Ekle...</string>
+
+<string-array name="dialog_action_values">
+<item>Uygulama</item>
+<item>Kısayol</item>
+<item>Uygulama Aracı</item>
+<item>LL Aracı</item>
+<item>Klasör</item>
+<item>Durma noktası</item>
+</string-array>
+
+<string name="mi_remove">Sil</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Öğeyi özelleştir...</string>
+<string name="mi_move_to_screen">Masaüstüne taşı ...</string>
+<string name="mi_edit_icon">Bir simge seçin</string>
+<string name="mi_edit_label">Etiketi düzenle</string>
+<string name="mi_pick_app">Uygulama seç</string>
+<string name="mi_pick_widget">Başka bir araç seç</string>
+<string name="mi_edit_more">Özellikler...</string>
+<string name="mi_position">Konum...</string>
+<string name="mi_pin">Sabitle</string>
+<string name="mi_unpin">Sabitlemeyi kaldır</string>
+<string name="mi_add_to_launcher">Başlatıcıya ilâve et</string>
+<string name="mi_hide_unhide">Gizle/Göster</string>
+<string name="mi_app_details">Uygulama bilgileri</string>
+<string name="mi_widget_options">Araç ayarları</string>
+<string name="mi_move_out_of_folder">Klasörün dışına taşı</string>
+<string name="first_use_title">Hoş Geldiniz!</string>
+<string name="first_use_message">Lightning Başlatıcı hafif ve son derece özelleştirilebilir olan bir başlatıcı muâdilidir.\n\nŞu ânda bâzı ileri seviye seçeneklerin gizlendiği normal modu çalıştırıyorsunuz. Tüm özelliklere ve seçeneklere erişmek için uzman moduna geçin (Genel ayarlar).\n\nLL şu anda uygulamaların listesini ilk ve son kez hazırlıyor.\n\nOkuduğunuz ve LL\'yi kullandığınız için teşekkürler!</string>
+<string name="all_apps">Tüm Uygulamalar</string>
+<string name="menu_refresh">Yenile</string>
+<string name="menu_zoom">Yakınlaştır</string>
+<string name="menu_see_only_visible">Sadece görünür</string>
+<string name="menu_see_only_hidden">Sadece gizli</string>
+<string name="menu_see_all">Tüm Uygulamalar</string>
+<string name="empty_folder">Klasöre bir şey ilâve etmek için uzun basın\nDaha fazla seçenek için klasör öğesini özelleştirin</string>
+<string name="file_picker_activity_up">YUKARI</string>
+
+<string name="settings">Tüm ayarlar</string>
+<string name="general_t">Genel</string>
+<string name="general_s">Hareketler, eylemler ve daha fazlası</string>
+<string name="dashboard_t">Masaüstü</string>
+<string name="dashboard_s">Öğe tarzı, tasarım, kaydırma seçenekleri</string>
+<string name="app_drawer_t">Uygulama Menüsü</string>
+<string name="app_drawer_s">Uygulama menüsü ayarları</string>
+<string name="app_killer_t">Uygulamaları zorla durdur</string>
+<string name="app_killer_s">Uygulamaları Lightning ile sonlandır</string>
+<string name="donate_t">Bağış yap</string>
+<string name="donate_s">Lightning uygulamasını desteklemek ister misiniz?</string>
+<string name="backup_t">Yedekle</string>
+<string name="restore_t">Geri yükle</string>
+<string name="rate_t">Lightning Uygulamasını Derecelendirin</string>
+<string name="rate_s">Düşündüklerinizi bize söyleyin</string>
+<string name="facebook_t">Google +\'da Lightning Başlatıcı</string>
+<string name="facebook_s">Uygulama güncellemelerinden haberdar olun, bir özellik tavsiye edin, veyâ bir hatâ bildirin</string>
+<string name="ld_t">Lightning Menüsü</string>
+<string name="ld_s">Son derece ileri seviye bir Tüm Uygulamalar sayfası</string>
+<string name="customize_ll">Lightning Uygulamasını Özelleştir</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Lisan seçenekleri</string>
+<string name="language_s">Bir lisan paketi yükleyin</string>
+<string name="lg_pick_t">Lisan paketinizi seçin</string>
+<string name="lg_pick_s">Lightning uygulaması tekrâr başlatılacaktır.</string>
+<string name="lg_install_t">Başka bir lisan yükle</string>
+<string name="lg_install_s">Google Play\'den yükle</string>
+
+<string name="lg_contrib_t">Katkıda bulunun</string>
+<string name="lg_contrib_s">Kendi lisan paketinizi oluşturun veyâ lisan paketini güncelleyin</string>
+<string name="events_t">Hâller ve eylemler</string>
+<string name="events_s">Hareketleri ve eylemlerini denetleyin</string>
+<string name="ev_home">Ana sayfa tuşu</string>
+<string name="ev_menu">Menü tuşu</string>
+<string name="ev_search">Arama tuşu</string>
+<string name="ev_item_tap">Dokunma</string>
+<string name="ev_item_ltap">Uzun dokunma</string>
+<string name="ev_bg_tap">Boş bir alana dokunma</string>
+<string name="ev_bg_dtap">Boş alana çift dokunma</string>
+<string name="ev_bg_ltap">Boş alana uzun dokunma</string>
+<string name="ev_swipe_r">Sağa kaydırma</string>
+<string name="ev_swipe_l">Sola kaydırma</string>
+<string name="ev_swipe_u">Yukarı kaydırma</string>
+<string name="ev_swipe_d">Aşağı kaydırma</string>
+<string name="ev_swipe2_r">2 parmak ile sola kaydırma</string>
+<string name="ev_swipe2_l">2 parmak ile sağa kaydırma</string>
+<string name="ev_swipe2_u">2 parmak ile yukarı kaydırma</string>
+<string name="ev_swipe2_d">2 parmak ile aşağı kaydırma</string>
+
+<string name="an_u">Geri al</string>
+<string name="an_n">(Kilit) Hiçbir şey yapma</string>
+<string name="an_ad">Tüm Uygulamalar</string>
+<string name="an_zfs">Tam ölçek yakınlaştırın</string>
+<string name="an_z100">100p yakınlaştırın</string>
+<string name="an_zt">Tam ölçek veyâ 100p yakınlaştırın</string>
+<string name="an_pd">Önceki masaüstü</string>
+<string name="an_nd">Sonraki masaüstü</string>
+<string name="an_el">Düzenle</string>
+<string name="an_ao">Öğe ilâve et</string>
+<string name="an_cl">Ligthning uygulamasını özelleştir</string>
+<string name="an_cd">Mevcûd masaüstü ayarları</string>
+<string name="an_la">Bir uygulama başlat</string>
+<string name="an_ls">Bir kısayolu başlat</string>
+<string name="an_sw">Bir duvar kağıdı seç</string>
+<string name="an_lm">Lightning Menüsü</string>
+<string name="an_ssb">Durum çubuğunu göster/gizle</string>
+<string name="an_smsb">Durum çubuğunu ve Lightning menüsünü  göster/gizle</string>
+<string name="an_sn">Bildirim çubuğunu genişlet</string>
+<string name="an_s">Arama</string>
+<string name="an_i_m">Öğeyi taşı</string>
+<string name="an_i_c">Öğeyi özelleştir</string>
+<string name="an_i_me">Öğe menüsü</string>
+<string name="an_i_l">Öğeyi başlat</string>
+
+<string name="auto_edit_t">Otomatik düzenle</string>
+<string name="auto_edit_s">Bir öğe ilâve ettikten sonra düzenleme moduna gir</string>
+<string name="page_anim_t">Masaüstü değiştirme geçişi</string>
+
+<string-array name="page_anim_e">
+<item>Yok</item>
+<item>Solarak</item>
+<item>Yatay kaydırma</item>
+<item>Dikey kaydırma</item>
+</string-array>
+
+<string name="keep_in_memory_t">Lightning uygulamasını çalıştırmaya devam et</string>
+<string name="keep_in_memory_s">Yükleme süresi kısaltılacak, lâkin daha fazla hafıza kullanılacaktır</string>
+<string name="tools_pick_shortcut">Bir kısayol seç</string>
+<string name="tools_pick_widget">Bir araç seç</string>
+<string name="new_style">[Yeni bir tarz yap]</string>
+<string name="choose_style_name">Adı ne olsun?</string>
+<string name="delete_style">Bu tarz kaldırılsın mı?</string>
+<string name="relayout_items">Bu tarz mevcûd olandan daha az sütuna sahip. Devam etmek ve öğeleri tekrâr düzenlemek istiyor musunuz?</string>
+<string name="style_saved">Tarz kaydedildi</string>
+<string name="style_loaded">Tarz yüklendi</string>
+<string name="install_widgets">LL aracı ilâve et</string>
+<string name="item_settings_icon_copy_failed">Simge kopyalanamadı :(</string>
+<string name="tool_not_available">Üzgünüm, bu araç kullanılabilir değil.</string>
+<string name="default_folder_name">Klasör</string>
+<string name="app_added" formatted="true">%s ilâve edildi</string>
+<string name="select_launcher_title">Varsayılan başlatıcıyı seçin</string>
+<string name="extras">İlâveler</string>
+<string name="permission_denied">İzin reddedildi. Arama kısayolları için lütfen LL doğrudan arama eklentisini yükleyin</string>
+<string name="appearance">Görünüm\nDeğişikliklere bakmak için sola kaydırın</string>
+<string name="background_t">Duvar kağıdı</string>
+<string name="background_s">Duvar kağıdını ve renk tonunu seçin, veyâ kaydırmayı etkinleştirin</string>
+<string name="grid_t">Izgara çizgileri</string>
+<string name="grid_s">Genişlik, renk ve konum</string>
+<string name="folder_look_t">Klasör pencereleri</string>
+<string name="folder_look_s">Arka plan, sınırlar, animasyonlar</string>
+<string name="this_folder_look_t">Mevcûd klasör penceresi</string>
+<string name="this_folder_look_s">Arka plan, sınırlar, animasyonlar</string>
+<string name="layout_t">Düzen</string>
+<string name="layout_s">Öğe yerleştirme modu (hür/ızgara), ızgara boyutu</string>
+<string name="zoom_scroll_t">Kaydırma/yakınlaştırma seçenekleri</string>
+<string name="zoom_scroll_s">Yukarıya mı, aşağıya mı, sola mı yoksa sağa mı?</string>
+<string name="folder_feel_t">İlâve klasör seçenekleri</string>
+<string name="folder_feel_s">Otomatik kapatma...</string>
+<string name="this_folder_feel_t">Bu klasör</string>
+<string name="pg_misc_t">Çeşitli</string>
+<string name="pg_misc_s">Yönlendirme ve daha fazlası</string>
+<string name="color_c">Renk</string>
+
+<string name="wp_w_t">Genişlik</string>
+<string name="wp_h_t">Yükseklik</string>
+<string name="wp_auto">Varsayılan için 0 kullanın</string>
+<string name="wp_scroll_t">Duvar kağıdını kaydır</string>
+<string name="wp_scroll_s">Performansa tesir edebilir</string>
+
+<string name="grid_h_color_t">Yatay Renk</string>
+<string name="grid_h_size_t">Yatay kalınlık</string>
+<string name="grid_v_color_t">Dikey renk</string>
+<string name="grid_v_size_t">Dikey kalınlık</string>
+<string name="grid_color_s">Hiçbir çizgiyi şeffaf yapma</string>
+<string name="grid_size_s">0, 1 piksel kalınlığında</string>
+<string name="grid_above">Masaüstü üzerine çiz</string>
+<string name="folder_title">Başlık ayarları</string>
+<string name="display_title">Başlığı görüntüle</string>
+<string name="font_color">Renk</string>
+<string name="font_size">Yazı boyutu</string>
+<string name="folder_anims">Animasyon</string>
+<string name="anim_in">Aç</string>
+<string name="anim_out">Kapat</string>
+
+<string name="behaviour">Davranış</string>
+<string name="free_mode_t">Varsayılan olarak ayır</string>
+<string name="free_mode_s">Bir öğeyi ilâve ederken, öğeyi ızgaradan otomatik olarak ayır</string>
+<string name="dual_pos_t">Çift konum</string>
+<string name="dual_pos_s">Öğelerin iki konuma sahip olmasına izin ver: biri dikey modda (birincil), diğeri de yatay modda</string>
+<string name="placement">Yerleşim</string>
+<string name="colums">Izgara sütunları</string>
+<string name="rows">Izgara satırları</string>
+<string name="mode_t">Mod</string>
+
+<string-array name="mode_e">
+<item>Otomatik</item>
+<item>Sabit sayı</item>
+<item>Sabit boyut</item>
+</string-array>
+
+<string name="number">Sayı</string>
+<string name="size">Boyut</string>
+<string name="col_num_s">Sayfaya düşen sütunlar</string>
+<string name="col_size_s">Her sütunun genişliği</string>
+<string name="row_num_s">Sayfaya düşen satırlar</string>
+<string name="row_size_s">Her satırın yüksekliği</string>
+<string name="scroll_dir_t">Kaydırma yönü</string>
+
+<string-array name="scroll_dir_e">
+<item>Otomatik</item>
+<item>Sadece yatay</item>
+<item>Sadece dikey</item>
+<item>Her ikisi de</item>
+<item>Kaydırma yok</item>
+</string-array>
+
+<string name="overscroll_t">Kaydırma animasyonu</string>
+
+<string-array name="overscroll_e">
+<item>Yavaşlat</item>
+<item>Sıçrama</item>
+<item>Devre dışı</item>
+</string-array>
+
+<string name="snap_to_pages_t">Sayfalara uydur</string>
+<string name="snap_to_pages_s">Kaydırmayı sayfa sonunda daimâ durdur</string>
+<string name="fit_item_t">Masaüstünü öğelere sığdır</string>
+<string name="fit_item_s">Masaüstü öğeler ne kadar giderse o kadar kayar</string>
+<string name="no_diagonal_scrolling_t">Çapraz kaydırmayı devre dışı bırak</string>
+<string name="no_diagonal_scrolling_s">Tek seferde sadece bir yöne kaydır</string>
+<string name="pinch_zoom_t">Yakınlaştırmak veya uzaklaştırmak için sıkıştır</string>
+<string name="auto_close_t">Otomatik kapat</string>
+<string name="auto_close_s">Klasöre âid bir uygulama başlatıldığında klasörü kapat</string>
+<string name="anim_glitch_fix_t">Animasyon aksaklık düzeltme</string>
+<string name="anim_glitch_fix_s">Android\'in bâzı sürümlerinde görünen bir aksaklık düzeltmek için bir 1 piksel doldurma ekle</string>
+<string name="screen_orient_t">Masaüstü yönü</string>
+
+<string-array name="screen_orient_e">
+<item>Sensör</item>
+<item>Dikey kilidi</item>
+<item>Yatay kilidi</item>
+<item>Sistem varsayılanı</item>
+</string-array>
+
+<string name="hide_statusbar_t">Durum çubuğunu gizle</string>
+<string name="manage">İdâre et</string>
+<string name="load_style_t">Bir tarz yükle</string>
+<string name="load_style_s">Mevcûd yapılandırmayı bir tarzın üzerine yaz</string>
+<string name="save_style_t">Bir tarza kaydet</string>
+<string name="save_style_s">Mevcûd yapılandırmayı bir tarza kaydet</string>
+<string name="confirm_reset_page">Emin misiniz?</string>
+<string name="reset_page_t">Mevcûd masaüstünü sıfırla</string>
+<string name="reset_page_s">Tüm öğeleri kaldırır ve varsayılan tarzı yükler</string>
+<string name="tab_label">Metin</string>
+<string name="tab_icon">Simge</string>
+<string name="tab_layout">Kon.</string>
+<string name="tab_box">Kutu</string>
+<string name="tab_misc">Çeşitli</string>
+<string name="l_main">Ana</string>
+<string name="l_display">Etiketi görüntüle</string>
+<string name="l_custom">Özel bir etiket ayarla</string>
+<string name="l_size">Yazı tipi boyutu</string>
+<string name="l_type_face">Özel bir yazı tipi kullan...</string>
+<string name="l_style_t">Yazı tipi tarzı</string>
+
+<string-array name="l_style_e">
+<item>Normal</item>
+<item>Kalın</item>
+<item>İtalik</item>
+<item>Kalın ve italik</item>
+</string-array>
+
+<string name="l_num_lines">Âzamî satır sayısı</string>
+<string name="l_colors">Renkler</string>
+<string name="l_color_normal">Normal renk</string>
+<string name="l_color_selected">Seçili renk</string>
+<string name="l_color_focused">Odaklanılan renk</string>
+<string name="l_shadow">Gölge</string>
+<string name="l_shadow_enable">Gölgeyi etkinleştir</string>
+<string name="l_shadow_radius">Yarıçap</string>
+<string name="l_shadow_offset_x">X uzaklığı</string>
+<string name="l_shadow_offset_y">Y uzaklığı</string>
+<string name="l_shadow_color">Renk</string>
+<string name="i_main">Ana</string>
+<string name="i_display">Simgeyi görüntüle</string>
+<string name="i_custom">Bir simge seçin</string>
+<string name="i_folder_t">Klasör simgesi tarzı</string>
+
+<string-array name="i_folder_e">
+<item>Simge</item>
+<item>Izgara</item>
+<item>Blok</item>
+</string-array>
+
+<string name="i_effect">Katmanlar</string>
+<string name="i_e_back">Arka plan resmi</string>
+<string name="i_e_over">Üstüne koy</string>
+<string name="i_e_mask">Maske</string>
+<string name="i_e_scale">Dâhilî ölçek</string>
+
+<string name="i_smooth">Yumuşak simge</string>
+<string name="i_scale_t">Ölçek</string>
+<string name="i_scale_s">Büyük ölçek daha fazla hafıza kullanır. Dikkatli kullanın.</string>
+<string name="i_reflect">Yansıma</string>
+<string name="i_reflect_enable">Yansımayı etkinleştir</string>
+<string name="i_reflect_overlap">Simge ile üst üste</string>
+<string name="i_reflect_size">Boyut</string>
+<string name="i_reflect_scale">Ölçek</string>
+<string name="la_margin">Simge ve etiket arasındaki kenar boşluğu</string>
+<string name="la_position_t">Etiket konumu</string>
+
+<string-array name="la_position_e">
+<item>Sol</item>
+<item>Üst</item>
+<item>Sağ</item>
+<item>Alt</item>
+<item>Merkez</item>
+</string-array>
+
+<string name="b_alignh_t">Yatay hizâlama</string>
+
+<string-array name="b_alignh_e">
+<item>Sol</item>
+<item>Merkez</item>
+<item>Sağ</item>
+<item>Özel</item>
+</string-array>
+
+<string name="b_alignv_t">Dikey hizâlama</string>
+
+<string-array name="b_alignv_e">
+<item>Üst</item>
+<item>Orta</item>
+<item>Alt</item>
+<item>Özel</item>
+</string-array>
+
+<string name="b_hint">Bir veyâ daha fazla bölge seçin, \nakabinde aşağıdan rengi/boyutu seçin</string>
+<string name="b_size">Seçili bölgelerin boyutu</string>
+<string name="b_color_normal">Normal renk</string>
+<string name="b_color_selected">Seçilen renk</string>
+<string name="b_color_focused">Odaklanılan renk</string>
+<string name="b_color_s">Seçili bölgelerin rengi</string>
+<string name="m_enabled_t">Tıklanabilir</string>
+<string name="m_enabled_s">Devre dışı bırakılmış bir öğeyi seçmek için düzenleme moduna girin</string>
+<string name="m_alpha_t">Şefafflık</string>
+<string name="m_alpha_s">Randımanı etkileyebilir. 0 tamamen şeffaf.</string>
+<string name="m_smooth_transform_t">Dönüştürüldüğünde yumuşak</string>
+<string name="m_smooth_transform_s">Randımanı etkileyebilir</string>
+
+<string-array name="preview_item_labels">
+<item>Normal</item>
+<item>Seçili</item>
+<item>Odaklanmış</item>
+</string-array>
+
+<string name="il_preview">Bakma modu\n(gerçeğinden farklı olabilir)</string>
+<string name="preview_toast">Bakma modu\nBurada hiçbir şey yapamazsınız</string>
+<string name="pick_a_font">Bir .TTF veyâ .OTF dosyası nakledin...</string>
+<string name="system_font">Varsayılan yazı tipi</string>
+<string name="left">sol</string>
+<string name="top">yukarı</string>
+<string name="right">sağ</string>
+<string name="bottom">alt</string>
+<string name="margin">kenar</string>
+<string name="border">sınır</string>
+<string name="padding">doldur</string>
+<string name="content">muhteva</string>
+<string name="ovr_custom">özel</string>
+
+<string name="pick_t">Bir simge seçin:</string>
+<string name="pick_file">Lightning Dosya İdârecisi</string>
+<string name="pick_gallery">Diğer dosya idârecisi</string>
+<string name="pick_icon_pack">Uyumlu simge paketi</string>
+
+<string name="tutorials">Rehberler</string>
+<string name="donate">Bağış yapın</string>
+<string name="other_apps">Diğer uygulamalar</string>
+<string name="tut_intro">Takdîm videosu</string>
+<string name="tut_custo">Nesneleri özelleştir</string>
+<string name="tut_free_mode">Hür mod</string>
+<string name="tut_lock">Masaüstünü kilitle</string>
+<string name="tut_pin">Pin / rıhtım ürün</string>
+<string name="tut_scroll">Masaüstü ve gezinme</string>
+<string name="dialog_color_picker">Renk Seçici</string>
+
+<string name="shortcut_settings">Lightning Ayarları</string>
+<string name="shortcut_actions">Lightning Eylemi</string>
+
+<string name="no_backup_archive">Yedekleme mevcûd değil</string>
+<string name="backup_in_progress">Yedekleme devam ediyor ...</string>
+<string name="restore_in_progress">Geri yükleme devam ediyor…</string>
+<string name="backup_done">Yedekleme şuraya kaydedildi:\n% s</string>
+<string name="backup_error">Yedekleme hatâsı, SD Kart üzerinde yeterli depolama alanı olduğundan emin olun</string>
+<string name="restore_error">Geri yükleme hatâsı, yedek arşivinin geçerli ve okunabilir olduğundan emin olun</string>
+
+<string name="confirm_delete">Bu masaüstünü sahiden silmek istiyor musunuz? \nBu işlem geri alınamaz.</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Sıfırla</string>
+<string name="bg_sys_wp">Sistem duvar kağıdı</string>
+<string name="bg_sys_wp_select_t">Duvar kağıdı değiştirme</string>
+<string name="bg_sys_wp_select_s">Android cihazın her yerinde geçerli olan sistem duvar kağıdı</string>
+<string name="bg_screen_wp">Masaüstü duvar kağıdı</string>
+<string name="bg_screen_wp_select_t">Masaüstü duvar kağıdı değiştirme...</string>
+<string name="bg_screen_wp_select_s">Bu duvar kağıdı sistemdeki duvar kağıdını geçersiz kılar, ve masaüstleri arasında farklılık gösterebilir</string>
+<string name="bg_more">Daha fazla</string>
+<string name="bg_more_color_t">Renk</string>
+<string name="bg_more_color_s">Duvar kağıdı renk tonu</string>
+
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Uzun dokunma</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Dokunma</string>
+<string name="style_s1">Standart</string>
+<string name="style_s2">Derli toplu (küçük simgeler, küçük metin)</string>
+<string name="style_s3">Okunaklı (büyük simgeler, büyük metin)</string>
+<string name="style_s4">Liste, simgeler sağda</string>
+<string name="style_s5">Liste, büyük metin, simge olmadan</string>
+<string name="style_s6">Liste, büyük metin ve simgeler</string>
+<string name="style_s7">Karo, metin olmadan</string>
+<string name="style_s8">Gösterişli renkler</string>
+<string name="style_s9">Zune Gibi</string>
+<string name="dialog_help_hint_t">İpucu</string>
+<string name="dialog_help_hint_m">Bir ayar hakkında yardım almak için, ayara uzun dokunun.</string>
+<string name="dialog_help_hint_dsa">Tekrâr gösterme</string>
+<string name="m_pin_mode">Sabitleme modu</string>
+<string-array name="m_pin_mode_e">
+<item>Sabit değil</item>
+<item>Yatay ve Dikey</item>
+<item>Yatay</item>
+<item>Dikey</item>
+</string-array>
+<string name="m_events">Hâller</string>
+<string name="shortcut_screen">Lightning Masaüstü yer imi</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Başlatıcı eXtreme</string>
+<string name="llx_s">Tâviz vermeyen en iyi başlatıcı.</string>
+<string name="more_apps_t">Daha fazla ücretsiz uygulama</string>
+<string name="more_apps_s">PierroX\'den (araçlar, oyunlar, eğlence)</string>
+<string name="mi_kill">Sonlandır</string>
+<string name="killed_freed">Sonlandırıldı (%dM boş)</string>
+<string name="killed">Uygulama sonlandırıldı</string>
+<string name="configure_pages_t">Masaüstlerini yapılandır</string>
+<string name="configure_pages_s">Tekrâr düzenleyin, silin, ilâve edin ve varsayılan masaüstlerini seçin</string>
+<string name="mi_mode_custom">Uygulama Menüm</string>
+<string name="mi_mode_by_name">Alfabetik</string>
+<string name="mi_mode_recent_apps">Son zamanlarda başlatılan</string>
+<string name="mi_mode_recently_updated">Son zamanlarda güncellenen</string>
+<string name="mi_mode_frequently_used">Sık kullanılan</string>
+<string name="mi_mode_running">Şu ânda çalışan</string>
+<string name="mi_es_edit_layout">Düzenle</string>
+<string name="mi_es_refresh">Yenile</string>
+<string name="mi_es_settings">Ayarlar...</string>
+<string name="mi_es_folder_settings">Klasör ayarları</string>
+<string name="mi_uninstall">Yüklemeyi kaldır</string>
+<string name="my_drawer_title">Uygulama Menüm</string>
+<string name="my_drawer_message">"Uygulama Menüm" görünümü uygulama menünüzü tamamen özelleştirmenize izin verir.\n\nBu modda, öğeler hür bir şekilde taşınabilir, ve klasörler uygulamaları düzenlemek için kullanılabilir.\n\nUzaklaştırmayı ve "Düzenle" öğesini seçmeyi deneyin: uygulamalar sol, sağ, üst, ve hatta alt sayfalara bile koyulabilir, uygulamaları kendi tarzınızda idâre edebilirsiniz.</string>
+<string name="empty_folder_x">boş klasör \nÖğeleri klasörün içine sürükleyip bırakın</string>
+<string name="ll_import_title">LL kurulumunu nakletme</string>
+<string name="ll_import_message">Bir Lightning Başlatıcı kurulumu idrâk edildi.\n\nTüm veriler şimdi nakledilecek. Tamamlandığında klasik sürümü emniyetle kaldırabilir ve onun yerine bu sürümü kullanabilirsiniz.</string>
+<string name="init_ok">Hazır!</string>
+<string name="init_ko">Dosya kopyalama esnasında bir aksilik oldu!</string>
+<string name="auto_exit_t">Otomatik çıkış</string>
+<string name="auto_exit_s">Uygulama başlatılınca uygulama menüsünü kapat</string>
+<string name="icons_t">Simge paketi</string>
+<string name="icons_s">Bir simge paketi tatbik edin veyâ varsayılan simgelere dönün</string>
+<string name="apply_icon_pack_t">Bir simge paketini seçin ve tatbik edin</string>
+<string name="apply_icon_pack_s">ADW ve diğeleri için tasarlanmış simge paketleri ile çalışır</string>
+<string name="icon_pack_no_appfilter">Bu simge paketi uygulama/simge tablosuna sahip değil</string>
+<string name="revert_custom_icons_t">Özel simgeleri tersine çevir</string>
+<string name="revert_custom_icons_s">Bu dâhilî ölçeği ve simge efektlerini ihtivâ eder.</string>
+<string name="please_wait">Lütfen bekleyin…</string>
+<string name="app_not_valid">Öğe yüklü değil. Google Play\'de aramak veyâ başka bir uygulama seçmek ister misiniz?</string>
+<string name="app_store">Play Store</string>
+
+<!-- added 95 -->
+<string name="dtext">Hareketli metin</string>
+<string name="tab_dt_data">Veri</string>
+<string name="dt_source_t">Görüntülenecek metin</string>
+<string-array name="dt_source_e">
+<item>Okunmayan SMS sayısı </item>
+<item> Okunmamış GMail sayısı </item>
+<item> Cevapsız telefon görüşmesi </item>
+<item> Tarih ve amp; Zaman </item>
+<item> Depolama </item>
+<item> Pil seviyesi </item>
+<item> Heap max </item>
+<item> ücretsiz Heap</item>
+</string-array>
+<string name="dt_date_ef_t">Kolay biçim</string>
+<string-array name="dt_date_ef_e">
+<item>Tarih</item>
+<item>Saat</item>
+<item>Tarih ve Saat</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-AA-gg</item>
+<item>SS:dd:sansan</item>
+<item>yyyy-AA-gg SS:dd:sansan</item>
+</string-array>
+<string name="dt_date_xf_t">Uzman biçimi</string>
+<string name="dt_date_xf_s">Daha fazla bilgi için uzun dokunun</string>
+<string name="dt_display_empty_t">Boşken görüntüle</string>
+<string name="dt_format_error">Biçimde hatâ</string>
+<string name="dt_storage_s_t">Depolamayı seçin</string>
+<string-array name="dt_storage_s_e">
+<item>Dâhilî</item>
+<item>Hâricî</item>
+</string-array>
+<string name="dt_storage_f_t">Görünteleme biçimi</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Kısa</item>
+<item>Yüzde</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">Görüntülenecek şey</string>
+<string-array name="dt_storage_w_e">
+<item>Sol boşluk</item>
+<item>Kullanılan boşluk</item>
+<item>Kullanılabilir</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Şeffaf durum çubuğu</string>
+<string name="trans_statusbar_s">Yalnızca desteklenen cihazlarda</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Öğeleri değiştir</string>
+<string name="swap_items_s">Öğeler üst üste gelirse değiştir (yalnızca ızgara modu)</string>
+<string name="rearrange_items_t">Öğeleri tekrâr düzenle</string>
+<string name="rearrange_items_s">Uyarı: Evvelâ yardımı okuyun (uzun basın)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Yedekle, geri yükle veyâ şablonu çıkart</string>
+<string name="an_gh">Ana masaüstüne git</string>
+<string name="an_ghz100">Ana masaüstüne git, akabinde 100p yakınlaştır.</string>
+<string name="an_sd">Gidilecek masaüstünü sor</string>
+<string name="an_re">Uygulamayı tekrâr başlat</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Aşağıdaki ayarlar şunlar için geçerlidir:</string>
+<string-array name="grid_pl_e">
+<item>Dikey ve Yatay</item>
+<item>Dikey</item>
+<item>Yatay</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Bu şablonu tatbik et</string>
+<string name="apply_tmpl_g">Şablon tatbik ediliyor...</string>
+<string name="apply_tmpl_e">Bu şablon tatbik edilemiyor!</string>
+<string name="tmpl_t">İdâre et</string>
+<string name="tmpl_s">Şablonlara göz atın ve tatbik edin, APK için çıkartın</string>
+<string name="tmpl_a_t">Bir şablon yükleyin</string>
+<string name="tmpl_a_s">Yüklü bir APK\'den şablon yükleyin</string>
+<string name="tmpl_b_t">Mevcûd şablonlara göz atın</string>
+<string name="tmpl_b_s">Yepyeni temalara sahip olun</string>
+<string name="tmpl_e_t">Şablonu çıkart</string>
+<string name="tmpl_e_s">Rehberi okumak için uzun basın</string>
+<string name="tmpl_c">Bir şablon seçin</string>
+<string name="tmpl_e_m">Çıkartılıyor...</string>
+<string name="tmpl_e_d">Çıkartıldı</string>
+<string name="tmpl_e_e">Çıkartma hatâsı!</string>
+<string name="tmpl_check">Şablon açılıyor...</string>
+<string name="tmpl_check_e">Bu şablon okunamıyor!</string>
+<string name="tmpl_check_ut">Güncelleme gerekiyor</string>
+<string name="tmpl_check_um">Bu şablon Lightning Başlatıcı\'nın daha yeni bir sürümü için tasarlanmış, şimdi güncellemek ister misiniz?</string>
+<string name="tmpl_get_llx">LLX\'e sahip olun</string>
+<string name="tmpl_warn_t">Uyarı</string>
+<string name="tmpl_warn_c">Yine de devam et</string>
+<string name="tmpl_warn_m">Bu şablon tatbik edilmeye hazır fakat bâzı hatâlar bulundu:</string>
+<string name="tmpl_warn_llx">• bu şablon Lightning Başlatıcı\'nın tam sürümü ile tasarlanmıştır, bu sürümde mevcûd olmayan bâzı özellikleri kullanabilir.</string>
+<string name="tmpl_warn_screen">• bu şablon ekran özelliklerinizle tam olarak uyuşmuyor. Bâzı öğeler ölçeklenebilir, bozuk gösterilebilir, veyâ bulanık görünebilir.</string>
+<string name="tmpl_warn_widget">• cihazın araçları otomatik olarak geri yükleyemeyecek, onları şahsen tekrâr oluşturmanız gerekecektir.</string>
+<string name="widget_e">Araç bulunamadı :(\nBaşka bir tane seçmek için dokunun</string>
+<string name="tmpl_s_p">Çıkartılacak masaüstlerini seçin</string>
+<string name="an_ctf">En üstteki klasörü kapat</string>
+<string name="an_caf">Tüm klasörleri kapat</string>
+<string name="ev_screen_on">Ekran açık</string>
+<string name="ev_screen_off">Ekran kapalı</string>
+<string name="an_sa">Uygulama ara</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Düzenleme modunda sabitlenmiş öğelere önem ver</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Durma noktası</string>
+<string name="sp_b">Muâmele</string>
+<string name="sp_ss">Kaydırmayı durdur</string>
+<string name="sp_sd">Sürüklemeyi durdur</string>
+<string name="sp_ba">Engel</string>
+<string name="sp_dw">Masaüstü genişliği</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Yön</string>
+<string name="sp_dlr">Soldan sağa</string>
+<string name="sp_drl">Sağdan sola</string>
+<string name="sp_dtb">Yukarıdan aşağıya</string>
+<string name="sp_dbt">Aşağıdan yukarı</string>
+<string name="assp_t">Daimâ durma noktalarını göster</string>
+<string name="assp_s">Durma noktaları daimâ gösteriliyor, hattâ normal modda bile</string>
+<string name="gc_edit">Tasarım düzenleyici</string>
+
+<!-- added 116 -->
+<string name="backup_d">Yedek</string>
+<string name="an_of">Bir klasörü aç</string>
+<string name="sf">Bir klasör seç</string>
+<string name="br_n">Arşiv adı</string>
+<string name="br_a">Bir eylem seç</string>
+<string name="br_r">Tekrâr adlandır</string>
+<string name="br_d">Sil</string>
+<string name="br_s">Gönder</string>
+<string name="br_dc">Bu arşiv silinsin mi ?</string>
+<string name="br_rc">Bu arşiv geri yüklensin mi ?</string>
+<string name="dt_gml_t">Gmail etiketi</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Masaüstüne kopyala...</string>
+<string name="f_p">Yerleşim</string>
+<string name="f_ac">Özel hizâlama kullanılırken</string>
+<string name="f_l">Sol</string>
+<string name="f_t">Üst</string>
+<string name="f_af">Yavaşça göster/karart</string>
+<string name="sp_e">Köşeleri eşleştir</string>
+<string name="sp_el">Sol</string>
+<string name="sp_er">Sağ</string>
+<string name="sp_et">Üst</string>
+<string name="sp_eb">Alt</string>
+
+<!-- added 119 -->
+<string name="np">Arka plan resimleri</string>
+<string name="np_d">Belgeleme için uzun dokunun</string>
+<string name="np_n">Normal arka plan</string>
+<string name="np_s">Seçilmiş arka plan</string>
+<string name="np_f">Odaklanılmış arka plan</string>
+<string name="np_r">Arka plan resmi</string>
+<string-array name="anim2_e">
+<item>Yok</item>
+<item>Aç/Kapat</item>
+<item>Sağa slayt gösterisi</item>
+<item>Sola slayt gösterisi</item>
+<item>Alta slayt gösterisi</item>
+<item>Üste slayt gösterisi</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Dikeye geç</string>
+<string name="ev_ol">Yataya geç</string>
+<string name="an_gdp">Belirlenen masaüstü ve konuma git</string>
+<string name="cof_t">Diğer klasörleri kapat</string>
+<string name="cof_s">Tek seferde sadece bir açık klasöre izin ver</string>
+
+<!-- added 123 -->
+<string name="t_nb">Şeffaf gezinti çubuğu</string>
+<string name="gb_l">Sol</string>
+<string name="gb_t">Üst</string>
+<string name="gb_w">Genişlik</string>
+<string name="gb_h">Yükseklik</string>
+<string name="gb_a">Açı</string>
+<string name="gb_sx">X ölçeği</string>
+<string name="gb_sy">Y ölçeği</string>
+<string name="gb_kx">X eğikliği</string>
+<string name="gb_ky">Y eğikliği</string>
+<string name="mi_geometry">Geometri düzenleyicisi</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Panel</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Izgaradan ayır</string>
+<string name="mi_lmf">Izgaraya ilâve et</string>
+<string name="mi_mop">Panelin dışına taşı</string>
+
+<!-- added 137 -->
+<string name="container">Panel boyutu</string>
+<string name="uds_t">Masaüstü boyutunu kullan</string>
+<string name="uds_s">Panel boyutunu değil hücre boyutunu hesaplamak için masaüstü boyutunu kullanın</string>
+<string name="mi_l">Kilitle</string>
+<string name="mi_ul">Kilidi aç</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menü tuşu (uzun)</string>
+<string name="ev_back">Geri tuşu</string>
+<string name="ev_backl">Geri tuşu (uzun)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Öğeler...</string>
+<string name="mi_ic">Derli toplu</string>
+<string name="mi_isa">A\'dan Z\'ye tanzîm et</string>
+<string name="mi_isd">Z\'den A\'ya tanzîm et</string>
+
+<!-- added 151 -->
+<string name="an_us">Ekranın kilidini aç</string>
+<string name="nly">Henüz kilitli değil</string>
+<string name="s_ls_t">Kilit ekranı</string>
+<string name="s_ls_s">Kilit ekranında gösterilecek olan masaüstünü seçin. Rehber için uzun basın</string>
+<string name="s_ls_s_t">Kilit ekranını seçin veyâ devre dışı bırakın</string>
+<string name="s_ls_s_s">Bir masaüstü seçin, devre dışı bırakmak için dokunun ve iptal edin</string>
+<string name="s_ls_s_c">Kilit ekranı devre dışı bırakıldı.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">Unlocker Eklentisi henüz yüklü değil. Yüklemek için dokunun</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Kilitlemeden önce, bu masaüstü kilidinin bir kilit açıcı veyâ bir \"Ekran kilidini aç\" eylemi ile emniyetle açılabileceğinden emin olun.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Seçim efekti</string>
+<string-array name="m_sel_e_e">
+<item>Düz</item>
+<item>Holo</item>
+<item>Materyal</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Durma noktaları \'Sayfaya uğdur\' seçeneği ile çakışıyor: otomatik olarak kapatıldı.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Yön</string>
+<string name="i_rot_s">Ekran döndürüldüğünde öğeyi de döndür</string>
+
+<!-- added 164 -->
+<string name="sc_name">Ad</string>
+<string name="sc_new">Yeni</string>
+<string name="sc_delete">Sil</string>
+<string name="sc_edit">Düzenle...</string>
+<string name="sc_help">Yardım</string>
+<string name="sc_deleted">Bilinmeyen veyâ silinmiş komut dosyası, yeni bir tane oluşturuldu.</string>
+<string name="sc_untitled">Başlıksız komut dosyası	</string>
+<string name="sc_dn_t">Komut dosyası adı</string>
+<string name="sc_dd_t">Lütfen onaylayın</string>
+<string name="sc_dd_m">Bu komut dosyası başka eylemlerde kullanılıyor olabilir. Silmek istediğinize emin misiniz?</string>
+<string name="sc_dc_t">Söz dizimi denetleme sonucu</string>
+<string name="sc_dc_ok">Söz dizimi iyi görünüyor</string>
+<string name="an_rs">Bir komut dosyası çalıştır</string>
+<string name="sc_view">Komut dosyasını görüntüle</string>
+<string name="sc_disable">Devre dışı bırak</string>
+<string name="sc_editor">Komut Dosyası Düzenleyicisi</string>
+<string name="ev_pos">Konum değişti</string>
+<string name="sp_re">Ulaşılan hâl</string>
+<string name="ev_load">Yükle</string>
+<string name="an_b">Geri dön</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Şablon</string>
+<string name="br_ob">Yedekleme üzerine yaz</string>
+<string name="br_ot">Şablon üzerine yaz</string>
+<string name="sc_ma">Kategoriler</string>
+<string name="sc_ml">Lightning menüsü</string>
+<string name="sc_mi">Öğe menüsü</string>
+<string name="sc_mc">Özel menü</string>
+<string name="mi_s">Komut dosyaları...</string>
+<string name="an_cm">Özel komut dosyaları menüsü</string>
+<string name="tmpl_r">Değiştir: mevcûd kurulumu tamamen değiştir</string>
+<string name="tmpl_m">Birleştir: mevcûd kurulumu sakla, şablonu yeni masaüstleri olarak naklet</string>
+<string name="tmpl_u">Güncelle: masaüstlerini ve öğeleri sakla, sadece şablondaki masaüstlerin tarzını tatbik et</string>
+<string name="tmpl_b">Evvelâ bir yedekleme yapın</string>
+<string name="apply_tmpl_m">\'%s\' şablonunu tatbik etmek üzeresiniz:</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Başlatınca kilidi aç</string>
+<string name="s_ls_lu_s">Kilit ekranından başlatılan uygulamalar aynı ânda kilidi açıcak</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Duvar kağıdını yükle</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">Kaydırma sınırı yok</string>
+<string name="no_lim_s">Masaüstü sınırsız kaydırılabilir</string>
+
+<!-- added 175 -->
+<string name="mi_h">Tanzim...</string>
+<string name="mi_if">Öğe bilgileri</string>
+
+<!-- added 176 -->
+<string name="in_s">Bir adla bu öğeyi belirt</string>
+<string name="mi_b">Geri</string>
+<string name="mi_im">Öğe menüsü</string>
+
+<!-- added 178 -->
+<string name="em_t">Uzman modu</string>
+<string name="em_s">İleri seviye seçeneklerini görüntüleyerek LL gücünü açığa çıkarın</string>
+<string name="bm_c">Renk</string>
+<string name="bm_bg">Arka plan resmi</string>
+<string name="bm_prev">Bakma</string>
+<string name="rs_t">Komut dosyalarını çalıştır</string>
+<string name="rs_s">Komut dosyalarının çalıştırılmasına izin ver</string>
+<string name="rs_w">Uyarı: genel ayarlardaki komut dosyası çalıştırma şu ânda devre dışı</string>
+<string name="h_ad">Uygulamalarınız burada.\nUygulamaları buradan başlatabilir veyâ masaüstüne ilâve etmeye başlayabilirsiniz: bir uygulamaya uzun basın ve \"Başlatıcıya ilâve et\" öğesini seçin.\n\nDaha fazla bilgi edinmek için dokunun.</string>
+<string name="h_f">Bir klasör ilâve ettiniz. Klasörler uygulamaları, araçları ve hatta diğer klasörleri ihtivâ edebilir.\n\nÜzerine bir öğe sürükleyin, hareketin onaylanmasını bekleyin (animasyonun sonu), ardından öğeyi bırakın: klasörün içine taşınacaktır.\n\nKlasörler hakkında daha fazla bilgi için dokunun.</string>
+<string name="h_p">İlk paneliniz burada.\nBir panelin tavrı biraz klasörler ile benzerdir: üzerine bir öğe sürükleyin, hareketin onaylanmasını bekleyin (animasyonun sonu), ardından öğeyi bırakın.\n\nPaneller hakkında daha fazla bilgi için dokunun.</string>
+<string name="h_t">İpucu</string>
+<string name="h_k">Bu sizin masaüstünüz. Öğeleri (uygulamalar, araçlar, klasörler, ve daha fazlası) ilâve etmek ve ayarlara erişmek için uzun dokunun.\n\nSayfalar üzerilerine öğeleri sürükler sürüklemez oluşturulur: sol ve sağ taraflara, ayrıca alt ve üst taraflara bile.\n\nLL\'nin usûlü hakkında daha fazla bilgin için dokunun.</string>
+<string name="tut_concepts">Evvelâ beni okuyun!</string>
+<string name="tut_wiki">Yardım</string>
+
+<!-- added 185 -->
+<string name="ev_paused">Duraklatıldı</string>
+<string name="ev_resumed">Devam</string>
+<string name="ad_ab_c_t">Eylem çubuğu</string>
+<string name="ad_ab_b">Arka plan resmi</string>
+<string name="ad_ab_h">Eylem çubuğunu gizle</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Cihazınıza doğru konuşun</string>
+<string name="ad_ab_ss">Kaydırma eylem çubuğunu görüntülemek</string>
+
+<!-- added 191 -->
+<string name="ip">Resim Seçici</string>
+<string name="ip_none">Resmi sil	</string>
+<string name="ip_camera">Kamera	</string>
+<string name="ip_ext_file">Dış dosya tarayıcısı	</string>
+<string name="ip_bgcolor">Arka plan rengi	</string>
+<string name="delete_file">Bu dosya silinsin mi?</string>
+
+<string-array name="ip_s">
+<item>Simge paketi</item>
+<item>Dosya</item>
+<item>Uygulama</item>
+<item>Başlatıcı resimleri</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Dokunma</string>
+
+<!-- added 200 -->
+<string name="sc_data">Komut dosyası verisi	</string>
+<string name="sc_send">Gönder	</string>
+<string name="mi_ls">Bir komut dosyası yükle...</string>
+<string name="ls_ok">Komut dosyası başarıyla yüklendi</string>
+<string name="ls_ko">Komut dosyası yüklenemiyor</string>
+<string name="ls_b">Daha fazla uygulama edinin</string>
+<string name="ur">Telâfî edilemez bir hatâ</string>
+
+<!-- added 201 -->
+<string name="in_t">Bir ad belirle	</string>
+
+<!-- added 208 -->
+<string name="wrap_s">Bir tarafı ulaşan yaparken masaüstü bir küre sanki, diğer taraftan öğeler görüntülenir	</string>
+<string name="i_cf_t">Renklendir</string>
+<string name="i_cf_s">Doygunluğunu ayarlamak için alfa kullanın</string>
+<string name="sbo_t">Durum çubuğu ve içerik örtüşme</string>
+<string name="nbo_t">Gezinti çubuğu ve içerik örtüşme</string>
+<string name="sb_t">Sistem çubukları	</string>
+<string name="sb_s">Durum ve gezinti çubuklarının görünürlüğünü, şeffaflığını, vb. ayarlayın</string>
+<string name="sbc_t">Durum çubuğu tonu rengi</string>
+<string name="nbc_t">Gezinti çubuğu tonu rengi</string>
+<string name="sb_c">Durum çubuğu	</string>
+<string name="nb_c">Gezinti çubuğu</string>
+<string name="mi_app_store">Play Store</string>
+
+<!-- added 217 -->
+<string name="an_um">Kullanıcı menüsü	</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Ayarlar ekranı tarzı	</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Açık</item>
+<item>Koyu</item>
+</string-array>
+<string name="i_rm_t">Materyal efekt maskesi</string>
+<string name="i_rm_s">Ürünü \'ın sınırları içinde dalgalanma sınırlandırılmasına	</string>
+<string name="icon_font">Simge yazı tıpi</string>
+<string name="um_t">Temalar	</string>
+<string name="pi">Sayfa müşiri</string>
+<string name="tab_page_indicator">Müşir</string>
+<string name="pi_style">Tarz</string>
+<string-array name="pi_style_e">
+<item>Noktalar</item>
+<item>Yatay çizgi</item>
+<item>Dikey çizgi</item>
+<item>Küçük harita</item>
+<item>Edebî</item>
+</string-array>
+<string name="pi_rf_t">Metin biçimi</string>
+<string name="pi_dmx_t">Yatay aralık</string>
+<string name="pi_dmy_t">Dikey aralık</string>
+<string name="pi_dmor">Hâricî yarıçap	</string>
+<string name="pi_dmoc">Hâricî renk	</string>
+<string name="pi_dmow">Hâricî genişlik</string>
+<string name="pi_dmir">Dâhilî yarıçap</string>
+<string name="pi_dmic">Dâhilî renk</string>
+<string name="pi_mosc">Harita sınırı rengi	</string>
+<string name="pi_mosw">Harita sınırı genişliği	</string>
+<string name="pi_mofc">Harita arka planı rengi	</string>
+<string name="pi_misc">Ekran sınırı rengi	</string>
+<string name="pi_misw">Ekran sınırı genişliği	</string>
+<string name="pi_mifc">Ekran arka planı rengi	</string>
+<string name="pi_lbc">Arka plan rengi	</string>
+<string name="pi_lbw">Arka plan genişliği	</string>
+<string name="pi_lfc">İmleç rengi</string>
+<string name="pi_lfw">İmleç genişliği</string>
+<string name="pi_lg">Yer çekimi</string>
+<string-array name="pi_lg_e">
+<item>Merkez</item>
+<item>Sağ veyâ Alt</item>
+<item>Sol veyâ Üst	</item>
+</string-array>
+<string name="ac_s">Simge ve Metin</string>
+<string name="ac_c">Kapsayıcı</string>
+<string name="ac_d">Hareketli muhteva</string>
+<string name="ac_m">Daha fazla	</string>
+<string name="ai_t">Metin	</string>
+<string name="ai_i">Simge</string>
+<string name="ai_sb">Yan çubuk</string>
+<string name="ai_b">Rozet	</string>
+<string name="ac_n">Gezinti	</string>
+<string name="ai_bo">Yer imi	</string>
+<string name="ai_d">Boş öğe	</string>
+<string name="h_sb">Bir kenar çubuğu özelleştirilmiş bir klasör. Yan çubuğuna taşımak için buraya öğeleri bırakın. Yan çubuğu geçiş yapmak için simgesine dokunun veya bir jest ya da başka herhangi bir olay atayın. Diğer tarafta bunu yerleştirmek için pencere hizalama değerlerini değiştirin.</string>
+<string name="mi_exel">Çıkış düzenleme modu</string>
+<string name="h_pi">Bir sayfa göstergesi masaüstü geçerli sayfa konumunu gösterir. Varsayılan olarak bu öğeyi tutturulmuş ve tıklanabilir değil. Onun tarzı, renk, vb değiştirmek için ilk düzenleme düzeni moduna girin</string>
+<string name="h_sp">Bir durak noktası özel kaydırma düzeni oluşturmak için bir araçtır: Masaüstü durdurma noktalarında kaydırmayı duracaktır. Bir durma noktası üzerinde uzun dokunun özelliklerini düzenleyin. Dur noktaları düzenleme modunda yalnızca görebilir.</string>
+<string name="h_b">Bir yer imi masaüstünüzde mevcûd konumunu ve ölçeğini kaydeder. Imi oluşturulduktan sonra otomatik geri belleğe masaüstü konumuna getirecektir üzerine dokunarak, başka bir yerde taşıyabilirsiniz. Çok iç paneller ve klasörleri çalışıyor!</string>
+<string name="sc_h">Menüyü ortaya çıkarmak için sol köşeden kaydırın</string>
+<string name="sc_a">Eylemler</string>
+<string name="sc_o">Seçenekler</string>
+<string name="sc_w">Word wrap</string>
+<string name="wrapx_t">Dikişsiz modu X</string>
+<string name="wrapy_t">Dikişsiz mod Y</string>
+<string name="h_w">Dikişsiz modu otomatik olarak aksi takdirde boş sayfaları t ulaşılabilir olması \'olmazdı, düzenleme modunda devre dışı bırakılır. Düzenleme moduna girerken bazı öğeler sonra aniden kaybolabilir farkında olun. Onlar sadece yerine "sarılmış" olma masaüstünde kendi orijinal konumlarına görüntülenir \ndüzenleme moduna çıkarken Dikişsiz modu tekrâr etkindir.</string>
+<string name="ad_bc">Seçili:</string>
+<string name="an_wt">Duvar kağıdına dokunma</string>
+<string name="an_wst">Duvar kağıdına ikinci dokunma</string>
+<string name="ds_sh">Buradan başlayın</string>
+<string name="ds_uc">Kullanıcı topluluğu</string>
+<string name="ds_tt">İpuçları ve hîleler</string>
+<string name="ds_br">Yedekleme ve Geri Yükleme</string>
+<string name="ds_hn">İpucu: yeni bir sayfa oluşturmak için, sadece sayfa üzerine birkaç öğe ilâve edin veyâ sürükleyin.\nBu aşağıdaki ve yukarıdaki sayfalar için işe yarar, haydi deneyin!\n\n(bu ipucunu emniyetle silebilirsiniz)</string>
+<string name="ds_um">İpucu: kullanıcı menüsünü ortaya çıkarmak için bir veyâ iki parmağınızı yukarı kaydırın (bunu özelleştirebilirsiniz), menüyü görüntülemek için herhangi bir yere uzun dokunun.\n\n(bu ipucunu emniyetle silebilirsiniz)</string>
+<string name="ds_z">Yakınlaştır</string>
+<string name="sc_import">Naklet...</string>
+<string name="sc_si_t">Komut Dosyası Nakledici yüklü değil</string>
+<string name="sc_si_m">Play Store\'dan yüklemek ister misiniz?</string>
+<string name="adm_t">Kategoriler</string>
+<string name="adm_s">Görünecek uygulama menüsü kategorilerini seç</string>
+<string name="adm_z">En az bir kategorinin seçilmesi gerekir...</string>
+
+<!-- added 224 -->
+<string name="tr_fl_t">Bu özelliği kullanmak için lütfen Lightning kilidini açın</string>
+<string name="tr_fl_m">Şu özelliklerden faydalanmak için Tam Lightning sürümüne yükseltin:\n\n- İleri seviye uygulama menüsü (klasörler, eylem çubuğu, kategoriler).\n- Masaüstülerini keyfinize göre ilâve edin, kaldırın, tekrâr düzenleyin.\n- Masaüstüne mahsus duvar kâğıdı.\n- Okunmamış bildirim sayısı, müşirler ve hareketli metinler.\n- Özelleştirilebilir kilit ekranı.\n- Dâhilî uygulama sonlandırıcı.\n\nLightning\'i zâten satın aldıysanız, bu sürümü tekrâr etkinleştirmek için lütfen "Tamam" düğmesini seçin.	</string>
+<string name="tr_pw">Lütfen bekleyin…</string>
+<string name="tr_ty">Lightning\'i desteklediğiniz için teşekkür ederiz!</string>
+<string name="tr_eu">Üzgünüz, bir hatâ oluştu...</string>
+<string name="tr_c">İptal edildi</string>
+<string name="tr_br_s">Bu özellik deneme sürümünde mevcûd değildir</string>
+<string name="tr_rs_t">Lightning\'in Gücünü Açığa Çıkarın</string>
+<string name="tr_rs_s">Lightning\'den en iyi şekilde faydalanmak için yükseltin</string>
+<string name="tr_w">Lightning\'i denediğiniz için teşekkür ederiz!\n\nUygulama 7 gün boyunca deneme modunda çalışacaktır: bu süre zarfında tüm özellikler etkindir ve herhangi bir tahdîd olmadan kullanılabilir. Denemeden sonra, uygulamayı kullanabilirsiniz lâkin düzenlemeyi kullanamazsınız.\n\nBu uygulamayı beğendiyseniz ve desteklemek istiyorsanız, tam sürüm ürün anahtarını satın almayı göz önünde bulundurabilirsiniz.\n\nThank you!</string>
+<string name="tr_l">Denemeniz için %d gününüz var</string>
+<string name="tr_rm">Lightning\'in geri bildiriminize ihtiyâcı var!\n\nBu uygulamayı Play Store\'da derecelendirmek için birkaç saniyenizi ayırır mısınız?</string>
+<string name="ds_hls">Bu arzu ettiğiniz şekilde özelleştirebileceğiniz bir misâl kilit ekranıdır.\nUygulamaları ve araçları ilâve edin ve akabinde kilit ekranı ayarları yoluyla onları etkinleştirin (buraya dokunun).</string>
+<string name="ic">Resim kırpıcı</string>
+<string name="bg_st">Konum</string>
+<string-array name="bg_st_e">
+<item>Merkez, ölçeklenmemiş</item>
+<item>Genişliği ve yüksekliği sığdır</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Dikdörtgen kırpma</string>
+<string name="ip_solid">Koyu renk</string>
+<string name="ip_search">Ara...</string>
+<string name="sst">Bir komut dosyası seç</string>
+<string name="ips_t">Resim havuzu boyutu</string>
+<string name="ips_s">Bu değeri değiştirmeden önce lütfen belgeyi okuyun</string>
+
+<!-- added 231 -->
+<string name="v_m">Görünürlük...</string>
+<string name="v_a">Hepsi</string>
+<string name="v_ov">Sadece görünür</string>
+<string name="v_oh">Sadece gizli</string>
+<string name="ad_ab_tc">Yazı rengi</string>
+
+<!-- added 233 -->
+<string name="cv">Özel görünüm</string>
+<string name="h_cv">Özel Gösterim ileri kullanım durumları için tasarlanmıştır. Bu betik sayesinde Android görünüm oluşturulmasını sağlayan ve bunun sonucu olarak gelişmiş scripting ve Android bilgi gerektirir.</string>
+<string name="cv_c">Komut dosyası oluşturma</string>
+<string name="cv_d">Senaryoyu yok</string>
+<string name="eb_u">Geri al</string>
+<string name="eb_r">Tekrâr yap</string>
+<string name="eb_bh">Düzenleme çubuklarını gizle</string>
+<string name="eb_bs">Düzenleme çubuklarını göster</string>
+<string name="eb_pr">Çoğalt</string>
+<string name="eb_ms">Çoklu seçim</string>
+<string name="eb_snap">Yasla</string>
+<string name="eb_prop">Özellikler</string>
+<string name="ds">Masaüstü ayarları</string>
+<string name="ads">Uygulama menüsü ayarları</string>
+<string name="cdi">Bir veya daha fazla eklendi silinir. Widget silme tamamen geri alınamaz ve gereç içeriği yeniden gerekebilir. Devam etmek istiyor musunuz?</string>
+<string name="st_c">Tarzı kopyala</string>
+<string name="st_p">Tarzı yapıştır</string>
+<string name="st_d">Tarz kopyalandı, çoğaltmak için artık \'Tarzı yapıştır\' öğesini kullanın</string>
+<string name="mi_actions">Eylemler ...</string>
+<string name="nois">Seçenek yok</string>
+<string name="lightning">Lightning</string>
+<string name="folder">Klasör</string>
+<string name="tg">Çalıştırılan yer:</string>
+<string name="tg_d">Masaüstü</string>
+<string name="tg_ad">Uygulama Menüsü</string>
+<string name="tg_ls">Kilit ekranı</string>
+<string name="tg_bg">Arka plan</string>
+<string name="tss">Lightning Komut Dosyası</string>
+<string name="mi_nos">Komut dosyası yok</string>
+<string name="mi_nos1">Sana burada komut dosyası olmadığını söylediğimi zannediyorum ;-)</string>
+<string name="mi_nos2">Lütfen ısrar etme, burada komut dosyası yok.</string>
+<string name="mi_nos3">Noldu! Okuyamıyor musun?</string>
+<string name="mi_nos4">Pekâlâ, bu kadar yeter, lütfen dur. Aksî takdirde bir komut dosyası oluşturmak zorunda kalacağım.</string>
+<string name="mi_nos5">Tamam, bu sulh için yapılacak tek şey ise, hadi yapalım, bir komut dosyası oluşturacağım.</string>
+<string name="mi_nost">Döndür beni</string>
+<string name="sm_f">Başa taşı</string>
+<string name="sm_p">Geri taşı</string>
+<string name="sm_d">Sil</string>
+<string name="sm_h">Ana masaüstü olarak ayarla</string>
+<string name="sm_a">Yeni</string>
+<string name="sm_c">Çoğalt</string>
+<string name="sm_n">İleri taşı</string>
+<string name="sm_l">Sona taşı</string>
+<string name="sm_cn">Kopyası</string>
+<string name="sm_an">Yeni masaüstü</string>
+<string name="ip_e">Görüntülenecek simge yok</string>
+<string name="cv_dfl">Özel görünüm yok. \nTekrâr denemek için dokunun.</string>
+<string name="ad_mdh">Özelleştirme için \'Benim Menüm\' görünümüne geçiliyor</string>
+<string name="tab_bind">Bağlantılar</string>
+<string name="bd_a">Bağlantı ilâve et...</string>
+<string name="bd_p">Mülkiyet</string>
+<string name="bd_v">Değer</string>
+<string name="pg">Izgara üzerindeki konum</string>
+<string name="pf">Izagaradan ayrılmış konum</string>
+<string name="pd">Yapay</string>
+<string name="pv">Görünürlük</string>
+<string name="pe">Etkin</string>
+<string name="pl">Etiket</string>
+<string name="pit">Öğe özellikleri</string>
+<string name="bd_s">Seç...</string>
+<string name="bvc_dt">Tarih ve Saat</string>
+<string name="bv_pick">Mevcûd bir değişken seçin</string>
+<string name="bv_sec">Saniye</string>
+<string name="bv_min">Dakika</string>
+<string name="bv_h24">24 Saat</string>
+<string name="bv_h12">12 Saat</string>
+<string name="bv_ampm">ÖÖ/ÖS</string>
+<string name="bv_day">Gün</string>
+<string name="bv_mon">Ay</string>
+<string name="bv_week">Hafta</string>
+<string name="bv_year">Yıl</string>
+<string name="bv_dayn">Gün adı</string>
+<string name="bv_monn">Ay adı</string>
+<string name="bvc_bat">Pil</string>
+<string name="bv_batl">Seviye</string>
+<string name="bv_batst">Vaziyet</string>
+<string name="bv_batv">Voltaj</string>
+<string name="bv_batp">Tıkalı</string>
+<string name="bvc_stor">Depolama</string>
+<string name="bv_ith">Dâhilî Toplam</string>
+<string name="bv_ifh">Dâhilî Boş</string>
+<string name="bv_eth">Hâricî Toplam</string>
+<string name="bv_efh">Hâricî Boş</string>
+<string name="bv_it">Dâhilî Toplam (sayısal)</string>
+<string name="bv_if">Dâhilî Boş (sayısal)</string>
+<string name="bv_et">Hâricî Toplam (sayısal)</string>
+<string name="bv_ef">Hâricî Boş (sayısal)</string>
+<string name="bvc_cpu">İşlemci</string>
+<string name="bv_cu">Kullanım</string>
+<string name="bv_cr">Kullanıcı</string>
+<string name="bv_cn">Güzel</string>
+<string name="bv_cs">Sistem</string>
+<string name="bv_ci">Boşta</string>
+<string name="bv_co">G / Ç</string>
+<string name="bv_cq">Irq</string>
+<string name="bv_cf">SoftIRQ</string>
+<string name="bvc_screen">Ekran</string>
+<string name="bv_o">Yön</string>
+<string name="v_o">Diğer</string>
+<string name="an_sv">Bir değişken ayarla</string>
+<string name="sv_n">Değişken adı ($ olmadan)</string>
+<string name="tsv">Lightning Değişkeni</string>
+<string name="bv_ts">Târih bilgisi</string>
+<string name="eb_sh">Gizli öğeleri göster</string>
+<string name="pz">Z-Dizini</string>
+<string name="pb">Kutu</string>
+
+<string name="ov_t">Seyyar masaüstü</string>
+<string name="ov_s">Diğer uygulamaların üzerinde bir masaüstü görüntüle</string>
+<string name="ov_st">Seyyar masaüstünü seç veyâ devre dışı bırak</string>
+<string name="ov_ss">Bir masaüstü seçin, devre dışı bırakmak için dokun ve iptal et</string>
+<string name="ov_dht">İşleyicileri göster</string>
+<string name="ov_dhs">Sadece hatâ ayıklama maksadı için (yeşil: göster, kırmızı: gizle)</string>
+<string name="ov_lht">Başlatırken gizle</string>
+<string name="ov_lhs">Bir uygulamayı başlatırken seyyar masaüstü gizlenir</string>
+<string name="ov_d">Seyyar masaüstü devre dışı bırakıldı</string>
+<string name="an_so">Seyyar masaüstünü göster</string>
+<string name="an_ho">Seyyar masaüstünü gizle</string>
+<string name="ov_shp">Konumu açmak için kaydır</string>
+<string name="ov_shs">Boyutu açmak için kaydır</string>
+<string name="ov_hhp">Konumu kapatmak için kaydırın</string>
+<string name="ov_hhs">Boyutu kapatmak için kaydır</string>
+<string-array name="ov_hp_e">
+<item>Sol kenar, üst </item>
+<item> Sol kenar, orta </item>
+<item> Sol kenar, alt </item>
+<item> Sağ kenar, üst </item>
+<item> Sağ kenar orta </item>
+<item> Sağ kenar, alt </item>
+<item> Top kenarı sol </item>
+<item> Top kenarı, merkezi </item>
+<item> üst kenarı, sağ </item>
+<item>Bottom edge, left</item>
+<item> Alt kenar sol Alt kenar, merkezi </item>
+<item> alt kenarı, sağ</item>
+</string-array>
+<string name="f_afo">Klasör menşeisini otomatik olarak bul</string>
+<string name="f_afos">Değişiklikler bir sonraki yüklemede tatbik edilecek</string>
+<string name="ov_hhw">Genişliği kapatmak için kaydır</string>
+<string name="ov_shw">Genişliği açmak için kaydır</string>
+<string name="ha_t">Donanım ivmelenmesini kullan</string>
+<string name="ev_cia">Öğe ilâve edildi</string>
+<string name="ev_cir">Öğe kaldırıldı</string>
+<string name="pc">Tıklanabilir</string>
+<string name="nip">(Simge paketi yok)</string>
+<string name="m_la_t">Başlatma animasyonu</string>
+<string-array name="m_la_e">
+<item>Yok</item>
+<item>Soluk</item>
+<item>Sistem</item>
+<item>Slide up</item>
+<item>Slide down</item>
+<item>Slide left</item>
+<item>Slide right</item>
+<item>Scale from center</item>
+</string-array>
+<string name="lh">Özel bir etiket ayarla\n(temel HTML\'e izin verilir)</string>
+<string name="hs_ed">Düzenle...</string>
+<string name="an_ohs">Sıralama ekranını aç</string>
+<string name="ov_pt">Kurulum</string>
+<string name="ov_ps">Masaüstünün diğer uygulamaların üzerine çizmesi için izne ihtiyâcı var</string>
+<string name="ism_t">Boyut modu</string>
+<string-array name="ism_e">
+<item>Standart</item>
+<item>Gerçek</item>
+<item>Tam ölçek, oranı tut</item>
+<item>Tam ölçek, uzatılmış</item>
+<item>Normalleştirilmiş</item>
+</string-array>
+<string name="mi_cfp">Panele dönüştür</string>
+<string name="mi_cpf">Klasöre dönüştür</string>
+<string name="ldo_t">Seyyar masaüstü yok</string>
+<string name="ldo_s">Kilitlendiğinde, seyyar masaüstü devre dışı bırakılır. Kilit açıldığında tekrâr etkinleştirilir.</string>
+<string name="pr_t">Alâkalı izinler</string>
+<string name="pr_s">Bu vazîfeyi tamamlamak için, Lightning Başlatıcı\'nın şu izinlere ihtiyâcı var:</string>
+<string name="pr_r1">hâricî depolama üzerinde yedek ve şablon arşivlerini ara</string>
+<string name="pr_r2">hâricî depolama üzerinde yedekleri veyâ şablonları yaz</string>
+<string name="pr_r3">hâricî depolama üzerindeki yazı tipi dosyalarını oku</string>
+<string name="pr_r4">hâricî depolama üzerindeki resimleri oku</string>
+<string name="pr_r5">çıkartılan resimleri hâricî depolama üzerinde depola</string>
+<string name="pr_r6">şablon verisini oku</string>
+<string name="pr_r7">şablon dosyalarını geçici depolamaya çıkart</string>
+<string name="pr_r8">komut dosyasını hâricî depolama üzerinde kullanılabilir yapın böylece başka bir düzenleyici onu okuyabilir</string>
+<string name="pr_r9">uygulamaları sonlandır</string>
+<string name="pr_r10">mevcûd Google hesaplarını listele</string>
+<string name="pr_r11">cevapsız aramalar için telefon arama kaydına bak</string>
+<string name="pr_r12">okunmamış SMS\'lerin sayısını oku</string>
+<string name="pr_r13">bir telefon numarasını ana ekrandan doğrudan ara</string>
+<string name="pr_f1">Yedekler/şablonlar yazılamıyor veyâ okunamıyor</string>
+<string name="pr_f2">Yazı tipi seçilemiyor</string>
+<string name="pr_f3">Resim seçilemiyor</string>
+<string name="pr_f4">Şablon işlenemiyor</string>
+<string name="pr_f5">Uygulama sonlandırılamıyor</string>
+<string name="mi_sel">Seç…</string>
+<string name="mi_sa">Tümü</string>
+<string name="mi_sn">Yok</string>
+<string name="mi_ss">Ekranda</string>
+<string name="mi_si">Tersine çevir</string>
+<string name="mi_sr">Bölge</string>
+<string name="ms_m">, +%d daha</string>
+<string name="h_cl">The container is now locked and can\'t be modified. Long tap an empty space and select unlock to enable editing again.</string>
+<string name="no_um_ad">Kullanıcı menüsü uygulama menüsünde mevcûd değil.</string>
+<string name="ds_0">Varsayılan masaüstü</string>
+<string name="ds_1">Kilit ekranı misâli</string>
+<string name="sc_all">Alt dizinleri dâhil et</string>
+<string name="nfh">Burada gösterilecek bir şey yok</string>
+<string name="sc_path">Mevcûd yol</string>
+<string name="lwp">Lightning Canlı Duvar Kağıdı</string>
+<string name="sd">Lütfen bir masaüstü seçin</string>
+<string name="ad_b">Dâhilîler</string>
+<string name="ad_p">Eklentiler</string>
+<string name="ev_m">Menü</string>
+<string name="lwp_ev_t">Standart dokunma hâllerini kullan</string>
+<string name="lwp_ev_s">React to touches as a normal app, allowing wallpaper swipe and scroll</string>
+<string name="iab_no">No, thanks</string>
+<string name="iab_y_key">Yes (key)</string>
+<string name="iab_y_app">Yes (in-app)</string>
+<string name="iab_ul_lwp_t">Not enabled yet</string>
+<string name="iab_ul_lwp_m">The Lightning Live Wallpaper is not yet enabled\n\nSupport the developer and help making Lightning the best launcher ever!</string>
+<string name="an_i_as">Show app shortcuts</string>
+<string name="as_no_s">No app shortcut for this item</string>
+<string name="as_no_hp_t">No app shortcut permission</string>
+<string name="as_no_hp_m">In order to access app shortcuts, Lightning Launcher needs to be the default launcher, otherwise it has no app shortcut permission.\n\nNote: you may see this message twice before you can select \'Always\' in the launcher selection box.</string>
+<string name="as_nf">Kısayol devre dışı bırakıldı</string>
+<string name="widget_count">(%d araç)</string>
+<string name="eas_done">Bitti</string>
+<string name="eas_add">Eylem ilâve et</string>
+<string name="acd_l">Başlatma ve uygulamalar</string>
+<string name="acd_n">Gezinti</string>
+<string name="acd_m">Menü ve durum çubuğu</string>
+<string name="acd_f">Klasörler</string>
+<string name="acd_ed">Sürüm</string>
+<string name="acd_ex">Hâricî</string>
+<string name="acd_a">İleri seviye</string>
+<string name="eas_ttl">Eylemler listesi</string>
+<string name="ev_st">Başlatma ilâve et</string>
+<string name="mi_eda">Başlatma eylemini düzenle</string>
+<string name="uv_e">Kullanıcı değişkeni yok</string>
+
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Hiçbir şey yapma (kilitle)</item>
+<item>Uygulama Menüsünü Aç</item>
+<item>Tam ölçek yakınlaştır</item>
+<item>100p. yakınlaştır</item>
+<item>Tam ölçek ve 100p. yakınlaştırmayı aç/kapat</item>
+<item>Evvelki masaüstü</item>
+<item>Sonraki masaüstü</item>
+<item>Düzenle</item>
+<item>Nesne ilâve et</item>
+<item>Lightning\'i özelleştir</item>
+<item>Mevcûd masaüstünü veyâ klasörü özelleştir</item>
+<item>Uygulamayı başlat</item>
+<item>Kısayolu başlat</item>
+<item>Duvar kâğıdı seç</item>
+<item>Launcher menüsü</item>
+<item>Durum çubuğunu göster/gizle</item>
+<item>Uygulama menüsünü ve durum çubuğunu göster/gizle</item>
+<item>Bildirimleri göster</item>
+<item>Ara</item>
+<item>Daha fazla öğe</item>
+<item>Öğeyi özelleştir</item>
+<item>Öğe menüsü</item>
+<item>Öğeyi başlat</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Otomatik kaydırma durdurucusunu kullan</string>
+<string name="auto_stop_s">Masaüstü köşelerinde otomatik olarak kaydırmayı durdur</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Geri yüklenecek bir yedek arşivi seçin</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Yok</item>
+<item>Aç / Kapat</item>
+<item>Yavaşça belirme/kararma</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Ölçeği/döndürmeyi sıfırla</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Düzenleme modunda tek parmakla kaydırma</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Dikey/yatay arasında geçiş yap</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Kaydırma hızı</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Yedekle akabinde tatbik et</string>
+<string name="apply_tmpl_n">Sadece tatbik et</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">Varsayılam simge</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Şeffaf çubuklar ve muhteva örtüşmesi</string>
+<string name="ad_ab_c_s">Arka plan resmi, görünürlük</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Kusursuz mod</string>
+
+<!-- deprecated: beyond -->
+<string name="ip_blank">Boş görüntü</string>
+<string name="min_ram_t">Hafıza kullanımını asgarî seviyeye indir</string>
+<string name="min_ram_s">Lightning daha az RAM kullanacak, lâkin biraz yavaşlayabilir. Tekrâr başlatma gerektirir</string>
+<string name="mi_es_show_hidden">Gizliyi göster</string>
+<string name="mi_es_hide_hidden">Gizliyi gizle</string>
+<string name="mi_zorder">İleri/geri hareket ettirin</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>Yok</item>
+<item>Merkez</item>
+<item>Köşe</item>
+<item>Merkez ve Köşe</item>
+</string-array>
+<string name="copy_style_toast">Bir öğenin tarzını kopyalamak için öğeye dokunun</string>
+<string name="copy_style_cancel">Tarz kopyalaması iptal edildi</string>
+<string name="copy_style_done">Tarz kopyalandı.</string>
+<string name="mi_edit_copy_style">Bir tarz kopyalayın</string>
+<string name="mi_app">Uygulama…</string>
+<string name="mi_fo">Klasör ayarları</string>
+<string name="items_t">Öğeler</string>
+<string name="items_s">Yazı tipleri, renkleri, simgeleri, kutu ayarları, ve daha fazlası</string>
+<string name="mi_es_add_folder">Klasör ilâve et</string>
+<string name="mi_es_add_pi">Sayfa müşiri ilâve et</string>
+<string name="gc_hpie_s">Açıklama için uzun dokunun</string>
+<string name="tut_basic_editing">İlk adımlar</string>
+<string name="hide_statusbar_s">Görünmesi için menüye basın</string>
+<string name="mph">.</string>
+<string name="tr_ut">Lightning hakkında</string>
+<string name="tr_um">Lightning Başlatıcı\'nın ücretsiz sürümünü uzun süredir kullanıyorsunuz, teşekkür ederiz.\n\nBu sürümün bir deneme sürümü ile değiştirilmesine rağmen, tam sürüm uygulamada son güncellemeden itibaren yapılan çoğu düzeltmelerden ve evvelki tüm mevcûd özelliklerden yararlanacaksınız.\n\nBu uygulamayı desteklemek isterseniz, vefâ borcu olarak indirimli bir fiyat ile ürün anahtarını satın almayı göz önünde bulundurabilirsiniz.\n\nTeşekkürler!\n</string>
+<string name="ip_bic">Bozuk simge paketi</string>
+<string name="sp_none">Komut dosyası yok</string>
+<string name="mi_pick_sh">Kısayol seçin</string>
+
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Başlatıcı</string>
+<string name="default_pack_name">Türkçe</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

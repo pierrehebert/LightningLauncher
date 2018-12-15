@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Română</string>
+<string name="pack_name_short">Română</string>
+<string name="tranlator_name">Gheorghe Șarcov</string>
+
+<string name="description">Lightning Launcher is a fast, light and extremely customizable launcher (also known as "home screen replacement", or "shell"). \n\nLightning is the launcher of choice for people who wants a butter smooth, light on memory and tailor-made home screen replacement. \n\nUnlike most traditional launchers, Lightning lets you place items everywhere on the desktop, not only to the left or right sides, but also on pages above and below. Think at the desktop as an unlimited canvas extending in both horizontal and vertical directions instead of a strip, and you will get the idea. \n\nThis mean: as many pages as you need, more space for your apps, and faster navigation. \n\nLightning has some interesting features, such as being able to put widgets in folders (and even other folders for hierarchical navigation), or letting you freely move, scale and rotate any items (note: please switch to "free mode" first to enable rotate/scale). \n\nOh, and did I mentioned that LL was light on memory, leaving more RAM for your apps ? \n\nWith its wide set of options and switches, LL is one of the most customizable launcher, albeit perhaps not the easiest to configure yet ! Agreed, as most powerful tools, LL has a learning curve. But isn\'t that a small price to pay to get the most exciting and unique home screen ;-) \n\nAll comments, suggestions and bug reports are welcome. Please email your questions and bug reports to me (Pierre Hébert) at pierrox@pierrox.net, or visit the facebook page at http://www.facebook.com/LightningLauncher to learn more on what I am currently working on, or request for some feature, or simply ask a question. \n\Enjoy ! \n\Permission: \n- EXPAND_STATUS_BAR: as its name says, used for the "Show status bar" action. \n- SET_WALLPAPER_HINTS: used to set the wallpaper dimension \n- no other permission needed !</string>
+
+
+<string name="start_activity_error">Aplicaţia nu poate fi lansată</string>
+<string name="menu_add">Adaugă…</string>
+<string name="menu_settings">Setări Android</string>
+<string name="menu_customize">Personalizare Lightning</string>
+<string name="menu_customize_folder">Personalizare dosar</string>
+<string name="menu_objects_layout">Modifică aspectul</string>
+<string name="dialog_action_title">Adaugă</string>
+
+<string-array name="dialog_action_values">
+<item>Applicaţie</item>
+<item>Scurtătură</item>
+<item>Gadgeturi aplicaţii</item>
+<item>Gadgeturi LL</item>
+<item>Dosar</item>
+<item>Punctul de oprire la derulare</item>
+</string-array>
+
+<string name="mi_reset">Reset proporţii/rotaţie</string>
+<string name="mi_remove">Șterge</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Personalizare</string>
+<string name="mi_move_to_screen">Move to desktop…</string>
+<string name="mi_edit_icon">Selectează o pictogramă</string>
+<string name="mi_edit_label">Text particularizat</string>
+<string name="mi_edit_copy_style">Copy style…</string>
+<string name="mi_pick_app">Pick app to launch</string>
+<string name="mi_pick_widget">Select another widget</string>
+<string name="mi_edit_more">Mai mult...</string>
+<string name="mi_position">Position…</string>
+<string name="mi_pin">Fixează</string>
+<string name="mi_unpin">Anulează Fixarea</string>
+<string name="mi_add_to_launcher">Adaugă </string>
+<string name="mi_hide_unhide">Ascunde/Arată</string>
+<string name="mi_app_details">Detalii aplicaţie</string>
+<string name="mi_widget_options">Opţiuni Widgeturi</string>
+<string name="mi_move_out_of_folder">Mută din dosar</string>
+<string name="mi_zorder">Mută înainte/înapoi</string>
+<string name="first_use_title">Bun venit!</string>
+<string name="first_use_message">Lightning Launcher este un inlocuitor al ecranului de start standard din Android. Avantajele sale sunt viteza, consumul extrem de redus de resurse si numeroasele optiuni de personalizare.\n\nLL va compune acum lista de aplicaţii disponibile printr-o singură operaţie.\n\nNu\ rataţi tutorialele video pentru mai multe informaţii.\n\nSperăm să vă facă plăcere!</string>
+<string name="all_apps">Toate aplicaţiile</string>
+<string name="menu_refresh">Reîmprospătează lista</string>
+<string name="menu_zoom">Mărește</string>
+<string name="menu_see_only_visible">Vizualizează doar aplicaţiile vizibile</string>
+<string name="menu_see_only_hidden">Vizualizează doar aplicaţiile ascunse</string>
+<string name="menu_see_all">Toate aplicaţiile</string>
+<string name="empty_folder">Ţineţi apăsat pentru \na adăuga elemente \nMeniu pentru mai multe opţiuni</string>
+<string name="file_picker_activity_up">În sus</string>
+
+<string name="copy_style_toast">Tap on an item to copy its style</string>
+<string name="copy_style_cancel">Style copy canceled</string>
+<string name="copy_style_done">Style copy done!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Setări</string>
+<string name="general_t">General</string>
+<string name="general_s">Limbă, butoane, gesturi…</string>
+<string name="dashboard_t">Ecranul curent</string>
+<string name="dashboard_s">Modifică aspectul și modul de funcţionare al ecranului curent</string>
+<string name="app_drawer_t">Lista aplicaţiilor</string>
+<string name="app_drawer_s">Opţiuni pentru lista de aplicaţii</string>
+<string name="app_killer_t">Inchidere forţată a sarcinilor</string>
+<string name="app_killer_s">Unealtă pentru închiderea forțată a sarcinilor sau a aplicaţiilor în curs de rulare</string>
+<string name="donate_t">Donate</string>
+<string name="donate_s">Like this app and want to support it?</string>
+<string name="backup_t">Backup</string>
+<string name="restore_t">Restore</string>
+<string name="rate_t">Evaluaţi aplicaţia</string>
+<string name="rate_s">Impărtășiţi experienţa dumneavoastră sau scrieţi-ne o sugestie pe pagina aplicaţiei din Market</string>
+<string name="facebook_t">Vizitaţi pagina de Facebook</string>
+<string name="facebook_s">Vedeţi ce va conţine urmatoarea versiune, cereţi o nouă funcţionalitate sau raportaţi o problemă</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">An advanced and efficient App Drawer</string>
+<string name="customize_ll">Personalizare Lightning</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Limba</string>
+<string name="language_s">Alege sau instalează pachet lingvistic</string>
+<string name="lg_pick_t">Selectează un pachet lingvistic</string>
+<string name="lg_pick_s">Această opţiune va fi aplicată la următoarea repornire a Lightning Launcher</string>
+<string name="lg_install_t">Obţinere pachete noi</string>
+<string name="lg_install_s">Instalare de pe app store</string>
+
+<string name="lg_contrib_t">Contribute</string>
+<string name="lg_contrib_s">No pack for your language ? Please help this project by providing translations</string>
+<string name="events_t">Evenimente şi acţiuni</string>
+<string name="events_s">Configurare butoane, derulare ecran, gesturi</string>
+<string name="ev_home">Tasta Acasă</string>
+<string name="ev_menu">Tasta Menu</string>
+<string name="ev_search">Tasta Căutare</string>
+<string name="ev_item_tap">Apăsare scurtă pe obiect</string>
+<string name="ev_item_ltap">Apăsare lungă pe obiect</string>
+<string name="ev_bg_tap">Apăsare scurtă în spaţiu gol</string>
+<string name="ev_bg_dtap">Dublă apăsare scurtă în spaţiu gol</string>
+<string name="ev_bg_ltap">Apăsare lungă în spaţiu gol</string>
+<string name="ev_swipe_r">Derulare la dreapta</string>
+<string name="ev_swipe_l">Derulare la stânga</string>
+<string name="ev_swipe_u">Derulare în sus</string>
+<string name="ev_swipe_d">Derulare în jos</string>
+<string name="ev_swipe2_r">Derulare cu 2 degete la dreapta</string>
+<string name="ev_swipe2_l">Derulare cu 2 degete la stânga</string>
+<string name="ev_swipe2_u">Derulare cu 2 degete în sus</string>
+<string name="ev_swipe2_d">Derulare cu 2 degete în jos</string>
+
+
+<string name="auto_edit_t">Mod de editare implicit</string>
+<string name="auto_edit_s">Intră automat în modul de editare la adăugarea unui obiect nou</string>
+<string name="page_anim_t">Animaţie ecran</string>
+
+<string-array name="page_anim_e">
+<item>Fără animaţie</item>
+<item>Estompare in/out</item>
+<item>Derulare stânga/dreapta</item>
+<item>Derulare sus/jos</item>
+</string-array>
+
+<string name="keep_in_memory_t">Incearcă blocarea launcher-ului în memorie</string>
+<string name="keep_in_memory_s">Scurtează timpul de raspuns pentru întoarcerea la ecranul principal, poate influenţa negativ consumul de memorie</string>
+<string name="min_ram_t">Minimize RAM usage</string>
+<string name="min_ram_s">Take effect upon restart. Prefer memory efficiency over speed</string>
+<string name="tools_pick_shortcut">Selectie shortcut</string>
+<string name="tools_pick_widget">Selectare widget</string>
+<string name="new_style">Stil nou…</string>
+<string name="choose_style_name">Alegeti un nume pentru acest stil:</string>
+<string name="delete_style">Doriti sa stergeti acest stil ?</string>
+<string name="relayout_items">Acest stil are definite mai putine coloane decat cel curent. Doriti sa continuati reorganizarea obiectelor ?</string>
+<string name="style_saved">Stil salvat</string>
+<string name="style_loaded">Stil incarcat</string>
+<string name="install_widgets">Adaugare widget-uri LL…</string>
+<string name="item_settings_icon_copy_failed">Nu s-a realizat copierea pictogramei :-(</string>
+<string name="tool_not_available">Ne pare rau, aceasta optiune nu este disponibila</string>
+<string name="default_folder_name">Director</string>
+<string name="app_added" formatted="true">%s adaugat</string>
+<string name="select_launcher_title">Alegere ca si launcher implicit</string>
+<string name="extras">Optionale</string>
+<string name="permission_denied">Executia acestui shortcut nu este permisa…</string>
+<string name="appearance">Aspect (derularea spre stanga permite previzualizarea modificarilor)</string>
+<string name="items_t">Obiecte</string>
+<string name="items_s">Configurare caracteristici implicite pentru font-uri, culori, icon-uri, margini s.a.m.d.</string>
+<string name="background_t">Imagine de fundal &amp; culoare de fond</string>
+<string name="background_s">Alegere imagine fundal, tenta de culoare, efecte de derulare</string>
+<string name="grid_t">Linii grila</string>
+<string name="grid_s">Aplicabil doar in modul "grila", permite alegerea latimii, culorii si pozitiei</string>
+<string name="folder_look_t">Aspect directoare</string>
+<string name="folder_look_s">Stabileste caracteristicile implicite pentru fundal, margini, animatie,…</string>
+<string name="this_folder_look_t">Aspectul directorului\ curent</string>
+<string name="this_folder_look_s">Fundal, margini, animatie,…</string>
+<string name="layout_t">Aspect</string>
+<string name="layout_s">Stabileste modul de plasare al obiectelor (relatv la grila, mod liber), numarul de coloane, inaltimea randurilor, etc.</string>
+<string name="zoom_scroll_t">Apropiere/departare si derulare</string>
+<string name="zoom_scroll_s">Cum se va naviga in interiorul unui ecran</string>
+<string name="folder_feel_t">Directoare</string>
+<string name="folder_feel_s">Inchidere automata a ferestrei, diverse.</string>
+<string name="this_folder_feel_t">Directorul curent</string>
+<string name="pg_misc_t">Lost+found</string>
+<string name="pg_misc_s">Orientare ecran, optiuni pentru bara de status</string>
+<string name="color_c">Color</string>
+
+<string name="wp_w_t">Width</string>
+<string name="wp_h_t">Height</string>
+<string name="wp_auto">Use 0 for auto size</string>
+<string name="wp_scroll_t">Imaginea de fundal se deruleaza</string>
+<string name="wp_scroll_s">Poate afecta performantele</string>
+
+<string name="grid_h_color_t">Culoare linie orizontala</string>
+<string name="grid_h_size_t">Grosime linie orizontala</string>
+<string name="grid_v_color_t">Culoare linie verticala</string>
+<string name="grid_v_size_t">Grosime linie verticala</string>
+<string name="grid_color_s">Utilizati transparenta pentru eliminare</string>
+<string name="grid_size_s">Utilizati 0 pentru cea mai subtire</string>
+<string name="grid_above">Permite afisarea deasupra obiectelor</string>
+<string name="folder_title">Optiuni titlu</string>
+<string name="display_title">Afiseaza titlul</string>
+<string name="font_color">Culoare font</string>
+<string name="font_size">Dimensiune font</string>
+<string name="folder_anims">Animatii</string>
+<string name="anim_in">Deschide</string>
+<string name="anim_out">Inchide</string>
+
+<string-array name="anim_e">
+<item>Nici una</item>
+<item>Deschide / Inchide</item>
+<item>Estompare inspre / Estompare dinspre</item>
+</string-array>
+
+<string name="behaviour">Comportament</string>
+<string name="free_mode_t">Mod liber</string>
+<string name="free_mode_s">Fara\ grila, permite plasarea libera a obiectelor (inclusiv redimensionarea si unghiul de rotatie)</string>
+<string name="dual_pos_t">Pozitionare dubla</string>
+<string name="dual_pos_s">Permite stabilirea a 2 pozitii diferite a obiectelor: in modul portret (primara) sau panoramic</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>None</item>
+<item>Center</item>
+<item>Edge</item>
+<item>Center &amp; Edge</item>
+</string-array>
+<string name="placement">Pozitionare</string>
+<string name="colums">Coloane grila</string>
+<string name="rows">Randuri coloane</string>
+<string name="mode_t">Mod</string>
+
+<string-array name="mode_e">
+<item>Automat</item>
+<item>Numar fix</item>
+<item>Dimensiune fixa</item>
+</string-array>
+
+<string name="number">Numar</string>
+<string name="size">Dimensiune</string>
+<string name="col_num_s">Numarul de coloane pe latimea ecranului</string>
+<string name="col_size_s">Latime individuala coloane</string>
+<string name="row_num_s">Numar de randuri pe inaltimea ecranului</string>
+<string name="row_size_s">Inaltimea individuala randuri</string>
+<string name="scroll_dir_t">Directie derulare</string>
+
+<string-array name="scroll_dir_e">
+<item>Automata</item>
+<item>Doar orizontala</item>
+<item>Doar verrticala</item>
+<item>Ambele</item>
+<item>Fara derulare</item>
+</string-array>
+
+<string name="scroll_speed_t">Viteza derularii</string>
+<string name="overscroll_t">Supra-derulare</string>
+
+<string-array name="overscroll_e">
+<item>Deceleratie</item>
+<item>Ricoseaza</item>
+<item>Dezactivat</item>
+</string-array>
+
+<string name="snap_to_pages_t">Salt la pagina</string>
+<string name="snap_to_pages_s">Activeaza oprirea derularii la marginea paginii</string>
+<string name="auto_stop_t">Franeaza derularea</string>
+<string name="auto_stop_s">Activeaza oprirea derularii la marginea ecranului</string>
+<string name="fit_item_t">Dimensioneaza ecranul dupa elemente</string>
+<string name="fit_item_s">Activeaza oprirea derularii la marginea obiectului</string>
+<string name="no_diagonal_scrolling_t">Dezactiveaza derularea in diagonala</string>
+<string name="no_diagonal_scrolling_s">Derularea se va efectua doar pe o singura directie (vertical, orizontal) pe rand</string>
+<string name="pinch_zoom_t">Activeaza controlul din degete pentru zoom</string>
+<string name="auto_close_t">Inchide fereastra automat</string>
+<string name="auto_close_s">Activeaza inchiderea ferestrei curente dupa lansarea unei aplicatii</string>
+<string name="anim_glitch_fix_t">Corectie pentru probleme cu animatia</string>
+<string name="anim_glitch_fix_s">Adauga 1 pixel la margini pentru a corecta o problema intalnita pe unele versiuni de Android</string>
+<string name="screen_orient_t">Orientare ecran</string>
+
+<string-array name="screen_orient_e">
+<item>Automata</item>
+<item>Portret</item>
+<item>Panoramic</item>
+<item>Respecta proprietatile sistemului</item>
+</string-array>
+
+<string name="hide_statusbar_t">Ascunde bara de status</string>
+<string name="hide_statusbar_s">Atingeti butonul "meniu" pentru afisare </string>
+<string name="manage">Administrare</string>
+<string name="load_style_t">Incarcare stil</string>
+<string name="load_style_s">Inlocuire valori curente cu cele dintr-un stil</string>
+<string name="save_style_t">Salvare stil</string>
+<string name="save_style_s">Salveaza configuratia curenta a ecranului intr-un stil</string>
+<string name="confirm_reset_page">Confirmati revenirea la configuratia implicita a acestui ecran ?</string>
+<string name="reset_page_t">Activare configuratie implicita a ecranului</string>
+<string name="reset_page_s">Inlatura toate obiectele si restabileste stilul original</string>
+<string name="tab_label">Text</string>
+<string name="tab_icon">Pictograma</string>
+<string name="tab_layout">Pozitie</string>
+<string name="tab_box">Cadru</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Principal</string>
+<string name="l_display">Afisare eticheta</string>
+<string name="l_custom">Stabileste eticheta</string>
+<string name="l_size">Dimensiune font</string>
+<string name="l_type_face">Personalizare font…</string>
+<string name="l_style_t">Stil font</string>
+
+<string-array name="l_style_e">
+<item>Normal</item>
+<item>Bold</item>
+<item>Italic</item>
+<item>Bold &amp; italic</item>
+</string-array>
+
+<string name="l_num_lines">Number maxim de linii</string>
+<string name="l_colors">Culori</string>
+<string name="l_color_normal">Culoare in stare normala</string>
+<string name="l_color_selected">Culoare la alegerea obiectului</string>
+<string name="l_color_focused">Culoare pentru focus pe obiect</string>
+<string name="l_shadow">Umbra</string>
+<string name="l_shadow_enable">Activeaza umbra</string>
+<string name="l_shadow_radius">Raza</string>
+<string name="l_shadow_offset_x">Deplasare pe X</string>
+<string name="l_shadow_offset_y">Deplasare pe Y</string>
+<string name="l_shadow_color">Culoare</string>
+<string name="i_main">Principal</string>
+<string name="i_display">Afisare pictograma</string>
+<string name="i_custom">Alege o pictograma personalizata</string>
+<string name="i_folder_t">Stil pictograma pentru directoare</string>
+
+<string-array name="i_folder_e">
+<item>Pictograma</item>
+<item>Grila</item>
+<item>Stiva</item>
+</string-array>
+
+<string name="i_effect">Layers</string>
+<string name="i_e_back">Background image</string>
+<string name="i_e_over">Overlay</string>
+<string name="i_e_mask">Mask</string>
+<string name="i_e_scale">Inner scale</string>
+
+<string name="i_smooth">Pictograma fina</string>
+<string name="i_scale_t">Scale</string>
+<string name="i_scale_s">Warning: 4x scale need 16x more memory: this can exhaust device memory very rapidly.</string>
+<string name="i_reflect">Reflexie</string>
+<string name="i_reflect_enable">Permite reflectarea</string>
+<string name="i_reflect_overlap">Suprapune cu pictograma</string>
+<string name="i_reflect_size">Dimensiune</string>
+<string name="i_reflect_scale">Scara</string>
+<string name="la_margin">Distanta intre pictograma si eticheta</string>
+<string name="la_position_t">Pozitia etichetei</string>
+
+<string-array name="la_position_e">
+<item>Stanga</item>
+<item>Sus</item>
+<item>Dreapta</item>
+<item>Jos</item>
+</string-array>
+
+<string name="b_alignh_t">Aliniere pe orizontala</string>
+
+<string-array name="b_alignh_e">
+<item>Stanga</item>
+<item>Centru</item>
+<item>Dreapta</item>
+</string-array>
+
+<string name="b_alignv_t">Aliniere pe verticala</string>
+
+<string-array name="b_alignv_e">
+<item>Sus</item>
+<item>Mijloc</item>
+<item>Jos</item>
+</string-array>
+
+<string name="b_hint">Atingeti una sau mai multe zone\napoi alegeti una din actiuni</string>
+<string name="b_size">Stabileste dimensiunea selectiei</string>
+<string name="b_color_normal">Culoarea normala</string>
+<string name="b_color_selected">Culoarea la selectie</string>
+<string name="b_color_focused">Culoarea la focus</string>
+<string name="b_color_s">Stabileste culoarea marginii sau a continutului</string>
+<string name="m_enabled_t">Clickable</string>
+<string name="m_enabled_s">Enter layout edit mode to select a disabled item</string>
+<string name="m_alpha_t">Transparenta</string>
+<string name="m_alpha_s">Aspect imbunatatit dar afisare lenta. 0: invizibil, 255: opac</string>
+<string name="m_smooth_transform_t">Aspect fin la transformare</string>
+<string name="m_smooth_transform_s">Aspect imbunatatit dar afisare lenta</string>
+
+<string-array name="preview_item_labels">
+<item>Normal</item>
+<item>Selectat</item>
+<item>Focus</item>
+</string-array>
+
+<string name="il_preview">Previzualizare ecran\n(poate fi diferit de aspectul final)</string>
+<string name="preview_toast">Mod previzualizare\ntoate actiunile sunt dezactivate</string>
+<string name="pick_a_font">Alege un fisier TFF…</string>
+<string name="system_font">Font system</string>
+<string name="left">stanga</string>
+<string name="top">sus</string>
+<string name="right">dreapta</string>
+<string name="bottom">jos</string>
+<string name="margin">margine</string>
+<string name="border">linie</string>
+<string name="padding">spatiu</string>
+<string name="content">continut</string>
+<string name="ovr_custom">personalizat</string>
+
+<string name="pick_t">Select an icon from:</string>
+<string name="pick_file">Builtin file manager</string>
+<string name="pick_gallery">External file manager</string>
+<string name="pick_icon_pack">ADW icon pack</string>
+<string name="pick_default">Default icon</string>
+
+<string name="tutorials">Tutoriale</string>
+<string name="donate">Donatie</string>
+<string name="other_apps">Alte aplicatii</string>
+<string name="tut_intro">Introducere</string>
+<string name="tut_basic_editing">Primii pasi</string>
+<string name="tut_custo">Personalizare\nobiecte</string>
+<string name="tut_free_mode">Mod liber</string>
+<string name="tut_lock">Blocare ecran</string>
+<string name="tut_pin">Ancorare/fixare obiecte</string>
+<string name="tut_scroll">Ecrane si\nnavigatie</string>
+<string name="dialog_color_picker">Paletă de culori</string>
+
+<string name="shortcut_settings">Setări Lightning Launcher </string>
+<string name="shortcut_actions">Scurtături LL</string>
+
+<string name="no_backup_archive">No backup archive to restore yet</string>
+<string name="select_backup">Select a backup archive to restore</string>
+<string name="backup_in_progress">Backup in progress…</string>
+<string name="restore_in_progress">Restore in progress…</string>
+<string name="backup_done">Backup saved to:\n%s</string>
+<string name="backup_error">Backup error, please check that there is enough storage space on the sdcard</string>
+<string name="restore_error">Restore error, please check that the backup archive is valid and can be read</string>
+
+<string name="confirm_delete">Do you really want to delete it ?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Reset</string>
+<string name="bg_sys_wp">System wallpaper</string>
+<string name="bg_sys_wp_select_t">Change the system wallpaper…</string>
+<string name="bg_sys_wp_select_s">The system wallpaper is shared by all desktops and the app drawer</string>
+<string name="bg_screen_wp">Desktop wallpaper</string>
+<string name="bg_screen_wp_select_t">Change the desktop wallpaper…</string>
+<string name="bg_screen_wp_select_s">This wallpaper is displayed above the system wallpaper. Each desktop can have its own wallpaper</string>
+<string name="bg_more">More</string>
+<string name="bg_more_color_t">Color</string>
+<string name="bg_more_color_s">Use a fully opaque color to disable the wallpaper. Use a transparent color to tint the wallpaper</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Long tap</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Tap</string>
+<string name="style_s1">Default</string>
+<string name="style_s2">Compact (small icons, small text)</string>
+<string name="style_s3">Readable (big icons, large text)</string>
+<string name="style_s4">List, icons on the right</string>
+<string name="style_s5">List, large text, without icon</string>
+<string name="style_s6">List, large text and icons</string>
+<string name="style_s7">Tiled, without text</string>
+<string name="style_s8">Flashy colors</string>
+<string name="style_s9">Zune like</string>
+<string name="dialog_help_hint_t">Hint</string>
+<string name="dialog_help_hint_m">To get help on a setting, long tap on it.</string>
+<string name="dialog_help_hint_dsa">Don\'t show again</string>
+<string name="m_pin_mode">Pin mode</string>
+<string-array name="m_pin_mode_e">
+<item>Not pinned</item>
+<item>Horizontal&amp;Vertical</item>
+<item>Horizontal</item>
+<item>Vertical</item>
+</string-array>
+<string name="m_events">Gestures</string>
+<string name="shortcut_screen">LL - Desktop &amp; position</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">The ultimate launcher. No compromise.</string>
+<string name="more_apps_t">More free apps</string>
+<string name="more_apps_s">From PierroX (tools, games, fun)</string>
+<string name="mi_kill">Kill</string>
+<string name="killed_freed">Killed (%dM freed)</string>
+<string name="killed">Killed!</string>
+<string name="configure_pages_t">Configure desktops</string>
+<string name="configure_pages_s">Setup multiple desktops, their order, the home desktop, icons, labels,…</string>
+<string name="mi_mode_custom">My Drawer</string>
+<string name="mi_mode_by_name">All Apps by Name</string>
+<string name="mi_mode_recent_apps">Recently launched</string>
+<string name="mi_mode_recently_updated">Recently Updated</string>
+<string name="mi_mode_frequently_used">Frequently Used</string>
+<string name="mi_mode_running">Running</string>
+<string name="mi_es_add_folder">Add folder</string>
+<string name="mi_es_edit_layout">Edit layout</string>
+<string name="mi_es_show_hidden">Show hidden</string>
+<string name="mi_es_hide_hidden">Hide hidden</string>
+<string name="mi_es_refresh">Refresh</string>
+<string name="mi_es_settings">Settings</string>
+<string name="mi_es_folder_settings">Folder settings</string>
+<string name="mi_uninstall">Uninstall</string>
+<string name="my_drawer_title">My Drawer</string>
+<string name="my_drawer_message">The "My Drawer" view lets you fully customize your app drawer.\n\nIn this mode items can be freely moved on a large canvas and folder can be used to organize apps.\n\nTry to zoom out and select "Edit layout" : you will discover that apps can be put on left, right, top and bottom pages too, letting you manage apps in your very own way.</string>
+<string name="empty_folder_x">empty folder\ndrag&amp;drop items over the folder icon\nto populate it</string>
+<string name="ll_import_title">Importing LL setup</string>
+<string name="ll_import_message">An installation of Lightning Launcher has been detected.\n\nAll data will now be imported. When this is done you can safely uninstall Lightning Launcher and use Lightning Launcher eXtreme instead.</string>
+<string name="init_ok">Ready!</string>
+<string name="init_ko">Something went wrong during file copy!</string>
+<string name="auto_exit_t">Auto exit</string>
+<string name="auto_exit_s">Close the app drawer upon app launch</string>
+<string name="icons_t">Icon pack</string>
+<string name="icons_s">Apply an ADW icon pack or revert custom icons</string>
+<string name="apply_icon_pack_t">Apply an ADW icon pack</string>
+<string name="apply_icon_pack_s">Works for themes providing an icon/app table</string>
+<string name="icon_pack_no_appfilter">This icon pack as no app/icon table</string>
+<string name="revert_custom_icons_t">Revert custom icons</string>
+<string name="revert_custom_icons_s">Including custom icon effect and inner scale</string>
+<string name="please_wait">Please wait…</string>
+<string name="app_not_valid">This shortcut is not associated with a valid app. Would you like to get it from the app store or pick another app ?</string>
+<string name="app_store">App store</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamic text</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Text to display</string>
+<string-array name="dt_source_e">
+<item>Unread SMS count</item>
+<item>Unread GMail count</item>
+<item>Missed phone calls</item>
+<item>Date &amp; Time</item>
+<item>Storage</item>
+</string-array>
+<string name="dt_date_ef_t">Easy format</string>
+<string-array name="dt_date_ef_e">
+<item>Date</item>
+<item>Time</item>
+<item>Date &amp; Time</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expert format</string>
+<string name="dt_date_xf_s">Long tap for documentation</string>
+<string name="dt_display_empty_t">Display when empty</string>
+<string name="dt_format_error">Error in format</string>
+<string name="dt_storage_s_t">Select storage</string>
+<string-array name="dt_storage_s_e">
+<item>Internal</item>
+<item>External</item>
+</string-array>
+<string name="dt_storage_f_t">Display format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Space left</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparent status bar</string>
+<string name="trans_statusbar_s">Only on devices that support it (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Swap items</string>
+<string name="swap_items_s">Swap items if they overlap (grid mode only)</string>
+<string name="rearrange_items_t">Rearrange items</string>
+<string name="rearrange_items_s">Prevent gaps between items (grid mode only)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Backup &amp; Restore</string>
+
+
+    <!-- deprecated: before 90 -->
+    <string-array name="d0"/>
+	<string name="d0"/>
+    <string name="d1"/>
+    
+    <!-- deprecated: 90 -->
+    <string name="color_t"/>
+    <string name="color_s"/>
+    <string name="wp_c"/>
+    <string name="wp_t"/>
+    <string name="wp_select_t"/>
+    <string name="wp_select_s"/>
+    <string name="wp_tint_color_t"/>
+    <string name="wp_tint_color_s"/>
+    <string name="wp_soft_t"/>
+    <string name="wp_soft_s"/>
+
+    <!-- deprecated: 92 -->
+    <string name="theme_label_classic"/>
+    <string name="theme_label_compact"/>
+    <string name="theme_label_list_icons"/>
+    <string name="theme_label_list_labels"/>
+    <string name="theme_label_icons_only"/>
+
+    <!-- deprecated: 93 -->
+    <string name="app_not_installed"/>
+
+    <!-- deprecated: 95 -->
+    <string name="app_screen_switcher_t"/>
+    <string name="app_screen_switcher_s"/>
+<string name="an_u">Unset</string>
+<string name="an_n">Nici o acţiune (Blochează)</string>
+<string name="an_ad">Lansează lista aplicaţii</string>
+<string name="an_zfs">Zoom la dimensiunea totală</string>
+<string name="an_z100">Zoom la 100p.</string>
+<string name="an_zt">Alternează zoom dimensiune totală/100p.</string>
+<string name="an_pd">Ecranul anterior</string>
+<string name="an_nd">Ecranul următor</string>
+<string name="an_el">Modifică aspectul</string>
+<string name="an_ao">Personalizare Lightning</string>
+<string name="an_cl">Personalizare ecran sau director curent</string>
+<string name="an_cd">Lansează aplicaţia</string>
+<string name="an_la">Launch scurtătură</string>
+<string name="an_ls">Selectează imagine</string>
+<string name="an_sw">Meniu Launcher (adăugare acţiuni)</string>
+<string name="an_lm">Ascunde bara de stare</string>
+<string name="an_ssb">Arată/ascunde meniul aplicaţiei</string>
+<string name="an_smsb">Arată/ascunde meniul aplicaţiei şi bara de stare</string>
+<string name="an_sn">Arată notificări</string>
+<string name="an_s">Caută</string>
+<string name="an_i_m">Deplasează obiect</string>
+<string name="an_i_c">Personalizează obiect</string>
+<string name="an_i_me">Meniu obiect</string>
+<string name="an_i_l">Execută</string>
+<!-- deprecated: before 90 -->
+<string-array name="d0"/>
+<string-array name="action_names">
+<item>Nici o acţiune (Blochează)</item>
+<item>Lansează lista aplicaţii</item>
+<item>Zoom la dimensiunea totală</item>
+<item>Zoom la 100p.</item>
+<item>Alternează zoom dimensiune totală/100p.</item>
+<item>Ecranul anterior</item>
+<item>Ecranul următor</item>
+<item>Modifică aspectul</item>
+<item>Personalizare Lightning</item>
+<item>Personalizare ecran sau director curent</item>
+<item>Lansează aplicaţia</item>
+<item>Launch scurtătură</item>
+<item>Selectează imagine</item>
+<item>Meniu Launcher (adăugare acţiuni)</item>
+<item>Ascunde bara de stare</item>
+<item>Arată/ascunde meniul aplicaţiei</item>
+<item>Arată/ascunde meniul aplicaţiei şi bara de stare</item>
+<item>Arată notificări</item>
+<item>Caută</item>
+<item>Deplasează obiect</item>
+<item>Personalizează obiect</item>
+<item>Meniu obiect</item>
+<item>Execută</item>
+</string-array>
+
+    <!-- Do not translate -->
+    <string name="app_name">Lightning Launcher</string>
+    <string name="default_pack_name">English</string>
+    
+    <!-- Do not change -->
+    <string name="aaa" />
+    <string name="zzz" />
+
+    <string-array name="aaa" />
+    <string-array name="zzz" />
+
+</resources>

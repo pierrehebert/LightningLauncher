@@ -1,0 +1,33 @@
+Lightning Launcher este un înlocuitor al ecranului de start standard din Android. Avantajele sale sunt viteza, consumul extrem de redus de resurse si numeroasele optiuni de personalizare.
+
+
+Caracteristici principale:
+- libertatea de a alege formatul paginii: grila, coloana, orizontal, vertical sau liber.
+- un numar nelimitat de optiuni de personalizare pentru: etichete, icoane, fonturi, culori,  pozitionare, dimensiuni s.a.m.d.
+- este un concept inovativ: cu el, ecranul dvs. de start devine o suprafata nemarginita unde aplicatii si widget-uri pot fi pozitionate oriunde si oricum.
+- individual, fiecare obiect (aplicatie, shortcut, widget etc) poate fi personalizat, rotit, redimensionat atat pentru a-l face mai vizibil cat si pentru a profita la maxim de fiecare pixel disponibil sau pur si simplu pentru a va distra experimentand.
+- suporta organizarea pe directoare, oricat de complexa. Fiecare director poate contine widgeturi si chiar alte directoare. În plus aveti posibilitatea de a personaliza cel mai mic detaliu, de la asezarea elementelor în pagina pana la temele vizuale.
+- butoane si gesturi configurabile: puteti executa orice operatie printr-un buton dedicat sau cu un simplu gest sa lansati aplicatiile favorite.
+- construit de la zero  acest launcher a fost gandit pentru maximizarea performantei si reducerea la minim a consumului de memorie RAM. Cu cat aveti mai multa memorie disponibila, cu atat aplicatiile se vor executa mai rapid si vor consuma mai putin din baterie,
+- descoperiti mai multe detalii în interiorul aplicatiei.
+
+
+In plus, Lightning Launcher va este oferit gratuit, nu contine reclame deranjante si nu necesita permisiuni suplimentare cum ar fi accesul  la internet sau drepturi de root.
+Nu exista versiuni speciale de tip full/pro/prime sau HD. Tot ceea ce Lightning Launcher are de oferit va este pus la dispozitie într-un singur pachet extrem de mic si de eficient.
+Suplimentar aveti la dispozitie un set de aplicatii aditionale. Achizitionarea acestora va permite sa adaugati un set de functii speciale si in acelasi timp sa contribuiti la dezvoltarea viitoare a acestui launcher prin sprijinul oferit dezvoltatorului sau.
+
+
+Orice observatie, sugestie precum si semnalarea eventualelor probleme sunt binevenite.
+Deoarece urmarirea comentariilor din app store poate fi dificila, pentru o buna comunicare puteti utiliza adresa de email pierrox@pierrox.net.
+Pentru a afla noutati, a sugera îmbunatatiri sau pentru pune o întrebare va invit pe pagina de Facebook a proiectului: http://www.facebook.com/LightningLauncher
+
+
+Lightning Launcher: mereu în ton cu stilul dumneavoastra !
+Sper sa va placa !
+
+
+Permisiuni:
+- CALL_PHONE: permite directionarea shortcut-urilor legate de telefonie, este o permisiune necesara pentru toate launchere-le  care suporta shortcut-uri catre lista de contacte. LL nu va efectua niciodata apeluri neautorizate in numele dvs.
+- EXPAND_STATUS_BAR: utilizat pentru actiunea “arata bara de stare”
+- SET_WALLPAPER_HINTS: utilizat pentru stabilirea dimensiunii imaginii de fundal 
+- acestea sunt toate permisiunile necesare !

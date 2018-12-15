@@ -1,0 +1,25 @@
+﻿Lightning Launcher jest szybkim, lekkim i w pełni konfigurowalnym zamiennikiem ekranu głównego dla Androida.
+
+Główne cechy:
+- Szeroki wybór układów: siatka, pojedyncze kolumny, poziomy, pionowy, dowolne pozycjonowanie,...
+- Nieograniczone dostosowywanie wizualne: zmiana etykiet, ikon, czcionek, kolorów, wyrównań, rozmiarów, i wiele więcej.
+- Innowacyjny ekran główny ma nieograniczoną powierzchnię, na której aplikacje i widgety można umieścić w dowolnym miejscu.
+- Każdy element (aplikacja, skrót, widget,...) może być indywidualnie dostosowany, skalowany i obracany aby poprawić czytelność, odzyskać cenne miejsce lub po prostu dla zabawy.
+- Wsparcie dla zaawansowanych folderów, które potrafią wyświetlać widgety, a nawet inne foldery w celu idealnej organizacji. Każdy folder może być całkowicie dostosowany wizualnie.
+- Wsparcie dla konfigurowalnych klawiszy i gestów: można przypisać preferowane działanie do wybranego przycisku lub uruchomiś aplikację wybranym gestem.
+- Stworzony od podstaw w ten sposób aby zapewnić energooszczędność i jak najmniejsze zajęcie pamięci RAM. Dzięki temu masz więcej pamięci dla aplikacji, będą one szybciej działać, a Twój czas pracy na baterii wydłuży się.
+- I wiele więcej...
+
+Lightning Launcher jest bezpłatny, nie ma reklam i nie potrzebuje pozwolenia na dostęp do Internetu i konta root. Nie ma płatnej wersji o dodatkowej funkcjonalności ani wersji HD. Pełna funkcjonalność Lightning Launchera dostępna jest w jednym małym i bardzo wydajnym pakiecie. Możesz jednak zobaczyć moje dodatkowe aplikacje. Zakup jednej z nich da Ci trochę więcej luksusowych funkcji oraz przyczyni się do dalszego rozwoju tego najlepszego launchera. 
+
+Wszelkie uwagi, sugestie i raporty o błędach są mile widziane. Komentarze w sklepie Google Play nie ułatwiają kontaktu, więc proszę napisz swoje pytanie lub zgłoś błąd mailem: pierrox@pierrox.net.
+
+Możesz również odwiedzić stronę na Facebooku (http://www.facebook.com/LightningLauncher), aby być na bieżąco z aktualnościami dotyczącymi Lightning Launchera, zaproponować nowe funkcje lub zadać pytanie.
+
+Lightning Launcher: Ekran główny z własnym stylem!
+
+Uprawnienia:
+- bezpośrednie wybieranie numerów telefonu: to uprawnienie jest wymagane aby obsługiwać skróty kontaktowe,
+- rozwijanie/zwijanie paska powiadomień,
+- dopasowywanie rozmiaru tapety: Zezwala aplikacji na ustawianie rozmiaru tapety.
+- żadne inne zezwolenia nie są potrzebne!

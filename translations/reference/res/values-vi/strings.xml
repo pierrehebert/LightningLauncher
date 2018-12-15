@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Việt Nam</string>
+<string name="pack_name_short">Việt Nam</string>
+<string name="tranlator_name">Hayatuan</string>
+
+<string name="description">Lightning Launcher là một launcher có thể tùy chỉnh đầy đủ, nhẹ và nhanh (còn được biết như là "sự thay thế màn hình chủ", hoặc "shell").\nLightning là launcher chọn lựa cho những ai muốn sự thay thế màn hình chủ mượt mà, nhẹ bộ nhớ, thiết kế sẵn.\nKhông giống như hầu hết các launcher truyền thống, Lightning cho phép bạn đặt đối tượng ở khắp mọi nơi trên màn hình, không chỉ để các bên trái hoặc phải, mà còn trên các trang trên và dưới. Hãy suy nghĩ màn hình như là một khung không giới hạn kéo dài theo hai hướng chiều ngang và dọc thay vì một dải, và bạn sẽ có được ý tưởng.\nĐiều này có nghĩa: khi nhiều trang bạn cần, nhiều không gian hơn cho các ứng dụng của bạn, và điều hướng nhanh hơn.\nLightning có một số tính năng thú vị, chẳng hạn như có thể đặt widgets trong thư mục (và thậm chí cả các thư mục khác cho việc điều hướng phân cấp), hoặc cho phép bạn tự do di chuyển, thu phóng và xoay bất kì đối tượng (lưu ý: xin vui lòng chuyển sang "chế độ tự do" trước để kích hoạt xoay/ thu phóng).\nÀ, và tôi đã đề cập rằng LL là rất nhẹ cho bộ nhớ, để RAM nhiều hơn cho các ứng dụng của bạn?\n\nVới một tập hợp rộng lớn của các tùy chọn và chuyển chuyển đổi, LL là một trong các launcher tùy biến nhất, mặc dù có lẽ không phải là dễ nhất để cấu hình nhất! Đồng ý, như hầu hết các công cụ mạnh mẽ, LL có một lộ trình học hỏi. Nhưng đó là một giá nhỏ để trả cho một màn hình chủ thú vị và độc đáo nhất;-), phải không?\nTất cả các ý kiến, đề xuất và báo cáo lỗi được hoan nghênh. Vui lòng gửi email câu hỏi hay báo lỗi cho tôi (Pierre Hébert) tại pierrox@pierrox.net, hoặc ghé thăm trang facebook http://www.facebook.com/LightningLauncher để tìm hiểu thêm những gì tôi đang thực hiện, hoặc yêu cầu một số tính năng, hay đơn giản là đặt một câu hỏi.\n\Hãy thưởng thức\n\Cho phép:\n- EXPAND_STATUS_BAR: như tên của nó nói, được sử dụng cho hành động \"Hiển thị thanh trạng thái\".\n- SET_WALLPAPER_HINTS: được sử dụng để thiết lập kích thước hình nền.\n- Không có sự cho phép cần thiết khác!</string>
+
+
+<string name="start_activity_error">Không thể khởi động ứng dụng này</string>
+<string name="menu_add">Thêm…</string>
+<string name="menu_settings">Cài đặt Android</string>
+<string name="menu_customize">Tùy chỉnh Lightning</string>
+<string name="menu_customize_folder">Tùy chỉnh thư mục</string>
+<string name="menu_objects_layout">Sửa cách sắp xếp</string>
+<string name="dialog_action_title">Thêm…</string>
+
+<string-array name="dialog_action_values">
+<item>Ứng dụng</item>
+<item>Phím tắt</item>
+<item>Widget ứng dụng</item>
+<item>Widget LL</item>
+<item>Thư mục</item>
+<item>Cuộn đến điểm dừng</item>
+</string-array>
+
+<string name="mi_remove">Gỡ bỏ</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Tùy chỉnh</string>
+<string name="mi_move_to_screen">Move to desktop…</string>
+<string name="mi_edit_icon">Chọn một biểu tượng</string>
+<string name="mi_edit_label">Tùy chỉnh chữ</string>
+<string name="mi_edit_copy_style">Copy style…</string>
+<string name="mi_pick_app">Pick app to launch</string>
+<string name="mi_pick_widget">Select another widget</string>
+<string name="mi_edit_more">Thêm nữa...</string>
+<string name="mi_position">Position…</string>
+<string name="mi_pin">Đính</string>
+<string name="mi_unpin">Bỏ đính</string>
+<string name="mi_add_to_launcher">Thêm vào launcher</string>
+<string name="mi_hide_unhide">Ẩn/Hiển thị</string>
+<string name="mi_app_details">Chi tiết ứng dụng</string>
+<string name="mi_widget_options">Tùy chọn</string>
+<string name="mi_move_out_of_folder">Dời khỏi thư mục</string>
+<string name="mi_zorder">Dời về trước/sau</string>
+<string name="first_use_title">Xin chào</string>
+<string name="first_use_message">Lightning Launcher là một sự thay thay thế cho home screen (màn hình chính) của Android có thể tùy chỉnh một cách đầy đủ, nhẹ và nhanh.\n\nLL bây giờ sẽ chuẩn bị bảng liệt kê những ứng dụng chỉ một lần và cho tất cả.\n\n Đừng bỏ lỡ video hướng dẫn để học thêm.\n\nTận hưởng thôi</string>
+<string name="all_apps">Ứng dụng</string>
+<string name="menu_refresh">Làm mới</string>
+<string name="menu_zoom">Thu phóng</string>
+<string name="menu_see_only_visible">Chỉ nhìn thấy</string>
+<string name="menu_see_only_hidden">Chỉ ẩn </string>
+<string name="menu_see_all">Ứng dụng</string>
+<string name="empty_folder">Chạm lâu để \nthêm bảng\ndanh mục nhiều hơn</string>
+<string name="file_picker_activity_up">Lên trên</string>
+
+<string name="copy_style_toast">Tap on an item to copy its style</string>
+<string name="copy_style_cancel">Style copy canceled</string>
+<string name="copy_style_done">Style copy done!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Cài đặt</string>
+<string name="general_t">Tổng quát</string>
+<string name="general_s">Ngôn ngữ, khóa, ra hiệu,…</string>
+<string name="dashboard_t">Màn hình hiện tại</string>
+<string name="dashboard_s">Tùy chỉnh xuất hiện và ứng xử của màn hình hiện tại</string>
+<string name="app_drawer_t">App drawer</string>
+<string name="app_drawer_s">Cài đặt cho danh sách ứng dụng</string>
+<string name="app_killer_t">Kết thúc ứnng dụng</string>
+<string name="app_killer_s">Một kết thúc ứng dụng nhẹ tích hợp trực tiếp vào LL</string>
+<string name="donate_t">Donate</string>
+<string name="donate_s">Like this app and want to support it?</string>
+<string name="backup_t">Backup</string>
+<string name="restore_t">Restore</string>
+<string name="rate_t">Chấm điểm ứng dụng này</string>
+<string name="rate_s">Bày tỏ ý kiến của bạn trên kho ứng dụng</string>
+<string name="facebook_t">Ghé thăm trang Facebook</string>
+<string name="facebook_s">Xem gì trong kế hoạch cho phiên bản tiếp theo, yêu cầu tính năng mới, hoặc báo cáo lỗi</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">An advanced and efficient App Drawer</string>
+<string name="customize_ll">Tùy chỉnh Lightning</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Ngôn ngữ</string>
+<string name="language_s">Chọn hay cài đặt một gói ngôn ngữ</string>
+<string name="lg_pick_t">Chọn một gói ngôn ngữ</string>
+<string name="lg_pick_s">Điều này sẽ khởi động lại LL</string>
+<string name="lg_install_t">Tải gói mới</string>
+<string name="lg_install_s">Cài đặt từ kho ứng dụng</string>
+
+<string name="lg_contrib_t">Cộng tác</string>
+<string name="lg_contrib_s">Không có gói ngôn ngữ của bạn? Vui lòng giúp dự án này bằng cách cung cấp những bản dịch</string>
+<string name="events_t">Hành động &amp; sự kiện</string>
+<string name="events_s">Cấu hình khóa, vuốt, ra hiệu</string>
+<string name="ev_home">Phím Home</string>
+<string name="ev_menu">Phím Menu</string>
+<string name="ev_search">Phím tìm kiếm</string>
+<string name="ev_item_tap">Chạm lên một đối tượng</string>
+<string name="ev_item_ltap">Chạm giữ trên một đối tượng</string>
+<string name="ev_bg_tap">Chạm trên không gian trống</string>
+<string name="ev_bg_dtap">Chạm đôi lên không gian trống</string>
+<string name="ev_bg_ltap">Chạm giữ lên không gian trống</string>
+<string name="ev_swipe_r">Vuốt phải</string>
+<string name="ev_swipe_l">Vuốt trái</string>
+<string name="ev_swipe_u">Vuốt lên</string>
+<string name="ev_swipe_d">Vuốt xuống</string>
+<string name="ev_swipe2_r">Vuốt phải 2 ngón</string>
+<string name="ev_swipe2_l">Vuốt trái 2 ngón</string>
+<string name="ev_swipe2_u">Vuốt lên 2 ngón</string>
+<string name="ev_swipe2_d">Vuốt xuống 2 ngón</string>
+
+<string name="an_u">Unset</string>
+<string name="an_n">Không làm gì cả (khóa)</string>
+<string name="an_ad">Mở App Drawer</string>
+<string name="an_zfs">Phóng đầy</string>
+<string name="an_z100">Phóng 100p.</string>
+<string name="an_zt">Phóng bật tắt đầy/100p.</string>
+<string name="an_pd">Màn hình trước</string>
+<string name="an_nd">Màn hình kế tiếp</string>
+<string name="an_el">Sửa sự sắp xếp</string>
+<string name="an_ao">Thêm đối tượng</string>
+<string name="an_cl">Tùy chỉnh Lightning</string>
+<string name="an_cd">Tùy chỉnh màn hình hiện tại hoặc thư mục</string>
+<string name="an_la">Mở ứng dụng</string>
+<string name="an_ls">Launch shortcut</string>
+<string name="an_sw">Select wallpaper</string>
+<string name="an_lm">Menu launcher</string>
+<string name="an_ssb">Hiện thanh trạng thái</string>
+<string name="an_smsb">Hiện/ẩn menu ứng dụng &amp; thanh trạng thái</string>
+<string name="an_sn">Hiên thị thông báo</string>
+<string name="an_s">Tìm kiếm</string>
+<string name="an_i_m">Di chuyển đối tượng</string>
+<string name="an_i_c">Tùy chỉnh đối tượng</string>
+<string name="an_i_me">Menu đối tượng</string>
+<string name="an_i_l">Mở đối tượng</string>
+
+<string name="auto_edit_t">Kiểu chỉnh sửa tự động</string>
+<string name="auto_edit_s">Tự động vào kiểu chỉnh sửa khi đối tượng mới được thêm vào</string>
+<string name="page_anim_t">Hoạt cảnh màn hình</string>
+
+<string-array name="page_anim_e">
+<item>Không  </item>
+<item>Vào dần/mờ dần</item>
+<item>Trượt trái/phải </item>
+<item>Trượt lên/xuống</item>
+</string-array>
+
+<string name="keep_in_memory_t">Cố gắng giữ trong bộ nhớ</string>
+<string name="keep_in_memory_s">Sẽ rút ngắn \'trở về trang chủ\', nhưng tốt hơn tránh nó để tiết kiệm bộ nhớ</string>
+<string name="min_ram_t">Minimize RAM usage</string>
+<string name="min_ram_s">Take effect upon restart. Prefer memory efficiency over speed</string>
+<string name="tools_pick_shortcut">Chọn một phím tắt</string>
+<string name="tools_pick_widget">Chọn một widget</string>
+<string name="new_style">Kiểu mới ...</string>
+<string name="choose_style_name">Xin vui lòng chọn tên cho kiểu mới này:</string>
+<string name="delete_style">Xóa kiểu này?</string>
+<string name="relayout_items">Kiểu này có các cột ít hơn so với hiện tại. Tiếp tục và sắp xếp lại các đối tượng?</string>
+<string name="style_saved">Kiểu đã được lưu</string>
+<string name="style_loaded">Kiểu đã được tải</string>
+<string name="install_widgets">Thêm LL widget…</string>
+<string name="item_settings_icon_copy_failed">Không thể sao chép biểu tượng :-(</string>
+<string name="tool_not_available">Xin lỗi, công cụ này không có</string>
+<string name="default_folder_name">Thư mục</string>
+<string name="app_added" formatted="true">%s đã thêm</string>
+<string name="select_launcher_title">Chọn làm launcher mặc định</string>
+<string name="extras">Mở rộng</string>
+<string name="permission_denied">Không được phép để khởi động phím tắt này...</string>
+<string name="appearance">Hiển thị (swipe trái với những thay đổi xem trước)</string>
+<string name="items_t">Đối tượng</string>
+<string name="items_s">Cấu hình phông chữ mặc định, màu sắc, biểu tượng, biên và nhiều hơn nữa</string>
+<string name="background_t">Hình nền &amp; nền</string>
+<string name="background_s">Chọn hình nền, màu sắc trạng thái, hiệu ứng di chuyển</string>
+<string name="grid_t">Đường lưới</string>
+<string name="grid_s">Chỉ dành cho chế độ lưới, chọn chiều rộng, màu sắc và vị trí</string>
+<string name="folder_look_t">Cửa sổ thư mục</string>
+<string name="folder_look_s">Chỉ định nền mặc định, đường biên, hoạt cảnh ...</string>
+<string name="this_folder_look_t">Cửa sổ của thư mục này</string>
+<string name="this_folder_look_s">Nền, đường viền hoặc hoạt cảnh ...</string>
+<string name="layout_t">Giao diện</string>
+<string name="layout_s">Chọn đối tượng được đặt (trên lưới, tự do) như thế nào, chọn số cột, chiều cao hàng, vv...</string>
+<string name="zoom_scroll_t">Phóng to thu nhỏ và cuộn</string>
+<string name="zoom_scroll_s">Làm thế nào để điều hướng bên trong một màn hình</string>
+<string name="folder_feel_t">Thư mục</string>
+<string name="folder_feel_s">Tự động đóng, linh tinh</string>
+<string name="this_folder_feel_t">Thư mục này</string>
+<string name="pg_misc_t">Mất+Tìm thấy</string>
+<string name="pg_misc_s">Hướng màn hình, tùy chọn thanh trạng thái</string>
+<string name="color_c">Color</string>
+
+<string name="wp_w_t">Width</string>
+<string name="wp_h_t">Height</string>
+<string name="wp_auto">Use 0 for auto size</string>
+<string name="wp_scroll_t">Cuộn hình nền</string>
+<string name="wp_scroll_s">Có thể ảnh hưởng đến hiệu ứng</string>
+
+<string name="grid_h_color_t">Màu đường kẻ ngang </string>
+<string name="grid_h_size_t">Độ dày đường kẻ ngang</string>
+<string name="grid_v_color_t">Màu đường kẻ đứng</string>
+<string name="grid_v_size_t">Độ dày đường kẻ đứngVertical line thickness</string>
+<string name="grid_color_s">Dùng trong suốt cho không thiết lập</string>
+<string name="grid_size_s">Dùng 0 cho đường mảnh</string>
+<string name="grid_above">Vẽ đối tượng bên trên</string>
+<string name="folder_title">Tùy chọn tiêu đề</string>
+<string name="display_title">Hiển thị tiêu đề</string>
+<string name="font_color">Màu font</string>
+<string name="font_size">Kích cỡ font</string>
+<string name="folder_anims">Hoạt cảnh</string>
+<string name="anim_in">Mở</string>
+<string name="anim_out">Đóng</string>
+
+<string name="behaviour">Ứng xử</string>
+<string name="free_mode_t">Kiểu tự do</string>
+<string name="free_mode_s">Không sử dụng ưới, kích hoạt vị trí đặt đối tượng tự do (bao gồm thu phóng và xoay)</string>
+<string name="dual_pos_t">Vị trí đôi</string>
+<string name="dual_pos_s">Cho phép các đối tượng có hai vị trí: một trong chế độ thẳng đứng(chính), và một số khác nằm ngang</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>None</item>
+<item>Center</item>
+<item>Edge</item>
+<item>Center &amp; Edge</item>
+</string-array>
+<string name="placement">Vị trí đặt</string>
+<string name="colums">Cột lưới</string>
+<string name="rows">Hàng lưới</string>
+<string name="mode_t">Kiểu</string>
+
+<string-array name="mode_e">
+<item>Tự động</item>
+<item>Số cố định</item>
+<item>Kích cỡ cố định</item>
+</string-array>
+
+<string name="number">Số</string>
+<string name="size">Kích cỡ</string>
+<string name="col_num_s">Số lượng các cột trên chiều rộng màn hình</string>
+<string name="col_size_s">Chiều rộng mỗi cột</string>
+<string name="row_num_s">Số lượng hàng trên chiều cao màn hìnhNumber of rows per screen height</string>
+<string name="row_size_s">Chiều cao mỗi hàngHeight of each row</string>
+<string name="scroll_dir_t">Hướng cuộn</string>
+
+<string-array name="scroll_dir_e">
+<item>Tự động</item>
+<item>Chỉ theo chiều ngang</item>
+<item>Chỉ theo chiều đưng</item>
+<item>Cả hai</item>
+<item>Không cuộn gì cả</item>
+</string-array>
+
+<string name="overscroll_t">Quá cuộn</string>
+
+<string-array name="overscroll_e">
+<item>Giảm tốc</item>
+<item>Nảy lên</item>
+<item>Vô hiệu hóa</item>
+</string-array>
+
+<string name="snap_to_pages_t">Bắt theo trang</string>
+<string name="snap_to_pages_s">Luôn luôn ngừng cuộn tại biên trang</string>
+<string name="fit_item_t">Làm vừa màn hình với đối tượng</string>
+<string name="fit_item_s">Co màn hình với đối tượng, không nhiều kích cỡ trang</string>
+<string name="no_diagonal_scrolling_t">Vô hiệu hóa cuộn chéo</string>
+<string name="no_diagonal_scrolling_s">Chỉ cuộn theo một hướng tại một thời gian</string>
+<string name="pinch_zoom_t">Kích hoạt thu phóng hai ngón</string>
+<string name="auto_close_t">Tự động đóng</string>
+<string name="auto_close_s">Đóng thư mục ngay khi một ứng dụng của nó được khởi động</string>
+<string name="anim_glitch_fix_t">Vá không đều hoạt cảnh</string>
+<string name="anim_glitch_fix_s">Thêm một đệm pixel để vá sự không đều mà chỉ xuất hiện trên một vài phiên bản Android</string>
+<string name="screen_orient_t">Hướng màn hình</string>
+
+<string-array name="screen_orient_e">
+<item>Tự động</item>
+<item>Thẳng đứng</item>
+<item>Nằm ngang</item>
+<item>Hệ thống</item>
+</string-array>
+
+<string name="hide_statusbar_t">Ẩn thanh trạng thái</string>
+<string name="hide_statusbar_s">Chạm menu để hiển thị nó</string>
+<string name="manage">Quản lý</string>
+<string name="load_style_t">Nạp kiểu</string>
+<string name="load_style_s">Thay thế cấu hình hiện tại với giá trị từ một kiểu</string>
+<string name="save_style_t">Lưu vào một kiểu</string>
+<string name="save_style_s">Lưu cấu hình màn hình hiện tại thành một kiểu tùy chỉnh</string>
+<string name="confirm_reset_page">Thực sự thiết lập lại màn hình này?</string>
+<string name="reset_page_t">Thiết lập lại màn hình này</string>
+<string name="reset_page_s">Xoá các mục trên màn hình này và khôi phục lại kiểu mặc định</string>
+<string name="tab_label">Chữ</string>
+<string name="tab_icon">Biểu tượng</string>
+<string name="tab_layout">Vị trí</string>
+<string name="tab_box">Hộp</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Chính</string>
+<string name="l_display">Hiển thị nhãn</string>
+<string name="l_custom">Thiết lập một tùy chọn nhãn</string>
+<string name="l_size">Kích cỡ font</string>
+<string name="l_type_face">Sử dụng một tùy chỉnh font…</string>
+<string name="l_style_t">Kiểu font</string>
+
+<string-array name="l_style_e">
+<item>Bình thường</item>
+<item>In đậm</item>
+<item>In nghiêng</item>
+<item>Đậm &amp; nghiêng</item>
+</string-array>
+
+<string name="l_num_lines">Tối đa số dòng</string>
+<string name="l_colors">Màu</string>
+<string name="l_color_normal">Màu bình thường</string>
+<string name="l_color_selected">Màu chọn</string>
+<string name="l_color_focused">Màu tập trung</string>
+<string name="l_shadow">Đổ bóng</string>
+<string name="l_shadow_enable">Kích hoạt đổ bóng</string>
+<string name="l_shadow_radius">Bán kính</string>
+<string name="l_shadow_offset_x">Xê dịch sang X</string>
+<string name="l_shadow_offset_y">Xê dịch sang Y</string>
+<string name="l_shadow_color">Màu</string>
+<string name="i_main">Chính</string>
+<string name="i_display">Hiển thị biểu tượng</string>
+<string name="i_custom">Chọn một biểu tượng tùy chỉnh</string>
+<string name="i_folder_t">Kiểu biểu tượng thư mục</string>
+
+<string-array name="i_folder_e">
+<item>Biểu tượng</item>
+<item>Lưới</item>
+<item>Cụm</item>
+</string-array>
+
+<string name="i_effect">Lớp</string>
+<string name="i_e_back">Hình nền</string>
+<string name="i_e_over">Đè</string>
+<string name="i_e_mask">Mặt nạ</string>
+<string name="i_e_scale">Thu phóng bên trong</string>
+
+<string name="i_smooth">Làm mịn biểu tượng</string>
+<string name="i_scale_t">Thu phóng</string>
+<string name="i_scale_s">Cảnh báo: thu phóng 4 lần cần bộ nhớ nhiều hơn 16 lần: việc này có thể làm cạn bộ nhớ thiết bị rất nhanh.</string>
+<string name="i_reflect">Phản chiếu</string>
+<string name="i_reflect_enable">Kích hoạt phản chiếu</string>
+<string name="i_reflect_overlap">Trùng với biểu tượng</string>
+<string name="i_reflect_size">Kích thước</string>
+<string name="i_reflect_scale">Thu phóng</string>
+<string name="la_margin">Lề giữa biểu tượng và nhãn</string>
+<string name="la_position_t">Vị trí nhãn</string>
+
+<string-array name="la_position_e">
+<item>Trái</item>
+<item>Trên cùng</item>
+<item>Phải</item>
+<item>Dưới cùng</item>
+</string-array>
+
+<string name="b_alignh_t">Hướng nằm ngang</string>
+
+<string-array name="b_alignh_e">
+<item>Trái</item>
+<item>Giữa</item>
+<item>Phải</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_alignv_t">Hướng thẳng đứng</string>
+
+<string-array name="b_alignv_e">
+<item>Trên cùng</item>
+<item>Giữa</item>
+<item>Dưới cùng</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_hint">Chạm vào một hoặc nhiều khu vực\n sau đó chọn một hành động dưới đây</string>
+<string name="b_size">Thiết lập kích thước của các khu vực được lựa chọn</string>
+<string name="b_color_normal">Màu bình thường</string>
+<string name="b_color_selected">Màu được chọn</string>
+<string name="b_color_focused">Màu tập trung</string>
+<string name="b_color_s">Thiết lập màu của viền hoặc nội dung</string>
+<string name="m_enabled_t">Có thể nhấp </string>
+<string name="m_enabled_s">Truy cập vào kiểu chỉnh sửa để chọn một mục bị vô hiệu hóa</string>
+<string name="m_alpha_t">Trong suốt</string>
+<string name="m_alpha_s">Đẹp, nhưng chậm. 0: vô hình, 255: mờ đục hoàn toàn</string>
+<string name="m_smooth_transform_t">Mượt khi chuyển đổi</string>
+<string name="m_smooth_transform_s">Đẹp hơn nhưng chậm hơn</string>
+
+<string-array name="preview_item_labels">
+<item>Bình thường</item>
+<item>Được chọn</item>
+<item>Tập trung</item>
+</string-array>
+
+<string name="il_preview">Xem trước màn hình\n(có thể khác so với màn hình thực)</string>
+<string name="preview_toast">Kiểu xem trước\ntất cả hành động bị vô hiệu</string>
+<string name="pick_a_font">Chọn một tập tin TTF ...</string>
+<string name="system_font">Font hệ thống</string>
+<string name="left">trái</string>
+<string name="top">trên cùng</string>
+<string name="right">phải</string>
+<string name="bottom">dưới cùng</string>
+<string name="margin">lề</string>
+<string name="border">biên ngoài</string>
+<string name="padding">vùng đệm</string>
+<string name="content">nội dung</string>
+<string name="ovr_custom">tùy chỉnh</string>
+
+<string name="pick_t">Chọn một biểu tượng từ</string>
+<string name="pick_file">Tệp</string>
+<string name="pick_gallery">Thư viện</string>
+<string name="pick_icon_pack">Gói biểu tượng ADW</string>
+
+<string name="tutorials">Hướng dẫn</string>
+<string name="donate">Đóng góp</string>
+<string name="other_apps">Ứng dụng khác</string>
+<string name="tut_intro">Giới thiệu</string>
+<string name="tut_basic_editing">Những bước đầu tiên</string>
+<string name="tut_custo">Tùy chỉnh\n đối tượng</string>
+<string name="tut_free_mode">Kiểu tự do</string>
+<string name="tut_lock">Màn hình khóa</string>
+<string name="tut_pin">Gắn/đính đối tượng</string>
+<string name="tut_scroll">Màn hình và\n điều hướng</string>
+<string name="dialog_color_picker">Công cụ chọn màu</string>
+
+<string name="shortcut_settings">Tùy chỉnh Lightning</string>
+<string name="shortcut_actions">Hành động Lightning</string>
+
+<string name="no_backup_archive">No backup archive to restore yet</string>
+<string name="backup_in_progress">Backup in progress…</string>
+<string name="restore_in_progress">Restore in progress…</string>
+<string name="backup_done">Backup saved to:\n%s</string>
+<string name="backup_error">Backup error, please check that there is enough storage space on the sdcard</string>
+<string name="restore_error">Restore error, please check that the backup archive is valid and can be read</string>
+
+<string name="confirm_delete">Do you really want to delete it ?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Reset</string>
+<string name="bg_sys_wp">System wallpaper</string>
+<string name="bg_sys_wp_select_t">Change the system wallpaper…</string>
+<string name="bg_sys_wp_select_s">The system wallpaper is shared by all desktops and the app drawer</string>
+<string name="bg_screen_wp">Desktop wallpaper</string>
+<string name="bg_screen_wp_select_t">Change the desktop wallpaper…</string>
+<string name="bg_screen_wp_select_s">This wallpaper is displayed above the system wallpaper. Each desktop can have its own wallpaper</string>
+<string name="bg_more">More</string>
+<string name="bg_more_color_t">Color</string>
+<string name="bg_more_color_s">Use a fully opaque color to disable the wallpaper. Use a transparent color to tint the wallpaper</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Long tap</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Tap</string>
+<string name="style_s1">Default</string>
+<string name="style_s2">Compact (small icons, small text)</string>
+<string name="style_s3">Readable (big icons, large text)</string>
+<string name="style_s4">List, icons on the right</string>
+<string name="style_s5">List, large text, without icon</string>
+<string name="style_s6">List, large text and icons</string>
+<string name="style_s7">Tiled, without text</string>
+<string name="style_s8">Flashy colors</string>
+<string name="style_s9">Zune like</string>
+<string name="dialog_help_hint_t">Hint</string>
+<string name="dialog_help_hint_m">To get help on a setting, long tap on it.</string>
+<string name="dialog_help_hint_dsa">Don\'t show again</string>
+<string name="m_pin_mode">Pin mode</string>
+<string-array name="m_pin_mode_e">
+<item>Not pinned</item>
+<item>Horizontal&amp;Vertical</item>
+<item>Horizontal</item>
+<item>Vertical</item>
+</string-array>
+<string name="m_events">Gestures</string>
+<string name="shortcut_screen">LL - Desktop &amp; position</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">The ultimate launcher. No compromise.</string>
+<string name="more_apps_t">More free apps</string>
+<string name="more_apps_s">From PierroX (tools, games, fun)</string>
+<string name="mi_kill">Kill</string>
+<string name="killed_freed">Killed (%dM freed)</string>
+<string name="killed">Killed!</string>
+<string name="configure_pages_t">Configure desktops</string>
+<string name="configure_pages_s">Setup multiple desktops, their order, the home desktop, icons, labels,…</string>
+<string name="mi_mode_custom">My Drawer</string>
+<string name="mi_mode_by_name">All Apps by Name</string>
+<string name="mi_mode_recent_apps">Recently launched</string>
+<string name="mi_mode_recently_updated">Recently Updated</string>
+<string name="mi_mode_frequently_used">Frequently Used</string>
+<string name="mi_mode_running">Running</string>
+<string name="mi_es_add_folder">Add folder</string>
+<string name="mi_es_edit_layout">Edit layout</string>
+<string name="mi_es_show_hidden">Show hidden</string>
+<string name="mi_es_hide_hidden">Hide hidden</string>
+<string name="mi_es_refresh">Refresh</string>
+<string name="mi_es_settings">Settings</string>
+<string name="mi_es_folder_settings">Folder settings</string>
+<string name="mi_uninstall">Uninstall</string>
+<string name="my_drawer_title">My Drawer</string>
+<string name="my_drawer_message">The "My Drawer" view lets you fully customize your app drawer.\n\nIn this mode items can be freely moved on a large canvas and folder can be used to organize apps.\n\nTry to zoom out and select "Edit layout" : you will discover that apps can be put on left, right, top and bottom pages too, letting you manage apps in your very own way.</string>
+<string name="empty_folder_x">empty folder\ndrag&amp;drop items over the folder icon\nto populate it</string>
+<string name="ll_import_title">Importing LL setup</string>
+<string name="ll_import_message">An installation of Lightning Launcher has been detected.\n\nAll data will now be imported. When this is done you can safely uninstall Lightning Launcher and use Lightning Launcher eXtreme instead.</string>
+<string name="init_ok">Ready!</string>
+<string name="init_ko">Something went wrong during file copy!</string>
+<string name="auto_exit_t">Auto exit</string>
+<string name="auto_exit_s">Close the app drawer upon app launch</string>
+<string name="icons_t">Icon pack</string>
+<string name="icons_s">Apply an ADW icon pack or revert custom icons</string>
+<string name="apply_icon_pack_t">Apply an ADW icon pack</string>
+<string name="apply_icon_pack_s">Works for themes providing an icon/app table</string>
+<string name="icon_pack_no_appfilter">This icon pack as no app/icon table</string>
+<string name="revert_custom_icons_t">Revert custom icons</string>
+<string name="revert_custom_icons_s">Including custom icon effect and inner scale</string>
+<string name="please_wait">Please wait…</string>
+<string name="app_not_valid">This shortcut is not associated with a valid app. Would you like to get it from the app store or pick another app ?</string>
+<string name="app_store">App store</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamic text</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Text to display</string>
+<string-array name="dt_source_e">
+<item>Unread SMS count</item>
+<item>Unread GMail count</item>
+<item>Missed phone calls</item>
+<item>Date &amp; Time</item>
+<item>Storage</item>
+<item>Battery level</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Easy format</string>
+<string-array name="dt_date_ef_e">
+<item>Date</item>
+<item>Time</item>
+<item>Date &amp; Time</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expert format</string>
+<string name="dt_date_xf_s">Long tap for documentation</string>
+<string name="dt_display_empty_t">Display when empty</string>
+<string name="dt_format_error">Error in format</string>
+<string name="dt_storage_s_t">Select storage</string>
+<string-array name="dt_storage_s_e">
+<item>Internal</item>
+<item>External</item>
+</string-array>
+<string name="dt_storage_f_t">Display format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Space left</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparent status bar</string>
+<string name="trans_statusbar_s">Only on devices that support it (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Swap items</string>
+<string name="swap_items_s">Swap items if they overlap (grid mode only)</string>
+<string name="rearrange_items_t">Rearrange items</string>
+<string name="rearrange_items_s">Prevent gaps between items (grid mode only)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Backup &amp; Restore</string>
+<string name="an_gh">Go to home desktop</string>
+<string name="an_ghz100">Go to home desktop, then zoom 100p.</string>
+<string name="an_sd">Select desktop to go to</string>
+<string name="an_re">Restart app</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Settings below apply to:</string>
+<string-array name="grid_pl_e">
+<item>Portrait &amp; Landscape</item>
+<item>Portrait</item>
+<item>Landscape</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Apply this template</string>
+<string name="apply_tmpl_g">Applying template…</string>
+<string name="apply_tmpl_e">Unable to apply this template!</string>
+<string name="tmpl_t">Manage</string>
+<string name="tmpl_s">Browse and apply templates, export for APK</string>
+<string name="tmpl_a_t">Load a template</string>
+<string name="tmpl_a_s">Load it from an installed APK</string>
+<string name="tmpl_b_t">Browse existing templates</string>
+<string name="tmpl_b_s">Get fresh new themes</string>
+<string name="tmpl_e_t">Export template</string>
+<string name="tmpl_e_s">Long tap to read the tutorial</string>
+<string name="tmpl_c">Select a template</string>
+<string name="tmpl_e_m">Exporting…</string>
+<string name="tmpl_e_d">Export done</string>
+<string name="tmpl_e_e">Export error!</string>
+<string name="tmpl_check">Opening template…</string>
+<string name="tmpl_check_e">Unable to read this template!</string>
+<string name="tmpl_check_ut">Need to update</string>
+<string name="tmpl_check_um">This template has been designed for a newer version of Lightning Launcher, would you like to update now ?</string>
+<string name="tmpl_get_llx">Get LLX</string>
+<string name="tmpl_warn_t">Warning</string>
+<string name="tmpl_warn_c">Continue anyway</string>
+<string name="tmpl_warn_m">The template is ready to be applied but some warnings have been found:</string>
+<string name="tmpl_warn_llx">• this template has been designed with Lightning Launcher eXtreme, it may use some features not available in this version.</string>
+<string name="tmpl_warn_screen">• this template does not exactly match your screen characteristics. Some elements may be scaled and displayed incorrectly, or look blurry.</string>
+<string name="tmpl_warn_widget">• your device is not able to restore widgets automatically, you will need to manually recreate them.</string>
+\nTap to pick another one</string>
+<string name="tmpl_s_p">Select desktops to export</string>
+<string name="an_ctf">Close topmost folder</string>
+<string name="an_caf">Close all folders</string>
+<string name="ev_screen_on">Screen on</string>
+<string name="ev_screen_off">Screen off</string>
+<string name="an_sa">Search app</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Honor pinned items in edit mode</string>
+<string name="gc_hpie_s">Long tap for the description</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Stop point</string>
+<string name="sp_b">Behavior</string>
+<string name="sp_ss">Stop scroll</string>
+<string name="sp_sd">Stop drag</string>
+<string name="sp_ba">Barrier</string>
+<string name="sp_dw">Desktop wide</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Direction</string>
+<string name="sp_dlr">Left to right</string>
+<string name="sp_drl">Right to left</string>
+<string name="sp_dtb">Top to bottom</string>
+<string name="sp_dbt">Bottom to top</string>
+<string name="assp_t">Always show stop points</string>
+<string name="assp_s">Stop points are always displayed, even in normal mode</string>
+<string name="gc_edit">Layout editor</string>
+
+<!-- added 116 -->
+<string name="backup_d">Backup</string>
+<string name="an_of">Open a folder</string>
+<string name="sf">Select a folder</string>
+<string name="br_n">Archive name</string>
+<string name="br_a">Select an action</string>
+<string name="br_r">Rename</string>
+<string name="br_d">Delete</string>
+<string name="br_s">Send</string>
+<string name="br_dc">Delete this archive ?</string>
+<string name="br_rc">Restore this archive ?</string>
+<string name="dt_gml_t">Gmail label</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Copy to desktop…</string>
+<string name="f_p">Placement</string>
+<string name="f_ac">When using custom alignment</string>
+<string name="f_l">Left</string>
+<string name="f_t">Top</string>
+<string name="f_af">Fade in / out</string>
+<string name="sp_e">Match edges</string>
+<string name="sp_el">Left</string>
+<string name="sp_er">Right</string>
+<string name="sp_et">Top</string>
+<string name="sp_eb">Bottom</string>
+
+<!-- added 119 -->
+<string name="np">Background images</string>
+<string name="np_d">Long tap for documentation</string>
+<string name="np_n">Normal background</string>
+<string name="np_s">Selected background</string>
+<string name="np_f">Focused background</string>
+<string name="np_r">Background image</string>
+<string-array name="anim2_e">
+<item>None</item>
+<item>Open / Close</item>
+<item>Slides to right</item>
+<item>Slides to left</item>
+<item>Slides to bottom</item>
+<item>Slides to top</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Switch to portrait</string>
+<string name="ev_ol">Switch to landscape</string>
+<string name="an_gdp">Go to specified desktop&amp;position</string>
+<string name="cof_t">Close other folders</string>
+<string name="cof_s">Allow only a single opened folder at a time</string>
+
+<!-- added 123 -->
+<string name="t_nb">Transparent navigation bar</string>
+<string name="gb_l">Left</string>
+<string name="gb_t">Top</string>
+<string name="gb_w">Width</string>
+<string name="gb_h">Height</string>
+<string name="gb_a">Angle</string>
+<string name="gb_sx">Scale X</string>
+<string name="gb_sy">Scale Y</string>
+<string name="gb_kx">Skew X</string>
+<string name="gb_ky">Skew Y</string>
+<string name="mi_geometry">Geometry editor</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Folder settings</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Panel settings</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Detach from grid</string>
+<string name="mi_lmf">Attach to grid</string>
+<string name="mi_mop">Move out of panel</string>
+
+<!-- added 137 -->
+<string name="container">Panel size</string>
+<string name="uds_t">Use desktop size</string>
+<string name="uds_s">Use the desktop size to compute the cell size, not the panel size</string>
+<string name="mi_app">App…</string>
+<string name="mi_l">Lock</string>
+<string name="mi_ul">Unlock</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menu key (long)</string>
+<string name="ev_back">Back key</string>
+<string name="ev_backl">Back key (long)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Items…</string>
+<string name="mi_ic">Compact</string>
+<string name="mi_isa">Sort a-z</string>
+<string name="mi_isd">Sort z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Unlock screen</string>
+<string name="nly">Not locked yet</string>
+<string name="s_ls_t">Lock screen</string>
+<string name="s_ls_s">Select the desktop to be shown on the lock screen. Long tap for a tutorial.</string>
+<string name="s_ls_s_t">Select or disable the lock screen</string>
+<string name="s_ls_s_s">Select a desktop, tap and cancel to disable it</string>
+<string name="s_ls_s_c">The lock screen has been disabled.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">The Unlocker Plugin is not installed yet. Tap to install</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Before to lock, please ensure that this desktop can be unlocked safely, either using an unlocker or an \"Unlock screen\" action.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Selection effect</string>
+<string-array name="m_sel_e_e">
+<item>Plain</item>
+<item>Holo</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Stop points conflict with the \'Snap to page\' option: it has been automatically turned off.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Rotation</string>
+<string name="i_rot_s">Rotate the item upon screen rotation</string>
+
+<!-- added 164 -->
+<string name="sc_name">Name</string>
+<string name="sc_new">New</string>
+<string name="sc_delete">Delete</string>
+<string name="sc_edit">Edit…</string>
+<string name="sc_help">Help</string>
+<string name="sc_deleted">Unknown or deleted script, a new one has been created.</string>
+<string name="sc_untitled">Untitled script</string>
+<string name="sc_dn_t">Script name</string>
+<string name="sc_dd_t">Please confirm</string>
+<string name="sc_dd_m">This script may be in use in other actions. Are you sure to delete it ?</string>
+<string name="sc_dc_t">Syntax check result</string>
+<string name="sc_dc_ok">The syntax looks good</string>
+<string name="an_rs">Run a script</string>
+<string name="sc_view">View script</string>
+<string name="sc_disable">Disable</string>
+<string name="sc_editor">Script editor</string>
+<string name="ev_pos">Position changed</string>
+<string name="sp_re">Reached event</string>
+<string name="ev_load">Load</string>
+<string name="an_b">Go back</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Template</string>
+<string name="br_ob">Overwrite with backup</string>
+<string name="br_ot">Overwrite with template</string>
+<string name="sc_ma">Appear in:</string>
+<string name="sc_ml">Lightning menu</string>
+<string name="sc_mi">Item menu</string>
+<string name="sc_mc">Custom menu</string>
+<string name="mi_s">Scripts…</string>
+<string name="an_cm">Custom scripts menu</string>
+<string name="tmpl_r">Replace: fully replace the current setup</string>
+<string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
+<string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
+<string name="tmpl_b">Make a backup first</string>
+<string name="apply_tmpl_m">You are about to apply the template \'%s\':</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Launch unlock</string>
+<string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Load the wallpaper</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">No scroll limit</string>
+<string name="no_lim_s">The desktop can be scrolled beyond its limit</string>
+
+<!-- added 175 -->
+<string name="mi_h">Hierarchy…</string>
+<string name="mi_if">Item infos</string>
+
+<!-- added 176 -->
+<string name="in_s">Identify this item with a label</string>
+<string name="mi_b">Back</string>
+<string name="mi_im">Item menu</string>
+
+<!-- added 178 -->
+<string name="em_t">Expert mode</string>
+<string name="em_s">Unleash the power of LL by displaying advanced options (take effect upon reload)</string>
+<string name="bm_c">Color</string>
+<string name="bm_bg">Background image</string>
+<string name="bm_prev">Preview</string>
+<string name="rs_t">Run scripts</string>
+<string name="rs_s">Allow scripts execution</string>
+<string name="rs_w">Warning: script execution is currently disabled in general settings</string>
+<string name="h_ad">Your apps are here.\nYou can launch apps from there and start adding apps to the desktop: long press on some app and select \"Add to launcher\".\n\nTap to learn more.</string>
+<string name="h_f">You just added a folder. Folders can contain apps, widgets or even other folders.\n\nDrag some item over it, wait a bit for the move to be confirmed (at the end of the animation), then drop the object: it will be moved inside the folder.\n\nTap to learn more on folders.</string>
+<string name="h_p">Your first panel is here.\nPanels behave a bit like folders: drag item over it, wait a bit for the move to be confirmed (end of the animation), then drop the object.\n\nTap to learn more on panels.</string>
+<string name="h_t">Hint</string>
+<string name="h_k">This is your desktop. Long tap to add objects (apps, widgets, folders, more) and access settings.\n\nPages are created as soon as you drag objects over them: to the left and right sides, but also to the top and bottom sides.\n\nTap to learn more on LL concepts.</string>
+<string name="tut_concepts">Concepts</string>
+<string name="tut_wiki">Wiki</string>
+<string name="bo_t">Transparent bars and content overlap</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Select shortcut</string>
+<string name="ev_paused">Paused</string>
+<string name="ev_resumed">Resumed</string>
+<string name="ad_ab_c_t">Action bar</string>
+<string name="ad_ab_c_s">Background image, visibility</string>
+<string name="ad_ab_b">Background image</string>
+<string name="ad_ab_h">Hide the action bar</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Speak into your device</string>
+<string name="ad_ab_ss">Display the action bar on scroll</string>
+
+<!-- added 191 -->
+<string name="ip">Image Picker</string>
+<string name="ip_none">Delete image</string>
+<string name="ip_camera">Camera</string>
+<string name="ip_ext_file">External file browser</string>
+<string name="ip_bgcolor">Background color</string>
+<string name="delete_file">Delete this file?</string>
+
+<string-array name="ip_s">
+<item>Icon pack</item>
+<item>File</item>
+<item>Application</item>
+<item>Launcher images</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Touch</string>
+
+<!-- added 197 -->
+<string name="ip_blank">Blank image</string>
+
+<!-- added 200 -->
+<string name="sc_data">Pass these data to the script (leave blank if not used):</string>
+<string name="sc_send">Send</string>
+<string name="mi_ls">Load a script…</string>
+<string name="ls_ok">Script loaded successfully</string>
+<string name="ls_ko">Unable to load this script</string>
+<string name="ls_b">Browse the app store</string>
+<string name="ur">Unrecoverable error</string>
+
+<!-- added 201 -->
+<string name="in_t">Set a name</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Không làm gì cả (khóa)</item>
+<item>Mở App Drawer</item>
+<item>Phóng đầy</item>
+<item>Phóng 100p.</item>
+<item>Phóng bật tắt đầy/100p.</item>
+<item>Màn hình trước</item>
+<item>Màn hình kế tiếp</item>
+<item>Sửa sự sắp xếp</item>
+<item>Thêm đối tượng</item>
+<item>Tùy chỉnh Lightning</item>
+<item>Tùy chỉnh màn hình hiện tại hoặc thư mục</item>
+<item>Mở ứng dụng</item>
+<item>Launch shortcut</item>
+<item>Select wallpaper</item>
+<item>Menu launcher</item>
+<item>Hiện thanh trạng thái</item>
+<item>Hiện/ẩn menu ứng dụng &amp; thanh trạng thái</item>
+<item>Hiên thị thông báo</item>
+<item>Tìm kiếm</item>
+<item>Di chuyển đối tượng</item>
+<item>Tùy chỉnh đối tượng</item>
+<item>Menu đối tượng</item>
+<item>Mở đối tượng</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Sử dụng các điểm dừng cuộn</string>
+<string name="auto_stop_s">Tự động ngừng cuộn tại các cạnh màn hình</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Select a backup archive to restore</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Không</item>
+<item>Mở/Đóng</item>
+<item>Vào dần/Mờ dần</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Đặt lại thu phóng/xoay</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Single finger scroll in edit mode</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Toggle portrait/landscape</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Tốc độ cuộn</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Backup then apply</string>
+<string name="apply_tmpl_n">Only apply</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">Biểu tượng mặc định</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">Việt Nam</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

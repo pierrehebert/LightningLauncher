@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+
+<string-array name="dialog_action_values">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+<!-- <string name="mi_share">Share</string> -->
+
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+
+
+<string-array name="action_names">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="page_anim_e">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="anim_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="mode_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="scroll_dir_e">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="overscroll_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="screen_orient_e">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="l_style_e">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="i_folder_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="la_position_e">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="b_alignh_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="b_alignv_e">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="preview_item_labels">
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+
+<!-- Do not translate -->
+
+
+<string-array name="d0">
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+<item></item>
+</string-array>
+
+
+<string-array name="aaa" />
+<string-array name="zzz" />
+
+
+</resources>

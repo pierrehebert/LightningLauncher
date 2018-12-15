@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Hrvatski</string>
+<string name="pack_name_short">Hrvatski jezik</string>
+<string name="tranlator_name">Nikola Krišto</string>
+
+<string name="description">Lightning Launcher je brz, lagan i vrlo prilagodljiv Android pokretač (također poznat kao "zamjena za početni zaslon", ili "shell".\n\nLightning je pokretač izbora za ljude koji žele glatkoću i svjetlosnu brzinu rada.\n\nZa razliku od većine tradicionalnih pokretača, Lightning Vam omogućuje da postavite stavke zaslona bilo gdje na njega, ne samo lijevo i desno, već i iznad i ispod početnog. Zamislite početni zaslon kao beskonačno platno koje se širi vertikalno kao i horizontalno i shvatit ćete o čemu se radi.\n\nTo znači: imat ćete stranica početnog zaslona koliko želite, više prostora za vaše aplikacije te bržu navigaciju.\n\nLightening ima neke zanimljive značajke kao što su stavljanje widgeta u mape (čak i u druge mape za hijerarhijsku navigaciju) ili slobodno kretanje, povećavanje, smanjivanje i rotiranje bilo koje stavke (za tu značajku molimo uključite "slobodan način").\n\nOh, jesmo li spomenuli da LL štedi vašu memoriju, ostavljajući više RAMa za vaše aplikacije?\n\nSa svojim širokim spektrom opcija, LL je jedan od najprilagodljivijih pokretača, iako ga nije tako lako konfigurirati, još! Složimo se, LL je uz sve svoje mogućnosti na dobrom putu. Nije li tako mala cijena prihvatljiva za sve uzbudljive mogućnosti koje ćete uz njega dobiti ;-)\n\nSvi komentari, prijedlozi i prijave bugova su dobrodošli. Molimo, svoja pitanja šaljite e-mailom (Pierre Hébert) na adresu pierrox@pierrox.net, ili posjetite facebook stranicu http://www.facebook.com/LightningLauncher da biste naučili više o onom na čemu trenutno radim, ili da biste zatražili neku dodatnu mogućnost, ili jednostavno ako imate bilo kakav upit.\n\n\Uživajte!\n\Dozvole:\n- PROŠIRENJE_TRAKE_STATUSA: kao što samo ime kaže, koristi se za opciju "Pokaži traku statusa"\n- SAVJETI_POZADINE: koristi se za mijenjanje dimenzija slike pozadine\n- ostale dozvole nisu potrebne!</string>
+
+
+<string name="start_activity_error">Nije moguće pokrenuti ovu aplikaciju</string>
+<string name="menu_add">Dodaj...</string>
+<string name="menu_settings">Android postavke</string>
+<string name="menu_customize">Prilagodi Lightning</string>
+<string name="menu_customize_folder">Prilagodi mapu</string>
+<string name="menu_objects_layout">Uredi raspored</string>
+<string name="dialog_action_title">Dodaj...</string>
+
+<string-array name="dialog_action_values">
+<item>Aplikacija</item>
+<item>Prečac</item>
+<item>Widget aplikacije</item>
+<item>LL Widget</item>
+<item>Mapa</item>
+<item>Točka prestanka pomicanja</item>
+</string-array>
+
+<string name="mi_remove">Ukloni</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Prilagodi</string>
+<string name="mi_move_to_screen">Move to desktop…</string>
+<string name="mi_edit_icon">Odaveri ikonu</string>
+<string name="mi_edit_label">Prilagođeni tekst</string>
+<string name="mi_edit_copy_style">Copy style…</string>
+<string name="mi_pick_app">Odaberi aplikaciju za pokretanje</string>
+<string name="mi_pick_widget">Odaberi drugi widget</string>
+<string name="mi_edit_more">Više...</string>
+<string name="mi_position">Position…</string>
+<string name="mi_pin">Prikvači</string>
+<string name="mi_unpin">Odkvači</string>
+<string name="mi_add_to_launcher">Dodaj u pokretač</string>
+<string name="mi_hide_unhide">Sakrij/Otkrij</string>
+<string name="mi_app_details">Detalji aplikacije</string>
+<string name="mi_widget_options">Postavke Widgeta</string>
+<string name="mi_move_out_of_folder">Izvadi iz mape</string>
+<string name="mi_zorder">Premjesti naprijed/natrag</string>
+<string name="first_use_title">Dobrodošli!</string>
+<string name="first_use_message">Lightning Launcher je lagana, brza i prilagodljiva zamjena za klasičan Android početni zaslon.\n\nLL će sada pripremiti listu aplikacija za ubuduće.\n\nNe propustite video upute da biste naučili više\n\nUživajte!</string>
+<string name="all_apps">Sve aplikacije</string>
+<string name="menu_refresh">Osvježi</string>
+<string name="menu_zoom">Zumiranje</string>
+<string name="menu_see_only_visible">Samo vidljive</string>
+<string name="menu_see_only_hidden">Samo skrivene</string>
+<string name="menu_see_all">Sve aplikacije</string>
+<string name="empty_folder">dugo zadrži za\ndodaj stavku\nizbornik za više</string>
+<string name="file_picker_activity_up">Gore</string>
+
+<string name="copy_style_toast">Dodirnite stavku da biste kopirali njezin stil</string>
+<string name="copy_style_cancel">Style copy canceled</string>
+<string name="copy_style_done">Style copy done!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Postavke</string>
+<string name="general_t">Glavno</string>
+<string name="general_s">Jezik, tipke, geste...</string>
+<string name="dashboard_t">Trenutni zaslon</string>
+<string name="dashboard_s">Prilagodba izgleda i ponašanja trenutnog zaslona</string>
+<string name="app_drawer_t">Ladica aplikacija</string>
+<string name="app_drawer_s">Postavke za listu aplikacija</string>
+<string name="app_killer_t">Ubojica aplikacija</string>
+<string name="app_killer_s">Lagani upravitelj aplikacija direktno ugrađen u LL</string>
+<string name="donate_t">Doniraj</string>
+<string name="donate_s">Like this app and want to support it?</string>
+<string name="backup_t">Arhiviraj</string>
+<string name="restore_t">Vrati</string>
+<string name="rate_t">Ocjeni ovu aplikaciju</string>
+<string name="rate_s">Izrazi svoje mišljenje u trgovini</string>
+<string name="facebook_t">Posjeti Facebook stranicu</string>
+<string name="facebook_s">Vidi što je u planu za sljedeću verziju, zatraži novu značajku ili prijavi bug</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">An advanced and efficient App Drawer</string>
+<string name="customize_ll">Prilagodi Lightning</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Jezik</string>
+<string name="language_s">Odaberi ili instaliraj jezićni paket</string>
+<string name="lg_pick_t">Odaberi jezični paket</string>
+<string name="lg_pick_s">Ovo će ponovno pokrenuti LL</string>
+<string name="lg_install_t">Nabavi novi paket</string>
+<string name="lg_install_s">Instaliraj iz trgovine</string>
+
+<string name="lg_contrib_t">Doprinesi</string>
+<string name="lg_contrib_s">Nema paketa za tvoj jezik? Molimo pomozi ovom projektu doprinošenjem prijevoda</string>
+<string name="events_t">Radnje</string>
+<string name="events_s">Postavi tipke i geste</string>
+<string name="ev_home">Home tipka</string>
+<string name="ev_menu">Menu tipka</string>
+<string name="ev_search">Tipka za pretraživanje</string>
+<string name="ev_item_tap">Dodir stavke</string>
+<string name="ev_item_ltap">Dugi dodir stavke</string>
+<string name="ev_bg_tap">Dodir praznog prostora</string>
+<string name="ev_bg_dtap">Dupli dodir praznog prostora</string>
+<string name="ev_bg_ltap">Dugi dodir praznog prostora</string>
+<string name="ev_swipe_r">Potez ulijevo</string>
+<string name="ev_swipe_l">Potez udesno</string>
+<string name="ev_swipe_u">Potez gore</string>
+<string name="ev_swipe_d">Potez dolje</string>
+<string name="ev_swipe2_r">Dvoprstni potez ulijevo</string>
+<string name="ev_swipe2_l">Dvoprstni potez udesno</string>
+<string name="ev_swipe2_u">Dvoprstni potez gore</string>
+<string name="ev_swipe2_d">Dvoprstni potez dolje</string>
+
+<string name="an_u">Poništite</string>
+<string name="an_n">Ne radi ništa (zaključano)</string>
+<string name="an_ad">Pokreni App ladicu</string>
+<string name="an_zfs">Zumiraj punu skalu</string>
+<string name="an_z100">Zoom 100p.</string>
+<string name="an_zt">Zoom toggle full scale/100p.</string>
+<string name="an_pd">Prethodni desktop</string>
+<string name="an_nd">Sljedeći desktop</string>
+<string name="an_el">Uredi izgled</string>
+<string name="an_ao">Dodaj objekt</string>
+<string name="an_cl">Uredi Lightning</string>
+<string name="an_cd">Prilagodi desktop ili mapu</string>
+<string name="an_la">Pokreni aplikaciju</string>
+<string name="an_ls">Pokreni prečac</string>
+<string name="an_sw">Odaberi wallpaper</string>
+<string name="an_lm">Launcher menu</string>
+<string name="an_ssb">Pokaži statusnu traku</string>
+<string name="an_smsb">Prikaži/Sakrij app menu &amp; statusnu traku</string>
+<string name="an_sn">Prikaži obavijesti</string>
+<string name="an_s">Traži</string>
+<string name="an_i_m">Premjesti stavku</string>
+<string name="an_i_c">Uredi stavku</string>
+<string name="an_i_me">Item menu</string>
+<string name="an_i_l">Pokreni stavku</string>
+
+<string name="auto_edit_t">Mod automatskog uređivanja</string>
+<string name="auto_edit_s">Automatski otvori mod uređivanja kada je dodana nova stavka</string>
+<string name="page_anim_t">Animacije zaslona</string>
+
+<string-array name="page_anim_e">
+<item>Ništa</item>
+<item>Izblijedi prema/od</item>
+<item>Klizi lijevo/desno</item>
+<item>Klizi gore/dolje</item>
+</string-array>
+
+<string name="keep_in_memory_t">Pokušaj zadržati u memorije</string>
+<string name="keep_in_memory_s">Will shorten \'back to home\', but better avoid it to save memory</string>
+<string name="min_ram_t">Smanji RAM potrošnju</string>
+<string name="min_ram_s">Take effect upon restart. Prefer memory efficiency over speed</string>
+<string name="tools_pick_shortcut">Odaberi prečac</string>
+<string name="tools_pick_widget">Odaberi widget</string>
+<string name="new_style">New style…</string>
+<string name="choose_style_name">Please choose a name for this new style:</string>
+<string name="delete_style">Delete this style ?</string>
+<string name="relayout_items">This style has fewer columns than the current one. Continue and reorganize items ?</string>
+<string name="style_saved">Style saved</string>
+<string name="style_loaded">Style loaded</string>
+<string name="install_widgets">Dodaj LL widgete…</string>
+<string name="item_settings_icon_copy_failed">Nemoguće kopirati ikonu :-(</string>
+<string name="tool_not_available">Sorry, this tool is not available</string>
+<string name="default_folder_name">Mapa</string>
+<string name="app_added" formatted="true">%s dodano</string>
+<string name="select_launcher_title">Odaberi zadani launcher</string>
+<string name="extras">Dodatno</string>
+<string name="permission_denied">Dopuštenje odbijeno. Za prečace poziva molimo instalirajte LL plugin poziv.</string>
+<string name="appearance">Izgled (povuci lijevo za pregled)</string>
+<string name="items_t">Stavke</string>
+<string name="items_s">Uredi zadane fontove, boje, ikone, okvire i više</string>
+<string name="background_t">Wallpaper &amp; pozadina</string>
+<string name="background_s">Odaberi wallpaper, boju tinte, efekt prijelaza</string>
+<string name="grid_t">Grid lines</string>
+<string name="grid_s">Only for grid mode, select width, color and position</string>
+<string name="folder_look_t">Mape prozora</string>
+<string name="folder_look_s">Odredite zadanu pozadinu, okvire, animacije, ...</string>
+<string name="this_folder_look_t">This folder\'s window</string>
+<string name="this_folder_look_s">Pozadine, okvire ili animacije…</string>
+<string name="layout_t">Layout</string>
+<string name="layout_s">Odredi kako su stavke postavljene (on a grid, freely), choose number of columns, row height, etc.</string>
+<string name="zoom_scroll_t">Zumiranje i prijelaz</string>
+<string name="zoom_scroll_s">Kako se kretati unutar desktopa</string>
+<string name="folder_feel_t">Mape</string>
+<string name="folder_feel_s">Auto close, misc.</string>
+<string name="this_folder_feel_t">Ova mapa</string>
+<string name="pg_misc_t">Lost+found</string>
+<string name="pg_misc_s">Desktop orijentacija, opcije statusne trake</string>
+<string name="color_c">Boja</string>
+
+<string name="wp_w_t">Širina</string>
+<string name="wp_h_t">Visina</string>
+<string name="wp_auto">Use 0 for auto size</string>
+<string name="wp_scroll_t">Pomicanje wallpapera</string>
+<string name="wp_scroll_s">Može utjecati ma performanse</string>
+
+<string name="grid_h_color_t">Boja horizontalne linije</string>
+<string name="grid_h_size_t">Debljina horizontalne linije</string>
+<string name="grid_v_color_t">Boja vertikalne linije</string>
+<string name="grid_v_size_t">Debljina vertikalne linije</string>
+<string name="grid_color_s">Use transparent for none</string>
+<string name="grid_size_s">Use 0 for hairline</string>
+<string name="grid_above">Crta iznad stavaka</string>
+<string name="folder_title">Opcije naslova</string>
+<string name="display_title">Prikaži naslov</string>
+<string name="font_color">Boja fonta</string>
+<string name="font_size">Veličina fonta</string>
+<string name="folder_anims">Animacije</string>
+<string name="anim_in">Otvori</string>
+<string name="anim_out">Zatvori</string>
+
+<string name="behaviour">Ponašanje</string>
+<string name="free_mode_t">Odvojite stavku iz mreže po zadanom</string>
+<string name="free_mode_s">Kod dodavanja stavke, odvojiti ga iz mreže automatski</string>
+<string name="dual_pos_t">Dual position</string>
+<string name="dual_pos_s">Dopustite stavkama imati dvije pozicije: jedan u portretnom modu (primarni), te još jedan u pejzažnom</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>Ništa</item>
+<item>Centar</item>
+<item>Rub</item>
+<item>Centar &amp; Rub</item>
+</string-array>
+<string name="placement">Postavljanje</string>
+<string name="colums">Grid columns</string>
+<string name="rows">Grid rows</string>
+<string name="mode_t">Mode</string>
+
+<string-array name="mode_e">
+<item>Automatsko</item>
+<item>Prilagođeni broj</item>
+<item>Prilagođena veličina</item>
+</string-array>
+
+<string name="number">Broj</string>
+<string name="size">Veličina</string>
+<string name="col_num_s">Broj stupaca po stranici</string>
+<string name="col_size_s">Širina pojedinog stupca</string>
+<string name="row_num_s">Broj redaka po stranici</string>
+<string name="row_size_s">Visina pojedinog reda</string>
+<string name="scroll_dir_t">Smjer prijelaza</string>
+
+<string-array name="scroll_dir_e">
+<item>Auto</item>
+<item>Samo horizontalno</item>
+<item>Samo vertikalno</item>
+<item>Oboje</item>
+<item>Bez pomicanja</item>
+</string-array>
+
+<string name="overscroll_t">Overscroll</string>
+
+<string-array name="overscroll_e">
+<item>Decelerate</item>
+<item>Odskoči</item>
+<item>Onemogućeno</item>
+</string-array>
+
+<string name="snap_to_pages_t">Snap to pages</string>
+<string name="snap_to_pages_s">Uvijek zaustaviti klizanje na granici stranice</string>
+<string name="fit_item_t">Prilagodi desktop stavkama</string>
+<string name="fit_item_s">Stisni desktop prema stavkama, ne više od veličine stranice</string>
+<string name="no_diagonal_scrolling_t">Onemogući dijagonalno pomicanje</string>
+<string name="no_diagonal_scrolling_s">Pomicanje samo u jednom smjeru, u isto vrijeme</string>
+<string name="pinch_zoom_t">Omogućite pinch zoom</string>
+<string name="auto_close_t">Auto close</string>
+<string name="auto_close_s">Zatvorite mapu čim je pokrenuta jedna njezina aplilacija</string>
+<string name="anim_glitch_fix_t">Animation glitch fix</string>
+<string name="anim_glitch_fix_s">Add a 1 pixel padding to fix a glitch that appear only on some Android versions</string>
+<string name="screen_orient_t">Desktop orientacija</string>
+
+<string-array name="screen_orient_e">
+<item>Auto</item>
+<item>Portret</item>
+<item>Pejzažno</item>
+<item>Sistem</item>
+</string-array>
+
+<string name="hide_statusbar_t">Sakrij statusnu traku</string>
+<string name="hide_statusbar_s">Pritisni menu za prikazivanje</string>
+<string name="manage">Manage</string>
+<string name="load_style_t">Load a style</string>
+<string name="load_style_s">Zamijenite trenutnu konfiguraciju s vrijednostima iz stila</string>
+<string name="save_style_t">Spremi u stil</string>
+<string name="save_style_s">Spremi trenutni desktop ili konfiguraciju mape za prilagođeni stil</string>
+<string name="confirm_reset_page">Stvarno resetirati desktop ili mapu?</string>
+<string name="reset_page_t">Resetiraj ovaj desktop</string>
+<string name="reset_page_s">Uklanjanje stavki na ovom desktopu / mapi i vratiti zadani stil</string>
+<string name="tab_label">Tekst</string>
+<string name="tab_icon">Ikona</string>
+<string name="tab_layout">Pos.</string>
+<string name="tab_box">Box</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Glavno</string>
+<string name="l_display">Postavljanje oznake</string>
+<string name="l_custom">Postavite prilagođenu oznaku</string>
+<string name="l_size">Veličina fonta</string>
+<string name="l_type_face">Koristite prilagođeni font...</string>
+<string name="l_style_t">Stil fonta</string>
+
+<string-array name="l_style_e">
+<item>Normal</item>
+<item>Podebljano</item>
+<item>Ukošeno</item>
+<item>Podebljano &amp; ukošeno</item>
+</string-array>
+
+<string name="l_num_lines">Maksimalni broj linija</string>
+<string name="l_colors">Boje</string>
+<string name="l_color_normal">Normal color</string>
+<string name="l_color_selected">Selected color</string>
+<string name="l_color_focused">Focused color</string>
+<string name="l_shadow">Sjena</string>
+<string name="l_shadow_enable">Omogućite sjenu</string>
+<string name="l_shadow_radius">Radius</string>
+<string name="l_shadow_offset_x">Offset X</string>
+<string name="l_shadow_offset_y">Offset Y</string>
+<string name="l_shadow_color">Boja</string>
+<string name="i_main">Glavno</string>
+<string name="i_display">Prikaži ikonu</string>
+<string name="i_custom">Odaberi ikonu</string>
+<string name="i_folder_t">Sil ikon mape</string>
+
+<string-array name="i_folder_e">
+<item>Ikona</item>
+<item>Rešetka</item>
+<item>Stog</item>
+</string-array>
+
+<string name="i_effect">Omotači</string>
+<string name="i_e_back">Pozadinska slika</string>
+<string name="i_e_over">Overlay</string>
+<string name="i_e_mask">Maska</string>
+<string name="i_e_scale">Unutarnji razmjer</string>
+
+<string name="i_smooth">Glatka ikona</string>
+<string name="i_scale_t">Razmjer</string>
+<string name="i_scale_s">Upozorenje: 4x razmjera potrebno više 16x memorije: to može iscrpiti memoriju uređaja vrlo brzo.</string>
+<string name="i_reflect">Odraz</string>
+<string name="i_reflect_enable">Omogući odraz</string>
+<string name="i_reflect_overlap">Preklapanje s ikonom</string>
+<string name="i_reflect_size">Veličina</string>
+<string name="i_reflect_scale">Razmjet</string>
+<string name="la_margin">Margina između ikone i oznake</string>
+<string name="la_position_t">Položaj oznake</string>
+
+<string-array name="la_position_e">
+<item>Lijevo</item>
+<item>Vrh</item>
+<item>Desno</item>
+<item>Dno</item>
+</string-array>
+
+<string name="b_alignh_t">Horizontalno poravnanje</string>
+
+<string-array name="b_alignh_e">
+<item>Lijevo</item>
+<item>Centar</item>
+<item>Desno</item>
+<item>Prilagođeno</item>
+</string-array>
+
+<string name="b_alignv_t">Vertikalno poravnanje</string>
+
+<string-array name="b_alignv_e">
+<item>Vrh</item>
+<item>Sredina</item>
+<item>Dno</item>
+<item>Prilagođeno</item>
+</string-array>
+
+<string name="b_hint">Dodirnite jednom ili više područja zatim odaberite akciju ispod</string>
+<string name="b_size">Postavite veličinu odabranih područja</string>
+<string name="b_color_normal">Normal color</string>
+<string name="b_color_selected">Selected color</string>
+<string name="b_color_focused">Focused color</string>
+<string name="b_color_s">Postavite boju okvira ili sadržaja</string>
+<string name="m_enabled_t">Clickable</string>
+<string name="m_enabled_s">Uđite u uređivanje izgleda za odabir onemogućene ikone</string>
+<string name="m_alpha_t">Transparentnost</string>
+<string name="m_alpha_s">Lijepo, ali sporo. 0: nevidljivi, 255: potpuno neprozirno</string>
+<string name="m_smooth_transform_t">Glatko kada se transformira</string>
+<string name="m_smooth_transform_s">Ljepše, ali sporije</string>
+
+<string-array name="preview_item_labels">
+<item>Normal</item>
+<item>Odabrano </item>
+<item>Fokusirano</item>
+</string-array>
+
+<string name="il_preview">Desktop Pregled \n(Može se razlikovati od pravog desktopa)</string>
+<string name="preview_toast">Način pregleda \nsve akcije su onemogućene</string>
+<string name="pick_a_font">Odaberi TTF file…</string>
+<string name="system_font">Sistem font</string>
+<string name="left">lijevo</string>
+<string name="top">vrh</string>
+<string name="right">desno</string>
+<string name="bottom">dno</string>
+<string name="margin">margina</string>
+<string name="border">okvir</string>
+<string name="padding">ispuna</string>
+<string name="content">sadržaj</string>
+<string name="ovr_custom">prilagođeno</string>
+
+<string name="pick_t">Odaberi ikonu iz</string>
+<string name="pick_file">Ugrađeni fiže manager</string>
+<string name="pick_gallery">Externi file manager</string>
+<string name="pick_icon_pack">ADW paket ikona</string>
+<string name="pick_default">Zadane ikone</string>
+
+<string name="tutorials">Tutoriali</string>
+<string name="donate">Doniraj</string>
+<string name="other_apps">Druge aplikacije</string>
+<string name="tut_intro">Uvod</string>
+<string name="tut_basic_editing">Prvi koraci</string>
+<string name="tut_custo">Uredi objekte</string>
+<string name="tut_free_mode">Free mode</string>
+<string name="tut_lock">Zaključaj desktop</string>
+<string name="tut_pin">Zakvači/otkvači items</string>
+<string name="tut_scroll">Desktop i navigacija</string>
+<string name="dialog_color_picker">Birač boja</string>
+
+<string name="shortcut_settings">LL - Postavke</string>
+<string name="shortcut_actions">LL - Radnje</string>
+
+<string name="no_backup_archive">Nema arhiva za vraćanje</string>
+<string name="backup_in_progress">Arhiviranje u tijeku…</string>
+<string name="restore_in_progress">Vraćanje u tijeku…</string>
+<string name="backup_done">Arhiva spremljena u:\n%s</string>
+<string name="backup_error">Backup pogreška, provjerite da postoji dovoljno prostora za pohranu na SD kartici</string>
+<string name="restore_error">Pogreška u vraćanju, molimo vas da provjerite da backup arhiva vrijedi i može se pročitati</string>
+
+<string name="confirm_delete">Da li stvarno želite obrisati?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Resetiraj</string>
+<string name="bg_sys_wp">Sistemski wallpaper</string>
+<string name="bg_sys_wp_select_t">Promijeni sistemski wallpaper…</string>
+<string name="bg_sys_wp_select_s">Sistemsku pozadinu dijele svi desktopi i app ladica</string>
+<string name="bg_screen_wp">Desktop wallpaper</string>
+<string name="bg_screen_wp_select_t">Promijeni desktop wallpaper…</string>
+<string name="bg_screen_wp_select_s">Ova pozadina prikazana je iznad pozadine sustava. Svaki desktop može imati svoj wallpaper.</string>
+<string name="bg_more">Više</string>
+<string name="bg_more_color_t">Boja</string>
+<string name="bg_more_color_s">Koristite potpuno neprozirnu boju onemogućavanje pozadine. Koristite transparentnu boju za pregledni pozadinu</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Dugi dodir</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Dodir</string>
+<string name="style_s1">Zadano</string>
+<string name="style_s2">Compact (male ikone, mali tekst)</string>
+<string name="style_s3">Readable (velike ikone, veliki tekst)</string>
+<string name="style_s4">Popis, ikone na desnoj</string>
+<string name="style_s5">Popis, veliki tekst, bez ikone</string>
+<string name="style_s6">Popis, veliki tekst i ikone</string>
+<string name="style_s7">Popločano, bez teksta</string>
+<string name="style_s8">Jeftine boje</string>
+<string name="style_s9">Zune like</string>
+<string name="dialog_help_hint_t">Savjet</string>
+<string name="dialog_help_hint_m">Da biste dobili pomoć za postavljanje, dugi dodir na postavku.</string>
+<string name="dialog_help_hint_dsa">Ne pokazuj ponovno</string>
+<string name="m_pin_mode">Pin mod</string>
+<string-array name="m_pin_mode_e">
+<item>Nezakačeno</item>
+<item>Horizontalno &amp;Vertikalno</item>
+<item>Horizontalno</item>
+<item>Vertikalno</item>
+</string-array>
+<string name="m_events">Geste</string>
+<string name="shortcut_screen">LL - Desktop &amp; pozicija</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">Ultimativni launcher. Bez kompromisa.</string>
+<string name="more_apps_t">Više besplatnih aplikacija</string>
+<string name="more_apps_s">Od PierroX -a(alati, igre, zabava)</string>
+<string name="mi_kill">Ubij</string>
+<string name="killed_freed">Ubijeno (%dM oslobođeno)</string>
+<string name="killed">Ubijeno!</string>
+<string name="configure_pages_t">Konfiguriraj desktope</string>
+<string name="configure_pages_s">Postavljanje više desktopova, njihov redoslijed, home desktop, ikone, oznake, ...</string>
+<string name="mi_mode_custom">Moja ladica</string>
+<string name="mi_mode_by_name">Sve aplikacije po imenu</string>
+<string name="mi_mode_recent_apps">Nedavno pokrenuto</string>
+<string name="mi_mode_recently_updated">Nedavno ažurirano</string>
+<string name="mi_mode_frequently_used">Često korištene</string>
+<string name="mi_mode_running">Pokrenute</string>
+<string name="mi_es_add_folder">Dodaj mapu</string>
+<string name="mi_es_edit_layout">Uredi izgled</string>
+<string name="mi_es_show_hidden">Orikaži sakrivene</string>
+<string name="mi_es_hide_hidden">Sakrij sakrivene</string>
+<string name="mi_es_refresh">Osvježi</string>
+<string name="mi_es_settings">Postavke</string>
+<string name="mi_es_folder_settings">Postavke mape</string>
+<string name="mi_uninstall">Deinstaliraj</string>
+<string name="my_drawer_title">My Drawer</string>
+<string name="my_drawer_message">"Moja ladica" pogled vam omogućuje da u potpunosti prilagodite svoju app ladicu. \n\nU ovom modu predmeti se mogu slobodno pomicati na velikom platnu i mape se mogu koristiti za organiziranje aplikacija. \n\nPokušajte smanjivanje i odaberite "Uredi izgled": otkrit ćete da se aplikacije mogu staviti na lijevo, desno, na vrhu i dnu stranice štoviše, omogućujući vam da upravljate aplikacijama na vaš osobni način.</string>
+<string name="empty_folder_x">Prazna mapa\npovucite i ispustite stavke na ikonu mape za popunjavanje</string>
+<string name="ll_import_title">Uvoz LL postavljanja</string>
+<string name="ll_import_message">Otkrivena je instalacija Lightning Launcher.\n\nSvi podaci će se sada uvesti. Kad je to učinjeno možete sigurno deinstalirati Lightning Launcher i koristiti Lightning Launcher eXtreme.</string>
+<string name="init_ok">Spremno!</string>
+<string name="init_ko">Nešto je pošlo po zlu tijekom kopiranja datoteka!</string>
+<string name="auto_exit_t">Auto exit</string>
+<string name="auto_exit_s">Zatvorite app ladicu nakon pokretanja aplikacije</string>
+<string name="icons_t">Paket ikona</string>
+<string name="icons_s">Primijenite ADW paket ikona ili vratite prilagođene ikone</string>
+<string name="apply_icon_pack_t">Primjeni ADW icon pack</string>
+<string name="apply_icon_pack_s">Radi za teme koje pružaju ikonu /app tablicu</string>
+<string name="icon_pack_no_appfilter">Ovaj paket ikona nema app/ikonu tablicu</string>
+<string name="revert_custom_icons_t">Vrati na prilagođene ikone</string>
+<string name="revert_custom_icons_s">Uključujući prilagođeni efekt ikona i unutarnje skale</string>
+<string name="please_wait">Molim pričekajte…</string>
+<string name="app_not_valid">Ovaj prečac nije povezan s važećom aplikacijom. Želite li ga dobiti iz App Store ili odabrati drugu aplikaciju?</string>
+<string name="app_store">App store</string>
+
+<!-- added 95 -->
+<string name="dtext">Dinamičan tekst</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Tekst za prikaz</string>
+<string-array name="dt_source_e">
+<item>Nepročitani SMS</item>
+<item>Nepročitani GMail</item>
+<item>Propušteni pozivi</item>
+<item>Datum &amp; Vrijeme </item>
+<item>Pohrana</item>
+<item>Razina baterije</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Kratki format</string>
+<string-array name="dt_date_ef_e">
+<item>Datum</item>
+<item>Vrijeme</item>
+<item>Datum &amp; Vrijeme</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expert format</string>
+<string name="dt_date_xf_s">Dugi dodir za dokumentaciju</string>
+<string name="dt_display_empty_t">Prikaži kada je prazno</string>
+<string name="dt_format_error">Pogreška formatu</string>
+<string name="dt_storage_s_t">Odaberi pohranu</string>
+<string-array name="dt_storage_s_e">
+<item>Interna</item>
+<item>Externa</item>
+</string-array>
+<string name="dt_storage_f_t">Prikaži format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Preostali prostor</item>
+<item>Korišteni prostor</item>
+<item>Dostupno</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparentna statusna traka</string>
+<string name="trans_statusbar_s">Samo za uređaje koji podržavaju (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Zamijeni stavke</string>
+<string name="swap_items_s">Zamijeni stavke, ako se preklapaju (samo u grid modu)</string>
+<string name="rearrange_items_t">Promjena rasporeda stavki</string>
+<string name="rearrange_items_s">Upozorenje: molimo pročitajte pomoć prvo (dugo pritisnite)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Arhiviraj &amp; Vrati</string>
+<string name="an_gh">Idi na home desktop</string>
+<string name="an_ghz100">Idi na home desktop i zumiraj 100p.</string>
+<string name="an_sd">Odaberite desktop na koji želite ići</string>
+<string name="an_re">Ponovno pokteni aplilaciju</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Postavke ispod primijeni na:</string>
+<string-array name="grid_pl_e">
+<item>Portret &amp; Pejzažno</item>
+<item>Portret</item>
+<item>Pejzažno</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Molom potvrdite:</string>
+<string name="apply_tmpl_m">Spremate se primijeniti template \'%s\', ne želite napraviti arhivu svog trenutnog postava prvo?</string>
+<string name="apply_tmpl_p">Prvo arhiviraj, onda primijeni</string>
+<string name="apply_tmpl_n">Samo primijeni</string>
+<string name="apply_tmpl_g">Primijenjivanje template…</string>
+<string name="apply_tmpl_e">Nemoguće primijeniti ovaj template!</string>
+<string name="tmpl_t">Templates</string>
+<string name="tmpl_s">Traži i primijeni templates, izvezi za APK</string>
+<string name="tmpl_a_t">Primijeni</string>
+<string name="tmpl_a_s">Učitaj instalirani template</string>
+<string name="tmpl_b_t">Traži postojeće templates</string>
+<string name="tmpl_b_s">Skini nove sviježe teme</string>
+<string name="tmpl_e_t">Izvezi za APK</string>
+<string name="tmpl_e_s">Dugi dodir da biste pročitali tutorial</string>
+<string name="tmpl_c">Odaberi template</string>
+<string name="tmpl_e_m">Exporting…</string>
+<string name="tmpl_e_d">Export done</string>
+<string name="tmpl_e_e">Export error!</string>
+<string name="tmpl_check">Opening template…</string>
+<string name="tmpl_check_e">Nemoguće pročitati ovaj template!</string>
+<string name="tmpl_check_ut">Potrebno ažuriranje</string>
+<string name="tmpl_check_um">Ovaj template je dizajniran za noviju inačicu Lightning Launchera, želite li ažurirati sada?</string>
+<string name="tmpl_get_llx">Get LLX</string>
+<string name="tmpl_warn_t">Upozorenje</string>
+<string name="tmpl_warn_c">Nastavi svejedno</string>
+<string name="tmpl_warn_m">Template je sprema za primijenu, ali neka upozorenja su pronađena:</string>
+<string name="tmpl_warn_llx">- ovaj template je dizajniran s Lightning Launcher Extreme, to može koristiti neke značajke koje nisu dostupne u ovoj verziji.</string>
+<string name="tmpl_warn_screen">- ovaj template nije točno odgovarajući za karakteristike zaslona. Neki elementi ne mogu biti točno prikazani.</string>
+<string name="tmpl_warn_widget">- vaš uređaj nije u mogućnosti vratiti widgete automatski, morat ćete ih ručno ponovno postaviti.</string>
+<string name="widget_e">Nije moguće učitati ovaj widget\nDodirni za instaliranje ili odaberi novi</string>
+<string name="tmpl_s_p">Odaberi desktope za izvoz</string>
+<string name="an_ctf">Zatvori najvišu mapu</string>
+<string name="an_caf">Zatvori sve mape</string>
+<string name="ev_screen_on">Screen on</string>
+<string name="ev_screen_off">Screen off</string>
+<string name="an_sa">Traži app</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Honour pinned items in edit mode</string>
+<string name="gc_hpie_s">Dugi dodir za opis</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Stop point</string>
+<string name="sp_b">Ponašanje</string>
+<string name="sp_ss">Stop scroll</string>
+<string name="sp_sd">Stop drag</string>
+<string name="sp_ba">Barrier</string>
+<string name="sp_dw">Desktop širina</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Smjer</string>
+<string name="sp_dlr">Left to right</string>
+<string name="sp_drl">Right to left</string>
+<string name="sp_dtb">Top to bottom</string>
+<string name="sp_dbt">Bottom to top</string>
+<string name="assp_t">Uvijek prikaži stop points</string>
+<string name="assp_s">Stop points are always displayed, even in normal mode</string>
+<string name="gc_edit">Layout editor</string>
+
+<!-- added 116 -->
+<string name="backup_d">Arhiviraj</string>
+<string name="an_of">Otvori mapu</string>
+<string name="sf">Odaberi mapu</string>
+<string name="br_n">Ime arhive</string>
+<string name="br_a">Odaberi radnju</string>
+<string name="br_r">Preimenuj</string>
+<string name="br_d">Izbriši</string>
+<string name="br_s">Pošalji</string>
+<string name="br_dc">Izbrisati ovu arhivu</string>
+<string name="br_rc">Vratiti ovu arhivu</string>
+<string name="dt_gml_t">Gmail oznaka</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Kopiraj na desktop</string>
+<string name="f_p">Postavljanje</string>
+<string name="f_ac">Kada koristite prilagođeno poravnanje</string>
+<string name="f_l">Lijevo</string>
+<string name="f_t">Vrh</string>
+<string name="f_af">Fade in / out</string>
+<string name="sp_e">Izjednači rubove</string>
+<string name="sp_el">Lijevo</string>
+<string name="sp_er">Desno</string>
+<string name="sp_et">Vrh</string>
+<string name="sp_eb">Dno</string>
+
+<!-- added 119 -->
+<string name="np">Pozadinske slike</string>
+<string name="np_d">Dugi pritisak za dokumentaciju</string>
+<string name="np_n">Normalna pozadina</string>
+<string name="np_s">Pozadina odabira</string>
+<string name="np_f">Pozadina fokusa</string>
+<string name="np_r">Pozadinska slika</string>
+<string-array name="anim2_e">
+<item>Ništa</item>
+<item> Otvori / zatvori</item>
+<item> Slajdovi desno</item>
+<item> Slajdovi lijevo</item>
+<item> Slajdovi dnu </item>
+<item> Slajdovi vrhu</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Prebaci na portret</string>
+<string name="ev_ol">Prebaci na pejzažno</string>
+<string name="an_gdp">Idi na određeni desktop&amp;položaj</string>
+<string name="cof_t">Zatvori druge mape</string>
+<string name="cof_s">Dopusti samo jednu otvorenu mapu u isto vrijeme</string>
+
+<!-- added 123 -->
+<string name="t_nb">Transparentna navigacijska traka</string>
+<string name="gb_l">Lijevo</string>
+<string name="gb_t">Vrh</string>
+<string name="gb_w">Širina</string>
+<string name="gb_h">Visina</string>
+<string name="gb_a">Kut</string>
+<string name="gb_sx">Razmjer X</string>
+<string name="gb_sy">Razmjer Y</string>
+<string name="gb_kx">Kosina X</string>
+<string name="gb_ky">Kosina Y</string>
+<string name="mi_geometry">Geometrija</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Opcije mape</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Uredi sadržaj panela</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Odvoji od mreže</string>
+<string name="mi_lmf">Dodaj na mrežu</string>
+<string name="mi_mop">Makni sa panela</string>
+
+<!-- added 137 -->
+<string name="container">Veličina panela</string>
+<string name="uds_t">Koristi veličinu desktopa</string>
+<string name="uds_s">Koristi veličinu desktopa za izračunavanje veličine ćelije, ne veličine panela</string>
+<string name="mi_app">App...</string>
+<string name="mi_l">Zaključaj</string>
+<string name="mi_ul">Otključaj</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Tipka menu (dugo)</string>
+<string name="ev_back">Back tipka</string>
+<string name="ev_backl">Back tipka (dugo)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Stavke</string>
+<string name="mi_ic">Kompaktna</string>
+<string name="mi_isa">Poredaj a-z</string>
+<string name="mi_isd">Poredaj z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Otključaj zaslon</string>
+<string name="s_ld_t">Zaključaj zaslon</string>
+<string name="s_ld_s">Odaberi desktop za prikazivanje na zaključanom zaslonu. Dugi dodir za tutorial.</string>
+<string name="s_ld_c">Zaključavanje zaslona je onemogućeno.</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d0"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Ništa (zaključaj)</item>
+<item>Otvori ladicu aplikacija</item>
+<item>Zumiraj punu skalu</item>
+<item>Zumiraj 100p.</item>
+<item>Zumiraj i uključi/isključi punu skalu/100p./Prethodni zaslon/Sljedeći zaslon/Uredi raspored</item>
+<item>Dodaj objekt</item>
+<item>Prilagodi Lightning</item>
+<item>Prolagodi trenutni zaslon ili mapu</item>
+<item>Pokreni aplikaciju</item>
+<item>Pokreni prečac</item>
+<item>Odaberi pozadinu</item>
+<item>Izbornik pokretača</item>
+<item>Pokaži traku statusa</item>
+<item>Pokaži/sakrij meni aplikacija &amp; traka statusa</item>
+<item>Pokaži obavijesti</item>
+<item>Traži</item>
+<item>Premjesti stavku</item>
+<item>Prilagodi stavku</item>
+<item>Izbornik stavke</item>
+<item>Pokreni stavku</item>
+<item>Customize item</item>
+<item>Item menu</item>
+<item>Launch item</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Use auto scroll stops</string>
+<string name="auto_stop_s">Automatsko zaustavljanje pomicanja na rubovima desktopa</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Select a backup archive to restore</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>None</item>
+<item>Open / Close</item>
+<item>Fade in / Fade out</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Resetiraj skalu/rotiraj</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Pomicanje jednim prstom u edit modu</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Toggle portrait/landscape</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Brzina pomicanja</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">Hrvatski</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa" />
+<string-array name="zzz" />
+
+</resources>

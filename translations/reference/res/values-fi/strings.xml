@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Finnish</string>
+<string name="pack_name_short">Finnish</string>
+<string name="tranlator_name">Juuso Korsimo</string>
+
+<string name="description">Lightning Launcher is a fast, light and extremely customizable launcher (also known as "home screen replacement", or "shell"). \n\nLightning is the launcher of choice for people who wants a butter smooth, light on memory and tailor-made home screen replacement. \n\nUnlike most traditional launchers, Lightning lets you place items everywhere on the desktop, not only to the left or right sides, but also on pages above and below. Think at the desktop as an unlimited canvas extending in both horizontal and vertical directions instead of a strip, and you will get the idea. \n\nThis mean: as many pages as you need, more space for your apps, and faster navigation. \n\nLightning has some interesting features, such as being able to put widgets in folders (and even other folders for hierarchical navigation), or letting you freely move, scale and rotate any items (note: please switch to "free mode" first to enable rotate/scale). \n\nOh, and did I mentioned that LL was light on memory, leaving more RAM for your apps ? \n\nWith its wide set of options and switches, LL is one of the most customizable launcher, albeit perhaps not the easiest to configure yet ! Agreed, as most powerful tools, LL has a learning curve. But isn\'t that a small price to pay to get the most exciting and unique home screen ;-) \n\nAll comments, suggestions and bug reports are welcome. Please email your questions and bug reports to me (Pierre Hébert) at pierrox@pierrox.net, or visit the facebook page at http://www.facebook.com/LightningLauncher to learn more on what I am currently working on, or request for some feature, or simply ask a question. \n\Enjoy ! \n\Permission: \n- EXPAND_STATUS_BAR: as its name says, used for the "Show status bar" action. \n- SET_WALLPAPER_HINTS: used to set the wallpaper dimension \n- no other permission needed !</string>
+
+
+<string name="start_activity_error">Sovelluksen käynnistys epäonnistui</string>
+<string name="menu_add">Lisää…</string>
+<string name="menu_settings">Androidin asetukset</string>
+<string name="menu_customize">Muokkaa Launcheria</string>
+<string name="menu_customize_folder">Muokkaa kansiota</string>
+<string name="menu_objects_layout">Muokkaa ulkoasua</string>
+<string name="dialog_action_title">Lisää…</string>
+
+<string-array name="dialog_action_values">
+<item>Sovellus</item>
+<item>Pikakuvake</item>
+<item>Widget</item>
+<item>LL Widget</item>
+<item>Kansio</item>
+<item>Vierityksen pysähdyskohta</item>
+</string-array>
+
+<string name="mi_remove">Poista</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Muokkaa</string>
+<string name="mi_move_to_screen">Siirrä näyttöön... </string>
+<string name="mi_edit_icon">Valitse kuvake</string>
+<string name="mi_edit_label">Mukautettu teksti</string>
+<string name="mi_edit_copy_style">Kopioi tyyli... </string>
+<string name="mi_pick_app">Valitse avattava sovellus</string>
+<string name="mi_pick_widget">Valitse toinen widget</string>
+<string name="mi_edit_more">Lisää... </string>
+<string name="mi_position">Sijainti... </string>
+<string name="mi_pin">Lukitse</string>
+<string name="mi_unpin">Vapauta</string>
+<string name="mi_add_to_launcher">Lisää launcheriin</string>
+<string name="mi_hide_unhide">Piilota/Näytä</string>
+<string name="mi_app_details">Sovelluksen tiedot</string>
+<string name="mi_widget_options">Widgetin asetukset</string>
+<string name="mi_move_out_of_folder">Siirrä pois kansiosta</string>
+<string name="mi_zorder">Siirrä päälle/alle</string>
+<string name="first_use_title">Tervetuloa</string>
+<string name="first_use_message">Lightning Launcher on kevyt, nopea ja muokattava kotinäytön korvaaja Androidille.\n\nLL lataa nyt sinun sovelluksesi.\n\nMuista katsoa myös video ohjeet (Eng.). \n\nNauti !</string>
+<string name="all_apps">Kaikki Sovellukset</string>
+<string name="menu_refresh">Päivitä</string>
+<string name="menu_zoom">Lähennä</string>
+<string name="menu_see_only_visible">Vain Näkyvät</string>
+<string name="menu_see_only_hidden">Vain Piilotetut</string>
+<string name="menu_see_all">Kaikki Sovellukset</string>
+<string name="empty_folder">Paina pitkään\nlisätäksesi sovelluksia\nvalikosta valitse lisää…</string>
+<string name="file_picker_activity_up">Ylös</string>
+
+<string name="copy_style_toast">Paina kohdetta kopioidaksesi sen tyyli</string>
+<string name="copy_style_cancel">Tyylin kopiointi peruttu</string>
+<string name="copy_style_done">Tyylin kopiointi valmis!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Asetukset</string>
+<string name="general_t">Yleiset</string>
+<string name="general_s">Kieli, painikkeet, eleet,…</string>
+<string name="dashboard_t">Nykyinen Työpöytä</string>
+<string name="dashboard_s">Muokkaa nykyistä työpöytää ja sen käytöstä</string>
+<string name="app_drawer_t">Valikko</string>
+<string name="app_drawer_s">Valikon kohteiden asetukset</string>
+<string name="app_killer_t">Sovellusten Sulkija</string>
+<string name="app_killer_s">Kevyt sovellusten sulkija Lightning Launcheriin</string>
+<string name="donate_t">Lahjoita</string>
+<string name="donate_s">Pidätkö tästä sovelluksesta ja haluatko tukea sitä?</string>
+<string name="backup_t">Varmuuskopioi</string>
+<string name="restore_t">Palauta</string>
+<string name="rate_t">Anna tälle sovellukselle arvosana</string>
+<string name="rate_s">Anna mielipiteesi sovelluskaupassa</string>
+<string name="facebook_t">Vieraile Facebook sivuillamme</string>
+<string name="facebook_s">Näe mitä on tapahtumassa, tai esitä kysymys sovelluksesta, tai  ehdoita vaikka uutta tomintoa sovellukseemme.</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">Edistynyt ja käytännöllinen sovellusvalikko</string>
+<string name="customize_ll">Muokkaa Lightning Launcheria</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Kieli</string>
+<string name="language_s">Valitse tai asenna kielipaketti</string>
+<string name="lg_pick_t">Valitse kielipaketti</string>
+<string name="lg_pick_s">Tämä käynnistää Lightning Launcherin uudestaan</string>
+<string name="lg_install_t">Hae uusia paketteja</string>
+<string name="lg_install_s">Asenna uusi paketti sovelluskaupasta</string>
+
+<string name="lg_contrib_t">Auta</string>
+<string name="lg_contrib_s">Ei kielipakettia sinun kielellesi ? Auta meitä saamaan tämä ohjelma sinun kielellesi</string>
+<string name="events_t">Tapahtumat &amp; Toiminnot</string>
+<string name="events_s">Hallinnoi painikkeita, pyyhkäisyjä ja eleitä</string>
+<string name="ev_home">Kotinäppäin</string>
+<string name="ev_menu">Valikkonäppäin</string>
+<string name="ev_search">Hakunäppäin</string>
+<string name="ev_item_tap">Kosketa kohdetta</string>
+<string name="ev_item_ltap">Pidä kohdetta pohjassa</string>
+<string name="ev_bg_tap">Kosketa tyhjää aluetta</string>
+<string name="ev_bg_dtap">Kosketa tuplasti tyhjää aluetta</string>
+<string name="ev_bg_ltap">Pidä tyhjää aluetta pohjassa</string>
+<string name="ev_swipe_r">Pyyhkäise oikealle</string>
+<string name="ev_swipe_l">Pyyhkäise vasemmalle</string>
+<string name="ev_swipe_u">Pyyhkäise ylös</string>
+<string name="ev_swipe_d">Pyyhkäise alas</string>
+<string name="ev_swipe2_r">Pyyhkäise oikealle 2 sormella</string>
+<string name="ev_swipe2_l">Pyyhkäise vasemmalle 2 sormella</string>
+<string name="ev_swipe2_u">Pyyhkäise ylös 2 sormella</string>
+<string name="ev_swipe2_d">Pyyhkäise alas 2 sormella</string>
+
+<string name="an_u">Unset</string>
+<string name="an_n">Älä tee mitään (Lukitse)</string>
+<string name="an_ad">Avaa sovellusvalikko</string>
+<string name="an_zfs">Zoomaa täydelle skaalalle</string>
+<string name="an_z100">Zoomaa 100p.</string>
+<string name="an_zt">Aseta Täysi skaala/100p.</string>
+<string name="an_pd">Edellinen sivu</string>
+<string name="an_nd">Seuraava sivu</string>
+<string name="an_el">Myokkaa näyttöä</string>
+<string name="an_ao">Lisää objekti</string>
+<string name="an_cl">Muokkaa Lightning Launcheria</string>
+<string name="an_cd">Muokkaa nykyistä sivua ja kansioita</string>
+<string name="an_la">Käynnistä sovellus</string>
+<string name="an_ls">Launch shortcut</string>
+<string name="an_sw">Valitse taustakuva</string>
+<string name="an_lm">Launcherin valikko</string>
+<string name="an_ssb">Näytä tilapalkki</string>
+<string name="an_smsb">Näytä/piilota sovellusvalikko &amp; tilapalkki</string>
+<string name="an_sn">Näytä ilmoitukset</string>
+<string name="an_s">Etsi</string>
+<string name="an_i_m">Siirrä kohdetta</string>
+<string name="an_i_c">Muokkaa kohdetta</string>
+<string name="an_i_me">Kohteen valikko</string>
+<string name="an_i_l">Käynnistä kohde</string>
+
+<string name="auto_edit_t">Automaattinen muokkaustila</string>
+<string name="auto_edit_s">Siirry muokkaustilaan automaattisesti kun uusi kohde lisätään</string>
+<string name="page_anim_t">Näytön animaatiot</string>
+
+<string-array name="page_anim_e">
+<item>Ei mitään</item>
+<item>Häivytä sisään/ulos</item>
+<item>Liusu vasemmalle/oikealle</item>
+<item>Liusu ylös/alas</item>
+</string-array>
+
+<string name="keep_in_memory_t">Pidä sovellus muistissa</string>
+<string name="keep_in_memory_s">Nopeuttaa takaisin kotiin siirtymistä pitämällä sovellusta mahdollisimman pitkään muistissa</string>
+<string name="min_ram_t">Minimoi RAM-muistin käyttö</string>
+<string name="min_ram_s">Muuttuu uudelleenkäynnistettäessä. Suosii vähäistä muistin käyttöä nopeuden kustannuksella</string>
+<string name="tools_pick_shortcut">Valitse pikakuvake</string>
+<string name="tools_pick_widget">Valitse widget</string>
+<string name="new_style">Uusi tyyli…</string>
+<string name="choose_style_name">Valitse tyylin nimi:</string>
+<string name="delete_style">Poista tämä tyyli:</string>
+<string name="relayout_items">Tässä tyylissä on vähemmän sarakkeita kuin edellisessä tyylissä. Haluatko jatkaa ja uudelleenjärjestää kohteet ?</string>
+<string name="style_saved">Tyyli tallennettu</string>
+<string name="style_loaded">Tyyli ladattu</string>
+<string name="install_widgets">Kaikki Launcherin widgetit…</string>
+<string name="item_settings_icon_copy_failed">Kopiointi epäonnistui :-(</string>
+<string name="tool_not_available">Työkalu ei ole käytettävissä, Pahoittelut</string>
+<string name="default_folder_name">Kansio</string>
+<string name="app_added" formatted="true">%s lisätty</string>
+<string name="select_launcher_title">Valitse käyttämäsi Launcher</string>
+<string name="extras">Extrat</string>
+<string name="permission_denied">Pikakuvakkeen käynnistys estetty…</string>
+<string name="appearance">Ulkonäkö (Pyyhkäise vasemmalle nähdäksesi muutokset)</string>
+<string name="items_t">Kohteet</string>
+<string name="items_s">Aseta fontit, värit, kohteet, sivut, etc.</string>
+<string name="background_t">Taustakuva &amp; sivun tausta</string>
+<string name="background_s">Valitse taustakuva, väri ja vierityksen efektit</string>
+<string name="grid_t">Ruudukon sivut</string>
+<string name="grid_s">Aseta korkeus, väri ja paikka</string>
+<string name="folder_look_t">Kansion ikkunat</string>
+<string name="folder_look_s">Aseta tausta, reunat, animaatio, etc.</string>
+<string name="this_folder_look_t">Tämän kansion ikkuna</string>
+<string name="this_folder_look_s">Aseta taustakuva, reunat tai animaatio, etc.</string>
+<string name="layout_t">Ulkoasu</string>
+<string name="layout_s">Aseta miten kohteet asetetaan näytölle (ruudukossa, vapaasti), aseta ruudukon koko, etc.</string>
+<string name="zoom_scroll_t">Zoomaus ja vieritys</string>
+<string name="zoom_scroll_s">Miten navigoida näytön sisällä</string>
+<string name="folder_feel_t">Kansiot</string>
+<string name="folder_feel_s">Automaattinen sulkeminen, etc.</string>
+<string name="this_folder_feel_t">Tämä kansio</string>
+<string name="pg_misc_t">Muita asetuksia</string>
+<string name="pg_misc_s">Näytön suunta &amp; Tilapalkin asetukset</string>
+<string name="color_c">Väri</string>
+
+<string name="wp_w_t">Leveys</string>
+<string name="wp_h_t">Korkeus</string>
+<string name="wp_auto">Käytä 0 jos haluat automaattisen koon</string>
+<string name="wp_scroll_t">Taustakuvan vieritys</string>
+<string name="wp_scroll_s">Saattaa vaikuttaa tehoon</string>
+
+<string name="grid_h_color_t">Vaakasuoraisen linjan väri</string>
+<string name="grid_h_size_t">Vaakasuoraisen linjan paksuus</string>
+<string name="grid_v_color_t">Pystysuoraisen linjan väri</string>
+<string name="grid_v_size_t">Pystysuoraisen linjan paksuus</string>
+<string name="grid_color_s">Käytä läpinäkyvyyttä tyhjään</string>
+<string name="grid_size_s">Käytä 0 hiusrajaan</string>
+<string name="grid_above">Piirrä ylemmät kohteet</string>
+<string name="folder_title">Otsikon asetukset</string>
+<string name="display_title">Näytä otsikko</string>
+<string name="font_color">Fontin väri</string>
+<string name="font_size">Fontin koko</string>
+<string name="folder_anims">Animaatiot</string>
+<string name="anim_in">Avaa</string>
+<string name="anim_out">Sulje</string>
+
+<string name="behaviour">Käyttäytyminen</string>
+<string name="free_mode_t">Vapaa tila</string>
+<string name="free_mode_s">Älä käytä ruudukkoa, käytä vapaata asettamista (Avaa skaalauksen ja kiertämisen)</string>
+<string name="dual_pos_t">Usea sijainti</string>
+<string name="dual_pos_s">Salli kohteelle 2 sijaintia: yksi pystysuorassa(ensisijainen), toinen vaakasuorassa</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>None</item>
+<item>Center</item>
+<item>Edge</item>
+<item>Center &amp; Edge</item>
+</string-array>
+<string name="placement">Sijoittelu</string>
+<string name="colums">Ruudukon sarakkeet</string>
+<string name="rows">Ruudukon rivit</string>
+<string name="mode_t">Tila</string>
+
+<string-array name="mode_e">
+<item>Automaattinen</item>
+<item>Korjattu määrä</item>
+<item>Korjattu koko</item>
+</string-array>
+
+<string name="number">Numero</string>
+<string name="size">Koko</string>
+<string name="col_num_s">Sarakkeiden määrä per näytön leveys</string>
+<string name="col_size_s">Sarakkeen leveys</string>
+<string name="row_num_s">Rivien määrä per näytön korkeus</string>
+<string name="row_size_s">Rivin korkeus</string>
+<string name="scroll_dir_t">Vierityksen suunta</string>
+
+<string-array name="scroll_dir_e">
+<item>Automaattinen</item>
+<item>Vain vaakasuora</item>
+<item>Vain pystysuora</item>
+<item>Molemmat</item>
+<item>Ei vieritystä</item>
+</string-array>
+
+<string name="overscroll_t">Ylivieritys</string>
+
+<string-array name="overscroll_e">
+<item>Hidastuminen</item>
+<item>Ponnahdus</item>
+<item>Ei käytössä</item>
+</string-array>
+
+<string name="snap_to_pages_t">Katkaise sivut</string>
+<string name="snap_to_pages_s">Pysäytä aina vieritys sivun rajalle</string>
+<string name="fit_item_t">Sovita sivu kohteille</string>
+<string name="fit_item_s">Pienennä työpöytä kohteille, ei tuplasti sivun kokoa</string>
+<string name="no_diagonal_scrolling_t">Poista vino vieritys</string>
+<string name="no_diagonal_scrolling_s">Vieritä vain yhteen suuntaan kerrallaan</string>
+<string name="pinch_zoom_t">Käytä zoomausta sormilla</string>
+<string name="auto_close_t">Automaattinen sulkeminen</string>
+<string name="auto_close_s">Sulje kansio kun sovellus avataan</string>
+<string name="anim_glitch_fix_t">Animaation virheenkorjaus</string>
+<string name="anim_glitch_fix_s">Lisää 1 pikseli sivun täyttöön korjataksesi ongelman joissain Android versiossa</string>
+<string name="screen_orient_t">Näytön suunta</string>
+
+<string-array name="screen_orient_e">
+<item>Automaattinen</item>
+<item>Pystysuora</item>
+<item>Vaakasuora</item>
+<item>Systeemi</item>
+</string-array>
+
+<string name="hide_statusbar_t">Piilota tilapalkki</string>
+<string name="hide_statusbar_s">Paina valikkonäppäintä näyttääksesi tilapalkin</string>
+<string name="manage">Järjestä</string>
+<string name="load_style_t">Lataa tyyli</string>
+<string name="load_style_s">Korvaa nykyiset toiminnot uusilla arvoilla</string>
+<string name="save_style_t">Tallenna tyyliin</string>
+<string name="save_style_s">Tallenna nykyinen näytön asettelu muokattuun tyyliin</string>
+<string name="confirm_reset_page">Haluatko varmasti nollata näytön</string>
+<string name="reset_page_t">Nollaa näyttö</string>
+<string name="reset_page_s">Poista kaikki kohteet näytöltä ja tuo oletustyyli</string>
+<string name="tab_label">Teksti</string>
+<string name="tab_icon">Kuvake</string>
+<string name="tab_layout">Paikka</string>
+<string name="tab_box">Laatikko</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Pää-</string>
+<string name="l_display">Näytä teksti</string>
+<string name="l_custom">Aseta oma teksti</string>
+<string name="l_size">Fontin koko</string>
+<string name="l_type_face">Aseta oma fontti...</string>
+<string name="l_style_t">Fontin tyyli</string>
+
+<string-array name="l_style_e">
+<item>Normaali</item>
+<item>Paksu</item>
+<item>Italic</item>
+<item>Paksu &amp; Italic</item>
+</string-array>
+
+<string name="l_num_lines">Linjojen maksimimäärä</string>
+<string name="l_colors">Värit</string>
+<string name="l_color_normal">Väri normaalina</string>
+<string name="l_color_selected">Väri valittaessa</string>
+<string name="l_color_focused">Väri valittuna</string>
+<string name="l_shadow">Varjo</string>
+<string name="l_shadow_enable">Aseta varjo</string>
+<string name="l_shadow_radius">Säde</string>
+<string name="l_shadow_offset_x">Offset X</string>
+<string name="l_shadow_offset_y">Offset Y</string>
+<string name="l_shadow_color">Väri</string>
+<string name="i_main">Yleinen</string>
+<string name="i_display">Näytä Kuvake</string>
+<string name="i_custom">Valitse oma kuvake</string>
+<string name="i_folder_t">Kansion kuvakkeen tyyli</string>
+
+<string-array name="i_folder_e">
+<item>Ikoni</item>
+<item>Ruutu</item>
+<item>Nippu</item>
+</string-array>
+
+<string name="i_effect">Layers</string>
+<string name="i_e_back">Taustakuva</string>
+<string name="i_e_over">Overlay</string>
+<string name="i_e_mask">Mask</string>
+<string name="i_e_scale">Sisäinen koko</string>
+
+<string name="i_smooth">Sulava kuvake</string>
+<string name="i_scale_t">Scale</string>
+<string name="i_scale_s">Warning: 4x scale need 16x more memory: this can exhaust device memory very rapidly.</string>
+<string name="i_reflect">heijastus</string>
+<string name="i_reflect_enable">Aseta heijastus</string>
+<string name="i_reflect_overlap">Päällekkäisyys ikonien kanssa</string>
+<string name="i_reflect_size">Koko</string>
+<string name="i_reflect_scale">Skaala</string>
+<string name="la_margin">Väli kuvakkeen ja tekstin välissä</string>
+<string name="la_position_t">Tekstin sijainti</string>
+
+<string-array name="la_position_e">
+<item>Vasemmalla</item>
+<item>Ylhäällä</item>
+<item>Oikealla</item>
+<item>Alhaalla</item>
+</string-array>
+
+<string name="b_alignh_t">Vaakasuuntainen ryhmäytyminen</string>
+
+<string-array name="b_alignh_e">
+<item>Vasemmalla</item>
+<item>Keskellä</item>
+<item>Oikealla</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_alignv_t">Pystysuuntainen ryhmäytyminen</string>
+
+<string-array name="b_alignv_e">
+<item>Päällä</item>
+<item>Keskellä</item>
+<item>Pohjalla</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_hint">Paina yhdestä tai useammasta paikasta\nsitten valitse toiminto alhaalta</string>
+<string name="b_size">Aseta valittujen kohtien koko</string>
+<string name="b_color_normal">Väri normaalina</string>
+<string name="b_color_selected">Väri valittaessa</string>
+<string name="b_color_focused">Väri valittuna</string>
+<string name="b_color_s">Aseta reunojen ja sisällön väri</string>
+<string name="m_enabled_t">Clickable</string>
+<string name="m_enabled_s">Enter layout edit mode to select a disabled item</string>
+<string name="m_alpha_t">Läpinäkyvyys</string>
+<string name="m_alpha_s">0 = Näkymätön, 255 = läpikuultamaton</string>
+<string name="m_smooth_transform_t">Pehmeä muuttuminen</string>
+<string name="m_smooth_transform_s">Saattaa olla hitaampi</string>
+
+<string-array name="preview_item_labels">
+<item>Normaali</item>
+<item>Valittaessa</item>
+<item>Valittuna</item>
+</string-array>
+
+<string name="il_preview">Näytön esikatselu\n(Saattaa erota oikeasta näytöstä)</string>
+<string name="preview_toast">Olet esikatselutila\nKaikki toiminnot poistettu käytöstä</string>
+<string name="pick_a_font">Valitse TTF Tiedosto</string>
+<string name="system_font">Järjestelmän fontti</string>
+<string name="left">Vasen</string>
+<string name="top">Yläpuoli</string>
+<string name="right">Oikea</string>
+<string name="bottom">Alapuoli</string>
+<string name="margin">Reuna</string>
+<string name="border">Raja</string>
+<string name="padding">Täyte</string>
+<string name="content">Sisältö</string>
+<string name="ovr_custom">Muokattu</string>
+
+<string name="pick_t">Valitse kuvake:</string>
+<string name="pick_file">Tiedosto</string>
+<string name="pick_gallery">Galleria</string>
+<string name="pick_icon_pack">ADW-kuvakepaketti</string>
+<string name="pick_default">Oletuskuvake</string>
+
+<string name="tutorials">Ohjeet</string>
+<string name="donate">Lahjoita</string>
+<string name="other_apps">Muut sovellukset</string>
+<string name="tut_intro">Esittely</string>
+<string name="tut_basic_editing">Ensimmäiset askeleet</string>
+<string name="tut_custo">Muokkaa\Ei kohteita</string>
+<string name="tut_free_mode">Vapaa tila</string>
+<string name="tut_lock">Lukitse näyttö</string>
+<string name="tut_pin">Lukitse/vapauta Kohteita</string>
+<string name="tut_scroll">Näytöt ja\nnavigointi</string>
+<string name="dialog_color_picker">Värivalitsin</string>
+
+<string name="shortcut_settings">Lightning Asetus</string>
+<string name="shortcut_actions">Lightning Toiminto</string>
+
+<string name="no_backup_archive">Ei palautettavaa varmuuskopiota vielä</string>
+<string name="backup_in_progress">Varmuuskopiointi käynnissä...</string>
+<string name="restore_in_progress">Palautus käynnissä...</string>
+<string name="backup_done">Varmuuskopio tallennettu kohteeseen: %s</string>
+<string name="backup_error">Varmuuskopioinnissa tapahtui virhe, tarkista että muistissa on riittävästi tilaa</string>
+<string name="restore_error">Palautuksessa tapahtui virhe, tarkista että tiedosto on kunnossa ja lukukelpoinen</string>
+
+<string name="confirm_delete">Haluatko todella poistaa?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Resetoi</string>
+<string name="bg_sys_wp">System wallpaper</string>
+<string name="bg_sys_wp_select_t">Change the system wallpaper…</string>
+<string name="bg_sys_wp_select_s">The system wallpaper is shared by all desktops and the app drawer</string>
+<string name="bg_screen_wp">Näytön taustakuva</string>
+<string name="bg_screen_wp_select_t">Vaihda työpöydän taustakuva...</string>
+<string name="bg_screen_wp_select_s">This wallpaper is displayed above the system wallpaper. Each desktop can have its own wallpaper</string>
+<string name="bg_more">Lisää</string>
+<string name="bg_more_color_t">Väri</string>
+<string name="bg_more_color_s">Use a fully opaque color to disable the wallpaper. Use a transparent color to tint the wallpaper</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Paina kauan</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Näpäytä</string>
+<string name="style_s1">Default</string>
+<string name="style_s2">Kompakti (pienet ikonit, pieni texti)</string>
+<string name="style_s3">Luettava (suuret ikonit, suuri teksti)</string>
+<string name="style_s4">Lista ikonit oikealla</string>
+<string name="style_s5">Lista suuresta tekstistä, ilman ikonia</string>
+<string name="style_s6">Lista suurista tekseistä ja ikoneista</string>
+<string name="style_s7">Tiled, without text</string>
+<string name="style_s8">Vilkkuvat värit</string>
+<string name="style_s9">Zune like</string>
+<string name="dialog_help_hint_t">Vinkki</string>
+<string name="dialog_help_hint_m">Jos haluat apua asetuksesta, niin paina sitä kauan</string>
+<string name="dialog_help_hint_dsa">Älä näytä uudestaan</string>
+<string name="m_pin_mode">Pin mode</string>
+<string-array name="m_pin_mode_e">
+<item>Not pinned</item>
+<item>Horizontal&amp;Vertical</item>
+<item>Horizontal</item>
+<item>Vertical</item>
+</string-array>
+<string name="m_events">Eleet</string>
+<string name="shortcut_screen">LL - Desktop &amp; position</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">The ultimate launcher. No compromise.</string>
+<string name="more_apps_t">More free apps</string>
+<string name="more_apps_s">From PierroX (tools, games, fun)</string>
+<string name="mi_kill">Kill</string>
+<string name="killed_freed">Killed (%dM freed)</string>
+<string name="killed">Killed!</string>
+<string name="configure_pages_t">Configure desktops</string>
+<string name="configure_pages_s">Setup multiple desktops, their order, the home desktop, icons, labels,…</string>
+<string name="mi_mode_custom">My Drawer</string>
+<string name="mi_mode_by_name">All Apps by Name</string>
+<string name="mi_mode_recent_apps">Recently launched</string>
+<string name="mi_mode_recently_updated">Recently Updated</string>
+<string name="mi_mode_frequently_used">Frequently Used</string>
+<string name="mi_mode_running">Käynnissä</string>
+<string name="mi_es_add_folder">Lisää kansio</string>
+<string name="mi_es_edit_layout">Edit layout</string>
+<string name="mi_es_show_hidden">Show hidden</string>
+<string name="mi_es_hide_hidden">Hide hidden</string>
+<string name="mi_es_refresh">Päivitä</string>
+<string name="mi_es_settings">Asetukset</string>
+<string name="mi_es_folder_settings">Kansio asetukset</string>
+<string name="mi_uninstall">Uninstall</string>
+<string name="my_drawer_title">My Drawer</string>
+<string name="my_drawer_message">The "My Drawer" view lets you fully customize your app drawer.\n\nIn this mode items can be freely moved on a large canvas and folder can be used to organize apps.\n\nTry to zoom out and select "Edit layout" : you will discover that apps can be put on left, right, top and bottom pages too, letting you manage apps in your very own way.</string>
+<string name="empty_folder_x">empty folder\ndrag&amp;drop items over the folder icon\nto populate it</string>
+<string name="ll_import_title">Importing LL setup</string>
+<string name="ll_import_message">An installation of Lightning Launcher has been detected.\n\nAll data will now be imported. When this is done you can safely uninstall Lightning Launcher and use Lightning Launcher eXtreme instead.</string>
+<string name="init_ok">Ready!</string>
+<string name="init_ko">Something went wrong during file copy!</string>
+<string name="auto_exit_t">Auto exit</string>
+<string name="auto_exit_s">Close the app drawer upon app launch</string>
+<string name="icons_t">Icon pack</string>
+<string name="icons_s">Apply an ADW icon pack or revert custom icons</string>
+<string name="apply_icon_pack_t">Apply an ADW icon pack</string>
+<string name="apply_icon_pack_s">Works for themes providing an icon/app table</string>
+<string name="icon_pack_no_appfilter">This icon pack as no app/icon table</string>
+<string name="revert_custom_icons_t">Revert custom icons</string>
+<string name="revert_custom_icons_s">Including custom icon effect and inner scale</string>
+<string name="please_wait">Please wait…</string>
+<string name="app_not_valid">This shortcut is not associated with a valid app. Would you like to get it from the app store or pick another app ?</string>
+<string name="app_store">App store</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamic text</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Text to display</string>
+<string-array name="dt_source_e">
+<item>Unread SMS count</item>
+<item>Unread GMail count</item>
+<item>Missed phone calls</item>
+<item>Date &amp; Time</item>
+<item>Storage</item>
+<item>Battery level</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Easy format</string>
+<string-array name="dt_date_ef_e">
+<item>Date</item>
+<item>Time</item>
+<item>Date &amp; Time</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expert format</string>
+<string name="dt_date_xf_s">Long tap for documentation</string>
+<string name="dt_display_empty_t">Display when empty</string>
+<string name="dt_format_error">Error in format</string>
+<string name="dt_storage_s_t">Select storage</string>
+<string-array name="dt_storage_s_e">
+<item>Internal</item>
+<item>External</item>
+</string-array>
+<string name="dt_storage_f_t">Display format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Space left</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparent status bar</string>
+<string name="trans_statusbar_s">Only on devices that support it (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Swap items</string>
+<string name="swap_items_s">Swap items if they overlap (grid mode only)</string>
+<string name="rearrange_items_t">Rearrange items</string>
+<string name="rearrange_items_s">Prevent gaps between items (grid mode only)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Backup &amp; Restore</string>
+<string name="an_gh">Go to home desktop</string>
+<string name="an_ghz100">Go to home desktop, then zoom 100p.</string>
+<string name="an_sd">Ask desktop to go to</string>
+<string name="an_re">Restart app</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Settings below apply to:</string>
+<string-array name="grid_pl_e">
+<item>Portrait &amp; Landscape</item>
+<item>Portrait</item>
+<item>Landscape</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Please confirm:</string>
+<string name="apply_tmpl_m">You are about to apply the template \'%s\', do you want to make a backup of your current setup first ?</string>
+<string name="apply_tmpl_p">Backup then apply</string>
+<string name="apply_tmpl_n">Only apply</string>
+<string name="apply_tmpl_g">Applying template…</string>
+<string name="apply_tmpl_e">Unable to apply this template!</string>
+<string name="tmpl_t">Templates</string>
+<string name="tmpl_s">Browse and apply templates, export for APK</string>
+<string name="tmpl_a_t">Apply</string>
+<string name="tmpl_a_s">Load an installed template</string>
+<string name="tmpl_b_t">Browse existing templates</string>
+<string name="tmpl_b_s">Get fresh new themes</string>
+<string name="tmpl_e_t">Export for APK</string>
+<string name="tmpl_e_s">Long tap to read the tutorial</string>
+<string name="tmpl_c">Select a template</string>
+<string name="tmpl_e_m">Exporting…</string>
+<string name="tmpl_e_d">Export done</string>
+<string name="tmpl_e_e">Export error!</string>
+<string name="tmpl_check">Opening template…</string>
+<string name="tmpl_check_e">Unable to read this template!</string>
+<string name="tmpl_check_ut">Need to update</string>
+<string name="tmpl_check_um">This template has been designed for a newer version of Lightning Launcher, would you like to update now ?</string>
+<string name="tmpl_get_llx">Get LLX</string>
+<string name="tmpl_warn_t">Warning</string>
+<string name="tmpl_warn_c">Continue anyway</string>
+<string name="tmpl_warn_m">The template is ready to be applied but some warnings have been found:</string>
+<string name="tmpl_warn_llx">- this template has been designed with Lightning Launcher eXtreme, it may use some features not available in this version.</string>
+<string name="tmpl_warn_screen">- this template does not exactly match your screen characteristics. Some elements may not be displayed correctly.</string>
+<string name="tmpl_warn_widget">- your device is not able to restore widgets automatically, you will need to manually recreate them.</string>
+<string name="widget_e">Could not load this widget\nTap to install or pick a new one</string>
+<string name="tmpl_s_p">Select desktops to export</string>
+<string name="an_ctf">Close topmost folder</string>
+<string name="an_caf">Close all folders</string>
+<string name="ev_screen_on">Screen on</string>
+<string name="ev_screen_off">Screen off</string>
+<string name="an_sa">Search app</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Honour pinned items in edit mode</string>
+<string name="gc_hpie_s">Long tap for the description</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Stop point</string>
+<string name="sp_b">Behavior</string>
+<string name="sp_ss">Stop scroll</string>
+<string name="sp_sd">Stop drag</string>
+<string name="sp_ba">Barrier</string>
+<string name="sp_dw">Desktop wide</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Direction</string>
+<string name="sp_dlr">Left to right</string>
+<string name="sp_drl">Right to left</string>
+<string name="sp_dtb">Top to bottom</string>
+<string name="sp_dbt">Bottom to top</string>
+<string name="assp_t">Always show stop points</string>
+<string name="assp_s">Stop points are always displayed, even in normal mode</string>
+<string name="gc_edit">Layout editor</string>
+
+<!-- added 116 -->
+<string name="backup_d">Backup</string>
+<string name="an_of">Open a folder</string>
+<string name="sf">Select a folder</string>
+<string name="br_n">Backup name</string>
+<string name="br_a">Select an action</string>
+<string name="br_r">Rename</string>
+<string name="br_d">Delete</string>
+<string name="br_s">Send</string>
+<string name="br_dc">Delete this archive ?</string>
+<string name="br_rc">Restore this archive ?</string>
+<string name="dt_gml_t">Gmail label</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Copy to desktop…</string>
+<string name="f_p">Placement</string>
+<string name="f_ac">When using custom alignment</string>
+<string name="f_l">Left</string>
+<string name="f_t">Top</string>
+<string name="f_af">Fade in / out</string>
+<string name="sp_e">Match edges</string>
+<string name="sp_el">Left</string>
+<string name="sp_er">Right</string>
+<string name="sp_et">Top</string>
+<string name="sp_eb">Bottom</string>
+
+<!-- added 119 -->
+<string name="np">Background images</string>
+<string name="np_d">Long tap for documentation</string>
+<string name="np_n">Normal background</string>
+<string name="np_s">Selected background</string>
+<string name="np_f">Focused background</string>
+<string name="np_r">Background image</string>
+<string-array name="anim2_e">
+<item>None</item>
+<item>Open / Close</item>
+<item>Slides to right</item>
+<item>Slides to left</item>
+<item>Slides to bottom</item>
+<item>Slides to top</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Switch to portrait</string>
+<string name="ev_ol">Switch to landscape</string>
+<string name="an_gdp">Go to specified desktop&amp;position</string>
+<string name="cof_t">Close other folders</string>
+<string name="cof_s">Allow only a single opened folder at a time</string>
+
+<!-- added 123 -->
+<string name="t_nb">Transparent navigation bar</string>
+<string name="gb_l">Left</string>
+<string name="gb_t">Top</string>
+<string name="gb_w">Width</string>
+<string name="gb_h">Height</string>
+<string name="gb_a">Angle</string>
+<string name="gb_sx">Scale X</string>
+<string name="gb_sy">Scale Y</string>
+<string name="gb_kx">Skew X</string>
+<string name="gb_ky">Skew Y</string>
+<string name="mi_geometry">Geometry</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Folder options</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Customize panel content</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Detach from grid</string>
+<string name="mi_lmf">Attach to grid</string>
+<string name="mi_mop">Move out of panel</string>
+
+<!-- added 137 -->
+<string name="container">Panel size</string>
+<string name="uds_t">Use desktop size</string>
+<string name="uds_s">Use the desktop size to compute the cell size, not the panel size</string>
+<string name="mi_app">App…</string>
+<string name="mi_l">Lock</string>
+<string name="mi_ul">Unlock</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menu key (long)</string>
+<string name="ev_back">Back key</string>
+<string name="ev_backl">Back key (long)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Items…</string>
+<string name="mi_ic">Compact</string>
+<string name="mi_isa">Sort a-z</string>
+<string name="mi_isd">Sort z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Unlock screen</string>
+<string name="s_ld_t">Lock screen</string>
+<string name="s_ld_s">Select the desktop to be shown on the lock screen. Long tap for a tutorial.</string>
+<string name="s_ld_c">The lock screen has been disabled.</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d0"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Älä tee mitään (Lukitse)</item>
+<item>Avaa sovellusvalikko</item>
+<item>Zoomaa täydelle skaalalle</item>
+<item>Zoomaa 100p.</item>
+<item>Aseta Täysi skaala/100p.</item>
+<item>Edellinen sivu</item>
+<item>Seuraava sivu</item>
+<item>Myokkaa näyttöä</item>
+<item>Lisää objekti</item>
+<item>Muokkaa Lightning Launcheria</item>
+<item>Muokkaa nykyistä sivua ja kansioita</item>
+<item>Käynnistä sovellus</item>
+<item>Launch shortcut</item>
+<item>Select wallpaper</item>
+<item>Launcherin valikko</item>
+<item>Näytä tilapalkki</item>
+<item>Näytä/piilota sovellusvalikko &amp; tilapalkki</item>
+<item>Näytä ilmoitukset</item>
+<item>Etsi</item>
+<item>Siirrä kohdetta</item>
+<item>Muokkaa kohdetta</item>
+<item>Kohteen valikko</item>
+<item>Käynnistä kohde</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Käytä vierityksen pysäyttämistä</string>
+<string name="auto_stop_s">Pysäytä vieritys automaattisesti sivun reunoille</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Valitse palautettava varmuuskopio</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Ei mitään</item>
+<item>Avaa / Sulje</item>
+<item>Häivytä sisään / ulos</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Nollaa skaalaus/kierto</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Single finger scroll in edit mode</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Toggle portrait/landscape</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Vierityksen nopeus</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">English</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa" />
+<string-array name="zzz" />
+
+</resources>

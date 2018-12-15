@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Magyar</string>
+<string name="pack_name_short">Magyar</string>
+<string name="tranlator_name">Barta Gábor</string>
+
+<string name="description">A Lightning Launcher egy gyors, könnyű és extrém módon testreszabható launcher azaz alkalmazásindító. (más megnevezéssel "alternatív kezdőképernyő", vagy "shell").\n\nA Lightning Launcher azok számára jó választás, akik egy villámgyors, kis memóriaigényű és igény szerint testreszabható kezdőképernyőt szeretnének.\n\nA legtöbb szokványos launcherrel ellentétben a Lightning lehetővé teszi, hogy az asztalon bárhova elhelyezhess elemeket: nem csak bal vagy jobb oldalra, de felfelé és lefelé is. Gondolj az asztalra úgy, mint egy határtalan vászonra, amely vízszintes és függőleges irányban is kiterjed, kiterjeszthető.\n\nEz azt jelenti, hogy annyi lapot hozhatsz létre, amennyire csak szükséged van: több hely az alkalmazásaid számára, gyorsabb navigáció.\n\nA Lightning több érdekes funkcióval is rendelkezik, pl. a mappákba helyezhetsz widgeteket (és mappákat is többszintű navigációhoz), vagy szabadon mozgathatsz, nagyíthatsz, forgathatsz bármilyen elemet (megj.: ehhez külön engedélyezned kell a "szabad mód"-ot az asztal vagy mappa beállításai között).\n\nEmlítettem, hogy az LL kevés memóriát használ, így több RAM marad a többi alkalmazásnak?\n\nA beállítások és kapcsolók széles választékával az LL az egyik legjobban testreszabható launcher, habár a konfigurálása talán nem a legkönnyebb! Mint a legtöbb nagy tudású eszköznek, az LL-nek is meg kell tanulni a használatát. De ez kis ár azért, hogy izgalmas és egyedi kezdőképernyőd lehessen ;-)\n\nKészséggel várok minden hozzászólást, javaslatot, hibajelentést. Kérlek, hogy a kérdéseiddel és hibákkal kapcsolatban a pierrox@pierrox.net (Pierre Hébert) email címen keress fel, vagy látogasd meg a facebook oldalt a http://www.facebook.com/LightningLauncher címen. Itt megtudhatod, hogy épp min dolgozok, kérhetsz új funkciókat, vagy egyszerűen feltehetsz bármilyen kérdést az LL-lel kapcsolatban.\n\Jó szórakozást!\n\Engedélyek:\n- EXPAND_STATUS_BAR: az "Értesítési panel megjelenítése" művelethez. \n- SET_WALLPAPER_HINTS: a háttérkép méretének beállításához.\n- más engedély nem szükséges!</string>
+
+
+<string name="start_activity_error">Az alkalmazás nem indítható</string>
+<string name="menu_add">Hozzáadás…</string>
+<string name="menu_settings">Android beállítások</string>
+<string name="menu_customize">Lightning személyre szabása</string>
+<string name="menu_customize_folder">Mappa beállításai</string>
+<string name="menu_objects_layout">Elrendezés szerkesztése</string>
+<string name="dialog_action_title">Hozzáadás…</string>
+
+<string-array name="dialog_action_values">
+<item>Alkalmazás</item>
+<item>Parancsikon</item>
+<item>Alkalmazás modul</item>
+<item>LL modul</item>
+<item>Mappa</item>
+<item>Görgetési végpont</item>
+</string-array>
+
+<string name="mi_remove">Eltávolítás</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Testreszabás</string>
+<string name="mi_move_to_screen">Mozgatás az asztalra…</string>
+<string name="mi_edit_icon">Válassz egy  ikont </string>
+<string name="mi_edit_label">Átnevezés</string>
+<string name="mi_edit_copy_style">Stílus másolása…</string>
+<string name="mi_pick_app">Válassz egy alkalmazást</string>
+<string name="mi_pick_widget">Válassz egy másik modult</string>
+<string name="mi_edit_more">Továbbiak... </string>
+<string name="mi_position">Pozíció…</string>
+<string name="mi_pin">Rögzítés</string>
+<string name="mi_unpin">Rögzítés feloldása</string>
+<string name="mi_add_to_launcher">Hozzáadás az asztalhoz</string>
+<string name="mi_hide_unhide">Elrejt/Mutat</string>
+<string name="mi_app_details">App adatai</string>
+<string name="mi_widget_options">Modul beállításai</string>
+<string name="mi_move_out_of_folder">Kiemelés a mappából</string>
+<string name="mi_zorder">Előtérbe/háttérbe mozgatás</string>
+<string name="first_use_title">Üdvözöllek!</string>
+<string name="first_use_message">A Lightning Launcher egy könnyű és gyors, nagy mértékben testreszabható alternatív kezdőképernyő Androidhoz.\n\nAz LL most előkészíti az alkalmazások listáját. Ez csak a legelső indításnál szükséges.\n\nNe hagyd ki az ismertető videókat sem, hogy többet megtudhass!\n\nJó szórakozást!</string>
+<string name="all_apps">Minden alkalmazás</string>
+<string name="menu_refresh">Frissítés</string>
+<string name="menu_zoom">Nagyítás</string>
+<string name="menu_see_only_visible">Csak láthatóak</string>
+<string name="menu_see_only_hidden">Csak rejtettek</string>
+<string name="menu_see_all">Minden alkalmazás</string>
+<string name="empty_folder">elemek hozzáadásához\nhosszú érintés\nvagy menü gomb</string>
+<string name="file_picker_activity_up">Fel</string>
+
+<string name="copy_style_toast">Érints meg egy elemet a stílusának lemásolásához</string>
+<string name="copy_style_cancel">Stílus másolása megszakítva</string>
+<string name="copy_style_done">Stílus másolása kész!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Beállítások</string>
+<string name="general_t">Általános</string>
+<string name="general_s">Nyelv, gombok, ujjmozdulatok…</string>
+<string name="dashboard_t">Aktuális asztal</string>
+<string name="dashboard_s">A jelenleg látható asztal megjelenési és működési beállításai</string>
+<string name="app_drawer_t">Alkalmazásfiók</string>
+<string name="app_drawer_s">Beállítások az alkalmazások listájához</string>
+<string name="app_killer_t">Feladatkezelő</string>
+<string name="app_killer_s">Egy egyszerű LL-be integrált alkalmazás bezáró</string>
+<string name="donate_t">Adományozás</string>
+<string name="donate_s">Kedveled az alkalmazást, és támogatnád a fejlesztést?</string>
+<string name="backup_t">Biztonsági mentés</string>
+<string name="restore_t">Visszaállítás</string>
+<string name="rate_t">Értékeld az alkalmazást</string>
+<string name="rate_s">Írj véleményt a Play Áruházban</string>
+<string name="facebook_t">Facebook oldal megnyitása</string>
+<string name="facebook_s">Kérhetsz új funkciókat, jelentheted a tapasztalt hibákat, vagy megtudhatod, hogy mi lesz a következő verzióban. </string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">Egy hatékony és fejlett alkalmazásfiók</string>
+<string name="customize_ll">Lightning személyre szabása</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Nyelv</string>
+<string name="language_s">Nyelvi csomag kiválasztása vagy telepítése</string>
+<string name="lg_pick_t">Nyelvi csomag kiválasztása</string>
+<string name="lg_pick_s">Újra fogja indítani az LL-t</string>
+<string name="lg_install_t">Új csomag letöltése</string>
+<string name="lg_install_s">Telepítés a Play Áruházból</string>
+
+<string name="lg_contrib_t">Hozzájárulás</string>
+<string name="lg_contrib_s">No pack for your language ? Please help this project by providing translations</string>
+<string name="events_t">Események és műveletek</string>
+<string name="events_s">Gombok, ujjmozdulatok</string>
+<string name="ev_home">Home gomb</string>
+<string name="ev_menu">Menü gomb</string>
+<string name="ev_search">Keresés gomb</string>
+<string name="ev_item_tap">Érintés egy elemen</string>
+<string name="ev_item_ltap">Hosszú érintés egy elemen</string>
+<string name="ev_bg_tap">Érintés üres helyen</string>
+<string name="ev_bg_dtap">Dupla érintés üres helyen</string>
+<string name="ev_bg_ltap">Hosszú érintés üres helyen</string>
+<string name="ev_swipe_r">Mozdulat jobbra</string>
+<string name="ev_swipe_l">Mozdulat balra</string>
+<string name="ev_swipe_u">Mozdulat fel</string>
+<string name="ev_swipe_d">Mozdulat le</string>
+<string name="ev_swipe2_r">2 ujjas mozdulat jobbra</string>
+<string name="ev_swipe2_l">2 ujjas mozdulat balra</string>
+<string name="ev_swipe2_u">2 ujjas mozdulat felfelé</string>
+<string name="ev_swipe2_d">2 ujjas mozdulat lefelé</string>
+
+<string name="an_u">Nincs művelet</string>
+<string name="an_n">Nincs művelet (letilt)</string>
+<string name="an_ad">Alkalmazásfiók mutatása</string>
+<string name="an_zfs">Nagyítás áttekintő nézetre</string>
+<string name="an_z100">Nagyítás 100%</string>
+<string name="an_zt">Nagyítás váltása:\náttekintő nézet/100%</string>
+<string name="an_pd">Előző asztal</string>
+<string name="an_nd">Következő asztal</string>
+<string name="an_el">Elrendezés szerkesztése</string>
+<string name="an_ao">Hozzáadási műveletek</string>
+<string name="an_cl">Lightning személyre szabása</string>
+<string name="an_cd">Jelenlegi mappa vagy asztal testreszabása</string>
+<string name="an_la">Alkalmazás indítása</string>
+<string name="an_ls">Parancsikon indítása</string>
+<string name="an_sw">Háttérkép kiválasztása</string>
+<string name="an_lm">Alkalmazás menü</string>
+<string name="an_ssb">Értesítősáv mutatása</string>
+<string name="an_smsb">Alkalmazás menü és értesítési sáv mutatása/elrejtése</string>
+<string name="an_sn">Értesítések mutatása</string>
+<string name="an_s">Keresés</string>
+<string name="an_i_m">Elem mozgatása</string>
+<string name="an_i_c">Elem testreszabása</string>
+<string name="an_i_me">Elem menü</string>
+<string name="an_i_l">Elem indítása</string>
+
+<string name="auto_edit_t">Automata szerkesztés mód</string>
+<string name="auto_edit_s">Automatikusan váltson szerkesztési módba új elem hozzáadásakor</string>
+<string name="page_anim_t">Animáció asztalok váltásakor</string>
+
+<string-array name="page_anim_e">
+<item>Semmi</item>
+<item>Áttűnés</item>
+<item>Csúsztatás vízszintesen</item>
+<item>Csúsztatás függőlegesen</item>
+</string-array>
+
+<string name="keep_in_memory_t">Tartsa a memóriában</string>
+<string name="keep_in_memory_s">Gyorsabb lesz a kezdőképernyőre való visszatérés, de jobb elkerülni memóriamegtakarítás végett</string>
+<string name="tools_pick_shortcut">Válassz parancsikont</string>
+<string name="tools_pick_widget">Válassz alkalmazás modult</string>
+<string name="new_style">Új stílus…</string>
+<string name="choose_style_name">Kérlek válassz nevet az új stílusnak:</string>
+<string name="delete_style">Biztosan törlöd ezt a stílust?</string>
+<string name="relayout_items">Ebben a stílusban kevesebb az oszlopok száma, mint az aktívban. Folytatod, és újrarendezed az elemeket?</string>
+<string name="style_saved">Stílus mentve</string>
+<string name="style_loaded">Stílus betöltve</string>
+<string name="install_widgets">LL modulok hozzáadása…</string>
+<string name="item_settings_icon_copy_failed">Nem sikerült az ikon másolása :-(</string>
+<string name="tool_not_available">Elnézést, ez az eszköz nem érhető el</string>
+<string name="default_folder_name">Mappa</string>
+<string name="app_added" formatted="true">%s hozzáadva</string>
+<string name="select_launcher_title">Alapért. kezdőalkalmazás </string>
+<string name="extras">Extrák</string>
+<string name="permission_denied">Engedély megtagadva. Közvetlen hívás parancsikonokhoz kérlek telepítsd a LL közvetlen hívás beépülőt</string>
+<string name="appearance">Megjelenés (Csúsztass balra az előnézethez)</string>
+<string name="items_t">Elemek</string>
+<string name="items_s">Alapértelmezett betűtípus, szín, ikon, keret stb. beállítása</string>
+<string name="background_t">Háttérkép és háttérszín</string>
+<string name="background_s">Háttérkép, színezés, háttérkép görgetése</string>
+<string name="grid_t">Rácsvonalak</string>
+<string name="grid_s">Csak rács módhoz. Vonalszélesség, szín és pozíció</string>
+<string name="folder_look_t">Mappaablak</string>
+<string name="folder_look_s">Alapértelmezett háttér, keret, animáció meghatározása…</string>
+<string name="this_folder_look_t">Jelenlegi mappa ablaka</string>
+<string name="this_folder_look_s">Háttér, keret és animáció…</string>
+<string name="layout_t">Elrendezés</string>
+<string name="layout_s">Elemek elhelyezési módja (rács szerinti vagy szabad), oszlopok és sorok száma/mérete</string>
+<string name="zoom_scroll_t">Nagyítás és görgetés</string>
+<string name="zoom_scroll_s">Asztalon belüli navigáció beállításai</string>
+<string name="folder_feel_t">Mappák</string>
+<string name="folder_feel_s">Automatikus bezárás, egyéb beállítások</string>
+<string name="this_folder_feel_t">Ez a mappa</string>
+<string name="pg_misc_t">Egyéb</string>
+<string name="pg_misc_s">Képernyő elforgatás, értesítési sáv opciók</string>
+<string name="color_c">Szín</string>
+
+<string name="wp_w_t">Szélesség</string>
+<string name="wp_h_t">Magasság</string>
+<string name="wp_auto">Automatikus mérethez állítsd 0-ra</string>
+<string name="wp_scroll_t">Háttérkép görgetése</string>
+<string name="wp_scroll_s">Hatással lehet a teljesítményre</string>
+
+<string name="grid_h_color_t">Vízszintes vonal színe</string>
+<string name="grid_h_size_t">Vízszintes vonal vastagsága</string>
+<string name="grid_v_color_t">Függőleges vonal színe</string>
+<string name="grid_v_size_t">Függőleges vonal vastagsága</string>
+<string name="grid_color_s">Az elrejtéshez állítsd az átlátszatlanságot 0-ra</string>
+<string name="grid_size_s">Hajszálvonalhoz állítsd 0-ra</string>
+<string name="grid_above">Rajzold az elemek fölé</string>
+<string name="folder_title">Név beállítások</string>
+<string name="display_title">Név mutatása</string>
+<string name="font_color">Betűszín</string>
+<string name="font_size">Betűméret</string>
+<string name="folder_anims">Animációk</string>
+<string name="anim_in">Kinyitás</string>
+<string name="anim_out">Bezárás</string>
+
+<string name="behaviour">Viselkedés</string>
+<string name="free_mode_t">Szabad mód alapértelmezettként</string>
+<string name="free_mode_s">Az újonnan hozzáadott elemek legyenek szabad módban</string>
+<string name="dual_pos_t">Kettős pozíció</string>
+<string name="dual_pos_s">Az elemeknek lehessen két pozíciója: az egyik álló helyzetben (elsődleges), a másik fekvő helyzetben</string>
+<string name="snap_t">Elkapás</string>
+<string-array name="snap_e">
+<item>Nincs</item>
+<item>Középen</item>
+<item>Szélen</item>
+<item>Középen és szélen</item>
+</string-array>
+<string name="placement">Elhelyezés</string>
+<string name="colums">Oszlopok</string>
+<string name="rows">Sorok</string>
+<string name="mode_t">Mód</string>
+
+<string-array name="mode_e">
+<item>Automatikus</item>
+<item>Darabszám meghatározása</item>
+<item>Méret megadása</item>
+</string-array>
+
+<string name="number">Szám</string>
+<string name="size">Méret</string>
+<string name="col_num_s">Egy képernyőre eső oszlopok száma</string>
+<string name="col_size_s">Oszlopszélesség</string>
+<string name="row_num_s">Egy képernyőre eső sorok száma</string>
+<string name="row_size_s">Sormagasság</string>
+<string name="scroll_dir_t">Görgetés iránya</string>
+
+<string-array name="scroll_dir_e">
+<item>Automatikus</item>
+<item>Csak vízszintesen</item>
+<item>Csak függőlegesen</item>
+<item>Mindkettő</item>
+<item>Ne lehessen görgetni</item>
+</string-array>
+
+<string name="overscroll_t">Túlgörgetési hatás</string>
+
+<string-array name="overscroll_e">
+<item>Lassítás</item>
+<item>Visszapattanás</item>
+<item>Nincs</item>
+</string-array>
+
+<string name="snap_to_pages_t">Egész lapokra ugrás</string>
+<string name="snap_to_pages_s">Görgetés elengedésekor ugorjon egész képernyőre a nézet</string>
+<string name="fit_item_t">Asztal korlátozása elemekhez</string>
+<string name="fit_item_s">A görgetés álljon meg a legszélső elemeknél</string>
+<string name="no_diagonal_scrolling_t">Átlós görgetés tiltása</string>
+<string name="no_diagonal_scrolling_s">Görgetés korlátozása egyszerre csak egy irányra</string>
+<string name="pinch_zoom_t">Kétujjas nagyítás</string>
+<string name="auto_close_t">Automatikus bezárás</string>
+<string name="auto_close_s">Mappa bezárása a benne lévő elem indítása után</string>
+<string name="anim_glitch_fix_t">Animációs hiba javítása</string>
+<string name="anim_glitch_fix_s">1 pixeles padding hozzáadása csak bizonyos Android verziókon megjelenő hiba kiküszöböléséhez</string>
+<string name="screen_orient_t">Képernyő elforgatása</string>
+
+<string-array name="screen_orient_e">
+<item>Automatikus</item>
+<item>Álló</item>
+<item>Fekvő</item>
+<item>Rendszerbeállítás</item>
+</string-array>
+
+<string name="hide_statusbar_t">Értesítési sáv elrejtése</string>
+<string name="hide_statusbar_s">Átmeneti mutatáshoz nyomd meg a menü gombot</string>
+<string name="manage">Kezelés</string>
+<string name="load_style_t">Stílus betöltése</string>
+<string name="load_style_s">A jelenlegi konfiguráció felülírása egy elmentett stílus értékeivel</string>
+<string name="save_style_t">Stílus mentése</string>
+<string name="save_style_s">Az aktív asztal konfigurációjának mentése stílusba</string>
+<string name="confirm_reset_page">Valóban visszaállítod ezt az asztalt alapértékekre?</string>
+<string name="reset_page_t">Asztal visszaállítása</string>
+<string name="reset_page_s">Elemek eltávolítása erről az asztalról, és az alapértelmezett stílus alkalmazása</string>
+<string name="tab_label">Név</string>
+<string name="tab_icon">Ikon</string>
+<string name="tab_layout">Poz.</string>
+<string name="tab_box">Doboz</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Alap</string>
+<string name="l_display">Név megjelenítése</string>
+<string name="l_custom">Átnevezés</string>
+<string name="l_size">Betűméret</string>
+<string name="l_type_face">Betűtípus kiválasztása…</string>
+<string name="l_style_t">Betűstílus</string>
+
+<string-array name="l_style_e">
+<item>Normál</item>
+<item>Félkövér</item>
+<item>Dőlt</item>
+<item>Félkövér és dőlt</item>
+</string-array>
+
+<string name="l_num_lines">Sorok száma legfeljebb</string>
+<string name="l_colors">Színek</string>
+<string name="l_color_normal">Normál szín</string>
+<string name="l_color_selected">Kiválasztási szín</string>
+<string name="l_color_focused">Fókuszált szín</string>
+<string name="l_shadow">Árnyék</string>
+<string name="l_shadow_enable">Árnyék engedélyezése</string>
+<string name="l_shadow_radius">Sugár</string>
+<string name="l_shadow_offset_x">X eltolás</string>
+<string name="l_shadow_offset_y">Y eltolás</string>
+<string name="l_shadow_color">Szín</string>
+<string name="i_main">Alap</string>
+<string name="i_display">Ikon megjelenítése</string>
+<string name="i_custom">Egyedi ikon választása…</string>
+<string name="i_folder_t">Mappaikon stílusa</string>
+
+<string-array name="i_folder_e">
+<item>Egyszerű ikon</item>
+<item>Rácsban</item>
+<item>Halmozva</item>
+</string-array>
+
+<string name="i_effect">Rétegek </string>
+<string name="i_e_back">Háttérkép</string>
+<string name="i_e_over">Átfedés </string>
+<string name="i_e_mask">Maszk</string>
+<string name="i_e_scale">Belső nagyítás</string>
+
+<string name="i_smooth">Ikon simítása</string>
+<string name="i_scale_t">Nagyítás</string>
+<string name="i_scale_s">Figyelmeztetés: A 4x nagyítás 16x több memóriát igényel: ez nagyon gyorsan kimerítheti a készülék memóriáját.</string>
+<string name="i_reflect">Tükröződés</string>
+<string name="i_reflect_enable">Tükröződés engedélyezése</string>
+<string name="i_reflect_overlap">Átfedés az ikonnal</string>
+<string name="i_reflect_size">Méret</string>
+<string name="i_reflect_scale">Nagyítás</string>
+<string name="la_margin">Hely az ikon és a név között</string>
+<string name="la_position_t">Név elhelyezése</string>
+
+<string-array name="la_position_e">
+<item>Balra</item>
+<item>Fent</item>
+<item>Jobbra</item>
+<item>Lent</item>
+</string-array>
+
+<string name="b_alignh_t">Vízszintes igazítás</string>
+
+<string-array name="b_alignh_e">
+<item>Balra</item>
+<item>Középre</item>
+<item>Jobbra</item>
+<item>Egyedi</item>
+</string-array>
+
+<string name="b_alignv_t">Függőleges igazítás</string>
+
+<string-array name="b_alignv_e">
+<item>Fel</item>
+<item>Középre</item>
+<item>Le</item>
+<item>Egyedi</item>
+</string-array>
+
+<string name="b_hint">Válassz ki egy vagy több elemet,\nmajd válassz ki egy tulajdonságot lejjebb</string>
+<string name="b_size">Kiválasztott elemek mérete</string>
+<string name="b_color_normal">Normál szín</string>
+<string name="b_color_selected">Kiválasztási szín</string>
+<string name="b_color_focused">Fókuszált szín</string>
+<string name="b_color_s">A tartalom vagy keret színének beállítása</string>
+<string name="m_enabled_t">Kattintható</string>
+<string name="m_enabled_s">Nem kattintható elemet szerkesztési módban lehet kiválasztani</string>
+<string name="m_alpha_t">Átlátszatlanság</string>
+<string name="m_alpha_s">Szép de lassú. 0: átlátszó, 255: teljesen átlátszatlan</string>
+<string name="m_smooth_transform_t">Simítás transzformációnál</string>
+<string name="m_smooth_transform_s">Szebb, de lassúbb</string>
+
+<string-array name="preview_item_labels">
+<item>Normál</item>
+<item>Kiválasztva</item>
+<item>Fókuszált</item>
+</string-array>
+
+<string name="il_preview">Előnézet\n(különbözhet a valós asztaltól)</string>
+<string name="preview_toast">Csak előnézeti mód\nMűveletek letiltva</string>
+<string name="pick_a_font">Betűtípus fájl választása…</string>
+<string name="system_font">Rendszer betűtípus</string>
+<string name="left">bal</string>
+<string name="top">fent</string>
+<string name="right">jobb</string>
+<string name="bottom">lent</string>
+<string name="margin">szegély</string>
+<string name="border">keret</string>
+<string name="padding">helyköz</string>
+<string name="content">tartalom</string>
+<string name="ovr_custom">felülír</string>
+
+<string name="pick_t">Ikon választása:</string>
+<string name="pick_file">Fájl</string>
+<string name="pick_gallery">Galéria</string>
+<string name="pick_icon_pack">ADW ikon csomag</string>
+
+<string name="tutorials">Útmutatók</string>
+<string name="donate">Adományozás</string>
+<string name="other_apps">Más alkalmazások</string>
+<string name="tut_intro">Bevezetés</string>
+<string name="tut_basic_editing">Első lépések</string>
+<string name="tut_custo">Elemek testreszabása</string>
+<string name="tut_free_mode">Szabad mód</string>
+<string name="tut_lock">Asztal lezárása</string>
+<string name="tut_pin">Elemek rögzítése/kitűzése</string>
+<string name="tut_scroll">Asztalok és\nnavigáció</string>
+<string name="dialog_color_picker">Szín választása</string>
+
+<string name="shortcut_settings">Lightning beállítás</string>
+<string name="shortcut_actions">Lightning művelet</string>
+
+<string name="no_backup_archive">Még nincsen visszaállítható mentés</string>
+<string name="backup_in_progress">Mentés folyamatban…</string>
+<string name="restore_in_progress">Visszaállítás folyamatban…</string>
+<string name="backup_done">Biztonsági mentés helye:\n%s</string>
+<string name="backup_error">Mentési hiba. Kérlek, ellenőrizd, hogy rendelkezésre áll-e elegendő szabad hely.</string>
+<string name="restore_error">Visszaállítási hiba. Kérlek, ellenőrizd, hogy a biztonsági mentés érvényes és olvasható-e.</string>
+
+<string name="confirm_delete">Tényleg törölni szeretnéd ezt az asztalt?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Visszaállítás</string>
+<string name="bg_sys_wp">Rendszer háttérkép</string>
+<string name="bg_sys_wp_select_t">Rendszer háttérkép beállítása…</string>
+<string name="bg_sys_wp_select_s">A rendszer háttérkép minden asztalon és az alkalmazásfiókban is látszik</string>
+<string name="bg_screen_wp">Asztal háttérkép</string>
+<string name="bg_screen_wp_select_t">Az asztal hátterének beállítása…</string>
+<string name="bg_screen_wp_select_s">Ez a háttérkép a rendszer háttérkép fölött jelenik meg. Minden asztalnak egyedi háttérképe lehet.</string>
+<string name="bg_more">Több</string>
+<string name="bg_more_color_t">Szín</string>
+<string name="bg_more_color_s">Használj átlátszatlan színt a háttérkép eltüntetéséhez. Használj átlátszó színt a háttér színezéséhez.</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Hosszú érintés</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Érintés</string>
+<string name="style_s1">Alapértelmezett</string>
+<string name="style_s2">Tömör (kicsi ikonok, kicsi címkék)</string>
+<string name="style_s3">Jól olvasható (nagy ikonok, nagy címkék)</string>
+<string name="style_s4">Lista, ikonok jobb oldalon</string>
+<string name="style_s5">Lista, nagy címkék, ikonok nélkül</string>
+<string name="style_s6">Lista, nagy címkék és ikonok</string>
+<string name="style_s7">Csempék, címkék nélkül</string>
+<string name="style_s8">Cifra színek</string>
+<string name="style_s9">Zune-szerű</string>
+<string name="dialog_help_hint_t">Tipp</string>
+<string name="dialog_help_hint_m">Egy beállítás  eléréséhez kattints hosszan rajta</string>
+<string name="dialog_help_hint_dsa">Ne mutasd újra</string>
+<string name="m_pin_mode">Rögzítés módja</string>
+<string-array name="m_pin_mode_e">
+<item>Nem rögzített</item>
+<item>Vízszintes és függőleges</item>
+<item>Vízszintes</item>
+<item>Függőleges</item>
+</string-array>
+<string name="m_events">Ujjmozdulatok</string>
+<string name="shortcut_screen">LL - Asztal könyvjelző</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">Az ultimate launcher. Semmi kompromisszum.</string>
+<string name="more_apps_t">Más ingyenes appok</string>
+<string name="more_apps_s">PierroX-tól (eszközök, játékok, jókedv)</string>
+<string name="mi_kill">Leállítás</string>
+<string name="killed_freed">Leállítva (%dM felszabadítva)</string>
+<string name="killed">Leállítva!</string>
+<string name="configure_pages_t">Asztalok beállítása</string>
+<string name="configure_pages_s">Több asztal Setup multiple desktops, their order, the home desktop, icons, labels,…</string>
+<string name="mi_mode_custom">Én fiókom</string>
+<string name="mi_mode_by_name">Minden app név szerint</string>
+<string name="mi_mode_recent_apps">Mostanában használt</string>
+<string name="mi_mode_recently_updated">Mostanában frissített</string>
+<string name="mi_mode_frequently_used">Gyakran használt</string>
+<string name="mi_mode_running">Jelenleg futó</string>
+<string name="mi_es_add_folder">Mappa hozzáadása</string>
+<string name="mi_es_edit_layout">Elrendezés szerkesztése</string>
+<string name="mi_es_refresh">Frissítés</string>
+<string name="mi_es_settings">Beállítások</string>
+<string name="mi_es_folder_settings">Mappa beállítások</string>
+<string name="mi_uninstall">Eltávolítás</string>
+<string name="my_drawer_title">Én fiókom</string>
+<string name="my_drawer_message">Az "Én fiókom" nézet lehetővé teszi az alkalmazásfiók teljes testreszabását.\n\nEbben a módban az elemek szabadon elhelyezhetőek egy nagy vásznon, és az alkalmazások mappákba is rendezhetőek.\n\nHa kizoomolsz, és az "Elrendezés szerkesztése" pontot választod, láthatod, hogy az alkalmazások elhelyezhetőek bal és jobb oldali, felül és alul lévő lapokra is. Így a neked megfelelő módon rendezheted el őket.</string>
+<string name="empty_folder_x">üres mappa\nfogd & vidd módszerrel ejts elemeket a mappaikonra\n</string>
+<string name="ll_import_title">LL beállítások betöltése</string>
+<string name="ll_import_message">A készüléken telepítve van a Lightning Launcher.\n\nMost minden adat importálásra kerül. Ha ez kész, nyugodtan eltávolíthatod az előző Lightning Launcher telepítést, és használhatod a Lightning Launcher eXtreme-t helyette.</string>
+<string name="init_ok">Kész!</string>
+<string name="init_ko">Valami baj történt másolás közben!</string>
+<string name="auto_exit_t">Automatikus kilépés</string>
+<string name="auto_exit_s">Alkalmazásfiók bezárása egy alkalmazás indításakor</string>
+<string name="icons_t">Ikoncsomag</string>
+<string name="icons_s">ADW ikoncsomag alkalmazása, vagy ikonok visszaállítása</string>
+<string name="apply_icon_pack_t">ADW ikoncsomag alkalmazása</string>
+<string name="apply_icon_pack_s">Alkalmazás/ikon táblázatot tartalmazó témákkal működik</string>
+<string name="icon_pack_no_appfilter">Ebben a csomagban nem található alkalmazás/ikon táblázat</string>
+<string name="revert_custom_icons_t">Eredeti ikonok visszaállítása</string>
+<string name="revert_custom_icons_s">Egyedi ikoneffekteket és belső nagyítást is beleértve</string>
+<string name="please_wait">Kis türelmet…</string>
+<string name="app_not_valid">Ez a parancsikon egy nem telepített alkalmazásra mutat. Szeretnéd letölteni az alkalmazásboltból, vagy inkább választasz egy másikat?</string>
+<string name="app_store">Alkalmazásbolt</string>
+
+<!-- added 95 -->
+<string name="dtext">Dinamikus szöveg</string>
+<string name="tab_dt_data">Adat</string>
+<string name="dt_source_t">Megjelenítendő szöveg</string>
+<string-array name="dt_source_e">
+<item>Olvasatlan SMS-ek</item>
+<item>Olvasatlan Gmail</item>
+<item>Elmulasztott hívások</item>
+<item>Dátum és idő</item>
+<item>Tárhely</item>
+<item>Akkumulátor szint</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Egyszerű formátum</string>
+<string-array name="dt_date_ef_e">
+<item>Dátum</item>
+<item>Idő</item>
+<item>Dátum és idő</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Haladó formátum</string>
+<string name="dt_date_xf_s">Segítség hosszan érintéssel</string>
+<string name="dt_display_empty_t">Ezt mutassa ha üres</string>
+<string name="dt_format_error">Hibás formátum</string>
+<string name="dt_storage_s_t">Tárhely kiválasztása</string>
+<string-array name="dt_storage_s_e">
+<item>Belső</item>
+<item>Külső</item>
+</string-array>
+<string name="dt_storage_f_t">Megjelenítés formátuma</string>
+<string-array name="dt_storage_f_e">
+<item>Normál</item>
+<item>Rövid</item>
+<item>Százalék</item>
+<item>Bájtok</item>
+</string-array>
+<string name="dt_storage_w_t">Mit mutasson</string>
+<string-array name="dt_storage_w_e">
+<item>Szabad hely</item>
+<item>Használt hely</item>
+<item>Elérhető</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Átlátszó állapotsor</string>
+<string name="trans_statusbar_s">Csak az ezt támogató eszközökön (hosszan érintés továbbiakhoz)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Elemek cseréje</string>
+<string name="swap_items_s">Elemek cseréje ha fedik egymást (csak rács mód)</string>
+<string name="rearrange_items_t">Elemek újrarendezése</string>
+<string name="rearrange_items_s">Elemek közötti helykihagyás elkerülése (csak rács mód)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Biztonsági mentés és visszaállítás</string>
+<string name="an_gh">Alapértelmezett képernyőre ugrás</string>
+<string name="an_ghz100">Alapértelmezett képernyőre ugrás, majd zoom 100%-ra.</string>
+<string name="an_sd">Asztalválasztó képernyő</string>
+<string name="an_re">App újraindítása</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Alábbi beállítások erre érvényesek:</string>
+<string-array name="grid_pl_e">
+<item>Álló és fekvő</item>
+<item>Álló</item>
+<item>Fekvő</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Megerősítés:</string>
+<string name="apply_tmpl_g">Sablon alkalmazása…</string>
+<string name="apply_tmpl_e">Nem lehet alkalmazni ezt a sablont!</string>
+<string name="tmpl_t">Sablonok</string>
+<string name="tmpl_s">Sablonok böngészése és alkalmazása, APK-hoz exportálás</string>
+<string name="tmpl_a_t">Alkalmaz</string>
+<string name="tmpl_a_s">Telepített sablon betöltése</string>
+<string name="tmpl_b_t">Létező sablonok böngészése</string>
+<string name="tmpl_b_s">Friss és új témák letöltése</string>
+<string name="tmpl_e_t">Export APK-hoz </string>
+<string name="tmpl_e_s">Hosszan érintés az útmutatóhoz</string>
+<string name="tmpl_c">Sablon kiválasztása</string>
+<string name="tmpl_e_m">Exportálás…</string>
+<string name="tmpl_e_d">Exportálás kész</string>
+<string name="tmpl_e_e">Exportálási hiba!</string>
+<string name="tmpl_check">Sablon megnyitása…</string>
+<string name="tmpl_check_e">Nem lehet olvasni a sablont!</string>
+<string name="tmpl_check_ut">Frissítés szükséges</string>
+<string name="tmpl_check_um">Ezt a sablont a Lightning Launcher egy újabb verziójához tervezték, szeretnél most frissíteni?</string>
+<string name="tmpl_get_llx">LLX beszerzése</string>
+<string name="tmpl_warn_t">Figyelmeztetés</string>
+<string name="tmpl_warn_c">Folytatás mindenképpen</string>
+<string name="tmpl_warn_m">A sablon alkalmazható, de:</string>
+<string name="tmpl_warn_llx">- ezt a sablont a Lightning Launcher eXtreme-mel tervezték, tartalmazhat olyan funkciókat, amelyek nem érhetőek el ebben a verzióban.</string>
+<string name="tmpl_warn_screen">- ez a sablon nem passzol teljesen a képernyődhöz. Néhány elem lehet, hogy nem fog helyesen megjelenni.</string>
+<string name="tmpl_warn_widget">- a rendszer nem képes widgetek automatikus visszaállítására, kézzel újra el kell helyezned majd ezeket.</string>
+<string name="widget_e">A widget nem tölthető be\nÉrintsd meg az app telepítéséhez vagy válassz egy másikat</string>
+<string name="tmpl_s_p">Válassz asztalokat az exportáláshoz</string>
+<string name="an_ctf">Legfelső mappa bezárása</string>
+<string name="an_caf">Összes mappa bezárása</string>
+<string name="ev_screen_on">Képernyő be</string>
+<string name="ev_screen_off">Képernyő ki</string>
+<string name="an_sa">App keresése</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Rögzített elemek rögzítése szerkesztő módban is</string>
+<string name="gc_hpie_s">Hosszan érintsd meg a leíráshoz</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Görgetési végpont</string>
+<string name="sp_b">Viselkedés</string>
+<string name="sp_ss">Görgetés megállítása</string>
+<string name="sp_sd">Húzás megállítása</string>
+<string name="sp_ba">Akadály</string>
+<string name="sp_dw">Teljes asztalra érvényes</string>
+<string name="sp_n">Elkapás</string>
+<string name="sp_d">Irány</string>
+<string name="sp_dlr">Balról jobbra</string>
+<string name="sp_drl">Jobbról balra</string>
+<string name="sp_dtb">Fentről lefelé</string>
+<string name="sp_dbt">Lentről felfelé</string>
+<string name="assp_t">A végpontok mutatása mindig</string>
+<string name="assp_s">A végpontok mindig látszódnak, még normál módban is</string>
+<string name="gc_edit">Elrendezés szerkesztő</string>
+
+<!-- added 116 -->
+<string name="backup_d">Biztonsági mentés</string>
+<string name="an_of">Mappa megnyitása</string>
+<string name="sf">Mappa kiválasztása</string>
+<string name="br_n">Biztonsági mentés neve</string>
+<string name="br_a">Válassz műveletet</string>
+<string name="br_r">Átnevezés</string>
+<string name="br_d">Törlés</string>
+<string name="br_s">Küldés</string>
+<string name="br_dc">Archívum törlése?</string>
+<string name="br_rc">Archívum visszaállítása ?</string>
+<string name="dt_gml_t">Gmail címke</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Másolás asztalra…</string>
+<string name="f_p">Elhelyezés</string>
+<string name="f_ac">Egyedi igazítás esetén</string>
+<string name="f_l">Bal</string>
+<string name="f_t">Fent</string>
+<string name="f_af">Áttűnés</string>
+<string name="sp_e">Szélek egyezése</string>
+<string name="sp_el">Bal</string>
+<string name="sp_er">Jobb</string>
+<string name="sp_et">Fent</string>
+<string name="sp_eb">Alul</string>
+
+<!-- added 119 -->
+<string name="np">Háttérképek</string>
+<string name="np_d">Hosszan érintés a leíráshoz</string>
+<string name="np_n">Normál háttér</string>
+<string name="np_s">Kiválasztási háttér</string>
+<string name="np_f">Fókuszált háttér</string>
+<string name="np_r">Háttérkép</string>
+<string-array name="anim2_e">
+<item>Nincs</item>
+<item>Kinyitás / becsukás</item>
+<item>Csúsztatás jobbra</item>
+<item>Csúsztatás balra</item>
+<item>Csúsztatás le</item>
+<item>Csúsztatás fel</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Váltás állóra</string>
+<string name="ev_ol">Váltás fekvőre</string>
+<string name="an_gdp">Adott asztalra és pozícióra ugrás</string>
+<string name="cof_t">Többi mappa bezárása</string>
+<string name="cof_s">Egyszerre csak egy mappa lehet nyitva</string>
+
+<!-- added 123 -->
+<string name="t_nb">Átlátszó navigációs sáv</string>
+<string name="gb_l">Bal</string>
+<string name="gb_t">Fent</string>
+<string name="gb_w">Szélesség</string>
+<string name="gb_h">Magasság</string>
+<string name="gb_a">Szög</string>
+<string name="gb_sx">Nagyítás X</string>
+<string name="gb_sy">Nagyítás Y</string>
+<string name="gb_kx">Ferde nyírás X</string>
+<string name="gb_ky">Ferde nyírás Y</string>
+<string name="mi_geometry">Geometria</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Mappa beállítások</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Panel tartalom testreszabása</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Lecsatolás a rácsról</string>
+<string name="mi_lmf">Csatolás a rácshoz</string>
+<string name="mi_mop">Kiemelés a panelből</string>
+
+<!-- added 137 -->
+<string name="container">Panel méret</string>
+<string name="uds_t">Asztal méretének használata</string>
+<string name="uds_s">Asztal használata a cellaméret számításához, nem a panel méretéhez</string>
+<string name="mi_app">App…</string>
+<string name="mi_l">Lezárás</string>
+<string name="mi_ul">Feloldás</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menü gomb (hosszan)</string>
+<string name="ev_back">Vissza gomb</string>
+<string name="ev_backl">Vissza gomb (hosszan)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Elemek...</string>
+<string name="mi_ic">Kompakt</string>
+<string name="mi_isa">Rendezés a-z</string>
+<string name="mi_isd">Rendezés z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Képernyő feloldása</string>
+<string name="nly">Not locked yet</string>
+<string name="s_ls_t">Lock screen</string>
+<string name="s_ls_s">Select the desktop to be shown on the lock screen. Long tap for a tutorial.</string>
+<string name="s_ls_s_t">Select or disable the lock screen</string>
+<string name="s_ls_s_s">Select a desktop, tap and cancel to disable it</string>
+<string name="s_ls_s_c">The lock screen has been disabled.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">The Unlocker Plugin is not installed yet. Tap to install</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Before to lock, please ensure that this desktop can be unlocked safely, either using an unlocker or an \"Unlock screen\" action.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Selection effect</string>
+<string-array name="m_sel_e_e">
+<item>Plain</item>
+<item>Holo</item>
+<item>Material</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Stop points conflict with the \'Snap to page\' option: it has been automatically turned off.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Rotation</string>
+<string name="i_rot_s">Rotate the item upon screen rotation</string>
+
+<!-- added 164 -->
+<string name="sc_name">Name</string>
+<string name="sc_new">New</string>
+<string name="sc_delete">Delete</string>
+<string name="sc_edit">Edit…</string>
+<string name="sc_help">Help</string>
+<string name="sc_deleted">Unknown or deleted script, a new one has been created.</string>
+<string name="sc_untitled">Untitled script</string>
+<string name="sc_dn_t">Script name</string>
+<string name="sc_dd_t">Please confirm</string>
+<string name="sc_dd_m">This script may be in use in other actions. Are you sure to delete it ?</string>
+<string name="sc_dc_t">Syntax check result</string>
+<string name="sc_dc_ok">The syntax looks good</string>
+<string name="an_rs">Run a script</string>
+<string name="sc_view">View script</string>
+<string name="sc_disable">Disable</string>
+<string name="sc_editor">Script editor</string>
+<string name="ev_pos">Position changed</string>
+<string name="sp_re">Reached event</string>
+<string name="ev_load">Load</string>
+<string name="an_b">Go back</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Template</string>
+<string name="br_ob">Overwrite with backup</string>
+<string name="br_ot">Overwrite with template</string>
+<string name="sc_ma">Appear in:</string>
+<string name="sc_ml">Lightning menu</string>
+<string name="sc_mi">Item menu</string>
+<string name="sc_mc">Custom menu</string>
+<string name="mi_s">Scripts…</string>
+<string name="an_cm">Custom scripts menu</string>
+<string name="tmpl_r">Replace: fully replace the current setup</string>
+<string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
+<string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
+<string name="tmpl_b">Make a backup first</string>
+<string name="apply_tmpl_m">Alkalmazni szeretnéd a \'%s\' sablont. Akarsz előtte biztonsági mentést készíteni a jelenlegi beállításaidról?</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Launch unlock</string>
+<string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Load the wallpaper</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">No scroll limit</string>
+<string name="no_lim_s">The desktop can be scrolled beyond its limit</string>
+
+<!-- added 175 -->
+<string name="mi_h">Hierarchy…</string>
+<string name="mi_if">Item infos</string>
+
+<!-- added 176 -->
+<string name="in_s">Identify this item with a label</string>
+<string name="mi_b">Back</string>
+<string name="mi_im">Item menu</string>
+
+<!-- added 178 -->
+<string name="em_t">Expert mode</string>
+<string name="em_s">Unleash the power of LL by displaying advanced options (take effect upon reload)</string>
+<string name="bm_c">Color</string>
+<string name="bm_bg">Background image</string>
+<string name="bm_prev">Preview</string>
+<string name="rs_t">Run scripts</string>
+<string name="rs_s">Allow scripts execution</string>
+<string name="rs_w">Warning: script execution is currently disabled in general settings</string>
+<string name="h_ad">Your apps are here.\nYou can launch apps from there and start adding apps to the desktop: long press on some app and select \"Add to launcher\".\n\nTap to learn more.</string>
+<string name="h_f">You just added a folder. Folders can contain apps, widgets or even other folders.\n\nDrag some item over it, wait a bit for the move to be confirmed (at the end of the animation), then drop the object: it will be moved inside the folder.\n\nTap to learn more on folders.</string>
+<string name="h_p">Your first panel is here.\nPanels behave a bit like folders: drag item over it, wait a bit for the move to be confirmed (end of the animation), then drop the object.\n\nTap to learn more on panels.</string>
+<string name="h_t">Hint</string>
+<string name="h_k">This is your desktop. Long tap to add objects (apps, widgets, folders, more) and access settings.\n\nPages are created as soon as you drag objects over them: to the left and right sides, but also to the top and bottom sides.\n\nTap to learn more on LL concepts.</string>
+<string name="tut_concepts">Concepts</string>
+<string name="tut_wiki">Wiki</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Select shortcut</string>
+<string name="ev_paused">Paused</string>
+<string name="ev_resumed">Resumed</string>
+<string name="ad_ab_c_t">Action bar</string>
+<string name="ad_ab_b">Háttérkép</string>
+<string name="ad_ab_h">Hide the action bar</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Speak into your device</string>
+<string name="ad_ab_ss">Display the action bar on scroll</string>
+
+<!-- added 191 -->
+<string name="ip">Képválasztó</string>
+<string name="ip_none">Kép törlése</string>
+<string name="ip_camera">Kamera</string>
+<string name="ip_ext_file">Egyéb fájlkezelő</string>
+<string name="ip_bgcolor">Háttér színe</string>
+<string name="delete_file">Törlöd ezt a fájlt?</string>
+
+<string-array name="ip_s">
+<item>Icon pack</item>
+<item>File</item>
+<item>Application</item>
+<item>Launcher images</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Érintés</string>
+
+<!-- added 200 -->
+<string name="sc_data">Pass these data to the script (leave blank if not used):</string>
+<string name="sc_send">Küldés</string>
+<string name="mi_ls">Script betöltése...</string>
+<string name="ls_ok">Script sikeresen betöltve</string>
+<string name="ls_ko">Nem lehet a scriptet betölteni</string>
+<string name="ls_b">Keresés a Play áruházban</string>
+<string name="ur">Unrecoverable error</string>
+
+<!-- added 201 -->
+<string name="in_t">Addj meg egy nevet</string>
+
+<!-- added 208 -->
+<string name="wrap_s">Experimental: when reaching a side, items from the other side are displayed as if the desktop were a sphere</string>
+<string name="i_cf_t">Szinezés</string>
+<string name="i_cf_s">Use alpha to adjust the saturation</string>
+<string name="sbo_t">Status bar and content overlap</string>
+<string name="nbo_t">Navigation bar and content overlap</string>
+<string name="sb_t">System bars</string>
+<string name="sb_s">Set status and navigation bars visibility, transparency, etc.</string>
+<string name="sbc_t">Status bar tint color</string>
+<string name="nbc_t">Navigation bar tint color</string>
+<string name="sb_c">Status bar</string>
+<string name="nb_c">Navigation bar</string>
+<string name="mi_app_store">Play áruház</string>
+
+<!-- added 217 -->
+<string name="an_um">Felhasználói menü</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Settings screen style</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Light</item>
+<item>Dark</item>
+</string-array>
+<string name="i_rm_t">Material effekt maszk</string>
+<string name="i_rm_s">Constraint the ripples inside the item\'s boundaries</string>
+<string name="icon_font">Ikon betűtípus</string>
+<string name="um_t">Témák</string>
+<string name="pi">Oldal jelölő</string>
+<string name="tab_page_indicator">Jelölő</string>
+<string name="pi_style">Stílus</string>
+<string-array name="pi_style_e">
+<item>Pontok</item>
+<item>Vízszintes vonal</item>
+<item>Függőleges vonal</item>
+<item>Mini térkép</item>
+<item>Szöveges</item>
+</string-array>
+<string name="pi_rf_t">Szöveg formátum</string>
+<string name="pi_dmx_t">Vízszintes tagolás</string>
+<string name="pi_dmy_t">Függőleges tagolás</string>
+<string name="pi_dmor">Külső rádiusz</string>
+<string name="pi_dmoc">Külső szín</string>
+<string name="pi_dmow">Külső szélesség</string>
+<string name="pi_dmir">Belső rádiusz</string>
+<string name="pi_dmic">Belső szín</string>
+<string name="pi_mosc">Térkép keretének színe</string>
+<string name="pi_mosw">Térkép keretének szélessége</string>
+<string name="pi_mofc">Térkép háttérszíne</string>
+<string name="pi_misc">Képernyő keretének színe</string>
+<string name="pi_misw">Képernyő keretének szélessége</string>
+<string name="pi_mifc">Képernyő hátterének színe</string>
+<string name="pi_lbc">Háttér színe</string>
+<string name="pi_lbw">Háttér szélessége</string>
+<string name="pi_lfc">Kurzor színe</string>
+<string name="pi_lfw">Kurzor szélessége</string>
+<string name="pi_lg">Gravitáció</string>
+<string-array name="pi_lg_e">
+<item>Közép</item>
+<item>jobb vagy lent</item>
+<item>bal vagy fent</item>
+</string-array>
+<string name="ac_s">Ikon szövege</string>
+<string name="ac_c">Konténer</string>
+<string name="ac_d">Dinamikus tartalom</string>
+<string name="ac_m">Több</string>
+<string name="ai_t">Szöveg</string>
+<string name="ai_i">Ikon</string>
+<string name="ai_sb">Oldalsáv</string>
+<string name="ai_b">Jelvény</string>
+<string name="ac_n">Navigáció</string>
+<string name="ai_bo">Könyvjelző</string>
+<string name="ai_d">Üres elem</string>
+<string name="h_sb">Az oldalsáv egy személyre szabott könyvtár. Az ide helyezett elemek bekerülnek az oldalsávba. Nyomj az ikonra az oldalsáv elrejtéséhez illetve megjelenítéséhez, vagy rendelj hozzá mozdulatot vagy bármilyen eseményt. Az ablak elrendezés módosításával más oldalakra dokkolhatod a sávot.</string>
+<string name="mi_exel">Kilépés a szerkesztésből</string>
+<string name="h_pi">Az oldal indikátor az asztal jelenlegi pozícióját mutatja. Alapértelmezésben ez az elem rögzítve van és nem kattintható. Lépj be az elrendezés módosításába, ahol változtathatsz a kinézetén, színén, stb...</string>
+<string name="h_sp">Stop pont egy eszköz egyedi görgetési séma elkészítéséhez. Az asztal görgetését a stop ponttal állíthatod meg. Tartsd hosszan nyomva a tulajdonságainak módosításához. A stop pontok csak a szerkesztési módban láthatók.</string>
+<string name="h_b">A könyvjelző elmenti az asztal jelenlegi pozícióját és méretezését. Ennek elmentése után bárhova áthúzhatod, érintésre automatikusan visszavisz a mentett pozícióba. Ez panelen és könyvtáron belül is működik.</string>
+<string name="sc_h">Swipe from the left edge to reveal the drawer</string>
+<string name="sc_a">Akciók</string>
+<string name="sc_o">Opciók</string>
+<string name="sc_w">Szavak tördelése</string>
+<string name="wrapx_t">Seamless mode X</string>
+<string name="wrapy_t">Seamless mode Y</string>
+<string name="h_w">The seamless mode is automatically disabled in edit mode, otherwise empty pages wouldn\'t be reachable. Be aware that some items may then suddenly disappear when entering edit mode: they are just displayed at their original position in the desktop instead of being "wrapped".\nSeamless mode is enabled again when exiting edit mode.</string>
+<string name="ad_bc">Kijelőlve:</string>
+<string name="an_wt">Háttérkép érintése</string>
+<string name="an_wst">Háttérkép másodlagos érintése</string>
+<string name="ds_sh">Kezdd itt</string>
+<string name="ds_uc">Felhasználói közösség</string>
+<string name="ds_tt">Tippek és trükkök</string>
+<string name="ds_br">Mentés és helyreállítás</string>
+<string name="ds_hn">Tipp: új lapot egyszerűen úgy készíthetsz, hogy elemeket húzol rá. Ez érvényes a jelenlegi alatt és felett lévő lapokra is, próbáld ki!\n\n(biztonságosan eltávolíthatod ezt a tippet)</string>
+<string name="ds_um">Hint: use one or two fingers swipe up to reveal the user menu (you can customize it), long tap somewhere to display a contextual menu.\n\n(you can safely delete this hint)</string>
+<string name="ds_z">Nagyítás</string>
+<string name="sc_import">Importálás...</string>
+<string name="sc_si_t">A script betöltő nincs telepítve</string>
+<string name="sc_si_m">Szeretnéd telepíteni a Play Áruházból?</string>
+<string name="adm_t">Kategóriák</string>
+<string name="adm_s">Válaszd ki a látható alkalmazásfiók kategóriáit</string>
+<string name="adm_z">Legalább egy kategóriát ki kell választanod...</string>
+
+<!-- added 224 -->
+<string name="mi_es_add_pi">Oldal jelölő hozzáadása</string>
+<string name="tr_fl_t">Ennek a funkciónak használatához meg kell vásárolnod az alkalmazást</string>
+<string name="tr_fl_m">Upgrade to the Full Lightning version to benefit from more features:\n\n- Advanced app drawer (folders, action bar, categories).\n- Add, remove, rearrange desktops at will.\n- Per desktop wallpaper.\n- Unread count, badges and dynamic text.\n- Customizable lock screen.\n- Integrated app killer.\n\nIf you already unlocked Lightning in the past, please select "OK" to re-activate this version.</string>
+<string name="tr_pw">Várj...</string>
+<string name="tr_ty">Köszönjük, hogy támogattad a Lightning-ot!</string>
+<string name="tr_eu">Sajnálom, hiba történt...</string>
+<string name="tr_c">Törölve</string>
+<string name="tr_br_s">Ez a funkció nem elérhető az időkorlátos verzióban</string>
+<string name="tr_rs_t">Unleash Lightning</string>
+<string name="tr_rs_s">Upgrade to get the most out of Lightning</string>
+<string name="tr_w">Thank you for testing Lightning!\n\nThe app will run in trial mode for 7 days: all features are enabled and can be used without restriction during this period. After the trial period, the app will still be usable but editing will not be enabled anymore.\n\nIf you like this app and wish to support it, please consider purchasing the key to unlock it.\n\nThank you!</string>
+<string name="tr_ut">A Lightningról</string>
+<string name="tr_um">You are a long time user of the free version of Lighting Launcher, thank you.\n\nAlthough this version has been replaced with a trial version, you will still benefit from all previously existing features for free, as well as most improvements made in the full app since the last update.\n\nIf you wish to support this app, please consider purchasing the unlock key at a discounted loyalty price.\n\nThanks!</string>
+<string name="tr_l">% nap van hátra az időkorlátos verzió használatából</string>
+<string name="tr_rm">Kérlek értékeld az alkalmazást!\n\nSzánsz pár másodpercet az alkalmazás értékelésére a Play Áruházban?</string>
+<string name="ds_hls">This is a sample lock screen that you can customize at will.\nAdd apps or widgets then activate it through the lock screen settings (tap here).</string>
+<string name="ic">Kép vágó</string>
+<string name="bg_st">Pozíció</string>
+<string-array name="bg_st_e">
+<item>Center, unscaled</item>
+<item>Fit width and height</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Crop rectangle</string>
+<string name="ip_solid">Egyszerű szín</string>
+<string name="ip_search">Keresés...</string>
+<string name="sst">Válassz egy scriptet</string>
+<string name="ips_t">Image pool size</string>
+<string name="ips_s">Ezen érték változtatása előtt kérlek olvasd el a használati dokumentációt</string>
+
+<!-- added 231 -->
+<string name="v_m">Láthatóság...</string>
+<string name="v_a">Összes</string>
+<string name="v_ov">Csak látható</string>
+<string name="v_oh">Csak elrejtett</string>
+<string name="ad_ab_tc">Szöveg színe</string>
+
+<!-- added 233 -->
+<string name="cv">Egyedi nézet</string>
+<string name="h_cv">Custom views are designed for advanced use cases. It enables Android view creation through scripting and as a consequence it requires advanced scripting and Android knowledge.</string>
+<string name="cv_c">Script létrehozása</string>
+<string name="cv_d">Script törlése</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Nincs művelet (letilt)</item>
+<item>Alkalmazásfiók mutatása</item>
+<item>Nagyítás áttekintő nézetre</item>
+<item>Nagyítás 100%</item>
+<item>Nagyítás váltása:\náttekintő nézet/100%</item>
+<item>Előző asztal</item>
+<item>Következő asztal</item>
+<item>Elrendezés szerkesztése</item>
+<item>Hozzáadási műveletek</item>
+<item>Lightning személyre szabása</item>
+<item>Jelenlegi mappa vagy asztal testreszabása</item>
+<item>Alkalmazás indítása</item>
+<item>Parancsikon indítása</item>
+<item>Háttérkép kiválasztása</item>
+<item>Alkalmazás menü</item>
+<item>Értesítősáv mutatása</item>
+<item>Alkalmazás menü és értesítési sáv mutatása/elrejtése</item>
+<item>Értesítések mutatása</item>
+<item>Keresés</item>
+<item>Elem mozgatása</item>
+<item>Elem testreszabása</item>
+<item>Elem menü</item>
+<item>Elem indítása</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Görgetés megállítása</string>
+<string name="auto_stop_s">Kinetikus görgetés megállítása a lapok szélénél</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Biztonsági mentés kiválasztása visszaállításhoz</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Semmi</item>
+<item>Nagyítás / kicsinyítés</item>
+<item>Áttűnés</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Nagyítás/forgatás visszaállítása</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Egyujjas görgetés szerkesztő módban</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Álló/fekvő mód váltása</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Görgetés sebessége</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Biztonsági mentés majd alkalmazás</string>
+<string name="apply_tmpl_n">Csak alkalmazás</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">Alapértelmezett ikon </string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Transparent bars and content overlap</string>
+<string name="ad_ab_c_s">Háttérkép, láthatóság</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Seamless mode</string>
+
+<string name="ip_blank">Üres kép</string>
+<string name="min_ram_t">RAM használat minimalizálása</string>
+<string name="min_ram_s">Újraindítás szükséges. Memóriatakarékosság preferálása a sebességgel szemben</string>
+<string name="mi_es_show_hidden">Rejtettek mutatása</string>
+<string name="mi_es_hide_hidden">Rejtettek elrejtése</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">English</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

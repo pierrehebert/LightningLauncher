@@ -1,0 +1,26 @@
+Lightning Launcher ist ein schneller, schlanker, voll anpassbarer Ersatz für den Android Homescreen.
+
+Hauptfunktionen:
+- große Auswahl an Layout-Modi: Gitter, einzelne Spalten, horizontal, vertikal, freie Positionierung,...
+- unbegrenzte Anpassung des Aussehens: Beschriftungen, Symbole, Schriftarten, Farben, Ausrichtung, Größen, und so weiter.
+- innovatives Konzept: Ihr Homescreen ist wie eine unbegrenzte Fläche, auf welche Sie Apps und Widgets überall und beliebig platzieren können
+- jedes Element (App, Verknüpfung, Widget,...) kann individuell angepasst, vergrößert/verkleinert, oder gedreht werden - entweder um die Lesbarkeit zu erhöhren, um wertvollen Platz zu gewinnen, oder nur aus Spaß.
+- Unterstützung von fortschrittlichen Ordnern, welche Widgets und sogar Unterordner enthalten können - für eine komplexe Gliederung. Jeder Ordner kann angepasst werden, vom Layout bis zum visuellen Thema (Aussehen).
+- Unterstützung für konfigurierbare Tasten und Gesten: verbinden Sie Ihre bevorzugten Funktionen mit einer Taste, oder starten Sie ein App durch eine Wisch-Geste
+- Von Grund auf neu programmiert, um möglichst energiesparend und speicheroptimiert zu sein Je mehr Speicher Sie für Ihre Apps haben, umso schneller werden sie laufen und umso länger wird Ihr Akku durchhalten.
+- und vieles mehr...
+
+
+Und: Lightning Launcher ist gratis, ohne Werbung, benötigt keine Internet-Berechtigung und auch keinen Root-Zugriff. Es gibt keine Voll-/Pro-/Premium- oder HD-Version. Die gesamte Lightning-Kraft ist in einem einzigen, sehr kleinen und effizienten Package gebündelt. Sie mögen sich aber vielleicht trotzdem die zusätzlichen Erweiterungen/Apps ansehen. Der Kauf von Erweiterungen wird Ihnen einige weitere, tolle Funktionen bringen. Dies sichert außerdem das Überleben der App, sowie des Entwicklers, der sie zum besten Launcher aller Zeiten machen möchte. 
+
+Alle Kommentare, Vorschläge und die Meldung von Fehlern sind willkommen. Kommentare im App-Store sind schwierig handzuhaben. Bitte senden Sie Fragen oder Meldungen von Fehlern per e-Mail an pierrox@pierrox.net.
+Besuchen Sie die Facebookseite http://www.facebook.com/LightningLauncher um zu erfahren, welche Änderungen es zukünftig geben wird, um sich bestimmte Funktionen zu wünschen oder eine Frage zu stellen.
+
+Lightning Launcher: Ihr Homescreen, Ihr eigener Style !
+Viel Spaß !
+
+Berechtigungen:
+- CALL_PHONE ("Telefonnummer direkt anrufen"): wird benötigt, um Anruf-Verknüpfungen zu erstellen. Diese Berechtigung brauchen alle Launcher, die Adressbuch-Verküpfungen unterstützen. LL wird niemanden ohne Ihre Zustimmung anrufen.
+- EXPAND_STATUS_BAR ("Statusleiste ein-/ausblenden"): wie der Name schon sagt, wird benötigt, um die Statusleiste ein- und auszublenden.
+- SET_WALLPAPER_HINTS ("Größenhinweise für Hintergrundbild festlegen"): wird benötigt, um die Größe des Hintergrundbildes anzupassen
+- keine anderen Berechtigungen benötigt !

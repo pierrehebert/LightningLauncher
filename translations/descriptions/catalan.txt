@@ -1,0 +1,25 @@
+Lightning Launcher es una pantalla d'inici alternativa d'Android personalitzable, ràpida i lleugera.
+
+Característiques principals:
+- Àmplia varietat de modes de disseny: quadrícula, columnes individuals, horitzontal, posició vertical, lliure, ...
+- Personalització visual il·limitada: Canviar etiquetes, icones, fonts, colors, alineació, mides, etc.
+- Concepte innovador: la pantalla d'inici és com una superfície il·limitada on les aplicacions i els ginys es poden col·locar en qualsevol lloc, de qualsevol manera
+- Cada element (aplicacions, dreceres, widgets, ...) pot ser personalitzat individualment, escalat, rotat, ja sigui per millorar la llegibilitat, o per tenir alguns píxels preciosos en un disseny ajustat, o simplement pel gust de fer-ho.
+- Suporta carpetes sofisticades, amb ginys i, fins i tot, altres carpetes per a una organització complexa. Cada carpeta pot ser totalment personalitzada, des del disseny a la temàtica visual.
+- Suporta tecles i gestos configurables: vincula la teva acció preferida amb la teua tecla preferida, llança una aplicació personalitzada al lliscar el dit
+- Creada des de zero per a ser la més eficient en l'ús d'energia i la més estalviadora en RAM. Com més memòria tingues per a les teves aplicacions, més ràpid s'executaran, i més durarà la bateria.
+- I molt més a l'interior ...
+
+A més, Lightning Launcher és lliure, no té publicitat, no necessita permís d'internet ni accés root. No hi ha una versió completa / professional / principal o d'alta definició. Tot el poder de Lightning està aquí disponible en un sol paquet, molt petit i terriblement eficient. Així i tot és possible que vulgues fer una ullada a les aplicacions addicionals. La compra d'aquestes aplicacions et portarà algunes característiques de luxe. Això també ajudarà a mantindre viva aquesta aplicació... així com al seu desenvolupador que està disposat a fer d'aquesta aplicació el millor llançador existent.
+
+Tots els comentaris, suggeriments i informes d'errors són benvinguts. Els comentaris de la botiga d'aplicacions són difícils d'usar, si us plau escriu la teva pregunta / error a pierrox@pierrox.net.
+Visita la pàgina de facebook http://www.facebook.com/LightningLauncher per aprendre el que està en procés, demana alguna característica, o simplement fes una pregunta.
+
+Lightning Launcher: la teva pantalla d'inici, el teu propi estil!
+Gaudeix!
+
+Permisos:
+- CALL_PHONE: necessaris per crear dreceres de trucades directes, aquest permís es requereix en tots els llançadors que admeten dreceres de contacte. LL no trucarà a ningú en lloc teu.
+- EXPAND_STATUS_BAR: com el seu nom diu, s'utilitza per a l'acció "mostrar la barra d'estat".
+- SET_WALLPAPER_HINTS: s'utilitza per establir les dimensions del fons d'escriptori
+- No hi ha cap altre permís necessari!

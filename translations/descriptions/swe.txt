@@ -1,0 +1,27 @@
+﻿Lightning Launcher är en snabb, nätt och fullt anpassningsbar ersättare för Androids hemskärm.
+
+Huvudfunktioner:
+- en mängd layoutlägen: rutnät, enkel kolumn, horisontell, vertikal, fri positionering, ...
+- oändligt visuellt anpassningsbar: ändra etiketter, ikoner, färger, textjustering, storlekar, osv.
+- innovativt koncept: din hemskärm är som en oändlig yta där appar och widgets kan placeras vart och hur som helst.
+- varje objekt (app, genväg, widget, ...) kan anpassas, skalas och roteras individuellt för att förbättra läsbarheten, spara några dyrbara pixlar i en trång layout, eller bara för att det är kul.
+- stöd för sofistikerade mappar, vilka kan innehålla widgets och även andra mappar för komplex orgianisering. Varje mapp kan anpassas fullständigt, från layout till visuellt tema.
+- stöd för valbara knappfunktioner och gester: bind funktioner till de knappar du föredrar, starta applikationer med svepningar.
+- built from scratch and from the ground to be the most power efficient and the most RAM saving. The more memory you have for your apps, the faster they will run, and the longer your battery life will be.
+- byggd från grunden för att vara mest strömeffektiv och snål med RAM. Ju mer minne du har kvar för dina appar, ju snabbare kan de köras, och desto mer batteritid får du.
+- och mycket mer inuti...
+
+
+Plus, Lightning Launcher är gratis, har ingen reklam, behöver inte tillåtelse för att använda internet eller root access. Det finns ingen full/pro/prime eller HD version. All Lightnings kraft finns precis här och tillgänglig i en enda, väldigt litet och otroligt effektivt paket. Du kanske ändå vill kolla in några av tillbehören. Att köpa någon av dessa appar ger dig lite fler lyxfunktioner. Det hjälper också den här appen att hålla sig vid liv... samt även utvecklaren som är villig att göra den här appen den bästa hemskärmen någonsin.
+
+Alla kommentarer, förslag och bugg-rapporter är välkomna. Kommentarer i app-butiken är svåra att använda, maila helst dina frågor/buggar till mig på pierrox@pierrox.net (engelska).
+Besök Facebook sidan http://www.facebook.com/LightningLauncher för att se vad som är på gång, önska nya funktioner, eller helt enkelt ställa en fråga.
+
+Lightning Launcher: din hemskärm, din egen stil!
+Ha så kul!
+
+Tillstånd:
+- CALL_PHONE: behövs för att skapa uppringningsgenvägar, det här tillståndet krävs av alla hemskärmsappar som stödjer genvägar till kontakter. LL kommer inte att ringa någon på eget bevåg.
+- EXPAND_STATUS_BAR: som namnet säger, behövs för funktionen "Visa statusraden".
+- SET_WALLPAPER_HINTS: används för att sätta bakgrundens storlek
+- inga andra tillstånd behövs!

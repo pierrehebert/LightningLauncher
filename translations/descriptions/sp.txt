@@ -1,0 +1,25 @@
+Lightning Launcher es un reemplazo veloz, ligero y totalmente personalizable de la pantalla de inicio para Android.
+
+Principales características:
+- gran variedad de modos de disposición: cuadrícula, columnas simples, horizontal, vertical, posicionamiento libre...
+- personalización visual ilimitada: cambia etiquetas, íconos, fuentes, colores, alineación, tamaños y más
+- concepto innovativo: tu pantalla de inicio es como una superficie ilimitada donde aplicaciones y widgets pueden ser posicionados donde sea, como sea
+- cada item (app, atajo, widget,...) puede ser personalizado individualmente, redimensionado, rotado, tanto para mejorar la lectura, o para ganar preciados pixeles en una pantalla ajustada, o simplemente por la diversión de hacerlo.
+- soporte para carpetas sofisticadas, capaz de contener widgets e incluso otras carpetas para un orden complejo. Cada carpeta puede ser personalizada por completo, desde la disposición al tema visual.
+- soporte para teclas y gestos configurables: liga tus acciones preferidas a tus teclas de elección, inicia una aplicación especial con deslizar un dedo
+- construido desde cero y desde sus cimientos con el propósito de ahorrar la mayor energía y RAM posible. Cuanta más memoria tienes disponible para tus apps, mejor van a correr y la batería te durará más.
+- y mucho más en su interior...
+
+Además, Lightning Launcher es gratis, no tiene publicidad, no necesita permisos de internet ni acceso a root. No hay versión full/pro/prime o HD. Todo el poder de Lightning está aquí y disponible en un solo, muy pequeño e increiblemente eficiente paquete. De todos modos puedes echar un vistazo a aplicaciones extra. Comprando una de estas apps te dara mu buenas funciones. Esto también ayuda a mantener esta app viva... al igual que a su desarrollador que está dispuesto a hacer de esta aplicación el mejor launcher de la historia.
+
+Todos los comentarios, sugerencias y reportes de error son bienvenidos. Los comentarios en la app store son difíciles de usar, por favor enviar un email con sus preguntas o bugs a mi casilla de correo: pierrox@pierrox.net
+Visita la página de facebook http://www.facebook.com/LightningLauncher para mantenerse al día con lo último, para hacer peticiones de funciones o simplemente para hacer una pregunta.
+
+Lightning Launcher: tu pantalla de inicio, tu propio estilo !
+Disfruten !
+
+ Permisos:
+ - CALL_PHONE: se necesita para atajos de llamadas directas, este permiso se requiere en todos los launchers que soporten atajos a contactos. LL no llamará a nadie en tu lugar.
+ - EXPAND_STATUS_BAR: como indica su nombre, es usado para la acción "Mostrar la barra de estado".
+ - SET_WALLPAPER_HINTS: usado para establecer las dimensiones del fondo de pantalla.
+ - ningún otro permiso requerido !

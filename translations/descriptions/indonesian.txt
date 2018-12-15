@@ -1,0 +1,25 @@
+Lightning Launcher adalah Beranda alternatif untuk Android yang cepat, ringan dan benar-benar dapat diatur sesuai keinginan.
+
+Keunggulan:
+- Banyak jenis tata letak: terkotak-kotak, kolom tunggal, horizontal, vertikal, posisi bebas...
+- Pengaturan visual tak terbatas: rubah label, icon, jenis huruf, warna, penjajaran, ukuran, dan lain-lain.
+- Konsep yang inovatif: Beranda anda bagai hamparan yang tidak berbatas dimana aplikasi dan widget dapat diletakkan dimanapun, dengan cara bagaimanapun.
+- Setiap hal (aplikasi, pintasan, widget,...) dapat diatur, diskala, atau diputar satu-persatu supaya lebih mudah dibaca atau menghemat tempat dalam tata letak yang sempit atau mungkin juga sekedar supaya lebih indah dipandang.
+- Mendukung map yang canggih, mampu diisi aplikasi, wiget, dan bahkan map lain untuk pengorganisasian yang lebih rinci. Setiap map dapat diatur secara keseluruhan, mulai dari tata letak hingga tema visualnya.
+- Mendukung pengaturan tombol dan gerakan: tentukan aksi yang anda inginkan ketika anda menekan salah satu tombol, luncurkan aplikasi hanya dengan sapuan.
+- Dibangun dari nol hingga menjadi aplikasi Beranda paling hemat energi dan paling hemat RAM. Lebih banyak memory yang bisa anda pergunakan untuk aplikasi anda, lebih cepat aplikasi tersebut berjalan, dan juga baterai lebih tahan lama.
+- Dan masih banyak lagi...
+
+Ditambah, Lightning Launcher gratis, tanpa iklan, tidak memerlukan izin internet dan tidak pula perlu akses root. Tidak ada versi full/pro/prime atau HD. Semuanya ada di sini, dalam paket tunggal, kecil, dan sangat efisien ini. Namun anda mungkin masih perlu melihat-lihat dan menambah aplikasi lain. Membeli aplikasi-aplikasi ini akan memberi anda keunggulan-keunggulan mewah lainnya. Hal tersebut juga akan menjaga kelangsungan hidup aplikasi ini... dan pengembangnya yang telah mau membangun aplikasi ini, aplikasi Beranda terbaik.
+
+Semua komentar, masukan dan laporan kesalahan (bug) sangat diharapkan. Komentar di App Store terlalu sukar dipergunakan, harap kirim email tentang pertanyaan/bug kepada saya di pierrox@pierrox.net.
+Kunjungi laman Facebook http://www.facebook.com/LightningLauncher untuk mengetahui apa yang tengah dilakukan, atau menyumbang ide fitur, atau sekedar melempar pertanyaan.
+
+Lightning Launcher: your home screen, your own style !
+Lightning Launcer: Beranda anda, gaya anda!
+
+Izin:
+- CALL_PHONE: diperlukan untuk pintasan langsung telepon, izin ini diperlukan semua aplikasi Beranda yang mendukung pintasan kontak. LL tidak akan menelepon siapaun atas nama anda.
+- EXPAND_STATUS_BAR: seperti namanya, dipergunakan untuk aksi "Tampilkan status bar".
+- SET_WALLPAPER_HINTS: dipergunakan untuk mengatur ukuran wallpaper.
+- tak ada izin lain yang diperlukan!

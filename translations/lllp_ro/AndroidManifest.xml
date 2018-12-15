@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.pierrox.lightning_launcher.lp.ro"
+    android:versionCode="3"
+    android:versionName="3">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+
+    <application android:label="@string/pack_name" android:icon="@drawable/ic_launcher">
+        <activity
+            android:name=".ro"
+            android:label="@string/pack_name_short"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="net.pierrox.lightning_launcher.lp.ENUMERATE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

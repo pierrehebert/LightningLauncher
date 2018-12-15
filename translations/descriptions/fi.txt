@@ -1,0 +1,28 @@
+Lightning Launcher on erittäin nopea, erittäin kevyt ja täysin kustomoitava kotinäytön korvaaja Androidille.
+
+Ominaisuudet:
+- Suuri valikoima ulkonäön muokkaus toimintoja: Ruudut, yksittäiset sarakkeet, vaakasuorat, pystysuorat ja vapaa asettaminen,...
+- Loppumaton Visuaalinen Muokkaus: muuta Leimoja, Ikoneita, Fontteja, Värejä, ryhmityskokoja ja paljon muuta.
+- innovatiivinen idea: kotinäyttösi on kuin loputon pinta missä ohjelmat ja widgetit voidaan laittaa mihin vaan, miten vaan.
+- jokainen objekti (ohjelma, pikakuvake, widgetti,...) voidaan yksilöllisesti muokata, skaalata, kääntää, valitse itse, koska se on hauskaa.
+- tuki kehittyneille kansioille, pystyt lisäämään widgetin ja jopa toisen kansion kansion sisälle täydellisen jäsjestyksen saamiseksi. jokaista kansiota voidaan myös muokata ulkomuodosta visuaalisiin teemoihin.
+- tuki konfiguroitaviin painikkeisiin ja eleisiin: aseta haluamasi toiminto haluamallesi painikkeelle tai käynnistä haluamasi ohjelma eleellä
+- rakennettu pienestä ja rakennettu tehokkaimmaksi ja mahdollisimman vähän RAM muistin käyttäväksi ohjelmaksi sillä mitä enemmän muistia säästyy ohjelmille, sitä nopeammin ne toimivat ja sitä vähemmän akkua kuluu.
+- ja paljon muuta mukana...
+
+
+Plus, Lightning Launcher on ilmainen, ei mainoksia, eikä tarvitse internet-yhteyttä tai roottia. Ei ole myöskään full/pro/prime tai HD versiota. kaikki Lightning Launcherin virta on valmiina yhdessä, erittäin pienessä ja erittäin tehokkaassa paketissa.
+Haluaisitko silti vilkaista muita meidän sovelluksia ? 
+Ostamalla yhden tai useamman sovelluksen saat kotinäytöllesi erilaisia hienoja ominaisuuksia. Tämä auttaa myös pitämään tämän ohjelman elävänä... kuten myös kehittäjän joka yrittää tehdä tästä ohjelmasta parhaan kotinäytön korvaajan ikinä. 
+
+Kaikki Kommentit, Ehdoitukset ja ongelmat ovat Tervetulleita. kommentit Google Play kaupassa on vaikeita lukea, joten lähettäkää viestit sähköpostiini pierrox@pierrox.net.
+Käy katsomassa myös Facebook sivut http://www.facebook.com/LightningLauncher ja käy katsomassa mitä on tapahtumassa, tai esitä kysymys sovelluksesta, tai vaikka ehdoita uutta tomintoa sovellukseemme.
+
+Lightning Launcher: Sinun Kotinäyttösi, Sinun tyylisi !
+Nauti !
+
+Käyttöluvat:
+- Puhelinsoitot: tätä lupaa tarvitaan puhelinnumeroiden suoravalintaan, tätä lupaa tarvitsevat kaikki launcherit jotka tukevat näitä suoravalintoja. LL ei soita kenellekkään ilman sinun valintaasi.
+- Avaa Tilapalkki: niin kuin nimi sanoo, käytetään "Näytä Tilapalkki" Toimintoon.
+- Aseta Taustakuva: Käytetään taustakuvan asettamiseen ohjelman kautta.
+- Ei tarvita muita lupia !

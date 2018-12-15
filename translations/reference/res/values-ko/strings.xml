@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">라이트닝 런처 - 한국어</string>
+<string name="pack_name_short">한국어</string>
+<string name="tranlator_name">ZeroRay</string>
+
+<string name="description">라이트닝 런처는 극단적으로 빠르며 여러분이 원하는대로 설정 가능합니다.\n메모리를 적게 차지하며 절대 느려지지 않습니다.\n\n여러분들은 이제 더이상 페이지에 얽매이지 않습니다. 대신, 여러분들의 홈 화면은 무한한 캔버스 위에 펼쳐진 아름다운 에술품이 됩니다.\n가능성은 무한합니다.\n\n주요 특징들 :\n•가로 화면과 세로 화면 각각 개별적으로 설정 가능한 레이아웃과 격자 크기\n•현재 화면 맨 위의 패널 혹은 스크롤 가능한 화면\n•아이템을 고정시켜 움직이지 못하게 하는 기능\n•칸 설정 : 어떤 아이템이던 배경색, 경계, 여백 설정 가능\n•자유 모드 : 격자? 먹는건가요? 자유 모드는 격자를 제거하고 아이템의 회전을 가능하게 합니다\n•여러개의 홈 화면 격자\n•22개의 제스쳐와 29개의 액션(바로가기로도 실행 가능합니다)\n•홈 화면 중 하나를 잠금화면으로 사용하기! (베타 전용)\n•정지 지점 : 런처에게 언제 스크롤을 멈춰야 할지 알려주세요\n•설정 가능한 스크롤 방향\n•어떤 아이템이라도 다음과 같은 설정이 가능합니다 :\n1. 글씨의 폰트, 그림자와 색깔\n2. 갤러리에서 아이콘을 고르거나 아이콘의 크기 조절\n3. 라벨이 아이콘에 얼마나 가까운지, 어디에 있을지 선택\n4. 나인패치된 이미지(.9.png)를 배경으로 설정 가능한 칸 설정\n5. 투명도 설정 그리고 방향 제스처로 어떠한 액션이던 실행(ex. Chrome 아이콘을 위로 쓸어올리면 Dolphin Browser가 실행됨)\n•여러분의 홈 화면을 전체 백업하거나 스타일 옵션으로 저장하기\n•여러분의 설정을 APK 파일로 내보내기\n------\n라이트닝 런처는 킷캣에서 사용 가능한 투명한 상태바와 소프트키를 지원합니다.\n------\nTasker처럼 강력한 도구들처럼 라이트닝 런처도 배우는데 시간이 좀 걸립니다만 라이트닝 런처만큼 강력한 런처는 없습니다.\n\n어떤 의견, 제안, 버그 리포트던 환영합니다.\n여러분들은 저, Pierre Hébert에게 pierrox@pierrox.net. 로 이메일을 보낼 수 있습니다.\n만약 원한다면 Google+ 페이지에 가입해서 다른 유저로부터 피드백을 받거나, 기능에 대해 토론하거나, 질문에 답변받거나 혹은 베타 테스트에 참여할 수도 있습니다.\n도움말은 어떠한 설정이던 길게 눌러 온라인에서 찾아볼 수 있습니다.</string>
+
+
+<string name="start_activity_error">앱을 시작할 수 없습니다</string>
+<string name="menu_add">추가</string>
+<string name="menu_settings">기기 설정</string>
+<string name="menu_customize">런처 설정</string>
+<string name="menu_customize_folder">폴더 꾸미기</string>
+<string name="menu_objects_layout">레이아웃 변경</string>
+<string name="dialog_action_title">추가</string>
+
+<string-array name="dialog_action_values">
+<item>앱</item>
+<item>바로가기</item>
+<item>앱 위젯</item>
+<item>라이트닝 위젯</item>
+<item>폴더</item>
+<item>정지 지점</item>
+</string-array>
+
+<string name="mi_remove">제거</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">꾸미기</string>
+<string name="mi_move_to_screen">홈 화면으로 옮기기</string>
+<string name="mi_edit_icon">아이콘 선택</string>
+<string name="mi_edit_label">텍스트 꾸미기</string>
+<string name="mi_pick_app">실행할 앱 선택</string>
+<string name="mi_pick_widget">다른 위젯 선택</string>
+<string name="mi_edit_more">더보기</string>
+<string name="mi_position">위치</string>
+<string name="mi_pin">고정</string>
+<string name="mi_unpin">고정 해제</string>
+<string name="mi_add_to_launcher">런처에 추가</string>
+<string name="mi_hide_unhide">숨기기/보이기</string>
+<string name="mi_app_details">앱 정보</string>
+<string name="mi_widget_options">위젯 설정</string>
+<string name="mi_move_out_of_folder">폴더 밖으로 이동</string>
+<string name="first_use_title">환영합니다!</string>
+<string name="first_use_message">라이트닝 런처는 가볍고 무엇이던 설정 가능한 안드로이드 홈 화면 런처입니다.\n\n당신은 현재 기본 모드를 사용중이며 따라서 몇몇 고급 설정들이 숨겨져있습니다. 전문가 모드로 바꾸어 모든 기능과 설정에 접근할 수 있습니다.\n\n라이트닝 런처가 현재 앱 목록을 준비중이며 이는 한번만 하면 됩니다.\n\n읽어주셔서 감사드리며 라이트닝 런처를 써주셔서 감사합니다!</string>
+<string name="all_apps">모든 앱</string>
+<string name="menu_refresh">새로고침</string>
+<string name="menu_zoom">확대</string>
+<string name="menu_see_only_visible">보이는 것만</string>
+<string name="menu_see_only_hidden">숨겨진 것만</string>
+<string name="menu_see_all">모든 앱</string>
+<string name="empty_folder">아이템을 추가하기 위해 길게 터치\n더 많은 옵션을 위해 폴더 아이콘을 설정하십시오</string>
+<string name="file_picker_activity_up">위로</string>
+
+<string name="settings">설정</string>
+<string name="general_t">일반</string>
+<string name="general_s">언어, 키, 제스처 등</string>
+<string name="dashboard_t">현재 화면</string>
+<string name="dashboard_s">아이템 스타일, 레이아웃, 스크롤 옵션</string>
+<string name="app_drawer_t">앱 목록</string>
+<string name="app_drawer_s">앱 목록 설정</string>
+<string name="app_killer_t">앱 강제 종료</string>
+<string name="app_killer_s">LL에 탑재되어 있는 가벼운 앱 킬러</string>
+<string name="donate_t">기부</string>
+<string name="donate_s">라이트닝 런처를 후원하고 싶나요?</string>
+<string name="backup_t">백업</string>
+<string name="restore_t">복원</string>
+<string name="rate_t">라이트닝 런처 평가</string>
+<string name="rate_s">플레이 스토어에 당신의 의견을 남겨주세요</string>
+<string name="facebook_t">라이트닝 런처 Google+ 페이지 방문</string>
+<string name="facebook_s">기능 제안, 버그 리포트하기, 앱 업데이트 뉴스</string>
+<string name="ld_t">라이트닝 드로어</string>
+<string name="ld_s">고급 앱 목록</string>
+<string name="customize_ll">라이트닝 설정</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">언어 설정</string>
+<string name="language_s">언어 팩 설치</string>
+<string name="lg_pick_t">언어 팩 선택</string>
+<string name="lg_pick_s">이 작업은 라이트닝 런처를 재시작합니다.</string>
+<string name="lg_install_t">다른 언어 다운로드</string>
+<string name="lg_install_s">플레이 스토어에서 설치</string>
+
+<string name="lg_contrib_t">도움 주기</string>
+<string name="lg_contrib_s">언어팩을 만들거나 업데이트하세요!</string>
+<string name="events_t">이벤트 &amp; 동작</string>
+<string name="events_s">제스쳐와 액션 설정</string>
+<string name="ev_home">홈 키</string>
+<string name="ev_menu">메뉴 키</string>
+<string name="ev_search">검색 키</string>
+<string name="ev_item_tap">터치</string>
+<string name="ev_item_ltap">길게 터치</string>
+<string name="ev_bg_tap">빈 공간 터치</string>
+<string name="ev_bg_dtap">빈 공간 두 번 터치</string>
+<string name="ev_bg_ltap">빈 공간 길게 터치</string>
+<string name="ev_swipe_r">왼쪽으로 스와이프</string>
+<string name="ev_swipe_l">오른쪽으로 스와이프</string>
+<string name="ev_swipe_u">위쪽으로 스와이프</string>
+<string name="ev_swipe_d">아래쪽으로 스와이프</string>
+<string name="ev_swipe2_r">(두 손가락) 왼쪽으로 스와이프</string>
+<string name="ev_swipe2_l">(두 손가락) 오른쪽으로 스와이프</string>
+<string name="ev_swipe2_u">(두 손가락) 위쪽으로 스와이프</string>
+<string name="ev_swipe2_d">(두 손가락) 아래쪽으로 스와이프</string>
+
+<string name="an_u">설정 해제</string>
+<string name="an_n">(잠금) 아무것도 안함</string>
+<string name="an_ad">앱 목록 열기</string>
+<string name="an_zfs">풀 스케일 줌</string>
+<string name="an_z100">100p 줌</string>
+<string name="an_zt">풀 스케일/100p 줌 토글</string>
+<string name="an_pd">이전 화면</string>
+<string name="an_nd">다음 화면</string>
+<string name="an_el">레이아웃 설정</string>
+<string name="an_ao">아이템 추가</string>
+<string name="an_cl">라이트닝 꾸미기</string>
+<string name="an_cd">현재 홈 화면 설정</string>
+<string name="an_la">앱 실행</string>
+<string name="an_ls">바로가기 실행</string>
+<string name="an_sw">배경화면 선택</string>
+<string name="an_lm">런처 메뉴</string>
+<string name="an_ssb">상태 바 보이기</string>
+<string name="an_smsb">상태바 보이기/숨기기 &amp; 라이트닝 메뉴</string>
+<string name="an_sn">알림 보이기</string>
+<string name="an_s">검색</string>
+<string name="an_i_m">아이템 옮기기</string>
+<string name="an_i_c">아이템 꾸미기</string>
+<string name="an_i_me">아이템 메뉴</string>
+<string name="an_i_l">아이템 실행</string>
+
+<string name="auto_edit_t">자동 편집 모드</string>
+<string name="auto_edit_s">새로운 아이템 추가 시 편집 모드로 자동변경</string>
+<string name="page_anim_t">화면 애니메이션</string>
+
+<string-array name="page_anim_e">
+<item>없음</item>
+<item>페이드</item>
+<item>좌우 슬라이드</item>
+<item>상하 슬라이드</item>
+</string-array>
+
+<string name="keep_in_memory_t">메모리에 상주하도록 합니다</string>
+<string name="keep_in_memory_s">\'홈으로 돌아가기\' 가 빨라지지만 메모리 향상을 위해 권장하지 않습니다</string>
+<string name="tools_pick_shortcut">바로가기 선택</string>
+<string name="tools_pick_widget">위젯 선택</string>
+<string name="new_style">새로운 스타일</string>
+<string name="choose_style_name">새 스타일의 이름 설정</string>
+<string name="delete_style">이 스타일을 삭제할까요?</string>
+<string name="relayout_items">이 스타일이 현재의 것보다 줄이 적습니다. 개체를 재정렬하고 계속할까요?</string>
+<string name="style_saved">스타일 저장 성공함</string>
+<string name="style_loaded">스타일 불러오기 성공함</string>
+<string name="install_widgets">라이트닝 위젯 추가</string>
+<string name="item_settings_icon_copy_failed">아이콘 복사가 실패했습니다 :-(</string>
+<string name="tool_not_available">죄송합니다. 이 도구는 사용 불가능합니다.</string>
+<string name="default_folder_name">폴더</string>
+<string name="app_added" formatted="true">%s 추가됨</string>
+<string name="select_launcher_title">기본 런처 선택</string>
+<string name="extras">기타</string>
+<string name="permission_denied">권한이 거부되었습니다. 전화 바로가기를 원하신다면 LL direct call 플러그인을 설치해 주세요.</string>
+<string name="appearance">외관\n왼쪽으로 스와이프해 변경 사항 미리보기</string>
+<string name="background_t">배경화면</string>
+<string name="background_s">배경화면, 색 투명도, 스크롤 효과 설정</string>
+<string name="grid_t">격자 선</string>
+<string name="grid_s">폭, 색상, 위치</string>
+<string name="folder_look_t">폴더 창</string>
+<string name="folder_look_s">배경화면, 경계선, 애니메이션</string>
+<string name="this_folder_look_t">이 폴더의 창</string>
+<string name="this_folder_look_s">배경화면, 경계선, 애니메이션</string>
+<string name="layout_t">레이아웃</string>
+<string name="layout_s">개체 배치 모드(격자/자유) 선택, 격자 크기</string>
+<string name="zoom_scroll_t">줌, 스크롤 옵션</string>
+<string name="zoom_scroll_s">홈화면에서 어떻게 탐색할것인지 선택</string>
+<string name="folder_feel_t">추가적인 폴더 옵션</string>
+<string name="folder_feel_s">자동으로 닫기</string>
+<string name="this_folder_feel_t">이 폴더</string>
+<string name="pg_misc_t">기타</string>
+<string name="pg_misc_s">방향과 그 밖</string>
+<string name="color_c">색상</string>
+
+<string name="wp_w_t">너비</string>
+<string name="wp_h_t">높이</string>
+<string name="wp_auto">기본으로 설정하려면 0으로 설정하세요</string>
+<string name="wp_scroll_t">배경화면 스크롤</string>
+<string name="wp_scroll_s">성능에 영향을 끼칠수 있습니다</string>
+
+<string name="grid_h_color_t">가로 선 색상</string>
+<string name="grid_h_size_t">가로 선 굵기</string>
+<string name="grid_v_color_t">세로 선 색상</string>
+<string name="grid_v_size_t">세로 선 굵기</string>
+<string name="grid_color_s">없음으로 하려면 투명으로 설정</string>
+<string name="grid_size_s">0으로 설정 시 1픽셀 굵기</string>
+<string name="grid_above">홈 화면 위에 그리기</string>
+<string name="folder_title">제목 옵션</string>
+<string name="display_title">제목 보이기</string>
+<string name="font_color">색상</string>
+<string name="font_size">글꼴 크기</string>
+<string name="folder_anims">애니메이션</string>
+<string name="anim_in">열기</string>
+<string name="anim_out">닫기</string>
+
+<string name="behaviour">행동</string>
+<string name="free_mode_t">자동으로 분리</string>
+<string name="free_mode_s">아이템을 추가시, 격자에서 자동으로 분리하기</string>
+<string name="dual_pos_t">이중 위치</string>
+<string name="dual_pos_s">개체로 하여금 두개의 위치를 갖도록 허용(가로/세로)</string>
+<string name="placement">위치</string>
+<string name="colums">세로 격자</string>
+<string name="rows">가로 격자</string>
+<string name="mode_t">모드</string>
+
+<string-array name="mode_e">
+<item>자동</item>
+<item>고정된 숫자</item>
+<item>고정된 크기</item>
+</string-array>
+
+<string name="number">숫자</string>
+<string name="size">크기</string>
+<string name="col_num_s">페이지당 세로열 갯수</string>
+<string name="col_size_s">세로열 크기</string>
+<string name="row_num_s">페이지당 가로행 갯수</string>
+<string name="row_size_s">가로행 크기</string>
+<string name="scroll_dir_t">스크롤 방향</string>
+
+<string-array name="scroll_dir_e">
+<item>자동</item>
+<item>가로만</item>
+<item>세로만</item>
+<item>둘다</item>
+<item>스크롤 안함</item>
+</string-array>
+
+<string name="overscroll_t">오버스크를 애니메이션</string>
+
+<string-array name="overscroll_e">
+<item>감속</item>
+<item>되튕김</item>
+<item>비활성화</item>
+</string-array>
+
+<string name="snap_to_pages_t">페이지 잡아채기</string>
+<string name="snap_to_pages_s">페이지 경계에서 언제나 스크롤 멈춤</string>
+<string name="fit_item_t">데스크탑을 개체에 맞추기</string>
+<string name="fit_item_s">데스크탑을 개체에 맞춰 줄임</string>
+<string name="no_diagonal_scrolling_t">대각선 스크롤 비활성화</string>
+<string name="no_diagonal_scrolling_s">한번에 한방향으로만 스크롤</string>
+<string name="pinch_zoom_t">핀치 줌 활성화</string>
+<string name="auto_close_t">자동으로 닫기</string>
+<string name="auto_close_s">앱이 실행되면 그 폴더 닫기</string>
+<string name="anim_glitch_fix_t">애니메이션 결함 고치기</string>
+<string name="anim_glitch_fix_s">몇몇 안드로이드 버전에서 보이는 결함을 고치기 위해 1픽셀의 충전재 추가</string>
+<string name="screen_orient_t">홈화면 방향</string>
+
+<string-array name="screen_orient_e">
+<item>자동</item>
+<item>세로</item>
+<item>가로</item>
+<item>시스템 설정</item>
+</string-array>
+
+<string name="hide_statusbar_t">상태바 숨김</string>
+<string name="manage">관리</string>
+<string name="load_style_t">스타일 불러오기</string>
+<string name="load_style_s">현재의 설정을 스타일의 설정으로 교체</string>
+<string name="save_style_t">스타일 저장하기</string>
+<string name="save_style_s">현재 데스크탑과 폴더 설정을 스타일로 저장</string>
+<string name="confirm_reset_page">정말 실행할까요?</string>
+<string name="reset_page_t">이 화면을 초기화하기</string>
+<string name="reset_page_s">모든 개체들을 제거하고 기본 스타일로 되돌아감</string>
+<string name="tab_label">글자</string>
+<string name="tab_icon">아이콘</string>
+<string name="tab_layout">위치</string>
+<string name="tab_box">박스</string>
+<string name="tab_misc">기타</string>
+<string name="l_main">메인</string>
+<string name="l_display">라벨 표시</string>
+<string name="l_custom">라벨 이름 설정</string>
+<string name="l_size">폰트 크기</string>
+<string name="l_type_face">다른 폰트 불러오기..</string>
+<string name="l_style_t">폰트 스타일</string>
+
+<string-array name="l_style_e">
+<item>기본</item>
+<item>굵게</item>
+<item>기울임</item>
+<item>굵고 &amp; 기울임</item>
+</string-array>
+
+<string name="l_num_lines">줄의 최대 갯수</string>
+<string name="l_colors">색상</string>
+<string name="l_color_normal">기본 색상</string>
+<string name="l_color_selected">선택 색상</string>
+<string name="l_color_focused">포커스 색상</string>
+<string name="l_shadow">그림자</string>
+<string name="l_shadow_enable">그림자 활성화</string>
+<string name="l_shadow_radius">반경</string>
+<string name="l_shadow_offset_x">X축 설정</string>
+<string name="l_shadow_offset_y">Y축 설정</string>
+<string name="l_shadow_color">색상</string>
+<string name="i_main">메인</string>
+<string name="i_display">아이콘 표시</string>
+<string name="i_custom">아이콘 선택</string>
+<string name="i_folder_t">폴더 아이콘 스타일</string>
+
+<string-array name="i_folder_e">
+<item>아이콘</item>
+<item>그리드</item>
+<item>스택</item>
+</string-array>
+
+<string name="i_effect">레이어</string>
+<string name="i_e_back">배경 이미지</string>
+<string name="i_e_over">오버레이</string>
+<string name="i_e_mask">마스크</string>
+<string name="i_e_scale">안쪽 배율</string>
+
+<string name="i_smooth">부드러운 아이콘</string>
+<string name="i_scale_t">배율</string>
+<string name="i_scale_s">경고: 큰 배율은 매우 많은 메모리를 필요로 합니다. 주의해 사용해주세요.</string>
+<string name="i_reflect">반사</string>
+<string name="i_reflect_enable">반사 활성화</string>
+<string name="i_reflect_overlap">아이콘과 겹치기</string>
+<string name="i_reflect_size">크기</string>
+<string name="i_reflect_scale">배율</string>
+<string name="la_margin">아이콘과 라벨 사이 간격</string>
+<string name="la_position_t">라벨 위치</string>
+
+<string-array name="la_position_e">
+<item>왼쪽</item>
+<item>위쪽</item>
+<item>오른쪽</item>
+<item>아래쪽</item>
+<item>가운데</item>
+</string-array>
+
+<string name="b_alignh_t">가로 정렬</string>
+
+<string-array name="b_alignh_e">
+<item>왼쪽</item>
+<item>가운데</item>
+<item>오른쪽</item>
+<item>개인 설정</item>
+</string-array>
+
+<string name="b_alignv_t">세로 정렬</string>
+
+<string-array name="b_alignv_e">
+<item>위쪽</item>
+<item>가운데</item>
+<item>아래쪽</item>
+<item>개인 설정</item>
+</string-array>
+
+<string name="b_hint">하나 이상의 영역을 선택한 후\n색상과 크기를 선택하세요.</string>
+<string name="b_size">선택된 영역의 크기 설정</string>
+<string name="b_color_normal">기본 색상</string>
+<string name="b_color_selected">선택 색상</string>
+<string name="b_color_focused">포커스 색상</string>
+<string name="b_color_s">선택된 영역의 색상</string>
+<string name="m_enabled_t">클릭가능</string>
+<string name="m_enabled_s">비활성화된 개체를 선택하기 위해 편집 모드로 진입</string>
+<string name="m_alpha_t">투명도</string>
+<string name="m_alpha_s">성능에 영향을 끼칠 수 있습니다. 0으로 설정시 투명하게 됩니다.</string>
+<string name="m_smooth_transform_t">변환할때 부드럽게</string>
+<string name="m_smooth_transform_s">성능에 영향을 끼칠 수 있습니다.</string>
+
+<string-array name="preview_item_labels">
+<item>기본</item>
+<item>선택</item>
+<item>포커스</item>
+</string-array>
+
+<string name="il_preview">미리보기 모드\n(실제와 다를수도 있습니다)</string>
+<string name="preview_toast">미리보기 모드\n모든 활동은 비활성화되었습니다</string>
+<string name="pick_a_font">TTF파일이나 OTF파일 선택</string>
+<string name="system_font">기본 폰트</string>
+<string name="left">왼쪽</string>
+<string name="top">위쪽</string>
+<string name="right">오른쪽</string>
+<string name="bottom">아래쪽</string>
+<string name="margin">간격</string>
+<string name="border">경계</string>
+<string name="padding">여백</string>
+<string name="content">내용</string>
+<string name="ovr_custom">개인 설정</string>
+
+<string name="pick_t">다음에서 아이콘을 선택하세요</string>
+<string name="pick_file">라이트닝 파일 매니저</string>
+<string name="pick_gallery">다른 파일 매니저</string>
+<string name="pick_icon_pack">호환 가능한 아이콘 팩</string>
+
+<string name="tutorials">튜토리얼</string>
+<string name="donate">기부하기</string>
+<string name="other_apps">다른 앱들</string>
+<string name="tut_intro">소개 영상</string>
+<string name="tut_custo">개체 설정하기</string>
+<string name="tut_free_mode">자유 모드</string>
+<string name="tut_lock">데스크탑 잠금</string>
+<string name="tut_pin">개체 고정</string>
+<string name="tut_scroll">홈 화면과\n탐색</string>
+<string name="dialog_color_picker">색 선택</string>
+
+<string name="shortcut_settings">라이트닝 설정</string>
+<string name="shortcut_actions">라이트닝 활동</string>
+
+<string name="no_backup_archive">복원할 백업 파일이 없습니다</string>
+<string name="backup_in_progress">백업하는중...</string>
+<string name="restore_in_progress">복원하는중...</string>
+<string name="backup_done">백업 저장됨:\n%s</string>
+<string name="backup_error">백업 오류. SD카드에 넉넉한 공간이 있는지 확인하세요</string>
+<string name="restore_error">복원 오류. 백업 파일이 유효한지, 읽기 가능인지 확인하세요</string>
+
+<string name="confirm_delete">정말로 이 홈 화면을 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">초기화</string>
+<string name="bg_sys_wp">시스템 배경</string>
+<string name="bg_sys_wp_select_t">배경 바꾸기</string>
+<string name="bg_sys_wp_select_s">이 시스템 배경은 어플 서랍과 모든 화면에서 사용됩니다.</string>
+<string name="bg_screen_wp">배경화면</string>
+<string name="bg_screen_wp_select_t">배경화면 바꾸기...</string>
+<string name="bg_screen_wp_select_s">이 배경화면은 시스템 배경보다 우선합니다. 각 페이지는 고유의 배경화면을 가질수 있습니다</string>
+<string name="bg_more">더 보기</string>
+<string name="bg_more_color_t">색상</string>
+<string name="bg_more_color_s">배경 색조 설정</string>
+
+
+<!-- added: 91 -->
+<string name="ev_long_tap">길게 터치</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">터치</string>
+<string name="style_s1">기본값</string>
+<string name="style_s2">빽빽하게 (작은 아이콘, 작은 글씨)</string>
+<string name="style_s3">가독성 좋게 (큰 아이콘, 큰 글씨)</string>
+<string name="style_s4">리스트 모드 (좌측에 아이콘)</string>
+<string name="style_s5">리스트 모드 (큰 글씨, 아이콘 없음)</string>
+<string name="style_s6">리스트 모드 (큰 글씨, 큰 아이콘)</string>
+<string name="style_s7">타일배치 (글씨 없음)</string>
+<string name="style_s8">화려한 색깔</string>
+<string name="style_s9">Zune 처럼</string>
+<string name="dialog_help_hint_t">힌트</string>
+<string name="dialog_help_hint_m">도움말을 보려면 길게 터치하세요.</string>
+<string name="dialog_help_hint_dsa">다시 보지 않음</string>
+<string name="m_pin_mode">고정 모드</string>
+<string-array name="m_pin_mode_e">
+<item>고정되지 않음</item>
+<item>가로&amp;세로</item>
+<item>가로</item>
+<item>세로</item>
+</string-array>
+<string name="m_events">이벤트</string>
+<string name="shortcut_screen">라이트닝 홈 화면 북마크</string>
+
+<!-- added: 93 -->
+<string name="llx_t">라이트닝 런처 eXtream</string>
+<string name="llx_s">타협따윈 없다. 극강의 런처.</string>
+<string name="more_apps_t">더 많은 무료 앱</string>
+<string name="more_apps_s">PierroX 제작 (도구, 게임, 재미있는 것)</string>
+<string name="mi_kill">강제종료</string>
+<string name="killed_freed">강제종료됨 (%dM 확보)</string>
+<string name="killed">강제종료됨!</string>
+<string name="configure_pages_t">홈 화면 설정</string>
+<string name="configure_pages_s">재정렬, 삭제, 추가, 기본 홈 화면 설정</string>
+<string name="mi_mode_custom">내 앱 목록</string>
+<string name="mi_mode_by_name">이름순</string>
+<string name="mi_mode_recent_apps">최근 실행됨</string>
+<string name="mi_mode_recently_updated">최근 업데이트됨</string>
+<string name="mi_mode_frequently_used">자주 사용됨</string>
+<string name="mi_mode_running">실행중</string>
+<string name="mi_es_edit_layout">레이아웃 설정</string>
+<string name="mi_es_refresh">새로고침</string>
+<string name="mi_es_settings">설정</string>
+<string name="mi_es_folder_settings">폴더 설정</string>
+<string name="mi_uninstall">삭제</string>
+<string name="my_drawer_title">내 앱 목록</string>
+<string name="my_drawer_message">"내 앱 목록"은 당신으로 하여금 앱 목록을 마음껏 설정할수 있게 해줍니다.\n\n이 모드에서 아이템은 자유로이 배치될 수 있으며 폴더들은 앱들을 정리하는데 쓰일 수 있습니다.\n\n줌 아웃하고 "레이아웃 설정"을 선택해보세요. 당신은 앱들이 왼쪽, 오른쪽, 위쪽, 아래쪽 페이지에도 놓일수 있음을 발견할것입니다. 마음껏 앱들을 배치하세요.</string>
+<string name="empty_folder_x">빈 폴더\n개체를 폴더 안에 넣으려면\n개체를 폴더 위에 끌어다 놓으세요</string>
+<string name="ll_import_title">LL 설정 불러오기</string>
+<string name="ll_import_message">라이트닝 런처가 감지되었습니다.\n\n모든 데이터가 불러오기 됩니다. 이 작업이 끝나면 당신은 안전하게 이전 라이트닝 런처를 제거하고 새로운 라이트닝 런처를 사용할수 있습니다.</string>
+<string name="init_ok">완료됨!</string>
+<string name="init_ko">파일 복사중 오류가 발생했습니다.</string>
+<string name="auto_exit_t">자동으로 닫기</string>
+<string name="auto_exit_s">앱 실행 후 앱 목록을 닫습니다</string>
+<string name="icons_t">아이콘 팩</string>
+<string name="icons_s">아이콘 팩을 적용하거나 기본 아이콘으로 돌아갑니다</string>
+<string name="apply_icon_pack_t">아이콘 팩 적용하기</string>
+<string name="apply_icon_pack_s">ADW 혹은 다른 런처를 위해 만들어진 아이콘 팩과 호환됩니다</string>
+<string name="icon_pack_no_appfilter">이 아이콘 팩은 아이콘/앱 테이블을 포함하지 않습니다</string>
+<string name="revert_custom_icons_t">커스텀 아이콘 복원</string>
+<string name="revert_custom_icons_s">커스텀 아이콘 효과와 내부 배율 포함</string>
+<string name="please_wait">기다려주세요...</string>
+<string name="app_not_valid">이 바로가기는 유효하지 않습니다. 실행할 앱을 선택하시거나 앱스토어에서 설치해주세요</string>
+<string name="app_store">Play 스토어</string>
+
+<!-- added 95 -->
+<string name="dtext">다이나믹 텍스트</string>
+<string name="tab_dt_data">데이터</string>
+<string name="dt_source_t">표시할 텍스트</string>
+<string-array name="dt_source_e">
+<item>읽지않은 SMS 갯수</item>
+<item>읽지않은 GMail 갯수</item>
+<item>부재중 전화 갯수</item>
+<item>날짜와 시간</item>
+<item>저장소</item>
+<item>배터리</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">쉬운 포맷</string>
+<string-array name="dt_date_ef_e">
+<item>날짜</item>
+<item>시간</item>
+<item>날짜와 시간</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>년-월-일</item>
+<item>시간:분:초</item>
+<item>년-월-일 시간:분:초</item>
+</string-array>
+<string name="dt_date_xf_t">전문가 포맷</string>
+<string name="dt_date_xf_s">길게 눌러 수정</string>
+<string name="dt_display_empty_t">비어있을때 표시됨</string>
+<string name="dt_format_error">오류 있음</string>
+<string name="dt_storage_s_t">저장소 선택</string>
+<string-array name="dt_storage_s_e">
+<item>내장</item>
+<item>외장</item>
+</string-array>
+<string name="dt_storage_f_t">표시 포맷</string>
+<string-array name="dt_storage_f_e">
+<item>기본</item>
+<item>짧게</item>
+<item>퍼센트</item>
+<item>바이트</item>
+</string-array>
+<string name="dt_storage_w_t">무엇을 표시할까요</string>
+<string-array name="dt_storage_w_e">
+<item>남은 공간</item>
+<item>사용된 공간</item>
+<item>사용가능</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">투명한 상태바</string>
+<string name="trans_statusbar_s">기기가 이를 지원할때만 사용가능합니다</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">개체 스왑</string>
+<string name="swap_items_s">개체가 겹칠때 스왑 (격자 모드 전용)</string>
+<string name="rearrange_items_t">개체 재배열</string>
+<string name="rearrange_items_s">경고 : 먼저 도움말을 보세요 (길게 누를것)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">백업&amp;복구 아님 템플릿 가져오기</string>
+<string name="an_gh">홈 데스크탑으로 이동</string>
+<string name="an_ghz100">홈 데스크탑으로 이동후 100p로 줌</string>
+<string name="an_sd">이동할 데스크탑 선택</string>
+<string name="an_re">어플 재시작</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">토글할 방향 선택:</string>
+<string-array name="grid_pl_e">
+<item>가로&amp;세로</item>
+<item>세로</item>
+<item>가로</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">이 템플릿 적용</string>
+<string name="apply_tmpl_g">템플릿 적용중...</string>
+<string name="apply_tmpl_e">템플릿을 적용할수 없습니다!</string>
+<string name="tmpl_t">관리</string>
+<string name="tmpl_s">디렉터리를 탐색해 템플릿을 적용하거나 APK로 내보내기</string>
+<string name="tmpl_a_t">템플릿 불러오기</string>
+<string name="tmpl_a_s">설치된 APK에서 불러오기</string>
+<string name="tmpl_b_t">설치된 템플릿 보기</string>
+<string name="tmpl_b_s">새로운 테마 가져오기</string>
+<string name="tmpl_e_t">템플릿 내보내기</string>
+<string name="tmpl_e_s">길게 눌러 튜토리얼 보기</string>
+<string name="tmpl_c">템플릿 선택</string>
+<string name="tmpl_e_m">내보내는중...</string>
+<string name="tmpl_e_d">내보내기 완료</string>
+<string name="tmpl_e_e">내보내기 오류!</string>
+<string name="tmpl_check">템플릿 여는중...</string>
+<string name="tmpl_check_e">템플릿을 읽을 수 없습니다!</string>
+<string name="tmpl_check_ut">업데이트 필요</string>
+<string name="tmpl_check_um">이 템플릿은 더 높은 버전의 라이트닝 런처를 위해 디자인되었습니다. 지금 라이트닝 런처를 업데이트 하시겠습니까?</string>
+<string name="tmpl_get_llx">라이트닝 런처 eXtream 설치하기</string>
+<string name="tmpl_warn_t">경고</string>
+<string name="tmpl_warn_c">무시하고 진행</string>
+<string name="tmpl_warn_m">이 템플릿이 적용될 준비가 되었지만 몇가지 오류가 발견되었습니다: </string>
+<string name="tmpl_warn_llx">- 이 템플릿은 라이트닝 런처 eXtream을 위해 디자인되었습니다. 이 버전에서 사용할수 없는 기능을 템플릿이 사용할수도 있습니다.</string>
+<string name="tmpl_warn_screen">- 이 템플릿은 당신의 화면 설정과 일치하지 않습니다. 몇몇 개체가 제대로 표시되지 않을수도 있습니다.</string>
+<string name="tmpl_warn_widget">- 당신의 기기가 위젯을 자동으로 복구할수 없습니다. 직접 수동으로 복구하셔야 합니다.</string>
+<string name="widget_e">위젯을 불러오는걸 실패하였습니다.\n터치해서 다른걸 선택하세요.</string>
+<string name="tmpl_s_p">내보낼 데스크탑 선택</string>
+<string name="an_ctf">가장 높은 폴더 닫기</string>
+<string name="an_caf">모든 폴더 닫기</string>
+<string name="ev_screen_on">화면 켜기</string>
+<string name="ev_screen_off">화면 끄기</string>
+<string name="an_sa">앱 검색</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">고정된 개체를 수정 모드에서 강조하기</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">정지 지점</string>
+<string name="sp_b">행동</string>
+<string name="sp_ss">스크롤 정지</string>
+<string name="sp_sd">끌어오기 정지</string>
+<string name="sp_ba">장벽</string>
+<string name="sp_dw">데스크탑 너비</string>
+<string name="sp_n">스내핑</string>
+<string name="sp_d">방향</string>
+<string name="sp_dlr">왼쪽에서 오른쪽으로</string>
+<string name="sp_drl">오른쪽에서 왼쪽으로</string>
+<string name="sp_dtb">위쪽에서 아래쪽으로</string>
+<string name="sp_dbt">아래쪽에서 위쪽으로</string>
+<string name="assp_t">항상 정지 지점 표시</string>
+<string name="assp_s">정지 지점이 일반 모드에서도 보여집니다</string>
+<string name="gc_edit">레이아웃 편집기</string>
+
+<!-- added 116 -->
+<string name="backup_d">백업</string>
+<string name="an_of">폴더 열기</string>
+<string name="sf">폴더 선택</string>
+<string name="br_n">이름 백업</string>
+<string name="br_a">행동 선택</string>
+<string name="br_r">이름 바꾸기</string>
+<string name="br_d">삭제</string>
+<string name="br_s">보내기</string>
+<string name="br_dc">이 압축파일을 삭제할까요?</string>
+<string name="br_rc">이 압축파일을 복구할까요?</string>
+<string name="dt_gml_t">GMail 라벨</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">데스크탑으로 복사...</string>
+<string name="f_p">위치</string>
+<string name="f_ac">개인 정렬을 사용할때</string>
+<string name="f_l">왼쪽</string>
+<string name="f_t">위쪽</string>
+<string name="f_af">페이드 인/아웃</string>
+<string name="sp_e">가장자리 맞추기</string>
+<string name="sp_el">왼쪽</string>
+<string name="sp_er">오른쪽</string>
+<string name="sp_et">위쪽</string>
+<string name="sp_eb">아래쪽</string>
+
+<!-- added 119 -->
+<string name="np">뒷배경 이미지</string>
+<string name="np_d">길게 눌러 도움말 읽기</string>
+<string name="np_n">기본 배경</string>
+<string name="np_s">선택 배경</string>
+<string name="np_f">포커스 배경</string>
+<string name="np_r">배경 이미지</string>
+<string-array name="anim2_e">
+<item>없음</item>
+<item>열기/닫기</item>
+<item>오른쪽으로 슬라이드</item>
+<item>왼쪽으로 슬라이드</item>
+<item>아래쪽으로 슬라이드</item>
+<item>위쪽으로 슬라이드</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">세로로 변경</string>
+<string name="ev_ol">가로로 변경</string>
+<string name="an_gdp">특정 데스크탑&amp;방향으로 이동</string>
+<string name="cof_t">다른 폴더 닫기</string>
+<string name="cof_s">한번에 한 폴더만 열기</string>
+
+<!-- added 123 -->
+<string name="t_nb">투명한 소프트키</string>
+<string name="gb_l">왼쪽</string>
+<string name="gb_t">위쪽</string>
+<string name="gb_w">너비 </string>
+<string name="gb_h">높이</string>
+<string name="gb_a">각도</string>
+<string name="gb_sx">X 배율</string>
+<string name="gb_sy">Y 배율</string>
+<string name="gb_kx">X 왜곡</string>
+<string name="gb_ky">Y 왜곡</string>
+<string name="mi_geometry">기하학 편집기</string>
+
+<!-- added 134 -->
+<string name="efolder">패널</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">패널 내용 수정</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">그리드에서 분리</string>
+<string name="mi_lmf">그리드에 고정</string>
+<string name="mi_mop">패널 밖으로 이동</string>
+
+<!-- added 137 -->
+<string name="container">패널 크기</string>
+<string name="uds_t">데스크탑 크기 사용</string>
+<string name="uds_s">셀의 크기를 계산하는데 패널 크기가 아닌 데스크탑 크기를 사용</string>
+<string name="mi_l">잠금</string>
+<string name="mi_ul">잠금해제</string>
+
+<!-- added 141 -->
+<string name="ev_menul">메뉴키 (길게)</string>
+<string name="ev_back">뒤로가기 키</string>
+<string name="ev_backl">뒤로가기키 (길게)</string>
+
+<!-- added 149 -->
+<string name="mi_i">아이템..</string>
+<string name="mi_ic">간결하게</string>
+<string name="mi_isa">A-Z 순으로 정렬</string>
+<string name="mi_isd">Z-A 순으로 정렬</string>
+
+<!-- added 151 -->
+<string name="an_us">잠금 해제</string>
+<string name="nly">잠금되지 않음</string>
+<string name="s_ls_t">잠금 화면</string>
+<string name="s_ls_s">데스크탑 선택시 락스크린이 보입니다. 길게 눌러 튜토리얼 보기</string>
+<string name="s_ls_s_t">잠금화면 선택 또는 비활성화</string>
+<string name="s_ls_s_s">데스크탑 선택, 선택 후 취소하여 비활성화 하기</string>
+<string name="s_ls_s_c">잠금화면이 비활성화되었습니다.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">Unlocker 플러그인이 설치되지 않았습니다. 눌러서 설치하세요.</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">잠그기 전에 이 홈 화면이 Unlocker 혹은 '화면 잠금 해제'로 안전하게 잠금 해제될 수 있는지 확인하세요</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">선택 효과</string>
+<string-array name="m_sel_e_e">
+<item>없음</item>
+<item>홀로</item>
+<item>매터리얼</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">정지 지점이 '페이지로 스냅' 옵션과 충돌하였습니다. 이 옵션은 자동으로 꺼졌습니다.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">화면 회전</string>
+<string name="i_rot_s">화면과 같이 아이템 회전</string>
+
+<!-- added 164 -->
+<string name="sc_name">이름</string>
+<string name="sc_new">신규</string>
+<string name="sc_delete">제거</string>
+<string name="sc_edit">수정..</string>
+<string name="sc_help">도움말</string>
+<string name="sc_deleted">알 수 없거나 제거된 스크립트입니다. 새로운 파일이 생성되었습니다.</string>
+<string name="sc_untitled">이름 없는 스크립트</string>
+<string name="sc_dn_t">스크립트 이름</string>
+<string name="sc_dd_t">확인해주세요</string>
+<string name="sc_dd_m">이 스크립트는 사용되는 중일수 있습니다. 이것을 진짜 제거하시겠습니까?</string>
+<string name="sc_dc_t">구문 확인 결과</string>
+<string name="sc_dc_ok">이 구문은 확인되었습니다.</string>
+<string name="an_rs">스크립트 실행</string>
+<string name="sc_view">스크립트 보기</string>
+<string name="sc_disable">비활성화</string>
+<string name="sc_editor">스크립트 에디터</string>
+<string name="ev_pos">위치가 수정되었습니다.</string>
+<string name="sp_re">이벤트가 수행됨</string>
+<string name="ev_load">로드</string>
+<string name="an_b">뒤로 가기</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">템플릿</string>
+<string name="br_ob">백업 덮어쓰기</string>
+<string name="br_ot">템플릿 덮어쓰기</string>
+<string name="sc_ma">카테고리</string>
+<string name="sc_ml">라이트닝 메뉴</string>
+<string name="sc_mi">아이템 메뉴</string>
+<string name="sc_mc">커스텀 메뉴</string>
+<string name="mi_s">스크립트...</string>
+<string name="an_cm">커스텀 스크립트 메뉴</string>
+<string name="tmpl_r">교환 : 모든 설정을 모두 교환하기</string>
+<string name="tmpl_m">합치기: 현재 설정을 유지하고 템플릿을 새로운 홈 화면에 적용</string>
+<string name="tmpl_u">업데이트: 데스크탑, 아이템을 유지후 스타일만 템플릿에서 가져옵니다.</string>
+<string name="tmpl_b">백업을 먼저 만드세요</string>
+<string name="apply_tmpl_m">\'%s\'를 적용하려고 합니다.</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Unlock 실행</string>
+<string name="s_ls_lu_s">잠금 화면에서 실행된 앱은 자동으로 잠금 해제되며 실행됩니다</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">배경화면 로드</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">스크롤 제한 제거</string>
+<string name="no_lim_s">이 홈 화면은 한계를 넘어 스크롤 가능해집니다</string>
+
+<!-- added 175 -->
+<string name="mi_h">계층</string>
+<string name="mi_if">아이템 정보</string>
+
+<!-- added 176 -->
+<string name="in_s">이름으로 아이템 확인하기</string>
+<string name="mi_b">뒤로</string>
+<string name="mi_im">아이템 메뉴</string>
+
+<!-- added 178 -->
+<string name="em_t">전문가 모드</string>
+<string name="em_s">고급 옵션을 보임으로서 라이트닝 런처의 진정한 힘을 확인하기</string>
+<string name="bm_c">색상</string>
+<string name="bm_bg">배경 색상</string>
+<string name="bm_prev">미리보기</string>
+<string name="rs_t">스크립트 실행</string>
+<string name="rs_s">스크립트 실행 허용</string>
+<string name="rs_w">경고 : 스크립트 실행은 현재 설정에서 비활성화 되어있습니다.</string>
+<string name="h_ad">당신의 앱들은 여기 있습니다.\n당신은 여기서 앱을 실행할 수 있으며 앱들을 길게 눌러 '런처에 추가'를 누름으로서 홈 화면에 앱을 추가할 수 있습니다.\n\n탭 하여 더 자세히 알아보세요. </string>
+<string name="h_f">당신은 이제 막 폴더를 추가했습니다. 폴더는 앱, 위젯, 다른 폴더들을 포함할 수 있습니다.\n\n다른 아이템들을 폴더 위로 드래그한 후 조금 기다려서 애니메이션이 다 끝나 이동이 확정되길 기다리세요. 그 다음 아이템을 놓으면 아이템이 폴더 안으로 들어갈겁니다.\n\n탭 하여 폴더에 대해 더 자세히 알아보세요.</string>
+<string name="h_p">당신의 첫번째 패널이 여기있습니다.\n패널은 폴더처럼 작동합니다. 아이템을 드래그하고 애니메이션이 끝날때까지 조금 기다려 이동이 확정되기까지 기다린 다음에 아이템을 놓으면 됩니다.\n\n탭 하여 패널에 대해 더 자세히 알아보세요</string>
+<string name="h_t">힌트</string>
+<string name="h_k">이것은 당신의 홈 화면입니다. 길게 눌러 앱, 위젯, 폴더같은 아이템들을 추가할 수 있으며 또한 설정에 진입할 수 있습니다.\n\n페이지들은 당신이 아이템을 상하좌우로 옮겨 그 위에 아이템을 놓을때 생깁니다.\n\n탭 하여 라이트닝 런처의 컨셉에 대해 더 자세히 알아보세요.</string>
+<string name="tut_concepts">먼저 읽어주세요!</string>
+<string name="tut_wiki">위키</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">바로가기 선택</string>
+<string name="ev_paused">일시정지됨</string>
+<string name="ev_resumed">복귀됨</string>
+<string name="ad_ab_c_t">액션 바</string>
+<string name="ad_ab_b">배경 이미지</string>
+<string name="ad_ab_h">액션 바 숨기기</string>
+
+<!-- added 189 -->
+<string name="hw_t">OK Google</string>
+<string name="hw_s">기기에 대고 말하세요</string>
+<string name="ad_ab_ss">스크롤 할때 액션바 보이기</string>
+
+<!-- added 191 -->
+<string name="ip">이미지 선택</string>
+<string name="ip_none">이미지 삭제</string>
+<string name="ip_camera">카메라</string>
+<string name="ip_ext_file">외부 파일 탐색기</string>
+<string name="ip_bgcolor">배경 색상</string>
+<string name="delete_file">이 파일을 지울까요?</string>
+
+<string-array name="ip_s">
+<item>아이콘 팩</item>
+<item>파일</item>
+<item>앱</item>
+<item>런처 이미지</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">터치</string>
+
+<!-- added 200 -->
+<string name="sc_data">스크립트 정보</string>
+<string name="sc_send">보내기</string>
+<string name="mi_ls">스크립트 불러오기</string>
+<string name="ls_ok">스크립트가 성공적으로 불러와졌습니다</string>
+<string name="ls_ko">스크립트를 불러올 수 없습니다</string>
+<string name="ls_b">앱 스토어 탐색하기</string>
+<string name="ur">복구 불가능한 오류</string>
+
+<!-- added 201 -->
+<string name="in_t">이름 설정하기</string>
+
+<!-- added 208 -->
+<string name="wrap_s">가장자리에 도달했을때 마치 구체처럼 반대쪽 끝에 있는 아이템이 보여집니다</string>
+<string name="i_cf_t">색상 설정</string>
+<string name="i_cf_s">알파로 포화도를 조절하세요</string>
+<string name="sbo_t">상태바와 오버랩</string>
+<string name="nbo_t">소프트키와 오버랩</string>
+<string name="sb_t">시스템 바</string>
+<string name="sb_s">상태바와 소프트키의 투명도 등의 조절</string>
+<string name="sbc_t">상태바 투명도 색상</string>
+<string name="nbc_t">소프트키 투명도 색상</string>
+<string name="sb_c">상태바</string>
+<string name="nb_c">소프트키</string>
+<string name="mi_app_store">Play 스토어</string>
+
+<!-- added 217 -->
+<string name="an_um">사용자 메뉴</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">설정 화면 스타일</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>밝게</item>
+<item>어둡게</item>
+</string-array>
+<string name="i_rm_t">머테리얼 효과 마스크</string>
+<string name="i_rm_s">아이템 가장자리의 간격을 제한합니다</string>
+<string name="icon_font">아이콘 폰트</string>
+<string name="um_t">테마</string>
+<string name="pi">페이지 표시기</string>
+<string name="tab_page_indicator">페이지 표시기</string>
+<string name="pi_style">스타일</string>
+<string-array name="pi_style_e">
+<item>점</item>
+<item>가로선</item>
+<item>세로선</item>
+<item>미니맵</item>
+<item>본문</item>
+</string-array>
+<string name="pi_rf_t">글자 형식</string>
+<string name="pi_dmx_t">가로 간격</string>
+<string name="pi_dmy_t">세로 간격</string>
+<string name="pi_dmor">외부 반경</string>
+<string name="pi_dmoc">외부 색상</string>
+<string name="pi_dmow">외부 너비</string>
+<string name="pi_dmir">내부 반경</string>
+<string name="pi_dmic">내부 색상</string>
+<string name="pi_mosc">미니맵 경계 색상</string>
+<string name="pi_mosw">미니맵 경계 너비</string>
+<string name="pi_mofc">미니맵 배경 색상</string>
+<string name="pi_misc">화면 경게 색상</string>
+<string name="pi_misw">화면 경계 너비</string>
+<string name="pi_mifc">화면 배경 색상</string>
+<string name="pi_lbc">배경 색상</string>
+<string name="pi_lbw">배경 너비</string>
+<string name="pi_lfc">커서 색상</string>
+<string name="pi_lfw">커서 너비</string>
+<string name="pi_lg">중력</string>
+<string-array name="pi_lg_e">
+<item>가운데</item>
+<item>오른쪽 혹은 아래쪽</item>
+<item>왼쪽 혹은 위쪽</item>
+</string-array>
+<string name="ac_s">아이콘과 텍스트</string>
+<string name="ac_c">콘테이너</string>
+<string name="ac_d">다이나믹 콘텐츠</string>
+<string name="ac_m">추가</string>
+<string name="ai_t">텍스츠</string>
+<string name="ai_i">아이콘</string>
+<string name="ai_sb">사이드 바</string>
+<string name="ai_b">배지</string>
+<string name="ac_n">탐색</string>
+<string name="ai_bo">북마크</string>
+<string name="ai_d">빈 아이템</string>
+<string name="h_sb">사이드 바는 설정 가능한 폴더입니다. 아이템을 사이드 바에 끌어 넣을 수 있습니다. 아이콘을 탭하여 사이드바를 끄고 켜거나 제스쳐를 설정하거나 기타 이벤트를 설정 가능합니다. 창 정렬을 변경해 다른 쪽에 고정할 수도 있습니다.</string>
+<string name="mi_exel">편집 모드 나가기</string>
+<string name="h_pi">A page indicator displays the current page position in the desktop. By default this is item pinned and not clickable. Enter the edit layout mode first to change its style, color, etc.</string>
+<string name="h_sp">A stop point is a tool to create custom scrolling scheme: the desktop will stop scrolling at stop points. Long tap on a stop point to edit its properties. Stop points are only visible in edit mode.</string>
+<string name="h_b">A bookmark saves the current position and scale of your desktop. Once the bookmark has been created you can move it anywhere else, tapping on it will automatically bring you back to the memorized desktop position. It works inside panels and folders too!</string>
+<string name="sc_h">Swipe from the left edge to reveal the drawer</string>
+<string name="sc_a">Actions</string>
+<string name="sc_o">Options</string>
+<string name="sc_w">Word wrap</string>
+<string name="wrapx_t">Seamless mode X</string>
+<string name="wrapy_t">Seamless mode Y</string>
+<string name="h_w">The seamless mode is automatically disabled in edit mode, otherwise empty pages wouldn\'t be reachable. Be aware that some items may then suddenly disappear when entering edit mode: they are just displayed at their original position in the desktop instead of being "wrapped".\nSeamless mode is enabled again when exiting edit mode.</string>
+<string name="ad_bc">Selected:</string>
+<string name="an_wt">Wallpaper tap</string>
+<string name="an_wst">Wallpaper secondary tap</string>
+<string name="ds_sh">Start here</string>
+<string name="ds_uc">User community</string>
+<string name="ds_tt">Tips &amp; tricks</string>
+<string name="ds_br">Backup &amp; Restore</string>
+<string name="ds_hn">Hint: in order to create a new page, simply add or drag some item on it.\nThis works for pages above and below too, try it!\n\n(you can safely delete this hint)</string>
+<string name="ds_um">Hint: use one or two fingers swipe up to reveal the user menu (you can customize it), long tap somewhere to display a contextual menu.\n\n(you can safely delete this hint)</string>
+<string name="ds_z">Zoom</string>
+<string name="sc_import">Import…</string>
+<string name="sc_si_t">The Script Importer is not installed</string>
+<string name="sc_si_m">Would you like to install it from the Play Store?</string>
+<string name="adm_t">Categories</string>
+<string name="adm_s">Select visible app drawer categories</string>
+<string name="adm_z">At least one category need to be selected…</string>
+
+<!-- added 224 -->
+<string name="tr_fl_t">Please unlock Lightning to use this feature</string>
+<string name="tr_fl_m">Upgrade to the Full Lightning version to benefit from more features:\n\n- Advanced app drawer (folders, action bar, categories).\n- Add, remove, rearrange desktops at will.\n- Per desktop wallpaper.\n- Unread count, badges and dynamic text.\n- Customizable lock screen.\n- Integrated app killer.\n\nIf you already unlocked Lightning in the past, please select "OK" to re-activate this version.</string>
+<string name="tr_pw">Please wait…</string>
+<string name="tr_ty">Thank you for supporting Lightning!</string>
+<string name="tr_eu">Sorry, an error occurred…</string>
+<string name="tr_c">Canceled</string>
+<string name="tr_br_s">This feature is not available in the trial version</string>
+<string name="tr_rs_t">Unleash Lightning</string>
+<string name="tr_rs_s">Upgrade to get the most out of Lightning</string>
+<string name="tr_w">Thank you for testing Lightning!\n\nThe app will run in trial mode for 7 days: all features are enabled and can be used without restriction during this period. After the trial period, the app will still be usable but editing will not be enabled anymore.\n\nIf you like this app and wish to support it, please consider purchasing the key to unlock it.\n\nThank you!</string>
+<string name="tr_ut">About Lightning</string>
+<string name="tr_um">You are a long time user of the free version of Lighting Launcher, thank you.\n\nAlthough this version has been replaced with a trial version, you will still benefit from all previously existing features for free, as well as most improvements made in the full app since the last update.\n\nIf you wish to support this app, please consider purchasing the unlock key at a discounted loyalty price.\n\nThanks!</string>
+<string name="tr_l">%d days left for the trial</string>
+<string name="tr_rm">Lightning need your feedback!\n\nWould you like to take a few seconds to rate this app on the Play Store?\n</string>
+<string name="ds_hls">This is a sample lock screen that you can customize at will.\nAdd apps or widgets then activate it through the lock screen settings (tap here).</string>
+<string name="ic">Image cropper</string>
+<string name="bg_st">Position</string>
+<string-array name="bg_st_e">
+<item>Center, unscaled</item>
+<item>Fit width and height</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Crop rectangle</string>
+<string name="ip_solid">Solid color</string>
+<string name="ip_search">Search…</string>
+<string name="sst">Select a script</string>
+<string name="ips_t">Image pool size</string>
+<string name="ips_s">Please read the documentation before to change this value</string>
+
+<!-- added 231 -->
+<string name="v_m">Visibility…</string>
+<string name="v_a">All</string>
+<string name="v_ov">Only visible</string>
+<string name="v_oh">Only hidden</string>
+<string name="ad_ab_tc">Text color</string>
+
+<!-- added 233 -->
+<string name="cv">Custom view</string>
+<string name="h_cv">Custom views are designed for advanced use cases. It enables Android view creation through scripting and as a consequence it requires advanced scripting and Android knowledge.</string>
+<string name="cv_c">Create script</string>
+<string name="cv_d">Destroy script</string>
+<string name="eb_u">Undo</string>
+<string name="eb_r">Redo</string>
+<string name="eb_bh">Hide edit bars</string>
+<string name="eb_bs">Show edit bars</string>
+<string name="eb_pr">Duplicate</string>
+<string name="eb_ms">Multi selection</string>
+<string name="eb_snap">Snap</string>
+<string name="eb_prop">Properties</string>
+<string name="ds">Desktop settings</string>
+<string name="ads">App drawer settings</string>
+<string name="cdi">One or more widget will be deleted. Widget deletion cannot be fully undone and you may have to recreate the widget content. Do you wish to continue?</string>
+<string name="st_c">Copy the style</string>
+<string name="st_p">Paste the style</string>
+<string name="st_d">Style copied, now use \'Paste the style\' to replicate it.</string>
+<string name="mi_actions">Actions…</string>
+<string name="nois">No option</string>
+<string name="lightning">Lightning</string>
+<string name="folder">Folder</string>
+<string name="tg">Run in:</string>
+<string name="tg_d">Desktop</string>
+<string name="tg_ad">App Drawer</string>
+<string name="tg_ls">Lock screen</string>
+<string name="tg_bg">Background</string>
+<string name="tss">Lightning Script</string>
+<string name="mi_nos">No script</string>
+<string name="mi_nos1">I think I already told you there were no script ;-)</string>
+<string name="mi_nos2">Please do not insist, there is no script here.</string>
+<string name="mi_nos3">Hey! Can\'t you read?</string>
+<string name="mi_nos4">Well, that\'s enough, please stop. Otherwise I\'ll have to create a script.</string>
+<string name="mi_nos5">OK, if this is the only way to be in peace, let\'s go, I will now create a script…</string>
+<string name="mi_nost">Make me turn</string>
+<string name="sm_f">Move to first</string>
+<string name="sm_p">Move previous</string>
+<string name="sm_d">Delete</string>
+<string name="sm_h">Set as home desktop</string>
+<string name="sm_a">New</string>
+<string name="sm_c">Duplicate</string>
+<string name="sm_n">Move next</string>
+<string name="sm_l">Move to last</string>
+<string name="sm_cn">Copy of</string>
+<string name="sm_an">New desktop</string>
+<string name="ip_bic">Broken icon pack</string>
+<string name="ip_e">No icon to display</string>
+<string name="cv_dfl">No custom view.\nTap to try again.</string>
+<string name="ad_mdh">Switching to \'My Drawer\' view for customization</string>
+<string name="tab_bind">Bindings</string>
+<string name="bd_a">Add binding…</string>
+<string name="bd_p">Property</string>
+<string name="bd_v">Value</string>
+<string name="pg">Position on the grid</string>
+<string name="pf">Position detached from the grid</string>
+<string name="pd">Dummy</string>
+<string name="pv">Visibility</string>
+<string name="pe">Enabled</string>
+<string name="pl">Label</string>
+<string name="pit">Item properties</string>
+<string name="bd_s">Select…</string>
+<string name="bvc_dt">Date &amp; Time</string>
+<string name="bv_pick">Pick an existing variable</string>
+<string name="bv_sec">Second</string>
+<string name="bv_min">Minute</string>
+<string name="bv_h24">Hour (24)</string>
+<string name="bv_h12">Hour (12)</string>
+<string name="bv_ampm">AM/PM</string>
+<string name="bv_day">Day</string>
+<string name="bv_mon">Month</string>
+<string name="bv_week">Week</string>
+<string name="bv_year">Year</string>
+<string name="bv_dayn">Day name</string>
+<string name="bv_monn">Month name</string>
+<string name="bvc_bat">Battery</string>
+<string name="bv_batl">Level</string>
+<string name="bv_batst">Status</string>
+<string name="bv_batv">Voltage</string>
+<string name="bv_batp">Plugged</string>
+<string name="bvc_stor">Storage</string>
+<string name="bv_ith">Internal Total</string>
+<string name="bv_ifh">Internal Free</string>
+<string name="bv_eth">External Total</string>
+<string name="bv_efh">External Free</string>
+<string name="bv_it">Internal Total (numeric)</string>
+<string name="bv_if">Internal Free (numeric)</string>
+<string name="bv_et">External Total (numeric)</string>
+<string name="bv_ef">External Free (numeric)</string>
+<string name="bvc_cpu">CPU</string>
+<string name="bv_cu">Usage</string>
+<string name="bv_cr">User</string>
+<string name="bv_cn">Nice</string>
+<string name="bv_cs">System</string>
+<string name="bv_ci">Idle</string>
+<string name="bv_co">I/O</string>
+<string name="bv_cq">Irq</string>
+<string name="bv_cf">Softirq</string>
+<string name="bvc_screen">Screen</string>
+<string name="bv_o">Orientation</string>
+<string name="v_o">Other</string>
+<string name="an_sv">Set a variable</string>
+<string name="sv_n">Variable name (without $)</string>
+<string name="tsv">Lightning Variable</string>
+<string name="bv_ts">Timestamp</string>
+<string name="eb_sh">Show hidden items</string>
+<string name="pz">Z-Index</string>
+<string name="pb">Box</string>
+
+<string name="ov_t">Floating desktop</string>
+<string name="ov_s">Display a desktop above other apps</string>
+<string name="ov_st">Select or disable the floating desktop</string>
+<string name="ov_ss">Select a desktop, tap and cancel to disable it</string>
+<string name="ov_dht">Display handles</string>
+<string name="ov_dhs">For debug purpose only (green: show, red: hide)</string>
+<string name="ov_lht">Hide when launching</string>
+<string name="ov_lhs">The floating desktop is hidden when launching an app</string>
+<string name="ov_d">The floating desktop has been disabled</string>
+<string name="an_so">Show the floating desktop</string>
+<string name="an_ho">Hide the floating desktop</string>
+<string name="ov_shp">Swipe to open position</string>
+<string name="ov_shs">Swipe to open size</string>
+<string name="ov_hhp">Swipe to close position</string>
+<string name="ov_hhs">Swipe to close size</string>
+<string-array name="ov_hp_e">
+<item>Left edge, top</item>
+<item>Left edge, middle</item>
+<item>Left edge, bottom</item>
+<item>Right edge, top</item>
+<item>Right edge, middle</item>
+<item>Right edge, bottom</item>
+<item>Top edge, left</item>
+<item>Top edge, center</item>
+<item>Top edge, right</item>
+<item>Bottom edge, left</item>
+<item>Bottom edge, center</item>
+<item>Bottom edge, right</item>
+</string-array>
+<string name="f_afo">Automatically find the folder origin</string>
+<string name="f_afos">Changes will take effect on next load</string>
+<string name="ov_hhw">Swipe to close width</string>
+<string name="ov_shw">Swipe to open width</string>
+
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>아무것도 안함</item>
+<item>앱 목록 열기</item>
+<item>풀 스케일 줌</item>
+<item>100p 줌</item>
+<item>풀 스케일/100p 줌 토글</item>
+<item>이전 화면</item>
+<item>다음 화면</item>
+<item>레이아웃 변경</item>
+<item>오브젝트 추가</item>
+<item>Lightning 꾸미기</item>
+<item>현재 폴더나 화면 꾸미기</item>
+<item>앱 실행</item>
+<item>바로가기 실행</item>
+<item>배경화면 선택</item>
+<item>런처 메뉴</item>
+<item>상태 바 보이기</item>
+<item>앱 메뉴 &amp; 상태 바 보이기/숨기기</item>
+<item>알림 보이기</item>
+<item>검색</item>
+<item>아이템 옮기기</item>
+<item>아이템 꾸미기</item>
+<item>아이템 메뉴</item>
+<item>아이템 실행</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">자동 스크롤 멈춤 사용</string>
+<string name="auto_stop_s">데스크탑 경계에서 자동으로 스크롤 멈춤</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">복원할 백업 압축파일을 선택</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>없음</item>
+<item>열기/닫기</item>
+<item>페이드 인/아웃</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">스케일/회전 리셋</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">수정 모드에서 손가락 하나로 스크롤</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">가로/세로 토글</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">스크롤 속도</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">백업 후 적용</string>
+<string name="apply_tmpl_n">적용</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">기본 아이콘</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Transparent bars and content overlap</string>
+<string name="ad_ab_c_s">Background image, visibility</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Seamless mode</string>
+
+<!-- deprecated: beyond -->
+<string name="ip_blank">Blank image</string>
+<string name="min_ram_t">램 사용 최소화</string>
+<string name="min_ram_s">앱 재시작 후 적용됩니다. 속도보다 램 효율성을 우선합니다.</string>
+<string name="mi_es_show_hidden">숨긴 앱 보기</string>
+<string name="mi_es_hide_hidden">숨긴 앱 숨기기</string>
+<string name="mi_zorder">앞으로/뒤로 이동</string>
+<string name="snap_t">잡아채기</string>
+<string-array name="snap_e">
+<item>없음</item>
+<item>가운데</item>
+<item>가장자리</item>
+<item>가운데&amp;가장자리</item>
+</string-array>
+<string name="copy_style_toast">스타일을 복사할 아이템 선택</string>
+<string name="copy_style_cancel">스타일 복사 취소</string>
+<string name="copy_style_done">스타일 복사 완료</string>
+<string name="mi_edit_copy_style">스타일 복사</string>
+<string name="mi_app">앱…</string>
+<string name="mi_fo">홀더 옵션</string>
+<string name="items_t">개체</string>
+<string name="items_s">기본 폰트, 색, 아이콘, 가장자리 등 설정</string>
+<string name="mi_es_add_folder">폴더 추가</string>
+<string name="mi_es_add_pi">Add page indicator</string>
+<string name="gc_hpie_s">길게 눌러 설명 보기</string>
+<string name="tut_basic_editing">첫번째 단계</string>
+<string name="hide_statusbar_s">메뉴키를 누르면 보임</string>
+
+<!-- Do not translate -->
+<string name="app_name">라이트닝 런처</string>
+<string name="default_pack_name">English</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

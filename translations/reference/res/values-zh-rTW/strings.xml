@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">閃電桌面－繁體中文(台灣)</string>
+<string name="pack_name_short">繁體中文(台灣)</string>
+<string name="tranlator_name">EricLiu</string>
+
+<string name="description">閃電桌面是最輕量，快速且自訂性高的桌面！</string>
+
+
+<string name="start_activity_error">此應用程式無法啟動</string>
+<string name="menu_add">添加物件…</string>
+<string name="menu_settings">系統設定</string>
+<string name="menu_customize">桌面設定</string>
+<string name="menu_customize_folder">資料夾設定</string>
+<string name="menu_objects_layout">編輯佈局</string>
+<string name="dialog_action_title">添加物件…</string>
+
+<string-array name="dialog_action_values">
+<item>應用程式</item>
+<item>快捷方式</item>
+<item>應用程式Widget</item>
+<item>閃電桌面Widget</item>
+<item>資料夾</item>
+<item>滾屏停止點</item>
+</string-array>
+
+<string name="mi_remove">移除</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">自定義物件…</string>
+<string name="mi_move_to_screen">移動到桌面</string>
+<string name="mi_edit_icon">選擇圖標</string>
+<string name="mi_edit_label">Edit label</string>
+<string name="mi_edit_copy_style">複製樣式</string>
+<string name="mi_pick_app">選擇程式</string>
+<string name="mi_pick_widget">選擇另外一個widget</string>
+<string name="mi_edit_more">更多…</string>
+<string name="mi_position">位置</string>
+<string name="mi_pin">鎖定</string>
+<string name="mi_unpin">解除鎖定</string>
+<string name="mi_add_to_launcher">添加到主畫面</string>
+<string name="mi_hide_unhide">隱藏／解除隱藏</string>
+<string name="mi_app_details">應用詳情</string>
+<string name="mi_widget_options">widget設定</string>
+<string name="mi_move_out_of_folder">移出資料夾</string>
+<string name="mi_zorder">モンクレール新作激安</string>
+<string name="first_use_title">歡迎！</string>
+<string name="first_use_message">閃電桌面是一個輕量的，速度很快的，並可自定義主畫面的android桌面\n\n閃電桌面將要進行一次性的準備應用程式列表，請觀看接下來的教學影片\n\n好好享受閃電桌面吧</string>
+<string name="all_apps">モンクレール新作激安</string>
+<string name="menu_refresh">モンクレール新作激安</string>
+<string name="menu_zoom">モンクレール新作激安</string>
+<string name="menu_see_only_visible">モンクレール新作激安</string>
+<string name="menu_see_only_hidden">モンクレール新作激安</string>
+<string name="menu_see_all">モンクレール新作激安</string>
+\nCustomize the folder item itself for more options</string>
+<string name="file_picker_activity_up">モンクレール新作激安</string>
+
+<string name="copy_style_toast">モンクレール新作激安</string>
+<string name="copy_style_cancel">モンクレール新作激安</string>
+<string name="copy_style_done">モンクレール新作激安</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">モンクレール新作激安</string>
+<string name="general_t">モンクレール新作激安</string>
+<string name="general_s">モンクレール新作激安</string>
+<string name="dashboard_t">モンクレール新作激安</string>
+<string name="dashboard_s">モンクレール新作激安</string>
+<string name="app_drawer_t">モンクレール新作激安</string>
+<string name="app_drawer_s">モンクレール新作激安</string>
+<string name="app_killer_t">モンクレール新作激安</string>
+<string name="app_killer_s">モンクレール新作激安</string>
+<string name="donate_t">モンクレール新作激安</string>
+<string name="donate_s">モンクレール新作激安</string>
+<string name="backup_t">モンクレール新作激安</string>
+<string name="restore_t">モンクレール新作激安</string>
+<string name="rate_t">モンクレール新作激安</string>
+<string name="rate_s">モンクレール新作激安</string>
+<string name="facebook_t">モンクレール新作激安</string>
+<string name="facebook_s">モンクレール新作激安</string>
+<string name="ld_t">モンクレール新作激安</string>
+<string name="ld_s">モンクレール新作激安</string>
+<string name="customize_ll">モンクレール新作激安</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">モンクレール新作激安</string>
+<string name="language_s">モンクレール新作激安</string>
+<string name="lg_pick_t">モンクレール新作激安</string>
+<string name="lg_pick_s">モンクレール新作激安</string>
+<string name="lg_install_t">モンクレール新作激安</string>
+<string name="lg_install_s">モンクレール新作激安</string>
+
+<string name="lg_contrib_t">モンクレール新作激安</string>
+<string name="lg_contrib_s">モンクレール新作激安</string>
+<string name="events_t">モンクレール新作激安</string>
+<string name="events_s">モンクレール新作激安</string>
+<string name="ev_home">モンクレール新作激安</string>
+<string name="ev_menu">モンクレール新作激安</string>
+<string name="ev_search">モンクレール新作激安</string>
+<string name="ev_item_tap">モンクレール新作激安</string>
+<string name="ev_item_ltap">モンクレール新作激安</string>
+<string name="ev_bg_tap">モンクレール新作激安</string>
+<string name="ev_bg_dtap">モンクレール新作激安</string>
+<string name="ev_bg_ltap">モンクレール新作激安</string>
+<string name="ev_swipe_r">モンクレール新作激安</string>
+<string name="ev_swipe_l">モンクレール新作激安</string>
+<string name="ev_swipe_u">モンクレール新作激安</string>
+<string name="ev_swipe_d">モンクレール新作激安</string>
+<string name="ev_swipe2_r">モンクレール新作激安</string>
+<string name="ev_swipe2_l">モンクレール新作激安</string>
+<string name="ev_swipe2_u">モンクレール新作激安</string>
+<string name="ev_swipe2_d">モンクレール新作激安</string>
+
+<string name="an_u">モンクレール新作激安</string>
+<string name="an_n">モンクレール新作激安</string>
+<string name="an_ad">モンクレール新作激安</string>
+<string name="an_zfs">モンクレール新作激安</string>
+<string name="an_z100">モンクレール新作激安</string>
+<string name="an_zt">モンクレール新作激安</string>
+<string name="an_pd">モンクレール新作激安</string>
+<string name="an_nd">モンクレール新作激安</string>
+<string name="an_el">モンクレール新作激安</string>
+<string name="an_ao">モンクレール新作激安</string>
+<string name="an_cl">モンクレール新作激安</string>
+<string name="an_cd">モンクレール新作激安</string>
+<string name="an_la">モンクレール新作激安</string>
+<string name="an_ls">モンクレール新作激安</string>
+<string name="an_sw">モンクレール新作激安</string>
+<string name="an_lm">モンクレール新作激安</string>
+<string name="an_ssb">モンクレール新作激安</string>
+<string name="an_smsb">モンクレール新作激安</string>
+<string name="an_sn">モンクレール新作激安</string>
+<string name="an_s">モンクレール新作激安</string>
+<string name="an_i_m">モンクレール新作激安</string>
+<string name="an_i_c">モンクレール新作激安</string>
+<string name="an_i_me">モンクレール新作激安</string>
+<string name="an_i_l">モンクレール新作激安</string>
+
+<string name="auto_edit_t">モンクレール新作激安</string>
+<string name="auto_edit_s">モンクレール新作激安</string>
+<string name="page_anim_t">モンクレール新作激安</string>
+
+<string-array name="page_anim_e">
+<item>モンクレール新作激安</item>
+<item>Fade</item>
+<item>Horizontal slide</item>
+<item>Vertical slide</item>
+</string-array>
+
+<string name="keep_in_memory_t">モンクレール新作激安</string>
+<string name="keep_in_memory_s">モンクレール新作激安</string>
+<string name="min_ram_t">モンクレール新作激安</string>
+<string name="min_ram_s">モンクレール新作激安</string>
+<string name="tools_pick_shortcut">モンクレール新作激安</string>
+<string name="tools_pick_widget">モンクレール新作激安</string>
+<string name="new_style">モンクレール新作激安</string>
+<string name="choose_style_name">モンクレール新作激安</string>
+<string name="delete_style">モンクレール新作激安</string>
+<string name="relayout_items">モンクレール新作激安</string>
+<string name="style_saved">モンクレール新作激安</string>
+<string name="style_loaded">モンクレール新作激安</string>
+<string name="install_widgets">モンクレール新作激安</string>
+<string name="item_settings_icon_copy_failed">モンクレール新作激安</string>
+<string name="tool_not_available">モンクレール新作激安</string>
+<string name="default_folder_name">モンクレール新作激安</string>
+<string name="app_added" formatted="true">モンクレール新作激安</string>
+<string name="select_launcher_title">モンクレール新作激安</string>
+<string name="extras">モンクレール新作激安</string>
+<string name="permission_denied">モンクレール新作激安</string>
+<string name="appearance">モンクレール新作激安</string>
+<string name="items_t">モンクレール新作激安</string>
+<string name="items_s">モンクレール新作激安</string>
+<string name="background_t">モンクレール新作激安</string>
+<string name="background_s">モンクレール新作激安</string>
+<string name="grid_t">モンクレール新作激安</string>
+<string name="grid_s">モンクレール新作激安</string>
+<string name="folder_look_t">モンクレール新作激安</string>
+<string name="folder_look_s">モンクレール新作激安</string>
+<string name="this_folder_look_t">モンクレール新作激安</string>
+<string name="this_folder_look_s">モンクレール新作激安</string>
+<string name="layout_t">モンクレール新作激安</string>
+<string name="layout_s">モンクレール新作激安</string>
+<string name="zoom_scroll_t">モンクレール新作激安</string>
+<string name="zoom_scroll_s">モンクレール新作激安</string>
+<string name="folder_feel_t">モンクレール新作激安</string>
+<string name="folder_feel_s">モンクレール新作激安</string>
+<string name="this_folder_feel_t">モンクレール新作激安</string>
+<string name="pg_misc_t">モンクレール新作激安</string>
+<string name="pg_misc_s">モンクレール新作激安</string>
+<string name="color_c">モンクレール新作激安</string>
+
+<string name="wp_w_t">モンクレール新作激安</string>
+<string name="wp_h_t">モンクレール新作激安</string>
+<string name="wp_auto">モンクレール新作激安</string>
+<string name="wp_scroll_t">モンクレール新作激安</string>
+<string name="wp_scroll_s">モンクレール新作激安</string>
+
+<string name="grid_h_color_t">モンクレール新作激安</string>
+<string name="grid_h_size_t">モンクレール新作激安</string>
+<string name="grid_v_color_t">モンクレール新作激安</string>
+<string name="grid_v_size_t">モンクレール新作激安</string>
+<string name="grid_color_s">モンクレール新作激安</string>
+<string name="grid_size_s">モンクレール新作激安</string>
+<string name="grid_above">モンクレール新作激安</string>
+<string name="folder_title">モンクレール新作激安</string>
+<string name="display_title">モンクレール新作激安</string>
+<string name="font_color">モンクレール新作激安</string>
+<string name="font_size">モンクレール新作激安</string>
+<string name="folder_anims">モンクレール新作激安</string>
+<string name="anim_in">モンクレール新作激安</string>
+<string name="anim_out">モンクレール新作激安</string>
+
+<string name="behaviour">モンクレール新作激安</string>
+<string name="free_mode_t">モンクレール新作激安</string>
+<string name="free_mode_s">モンクレール新作激安</string>
+<string name="dual_pos_t">モンクレール新作激安</string>
+<string name="dual_pos_s">モンクレール新作激安</string>
+<string name="snap_t">モンクレール新作激安</string>
+<string-array name="snap_e">
+<item>モンクレール新作激安</item>
+<item>Center</item>
+<item>Edge</item>
+<item>Center &amp; Edge</item>
+</string-array>
+<string name="placement">モンクレール新作激安</string>
+<string name="colums">モンクレール新作激安</string>
+<string name="rows">モンクレール新作激安</string>
+<string name="mode_t">モンクレール新作激安</string>
+
+<string-array name="mode_e">
+<item>モンクレール新作激安</item>
+<item>Fixed number</item>
+<item>Fixed size</item>
+</string-array>
+
+<string name="number">モンクレール新作激安</string>
+<string name="size">モンクレール新作激安</string>
+<string name="col_num_s">モンクレール新作激安</string>
+<string name="col_size_s">モンクレール新作激安</string>
+<string name="row_num_s">モンクレール新作激安</string>
+<string name="row_size_s">モンクレール新作激安</string>
+<string name="scroll_dir_t">モンクレール新作激安</string>
+
+<string-array name="scroll_dir_e">
+<item>モンクレール新作激安</item>
+<item>Horizontal only</item>
+<item>Vertical only</item>
+<item>Both</item>
+<item>No scrolling at all</item>
+</string-array>
+
+<string name="overscroll_t">モンクレール新作激安</string>
+
+<string-array name="overscroll_e">
+<item>モンクレール新作激安</item>
+<item>Bounce</item>
+<item>Disabled</item>
+</string-array>
+
+<string name="snap_to_pages_t">モンクレール新作激安</string>
+<string name="snap_to_pages_s">モンクレール新作激安</string>
+<string name="fit_item_t">モンクレール新作激安</string>
+<string name="fit_item_s">モンクレール新作激安</string>
+<string name="no_diagonal_scrolling_t">モンクレール新作激安</string>
+<string name="no_diagonal_scrolling_s">モンクレール新作激安</string>
+<string name="pinch_zoom_t">モンクレール新作激安</string>
+<string name="auto_close_t">モンクレール新作激安</string>
+<string name="auto_close_s">モンクレール新作激安</string>
+<string name="anim_glitch_fix_t">モンクレール新作激安</string>
+<string name="anim_glitch_fix_s">モンクレール新作激安</string>
+<string name="screen_orient_t">モンクレール新作激安</string>
+
+<string-array name="screen_orient_e">
+<item>モンクレール新作激安</item>
+<item>Portrait lock</item>
+<item>Landscape lock</item>
+<item>System default</item>
+</string-array>
+
+<string name="hide_statusbar_t">モンクレール新作激安</string>
+<string name="hide_statusbar_s">モンクレール新作激安</string>
+<string name="manage">モンクレール新作激安</string>
+<string name="load_style_t">モンクレール新作激安</string>
+<string name="load_style_s">モンクレール新作激安</string>
+<string name="save_style_t">モンクレール新作激安</string>
+<string name="save_style_s">モンクレール新作激安</string>
+<string name="confirm_reset_page">モンクレール新作激安</string>
+<string name="reset_page_t">モンクレール新作激安</string>
+<string name="reset_page_s">モンクレール新作激安</string>
+<string name="tab_label">モンクレール新作激安</string>
+<string name="tab_icon">モンクレール新作激安</string>
+<string name="tab_layout">モンクレール新作激安</string>
+<string name="tab_box">モンクレール新作激安</string>
+<string name="tab_misc">モンクレール新作激安</string>
+<string name="l_main">モンクレール新作激安</string>
+<string name="l_display">モンクレール新作激安</string>
+<string name="l_custom">モンクレール新作激安</string>
+<string name="l_size">モンクレール新作激安</string>
+<string name="l_type_face">モンクレール新作激安</string>
+<string name="l_style_t">モンクレール新作激安</string>
+
+<string-array name="l_style_e">
+<item>モンクレール新作激安</item>
+<item>Bold</item>
+<item>Italic</item>
+<item>Bold &amp; italic</item>
+</string-array>
+
+<string name="l_num_lines">モンクレール新作激安</string>
+<string name="l_colors">モンクレール新作激安</string>
+<string name="l_color_normal">モンクレール新作激安</string>
+<string name="l_color_selected">モンクレール新作激安</string>
+<string name="l_color_focused">モンクレール新作激安</string>
+<string name="l_shadow">モンクレール新作激安</string>
+<string name="l_shadow_enable">モンクレール新作激安</string>
+<string name="l_shadow_radius">モンクレール新作激安</string>
+<string name="l_shadow_offset_x">モンクレール新作激安</string>
+<string name="l_shadow_offset_y">モンクレール新作激安</string>
+<string name="l_shadow_color">モンクレール新作激安</string>
+<string name="i_main">モンクレール新作激安</string>
+<string name="i_display">モンクレール新作激安</string>
+<string name="i_custom">モンクレール新作激安</string>
+<string name="i_folder_t">モンクレール新作激安</string>
+
+<string-array name="i_folder_e">
+<item>モンクレール新作激安</item>
+<item>Grid</item>
+<item>Stack</item>
+</string-array>
+
+<string name="i_effect">モンクレール新作激安</string>
+<string name="i_e_back">モンクレール新作激安</string>
+<string name="i_e_over">モンクレール新作激安</string>
+<string name="i_e_mask">モンクレール新作激安</string>
+<string name="i_e_scale">モンクレール新作激安</string>
+
+<string name="i_smooth">モンクレール新作激安</string>
+<string name="i_scale_t">モンクレール新作激安</string>
+<string name="i_scale_s">モンクレール新作激安</string>
+<string name="i_reflect">モンクレール新作激安</string>
+<string name="i_reflect_enable">モンクレール新作激安</string>
+<string name="i_reflect_overlap">モンクレール新作激安</string>
+<string name="i_reflect_size">モンクレール新作激安</string>
+<string name="i_reflect_scale">モンクレール新作激安</string>
+<string name="la_margin">モンクレール新作激安</string>
+<string name="la_position_t">モンクレール新作激安</string>
+
+<string-array name="la_position_e">
+<item>モンクレール新作激安</item>
+<item>Top</item>
+<item>Right</item>
+<item>Bottom</item>
+</string-array>
+
+<string name="b_alignh_t">モンクレール新作激安</string>
+
+<string-array name="b_alignh_e">
+<item>モンクレール新作激安</item>
+<item>Center</item>
+<item>Right</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_alignv_t">モンクレール新作激安</string>
+
+<string-array name="b_alignv_e">
+<item>モンクレール新作激安</item>
+<item>Middle</item>
+<item>Bottom</item>
+<item>Custom</item>
+</string-array>
+
+\nthen choose color/size below</string>
+<string name="b_size">モンクレール新作激安</string>
+<string name="b_color_normal">モンクレール新作激安</string>
+<string name="b_color_selected">モンクレール新作激安</string>
+<string name="b_color_focused">モンクレール新作激安</string>
+<string name="b_color_s">モンクレール新作激安</string>
+<string name="m_enabled_t">モンクレール新作激安</string>
+<string name="m_enabled_s">モンクレール新作激安</string>
+<string name="m_alpha_t">モンクレール新作激安</string>
+<string name="m_alpha_s">モンクレール新作激安</string>
+<string name="m_smooth_transform_t">モンクレール新作激安</string>
+<string name="m_smooth_transform_s">モンクレール新作激安</string>
+
+<string-array name="preview_item_labels">
+<item>モンクレール新作激安</item>
+<item>Selected</item>
+<item>Focused</item>
+</string-array>
+
+\n(this might differ from the real thing)</string>
+\nYou can\'t actually do anything here</string>
+<string name="pick_a_font">モンクレール新作激安</string>
+<string name="system_font">モンクレール新作激安</string>
+<string name="left">モンクレール新作激安</string>
+<string name="top">モンクレール新作激安</string>
+<string name="right">モンクレール新作激安</string>
+<string name="bottom">モンクレール新作激安</string>
+<string name="margin">モンクレール新作激安</string>
+<string name="border">モンクレール新作激安</string>
+<string name="padding">モンクレール新作激安</string>
+<string name="content">モンクレール新作激安</string>
+<string name="ovr_custom">モンクレール新作激安</string>
+
+<string name="pick_t">モンクレール新作激安</string>
+<string name="pick_file">モンクレール新作激安</string>
+<string name="pick_gallery">モンクレール新作激安</string>
+<string name="pick_icon_pack">モンクレール新作激安</string>
+
+<string name="tutorials">モンクレール新作激安</string>
+<string name="donate">モンクレール新作激安</string>
+<string name="other_apps">モンクレール新作激安</string>
+<string name="tut_intro">モンクレール新作激安</string>
+<string name="tut_basic_editing">モンクレール新作激安</string>
+<string name="tut_custo">モンクレール新作激安</string>
+<string name="tut_free_mode">モンクレール新作激安</string>
+<string name="tut_lock">モンクレール新作激安</string>
+<string name="tut_pin">モンクレール新作激安</string>
+<string name="tut_scroll">モンクレール新作激安</string>
+<string name="dialog_color_picker">モンクレール新作激安</string>
+
+<string name="shortcut_settings">モンクレール新作激安</string>
+<string name="shortcut_actions">モンクレール新作激安</string>
+
+<string name="no_backup_archive">モンクレール新作激安</string>
+<string name="backup_in_progress">モンクレール新作激安</string>
+<string name="restore_in_progress">モンクレール新作激安</string>
+<string name="backup_done">Backup saved to:\n%s</string>
+<string name="backup_error">モンクレール新作激安</string>
+<string name="restore_error">モンクレール新作激安</string>
+
+<string name="confirm_delete">モンクレール新作激安</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">モンクレール新作激安</string>
+<string name="bg_sys_wp">モンクレール新作激安</string>
+<string name="bg_sys_wp_select_t">モンクレール新作激安</string>
+<string name="bg_sys_wp_select_s">モンクレール新作激安</string>
+<string name="bg_screen_wp">モンクレール新作激安</string>
+<string name="bg_screen_wp_select_t">モンクレール新作激安</string>
+<string name="bg_screen_wp_select_s">モンクレール新作激安</string>
+<string name="bg_more">モンクレール新作激安</string>
+<string name="bg_more_color_t">モンクレール新作激安</string>
+<string name="bg_more_color_s">モンクレール新作激安</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">モンクレール新作激安</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">モンクレール新作激安</string>
+<string name="style_s1">モンクレール新作激安</string>
+<string name="style_s2">モンクレール新作激安</string>
+<string name="style_s3">モンクレール新作激安</string>
+<string name="style_s4">モンクレール新作激安</string>
+<string name="style_s5">モンクレール新作激安</string>
+<string name="style_s6">モンクレール新作激安</string>
+<string name="style_s7">モンクレール新作激安</string>
+<string name="style_s8">モンクレール新作激安</string>
+<string name="style_s9">モンクレール新作激安</string>
+<string name="dialog_help_hint_t">モンクレール新作激安</string>
+<string name="dialog_help_hint_m">モンクレール新作激安</string>
+<string name="dialog_help_hint_dsa">モンクレール新作激安</string>
+<string name="m_pin_mode">モンクレール新作激安</string>
+<string-array name="m_pin_mode_e">
+<item>モンクレール新作激安</item>
+<item>Horizontal&amp;Vertical</item>
+<item>Horizontal</item>
+<item>Vertical</item>
+</string-array>
+<string name="m_events">モンクレール新作激安</string>
+<string name="shortcut_screen">モンクレール新作激安</string>
+
+<!-- added: 93 -->
+<string name="llx_t">モンクレール新作激安</string>
+<string name="llx_s">モンクレール新作激安</string>
+<string name="more_apps_t">モンクレール新作激安</string>
+<string name="more_apps_s">モンクレール新作激安</string>
+<string name="mi_kill">モンクレール新作激安</string>
+<string name="killed_freed">モンクレール新作激安</string>
+<string name="killed">モンクレール新作激安</string>
+<string name="configure_pages_t">モンクレール新作激安</string>
+<string name="configure_pages_s">モンクレール新作激安</string>
+<string name="mi_mode_custom">モンクレール新作激安</string>
+<string name="mi_mode_by_name">モンクレール新作激安</string>
+<string name="mi_mode_recent_apps">モンクレール新作激安</string>
+<string name="mi_mode_recently_updated">モンクレール新作激安</string>
+<string name="mi_mode_frequently_used">モンクレール新作激安</string>
+<string name="mi_mode_running">モンクレール新作激安</string>
+<string name="mi_es_add_folder">モンクレール新作激安</string>
+<string name="mi_es_edit_layout">モンクレール新作激安</string>
+<string name="mi_es_show_hidden">モンクレール新作激安</string>
+<string name="mi_es_hide_hidden">モンクレール新作激安</string>
+<string name="mi_es_refresh">モンクレール新作激安</string>
+<string name="mi_es_settings">モンクレール新作激安</string>
+<string name="mi_es_folder_settings">モンクレール新作激安</string>
+<string name="mi_uninstall">モンクレール新作激安</string>
+<string name="my_drawer_title">モンクレール新作激安</string>
+\nTry zooming out and selecting "Edit layout": apps can be put on left, right, top and bottom pages too, letting you manage apps in your very own way.</string>
+\nDrag and drop items into the folder</string>
+<string name="ll_import_title">モンクレール新作激安</string>
+<string name="ll_import_message">An installation of Lightning Launcher has been detected.\n\nAll data will now be imported. When this is done you can safely uninstall Lightning Launcher and use Lightning Launcher eXtreme instead.</string>
+<string name="init_ok">モンクレール新作激安</string>
+<string name="init_ko">モンクレール新作激安</string>
+<string name="auto_exit_t">モンクレール新作激安</string>
+<string name="auto_exit_s">モンクレール新作激安</string>
+<string name="icons_t">モンクレール新作激安</string>
+<string name="icons_s">モンクレール新作激安</string>
+<string name="apply_icon_pack_t">モンクレール新作激安</string>
+<string name="apply_icon_pack_s">モンクレール新作激安</string>
+<string name="icon_pack_no_appfilter">モンクレール新作激安</string>
+<string name="revert_custom_icons_t">モンクレール新作激安</string>
+<string name="revert_custom_icons_s">モンクレール新作激安</string>
+<string name="please_wait">モンクレール新作激安</string>
+<string name="app_not_valid">モンクレール新作激安</string>
+<string name="app_store">モンクレール新作激安</string>
+
+<!-- added 95 -->
+<string name="dtext">モンクレール新作激安</string>
+<string name="tab_dt_data">モンクレール新作激安</string>
+<string name="dt_source_t">モンクレール新作激安</string>
+<string-array name="dt_source_e">
+<item>モンクレール新作激安</item>
+<item>Unread GMail count</item>
+<item>Missed phone calls</item>
+<item>Date &amp; Time</item>
+<item>Storage</item>
+<item>Battery level</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">モンクレール新作激安</string>
+<string-array name="dt_date_ef_e">
+<item>モンクレール新作激安</item>
+<item>Time</item>
+<item>Date &amp; Time</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>モンクレール新作激安</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">モンクレール新作激安</string>
+<string name="dt_date_xf_s">モンクレール新作激安</string>
+<string name="dt_display_empty_t">モンクレール新作激安</string>
+<string name="dt_format_error">モンクレール新作激安</string>
+<string name="dt_storage_s_t">モンクレール新作激安</string>
+<string-array name="dt_storage_s_e">
+<item>モンクレール新作激安</item>
+<item>External</item>
+</string-array>
+<string name="dt_storage_f_t">モンクレール新作激安</string>
+<string-array name="dt_storage_f_e">
+<item>モンクレール新作激安</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">モンクレール新作激安</string>
+<string-array name="dt_storage_w_e">
+<item>モンクレール新作激安</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">モンクレール新作激安</string>
+<string name="trans_statusbar_s">モンクレール新作激安</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">モンクレール新作激安</string>
+<string name="swap_items_s">モンクレール新作激安</string>
+<string name="rearrange_items_t">モンクレール新作激安</string>
+<string name="rearrange_items_s">モンクレール新作激安</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">モンクレール新作激安</string>
+<string name="an_gh">モンクレール新作激安</string>
+<string name="an_ghz100">モンクレール新作激安</string>
+<string name="an_sd">モンクレール新作激安</string>
+<string name="an_re">モンクレール新作激安</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">モンクレール新作激安</string>
+<string-array name="grid_pl_e">
+<item>モンクレール新作激安</item>
+<item>Portrait</item>
+<item>Landscape</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">モンクレール新作激安</string>
+<string name="apply_tmpl_g">モンクレール新作激安</string>
+<string name="apply_tmpl_e">モンクレール新作激安</string>
+<string name="tmpl_t">モンクレール新作激安</string>
+<string name="tmpl_s">モンクレール新作激安</string>
+<string name="tmpl_a_t">モンクレール新作激安</string>
+<string name="tmpl_a_s">モンクレール新作激安</string>
+<string name="tmpl_b_t">モンクレール新作激安</string>
+<string name="tmpl_b_s">モンクレール新作激安</string>
+<string name="tmpl_e_t">モンクレール新作激安</string>
+<string name="tmpl_e_s">モンクレール新作激安</string>
+<string name="tmpl_c">モンクレール新作激安</string>
+<string name="tmpl_e_m">モンクレール新作激安</string>
+<string name="tmpl_e_d">モンクレール新作激安</string>
+<string name="tmpl_e_e">モンクレール新作激安</string>
+<string name="tmpl_check">モンクレール新作激安</string>
+<string name="tmpl_check_e">モンクレール新作激安</string>
+<string name="tmpl_check_ut">モンクレール新作激安</string>
+<string name="tmpl_check_um">モンクレール新作激安</string>
+<string name="tmpl_get_llx">モンクレール新作激安</string>
+<string name="tmpl_warn_t">モンクレール新作激安</string>
+<string name="tmpl_warn_c">モンクレール新作激安</string>
+<string name="tmpl_warn_m">モンクレール新作激安</string>
+<string name="tmpl_warn_llx">モンクレール新作激安</string>
+<string name="tmpl_warn_screen">モンクレール新作激安</string>
+<string name="tmpl_warn_widget">モンクレール新作激安</string>
+\nTap to pick another one</string>
+<string name="tmpl_s_p">モンクレール新作激安</string>
+<string name="an_ctf">モンクレール新作激安</string>
+<string name="an_caf">モンクレール新作激安</string>
+<string name="ev_screen_on">モンクレール新作激安</string>
+<string name="ev_screen_off">モンクレール新作激安</string>
+<string name="an_sa">モンクレール新作激安</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">モンクレール新作激安</string>
+<string name="gc_hpie_s">モンクレール新作激安</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">モンクレール新作激安</string>
+<string name="sp_b">モンクレール新作激安</string>
+<string name="sp_ss">モンクレール新作激安</string>
+<string name="sp_sd">モンクレール新作激安</string>
+<string name="sp_ba">モンクレール新作激安</string>
+<string name="sp_dw">モンクレール新作激安</string>
+<string name="sp_n">モンクレール新作激安</string>
+<string name="sp_d">モンクレール新作激安</string>
+<string name="sp_dlr">モンクレール新作激安</string>
+<string name="sp_drl">モンクレール新作激安</string>
+<string name="sp_dtb">モンクレール新作激安</string>
+<string name="sp_dbt">モンクレール新作激安</string>
+<string name="assp_t">モンクレール新作激安</string>
+<string name="assp_s">モンクレール新作激安</string>
+<string name="gc_edit">モンクレール新作激安</string>
+
+<!-- added 116 -->
+<string name="backup_d">モンクレール新作激安</string>
+<string name="an_of">モンクレール新作激安</string>
+<string name="sf">モンクレール新作激安</string>
+<string name="br_n">モンクレール新作激安</string>
+<string name="br_a">モンクレール新作激安</string>
+<string name="br_r">モンクレール新作激安</string>
+<string name="br_d">モンクレール新作激安</string>
+<string name="br_s">モンクレール新作激安</string>
+<string name="br_dc">モンクレール新作激安</string>
+<string name="br_rc">モンクレール新作激安</string>
+<string name="dt_gml_t">モンクレール新作激安</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">モンクレール新作激安</string>
+<string name="f_p">モンクレール新作激安</string>
+<string name="f_ac">モンクレール新作激安</string>
+<string name="f_l">モンクレール新作激安</string>
+<string name="f_t">モンクレール新作激安</string>
+<string name="f_af">モンクレール新作激安</string>
+<string name="sp_e">モンクレール新作激安</string>
+<string name="sp_el">モンクレール新作激安</string>
+<string name="sp_er">モンクレール新作激安</string>
+<string name="sp_et">モンクレール新作激安</string>
+<string name="sp_eb">モンクレール新作激安</string>
+
+<!-- added 119 -->
+<string name="np">モンクレール新作激安</string>
+<string name="np_d">モンクレール新作激安</string>
+<string name="np_n">モンクレール新作激安</string>
+<string name="np_s">モンクレール新作激安</string>
+<string name="np_f">モンクレール新作激安</string>
+<string name="np_r">モンクレール新作激安</string>
+<string-array name="anim2_e">
+<item>モンクレール新作激安</item>
+<item>Open / Close</item>
+<item>Slides to right</item>
+<item>Slides to left</item>
+<item>Slides to bottom</item>
+<item>Slides to top</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">モンクレール新作激安</string>
+<string name="ev_ol">モンクレール新作激安</string>
+<string name="an_gdp">モンクレール新作激安</string>
+<string name="cof_t">モンクレール新作激安</string>
+<string name="cof_s">モンクレール新作激安</string>
+
+<!-- added 123 -->
+<string name="t_nb">モンクレール新作激安</string>
+<string name="gb_l">モンクレール新作激安</string>
+<string name="gb_t">モンクレール新作激安</string>
+<string name="gb_w">モンクレール新作激安</string>
+<string name="gb_h">モンクレール新作激安</string>
+<string name="gb_a">モンクレール新作激安</string>
+<string name="gb_sx">モンクレール新作激安</string>
+<string name="gb_sy">モンクレール新作激安</string>
+<string name="gb_kx">モンクレール新作激安</string>
+<string name="gb_ky">モンクレール新作激安</string>
+<string name="mi_geometry">モンクレール新作激安</string>
+
+<!-- added 125 -->
+<string name="mi_fo">モンクレール新作激安</string>
+
+<!-- added 134 -->
+<string name="efolder">モンクレール新作激安</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">モンクレール新作激安</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">モンクレール新作激安</string>
+<string name="mi_lmf">モンクレール新作激安</string>
+<string name="mi_mop">モンクレール新作激安</string>
+
+<!-- added 137 -->
+<string name="container">モンクレール新作激安</string>
+<string name="uds_t">モンクレール新作激安</string>
+<string name="uds_s">モンクレール新作激安</string>
+<string name="mi_app">モンクレール新作激安</string>
+<string name="mi_l">モンクレール新作激安</string>
+<string name="mi_ul">モンクレール新作激安</string>
+
+<!-- added 141 -->
+<string name="ev_menul">モンクレール新作激安</string>
+<string name="ev_back">モンクレール新作激安</string>
+<string name="ev_backl">モンクレール新作激安</string>
+
+<!-- added 149 -->
+<string name="mi_i">モンクレール新作激安</string>
+<string name="mi_ic">モンクレール新作激安</string>
+<string name="mi_isa">モンクレール新作激安</string>
+<string name="mi_isd">モンクレール新作激安</string>
+
+<!-- added 151 -->
+<string name="an_us">モンクレール新作激安</string>
+<string name="nly">モンクレール新作激安</string>
+<string name="s_ls_t">モンクレール新作激安</string>
+<string name="s_ls_s">モンクレール新作激安</string>
+<string name="s_ls_s_t">モンクレール新作激安</string>
+<string name="s_ls_s_s">モンクレール新作激安</string>
+<string name="s_ls_s_c">モンクレール新作激安</string>
+<string name="i_ul">モンクレール新作激安</string>
+
+<!-- added 152 -->
+<string name="ukp_na">モンクレール新作激安</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">モンクレール新作激安</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">モンクレール新作激安</string>
+<string-array name="m_sel_e_e">
+<item>モンクレール新作激安</item>
+<item>Holo</item>
+<item>Material</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">モンクレール新作激安</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">モンクレール新作激安</string>
+<string name="i_rot_s">モンクレール新作激安</string>
+
+<!-- added 164 -->
+<string name="sc_name">Name</string>
+<string name="sc_new">New</string>
+<string name="sc_delete">Delete</string>
+<string name="sc_edit">Edit…</string>
+<string name="sc_help">Help</string>
+<string name="sc_deleted">Unknown or deleted script, a new one has been created.</string>
+<string name="sc_untitled">Untitled script</string>
+<string name="sc_dn_t">Script name</string>
+<string name="sc_dd_t">Please confirm</string>
+<string name="sc_dd_m">This script may be in use in other actions. Are you sure to delete it ?</string>
+<string name="sc_dc_t">Syntax check result</string>
+<string name="sc_dc_ok">The syntax looks good</string>
+<string name="an_rs">Run a script</string>
+<string name="sc_view">View script</string>
+<string name="sc_disable">Disable</string>
+<string name="sc_editor">Script editor</string>
+<string name="ev_pos">Position changed</string>
+<string name="sp_re">Reached event</string>
+<string name="ev_load">Load</string>
+<string name="an_b">Go back</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Template</string>
+<string name="br_ob">Overwrite with backup</string>
+<string name="br_ot">Overwrite with template</string>
+<string name="sc_ma">Categories</string>
+<string name="sc_ml">Lightning menu</string>
+<string name="sc_mi">Item menu</string>
+<string name="sc_mc">Custom menu</string>
+<string name="mi_s">Scripts…</string>
+<string name="an_cm">Custom scripts menu</string>
+<string name="tmpl_r">Replace: fully replace the current setup</string>
+<string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
+<string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
+<string name="tmpl_b">Make a backup first</string>
+<string name="apply_tmpl_m">モンクレール新作激安</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Launch unlock</string>
+<string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Load the wallpaper</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">No scroll limit</string>
+<string name="no_lim_s">The desktop can be scrolled beyond its limit</string>
+
+<!-- added 175 -->
+<string name="mi_h">Hierarchy…</string>
+<string name="mi_if">Item infos</string>
+
+<!-- added 176 -->
+<string name="in_s">Identify this item with a name</string>
+<string name="mi_b">Back</string>
+<string name="mi_im">Item menu</string>
+
+<!-- added 178 -->
+<string name="em_t">Expert mode</string>
+<string name="em_s">Unleash the power of LL by displaying advanced options</string>
+<string name="bm_c">Color</string>
+<string name="bm_bg">Background image</string>
+<string name="bm_prev">Preview</string>
+<string name="rs_t">Run scripts</string>
+<string name="rs_s">Allow scripts execution</string>
+<string name="rs_w">Warning: script execution is currently disabled in general settings</string>
+<string name="h_ad">Your apps are here.\nYou can launch apps from there and start adding apps to the desktop: long press on some app and select \"Add to launcher\".\n\nTap to learn more.</string>
+<string name="h_f">You just added a folder. Folders can contain apps, widgets or even other folders.\n\nDrag some item over it, wait a bit for the move to be confirmed (at the end of the animation), then drop the object: it will be moved inside the folder.\n\nTap to learn more on folders.</string>
+<string name="h_p">Your first panel is here.\nA panel behaves a bit like a folder: drag item over it, wait a bit for the move to be confirmed (end of the animation), then drop the object.\n\nTap to learn more on panels.</string>
+<string name="h_t">Hint</string>
+<string name="h_k">This is your desktop. Long tap to add objects (apps, widgets, folders, more) and access settings.\n\nPages are created as soon as you drag objects over them: to the left and right sides, but also to the top and bottom sides.\n\nTap to learn more on LL concepts.</string>
+<string name="tut_concepts">Read me first!</string>
+<string name="tut_wiki">Wiki</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Select shortcut</string>
+<string name="ev_paused">Paused</string>
+<string name="ev_resumed">Resumed</string>
+<string name="ad_ab_c_t">Action bar</string>
+<string name="ad_ab_b">Background image</string>
+<string name="ad_ab_h">Hide the action bar</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Speak into your device</string>
+<string name="ad_ab_ss">Display the action bar on scroll</string>
+
+<!-- added 191 -->
+<string name="ip">Image Picker</string>
+<string name="ip_none">Delete image</string>
+<string name="ip_camera">Camera</string>
+<string name="ip_ext_file">External file browser</string>
+<string name="ip_bgcolor">Background color</string>
+<string name="delete_file">Delete this file?</string>
+
+<string-array name="ip_s">
+<item>Icon pack</item>
+<item>File</item>
+<item>Application</item>
+<item>Launcher images</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Touch</string>
+
+<!-- added 200 -->
+<string name="sc_data">Script data</string>
+<string name="sc_send">Send</string>
+<string name="mi_ls">Load a script…</string>
+<string name="ls_ok">Script loaded successfully</string>
+<string name="ls_ko">Unable to load this script</string>
+<string name="ls_b">Browse the app store</string>
+<string name="ur">Unrecoverable error</string>
+
+<!-- added 201 -->
+<string name="in_t">Set a name</string>
+
+<!-- added 208 -->
+<string name="wrap_s">When reaching a side, items from the other side are displayed as if the desktop were a sphere</string>
+<string name="i_cf_t">Colorize</string>
+<string name="i_cf_s">Use alpha to adjust the saturation</string>
+<string name="sbo_t">Status bar and content overlap</string>
+<string name="nbo_t">Navigation bar and content overlap</string>
+<string name="sb_t">System bars</string>
+<string name="sb_s">Set status and navigation bars visibility, transparency, etc.</string>
+<string name="sbc_t">Status bar tint color</string>
+<string name="nbc_t">Navigation bar tint color</string>
+<string name="sb_c">Status bar</string>
+<string name="nb_c">Navigation bar</string>
+<string name="mi_app_store">Play Store</string>
+
+<!-- added 217 -->
+<string name="an_um">User menu</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Settings screen style</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Light</item>
+<item>Dark</item>
+</string-array>
+<string name="i_rm_t">Material effect mask</string>
+<string name="i_rm_s">Constraint the ripples inside the item\'s boundaries</string>
+<string name="icon_font">Icon font</string>
+<string name="um_t">Themes</string>
+<string name="pi">Page indicator</string>
+<string name="tab_page_indicator">Ind.</string>
+<string name="pi_style">Style</string>
+<string-array name="pi_style_e">
+<item>Dots</item>
+<item>Horizontal line</item>
+<item>Vertical line</item>
+<item>Mini map</item>
+<item>Textual</item>
+</string-array>
+<string name="pi_rf_t">Text format</string>
+<string name="pi_dmx_t">Horizontal spacing</string>
+<string name="pi_dmy_t">Vertical spacing</string>
+<string name="pi_dmor">Outer radius</string>
+<string name="pi_dmoc">Outer color</string>
+<string name="pi_dmow">Outer width</string>
+<string name="pi_dmir">Inner radius</string>
+<string name="pi_dmic">Inner color</string>
+<string name="pi_mosc">Map border color</string>
+<string name="pi_mosw">Map border width</string>
+<string name="pi_mofc">Map background color</string>
+<string name="pi_misc">Screen border color</string>
+<string name="pi_misw">Screen border width</string>
+<string name="pi_mifc">Screen background color</string>
+<string name="pi_lbc">Background color</string>
+<string name="pi_lbw">Background width</string>
+<string name="pi_lfc">Cursor color</string>
+<string name="pi_lfw">Cursor width</string>
+<string name="pi_lg">Gravity</string>
+<string-array name="pi_lg_e">
+<item>Center</item>
+<item>Right or Bottom</item>
+<item>Left or Top</item>
+</string-array>
+<string name="ac_s">Icon &amp; Text</string>
+<string name="ac_c">Container</string>
+<string name="ac_d">Dynamic content</string>
+<string name="ac_m">More</string>
+<string name="ai_t">Text</string>
+<string name="ai_i">Icon</string>
+<string name="ai_sb">Side bar</string>
+<string name="ai_b">Badge</string>
+<string name="ac_n">Navigation</string>
+<string name="ai_bo">Bookmark</string>
+<string name="ai_d">Blank item</string>
+<string name="h_sb">A side bar is a customized folder. Drop items here to move them into the side bar. Tap on the icon to toggle the side bar, or assign it to a gesture or any other event. Change the window alignment values to dock it on other sides.</string>
+<string name="mi_exel">Exit edit mode</string>
+<string name="h_pi">A page indicator displays the current page position in the desktop. By default this is item pinned and not clickable. Enter the edit layout mode first to change its style, color, etc.</string>
+<string name="h_sp">A stop point is a tool to create custom scrolling scheme: the desktop will stop scrolling at stop points. Long tap on a stop point to edit its properties. Stop points are only visible in edit mode.</string>
+<string name="h_b">A bookmark saves the current position and scale of your desktop. Once the bookmark has been created you can move it anywhere else, tapping on it will automatically bring you back to the memorized desktop position. It works inside panels and folders too!</string>
+<string name="sc_h">Swipe from the left edge to reveal the drawer</string>
+<string name="sc_a">Actions</string>
+<string name="sc_o">Options</string>
+<string name="sc_w">Word wrap</string>
+<string name="wrapx_t">Seamless mode X</string>
+<string name="wrapy_t">Seamless mode Y</string>
+<string name="h_w">The seamless mode is automatically disabled in edit mode, otherwise empty pages wouldn\'t be reachable. Be aware that some items may then suddenly disappear when entering edit mode: they are just displayed at their original position in the desktop instead of being "wrapped".\nSeamless mode is enabled again when exiting edit mode.</string>
+<string name="ad_bc">Selected:</string>
+<string name="an_wt">Wallpaper tap</string>
+<string name="an_wst">Wallpaper secondary tap</string>
+<string name="ds_sh">Start here</string>
+<string name="ds_uc">User community</string>
+<string name="ds_tt">Tips &amp; tricks</string>
+<string name="ds_br">Backup &amp; Restore</string>
+<string name="ds_hn">Hint: in order to create a new page, simply add or drag some item on it.\nThis works for pages above and below too, try it!\n\n(you can safely delete this hint)</string>
+<string name="ds_um">Hint: use one or two fingers swipe up to reveal the user menu (you can customize it), long tap somewhere to display a contextual menu.\n\n(you can safely delete this hint)</string>
+<string name="ds_z">Zoom</string>
+<string name="sc_import">Import…</string>
+<string name="sc_si_t">The Script Importer is not installed</string>
+<string name="sc_si_m">Would you like to install it from the Play Store?</string>
+<string name="adm_t">Categories</string>
+<string name="adm_s">Select visible app drawer categories</string>
+<string name="adm_z">At least one category need to be selected…</string>
+
+<!-- added 224 -->
+<string name="mi_es_add_pi">Add page indicator</string>
+<string name="tr_fl_t">Please unlock Lightning to use this feature</string>
+<string name="tr_fl_m">Upgrade to the Full Lightning version to benefit from more features:\n\n- Advanced app drawer (folders, action bar, categories).\n- Add, remove, rearrange desktops at will.\n- Per desktop wallpaper.\n- Unread count, badges and dynamic text.\n- Customizable lock screen.\n- Integrated app killer.\n\nIf you already unlocked Lightning in the past, please select "OK" to re-activate this version.</string>
+<string name="tr_pw">Please wait…</string>
+<string name="tr_ty">Thank you for supporting Lightning!</string>
+<string name="tr_eu">Sorry, an error occurred…</string>
+<string name="tr_c">Canceled</string>
+<string name="tr_br_s">This feature is not available in the trial version</string>
+<string name="tr_rs_t">Unleash Lightning</string>
+<string name="tr_rs_s">Upgrade to get the most out of Lightning</string>
+<string name="tr_w">Thank you for testing Lightning!\n\nThe app will run in trial mode for 7 days: all features are enabled and can be used without restriction during this period. After the trial period, the app will still be usable but editing will not be enabled anymore.\n\nIf you like this app and wish to support it, please consider purchasing the key to unlock it.\n\nThank you!</string>
+<string name="tr_ut">About Lightning</string>
+<string name="tr_um">You are a long time user of the free version of Lighting Launcher, thank you.\n\nAlthough this version has been replaced with a trial version, you will still benefit from all previously existing features for free, as well as most improvements made in the full app since the last update.\n\nIf you wish to support this app, please consider purchasing the unlock key at a discounted loyalty price.\n\nThanks!</string>
+<string name="tr_l">%d days left for the trial</string>
+<string name="tr_rm">Lightning need your feedback!\n\nWould you like to take a few seconds to rate this app on the Play Store?\n</string>
+<string name="ds_hls">This is a sample lock screen that you can customize at will.\nAdd apps or widgets then activate it through the lock screen settings (tap here).</string>
+<string name="ic">Image cropper</string>
+<string name="bg_st">Position</string>
+<string-array name="bg_st_e">
+<item>Center, unscaled</item>
+<item>Fit width and height</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Crop rectangle</string>
+<string name="ip_solid">Solid color</string>
+<string name="ip_search">Search…</string>
+<string name="sst">Select a script</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>モンクレール新作激安</item>
+<item>Launch the App Drawer</item>
+<item>Zoom full scale</item>
+<item>Zoom 100p.</item>
+<item>Zoom toggle full scale/100p.</item>
+<item>Previous desktop</item>
+<item>Next desktop</item>
+<item>Edit layout</item>
+<item>Add object</item>
+<item>Customize Lightning</item>
+<item>Customize current desktop or folder</item>
+<item>Launch app</item>
+<item>Launch shortcut</item>
+<item>Select wallpaper</item>
+<item>Launcher menu</item>
+<item>Show/hide status bar</item>
+<item>Show/hide app menu &amp; status bar</item>
+<item>Show notifications</item>
+<item>Search</item>
+<item>Move item</item>
+<item>Customize item</item>
+<item>Item menu</item>
+<item>Launch item</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">モンクレール新作激安</string>
+<string name="auto_stop_s">モンクレール新作激安</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">モンクレール新作激安</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>モンクレール新作激安</item>
+<item>Open / Close</item>
+<item>Fade in/out</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">モンクレール新作激安</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">モンクレール新作激安</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">モンクレール新作激安</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">モンクレール新作激安</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">モンクレール新作激安</string>
+<string name="apply_tmpl_n">モンクレール新作激安</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">モンクレール新作激安</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Transparent bars and content overlap</string>
+<string name="ad_ab_c_s">Background image, visibility</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Seamless mode</string>
+
+<string name="ip_blank">Blank image</string>
+
+<!-- Do not translate -->
+<string name="app_name">モンクレール新作激安</string>
+<string name="default_pack_name">モンクレール新作激安</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

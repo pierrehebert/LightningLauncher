@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">闪电桌面 - 简。体中文</string>
+<string name="pack_name_short">简中文</string>
+<string name="tranlator_name">Fei Sun</string>
+
+<string name="description">闪电桌面很快，轻，可定义的桌面</string>
+
+
+<string name="start_activity_error">不能启动该应用程序</string>
+<string name="menu_add">添加…</string>
+<string name="menu_settings">系统设置</string>
+<string name="menu_customize">自定义闪电桌面</string>
+<string name="menu_customize_folder">自定义文件夹</string>
+<string name="menu_objects_layout">编辑布局</string>
+<string name="dialog_action_title">添加…</string>
+
+<string-array name="dialog_action_values">
+<item>应用程序</item>
+<item>快捷方式</item>
+<item>应用程序小工具</item>
+<item>闪电桌面小工具</item>
+<item>文件夹</item>
+<item>滚屏停止点</item>
+</string-array>
+
+<string name="mi_remove">移除</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">自定义</string>
+<string name="mi_move_to_screen">移动到桌面…</string>
+<string name="mi_edit_icon">选择图标</string>
+<string name="mi_edit_label">自定义文本</string>
+<string name="mi_edit_copy_style">复制风格…</string>
+<string name="mi_pick_app">选择程序</string>
+<string name="mi_pick_widget">选择另外一个小工具</string>
+<string name="mi_edit_more">更多…</string>
+<string name="mi_position">位置…</string>
+<string name="mi_pin">锁定</string>
+<string name="mi_unpin">解除锁定</string>
+<string name="mi_add_to_launcher">添加到主屏</string>
+<string name="mi_hide_unhide">隐藏/取消隐藏</string>
+<string name="mi_app_details">应用详情</string>
+<string name="mi_widget_options">小工具选项</string>
+<string name="mi_move_out_of_folder">离开文件夹</string>
+<string name="mi_zorder">修改深度</string>
+<string name="first_use_title">欢迎使用!</string>
+<string name="first_use_message">闪电桌面是一个简洁的,高效的和拥有丰富自定义功能的安卓系统桌面替代软件.闪电桌面即将一次性永久准备程序列表.请查看视频指南来获知用法.好好享用!</string>
+<string name="all_apps">所有应用程序</string>
+<string name="menu_refresh">刷新</string>
+<string name="menu_zoom">缩放</string>
+<string name="menu_see_only_visible">只显示可见的</string>
+<string name="menu_see_only_hidden">只显示隐藏的</string>
+<string name="menu_see_all">全部应用程序</string>
+<string name="empty_folder">按此不动以添加元素和显示菜单</string>
+<string name="file_picker_activity_up">向上</string>
+
+<string name="copy_style_toast">选择要复制风格的图标</string>
+<string name="copy_style_cancel">取消复制风格</string>
+<string name="copy_style_done">风格复制成功!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">设置</string>
+<string name="general_t">一般设置</string>
+<string name="general_s">语言,按键,手势,…</string>
+<string name="dashboard_t">主桌面</string>
+<string name="dashboard_s">自定义主桌面的显示和行为</string>
+<string name="app_drawer_t">程序库</string>
+<string name="app_drawer_s">程序列表的设置</string>
+<string name="app_killer_t">进程结束器</string>
+<string name="app_killer_s">一个精简的直接集成到闪电桌面的应用程序</string>
+<string name="donate_t">捐赠</string>
+<string name="donate_s">喜欢，支持本程序?</string>
+<string name="backup_t">备份</string>
+<string name="restore_t">恢复</string>
+<string name="rate_t">给闪电桌面评分</string>
+<string name="rate_s">到应用商店发表您的看法</string>
+<string name="facebook_t">访问闪电桌面的Facebook主页</string>
+<string name="facebook_s">获知程序的更新动向,建议新功能,或者报告程序缺陷</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">An advanced and efficient App Drawer</string>
+<string name="customize_ll">自定义闪电桌面</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">语言</string>
+<string name="language_s">选择或安装语言包</string>
+<string name="lg_pick_t">选择一个语言包</string>
+<string name="lg_pick_s">这将重启闪电桌面</string>
+<string name="lg_install_t">获得更多语言包</string>
+<string name="lg_install_s">从应用商店安装</string>
+
+<string name="lg_contrib_t">贡献</string>
+<string name="lg_contrib_s">没有你的语言包?请为这个项目帮助翻译</string>
+<string name="events_t">事件和行为</string>
+<string name="events_s">设定按键,滑动操作和手势</string>
+<string name="ev_home">Home键</string>
+<string name="ev_menu">菜单键</string>
+<string name="ev_search">搜索键</string>
+<string name="ev_item_tap">点击一个元素</string>
+<string name="ev_item_ltap">长按一个元素</string>
+<string name="ev_bg_tap">点击空白处</string>
+<string name="ev_bg_dtap">双击空白处</string>
+<string name="ev_bg_ltap">长按空白处</string>
+<string name="ev_swipe_r">向右滑动</string>
+<string name="ev_swipe_l">向左滑动</string>
+<string name="ev_swipe_u">向上滑动</string>
+<string name="ev_swipe_d">向下滑动</string>
+<string name="ev_swipe2_r">双指向右滑</string>
+<string name="ev_swipe2_l">双指向左滑</string>
+<string name="ev_swipe2_u">双指向上滑</string>
+<string name="ev_swipe2_d">双指向下滑</string>
+
+<string name="an_u">取消设置</string>
+<string name="an_n">无操作</string>
+<string name="an_ad">打开程序库</string>
+<string name="an_zfs">缩放至全部桌面内容</string>
+<string name="an_z100">缩放至实际比例</string>
+<string name="an_zt">全部内容和实际比例间切换</string>
+<string name="an_pd">上一个屏幕</string>
+<string name="an_nd">下一个屏幕</string>
+<string name="an_el">编辑布局</string>
+<string name="an_ao">添加物件</string>
+<string name="an_cl">自定义闪电桌面</string>
+<string name="an_cd">自定义主屏幕或文件夹</string>
+<string name="an_la">打开程序</string>
+<string name="an_ls">启动快捷方式</string>
+<string name="an_sw">选择墙纸</string>
+<string name="an_lm">打开菜单</string>
+<string name="an_ssb">显示状态栏</string>
+<string name="an_smsb">显示或隐藏程序菜单和状态栏</string>
+<string name="an_sn">显示提醒</string>
+<string name="an_s">搜索</string>
+<string name="an_i_m">移动物件</string>
+<string name="an_i_c">自定义物件</string>
+<string name="an_i_me">物件菜单</string>
+<string name="an_i_l">打开物件</string>
+
+<string name="auto_edit_t">自动编辑模式</string>
+<string name="auto_edit_s">当一个新物件添加后自动进入编辑模式</string>
+<string name="page_anim_t">屏幕动画</string>
+
+<string-array name="page_anim_e">
+<item>无</item>
+<item>淡入/淡出</item>
+<item>左滑/右滑</item>
+<item>上滑/下滑</item>
+</string-array>
+
+<string name="keep_in_memory_t">尝试常驻内存</string>
+<string name="keep_in_memory_s">会减少回到桌面的时间,但占用更多内存</string>
+<string name="min_ram_t">最大限度地减少内存使用</string>
+<string name="min_ram_s">使用更少的内存，但可能慢一点。需要重新启动</string>
+<string name="tools_pick_shortcut">选择一个快捷方式</string>
+<string name="tools_pick_widget">选择一个小工具</string>
+<string name="new_style">新风格…</string>
+<string name="choose_style_name">请为新风格选择一个名字:</string>
+<string name="delete_style">删除这个风格?</string>
+<string name="relayout_items">这个风格的列数比当前的要少,是否继续并重新编排物件?</string>
+<string name="style_saved">风格已保存</string>
+<string name="style_loaded">风格已加载</string>
+<string name="install_widgets">添加闪电桌面小工具…</string>
+<string name="item_settings_icon_copy_failed">不能复制这个图标 :-(</string>
+<string name="tool_not_available">对不起,这个工具不可用</string>
+<string name="default_folder_name">文件夹</string>
+<string name="app_added" formatted="true">%s 添加</string>
+<string name="select_launcher_title">选择默认桌面</string>
+<string name="extras">额外的应用程序</string>
+<string name="permission_denied">不允许启动该快捷方式…</string>
+<string name="appearance">显示 (向左滑以预览更改)</string>
+<string name="items_t">物件</string>
+<string name="items_s">设置默认字体,颜色,图标,边框等等</string>
+<string name="background_t">壁纸和背景</string>
+<string name="background_s">选择壁纸,着色,滚动效果</string>
+<string name="grid_t">网格线</string>
+<string name="grid_s">只适用于网格模式,选择宽度,颜色和位置</string>
+<string name="folder_look_t">文件夹窗口</string>
+<string name="folder_look_s">指定默认背景,边框,动画,…</string>
+<string name="this_folder_look_t">这个文件夹的窗口</string>
+<string name="this_folder_look_s">背景,边框或动画,…</string>
+<string name="layout_t">布局</string>
+<string name="layout_s">选择物件将被怎样放置(网格对齐还是自由式),选择列数,行高等等</string>
+<string name="zoom_scroll_t">缩放和滚动</string>
+<string name="zoom_scroll_s">如何在一个屏幕上浏览</string>
+<string name="folder_feel_t">文件夹</string>
+<string name="folder_feel_s">自动关闭等等</string>
+<string name="this_folder_feel_t">这个文件夹的杂项</string>
+<string name="pg_misc_t">系统功能找回</string>
+<string name="pg_misc_s">屏幕方向,状态栏选项</string>
+<string name="color_c">颜色</string>
+
+<string name="wp_w_t">宽度</string>
+<string name="wp_h_t">高度</string>
+<string name="wp_auto">用0表示默认</string>
+<string name="wp_scroll_t">滚动壁纸</string>
+<string name="wp_scroll_s">可能会影响性能</string>
+
+<string name="grid_h_color_t">横线颜色</string>
+<string name="grid_h_size_t">横线粗细</string>
+<string name="grid_v_color_t">竖线颜色</string>
+<string name="grid_v_size_t">竖线粗细</string>
+<string name="grid_color_s">设置为透明来取消显示</string>
+<string name="grid_size_s">0为最细</string>
+<string name="grid_above">在物件上方绘制</string>
+<string name="folder_title">标题选项</string>
+<string name="display_title">显示标题</string>
+<string name="font_color">字体颜色</string>
+<string name="font_size">字体大小</string>
+<string name="folder_anims">动画</string>
+<string name="anim_in">打开</string>
+<string name="anim_out">关闭</string>
+
+<string name="behaviour">行为</string>
+<string name="free_mode_t">自由模式</string>
+<string name="free_mode_s">不使用网格,启用物件自由放置(包括缩放和旋转)</string>
+<string name="dual_pos_t">双重位置</string>
+<string name="dual_pos_s">允许物件有两个位置:一个是在竖屏模式中(首选的),另一个是在横屏模式中</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>无</item>
+<item>中心</item>
+<item>边缘</item>
+<item>中心 &amp; 边缘</item>
+</string-array>
+<string name="placement">放置</string>
+<string name="colums">网格列</string>
+<string name="rows">网格行</string>
+<string name="mode_t">模式</string>
+
+<string-array name="mode_e">
+<item>自动</item>
+<item>固定数量</item>
+<item>固定大小</item>
+</string-array>
+
+<string name="number">数量</string>
+<string name="size">大小</string>
+<string name="col_num_s">每一屏幕的列数</string>
+<string name="col_size_s">每一列的宽度</string>
+<string name="row_num_s">每一屏幕的行数</string>
+<string name="row_size_s">每一行的高度</string>
+<string name="scroll_dir_t">滚动方向</string>
+
+<string-array name="scroll_dir_e">
+<item>自动</item>
+<item>只横向</item>
+<item>只纵向</item>
+<item>纵横皆可</item>
+<item>不滚动</item>
+</string-array>
+
+<string name="overscroll_t">超越边界</string>
+
+<string-array name="overscroll_e">
+<item>减速</item>
+<item>弹跳</item>
+<item>禁用</item>
+</string-array>
+
+<string name="snap_to_pages_t">依照页面对齐</string>
+<string name="snap_to_pages_s">在页面边界处总是停止滚动</string>
+<string name="fit_item_t">依照物件调整桌面大小</string>
+<string name="fit_item_s">根据物件来缩放桌面,而不是使用页面的倍数</string>
+<string name="no_diagonal_scrolling_t">禁用斜向滚动</string>
+<string name="no_diagonal_scrolling_s">只能一次往一个方向滚动</string>
+<string name="pinch_zoom_t">启用双指缩放</string>
+<string name="auto_close_t">自动关闭</string>
+<string name="auto_close_s">当其中一个应用打开后自动关闭当前文件夹</string>
+<string name="anim_glitch_fix_t">修复动画缺陷</string>
+<string name="anim_glitch_fix_s">在一些安卓版本上填充一个像素来修复缺陷</string>
+<string name="screen_orient_t">屏幕方向</string>
+
+<string-array name="screen_orient_e">
+<item>自动</item>
+<item>竖屏</item>
+<item>横屏</item>
+<item>依照系统</item>
+</string-array>
+
+<string name="hide_statusbar_t">隐藏状态栏</string>
+<string name="hide_statusbar_s">点击菜单键来显示</string>
+<string name="manage">管理</string>
+<string name="load_style_t">加载一个风格</string>
+<string name="load_style_s">使用一个风格取代当前设置</string>
+<string name="save_style_t">保存为一个风格</string>
+<string name="save_style_s">保存当前桌面设置为一个自定义风格</string>
+<string name="confirm_reset_page">真的要重置桌面设置吗?</string>
+<string name="reset_page_t">重置桌面设置</string>
+<string name="reset_page_s">移除桌面上的物件并恢复为默认风格</string>
+<string name="tab_label">文字</string>
+<string name="tab_icon">图标</string>
+<string name="tab_layout">位置</string>
+<string name="tab_box">边框</string>
+<string name="tab_misc">+</string>
+<string name="l_main">主要</string>
+<string name="l_display">显示标签</string>
+<string name="l_custom">自定义标签</string>
+<string name="l_size">字体大小</string>
+<string name="l_type_face">使用自定义字体…</string>
+<string name="l_style_t">字体风格</string>
+
+<string-array name="l_style_e">
+<item>正常</item>
+<item>粗体</item>
+<item>斜体</item>
+<item>粗体和斜体</item>
+</string-array>
+
+<string name="l_num_lines">最大行数</string>
+<string name="l_colors">颜色</string>
+<string name="l_color_normal">正常颜色</string>
+<string name="l_color_selected">选择颜色</string>
+<string name="l_color_focused">焦点色</string>
+<string name="l_shadow">阴影</string>
+<string name="l_shadow_enable">启用阴影</string>
+<string name="l_shadow_radius">半径</string>
+<string name="l_shadow_offset_x">X偏移量</string>
+<string name="l_shadow_offset_y">Y偏移量</string>
+<string name="l_shadow_color">颜色</string>
+<string name="i_main">主要</string>
+<string name="i_display">显示图标</string>
+<string name="i_custom">选择一个图标</string>
+<string name="i_folder_t">文件夹图标风格</string>
+
+<string-array name="i_folder_e">
+<item>图标</item>
+<item>网格</item>
+<item>堆放</item>
+</string-array>
+
+<string name="i_effect">层</string>
+<string name="i_e_back">背景图片</string>
+<string name="i_e_over">Overlay</string>
+<string name="i_e_mask">Mask</string>
+<string name="i_e_scale">Inner scale</string>
+
+<string name="i_smooth">平滑图标</string>
+<string name="i_scale_t">Scale</string>
+<string name="i_scale_s">警告: 大尺寸会占用更多的内存。请谨慎使用。</string>
+<string name="i_reflect">倒影</string>
+<string name="i_reflect_enable">启用倒影</string>
+<string name="i_reflect_overlap">和图标交叠</string>
+<string name="i_reflect_size">影长</string>
+<string name="i_reflect_scale">缩放`</string>
+<string name="la_margin">图标和标签的间距</string>
+<string name="la_position_t">标签位置</string>
+
+<string-array name="la_position_e">
+<item>左边</item>
+<item>上边</item>
+<item>右边</item>
+<item>下边</item>
+</string-array>
+
+<string name="b_alignh_t">水平对齐</string>
+
+<string-array name="b_alignh_e">
+<item>左</item>
+<item>中</item>
+<item>右</item>
+<item>自定义</item>
+</string-array>
+
+<string name="b_alignv_t">垂直对齐</string>
+
+<string-array name="b_alignv_e">
+<item>上</item>
+<item>中</item>
+<item>下</item>
+<item>自定义</item>
+</string-array>
+
+<string name="b_hint">点击一个或多个位置然后在下面选择一个操作</string>
+<string name="b_size">设定所选处大小</string>
+<string name="b_color_normal">正常颜色</string>
+<string name="b_color_selected">选择颜色</string>
+<string name="b_color_focused">焦点色</string>
+<string name="b_color_s">设定边界或内容的颜色</string>
+<string name="m_enabled_t">可点击</string>
+<string name="m_enabled_s">进入编辑模式，选择禁用的项目</string>
+<string name="m_alpha_t">透明度</string>
+<string name="m_alpha_s">漂亮但更慢. 0: 不可见, 255: 完全不透明</string>
+<string name="m_smooth_transform_t">平滑变换</string>
+<string name="m_smooth_transform_s">更漂亮但也更慢</string>
+
+<string-array name="preview_item_labels">
+<item>正常</item>
+<item>选择</item>
+<item>焦点</item>
+</string-array>
+
+<string name="il_preview">屏幕预览(可能和真实桌面不同)</string>
+<string name="preview_toast">预览模式所有操作不可用</string>
+<string name="pick_a_font">选择一个TFT文件…</string>
+<string name="system_font">系统字体</string>
+<string name="left">左</string>
+<string name="top">上</string>
+<string name="right">右</string>
+<string name="bottom">下</string>
+<string name="margin">间距</string>
+<string name="border">边框</string>
+<string name="padding">填充</string>
+<string name="content">内容</string>
+<string name="ovr_custom">自定义</string>
+
+<string name="pick_t">选择一个图标：</string>
+<string name="pick_file">闪电桌面文件管理器</string>
+<string name="pick_gallery">其他的文件管理器</string>
+<string name="pick_icon_pack">兼容图标包</string>
+
+<string name="tutorials">使用指南</string>
+<string name="donate">捐赠</string>
+<string name="other_apps">其他应用软件</string>
+<string name="tut_intro">介绍</string>
+<string name="tut_basic_editing">第一步</string>
+<string name="tut_custo">自定义对象</string>
+<string name="tut_free_mode">自由模式</string>
+<string name="tut_lock">锁屏</string>
+<string name="tut_pin">锁定或停靠物件</string>
+<string name="tut_scroll">屏幕和浏览</string>
+<string name="dialog_color_picker">颜色选择器</string>
+
+<string name="shortcut_settings">闪电桌面设置</string>
+<string name="shortcut_actions">闪电桌面动作</string>
+
+<string name="no_backup_archive">没有可以恢复的备份</string>
+<string name="backup_in_progress">正在备份中…</string>
+<string name="restore_in_progress">正在还原中…</string>
+<string name="backup_done">备份保存到:\n%s</string>
+<string name="backup_error">备份错误，请检查是否有对SD卡足够的存储空间</string>
+<string name="restore_error">恢复错误，请检查备份存档是否有效，可以读取</string>
+
+<string name="confirm_delete">确定 ?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">重置</string>
+<string name="bg_sys_wp">系统壁纸</string>
+<string name="bg_sys_wp_select_t">更换壁纸…</string>
+<string name="bg_sys_wp_select_s">The system wallpaper is shared by all desktops and the app drawer</string>
+<string name="bg_screen_wp">桌面壁纸</string>
+<string name="bg_screen_wp_select_t">更换桌面壁纸…</string>
+<string name="bg_screen_wp_select_s">该壁纸将覆盖系统壁纸，并且每个桌面都有自己的壁纸</string>
+<string name="bg_more">更多</string>
+<string name="bg_more_color_t">颜色</string>
+<string name="bg_more_color_s">Use a fully opaque color to disable the wallpaper. Use a transparent color to tint the wallpaper</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">长按</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">点击</string>
+<string name="style_s1">默认</string>
+<string name="style_s2">紧凑（小图标，小文本）</string>
+<string name="style_s3">易读（大图标，大文本）</string>
+<string name="style_s4">列表 - 图标置右</string>
+<string name="style_s5">列表 - 无图标，大文本</string>
+<string name="style_s6">列表 - 有图标，大文本</string>
+<string name="style_s7">平铺 - 无文本</string>
+<string name="style_s8">Flashy colors</string>
+<string name="style_s9">Zune like</string>
+<string name="dialog_help_hint_t">提示</string>
+<string name="dialog_help_hint_m">长按显示该设置的帮助提示。</string>
+<string name="dialog_help_hint_dsa">不再显示</string>
+<string name="m_pin_mode">固定模式</string>
+<string-array name="m_pin_mode_e">
+<item>不固定</item>
+<item>水平&amp;垂直</item>
+<item>水平</item>
+<item>垂直</item>
+</string-array>
+<string name="m_events">手势</string>
+<string name="shortcut_screen">桌面 &amp; 位置</string>
+
+<!-- added: 93 -->
+<string name="llx_t">闪电桌面极限版</string>
+<string name="llx_s">The ultimate launcher. No compromise.</string>
+<string name="more_apps_t">更多的免费应用</string>
+<string name="more_apps_s">从主页获取更多应用 (工具, 游戏, 好玩的)</string>
+<string name="mi_kill">结束</string>
+<string name="killed_freed">已结束 (释放内存 %dM)</string>
+<string name="killed">已结束!</string>
+<string name="configure_pages_t">配置桌面</string>
+<string name="configure_pages_s">Setup multiple desktops, their order, the home desktop, icons, labels,…</string>
+<string name="mi_mode_custom">我的程序集</string>
+<string name="mi_mode_by_name">所有程序集（名称排序）</string>
+<string name="mi_mode_recent_apps">最近运行</string>
+<string name="mi_mode_recently_updated">最近更新</string>
+<string name="mi_mode_frequently_used">最常使用</string>
+<string name="mi_mode_running">正在运行</string>
+<string name="mi_es_add_folder">添加文件夹</string>
+<string name="mi_es_edit_layout">编辑布局</string>
+<string name="mi_es_show_hidden">显示隐藏</string>
+<string name="mi_es_hide_hidden">不显示隐藏</string>
+<string name="mi_es_refresh">刷新</string>
+<string name="mi_es_settings">设置</string>
+<string name="mi_es_folder_settings">设置文件夹</string>
+<string name="mi_uninstall">卸载</string>
+<string name="my_drawer_title">我的程序集</string>
+<string name="my_drawer_message">我的程序集中可以任意摆放应用，The "My Drawer" view lets you fully customize your app drawer.\nIn this mode items can be freely moved on a large canvas and folder can be used to organize apps.\nTry to zoom out and select "Edit layout" : you will discover that apps can be put on left, right, top and bottom pages too, letting you manage apps in your very own way.</string>
+<string name="empty_folder_x">empty folder\ndrag&amp;drop items over the folder icon\nto populate it</string>
+<string name="ll_import_title">Importing LL setup</string>
+<string name="ll_import_message">An installation of Lightning Launcher has been detected.\nAll data will now be imported. When this is done you can safely uninstall Lightning Launcher and use Lightning Launcher eXtreme instead.</string>
+<string name="init_ok">Ready!</string>
+<string name="init_ko">Something went wrong during file copy!</string>
+<string name="auto_exit_t">自动退出</string>
+<string name="auto_exit_s">Close the app drawer upon app launch</string>
+<string name="icons_t">Icon pack</string>
+<string name="icons_s">Apply an ADW icon pack or revert custom icons</string>
+<string name="apply_icon_pack_t">Apply an ADW icon pack</string>
+<string name="apply_icon_pack_s">Works for themes providing an icon/app table</string>
+<string name="icon_pack_no_appfilter">This icon pack as no app/icon table</string>
+<string name="revert_custom_icons_t">Revert custom icons</string>
+<string name="revert_custom_icons_s">Including custom icon effect and inner scale</string>
+<string name="please_wait">Please wait…</string>
+<string name="app_not_valid">This shortcut is not associated with a valid app. Would you like to get it from the app store or pick another app ?</string>
+<string name="app_store">App store</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamic text</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Text to display</string>
+<string-array name="dt_source_e">
+<item>Unread SMS count</item>
+<item>Unread GMail count</item>
+<item>Missed phone calls</item>
+<item>Date &amp; Time</item>
+<item>Storage</item>
+<item>Battery level</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Easy format</string>
+<string-array name="dt_date_ef_e">
+<item>Date</item>
+<item>Time</item>
+<item>Date &amp; Time</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expert format</string>
+<string name="dt_date_xf_s">Long tap for documentation</string>
+<string name="dt_display_empty_t">Display when empty</string>
+<string name="dt_format_error">Error in format</string>
+<string name="dt_storage_s_t">Select storage</string>
+<string-array name="dt_storage_s_e">
+<item>Internal</item>
+<item>External</item>
+</string-array>
+<string name="dt_storage_f_t">Display format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Space left</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparent status bar</string>
+<string name="trans_statusbar_s">Only on devices that support it (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Swap items</string>
+<string name="swap_items_s">Swap items if they overlap (grid mode only)</string>
+<string name="rearrange_items_t">Rearrange items</string>
+<string name="rearrange_items_s">Prevent gaps between items (grid mode only)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">备份/恢复</string>
+<string name="an_gh">回到桌面</string>
+<string name="an_ghz100">Go to home desktop, then zoom 100p.</string>
+<string name="an_sd">Select desktop to go to</string>
+<string name="an_re">重启应用</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Settings below apply to:</string>
+<string-array name="grid_pl_e">
+<item>Portrait &amp; Landscape</item>
+<item>Portrait</item>
+<item>Landscape</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Please confirm:</string>
+<string name="apply_tmpl_g">Applying template…</string>
+<string name="apply_tmpl_e">Unable to apply this template!</string>
+<string name="tmpl_t">Templates</string>
+<string name="tmpl_s">Browse and apply templates, export for APK</string>
+<string name="tmpl_a_t">Apply</string>
+<string name="tmpl_a_s">Load an installed template</string>
+<string name="tmpl_b_t">Browse existing templates</string>
+<string name="tmpl_b_s">Get fresh new themes</string>
+<string name="tmpl_e_t">Export for APK</string>
+<string name="tmpl_e_s">Long tap to read the tutorial</string>
+<string name="tmpl_c">Select a template</string>
+<string name="tmpl_e_m">Exporting…</string>
+<string name="tmpl_e_d">Export done</string>
+<string name="tmpl_e_e">Export error!</string>
+<string name="tmpl_check">Opening template…</string>
+<string name="tmpl_check_e">Unable to read this template!</string>
+<string name="tmpl_check_ut">Need to update</string>
+<string name="tmpl_check_um">This template has been designed for a newer version of Lightning Launcher, would you like to update now ?</string>
+<string name="tmpl_get_llx">Get LLX</string>
+<string name="tmpl_warn_t">Warning</string>
+<string name="tmpl_warn_c">Continue anyway</string>
+<string name="tmpl_warn_m">The template is ready to be applied but some warnings have been found:</string>
+<string name="tmpl_warn_llx">- this template has been designed with Lightning Launcher eXtreme, it may use some features not available in this version.</string>
+<string name="tmpl_warn_screen">- this template does not exactly match your screen characteristics. Some elements may not be displayed correctly.</string>
+<string name="tmpl_warn_widget">- your device is not able to restore widgets automatically, you will need to manually recreate them.</string>
+<string name="widget_e">Could not load this widget\nTap to install or pick a new one</string>
+<string name="tmpl_s_p">Select desktops to export</string>
+<string name="an_ctf">Close topmost folder</string>
+<string name="an_caf">Close all folders</string>
+<string name="ev_screen_on">Screen on</string>
+<string name="ev_screen_off">Screen off</string>
+<string name="an_sa">Search app</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Honour pinned items in edit mode</string>
+<string name="gc_hpie_s">Long tap for the description</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Stop point</string>
+<string name="sp_b">Behavior</string>
+<string name="sp_ss">Stop scroll</string>
+<string name="sp_sd">Stop drag</string>
+<string name="sp_ba">Barrier</string>
+<string name="sp_dw">Desktop wide</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Direction</string>
+<string name="sp_dlr">Left to right</string>
+<string name="sp_drl">Right to left</string>
+<string name="sp_dtb">Top to bottom</string>
+<string name="sp_dbt">Bottom to top</string>
+<string name="assp_t">Always show stop points</string>
+<string name="assp_s">Stop points are always displayed, even in normal mode</string>
+<string name="gc_edit">Layout editor</string>
+
+<!-- added 116 -->
+<string name="backup_d">Backup</string>
+<string name="an_of">Open a folder</string>
+<string name="sf">Select a folder</string>
+<string name="br_n">Backup name</string>
+<string name="br_a">Select an action</string>
+<string name="br_r">Rename</string>
+<string name="br_d">Delete</string>
+<string name="br_s">Send</string>
+<string name="br_dc">Delete this archive ?</string>
+<string name="br_rc">Restore this archive ?</string>
+<string name="dt_gml_t">Gmail label</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Copy to desktop…</string>
+<string name="f_p">Placement</string>
+<string name="f_ac">When using custom alignment</string>
+<string name="f_l">Left</string>
+<string name="f_t">Top</string>
+<string name="f_af">Fade in / out</string>
+<string name="sp_e">Match edges</string>
+<string name="sp_el">Left</string>
+<string name="sp_er">Right</string>
+<string name="sp_et">Top</string>
+<string name="sp_eb">Bottom</string>
+
+<!-- added 119 -->
+<string name="np">Use a Nine Patch</string>
+<string name="np_d">Long tap to learn how to use nine patch</string>
+<string name="np_n">Normal nine patch</string>
+<string name="np_s">Selected nine patch</string>
+<string name="np_f">Focused nine patch</string>
+<string name="np_r">Nine patch</string>
+<string-array name="anim2_e">
+<item>None</item>
+<item>Open / Close</item>
+<item>Slide from left</item>
+<item>Slide from right</item>
+<item>Slide from top</item>
+<item>Slide from bottom</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Switch to portrait</string>
+<string name="ev_ol">Switch to landscape</string>
+<string name="an_gdp">Go to specified desktop&amp;position</string>
+<string name="cof_t">Close other folders</string>
+<string name="cof_s">Allow only a single opened folder at a time</string>
+
+<!-- added 123 -->
+<string name="t_nb">Transparent navigation bar</string>
+<string name="gb_l">Left</string>
+<string name="gb_t">Top</string>
+<string name="gb_w">Width</string>
+<string name="gb_h">Height</string>
+<string name="gb_a">Angle</string>
+<string name="gb_sx">Scale X</string>
+<string name="gb_sy">Scale Y</string>
+<string name="gb_kx">Skew X</string>
+<string name="gb_ky">Skew Y</string>
+<string name="mi_geometry">Geometry</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Folder options</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Customize panel content</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Detach from grid</string>
+<string name="mi_lmf">Attach to grid</string>
+<string name="mi_mop">Move out of panel</string>
+
+<!-- added 137 -->
+<string name="container">Panel size</string>
+<string name="uds_t">Use desktop size</string>
+<string name="uds_s">Use the desktop size to compute the cell size, not the panel size</string>
+<string name="mi_app">App…</string>
+<string name="mi_l">Lock</string>
+<string name="mi_ul">Unlock</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menu key (long)</string>
+<string name="ev_back">Back key</string>
+<string name="ev_backl">Back key (long)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Items…</string>
+<string name="mi_ic">Compact</string>
+<string name="mi_isa">Sort a-z</string>
+<string name="mi_isd">Sort z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Unlock screen</string>
+<string name="nly">Not locked yet</string>
+<string name="s_ls_t">Lock screen</string>
+<string name="s_ls_s">Select the desktop to be shown on the lock screen. Long tap for a tutorial.</string>
+<string name="s_ls_s_t">Select or disable the lock screen</string>
+<string name="s_ls_s_s">Select a desktop, tap and cancel to disable it</string>
+<string name="s_ls_s_c">The lock screen has been disabled.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">The Unlocker Plugin is not installed yet. Tap to install</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Before to lock, please ensure that this desktop can be unlocked safely, either using an unlocker or an \"Unlock screen\" action.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Selection effect</string>
+<string-array name="m_sel_e_e">
+<item>Plain</item>
+<item>Holo</item>
+<item>Material</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Stop points conflict with the \'Snap to page\' option: it has been automatically turned off.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Rotation</string>
+<string name="i_rot_s">Rotate the item upon screen rotation</string>
+
+<!-- added 164 -->
+<string name="sc_name">Name</string>
+<string name="sc_new">New</string>
+<string name="sc_delete">Delete</string>
+<string name="sc_edit">Edit…</string>
+<string name="sc_help">Help</string>
+<string name="sc_deleted">Unknown or deleted script, a new one has been created.</string>
+<string name="sc_untitled">Untitled script</string>
+<string name="sc_dn_t">Script name</string>
+<string name="sc_dd_t">Please confirm</string>
+<string name="sc_dd_m">This script may be in use in other actions. Are you sure to delete it ?</string>
+<string name="sc_dc_t">Syntax check result</string>
+<string name="sc_dc_ok">The syntax looks good</string>
+<string name="an_rs">Run a script</string>
+<string name="sc_view">View script</string>
+<string name="sc_disable">Disable</string>
+<string name="sc_editor">Script editor</string>
+<string name="ev_pos">Position changed</string>
+<string name="sp_re">Reached event</string>
+<string name="ev_load">Load</string>
+<string name="an_b">Go back</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Template</string>
+<string name="br_ob">Overwrite with backup</string>
+<string name="br_ot">Overwrite with template</string>
+<string name="sc_ma">Appear in:</string>
+<string name="sc_ml">Lightning menu</string>
+<string name="sc_mi">Item menu</string>
+<string name="sc_mc">Custom menu</string>
+<string name="mi_s">Scripts…</string>
+<string name="an_cm">Custom scripts menu</string>
+<string name="tmpl_r">Replace: fully replace the current setup</string>
+<string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
+<string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
+<string name="tmpl_b">Make a backup first</string>
+<string name="apply_tmpl_m">You are about to apply the template \'%s\', do you want to make a backup of your current setup first ?</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Launch unlock</string>
+<string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Load the wallpaper</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">No scroll limit</string>
+<string name="no_lim_s">The desktop can be scrolled beyond its limit</string>
+
+<!-- added 175 -->
+<string name="mi_h">Hierarchy…</string>
+<string name="mi_if">Item infos</string>
+
+<!-- added 176 -->
+<string name="in_s">Identify this item with a label</string>
+<string name="mi_b">Back</string>
+<string name="mi_im">Item menu</string>
+
+<!-- added 178 -->
+<string name="em_t">Expert mode</string>
+<string name="em_s">Unleash the power of LL by displaying advanced options (take effect upon reload)</string>
+<string name="bm_c">Color</string>
+<string name="bm_bg">Background image</string>
+<string name="bm_prev">Preview</string>
+<string name="rs_t">Run scripts</string>
+<string name="rs_s">Allow scripts execution</string>
+<string name="rs_w">Warning: script execution is currently disabled in general settings</string>
+<string name="h_ad">Your apps are here.\nYou can launch apps from there and start adding apps to the desktop: long press on some app and select \"Add to launcher\".\n\nTap to learn more.</string>
+<string name="h_f">You just added a folder. Folders can contain apps, widgets or even other folders.\n\nDrag some item over it, wait a bit for the move to be confirmed (at the end of the animation), then drop the object: it will be moved inside the folder.\n\nTap to learn more on folders.</string>
+<string name="h_p">Your first panel is here.\nPanels behave a bit like folders: drag item over it, wait a bit for the move to be confirmed (end of the animation), then drop the object.\n\nTap to learn more on panels.</string>
+<string name="h_t">Hint</string>
+<string name="h_k">This is your desktop. Long tap to add objects (apps, widgets, folders, more) and access settings.\n\nPages are created as soon as you drag objects over them: to the left and right sides, but also to the top and bottom sides.\n\nTap to learn more on LL concepts.</string>
+<string name="tut_concepts">Concepts</string>
+<string name="tut_wiki">Wiki</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Select shortcut</string>
+<string name="ev_paused">Paused</string>
+<string name="ev_resumed">Resumed</string>
+<string name="ad_ab_c_t">Action bar</string>
+<string name="ad_ab_b">Background image</string>
+<string name="ad_ab_h">Hide the action bar</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Speak into your device</string>
+<string name="ad_ab_ss">Display the action bar on scroll</string>
+
+<!-- added 191 -->
+<string name="ip">Image Picker</string>
+<string name="ip_none">No image</string>
+<string name="ip_camera">Camera</string>
+<string name="ip_ext_file">External file browser</string>
+<string name="ip_bgcolor">Background color</string>
+<string name="delete_file">Delete this file?</string>
+
+<string-array name="ip_s">
+<item>Icon pack</item>
+<item>File</item>
+<item>Application</item>
+<item>Launcher images</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Touch</string>
+
+<!-- added 197 -->
+<string name="ip_blank">Blank image</string>
+
+<!-- added 200 -->
+<string name="sc_data">Pass these data to the script (leave blank if not used):</string>
+<string name="sc_send">Send</string>
+<string name="mi_ls">Load a script…</string>
+<string name="ls_ok">Script loaded successfully</string>
+<string name="ls_ko">Unable to load this script</string>
+<string name="ls_b">Browse the app store</string>
+<string name="ur">Unrecoverable error</string>
+
+<!-- added 201 -->
+<string name="in_t">Set a name</string>
+
+<!-- added 208 -->
+<string name="wrap_s">Experimental: when reaching a side, items from the other side are displayed as if the desktop were a sphere</string>
+<string name="i_cf_t">Colorize</string>
+<string name="i_cf_s">Use alpha to adjust the saturation</string>
+<string name="sbo_t">Status bar and content overlap</string>
+<string name="nbo_t">Navigation bar and content overlap</string>
+<string name="sb_t">System bars</string>
+<string name="sb_s">Set status and navigation bars visibility, transparency, etc.</string>
+<string name="sbc_t">Status bar tint color</string>
+<string name="nbc_t">Navigation bar tint color</string>
+<string name="sb_c">Status bar</string>
+<string name="nb_c">Navigation bar</string>
+<string name="mi_app_store">Play Store</string>
+
+<!-- added 217 -->
+<string name="an_um">User menu</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Settings screen style</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Light</item>
+<item>Dark</item>
+</string-array>
+<string name="i_rm_t">Material effect mask</string>
+<string name="i_rm_s">Constraint the ripples inside the item\'s boundaries</string>
+<string name="icon_font">Icon font</string>
+<string name="um_t">Themes</string>
+<string name="pi">Page indicator</string>
+<string name="tab_page_indicator">Ind.</string>
+<string name="pi_style">Style</string>
+<string-array name="pi_style_e">
+<item>Dots</item>
+<item>Horizontal line</item>
+<item>Vertical line</item>
+<item>Mini map</item>
+<item>Textual</item>
+</string-array>
+<string name="pi_rf_t">Text format</string>
+<string name="pi_dmx_t">Horizontal spacing</string>
+<string name="pi_dmy_t">Vertical spacing</string>
+<string name="pi_dmor">Outer radius</string>
+<string name="pi_dmoc">Outer color</string>
+<string name="pi_dmow">Outer width</string>
+<string name="pi_dmir">Inner radius</string>
+<string name="pi_dmic">Inner color</string>
+<string name="pi_mosc">Map border color</string>
+<string name="pi_mosw">Map border width</string>
+<string name="pi_mofc">Map background color</string>
+<string name="pi_misc">Screen border color</string>
+<string name="pi_misw">Screen border width</string>
+<string name="pi_mifc">Screen background color</string>
+<string name="pi_lbc">Background color</string>
+<string name="pi_lbw">Background width</string>
+<string name="pi_lfc">Cursor color</string>
+<string name="pi_lfw">Cursor width</string>
+<string name="pi_lg">Gravity</string>
+<string-array name="pi_lg_e">
+<item>Center</item>
+<item>Right or Bottom</item>
+<item>Left or Top</item>
+</string-array>
+<string name="ac_s">Icon &amp; Text</string>
+<string name="ac_c">Container</string>
+<string name="ac_d">Dynamic content</string>
+<string name="ac_m">More</string>
+<string name="ai_t">Text</string>
+<string name="ai_i">Icon</string>
+<string name="ai_sb">Side bar</string>
+<string name="ai_b">Badge</string>
+<string name="ac_n">Navigation</string>
+<string name="ai_bo">Bookmark</string>
+<string name="ai_d">Blank item</string>
+<string name="h_sb">A side bar is a customized folder. Drop items here to move them into the side bar. Tap on the icon to toggle the side bar, or assign it to a gesture or any other event. Change the window alignment values to dock it on other sides.</string>
+<string name="mi_exel">Exit edit mode</string>
+<string name="h_pi">A page indicator displays the current page position in the desktop. By default this is item pinned and not clickable. Enter the edit layout mode first to change its style, color, etc.</string>
+<string name="h_sp">A stop point is a tool to create custom scrolling scheme: the desktop will stop scrolling at stop points. Long tap on a stop point to edit its properties. Stop points are only visible in edit mode.</string>
+<string name="h_b">A bookmark saves the current position and scale of your desktop. Once the bookmark has been created you can move it anywhere else, tapping on it will automatically bring you back to the memorized desktop position. It works inside panels and folders too!</string>
+<string name="sc_h">Swipe from the left edge to reveal the drawer</string>
+<string name="sc_a">Actions</string>
+<string name="sc_o">Options</string>
+<string name="sc_w">Word wrap</string>
+<string name="wrapx_t">Seamless mode X</string>
+<string name="wrapy_t">Seamless mode X</string>
+<string name="h_w">The seamless mode is automatically disabled in edit mode, otherwise empty pages wouldn\'t be reachable. Be aware that some items may then suddenly disappear when entering edit mode: they are just displayed at their original position in the desktop instead of being "wrapped".\nSeamless mode is enabled again when exiting edit mode.</string>
+<string name="ad_bc">Selected:</string>
+<string name="an_wt">Wallpaper tap</string>
+<string name="an_wst">Wallpaper secondary tap</string>
+<string name="ds_sh">Start here</string>
+<string name="ds_uc">User community</string>
+<string name="ds_tt">Tips &amp; tricks</string>
+<string name="ds_br">Backup &amp; Restore</string>
+<string name="ds_hn">Hint: in order to create a new page, simply add or drag some item on it.\nThis works for pages above and below too, try it!\n\n(you can safely delete this hint)</string>
+<string name="ds_um">Hint: use one or two fingers swipe up to reveal the user menu (you can customize it), long tap somewhere to display a contextual menu.\n\n(you can safely delete this hint)</string>
+<string name="ds_z">Zoom</string>
+<string name="sc_import">Import…</string>
+<string name="sc_si_t">The Script Importer is not installed</string>
+<string name="sc_si_m">Would you like to install it from the Play Store?</string>
+<string name="adm_t">Categories</string>
+<string name="adm_s">Select visible app drawer categories</string>
+<string name="adm_z">At least one category need to be selected…</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>无操作</item>
+<item>打开程序库</item>
+<item>缩放至全部桌面内容</item>
+<item>缩放至实际比例</item>
+<item>全部内容和实际比例间切换</item>
+<item>上一个屏幕</item>
+<item>下一个屏幕</item>
+<item>编辑布局</item>
+<item>添加物件</item>
+<item>自定义闪电桌面</item>
+<item>自定义主屏幕或文件夹</item>
+<item>打开程序</item>
+<item>Launch shortcut</item>
+<item>Select wallpaper</item>
+<item>打开菜单</item>
+<item>显示状态栏</item>
+<item>显示或隐藏程序菜单和状态栏</item>
+<item>显示提醒</item>
+<item>搜索</item>
+<item>移动物件</item>
+<item>自定义物件</item>
+<item>物件菜单</item>
+<item>打开物件</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">使用滚动停止</string>
+<string name="auto_stop_s">在桌面边界处自动停止滚动</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Select a backup archive to restore</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>无</item>
+<item>打开/关闭</item>
+<item>淡入/淡出</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">重置缩放/旋转</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Single finger scroll in edit mode</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Toggle portrait/landscape</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">滚动速度</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Backup then apply</string>
+<string name="apply_tmpl_n">Only apply</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">默认图标</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Transparent bars and content overlap</string>
+<string name="ad_ab_c_s">Background image, visibility</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Seamless mode</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">English</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

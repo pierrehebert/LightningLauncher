@@ -1,0 +1,26 @@
+Lightning Launcher je rychlá, odlehčená a plně nastavitelná náhrada domovské obrazovky pro Android.
+
+Hlavní vlastnosti:
+- rozsáhlý výběr módů zobrazení: mřížka, jeden sloupec, horizontální či vertikální rozvržení, volně umístěné ikony...
+- neomezené nastavení vzhledu: změna popisků, ikon, fontu, barev, zarovnání, velikosti atd.
+- inovativní koncept: Domovská obrazovka je jako neomezená plocha, na které mohou být kdekoliv a jakkoliv umístěné ikony a widgety
+- každá položka (ikona aplikace, zkratka, widget,...) může být jednotlivě nastavována, zvětšena, otočena, zlepšena její čitelnost nebo přidány okolní pixely buďto kvůli zarovnání nebo prostě jen tak.
+- podporuje promyšlené složky, které mohou obsahovat ikony i widgety nebo další složky, takže dovolují velmi komplexní uspořádání. Každou složku lze přizpůsobit danému rozvržení nebo vizuálnímu tématu.
+- podporuje nastavitelné klávesy nebo gesta: přiřaďte zvolenou akci dané klávese, spusťte zvolenou aplikaci gestem.
+- napsán od nuly a od základu s cílem ušetřit co nejvíce energie a RAM. Čím více máte RAM pro aplikace, tím rychleji pracují a spotřebujete i méně energie, čímž prodloužíte výdrž baterie.
+- a mnohem více uvnitř...
+
+Lightning Launcher je navíc bez reklam, nepotřebuje oprávnění k internetu ani přístup root-a. Neexistují speciální plné/pro/prime nebo HD verze. Veškerá síle Lightning Launcheru je obsažena jednom, velmi malém a úžasně efektivním balíčku. Můžete se však poohlédnout po dalších dodatečných aplikacích. Jejich zakoupením získáte další luxusní možnosti a také podpoříte vývoj aplikace ... a jejího autora, který touží zdokonalovat tuto aplikaci, aby se stala nejlepším spouštěčem vůbec.
+
+Vítám všechny komentáře, doporučení a hlášení chyb. Vzhledem k tomu, že komentáře zde na Google Play jsou pro tyto účely obtížně použitelné, prosím zašlete mi svoji otázku/objevenou chybu/doporučení na e-mail pierrox@pierrox.net.
+Navštivte facebookový profil http://www.facebook.com/LightningLauncher, kde se dozvíte, na čem právě pracuji, kde si můžete vyžádat nějakou vlastnost nebo prostě položit otázku.
+Jakékoliv komentáře k českému překladu vítám na e-mailové adrese jfvmarek@gmail.com.
+
+Lightning Launcher: vaše domovská obrazovka ve Vašem vlastním stylu!
+Užijte si ji!
+
+Oprávnění:
+- CALL_PHONE: je nezbytné k možnosti vytvořit zkratku pro přímé volání. Toto oprávnění je vyžadováno ve všech spouštěcích aplikací, které mají možnost vytvářet zkratky pro přímé volání. LL nebude nikam volat bez Vašeho vědomí.
+- EXPAND_STATUS_BAR: jak již říká jeho jméno, je použit pro akci "Ukaž status bar".
+- SET_WALLPAPER_HINTS: používá se pro nastavení rozměrů pozadí.
+- nepotřebuje další oprávnění!

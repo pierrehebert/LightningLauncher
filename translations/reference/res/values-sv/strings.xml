@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Svenska</string>
+<string name="pack_name_short">Svenska</string>
+<string name="tranlator_name">Henrik Danielsson</string>
+
+<string name="description">Lightning Launcher is a fast, light and extremely customizable launcher (also known as "home screen replacement", or "shell"). \n\nLightning is the launcher of choice for people who wants a butter smooth, light on memory and tailor-made home screen replacement. \n\nUnlike most traditional launchers, Lightning lets you place items everywhere on the desktop, not only to the left or right sides, but also on pages above and below. Think at the desktop as an unlimited canvas extending in both horizontal and vertical directions instead of a strip, and you will get the idea. \n\nThis mean: as many pages as you need, more space for your apps, and faster navigation. \n\nLightning has some interesting features, such as being able to put widgets in folders (and even other folders for hierarchical navigation), or letting you freely move, scale and rotate any items (note: please switch to "free mode" first to enable rotate/scale). \n\nOh, and did I mentioned that LL was light on memory, leaving more RAM for your apps ? \n\nWith its wide set of options and switches, LL is one of the most customizable launcher, albeit perhaps not the easiest to configure yet ! Agreed, as most powerful tools, LL has a learning curve. But isn\'t that a small price to pay to get the most exciting and unique home screen ;-) \n\nAll comments, suggestions and bug reports are welcome. Please email your questions and bug reports to me (Pierre Hébert) at pierrox@pierrox.net, or visit the facebook page at http://www.facebook.com/LightningLauncher to learn more on what I am currently working on, or request for some feature, or simply ask a question. \n\Enjoy ! \n\Permission: \n- EXPAND_STATUS_BAR: as its name says, used for the "Show status bar" action. \n- SET_WALLPAPER_HINTS: used to set the wallpaper dimension \n- no other permission needed !</string>
+
+
+<string name="start_activity_error">Kan inte starta appen</string>
+<string name="menu_add">Lägg till…</string>
+<string name="menu_settings">Android-inställningar</string>
+<string name="menu_customize">Anpassa Lightning</string>
+<string name="menu_customize_folder">Anpassa katalog</string>
+<string name="menu_objects_layout">Anpassa utseende</string>
+<string name="dialog_action_title">Lägg till…</string>
+
+<string-array name="dialog_action_values">
+<item>Applikation</item>
+<item>Genväg</item>
+<item>App widget</item>
+<item>LL Widget</item>
+<item>Katalog</item>
+<item>Stoppunkt för rullning</item>
+</string-array>
+
+<string name="mi_remove">Ta bort</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Anpassa</string>
+<string name="mi_move_to_screen">Flytta till hemskärm…</string>
+<string name="mi_edit_icon">Välj ikon</string>
+<string name="mi_edit_label">Egen text</string>
+<string name="mi_edit_copy_style">Kopiera stil…</string>
+<string name="mi_pick_app">Välj app att starta</string>
+<string name="mi_pick_widget">Välj en annan widget</string>
+<string name="mi_edit_more">Mer...</string>
+<string name="mi_position">Position…</string>
+<string name="mi_pin">Fäst</string>
+<string name="mi_unpin">Lossa fäst objekt</string>
+<string name="mi_add_to_launcher">Lägg till på hemskärm</string>
+<string name="mi_hide_unhide">Dölj/Visa</string>
+<string name="mi_app_details">Appdetaljer</string>
+<string name="mi_widget_options">Widgetinställningar</string>
+<string name="mi_move_out_of_folder">Flytta ut ur katalog</string>
+<string name="mi_zorder">Flytta framför/bakom</string>
+<string name="first_use_title">Välkommen!</string>
+<string name="first_use_message">Lightning Launcher är en nätt, snabb och anpassningsbar ersättare för Androids hemskärm.\n\nLL kommer nu att förbereda listan över appar en gång för alla.\n\nMissa inte videohandledningenarna för att lära dig mer.\n\nHa så kul!</string>
+<string name="all_apps">Alla appar</string>
+<string name="menu_refresh">Uppdatera</string>
+<string name="menu_zoom">Zooma</string>
+<string name="menu_see_only_visible">Endast synliga</string>
+<string name="menu_see_only_hidden">Endast osynliga</string>
+<string name="menu_see_all">Alla appar</string>
+<string name="empty_folder">långtryck för att\nlägga till objekt,\nmeny för mer</string>
+<string name="file_picker_activity_up">Upp</string>
+
+<string name="copy_style_toast">Tryck på ett objekt för att kopiera dess stil</string>
+<string name="copy_style_cancel">Kopiering avbruten</string>
+<string name="copy_style_done">Stil kopierad!</string>
+<!-- <string name="please_confirm">Please confirm</string> -->
+<!-- <string name="delete_page_msg">Switching from dual to single setup will delete the configuration used in landscape mode. Continue ?</string> -->
+
+<string name="settings">Inställningar</string>
+<string name="general_t">Allmänt</string>
+<string name="general_s">Språk, knappar, gester…</string>
+<string name="dashboard_t">Aktuell skärm</string>
+<string name="dashboard_s">Anpassa utseende och beteende hos den aktuella skärmen.</string>
+<string name="app_drawer_t">App-lådan</string>
+<string name="app_drawer_s">Inställningar för applistan</string>
+<string name="app_killer_t">Appdödare</string>
+<string name="app_killer_s">En nätt appdödare direkt integrerad med LL</string>
+<string name="donate_t">Donera</string>
+<string name="donate_s">Gillar du denna app och vill stödja oss?</string>
+<string name="backup_t">Säkerhetskopiera</string>
+<string name="restore_t">Återställ</string>
+<string name="rate_t">Betygsätt den här appen</string>
+<string name="rate_s">Uttryck din åsikt på appbutiken</string>
+<string name="facebook_t">Besök Facebooksidan</string>
+<string name="facebook_s">Se vad som är på gång i nästa version, be om nya funktioner, eller rapportera en bugg.</string>
+<string name="ld_t">Lightning Drawer</string>
+<string name="ld_s">En avancerad och effektiv hemskärm</string>
+<string name="customize_ll">Anpassa Lightning</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Språk</string>
+<string name="language_s">Välj eller installera ett språkpaket</string>
+<string name="lg_pick_t">Välj ett språkpaket</string>
+<string name="lg_pick_s">Det här kommer att starta om LL</string>
+<string name="lg_install_t">Hämta nya paket</string>
+<string name="lg_install_s">Installera från appbutiken</string>
+
+<string name="lg_contrib_t">Bidrag</string>
+<string name="lg_contrib_s">Inget paket för ditt språk? Hjälp gärna projektet genom att bidra med översättningar</string>
+<string name="events_t">Event &amp; åtgärder</string>
+<string name="events_s">Ställ in knappar, rullning, gester</string>
+<string name="ev_home">Hemknappen</string>
+<string name="ev_menu">Menyknappen</string>
+<string name="ev_search">Sökknappen</string>
+<string name="ev_item_tap">Tryck på ett objekt</string>
+<string name="ev_item_ltap">Långt tryck på ett objekt</string>
+<string name="ev_bg_tap">Tryck på tomt utrymme</string>
+<string name="ev_bg_dtap">Dubbeltryck på tomt utrymme</string>
+<string name="ev_bg_ltap">Långt tryck på tomt utrymme</string>
+<string name="ev_swipe_r">Svepning höger</string>
+<string name="ev_swipe_l">Svepning vänster</string>
+<string name="ev_swipe_u">Svepning upp</string>
+<string name="ev_swipe_d">Svepning ner</string>
+<string name="ev_swipe2_r">2 fingers svepning höger</string>
+<string name="ev_swipe2_l">2 fingers svepning vänster</string>
+<string name="ev_swipe2_u">2 fingers svepning upp</string>
+<string name="ev_swipe2_d">2 fingers svepning ner</string>
+
+<string name="an_u">Ta bort</string>
+<string name="an_n">Gör inget (lås)</string>
+<string name="an_ad">Öppna applistan</string>
+<string name="an_zfs">Zomma till full skala</string>
+<string name="an_z100">Zooma till 100p.</string>
+<string name="an_zt">Växla zoom fullskala/100p.</string>
+<string name="an_pd">Föregående skärm</string>
+<string name="an_nd">Nästa skärm</string>
+<string name="an_el">Anpassa utseende</string>
+<string name="an_ao">Lägg till åtgärd</string>
+<string name="an_cl">Anpassa Lightning</string>
+<string name="an_cd">Anpassa aktuell skärm eller katalog</string>
+<string name="an_la">Starta app</string>
+<string name="an_ls">Starta genväg</string>
+<string name="an_sw">Select wallpaper</string>
+<string name="an_lm">Applista</string>
+<string name="an_ssb">Visa statusraden</string>
+<string name="an_smsb">Visa/dölj app-lista &amp; statusraden</string>
+<string name="an_sn">Visa aviseringar</string>
+<string name="an_s">Sök</string>
+<string name="an_i_m">Flytta objekt</string>
+<string name="an_i_c">Anpassa objekt</string>
+<string name="an_i_me">Objektmenyn</string>
+<string name="an_i_l">Starta app</string>
+
+<string name="auto_edit_t">Autoredigeringsläge</string>
+<string name="auto_edit_s">Gå automatiskt in i redigeringsläge när ett nytt objekt läggs till</string>
+<string name="page_anim_t">Skärmanimation</string>
+
+<string-array name="page_anim_e">
+<item>Inget</item>
+<item>Tona in/ut</item>
+<item>Glid vänster/höger</item>
+<item>Glid upp/ner</item>
+</string-array>
+
+<string name="keep_in_memory_t">Försök behålla i minnet</string>
+<string name="keep_in_memory_s">Kommer att snabba upp återgången till hemskärmen, men undvik helst för att spara minne</string>
+<string name="min_ram_t">Minimera RAM-åtgång</string>
+<string name="min_ram_s">Börjar gälla efter omstart. Föredra minnesåtgång framför hastighet.</string>
+<string name="tools_pick_shortcut">Välj en genväg</string>
+<string name="tools_pick_widget">Välj en widget</string>
+<string name="new_style">Ny stil…</string>
+<string name="choose_style_name">Välj ett namn för den nya stilen:</string>
+<string name="delete_style">Ta bort den här stilen?</string>
+<string name="relayout_items">Den här stilen har färre kolumner än den aktuella. Fortsätt och organisera om objekten?</string>
+<string name="style_saved">Stil sparad</string>
+<string name="style_loaded">Stil laddad</string>
+<string name="install_widgets">Lägg till LL widgets…</string>
+<string name="item_settings_icon_copy_failed">Kunde inte kopiera ikonen</string>
+<string name="tool_not_available">Tyvärr, det här verktyget är inte tillgängligt</string>
+<string name="default_folder_name">Katalog</string>
+<string name="app_added" formatted="true">%s tillagd</string>
+<string name="select_launcher_title">Välj standardhemskärm</string>
+<string name="extras">Extra</string>
+<string name="permission_denied">Åtkomst nekad. För samtalsgenvägar, installera LL-tillägg.</string>
+<string name="appearance">Utseende (svep vänster för förhandsgranskning)</string>
+<string name="items_t">Objekt</string>
+<string name="items_s">Anpassa standard-typsnitt, färger, ikoner, ramar och mer</string>
+<string name="background_t">Bakgrundsbild &amp; bakgrund</string>
+<string name="background_s">Välj bakgrundsbild, toningsfärg, rulleffekt</string>
+<string name="grid_t">Rutnätslinjer</string>
+<string name="grid_s">Endast för rutnätsläge, välj bredd, färg och position</string>
+<string name="folder_look_t">Katalogfönster</string>
+<string name="folder_look_s">Välj standardbakgrund, ramar, animation...</string>
+<string name="this_folder_look_t">Aktuell katalogs fönster</string>
+<string name="this_folder_look_s">Bakgrunder, ramar eller animation...</string>
+<string name="layout_t">Layout</string>
+<string name="layout_s">Välj hur objekt placeras (på ett runät, fritt), välj antal kolumner, radhöjd, etc.</string>
+<string name="zoom_scroll_t">Zooming och rullning</string>
+<string name="zoom_scroll_s">Navigering på en skärm</string>
+<string name="folder_feel_t">Kataloger</string>
+<string name="folder_feel_s">Autostäng, diverse.</string>
+<string name="this_folder_feel_t">Aktuell katalog</string>
+<string name="pg_misc_t">Diverse</string>
+<string name="pg_misc_s">Skärmorientering, val för statusrad</string>
+<string name="color_c">Färg</string>
+
+<string name="wp_w_t">Bredd</string>
+<string name="wp_h_t">Höjd</string>
+<string name="wp_auto">Använd 0 för automatisk storlek</string>
+<string name="wp_scroll_t">Rullande bakgrundsbild</string>
+<string name="wp_scroll_s">Kan påverka prestanda</string>
+
+<string name="grid_h_color_t">Horisontell linjefärg</string>
+<string name="grid_h_size_t">Horisontell linjetjocklek</string>
+<string name="grid_v_color_t">Vertikal linjefärg</string>
+<string name="grid_v_size_t">Vertikal linjetjocklek</string>
+<string name="grid_color_s">Använd transparent för inget</string>
+<string name="grid_size_s">Använd 0 för hårfin</string>
+<string name="grid_above">Rita över objekt</string>
+<string name="folder_title">Etikettval</string>
+<string name="display_title">Visa etikett</string>
+<string name="font_color">Typsnitt färg</string>
+<string name="font_size">Typsnitt storlek</string>
+<string name="folder_anims">Animationer</string>
+<string name="anim_in">Öppna</string>
+<string name="anim_out">Stänga</string>
+
+<string name="behaviour">Beteende</string>
+<string name="free_mode_t">Fritt läge</string>
+<string name="free_mode_s">Använd inget rutnät, tillåt fri objektplacering (inklusive skalning och rotation)</string>
+<string name="dual_pos_t">Dubbel position</string>
+<string name="dual_pos_s">Tillåt objekt att ha två positioner: en i porträttläge (primär), och en i landskapsläge</string>
+<string name="snap_t">Snapping</string>
+<string-array name="snap_e">
+<item>Ingen</item>
+<item>Mitten</item>
+<item>Kant</item>
+<item>Mitten &amp; kant</item>
+</string-array>
+<string name="placement">Placering</string>
+<string name="colums">Rutnätskolumner</string>
+<string name="rows">Rutnätsrader</string>
+<string name="mode_t">Läge</string>
+
+<string-array name="mode_e">
+<item>Automatisk</item>
+<item>Fast antal</item>
+<item>Fast storlek</item>
+</string-array>
+
+<string name="number">Antal</string>
+<string name="size">Storlek</string>
+<string name="col_num_s">Antal kolumner per skärmbredd</string>
+<string name="col_size_s">Kolumnbredd</string>
+<string name="row_num_s">Antal rader per skärmhöjd</string>
+<string name="row_size_s">Radhöjd</string>
+<string name="scroll_dir_t">Rullrikning</string>
+
+<string-array name="scroll_dir_e">
+<item>Automatisk</item>
+<item>Endast horisontell</item>
+<item>Endast vertikal</item>
+<item>Båda</item>
+<item>Ingen rullning</item>
+</string-array>
+
+<string name="overscroll_t">Överrullning</string>
+
+<string-array name="overscroll_e">
+<item>Sakta in</item>
+<item>Studsa</item>
+<item>Avstängd</item>
+</string-array>
+
+<string name="snap_to_pages_t">Lås till sidor</string>
+<string name="snap_to_pages_s">Stanna alltid rullning vid sidgräns</string>
+<string name="fit_item_t">Anpassa skärm till objekten</string>
+<string name="fit_item_s">Rullning stannar vid objektkanter</string>
+<string name="no_diagonal_scrolling_t">Stäng av diagonal rullning</string>
+<string name="no_diagonal_scrolling_s">Rulla endast åt ett håll åt gången</string>
+<string name="pinch_zoom_t">Aktivera nyp-zooming</string>
+<string name="auto_close_t">Stäng automatiskt</string>
+<string name="auto_close_s">Stäng automatiskt kataloger när en av dess appar startas.</string>
+<string name="anim_glitch_fix_t">Fix för animationsbugg</string>
+<string name="anim_glitch_fix_s">Lägg till en utfyllnad på 1 pixel för att fixa en bugg som endast uppstår på vissa versioner av Android.</string>
+<string name="screen_orient_t">Skärmorientering</string>
+
+<string-array name="screen_orient_e">
+<item>Automatisk</item>
+<item>Porträtt</item>
+<item>Landskap</item>
+<item>Systeminställning</item>
+</string-array>
+
+<string name="hide_statusbar_t">Dölj statusraden</string>
+<string name="hide_statusbar_s">Tryck på menyknappen för att visa den</string>
+<string name="manage">Hantera</string>
+<string name="load_style_t">Ladda en stil</string>
+<string name="load_style_s">Ersätt nuvarande konfiguration med värden från stilen</string>
+<string name="save_style_t">Spara till en stil</string>
+<string name="save_style_s">Spara nuvarande skärmkonfiguration till en egen stil</string>
+<string name="confirm_reset_page">Vill du verkligen återställa denna skärm?</string>
+<string name="reset_page_t">Återställ denna skärm</string>
+<string name="reset_page_s">Ta bort objekt från denna skärm och återställ till standardstilen.</string>
+<string name="tab_label">Text</string>
+<string name="tab_icon">Ikon</string>
+<string name="tab_layout">Pos.</string>
+<string name="tab_box">Box</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Allmänt</string>
+<string name="l_display">Visa etiketten</string>
+<string name="l_custom">Välj en egen etikett</string>
+<string name="l_size">Typsnittstorlek</string>
+<string name="l_type_face">Välj ett eget typsnitt…</string>
+<string name="l_style_t">Typsnittsstil</string>
+
+<string-array name="l_style_e">
+<item>Normal</item>
+<item>Fet</item>
+<item>Kursiv</item>
+<item>Fet &amp; kursiv</item>
+</string-array>
+
+<string name="l_num_lines">Maximalt antal rader</string>
+<string name="l_colors">Färger</string>
+<string name="l_color_normal">Normal färg</string>
+<string name="l_color_selected">Vald färg</string>
+<string name="l_color_focused">Fouserad färg</string>
+<string name="l_shadow">Skugga</string>
+<string name="l_shadow_enable">Aktivera skugga</string>
+<string name="l_shadow_radius">Radie</string>
+<string name="l_shadow_offset_x">Förskjutning X</string>
+<string name="l_shadow_offset_y">Förskjutning Y</string>
+<string name="l_shadow_color">Färg</string>
+<string name="i_main">Allmänt</string>
+<string name="i_display">Visa ikonen</string>
+<string name="i_custom">Välj en egen ikon</string>
+<string name="i_folder_t">Katalogens ikonstil</string>
+
+<string-array name="i_folder_e">
+<item>Ikon</item>
+<item>Rutnät</item>
+<item>Stapel</item>
+</string-array>
+
+<string name="i_effect">Lager</string>
+<string name="i_e_back">Bakgrundsbild</string>
+<string name="i_e_over">Overlay</string>
+<string name="i_e_mask">Mask</string>
+<string name="i_e_scale">Inre skala</string>
+
+<string name="i_smooth">Jämn ikon</string>
+<string name="i_scale_t">Skala</string>
+<string name="i_scale_s">Varning: 4x skala kräver 16x mer minne: detta kan göra enheten långsam.</string>
+<string name="i_reflect">Reflektion</string>
+<string name="i_reflect_enable">Aktivera reflektion</string>
+<string name="i_reflect_overlap">Överlappa med ikonen</string>
+<string name="i_reflect_size">Storlek</string>
+<string name="i_reflect_scale">Skala</string>
+<string name="la_margin">Marginal mellan ikon och etikett</string>
+<string name="la_position_t">Etikettposition</string>
+
+<string-array name="la_position_e">
+<item>Vänster</item>
+<item>Över</item>
+<item>Höger</item>
+<item>Under</item>
+</string-array>
+
+<string name="b_alignh_t">Horisontell justering</string>
+
+<string-array name="b_alignh_e">
+<item>Vänster</item>
+<item>Centrerad</item>
+<item>Höger</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_alignv_t">Vertikal justering</string>
+
+<string-array name="b_alignv_e">
+<item>Överkant</item>
+<item>Mitten</item>
+<item>Underkant</item>
+<item>Custom</item>
+</string-array>
+
+<string name="b_hint">Tryck på en eller flera skärmar,\nvälj sen en åtgärd nedan</string>
+<string name="b_size">Sätt storleken på valda områden</string>
+<string name="b_color_normal">Normal färg</string>
+<string name="b_color_selected">Vald färg</string>
+<string name="b_color_focused">Fokuserad färg</string>
+<string name="b_color_s">Välj färg för ramar eller innehåll</string>
+<string name="m_enabled_t">Klickbar</string>
+<string name="m_enabled_s">Välj redigeringsläge för att välja ett inaktiverat objekt</string>
+<string name="m_alpha_t">Transparens</string>
+<string name="m_alpha_s">Snygg men långsam.\n0: osynlig, 255: fullt opak</string>
+<string name="m_smooth_transform_t">Jämn vid transformationer</string>
+<string name="m_smooth_transform_s">Snyggare men långsammare</string>
+
+<string-array name="preview_item_labels">
+<item>Normal</item>
+<item>Vald</item>
+<item>Fokuserad</item>
+</string-array>
+
+<string name="il_preview">Förhandsvisning av skärm\n(kan skilja från verkligheten)</string>
+<string name="preview_toast">Förhanssvisningsläge\nalla åtgärder avstängda</string>
+<string name="pick_a_font">Välj en TTF-fil…</string>
+<string name="system_font">Systemtypsnitt</string>
+<string name="left">vänster</string>
+<string name="top">över</string>
+<string name="right">höger</string>
+<string name="bottom">botten</string>
+<string name="margin">marginal</string>
+<string name="border">ram</string>
+<string name="padding">utfyllning</string>
+<string name="content">innehåll</string>
+<string name="ovr_custom">anpassad</string>
+
+<string name="pick_t">Välj en ikon från</string>
+<string name="pick_file">Inbyggd filhanterare</string>
+<string name="pick_gallery">Extern filhanterare</string>
+<string name="pick_icon_pack">ADW-ikonpack</string>
+<string name="pick_default">Standardikon</string>
+
+<string name="tutorials">Handledningar</string>
+<string name="donate">Donera</string>
+<string name="other_apps">Andra appar</string>
+<string name="tut_intro">Introduktion</string>
+<string name="tut_basic_editing">Kom igång</string>
+<string name="tut_custo">Anpassa \nobjekt</string>
+<string name="tut_free_mode">Fritt läge</string>
+<string name="tut_lock">Lås skärm</string>
+<string name="tut_pin">Fäst/docka objekt</string>
+<string name="tut_scroll">Skärmar och \nnavigering</string>
+<string name="dialog_color_picker">Färgväljare</string>
+
+<string name="shortcut_settings">LL-inställning</string>
+<string name="shortcut_actions">LL-åtgärd</string>
+
+<string name="no_backup_archive">Inga sparade säkerhetskopieringar än</string>
+<string name="backup_in_progress">Säkerhetskopiering pågår...</string>
+<string name="restore_in_progress">Återställning pågår...</string>
+<string name="backup_done">Säkerhetskopiering sparad till:\n%s</string>
+<string name="backup_error">Säkerhetskopiering misslyckades, kontrollera att det finns tillräckligt minne på sd-kort</string>
+<string name="restore_error">Återställning misslyckades, kontrollera att säkerhetskopian är giltig och kan läsas</string>
+
+<string name="confirm_delete">Är du säker på att du vill radera?</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Återställ</string>
+<string name="bg_sys_wp">Bakgrundsbild</string>
+<string name="bg_sys_wp_select_t">Ändra systemets bakgrundsbild...</string>
+<string name="bg_sys_wp_select_s">Systemets bakgrundsbild visas på alla skärmar och applådan</string>
+<string name="bg_screen_wp">Hemskärmens bakgrundsbild</string>
+<string name="bg_screen_wp_select_t">Ändra hemskärmens bakgrundsbild...</string>
+<string name="bg_screen_wp_select_s">Denna bakgrund visas ovanpå systemets bakgrundsbild. Varje skärm kan ha sin egen bakgrund</string>
+<string name="bg_more">Mer</string>
+<string name="bg_more_color_t">Färg</string>
+<string name="bg_more_color_s">Ange full ogenomskinlighet för att inaktivera bakgrundsbild. Ange en transparent färg för att tona bakgrundsbild</string>
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Långtryck</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Tryck</string>
+<string name="style_s1">Standard</string>
+<string name="style_s2">Kompakt (små ikoner, liten text)</string>
+<string name="style_s3">Läsbar (stora ikoner, stor text)</string>
+<string name="style_s4">Lista; ikoner till höger</string>
+<string name="style_s5">Lista; stor text, utan ikoner</string>
+<string name="style_s6">Lista; stor text och ikoner</string>
+<string name="style_s7">Rutmönster; utan text</string>
+<string name="style_s8">Färgglad</string>
+<string name="style_s9">Zune-stil</string>
+<string name="dialog_help_hint_t">Tips</string>
+<string name="dialog_help_hint_m">Långtryck på en inställning för hjälp</string>
+<string name="dialog_help_hint_dsa">Visa inte igen</string>
+<string name="m_pin_mode">Pin mode</string>
+<string-array name="m_pin_mode_e">
+<item>Not pinned</item>
+<item>Horizontal&amp;Vertical</item>
+<item>Horizontal</item>
+<item>Vertical</item>
+</string-array>
+<string name="m_events">Gester</string>
+<string name="shortcut_screen">LL-hemskärm &amp; position</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">Den ultimata startbilden. Inga kompromisser.</string>
+<string name="more_apps_t">Fler gratisappar</string>
+<string name="more_apps_s">Från PierroX (verktyg, spel, underhållning)</string>
+<string name="mi_kill">Kill</string>
+<string name="killed_freed">Killed (%dM freed)</string>
+<string name="killed">Killed!</string>
+<string name="configure_pages_t">Konfigurera skärmar</string>
+<string name="configure_pages_s">Ställ in flera skärmar, organisera, velj hemskärm, ikoner, etiketter...</string>
+<string name="mi_mode_custom">Min applåda</string>
+<string name="mi_mode_by_name">Alla appar efter namn</string>
+<string name="mi_mode_recent_apps">Senast startade</string>
+<string name="mi_mode_recently_updated">Senast uppdaterade</string>
+<string name="mi_mode_frequently_used">Mest använda</string>
+<string name="mi_mode_running">Igång</string>
+<string name="mi_es_add_folder">Lägg till mapp</string>
+<string name="mi_es_edit_layout">Anpassa utseende</string>
+<string name="mi_es_show_hidden">Visa dolda</string>
+<string name="mi_es_hide_hidden">Dölj dolda</string>
+<string name="mi_es_refresh">Uppdatera</string>
+<string name="mi_es_settings">Inställningar</string>
+<string name="mi_es_folder_settings">Mappinställningar</string>
+<string name="mi_uninstall">Avinstallera</string>
+<string name="my_drawer_title">Min applåda</string>
+<string name="my_drawer_message">"Min applåda" ger dig fria tyglar över din applåda.\n\nI detta läge kan appar flyttas runt obegränsat på en stor måladruk och mappar kan användas för att organisera appar.\n\nTesta att zooma ut och väl "Anpassa utseende": du kommer upptäcka att appar kan placeras på högra, vänstra, övre och nedre skärmarna och anpassa apparna precis som du vill ha dem.</string>
+<string name="empty_folder_x">tom mapp\ndrag-och-släpp appar över mappikonen\nför att lägga till</string>
+<string name="ll_import_title">Importing LL setup</string>
+<string name="ll_import_message">En installation av Lightning Launcher har upptäckts.\n\nAll data kommer nu att importeras. När detta är slutfört kan du avinstallera Lightning Launcher och använda Lightning Launcher eXtreme istället.</string>
+<string name="init_ok">Färdig!</string>
+<string name="init_ko">Något gick snett vid filkopiering!</string>
+<string name="auto_exit_t">Stäng automatiskt</string>
+<string name="auto_exit_s">Stäng applådan vid appstart</string>
+<string name="icons_t">Ikonpaket</string>
+<string name="icons_s">Använd ett ADW-ikonpaket eller återställ anpassade ikoner</string>
+<string name="apply_icon_pack_t">Använd ett ADW-ikonpaket</string>
+<string name="apply_icon_pack_s">Fungerar med teman som tillhandahåller egna ikon-/appuppsättningar</string>
+<string name="icon_pack_no_appfilter">Detta ikonpack har inga app-/ikonuppsättningar</string>
+<string name="revert_custom_icons_t">Återställ anpassade ikoner</string>
+<string name="revert_custom_icons_s">Inkludera anpassad ikoneffekt och indre skalning</string>
+<string name="please_wait">Var god vänta...</string>
+<string name="app_not_valid">Denna genväg är inte associerad med en giltig app. Vill du hämta den från Google Play eller välja en annan app?</string>
+<string name="app_store">Google Play</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamisk text</string>
+<string name="tab_dt_data">Data</string>
+<string name="dt_source_t">Text att visa</string>
+<string-array name="dt_source_e">
+<item>Antal olästa SMS</item>
+<item>Antal olästa GMail</item>
+<item>Missade samtal</item>
+<item>Datum &amp; tid</item>
+<item>Lagring</item>
+<item>Battery level</item>
+<item>Heap max</item>
+<item>Heap free</item>
+</string-array>
+<string name="dt_date_ef_t">Enkelt format</string>
+<string-array name="dt_date_ef_e">
+<item>Datum</item>
+<item>Tid</item>
+<item>Datum &amp; tid</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>åååå-mm-dd</item>
+<item>tt:mm:ss</item>
+<item>åååå-mm-dd tt:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Expertformat</string>
+<string name="dt_date_xf_s">Långtryck för dokumentation</string>
+<string name="dt_display_empty_t">Visa när tom</string>
+<string name="dt_format_error">Fel i format</string>
+<string name="dt_storage_s_t">Välj lagring</string>
+<string-array name="dt_storage_s_e">
+<item>Intern</item>
+<item>Extern</item>
+</string-array>
+<string name="dt_storage_f_t">Display format</string>
+<string-array name="dt_storage_f_e">
+<item>Normal</item>
+<item>Short</item>
+<item>Percent</item>
+<item>Bytes</item>
+</string-array>
+<string name="dt_storage_w_t">What to display</string>
+<string-array name="dt_storage_w_e">
+<item>Space left</item>
+<item>Space used</item>
+<item>Available</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Transparent status bar</string>
+<string name="trans_statusbar_s">Only on devices that support it (long tap for more)</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Swap items</string>
+<string name="swap_items_s">Swap items if they overlap (grid mode only)</string>
+<string name="rearrange_items_t">Rearrange items</string>
+<string name="rearrange_items_s">Prevent gaps between items (grid mode only)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Säkerhetskopiera / återställ</string>
+<string name="an_gh">Go to home desktop</string>
+<string name="an_ghz100">Go to home desktop, then zoom 100p.</string>
+<string name="an_sd">Select desktop to go to</string>
+<string name="an_re">Restart app</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Settings below apply to:</string>
+<string-array name="grid_pl_e">
+<item>Portrait &amp; Landscape</item>
+<item>Portrait</item>
+<item>Landscape</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Please confirm:</string>
+<string name="apply_tmpl_m">You are about to apply the template \'%s\', do you want to make a backup of your current setup first ?</string>
+<string name="apply_tmpl_p">Backup then apply</string>
+<string name="apply_tmpl_n">Only apply</string>
+<string name="apply_tmpl_g">Applying template…</string>
+<string name="apply_tmpl_e">Unable to apply this template!</string>
+<string name="tmpl_t">Templates</string>
+<string name="tmpl_s">Browse and apply templates, export for APK</string>
+<string name="tmpl_a_t">Apply</string>
+<string name="tmpl_a_s">Load an installed template</string>
+<string name="tmpl_b_t">Browse existing templates</string>
+<string name="tmpl_b_s">Get fresh new themes</string>
+<string name="tmpl_e_t">Export for APK</string>
+<string name="tmpl_e_s">Long tap to read the tutorial</string>
+<string name="tmpl_c">Select a template</string>
+<string name="tmpl_e_m">Exporting…</string>
+<string name="tmpl_e_d">Export färdig</string>
+<string name="tmpl_e_e">Export error!</string>
+<string name="tmpl_check">Opening template…</string>
+<string name="tmpl_check_e">Unable to read this template!</string>
+<string name="tmpl_check_ut">Need to update</string>
+<string name="tmpl_check_um">This template has been designed for a newer version of Lightning Launcher, would you like to update now ?</string>
+<string name="tmpl_get_llx">Get LLX</string>
+<string name="tmpl_warn_t">Warning</string>
+<string name="tmpl_warn_c">Continue anyway</string>
+<string name="tmpl_warn_m">The template is ready to be applied but some warnings have been found:</string>
+<string name="tmpl_warn_llx">- this template has been designed with Lightning Launcher eXtreme, it may use some features not available in this version.</string>
+<string name="tmpl_warn_screen">- this template does not exactly match your screen characteristics. Some elements may not be displayed correctly.</string>
+<string name="tmpl_warn_widget">- your device is not able to restore widgets automatically, you will need to manually recreate them.</string>
+<string name="widget_e">Could not load this widget\nTap to install or pick a new one</string>
+<string name="tmpl_s_p">Select desktops to export</string>
+<string name="an_ctf">Close topmost folder</string>
+<string name="an_caf">Close all folders</string>
+<string name="ev_screen_on">Screen on</string>
+<string name="ev_screen_off">Screen off</string>
+<string name="an_sa">Search app</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Honour pinned items in edit mode</string>
+<string name="gc_hpie_s">Long tap for the description</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Stop point</string>
+<string name="sp_b">Behavior</string>
+<string name="sp_ss">Stop scroll</string>
+<string name="sp_sd">Stop drag</string>
+<string name="sp_ba">Barrier</string>
+<string name="sp_dw">Desktop wide</string>
+<string name="sp_n">Snapping</string>
+<string name="sp_d">Direction</string>
+<string name="sp_dlr">Left to right</string>
+<string name="sp_drl">Right to left</string>
+<string name="sp_dtb">Top to bottom</string>
+<string name="sp_dbt">Bottom to top</string>
+<string name="assp_t">Always show stop points</string>
+<string name="assp_s">Stop points are always displayed, even in normal mode</string>
+<string name="gc_edit">Layout editor</string>
+
+<!-- added 116 -->
+<string name="backup_d">Backup</string>
+<string name="an_of">Open a folder</string>
+<string name="sf">Select a folder</string>
+<string name="br_n">Backup name</string>
+<string name="br_a">Select an action</string>
+<string name="br_r">Rename</string>
+<string name="br_d">Delete</string>
+<string name="br_s">Send</string>
+<string name="br_dc">Delete this archive ?</string>
+<string name="br_rc">Restore this archive ?</string>
+<string name="dt_gml_t">Gmail label</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Copy to desktop…</string>
+<string name="f_p">Placement</string>
+<string name="f_ac">When using custom alignment</string>
+<string name="f_l">Left</string>
+<string name="f_t">Top</string>
+<string name="f_af">Fade in / out</string>
+<string name="sp_e">Match edges</string>
+<string name="sp_el">Left</string>
+<string name="sp_er">Right</string>
+<string name="sp_et">Top</string>
+<string name="sp_eb">Bottom</string>
+
+<!-- added 119 -->
+<string name="np">Background images</string>
+<string name="np_d">Long tap for documentation</string>
+<string name="np_n">Normal background</string>
+<string name="np_s">Selected background</string>
+<string name="np_f">Focused background</string>
+<string name="np_r">Background image</string>
+<string-array name="anim2_e">
+<item>None</item>
+<item>Open / Close</item>
+<item>Slides to right</item>
+<item>Slides to left</item>
+<item>Slides to bottom</item>
+<item>Slides to top</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Switch to portrait</string>
+<string name="ev_ol">Switch to landscape</string>
+<string name="an_gdp">Go to specified desktop&amp;position</string>
+<string name="cof_t">Close other folders</string>
+<string name="cof_s">Allow only a single opened folder at a time</string>
+
+<!-- added 123 -->
+<string name="t_nb">Transparent navigation bar</string>
+<string name="gb_l">Left</string>
+<string name="gb_t">Top</string>
+<string name="gb_w">Width</string>
+<string name="gb_h">Height</string>
+<string name="gb_a">Angle</string>
+<string name="gb_sx">Scale X</string>
+<string name="gb_sy">Scale Y</string>
+<string name="gb_kx">Skew X</string>
+<string name="gb_ky">Skew Y</string>
+<string name="mi_geometry">Geometry</string>
+
+<!-- added 125 -->
+<string name="mi_fo">Folder options</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Customize panel content</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Detach from grid</string>
+<string name="mi_lmf">Attach to grid</string>
+<string name="mi_mop">Move out of panel</string>
+
+<!-- added 137 -->
+<string name="container">Panel size</string>
+<string name="uds_t">Use desktop size</string>
+<string name="uds_s">Use the desktop size to compute the cell size, not the panel size</string>
+<string name="mi_app">App…</string>
+<string name="mi_l">Lock</string>
+<string name="mi_ul">Unlock</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Menu key (long)</string>
+<string name="ev_back">Back key</string>
+<string name="ev_backl">Back key (long)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Items…</string>
+<string name="mi_ic">Compact</string>
+<string name="mi_isa">Sort a-z</string>
+<string name="mi_isd">Sort z-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Unlock screen</string>
+<string name="nly">Not locked yet</string>
+<string name="s_ls_t">Lock screen</string>
+<string name="s_ls_s">Select the desktop to be shown on the lock screen. Long tap for a tutorial.</string>
+<string name="s_ls_s_t">Select or disable the lock screen</string>
+<string name="s_ls_s_s">Select a desktop, tap and cancel to disable it</string>
+<string name="s_ls_s_c">The lock screen has been disabled.</string>
+<string name="i_ul">Unlocker</string>
+
+<!-- added 152 -->
+<string name="ukp_na">The Unlocker Plugin is not installed yet. Tap to install</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Before to lock, please ensure that this desktop can be unlocked safely, either using an unlocker or an \"Unlock screen\" action.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Selection effect</string>
+<string-array name="m_sel_e_e">
+<item>Plain</item>
+<item>Holo</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Stop points conflict with the \'Snap to page\' option: it has been automatically turned off.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Rotation</string>
+<string name="i_rot_s">Rotate the item upon screen rotation</string>
+
+<!-- deprecated: before 90 -->
+<string-array name="d0"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Gör inget (lås)</item>
+<item>Öppna app-listan</item>
+<item>Zomma till full skala</item>
+<item>Zooma till 100p.</item>
+<item>Växla zoom full skala/100p.</item>
+<item>Föregående skärm</item>
+<item>Nästa skärm</item>
+<item>Ändra layouten</item>
+<item>Lägg till åtgärd</item>
+<item>Anpassa Lightning</item>
+<item>Anpassa aktuell skärm eller katalog</item>
+<item>Starta app</item>
+<item>Launch shortcut</item>
+<item>Select wallpaper</item>
+<item>App-lista</item>
+<item>Visa statusraden</item>
+<item>Visa/dölj app-lista &amp; statusraden</item>
+<item>Visa notifieringar</item>
+<item>Sök</item>
+<item>Flytta objekt</item>
+<item>Anpassa objekt</item>
+<item>Objekt-menyn</item>
+<item>Starta app</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Använd rullstopp</string>
+<string name="auto_stop_s">Sluta automatiskt rulla vid skärmkanter</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Välj säkerhetskopiering för att återställa</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Ingen</item>
+<item>Öppna / Stänga</item>
+<item>Tona in / Tona ut</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Återställ skala/rotation</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Single finger scroll in edit mode</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Toggle portrait/landscape</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Rullhastighet</string>
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">English</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa" />
+<string-array name="zzz" />
+
+</resources>

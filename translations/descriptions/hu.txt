@@ -1,0 +1,24 @@
+A Lightning Launcher egy gyors, könnyû és teljesen testreszabható alternatív kezdõképernyõ alkalmazás Androidhoz.
+
+Fõbb jellemzõk:
+- elrendezési lehetõségek széles skálája: rács, egyetlen oszlop, vízszintes vagy függõleges görgetés, szabad pozícionálás...
+- megjelenés korlátlan testreszabhatósága: egyedi ikoncímkék, ikonok, betûtípusok, színek, igazítás, méretek és így tovább.
+- újszerû koncepció: a kezdõképernyõd olyan, mint egy határtalan felület, amelyen oda és úgy helyezhetsz el ikonokat és widgeteket, ahogyan neked tetszik.
+- minden egyes elem (alkalmazás, parancsikon, widget ...) külön-külön is testreszabható, nagyítható, forgatható. Így javítható az olvashatóság, optimalizálható az elrendezés, vagy éppen értékes pixeleket nyerhetsz egy zsúfolt konfiguráció megvalósításához. Vagy csak szimplán jól szórakozhatsz az elemek szabad alakításával.
+- kifinomult mapparendszer: a mappák tartalmazhatnak widgeteket vagy éppen további mappákat, ezzel többszintû rendszerezés is megvalósítható. Minden egyes mappa ugyancsak teljesen testreszabható, az elrendezéstõl kezdve a vizuális témáig.
+- gombok és mozdulatok konfigurálása: társíthatsz tetszõleges mûveleteket gombokhoz, gesztusokhoz, indíts tetszõleges alkalmazást egy mozdulattal.
+- a fejlesztés teljesen a nulláról, az alapoktól indult, a lehetõ leghatékonyabb erõforrás-kezelés és minimális RAM használat érdekében. Minél több memória marad a többi alkalmazás számára, annál gördülékenyebb lesz a rendszer, és az akkumulátor-igénybevétel is kisebb lesz.
+- és még sok más...
+
+Ezenkívül a Lightning Launcher ingyenes, reklámmentes, és nem igényel internet-elérési vagy éppen root jogosultságokat. Nincs teljes/pro/prime vagy HD verzió. A teljes Lightning ereje itt van, és elérhetõ ebben az egyetlen nagyon kicsi és hihetetlenül hatékony csomagban. Mégis érdemes lehet egy pillantást vetned az extra alkalmazásokra is. Ezen alkalmazások megvásárlásával hozzájuthatsz pár fényûzõ funkcióhoz. És ezáltal segíthetsz az alkalmazást életben tartani... és a fejlesztõt is, aki hajlandó ezt az appot a legeslegjobb kezdõképernyõ alkalmazássá tenni.
+
+Készséggel várok minden hozzászólást, javaslatot, hibajelentést. A Play Áruház hozzászólás-rendszere nehézkesen használható, emiatt kérlek, hogy inkább a pierrox@pierrox.net email címen keress meg a kérdésekkel/hibákkal.
+Látogasd meg a facebook oldalt is: http://www.facebook.com/LightningLauncher, ahol értesülhetsz arról, hogy mi lesz a következõ verzióban, kérhetsz új funkciókat, vagy csak egyszerûen kérdezhetsz az alkalmazással kapcsolatban.
+
+Lightning Launcher: a saját kezdõképernyõd, a saját stílusod!
+
+Engedélyek:
+- CALL_PHONE: szükséges a közvetlen hívás parancsikonokhoz. Ez az engedély minden launcherben szükséges, amely támogat parancsikonokat kontaktokhoz. Az LL nem fog magától a nevedben felhívni senkit.
+- EXPAND_STATUS_BAR: ahogy a neve is mutatja, ez az "Értesítési sáv mutatása" mûvelethez szükséges.
+- SET_WALLPAPER_HINTS: a háttérkép méretének beállításához.
+- további engedélyek nem szükségesek!

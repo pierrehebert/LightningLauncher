@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Slovak</string>
+<string name="pack_name_short">Slovenčina</string>
+<string name="tranlator_name">1sefko (Pa3cius Zelenák)</string>
+
+<string name="description">Lightning Launcher („LL“) je rýchly, ľahký a extrémne prispôsobiteľný spúšťač prostredia domácej obrazovky. Možnosti nastavenia sú nekonečné.\n\nHlavné vlastnosti:\n• Nastaviť rozdielne rozloženie plochy a veľkosť mriežky ako na výšku, tak na šírku\n• Posúvať plochy na všetky smery od domácej obrazovky, alebo si nastaviť svoje smery rolovania\n• Schopnosť umiestniť položky na plochu tak, aby sa nikdy nepohybovali \n• Neobmedzené nastavenie vzhľadu ikon, zložiek, písma, zarovnania, farieb, veľkosti, pozadia... \n• Umiestniť ikony a widgety kamkoľvek a akokoľvek na plochu\n• Prispôsobiť ikony hromadne, alebo každú zvlášť použitím balíkov ikon, alebo ikon z galérie\n• 22 rôznych gest s 29 rôznymi akciami (ktoré môžu byť spustené odkazom)\n• Priradiť gestá ku každej položke (napr. Chrome sa spustí kliknutím na ikonu, ale gestom potiahnutia hore sa spustí Dolphin Browser)\n• Zastavovacie body: povedzte Lightningu, kde sa má rolovanie plochy zastaviť\n• Každá položka (ikona, zložka, widget, odkaz...) môže byť samostatne nastavená, otočená, zväčšená, zmenšená, zlepšená jej čitateľnosť...\n• Zložky môžu okrem ikon obsahovať aj ďalšie zložky a widgety, pričom každú zložku je možné samostatne prispôsobiť a vizuálne upraviť\n• Uložiť svoje vytvorené plochy ako plnú zálohu, alebo ako šablónu a obnovenie zo zálohy  \n• Export nastavení ako APK\n\nLightning Launcher je vytvorený s dôrazom na rýchlosť a s cieľom ušetriť čo najviac RAM. Jeho sila je obsiahnutá vo veľmi malom a maximálne efektívnom balíčku.\n\nVšetky pripomienky, návrhy a hlásenia chýb sú vítané. Prosím, napíš mi svoje otázky, návrhy a hlásenia chýb na: pierrox@pierrox.net. Navštív stránky komunity na G+ a na Facebooku: http://www.facebook.com/LightningLauncher, kde sa dozvieš, na čom v súčasnej dobe pracujem, kde môžeš požiadať o nejakú funkciu, alebo sa jednoducho na niečo opýtať.\nUži si ho!\n\nOprávnenia:\n- EXPAND_STATUS_BAR: ako napovedá samotný názov, slúži k akcii "Ukáž status bar".\n- SET_WALLPAPER_HINTS: slúži na nastavenie rozmerov tapety.\n- nie sú potrebné žiadne ďalšie oprávnenia!</string>
+
+
+<string name="start_activity_error">Aplikácia sa nedá spustiť</string>
+<string name="menu_add">Pridať položku...</string>
+<string name="menu_settings">Android nastavenia</string>
+<string name="menu_customize">LL nastavenia</string>
+<string name="menu_customize_folder">Nastavenia zložky</string>
+<string name="menu_objects_layout">Editačný režim</string>
+<string name="dialog_action_title">Pridať položku...</string>
+
+<string-array name="dialog_action_values">
+<item>Aplikácia</item>
+<item>Skratka</item>
+<item>Widget</item>
+<item>LL Widget</item>
+<item>Zložka</item>
+<item>Zastavovací bod</item>
+</string-array>
+
+<string name="mi_remove">Odstrániť položku</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Upraviť položku...</string>
+<string name="mi_move_to_screen">Presunúť na inú plochu...</string>
+<string name="mi_edit_icon">Vybrať ikonu</string>
+<string name="mi_edit_label">Upraviť názov</string>
+<string name="mi_pick_app">Vybrať aplikáciu pre spustenie</string>
+<string name="mi_pick_widget">Vybrať iný widget</string>
+<string name="mi_edit_more">Viac nastavení...</string>
+<string name="mi_position">Pozícia položky...</string>
+<string name="mi_pin">Prichytiť</string>
+<string name="mi_unpin">Uvoľniť</string>
+<string name="mi_add_to_launcher">Pridať na plochu</string>
+<string name="mi_hide_unhide">Skryť/zobraziť aplikáciu</string>
+<string name="mi_app_details">Detail aplikácie</string>
+<string name="mi_widget_options">Nastavenia widgetu</string>
+<string name="mi_move_out_of_folder">Presunúť von zo zložky</string>
+<string name="first_use_title">Vitaj!</string>
+<string name="first_use_message">Lightning Launcher („LL“) je odľahčená, rýchla a prispôsobiteľná náhrada domovskej obrazovky pre Android.\n\nLL teraz beží v normálnom režime čo znamená, že niektoré pokročilé možnosti sú skryté. Prepnutím do "Expert režimu" (nájdeš ho vo všeobecných nastaveniach) získaš prístup ku všetkým funkciám a možnostiam LL.\n\nLL si teraz pripraví zoznam aplikácií - táto akcia je jednorázová.\n\nNezabudni si spustiť výukové videá, aby si sa zoznámil s možnosťami LL.\n\nUži si to!</string>
+<string name="all_apps">Všetky aplikácie</string>
+<string name="menu_refresh">Obnoviť</string>
+<string name="menu_zoom">Zväčšiť</string>
+<string name="menu_see_only_visible">Len viditeľné aplikácie</string>
+<string name="menu_see_only_hidden">Len skryté aplikácie</string>
+<string name="menu_see_all">Všetky aplikácie</string>
+<string name="empty_folder">Dlhé pridržanie prstu na zložke \nzobrazí viac možností nastavenia\n\n</string>
+<string name="file_picker_activity_up">Hore</string>
+
+<string name="settings">Nastavenia Lightningu</string>
+<string name="general_t">Všeobecné nastavenia</string>
+<string name="general_s">Jazyk, klávesy, gestá...</string>
+<string name="dashboard_t">Súčasná plocha</string>
+<string name="dashboard_s">Prispôsobenie vzhľadu, rozloženia a chovania</string>
+<string name="app_drawer_t">Zoznam aplikácií</string>
+<string name="app_drawer_s">Nastavenie zoznamu aplikácií</string>
+<string name="app_killer_t">App killer</string>
+<string name="app_killer_s">Odľahčený app killer priamo integrovaný do LL</string>
+<string name="donate_t">Podporiť vývoj</string>
+<string name="donate_s">Chceš finančne podporiť Lightning?</string>
+<string name="backup_t">Vytvoriť zálohu</string>
+<string name="restore_t">Obnoviť zo zálohy</string>
+<string name="rate_t">Ohodnotiť Lightning</string>
+<string name="rate_s">Vyjadriť svoj názor v GooglePlay</string>
+<string name="facebook_t">Navštíviť stránku LL na Google+</string>
+<string name="facebook_s">Pozrieť, čo sa plánuje do ďaľších verzií, navrhnúť nové funkcie, alebo nahlásiť chybu</string>
+<string name="ld_t">Zoznam aplikácií LL</string>
+<string name="ld_s">Moderný a efektívny zoznam aplikácií</string>
+<string name="customize_ll">Prispôsobenie LL</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Jazyk</string>
+<string name="language_s">Vyber, alebo nainštaluj jazykový balíček</string>
+<string name="lg_pick_t">Vyber jazykový balíček</string>
+<string name="lg_pick_s">Po výbere sa LL reštartuje</string>
+<string name="lg_install_t">Stiahnuť ďalšie jazykové balíčky</string>
+<string name="lg_install_s">Inštalovať z GooglePlay</string>
+
+<string name="lg_contrib_t">Prispieť svojim prekladom</string>
+<string name="lg_contrib_s">Vytvor nový, alebo aktualizuj už vytvorený preklad</string>
+<string name="events_t">Udalosti a akcie</string>
+<string name="events_s">Nastavenie kláves, ťahov a gest</string>
+<string name="ev_home">Klávesa HOME</string>
+<string name="ev_menu">Klávesa MENU</string>
+<string name="ev_search">Klávesa HĽADAŤ</string>
+<string name="ev_item_tap">Klik na položku</string>
+<string name="ev_item_ltap">Dlhé pridržanie na položke</string>
+<string name="ev_bg_tap">Klik na prázdne miesto</string>
+<string name="ev_bg_dtap">Dvoj-klik na prázdne miesto</string>
+<string name="ev_bg_ltap">Dlhé pridržanie na prázdnom mieste</string>
+<string name="ev_swipe_r">Posun doľava</string>
+<string name="ev_swipe_l">Posun doprava</string>
+<string name="ev_swipe_u">Posun hore</string>
+<string name="ev_swipe_d">Posun dole</string>
+<string name="ev_swipe2_r">Posun dvoch prstov doľava</string>
+<string name="ev_swipe2_l">Posun dvoch prstov doprava</string>
+<string name="ev_swipe2_u">Posun dvoch prstov hore</string>
+<string name="ev_swipe2_d">Posun dvoch prstov dole</string>
+
+<string name="an_u">Nenastavené</string>
+<string name="an_n">(Lock) Nerobiť nič  </string>
+<string name="an_ad">Všetky aplikácie</string>
+<string name="an_zfs">Zväčšiť na celý rozsah plochy</string>
+<string name="an_z100">Zväčšiť na 100%</string>
+<string name="an_zt">Prepnúť na: celý rozsah plochy/100% zväčšenie</string>
+<string name="an_pd">Prejsť na predošlú plochu</string>
+<string name="an_nd">Prejsť na ďalšiu plochu</string>
+<string name="an_el">Upraviť rozloženie</string>
+<string name="an_ao">Pridať položku</string>
+<string name="an_cl">Upraviť LL</string>
+<string name="an_cd">Upraviť súčasnú plochu alebo zložku</string>
+<string name="an_la">Spustiť aplikáciu</string>
+<string name="an_ls">Spustiť skratku</string>
+<string name="an_sw">Vybrať tapetu pozadia</string>
+<string name="an_lm">LL Menu </string>
+<string name="an_ssb">Zobraziť/skryť status bar</string>
+<string name="an_smsb">Zobraziť/skryť aplikačné menu a status bar</string>
+<string name="an_sn">Zobraziť notifikačnú oblasť</string>
+<string name="an_s">Hľadať</string>
+<string name="an_i_m">Presunúť položku</string>
+<string name="an_i_c">Upraviť položku</string>
+<string name="an_i_me">Menu položky</string>
+<string name="an_i_l">Spustiť položku</string>
+
+<string name="auto_edit_t">Auto-editačný režim</string>
+<string name="auto_edit_s">Pri pridávání položky prejsť automaticky do editačného režimu</string>
+<string name="page_anim_t">Animácie obrazovky</string>
+
+<string-array name="page_anim_e">
+<item>Žiadne</item>
+<item>Zoslabiť/zosilniť</item>
+<item>Posun doľava/doprava</item>
+<item>Posun hore/dole</item>
+</string-array>
+
+<string name="keep_in_memory_t">Zostať v pamäti na pozadí</string>
+<string name="keep_in_memory_s">Skráti čas akcie „Návrat domov“, ale zaberie viac pamäte RAM</string>
+<string name="tools_pick_shortcut">Vybrať skratku</string>
+<string name="tools_pick_widget">Vybrať widget</string>
+<string name="new_style">Vytvoriť nový štýl...</string>
+<string name="choose_style_name">Zadať názov nového štýlu:</string>
+<string name="delete_style">Odstrániť tento štýl?</string>
+<string name="relayout_items">Tento štýl má menej stĺpcov ako súčasný štýl. Chceš pokračovať a reorganizovať položky?</string>
+<string name="style_saved">Štýl uložený</string>
+<string name="style_loaded">Štýl načítaný</string>
+<string name="install_widgets">Pridať LL widget...</string>
+<string name="item_settings_icon_copy_failed">Kopírovanie ikony zlyhalo :-(</string>
+<string name="tool_not_available">Tento nástroj nie je k dispozícii</string>
+<string name="default_folder_name">Zložka</string>
+<string name="app_added" formatted="true">%s pridané</string>
+<string name="select_launcher_title">Nastaviť ako predvolený launcher</string>
+<string name="extras">Doplnky</string>
+<string name="permission_denied">Spustenie tejto skratky nebolo povolené. Nainštaluj si LL direct call plugin</string>
+<string name="appearance">Vzhľad (náhľad získaš posunutím vľavo)</string>
+<string name="background_t">Tapeta a farba pozadia</string>
+<string name="background_s">Vybrať tapetu, farbu pozadia, efekt rolovania</string>
+<string name="grid_t">Čiary mriežky</string>
+<string name="grid_s">Hrúbka, farba a pozícia čiar (len pre režim mriežky)</string>
+<string name="folder_look_t">Okná zložiek</string>
+<string name="folder_look_s">Pozadie, okraje, animácie</string>
+<string name="this_folder_look_t">Okno tejto zložky</string>
+<string name="this_folder_look_s">Pozadie, okraje, animácie</string>
+<string name="layout_t">Rozloženie</string>
+<string name="layout_s">Vyber, ako budú umiestňované položky (v mriežke, voľné), počet stĺpcov, výška riadkov...</string>
+<string name="zoom_scroll_t">Zväčšenie a rolovanie</string>
+<string name="zoom_scroll_s">Nastavenie pohybu v rámci obrazovky</string>
+<string name="folder_feel_t">Rozšírené možnosti zložky</string>
+<string name="folder_feel_s">Automatické zatváranie...</string>
+<string name="this_folder_feel_t">Táto zložka</string>
+<string name="pg_misc_t">Nezaradené</string>
+<string name="pg_misc_s">Orientácia obrazovky a ďalšie možnosti</string>
+<string name="color_c">Farba</string>
+
+<string name="wp_w_t">Šírka</string>
+<string name="wp_h_t">Výška</string>
+<string name="wp_auto">Pre automatickú veľkosť nastav 0</string>
+<string name="wp_scroll_t">Rolovanie tapety pozadia</string>
+<string name="wp_scroll_s">Môže mať vplyv na výkon</string>
+
+<string name="grid_h_color_t">Farba vodorovnej čiary</string>
+<string name="grid_h_size_t">Hrúbka vodorovnej čiary</string>
+<string name="grid_v_color_t">Farba zvislej čiary</string>
+<string name="grid_v_size_t">Hrúbka zvislej čiary</string>
+<string name="grid_color_s">Vybrať priehľadnú pre úplné zakázanie čiar</string>
+<string name="grid_size_s">Pre hrúbku 1 pixelu nastav 0</string>
+<string name="grid_above">Vykresliť čiary pred položky</string>
+<string name="folder_title">Voľby nadpisu</string>
+<string name="display_title">Zobraziť nadpis</string>
+<string name="font_color">Farba písma</string>
+<string name="font_size">Veľkosť písma</string>
+<string name="folder_anims">Animácie</string>
+<string name="anim_in">Pri otvorení</string>
+<string name="anim_out">Pri zatvorení</string>
+
+<string name="behaviour">Chovanie</string>
+<string name="free_mode_t">Voľný režim</string>
+<string name="free_mode_s">Zakáže používanie mriežky, povolí voľné umiestnenie (vrátane zväčšenia a rotácie)</string>
+<string name="dual_pos_t">Dvojité umiestnenie položiek</string>
+<string name="dual_pos_s">Umožní dvojité umiestnenie: prvé pre režim na výšku (primárne), druhé pre režim na šírku</string>
+<string name="placement">Umiestnenie</string>
+<string name="colums">Stĺpce mriežky</string>
+<string name="rows">Riadky mriežky</string>
+<string name="mode_t">Režim</string>
+
+<string-array name="mode_e">
+<item>Automatický</item>
+<item>Pevný počet riadkov a stĺpcov</item>
+<item>Pevná veľkosť</item>
+</string-array>
+
+<string name="number">Počet</string>
+<string name="size">Veľkosť</string>
+<string name="col_num_s">Počet stĺpcov na stránku</string>
+<string name="col_size_s">Šírka každého stĺpca</string>
+<string name="row_num_s">Počet riadkov na stránku</string>
+<string name="row_size_s">Výška každého riadku</string>
+<string name="scroll_dir_t">Smer rolovania</string>
+
+<string-array name="scroll_dir_e">
+<item>Automatický</item>
+<item>Len vodorovný</item>
+<item>Len zvislý</item>
+<item>Oba smery</item>
+<item>Bez rolovania</item>
+</string-array>
+
+<string name="overscroll_t">Animácia rolovania</string>
+
+<string-array name="overscroll_e">
+<item>Spomaľovať</item>
+<item>Odraziť</item>
+<item>Vypnúť</item>
+</string-array>
+
+<string name="snap_to_pages_t">Zalomiť na stránky</string>
+<string name="snap_to_pages_s">Vždy zastaviť rolovanie na hranici stránky</string>
+<string name="fit_item_t">Nastaviť hranice obrazovky podľa položiek</string>
+<string name="fit_item_s">Zúžiť plochu podľa miesta využitého položkami, nie podľa násobkov veľkosti obrazovky</string>
+<string name="no_diagonal_scrolling_t">Zakázať šikmé rolovanie</string>
+<string name="no_diagonal_scrolling_s">Rolovať vždy len v jednom smere</string>
+<string name="pinch_zoom_t">Povoliť zoomovanie</string>
+<string name="auto_close_t">Automaticky zatvoriť</string>
+<string name="auto_close_s">Zatvoriť zložku potom, ako z nej bola spustená aplikácia</string>
+<string name="anim_glitch_fix_t">Oprava animácie</string>
+<string name="anim_glitch_fix_s">Vloží 1 pixel okraja, čím sa opraví chyba vyskytujúca sa v niektorých verziách Androidu</string>
+<string name="screen_orient_t">Orientácia obrazovky</string>
+
+<string-array name="screen_orient_e">
+<item>Automaticky</item>
+<item>Na výšku</item>
+<item>Na šírku</item>
+<item>Podľa systému</item>
+</string-array>
+
+<string name="hide_statusbar_t">Skryť status bar</string>
+<string name="manage">Správa štýlov</string>
+<string name="load_style_t">Náčítať štýl</string>
+<string name="load_style_s">Nahradí súčasné nastavenie hodnotami z nahrávaného štýlu</string>
+<string name="save_style_t">Uložiť štýl</string>
+<string name="save_style_s">Uloží súčasné nastavenie ako vlastný štýl</string>
+<string name="confirm_reset_page">Naozaj chceš resetovať túto plochu?</string>
+<string name="reset_page_t">Reset tejto plochy</string>
+<string name="reset_page_s">Odstráni všetky položky z tejto plochy a obnoví predvolený štýl</string>
+<string name="tab_label">Text</string>
+<string name="tab_icon">Ikona</string>
+<string name="tab_layout">Poz.</string>
+<string name="tab_box">Pole</string>
+<string name="tab_misc">+</string>
+<string name="l_main">Hlavné</string>
+<string name="l_display">Zobraziť názov</string>
+<string name="l_custom">Nastaviť vlastný názov</string>
+<string name="l_size">Veľkosť písma</string>
+<string name="l_type_face">Použiť vlastné písmo...</string>
+<string name="l_style_t">Štýl písma</string>
+
+<string-array name="l_style_e">
+<item>Normálne</item>
+<item>Tučné</item>
+<item>Šikmé</item>
+<item>Tučné a šikmé</item>
+</string-array>
+
+<string name="l_num_lines">Maximálny počet riadkov</string>
+<string name="l_colors">Farby</string>
+<string name="l_color_normal">Základná farba</string>
+<string name="l_color_selected">Farba výberu</string>
+<string name="l_color_focused">Farba zvýraznenia</string>
+<string name="l_shadow">Tieň</string>
+<string name="l_shadow_enable">Povoliť tieň</string>
+<string name="l_shadow_radius">Polomer</string>
+<string name="l_shadow_offset_x">Posun X</string>
+<string name="l_shadow_offset_y">Posun Y</string>
+<string name="l_shadow_color">Farba</string>
+<string name="i_main">Hlavné</string>
+<string name="i_display">Zobraziť ikonu</string>
+<string name="i_custom">Vybrať ikonu</string>
+<string name="i_folder_t">Štýl ikon zložiek</string>
+
+<string-array name="i_folder_e">
+<item>Ikony</item>
+<item>Mriežka</item>
+<item>Kopa</item>
+</string-array>
+
+<string name="i_effect">Vrstvy</string>
+<string name="i_e_back">Obrázkové pozadie</string>
+<string name="i_e_over">Prekrytie</string>
+<string name="i_e_mask">Maska</string>
+<string name="i_e_scale">Vnútorná mierka</string>
+
+<string name="i_smooth">Efekty ikon</string>
+<string name="i_scale_t">Mierka</string>
+<string name="i_scale_s">POZOR! 4-násobná mierka spotrebuje 16x viac RAM, čím sa môže rýchlo zaplniť pamäť.</string>
+<string name="i_reflect">Zrkadlenie</string>
+<string name="i_reflect_enable">Povoliť zrkadlenie</string>
+<string name="i_reflect_overlap">Presah ikony</string>
+<string name="i_reflect_size">Veľkosť</string>
+<string name="i_reflect_scale">Mierka</string>
+<string name="la_margin">Medzera medzi ikonou a popisom</string>
+<string name="la_position_t">Pozícia popisu</string>
+
+<string-array name="la_position_e">
+<item>Vľavo</item>
+<item>Hore</item>
+<item>Vpravo</item>
+<item>Dole</item>
+<item>Center</item>
+</string-array>
+
+<string name="b_alignh_t">Vodorovné zarovnanie</string>
+
+<string-array name="b_alignh_e">
+<item>Vľavo</item>
+<item>Na stred</item>
+<item>Vpravo</item>
+<item>Vlastné zarovnanie</item>
+</string-array>
+
+<string name="b_alignv_t">Zvislé zarovnanie</string>
+
+<string-array name="b_alignv_e">
+<item>Hore</item>
+<item>Na stred</item>
+<item>Dole</item>
+<item>Vlastné zarovnanie</item>
+</string-array>
+
+<string name="b_hint">Vyber jednu, alebo viac oblastí,\npotom vyber akciu nižšie</string>
+<string name="b_size">Veľkosť zvolených oblastí</string>
+<string name="b_color_normal">Základná farba</string>
+<string name="b_color_selected">Farba výberu</string>
+<string name="b_color_focused">Farba zvýraznenia</string>
+<string name="b_color_s">Farba zvolených oblastí</string>
+<string name="m_enabled_t">Klikateľné</string>
+<string name="m_enabled_s">Pre zvolenie zakázaných ikon využi editačný režim</string>
+<string name="m_alpha_t">Priehľadnosť</string>
+<string name="m_alpha_s">Pekná ale pomalá. 0: úplne priehľadné, 255: nepriehľadné</string>
+<string name="m_smooth_transform_t">Vylepšenia pri zmenách</string>
+<string name="m_smooth_transform_s">Krajšie, ale pomalšie</string>
+
+<string-array name="preview_item_labels">
+<item>Normálne</item>
+<item>Zvolené</item>
+<item>Zvýraznené</item>
+</string-array>
+
+<string name="il_preview">Náhľad obrazovky\n(Môže sa líšiť od skutočnej plochy)</string>
+<string name="preview_toast">Režim náhľadu\nVšetky akcie sú zakázané</string>
+<string name="pick_a_font">Vybrať súbor .TTF, alebo .OTF</string>
+<string name="system_font">Systémové písmo</string>
+<string name="left">vľavo</string>
+<string name="top">hore</string>
+<string name="right">vpravo</string>
+<string name="bottom">dole</string>
+<string name="margin">okraj</string>
+<string name="border">hranica</string>
+<string name="padding">zarovnanie</string>
+<string name="content">obsah</string>
+<string name="ovr_custom">vlastné</string>
+
+<string name="pick_t">Vyber:</string>
+<string name="pick_file">Zo súboru</string>
+<string name="pick_gallery">Z galérie</string>
+<string name="pick_icon_pack">Z balíku ikon </string>
+
+<string name="tutorials">Návody LL</string>
+<string name="donate">Prispieť</string>
+<string name="other_apps">Ostatné aplikácie</string>
+<string name="tut_intro">Predstavenie LL</string>
+<string name="tut_custo">Úprava objektov v LL</string>
+<string name="tut_free_mode">Voľný režim</string>
+<string name="tut_lock">Zámok obrazovky (Lock Screen)</string>
+<string name="tut_pin">Umiestnenie položiek v LL</string>
+<string name="tut_scroll">Obrazovky a navigácie v LL</string>
+<string name="dialog_color_picker">Výber farby</string>
+
+<string name="shortcut_settings">LL nastavenie </string>
+<string name="shortcut_actions">LL akcie</string>
+
+<string name="no_backup_archive">Záloha na obnovu sa nenašla</string>
+<string name="backup_in_progress">Vytvoriť zálohu...</string>
+<string name="restore_in_progress">Obnoviť zo zálohy...</string>
+<string name="backup_done">Záloha uložená do:\n%s</string>
+<string name="backup_error">Chyba pri zálohovaní, prosím skontroluj, či je dostatok úložného priestoru v pamäti zariadenia</string>
+<string name="restore_error">Chyba pri obnove dát zo zálohy, prosím skontroluj, či je súbor platný a či je možné ho prečítať</string>
+
+<string name="confirm_delete">Naozaj chceš zmazať?\nTáto akcia je nevratná.</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Zobrazovať len systémovú tapetu</string>
+<string name="bg_sys_wp">Systémová tapeta</string>
+<string name="bg_sys_wp_select_t">Zmeniť systémovú tapetu</string>
+<string name="bg_sys_wp_select_s">Systémová tapeta je zdieľaná pre všetky plochy a zoznam aplikácií (zmena tapety sa prejaví aj v iných launcheroch)</string>
+<string name="bg_screen_wp">LL obrázková tapeta</string>
+<string name="bg_screen_wp_select_t">Zmeniť LL obrázkovú tapetu...</string>
+<string name="bg_screen_wp_select_s">Táto LL tapeta prekryje systémovú tapetu. Každá plocha tak môže mať svoju vlastnú tapetu, vrátane zoznamu aplikácií</string>
+<string name="bg_more">Viac</string>
+<string name="bg_more_color_t">Farba</string>
+<string name="bg_more_color_s">Nastavením úplne nepriehľadnej farby zakážeš tapetu! Nastavením priehľadnejšej farby upravíš tapetu do zvoleného odtieňa (platí pre systémovú aj LL obrázkovú tapetu).</string>
+
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Pridržanie</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Kliknutie</string>
+<string name="style_s1">Predvolené</string>
+<string name="style_s2">Kompaktné (malé ikony, malý text)</string>
+<string name="style_s3">Čitateľné (veľké ikony, veľký text)</string>
+<string name="style_s4">Zoznam (ikony vpravo)</string>
+<string name="style_s5">Zoznam (veľký text bez ikon)</string>
+<string name="style_s6">Zoznam (veľký text a ikony)</string>
+<string name="style_s7">Dlaždice (len ikony bez textu)</string>
+<string name="style_s8">Farebné ohraničenie</string>
+<string name="style_s9">Ako v Zune</string>
+<string name="dialog_help_hint_t">Tip</string>
+<string name="dialog_help_hint_m">Dlhé pridržanie ťa odkáže na  nápovedu.</string>
+<string name="dialog_help_hint_dsa">Už nezobrazovať</string>
+<string name="m_pin_mode">Režim pripnutia</string>
+<string-array name="m_pin_mode_e">
+<item>Žiadne</item>
+<item>Vodorovné aj zvislé</item>
+<item>Len vodorovné</item>
+<item>Len zvislé</item>
+</string-array>
+<string name="m_events">Gestá</string>
+<string name="shortcut_screen">LL záložka obrazovky</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">Jedinečný launcher. Bez kompromisov! </string>
+<string name="more_apps_t">Ďalšie bezplatné aplikácie</string>
+<string name="more_apps_s">Od PierroX (nástroje, hry, zábava)</string>
+<string name="mi_kill">Ukončiť aplikáciu</string>
+<string name="killed_freed">Ukončené (uvoľnené: %d MB)</string>
+<string name="killed">Aplikácia ukončená!</string>
+<string name="configure_pages_t">Konfigurácia plôch</string>
+<string name="configure_pages_s">Nastavenie počtu plôch, ich poradia, prispôsobenie domácej plochy, ikon, nadpisov...</string>
+<string name="mi_mode_custom">Môj zoznam</string>
+<string name="mi_mode_by_name">Abecedný zoznam</string>
+<string name="mi_mode_recent_apps">Nedávno spustené</string>
+<string name="mi_mode_recently_updated">Nedávno aktualizované</string>
+<string name="mi_mode_frequently_used">Často používané</string>
+<string name="mi_mode_running">Práve bežiace</string>
+<string name="mi_es_edit_layout">Upraviť rozloženie</string>
+<string name="mi_es_refresh">Obnoviť</string>
+<string name="mi_es_settings">Nastavenie LL...</string>
+<string name="mi_es_folder_settings">Nastavenie zložky</string>
+<string name="mi_uninstall">Odinštalovať aplikáciu</string>
+<string name="my_drawer_title">Môj zoznam</string>
+<string name="my_drawer_message">Zobrazenie „Môj zoznam“ ti umožní úplne prispôsobiť tvoj zoznam aplikácií.\n\nV tomto režime môžeš s položkami voľne pohybovať na veľkej ploche. Taktiež si môžeš vytvoriť zložky pre lepšiu organizáciu aplikácií.\n\nSkús si oddialiť plochu na celý rozsah a následne zvoliť „Upraviť rozloženie“. Zistíš, že ikony aplikácií môžeš presunúť viac do strán (vľavo, vpravo, hore, dole) a vytvoriť si tak svoje vlastné rozloženie. </string>
+<string name="empty_folder_x">Prázdna zložka\nPre pridanie do zložky dlho pridrž prst na položke, pretiahni ju na zložku, chvíľu počkaj kým sa sfarbí \nna modro a potom ju pusti.</string>
+<string name="ll_import_title">Importovanie LL nastavení</string>
+<string name="ll_import_message">Bol zistený nainštalovaný bezplatný Lightning Launcher.\n\nVšetky dáta a nastavenia z bezplatnej verzie budú teraz naimportované. Až sa import dokončí, môžeš bezpečne odinštalovať bezplatnú verziu Lightning Launcher a ďalej používať len Lightning Launcher eXtreme.</string>
+<string name="init_ok">Pripravený!</string>
+<string name="init_ko">Pri kopírovaní súborov sa vyskytla chyba!</string>
+<string name="auto_exit_t">Automatické zatvorenie</string>
+<string name="auto_exit_s">Po spustení zvolenej aplikácie sa zoznam aplikácií automaticky zatvorí</string>
+<string name="icons_t">Balík ikon</string>
+<string name="icons_s">Použiť balík ikon/návrat k predvoleným ikonám</string>
+<string name="apply_icon_pack_t">Použiť balík ikon</string>
+<string name="apply_icon_pack_s">Sú podporované štandardné balíky ikon navrhnuté pre ADW a niekoľko ďalších</string>
+<string name="icon_pack_no_appfilter">Tento balík ikon neobsahuje ikony aplikácií</string>
+<string name="revert_custom_icons_t">Vrátiť vlastné ikony</string>
+<string name="revert_custom_icons_s">Vrátane efektu vlastných ikon a vnútornej mierky</string>
+<string name="please_wait">Čakaj prosím...</string>
+<string name="app_not_valid">Položka nie je priradená k žiadnej aplikácii. Chceš prehľadať GooglePlay, alebo vybrať inú aplikáciu?</string>
+<string name="app_store">GooglePlay</string>
+
+<!-- added 95 -->
+<string name="dtext">Dynamický text</string>
+<string name="tab_dt_data">Dáta</string>
+<string name="dt_source_t">Zobrazený text</string>
+<string-array name="dt_source_e">
+<item>Počet neprečítaných SMS</item>
+<item>Počet neprečítaných GMailov</item>
+<item>Počet zmeškaných hovorov</item>
+<item>Dátum a čas</item>
+<item>Úložisko</item>
+<item>Aktuálny stav batérie</item>
+<item>Maximum „Heap“ pamäte</item>
+<item>Voľná „Heap“ pamäť</item>
+</string-array>
+<string name="dt_date_ef_t">Jednoduchý formát</string>
+<string-array name="dt_date_ef_e">
+<item>Dátum</item>
+<item>Čas</item>
+<item>Dátum a čas</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Pokročilý formát</string>
+<string name="dt_date_xf_s">Dlhé pridržanie prstu ťa odkáže na nápovedu</string>
+<string name="dt_display_empty_t">Zobrazovať aj prázdnu hodnotu</string>
+<string name="dt_format_error">Chyba vo formáte</string>
+<string name="dt_storage_s_t">Vyber úložisko</string>
+<string-array name="dt_storage_s_e">
+<item>Vnútorná pamäť</item>
+<item>SD karta</item>
+</string-array>
+<string name="dt_storage_f_t">Formát zobrazenia</string>
+<string-array name="dt_storage_f_e">
+<item>Normálny</item>
+<item>Krátky</item>
+<item>Percentuálny</item>
+<item>V Bajtoch</item>
+</string-array>
+<string name="dt_storage_w_t">Aká hodnota má byť zobrazená</string>
+<string-array name="dt_storage_w_e">
+<item>Zostávajúca veľkosť</item>
+<item>Využitá veľkosť</item>
+<item>Celková veľkosť</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Priehľadný status bar</string>
+<string name="trans_statusbar_s">Len pre podporované zariadenia </string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Presun položiek</string>
+<string name="swap_items_s">Presun položiek, ak sa prekrývajú (len pre režim mriežky)</string>
+<string name="rearrange_items_t">Usporiadanie položiek</string>
+<string name="rearrange_items_s">POZOR! Najskôr si prosím prečítaj nápovedu (dlhé pridržanie prstu ťa odkáže na nápovedu)</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Záloha/obnova/export šablón</string>
+<string name="an_gh">Prejsť na domácu plochu</string>
+<string name="an_ghz100">Prejsť na domácu plochu a zväčšiť na 100%</string>
+<string name="an_sd">Vyber plochu, na ktorú prejsť</string>
+<string name="an_re">Reštartovať aplikáciu</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Nastavenia platia pre orientáciu na:</string>
+<string-array name="grid_pl_e">
+<item>Výšku aj šírku</item>
+<item>Len výšku</item>
+<item>Len šírku</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Prosím potvrď:</string>
+<string name="apply_tmpl_g">Aplikovanie šablóny...</string>
+<string name="apply_tmpl_e">Táto šablóna sa nedá použiť!</string>
+<string name="tmpl_t">Zálohovanie a šablóny</string>
+<string name="tmpl_s">Prehliadanie a použitie šablóny, export obrazovky pre vytvorenie APK</string>
+<string name="tmpl_a_t">Použiť šablónu</string>
+<string name="tmpl_a_s">Načíta už nainštalované šablóny</string>
+<string name="tmpl_b_t">Prehliadať existujúce šablóny</string>
+<string name="tmpl_b_s">Stiahni si aktuálne motívy z GooglePlay</string>
+<string name="tmpl_e_t">Exportovať šablónu</string>
+<string name="tmpl_e_s">Dlhé pridržanie prstu ťa odkáže na nápovedu</string>
+<string name="tmpl_c">Vyber šablónu</string>
+<string name="tmpl_e_m">Exportovanie...</string>
+<string name="tmpl_e_d">Export dokončený!</string>
+<string name="tmpl_e_e">Nastala chyba pri exporte!</string>
+<string name="tmpl_check">Otváranie šablóny...</string>
+<string name="tmpl_check_e">Táto šablóna sa nedá načítať!</string>
+<string name="tmpl_check_ut">Vyžadovaná aktualizácia</string>
+<string name="tmpl_check_um">Tato šablóna je určená pre novšiu verziu Lightning Launcheru. Chceš teraz aktualizovať?</string>
+<string name="tmpl_get_llx">Získaj LLX</string>
+<string name="tmpl_warn_t">Varovanie</string>
+<string name="tmpl_warn_c">Aj napriek tomu pokračovať</string>
+<string name="tmpl_warn_m">Šablóna je pripravená na použitie, ale bolo nájdené jedno, alebo viac varovaní:</string>
+<string name="tmpl_warn_llx">• Táto šablóna bola navrhnutá pre LL eXtreme. Môže využívať niektoré funkcie, ktoré nie sú v tejto verzii dostupné.</string>
+<string name="tmpl_warn_screen">• Táto šablóna nezodpovedá presne vlastnostiam tvojej obrazovky. Niektoré prvky sa nemusia zobrazovať správne.</string>
+<string name="tmpl_warn_widget">• Tvoje zariadenie nemôže automaticky obnoviť widgety. Budeš ich musieť znovu vytvoriť ručne.</string>
+<string name="widget_e">Widget sa nedá nájsť :(\nKliknutím môžeš vybrať iný</string>
+<string name="tmpl_s_p">Vyber plochu na export</string>
+<string name="an_ctf">Zatvoriť vrchnú zložku</string>
+<string name="an_caf">Zatvoriť všetky zložky</string>
+<string name="ev_screen_on">Klávesa zapnutia obrazovky</string>
+<string name="ev_screen_off">Klávesa vypnutia obrazovky</string>
+<string name="an_sa">Hľadaj v aplikáciách</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Zákaz pohybu prichytených položiek v editačnom režime</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Zastavovací bod</string>
+<string name="sp_b">Vlastnosti</string>
+<string name="sp_ss">Zastavenie posunu</string>
+<string name="sp_sd">Zastavenie pretiahnutia</string>
+<string name="sp_ba">Bariéra</string>
+<string name="sp_dw">Šírka plochy</string>
+<string name="sp_n">Prichytenie</string>
+<string name="sp_d">Smer</string>
+<string name="sp_dlr">Zľava doprava</string>
+<string name="sp_drl">Sprava doľava</string>
+<string name="sp_dtb">Zhora nadol</string>
+<string name="sp_dbt">Zdola nahor</string>
+<string name="assp_t">Vždy zobrazovať zastavovacie body</string>
+<string name="assp_s">Zastavovacie body budú viditeľné aj v normálnom režime</string>
+<string name="gc_edit">Editor rozloženia</string>
+
+<!-- added 116 -->
+<string name="backup_d">Záloha</string>
+<string name="an_of">Otvoriť zložku</string>
+<string name="sf">Vybrať zložku</string>
+<string name="br_n">Názov zálohy</string>
+<string name="br_a">Zvoliť akciu</string>
+<string name="br_r">Premenovať</string>
+<string name="br_d">Zmazať</string>
+<string name="br_s">Odoslať</string>
+<string name="br_dc">Naozaj vymazať zálohu?</string>
+<string name="br_rc">Naozaj obnoviť zálohu?</string>
+<string name="dt_gml_t">Gmail štítok</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Kopírovať na inú plochu</string>
+<string name="f_p">Umiestnenie</string>
+<string name="f_ac">Ak používaš vlastné zarovnanie</string>
+<string name="f_l">Zarovnanie zľava</string>
+<string name="f_t">Zarovnanie zhora</string>
+<string name="f_af">Priblíženie/oddialenie</string>
+<string name="sp_e">Zhoda s okrajom</string>
+<string name="sp_el">Ľavým</string>
+<string name="sp_er">Pravým</string>
+<string name="sp_et">Horným</string>
+<string name="sp_eb">Dolným</string>
+
+<!-- added 119 -->
+<string name="np">Obrázkové pozadie</string>
+<string name="np_d">Dlhé pridržanie prstu ťa odkáže na nápovedu</string>
+<string name="np_n">Základné pozadie</string>
+<string name="np_s">Vybrané pozadie</string>
+<string name="np_f">Zvýraznené pozadie</string>
+<string name="np_r">Obrázkové pozadie</string>
+<string-array name="anim2_e">
+<item>Žiadna</item>
+<item>Otvoriť/zatvoriť</item>
+<item>Posun doprava</item>
+<item>Posun doľava</item>
+<item>Posun dole</item>
+<item>Posun hore</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Prepnutie obrazovky na výšku</string>
+<string name="ev_ol">Prepnutie obrazovky na šírku</string>
+<string name="an_gdp">Prejsť na zvolenú plochu a pozíciu</string>
+<string name="cof_t">Zatvoriť ostatné zložky</string>
+<string name="cof_s">Umožní mať otvorenú len jednu zložku súčasne</string>
+
+<!-- added 123 -->
+<string name="t_nb">Priehľadná navigačná lišta</string>
+<string name="gb_l">Zľava</string>
+<string name="gb_t">Zhora</string>
+<string name="gb_w">Šírka</string>
+<string name="gb_h">Výška</string>
+<string name="gb_a">Uhol</string>
+<string name="gb_sx">Mierka X</string>
+<string name="gb_sy">Mierka Y</string>
+<string name="gb_kx">Skreslenie X</string>
+<string name="gb_ky">Skreslenie Y</string>
+<string name="mi_geometry">Editor pre deformáciu položky</string>
+
+<!-- added 134 -->
+<string name="efolder">Panel</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Nastavenia panelu</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Voľný režim tejto položky</string>
+<string name="mi_lmf">Zarovnať do mriežky</string>
+<string name="mi_mop">Presunúť von z panelu</string>
+
+<!-- added 137 -->
+<string name="container">Veľkosť panelu</string>
+<string name="uds_t">Použiť rozmery obrazovky</string>
+<string name="uds_s">Použije rozmery mriežky z obrazovky, dopočíta veľkosť buniek. Ignoruje rozmery nastavenia panelu</string>
+<string name="mi_l">Zamknúť plochu pre úpravy</string>
+<string name="mi_ul">Odomknúť plochu pre úpravy</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Pridržanie klávesy MENU </string>
+<string name="ev_back">Klávesa SPÄŤ </string>
+<string name="ev_backl">Pridržanie klávesy SPÄŤ </string>
+
+<!-- added 149 -->
+<string name="mi_i">Položky...</string>
+<string name="mi_ic">Presunúť položky k sebe</string>
+<string name="mi_isa">Zoradiť položky A-Z</string>
+<string name="mi_isd">Zoradiť položky Z-A</string>
+
+<!-- added 151 -->
+<string name="an_us">Odomknúť zamknutú obrazovku</string>
+<string name="nly">Obrazovka nebola zamknutá</string>
+<string name="s_ls_t">Zámok obrazovky (Lock Screen)</string>
+<string name="s_ls_s">Vyber plochu, ktorá sa bude zobrazovať ako zámok obrazovky. Dlhé pridržanie prstu ťa odkáže na nápovedu.</string>
+<string name="s_ls_s_t">Vybrať/zakázať (Lock Screen)</string>
+<string name="s_ls_s_s">Vyber plochu, ktorá sa bude zobrazovať ako zámok obrazovky. Pre deaktiváciu klikni na tento text a následne na klávesu SPÄŤ.</string>
+<string name="s_ls_s_c">Zámok obrazovky je deaktivovaný.</string>
+<string name="i_ul">Odomykač obrazovky (Unlocker)</string>
+
+<!-- added 152 -->
+<string name="ukp_na">Plugin zámku obrazovky nie je nainštalovaný. Pre inštaláciu klikni na tento text.</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Skôr, ako zamkneš zariadenie sa uisti, že táto obrazovka pôjde bezpečne odomknúť - teda že obsahuje \"odomykač obrazovky\" alebo máš nastavenú akciu \"odomkni zamknutú obrazovku\" - napríklad ako ikonu, alebo gesto.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Vyber efekt</string>
+<string-array name="m_sel_e_e">
+<item>Jednoduchý</item>
+<item>Holo</item>
+<item>Material</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Zastavovací bod bol v konflikte s povoleným nastavením „Zalamovať na stránky“, preto bolo zalamovanie automaticky vypnuté.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Otáčanie</string>
+<string name="i_rot_s">Otáčanie položiek podľa natočenia zariadenia</string>
+
+<!-- added 164 -->
+<string name="sc_name">Názov</string>
+<string name="sc_new">Nový</string>
+<string name="sc_delete">Odstrániť</string>
+<string name="sc_edit">Upraviť...</string>
+<string name="sc_help">Nápoveda</string>
+<string name="sc_deleted">Neznámy, alebo zmazaný skript. Bol vytvorený nový skript</string>
+<string name="sc_untitled">Nepomenovaný skript</string>
+<string name="sc_dn_t">Názov skriptu</string>
+<string name="sc_dd_t">Prosím o potvrdenie</string>
+<string name="sc_dd_m">Tento skript môžu používať iné LL akcie, gestá, či dalšie časti skriptov. Skutočne ho chceš odstrániť?</string>
+<string name="sc_dc_t">Výsledok kontroly syntaxy</string>
+<string name="sc_dc_ok">Syntaxa vyzerá celkom dobre</string>
+<string name="an_rs">Spustiť skript</string>
+<string name="sc_view">Ukázať skript</string>
+<string name="sc_disable">Zakázať skript</string>
+<string name="sc_editor">LL editor skriptov</string>
+<string name="ev_pos">Zmena pozície na obrazovke</string>
+<string name="sp_re">Udalosť pri dosiahnutí tohto bodu</string>
+<string name="ev_load">Prvotné načítanie</string>
+<string name="an_b">Prejsť späť</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Šablóna LL</string>
+<string name="br_ob">Prepísať ako zálohu</string>
+<string name="br_ot">Prepísať ako šablónu</string>
+<string name="sc_ma">Zobraziť v:</string>
+<string name="sc_ml">Menu LL</string>
+<string name="sc_mi">Menu položiek</string>
+<string name="sc_mc">Vlastnom menu</string>
+<string name="mi_s">Skripty...</string>
+<string name="an_cm">Menu vlastných skriptov</string>
+<string name="tmpl_r">Nahradiť: úplne nahradiť aktuálne nastavenie</string>
+<string name="tmpl_m">Zlúčiť: zachovať aktuálne nastavenie, šablónu importovať ako novú plochu</string>
+<string name="tmpl_u">Aktualizovať: zachovať plochy a položky, použiť iba štýl plôch zo šablóny</string>
+<string name="tmpl_b">Najskôr vytvoriť zálohu</string>
+<string name="apply_tmpl_m">Chystáš sa použiť šablónu „%s“:</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Spustením odomknúť</string>
+<string name="s_ls_lu_s">Aplikácia spustená zo zamknutej obrazovky súčasne odomkne zariadenie</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Použiť obrázkové pozadie zo šablóny</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">Zakázať hranice plochy</string>
+<string name="no_lim_s">Plochu bude možné posúvať aj mimo jej hranice</string>
+
+<!-- added 175 -->
+<string name="mi_h">Postupnosť položiek...</string>
+<string name="mi_if">Štítky položiek</string>
+
+<!-- added 176 -->
+<string name="in_s">Tuto položku lepšie nájdeš v postupnosti položiek</string>
+<string name="mi_b">Späť</string>
+<string name="mi_im">Menu tejto položky</string>
+
+<!-- added 178 -->
+<string name="em_t">Expert režim</string>
+<string name="em_s">Zobrazia sa pokročilé funkcie a rozšírené možnosti nastavenia (napr. pridávanie zastavovacích bodov, atď.). Povolenie sa prejaví až po reštarte.</string>
+<string name="bm_c">Farba</string>
+<string name="bm_bg">Obrázkové pozadie</string>
+<string name="bm_prev">Náhľad</string>
+<string name="rs_t">Spúšťanie skriptov</string>
+<string name="rs_s">Povoliť spúšťanie skriptov</string>
+<string name="rs_w">POZOR! Spúšťanie skriptov je momentálne zakázané vo všeobecných nastaveniach</string>
+<string name="h_ad">Tu sa nachádzajú tvoje nainštalované aplikácie.\nMôžeš ich spúšťať priamo zo zoznamu aplikácií, alebo si môžeš na ploche vytvoriť ich zástupcov (pridržaním prstu na zvolenej ikone sa zobrazí vyskakovacie okno, kde vyber „Pridať na plochu“). \n\nPre ďalšie informácie klikni sem.</string>
+<string name="h_f">Práve si pridal zložku. Zložky môžu obsahovať aplikácie, widgety, panely, prípadne aj ďalšie zložky. Ak máš povolený "Expert režim", môžeš do zložky pridať aj zastavovací bod(y).\n\nPretiahni nejakú položku z plochy na zložku, chvíľu počkaj kým sa sfarbí na modro a potom pusti prst z obrazovky. Teraz je zvolená položka umiestnená vo vnútri zložky.\n\nPre ďalšie informácie klikni sem.</string>
+<string name="h_p">Práve si pridal panel. Panely sa chovajú podobne, ako zložky. V podstate je panel nová plocha umiestnená na stránke plochy.\n\nPretiahni nejakú položku z plochy na panel, chvíľu počkaj kým sa sfarbí na modro a potom pusti prst z obrazovky. Teraz je zvolená položka umiestnená vo vnútri panelu. Tiež môžeš vkladať položky priamo do panelu (podrž prst na paneli, zobrazí sa nové vyskakovacie okno, kde vyber „Pridať položku...“). Pomocou panelu môžeš vytvoriť napríklad „dokovaciu lištu“.\n\nPre ďalšie informácie o paneloch klikni sem.</string>
+<string name="h_t">Tip</string>
+<string name="h_k">Toto je tvoja plocha. Podrž prst na voľnom mieste plochy, zobrazí sa nové vyskakovacie okno, kde môžeš zvoliť napríklad: pridať položku (aplikácie, skratky, widgety, zložky, atď.), upraviť rozloženie plochy, prejsť do nastavení a možností LL, alebo Androida...\n\nV LLX môžeš mať až 100 plôch a každá plocha môže mať nekonečne veľa obrazoviek (stránok). Na ďalšiu, alebo predchádzajúcu plochu sa dostaneš gestom: potiahnutím dvoch prstov doľava, alebo doprava.\n\nStránky plochy vytvoríš tak, že pretiahneš nejakú položku mimo viditeľnú plochu cez hranicu obrazovky smerom vľavo, vpravo, alebo dokonca aj hore či dole.\n\nPokiaľ nechceš, aby sa vybraná položka hýbala mimo viditeľnú obrazovku, podrž prst na zvolenej položke, vyber „Pozícia položky...“ a zvoľ „Prichytiť“. Pridaním panelu na plochu môžeš vytvoriť napríklad „dok“.\n\nPre ďalšie informácie o pojmoch použitých v LL klikni sem.</string>
+<string name="tut_concepts">Najskôr čítaj!</string>
+<string name="tut_wiki">LL Wiki</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Vybrať skratku</string>
+<string name="ev_paused">Pozastavené</string>
+<string name="ev_resumed">Znovu spustené</string>
+<string name="ad_ab_c_t">Lišta akcií</string>
+<string name="ad_ab_b">Obrázkové pozadie</string>
+<string name="ad_ab_h">Skryť lištu akcií</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Hovor do svojho zariadenia</string>
+<string name="ad_ab_ss">Zobraz lištu akcií pri rolovaní</string>
+
+<!-- added 191 -->
+<string name="ip">Výber obrázku</string>
+<string name="ip_none">Pôvodný obrázok</string>
+<string name="ip_camera">Z fotoaparátu</string>
+<string name="ip_ext_file">Z externého prehliadača súborov</string>
+<string name="ip_bgcolor">Farba pozadia pre testovanie</string>
+<string name="delete_file">Skutočne chceš zmazať tento súbor?</string>
+
+<string-array name="ip_s">
+<item>z balíku ikon</item>
+<item>zo súboru</item>
+<item>z aplikácie</item>
+<item>obrázky z LL plôch</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Dotyk</string>
+
+<!-- added 200 -->
+<string name="sc_data">Zaslať dáta do skriptu (ak nepotrebuješ, ponechaj prázdne)</string>
+<string name="sc_send">Odoslať</string>
+<string name="mi_ls">Načítať skript...</string>
+<string name="ls_ok">Skript úspešne načítaný</string>
+<string name="ls_ko">Tento skript sa nedá načítať</string>
+<string name="ls_b">Prehliadať GooglePlay</string>
+<string name="ur">Neopraviteľná chyba</string>
+
+<!-- added 201 -->
+<string name="in_t">Zadať názov</string>
+
+<!-- added 208 -->
+<string name="wrap_s">Pri dosiahnutí poslednej obrazovky na ploche sa automaticky zobrazí prvá obrazovka (platí pre všetky smery).</string>
+<string name="i_cf_t">Zafarbenie</string>
+<string name="i_cf_s">Možnosť nastaviť farbu vrátane úrovne priehľadnosti</string>
+<string name="sbo_t">Prekrytie obsahu status baru</string>
+<string name="nbo_t">Prekrytie obsahu navigačnej lišty</string>
+<string name="sb_t">Systémové lišty</string>
+<string name="sb_s">Nastavenie status baru a navigačnej lišty (viditeľnosť, priehľadnosť, atď.)</string>
+<string name="sbc_t">Farebný odtieň status baru</string>
+<string name="nbc_t">Farebný odtieň navigačnej lišty</string>
+<string name="sb_c">Status bar</string>
+<string name="nb_c">Navigačná lišta</string>
+<string name="mi_app_store">Obchod GooglePlay</string>
+
+<!-- added 217 -->
+<string name="an_um">Užívateľské menu</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Nastavenie vzhľadu</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Svetlý</item>
+<item>Tmavý</item>
+</string-array>
+<string name="i_rm_t">Material efekty</string>
+<string name="i_rm_s">Obmedziť zvlnenie hranicami položky</string>
+<string name="icon_font">Ikonové písmo</string>
+<string name="um_t">Témy</string>
+<string name="pi">Ukazovateľ stránky</string>
+<string name="tab_page_indicator">Ukazovateľ</string>
+<string name="pi_style">Štýl</string>
+<string-array name="pi_style_e">
+<item>Bodky</item>
+<item>Vodorovná čiara</item>
+<item>Zvislá čiara</item>
+<item>Miniatúrna mapa</item>
+<item>Textový</item>
+</string-array>
+<string name="pi_rf_t">Formát textu</string>
+<string name="pi_dmx_t">Vodorovný rozostup</string>
+<string name="pi_dmy_t">Zvislý rozostup</string>
+<string name="pi_dmor">Vonkajší polomer</string>
+<string name="pi_dmoc">Vonkajšia farba</string>
+<string name="pi_dmow">Vonkajšia šírka</string>
+<string name="pi_dmir">Vnútorný polomer</string>
+<string name="pi_dmic">Vnútorná farba</string>
+<string name="pi_mosc">Farba ohraničenia mapy</string>
+<string name="pi_mosw">Šírka ohraničenia mapy</string>
+<string name="pi_mofc">Farba pozadia mapy</string>
+<string name="pi_misc">Farba ohraničenia obrazovky</string>
+<string name="pi_misw">Šírka ohraničenia obrazovky</string>
+<string name="pi_mifc">Farba pozadia obrazovky</string>
+<string name="pi_lbc">Farba pozadia</string>
+<string name="pi_lbw">Šírka pozadia</string>
+<string name="pi_lfc">Farba kurzoru</string>
+<string name="pi_lfw">Šírka kurzoru</string>
+<string name="pi_lg">Gravitácia</string>
+<string-array name="pi_lg_e">
+<item>V strede</item>
+<item>Vpravo alebo dole</item>
+<item>Vľavo alebo hore</item>
+</string-array>
+<string name="ac_s">Ikony a texty</string>
+<string name="ac_c">Kontajner</string>
+<string name="ac_d">Dynamický obsah</string>
+<string name="ac_m">Ostatné</string>
+<string name="ai_t">Text</string>
+<string name="ai_i">Ikona</string>
+<string name="ai_sb">Bočný panel (side bar)</string>
+<string name="ai_b">Počítadlo</string>
+<string name="ac_n">Navigácia</string>
+<string name="ai_bo">Záložka</string>
+<string name="ai_d">Prázdna položka</string>
+<string name="h_sb">Bočný panel je vlastne prispôsobiteľná zložka. Položky do neho môžeš pridať pretiahnutím. Panel môžeš otvárať alebo zatvárať kliknutím na ikonu, priradeným gestom, alebo akoukoľvek inou udalosťou. Zmenou nastavení zarovnania sa dá pozícia panelu zmeniť.</string>
+<string name="mi_exel">Ukončiť editačný režim</string>
+<string name="h_pi">Ukazovateľ stránky zobrazuje aktuálnu pozíciu obrazovky voči celej ploche. V predvolenom nastavení je ukazovateľ pripnutý na dané miesto plochy a nie je klikateľný (možnosť prenastaviť). V editačnom režime môžeš zmeniť štýl ukazovateľa (bodka, vodorovná či zvislá čiara, miniatúrna mapa, alebo len text), farbu a oveľa viac. </string>
+<string name="h_sp">Zastavovací bod je nástroj na vytvorenie vlastnej schémy rolovania: rolovanie obrazovky sa zastaví na vytvorenom zastavovacom bode. Dlhé podržanie prstu na zastavovacom bode zobrazí možnosti jeho úprav. Zastavovacie body sú viditeľné len v editačnom režime.</string>
+<string name="h_b">Záložka funguje tak, že uloží aktuálnu pozíciu obrazovky, vrátane mierky (priblíženia či oddialenia) plochy. Po vytvorení záložky (ikony) ju môžeš presunúť kamkoľvek inam. Kliknutím na záložku budeš automaticky presmerovaný na obrazovku a plochu, kde bola táto záložka vytvorená. Okrem plochy funguje záložka aj vo vnútri panelov a v zložkách.</string>
+<string name="sc_h">Posunom prstu od ľavého okraja smerom doprava zobrazíš možnosti editora skriptov</string>
+<string name="sc_a">Akcie</string>
+<string name="sc_o">Možnosti</string>
+<string name="sc_w">Zalamovanie slov</string>
+<string name="wrapx_t">Nekonečný posun v ose X</string>
+<string name="wrapy_t">Nekonečný posun v ose Y</string>
+<string name="h_w">Nekonečný posun je v editačnom režime automaticky vypnutý, inak by prázdne stránky neboli prístupné. Môže sa zdať, že niektoré položky pri vstupe do editačného režimu zmizli. V skutočnosti sú však umiestnené na svojej pôvodnej pozícii namiesto toho, aby boli „zalomené“.\nFunkcia nekonečný posun bude po opustení editačného režimu znovu aktivovaná.</string>
+<string name="ad_bc">Vybrané:</string>
+<string name="an_wt">Klik na tapetu pozadia</string>
+<string name="an_wst">Druhý klik na tapetu pozadia</string>
+<string name="ds_sh">Začni tu</string>
+<string name="ds_uc">Užívateľská komunita LL</string>
+<string name="ds_tt">Tipy a triky</string>
+<string name="ds_br">Záloha a obnova</string>
+<string name="ds_hn">Tip: Pre vytvorenie novej stránky stačí prstom pridržať akúkoľvek položku a pretiahnuť ju cez hranicu plochy. Novú stránku je možné vytvoriť všetkými smermi (vpravo, vľavo, hore, dole, šikmo).\n\n(tento tip môžeš bezpečne odstrániť)</string>
+<string name="ds_um">Tip: Potiahnutím jedného, alebo dvoch prstov nahor sa zobrazí užívateľské menu (je možné ho prispôsobiť). Dlhé pridržanie prstu kdekoľvek na displeji zobrazí kontextové menu.\n\n(tento tip môžeš bezpečne odstrániť)</string>
+<string name="ds_z">Celá plocha</string>
+<string name="sc_import">Import...</string>
+<string name="sc_si_t">Aplikácia Script Importer nie je nainštalovaná</string>
+<string name="sc_si_m">Chceš ju nainštalovať z GooglePlay?</string>
+<string name="adm_t">Kategórie</string>
+<string name="adm_s">Vyber viditeľné kategórie zoznamu aplikácií</string>
+<string name="adm_z">Aspoň jedna kategória musí byť povolená...</string>
+
+<!-- added 224 -->
+<string name="tr_fl_t">Pre použitie tejto funkcie prosím odomkni Lightning</string>
+<string name="tr_fl_m">Odomknutím plnej verzie Lightningu získaš tieto funkcie a možnosti:\n\n-Pokročilý zoznam aplikácií (zložky, lišta akcií, kategórie zobrazení)\n-Konfiguráciu plôch (pridať, odstrániť a meniť plochy)\n-Možnosť zvoliť tapetu pozadia pre každú plochu zvlášť\n-Zobrazenie neprečítaných oznámení  (počet zmeškaných hovorov, neprečítaných sms a emailov...), dynamický text, ukazovateľ stránok\n-Prispôsobiteľný zámok obrazovky (Lock Screen) z akejkoľvek plochy\n-Integrovaný App killer (ukončovač aplikácií)\n-Samozrejme aj ďalšie nové, v budúcnosti vyvinuté a vytvorené funkcie\n\nAk si už v minulosti Lightning zakúpil, prosím klikni na „OK“, čím ho re-aktivuješ na plnú verziu. \n\n</string>
+<string name="tr_pw">Prosím čakaj...</string>
+<string name="tr_ty">Ďakujem za finančnú podporu vývoja Lightningu!</string>
+<string name="tr_eu">Prepáč, došlo k chybe...</string>
+<string name="tr_c">Zrušené</string>
+<string name="tr_br_s">Táto funkcia nie je k dispozícii v skúšobnej verzii</string>
+<string name="tr_rs_t">Zakúpiť licenčný kľúč</string>
+<string name="tr_rs_s">Odomknutím spoznáš plnú silu LL</string>
+<string name="tr_w">Ďakujem za vyskúšanie Lightningu!\n\nAplikácia pobeží v skúšobnom režime 7 dní. Počas tejto doby budú všetky funkcie dostupné bez obmedzenia. Po uplynutí skúšobnej doby bude aplikácia aj naďalej použiteľná, avšak už nebude možné meniť jej niektoré nastavenia.\n\nAk sa ti táto aplikácia zapáči a chceš podporiť jej vývoj, zakúp si licenčný kľúč, ktorý opäť sprístupní všetky funkcie.\n\nĎakujem!  </string>
+<string name="tr_l">%d dní do skončenia skúšobnej verzie</string>
+<string name="tr_rm">Lightning potrebuje tvoju spätnú väzbu!\n\nNájdeš si prosím pár sekúnd na ohodnotenie tejto aplikácie v Obchode Play?</string>
+<string name="ds_hls">Tip: Toto je ukážka zámku obrazovky (Lock Screenu), ktorý si môžeš prispôsobiť akokoľvek.\nPridaj si na ňu aplikácie, alebo widgety a potom ju aktivuj v nastaveniach zámku obrazovky (klikni sem)\n\n(tento tip môžeš bezpečne odstrániť)</string>
+<string name="ic">Orezávač obrázkov</string>
+<string name="bg_st">Pozícia</string>
+<string-array name="bg_st_e">
+<item>Na stred, bez zmeny mierky</item>
+<item>Prispôsobiť šírke a výške</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Orezávací obdĺžnik</string>
+<string name="ip_solid">Vyplniť farbou</string>
+<string name="ip_search">Nájsť podľa názvu</string>
+<string name="sst">Vybrať skript</string>
+<string name="ips_t">Optimalizácia využívania obrázkov</string>
+<string name="ips_s">Prosím, prečítaj si dokumentáciu (dlhým pridržaním), než túto hodnotu zmeníš</string>
+
+<!-- added 231 -->
+<string name="v_m">Viditeľnosť...</string>
+<string name="v_a">Všetky aplikácie</string>
+<string name="v_ov">Len viditeľné aplikácie</string>
+<string name="v_oh">Len skryté aplikácie</string>
+<string name="ad_ab_tc">Farba textu</string>
+
+<!-- added 233 -->
+<string name="cv">Vlastné zobrazenie</string>
+<string name="h_cv">Vlastné zobrazenie umožňuje vykresľovanie pomocou skriptovacích metód a je navrhnuté pre zvláštne prípady.  Vyžaduje pokročilé znalosti skriptovania a systému Android.</string>
+<string name="cv_c">Vytvoriť skript</string>
+<string name="cv_d">Zahodiť skript</string>
+<string name="eb_u">Vrátiť späť</string>
+<string name="eb_r">Znovu prerobiť</string>
+<string name="eb_bh">Skryť editačné lišty</string>
+<string name="eb_bs">Zobraziť editačné lišty</string>
+<string name="eb_pr">Duplikovať</string>
+<string name="eb_ms">Viacnásobný výber</string>
+<string name="eb_snap">Snímka</string>
+<string name="eb_prop">Úplné nastavenia</string>
+<string name="ds">Nastavenia obrazovky</string>
+<string name="ads">Nastavenia zoznamu aplikácií</string>
+<string name="cdi">Jeden, alebo viac widgetov bude odstránených. Odstránenie widgetov nemusí byť obnoviteľné. Možno budeš musieť widget nastaviť odznova. Chceš pokračovať v odstránení?</string>
+<string name="st_c">Skopírovať štýl</string>
+<string name="st_p">Vložiť štýl</string>
+<string name="st_d">Štýl skopírovaný, teraz zvoľ položku, ktorej štýl chceš zmeniť.</string>
+<string name="mi_actions">Akcie...</string>
+<string name="nois">Žiadna možnosť</string>
+<string name="lightning">LL nastavenia</string>
+<string name="folder">Zložka</string>
+<string name="tg">Spustiť:</string>
+<string name="tg_d">na ploche</string>
+<string name="tg_ad">v zozname aplikácií</string>
+<string name="tg_ls">v zámku obrazovky</string>
+<string name="tg_bg">v pozadí</string>
+<string name="tss">Lightning skript</string>
+<string name="mi_nos">Žiadny skript tu nie je</string>
+<string name="mi_nos1">Myslím, že už som ti povedal, že tu žiadny skript nie je ;-)</string>
+<string name="mi_nos2">Prosím neuraz sa, ale trvám na tom, že tu žiadny skript nie je.</string>
+<string name="mi_nos3">Hej! Nevieš čítať?</string>
+<string name="mi_nos4">Už mám toho dosť, prestaň prosím. Inak nejaký skript vytvorím...</string>
+<string name="mi_nos5">OK, pokiaľ je to jediný spôsob, ako budeš v kľude...Poďme na to! Práve vytváram nový skript...</string>
+<string name="mi_nost">Vynútená rotácia</string>
+<string name="sm_f">Presunúť na prvú pozíciu</string>
+<string name="sm_p">Presunúť na predchádzajúcu pozíciu</string>
+<string name="sm_d">Odstrániť plochu</string>
+<string name="sm_h">Nastaviť ako domácu plochu</string>
+<string name="sm_a">Pridať novú plochu</string>
+<string name="sm_c">Duplikovať vybranú plochu</string>
+<string name="sm_n">Presunúť na nasledujúcu pozíciu</string>
+<string name="sm_l">Presunúť na poslednú pozíciu</string>
+<string name="sm_cn">Kopírovať z</string>
+<string name="sm_an">Nová plocha</string>
+<string name="ip_e">Žiadne ikony nie sú k zobrazeniu</string>
+<string name="cv_dfl">Vlastné zobrazenie nie je k dispozícii.\nKliknutím to skús znova.</string>
+<string name="ad_mdh">Pre prispôsobenie prepnuté do zobrazenia „Môj zoznam“</string>
+<string name="tab_bind">Väzby</string>
+<string name="bd_a">Pridať väzbu...</string>
+<string name="bd_p">Vlastnosť</string>
+<string name="bd_v">Hodnota</string>
+<string name="pg">Pozícia v mriežke</string>
+<string name="pf">Pozícia vo voľnom režime</string>
+<string name="pd">Dummy premenná</string>
+<string name="pv">Viditeľnosť</string>
+<string name="pe">Povolené</string>
+<string name="pl">Názov</string>
+<string name="pit">Nastavenie položky</string>
+<string name="bd_s">Vybrať vlastnosť...</string>
+<string name="bvc_dt">Dátum a čas</string>
+<string name="bv_pick">Vyber existujúcu premennú</string>
+<string name="bv_sec">Sekunda</string>
+<string name="bv_min">Minúta</string>
+<string name="bv_h24">Hodina (24)</string>
+<string name="bv_h12">Hodina (12)</string>
+<string name="bv_ampm">AM/PM</string>
+<string name="bv_day">Deň</string>
+<string name="bv_mon">Mesiac</string>
+<string name="bv_week">Týždeň</string>
+<string name="bv_year">Rok</string>
+<string name="bv_dayn">Názov dňa</string>
+<string name="bv_monn">Názov mesiaca</string>
+<string name="bvc_bat">Batéria</string>
+<string name="bv_batl">Aktuálny stav</string>
+<string name="bv_batst">Stav</string>
+<string name="bv_batv">Napätie</string>
+<string name="bv_batp">Pripojené k nabíjačke</string>
+<string name="bvc_stor">Úložisko</string>
+<string name="bv_ith">Vnútorné celkom</string>
+<string name="bv_ifh">Vnútorné voľné</string>
+<string name="bv_eth">Externé celkom</string>
+<string name="bv_efh">Externé voľné</string>
+<string name="bv_it">Vnútorné celkom (len číslo)</string>
+<string name="bv_if">Vnútorné voľné (len číslo)</string>
+<string name="bv_et">Externé celkom (len číslo)</string>
+<string name="bv_ef">Externé voľné (len číslo)</string>
+<string name="bvc_cpu">Procesor</string>
+<string name="bv_cu">Využité</string>
+<string name="bv_cr">Užívateľ</string>
+<string name="bv_cn">Nice</string>
+<string name="bv_cs">Systém</string>
+<string name="bv_ci">Idle</string>
+<string name="bv_co">I/O</string>
+<string name="bv_cq">IRQ</string>
+<string name="bv_cf">SoftIRQ</string>
+<string name="bvc_screen">Obrazovka</string>
+<string name="bv_o">Orientácia</string>
+<string name="v_o">Iné premenné</string>
+<string name="an_sv">Nastaviť premennú</string>
+<string name="sv_n">Názov premennej (bez $)</string>
+<string name="tsv">LL premenná</string>
+<string name="bv_ts">Časová značka</string>
+<string name="eb_sh">Zobraziť/skryť neviditeľné položky</string>
+<string name="pz">Osa Z</string>
+<string name="pb">Box</string>
+
+<string name="ov_t">Plávajúca plocha</string>
+<string name="ov_s">Vyber plochu, ktorá sa bude zobrazovať ako plávajúca (položky na priehľadnej ploche sa zobrazia pred ostatnými aplikáciami)</string>
+<string name="ov_st">Vybrať/zakázať plávajúcu plochu</string>
+<string name="ov_ss">Vyber plochu, ktorá sa bude zobrazovať ako plávajúca. Pre deaktiváciu klikni na tento text a následne na klávesu SPÄŤ.</string>
+<string name="ov_dht">Zobraziť úchytky</string>
+<string name="ov_dhs">Len pre účely ladenia (zelená: zobraziť, červená: skryť)</string>
+<string name="ov_lht">Automaticky skryť</string>
+<string name="ov_lhs">Po spustení zvolenej aplikácie sa plávajúca plocha automaticky skryje</string>
+<string name="ov_d">Plávajúca plocha je deaktivovaná</string>
+<string name="an_so">Zobraziť plávajúcu plochu</string>
+<string name="an_ho">Skryť plávajúcu plochu</string>
+<string name="ov_shp">Pozícia otváracej úchytky</string>
+<string name="ov_shs">Veľkosť otváracej úchytky</string>
+<string name="ov_hhp">Pozícia zatváracej úchytky</string>
+<string name="ov_hhs">Veľkosť zatváracej úchytky</string>
+<string-array name="ov_hp_e">
+<item>Vľavo hore</item>
+<item>Vľavo na stred</item>
+<item>Vľavo dole</item>
+<item>Vpravo hore</item>
+<item>Vpravo na stred</item>
+<item>Vpravo dole</item>
+<item>Hore vľavo</item>
+<item>Hore na stred</item>
+<item>Hore vpravo</item>
+<item>Dole vľavo</item>
+<item>Dole na stred</item>
+<item>Dole vpravo</item>
+</string-array>
+<string name="f_afo">Automaticky nájsť začiatok zložky</string>
+<string name="f_afos">Zmeny sa prejavia pri ďalšom načítaní</string>
+<string name="ov_hhw">Šírka zatváracej úchytky</string>
+<string name="ov_shw">Šírka otváracej úchytky</string>
+<string name="ha_t">Použiť hardwerovú akceleráciu</string>
+<string name="ev_cia">Pridať položku</string>
+<string name="ev_cir">Odobrať položku</string>
+<string name="pc">Klikateľné</string>
+<string name="nip">(Nie je nainštalovaný žiadny balík ikon)</string>
+<string name="m_la_t">Spustiť animáciu</string>
+<string-array name="m_la_e">
+<item>Žiadna animácia</item>
+<item>Do stratena</item>
+<item>Systémová animácia</item>
+<item>Slide up</item>
+<item>Slide down</item>
+<item>Slide left</item>
+<item>Slide right</item>
+<item>Scale from center</item>
+</string-array>
+<string name="lh">Nastaviť vlastný názov\n(môžeš použiť aj základné HTML tagy)</string>
+<string name="hs_ed">Upraviť...</string>
+<string name="an_ohs">Otvoriť „Postupnosť položiek“</string>
+<string name="ov_pt">Nastavenie</string>
+<string name="ov_ps">Prekrývacia plocha vyžaduje oprávnenie k prekrytiu ďalších aplikácií</string>
+<string name="ism_t">Režim veľkosti</string>
+<string-array name="ism_e">
+<item>Normálna veľkosť</item>
+<item>Skutočná veľkosť</item>
+<item>Plný rozsah poľa so zachovaním pomeru strán</item>
+<item>Plný rozsah poľa roztiahnutím</item>
+<item>Normalized</item>
+</string-array>
+<string name="mi_cfp">Previesť na panel</string>
+<string name="mi_cpf">Previesť na zložku</string>
+<string name="ldo_t">Zakázanie plávajúcej plochy</string>
+<string name="ldo_s">Na uzamknutej obrazovke nebude možné zobraziť plávajúcu plochu. Po odomknutí obrazovky pôjde opäť plávajúcu plochu vyvolať.</string>
+<string name="pr_t">Súvisiace oprávnenia</string>
+<string name="pr_s">Pre dokončenie tejto akcie potrebuje Lightning Launcher toto oprávnenie:</string>
+<string name="pr_r1">hľadanie archívov záloh a šablón v externom úložisku</string>
+<string name="pr_r2">čítanie záloh a šablón v externom úložisku</string>
+<string name="pr_r3">čítanie súborov písiem v externom úložisku</string>
+<string name="pr_r4">čítanie obrázkov v externom úložisku</string>
+<string name="pr_r5">uloženie extrahovaných obrázkov do externého úložiska </string>
+<string name="pr_r6">čítanie dát šablón</string>
+<string name="pr_r7">extrahovanie súborov šablón do dočasného úložiska</string>
+<string name="pr_r8">urobiť skript dostupný v externom úložisku pre čítanie inými editormi</string>
+<string name="pr_r9">vynútiť ukončenie aplikácií</string>
+<string name="pr_r10">zobraziť dostupné Google účty</string>
+<string name="pr_r11">čítanie záznamu volaní kvôli zmeškaným hovorom</string>
+<string name="pr_r12">čítanie počtu neprečítaných SMS správ</string>
+<string name="pr_r13">volanie priamo z domácej obrazovky</string>
+<string name="pr_f1">Zálohy/šablóny nie je možné čítať, alebo zapísať</string>
+<string name="pr_f2">Písmo sa nedá vybrať</string>
+<string name="pr_f3">Obrázok sa nedá vybrať</string>
+<string name="pr_f4">Šablóna sa nedá spracovať</string>
+<string name="pr_f5">Nedá sa vynútiť ukončenie aplikácií</string>
+<string name="mi_sel">Vybrať...</string>
+<string name="mi_sa">Všetko</string>
+<string name="mi_sn">Nič</string>
+<string name="mi_ss">Na obrazovku</string>
+<string name="mi_si">Invertovať</string>
+<string name="mi_sr">Plocha</string>
+<string name="ms_m">, +%d viac</string>
+<string name="h_cl">Kontajner je uzamknutý. Dlhým pridržaním na prázdnom mieste zvoľ „Odomknúť kontajner pre úpravy“.</string>
+<string name="no_um_ad">Užívateľské menu nie je dostupné v zozname aplikácií. </string>
+<string name="ds_0">Predvolená plocha</string>
+<string name="ds_1">Ukážka zámku obrazovky</string>
+<string name="sc_all">Vrátane podadresárov</string>
+<string name="nfh">Nie je tu nič na zobrazenie</string>
+<string name="sc_path">Aktuálna cesta</string>
+<string name="lwp">Lightning živá tapeta</string>
+<string name="sd">Vyber plochu, ktorá bude slúžiť ako živá tapeta</string>
+<string name="ad_b">Zabudované</string>
+<string name="ad_p">Zásuvné moduly</string>
+<string name="ev_m">Menu</string>
+<string name="lwp_ev_t">Use standard touch events</string>
+<string name="lwp_ev_s">React to touches as a normal app, allowing wallpaper swipe and scroll</string>
+<string name="iab_no">Nie, ďakujem</string>
+<string name="iab_y_key">Áno (kľúčom)</string>
+<string name="iab_y_app">Áno (aplikáciou)</string>
+<string name="iab_ul_lwp_t">Zatiaľ nie je povolená</string>
+<string name="iab_ul_lwp_m">Lightning živá tapeta zatiaľ nie je povolená.\n\nFinančne prispej vývojárovi, pomôžeš tak pri vytváraní LL, najlepšieho spúšťača všetkých čias...\n\n</string>
+<string name="an_i_as">Show app shortcuts</string>
+<string name="as_no_s">No app shortcut for this item</string>
+<string name="as_no_hp_t">No app shortcut permission</string>
+<string name="as_no_hp_m">In order to access app shortcuts, Lightning Launcher needs to be the default launcher, otherwise it has no app shortcut permission.\n\nNote: you may see this message twice before you can select \'Always\' in the launcher selection box.</string>
+<string name="as_nf">Shortcut disabled</string>
+<string name="sp_none">Zakázať skript</string>
+<string name="widget_count">(%d widgetov)</string>
+
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Nerobiť nič (lock)</item>
+<item>Spustiť zoznam aplikácií</item>
+<item>Zväčšiť na celý rozsah plochy</item>
+<item>Zväčšiť na 100%</item>
+<item>Prepnuťna: celý rozsah plochy/100% zväčšenie</item>
+<item>Predchádzajúca obrazovka</item>
+<item>Nasledujúca obrazovka</item>
+<item>Upraviťť rozloženie</item>
+<item>Pridať položku</item>
+<item>Upraviť LL</item>
+<item>Upraviť súčasnú plochu, alebo zložku</item>
+<item>Spustiť aplikáciu</item>
+<item>Spustiť skratku</item>
+<item>Vybrať tapetu pozadia</item>
+<item>Menu LL</item>
+<item>Zobraziť/skryť status bar</item>
+<item>Zobraziť/skryť aplikačné menu a status bar</item>
+<item>Zobraziť notifikácie</item>
+<item>Hľadať</item>
+<item>Presunúť položku</item>
+<item>Upraviť položku</item>
+<item>Menu položky</item>
+<item>Spustiť položku</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Automatické zastavenie rolovania</string>
+<string name="auto_stop_s">Automatické zastavenie rolovania na hranách obrazovky</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Vybrať zálohu pre obnovu:</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Žiadna</item>
+<item>Otvoriť/zatvoriť</item>
+<item>Priblížiť/oddialiť</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Reset zväčšenia/rotácie</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Rolovanie jedným prstom v editačnom režime</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Prepnutie na výšku/šírku</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Rýchlosť rolovania</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Vytvoriť zálohu a použiť</string>
+<string name="apply_tmpl_n">Len použiť</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">Zobraziť predvolenú ikonu</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Položky zobrazovať pred priehľadnými lištami</string>
+<string name="ad_ab_c_s">Obrázkové pozadie, viditeľnosť</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Nekonečný posun</string>
+
+<!-- deprecated: beyond -->
+<string name="ip_blank">Priehľadný obrázok</string>
+<string name="min_ram_t">Minimalizovať využitie RAM</string>
+<string name="min_ram_s">LL bude využívať menej RAM, ale môže byť trochu pomalší. Prejaví sa až po reštarte.</string>
+<string name="mi_es_show_hidden">Zobraziť skryté</string>
+<string name="mi_es_hide_hidden">Skryť skryté</string>
+<string name="mi_zorder">Presunúť do popredia/pozadia</string>
+<string name="snap_t">Prichytenie</string>
+<string-array name="snap_e">
+<item>Žiadne</item>
+<item>Na stred</item>
+<item>Ku hrane</item>
+<item>Na stred a ku hrane</item>
+</string-array>
+<string name="copy_style_toast">Klikni na položku, z ktorej chceš skopírovať štýl</string>
+<string name="copy_style_cancel">Kopírovanie štýlu zrušené</string>
+<string name="copy_style_done">Štýl skopírovaný!</string>
+<string name="mi_edit_copy_style">Skopírovať štýl z...</string>
+<string name="mi_app">Aplikácia...</string>
+<string name="mi_fo">Nastavenia zložky</string>
+<string name="items_t">Položky</string>
+<string name="items_s">Písmo, farby, ikony, okraje a ďalšie...</string>
+<string name="mi_es_add_folder">Pridať zložku</string>
+<string name="mi_es_add_pi">Vložiť ukazovateľ stránky</string>
+<string name="gc_hpie_s">Dlhé pridržanie prstu ťa odkáže na nápovedu</string>
+<string name="tut_basic_editing">Prvé kroky v LL</string>
+<string name="hide_statusbar_s">Zobrazí sa po stlačení MENU</string>
+<string name="mph"></string>
+<string name="tr_ut">Informácie o Lightningu</string>
+<string name="tr_um">Chcel by som ti poďakovať za dlhodobé používanie môjho bezplatného Lightning Launcheru.\n\nBezplatná verzia bola nahradená skúšobnou verziou. Aj naďalej môžeš zadarmo využívať všetky existujúce funkcie,\nktoré boli implementované v predchádzajúcich bezplatných verziách (až do v10.0.3).\n\nAk sa ti môj launcher páči, porozmýšľaj nad nákupom licenčného kľúča, ktorý ti umožní používať všetky dostupné funkcie plnej verzie, vrátane novo vyvíjaných vymožeností. Aktuálne za zvýhodnenú vernostnú cenu!\n\nĎakujem! Pierre Hébert, autor aplikácie  </string>
+<string name="ip_bic">Poškodený balík ikon</string>
+
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">Slovak</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="pack_name">Lightning Launcher - Русский</string>
+<string name="pack_name_short">Русский</string>
+<string name="tranlator_name">Mikhail Goncharov, maksnogin, Bop4yN</string>
+
+<string name="description">Lightning - это невероятно быстрая и легкая оболочка (лаунчер) с почти безграничными возможностями настройки.\n\nВы больше не ограничены страницами. Теперь Ваш рабочий стол - это произведение искусства на бесконечном холсте.\nВозможности безграничны.\n\nОсновные функции:\n•Отдельные макеты и размеры сетки для портретной и альбомной ориентации\n•Панели и рабочие столы с прокруткой могут быть открыты поверх текущей страницы\n•Возможность закрепить элементы, чтобы они не сдвигались\n•Окно настроек: настроить цвет фона, границы, и поля любого элемента\n•"Свободный режим": Сетка? Зачем? Свободный режим освобождает от размещения в сетке и позволяет вращать элементы\n•Настраиваемая сетка рабочего стола (для любителей стандартного расположения)\n•22 различных жеста могут выполнять 29 различных действий (эти действия можно выполнить и через ярлыки)\n•Использование одного из рабочих столов в качестве экрана блокировки! (beta)\n•Точки остановки: укажите, где остановить прокрутку\n•Настройка направления прокрутки\n•Полный контроль над каждым элементом, включая:\n1. выбор шрифт текста, его тень и цвет\n2. выбор иконки из галереи, а также её масштаб и внутренний масштаб\n3. выбор взаимного расположения иконки и заголовка\n4. настройку границ и отступов. В качестве фона можно использовать .9.png (обратите внимание. это круто.)\n5. настройку прозрачности и направления жестов для выполнения любых действий (например Сдвиг вверх на иконке Chrome запустит браузер Dolphin)\n•Сохранение настроенных рабочих столов в виде резервной копии либо в виде стиля\n•Экспорт настроек в приложение APK.\n\n------\n\nLightning поддерживает прозрачность строки статуса (status bar) и строки навигации (navigation bar) из KitKat.\n\n------\n\nLightning одна из наиболее настраиваемых оболочек. И потому может быть не самая лёгкая в освоении. Как и большинство серьёзных инструментов Lightning требует некоторого времени на изучение. Но разве эта не малая плата за возможность получения самого невероятного и уникального рабочего экрана?\n\nСайт проекта http://www.lightninglauncher.com/\nВсе замечания, предложения и сообщения об ошибках приветствуются.\nПожалуйста, задавайте ваши вопросы и сообщайте об ошибках мне на почту pierrox@pierrox.net.\nПрисоединяйтесь к сообществу на G+ и общайтесь с другими пользователями, обсуждайте возможности, задавайте вопросы, отвечайте на вопросы других пользователей или вступайте в группу бета-тестеров.\n\nДолгим нажатием на любой пункт настроек открывается окно помощи по этой настройке.</string>
+
+
+<string name="start_activity_error">Не удалось запустить это приложение</string>
+<string name="menu_add">Добавить…</string>
+<string name="menu_settings">Android</string>
+<string name="menu_customize">Lightning</string>
+<string name="menu_customize_folder">Настройки папки</string>
+<string name="menu_objects_layout">Изменить макет</string>
+<string name="dialog_action_title">Добавить…</string>
+
+<string-array name="dialog_action_values">
+<item>Приложение</item>
+<item>Ярлык</item>
+<item>Виджет</item>
+<item>Виджет LL</item>
+<item>Папку</item>
+<item>Точку остановки прокрутки</item>
+</string-array>
+
+<string name="mi_remove">Удалить</string>
+<!-- <string name="mi_share">Share</string> -->
+<string name="mi_customize">Изменить</string>
+<string name="mi_move_to_screen">Переместить…</string>
+<string name="mi_edit_icon">Иконка</string>
+<string name="mi_edit_label">Заголовок</string>
+<string name="mi_pick_app">Приложение</string>
+<string name="mi_pick_widget">Выберите другой виджет</string>
+<string name="mi_edit_more">Свойства…</string>
+<string name="mi_position">Позиция…</string>
+<string name="mi_pin">Закрепить</string>
+<string name="mi_unpin">Открепить</string>
+<string name="mi_add_to_launcher">Ярлык на рабочий стол</string>
+<string name="mi_hide_unhide">Скрыть/Показать</string>
+<string name="mi_app_details">О приложении</string>
+<string name="mi_widget_options">Настройки виджета</string>
+<string name="mi_move_out_of_folder">Убрать из папки</string>
+<string name="first_use_title">Добро пожаловать!</string>
+<string name="first_use_message">Lightning Launcher - это легкая, быстрая и невероятно гибкая замена домашнего экрана Android.\n\nСейчас активирован Нормальный режим. В этом режиме скрыты некоторые расширенные настройки. Для получения доступа ко всем настройкам переключитесь в режим Эксперта (в Общих настройках).\n\nLightning сейчас подготовит список приложений.\n\nБлагодарю за прочтение и использование!</string>
+<string name="all_apps">Все приложения</string>
+<string name="menu_refresh">Обновить</string>
+<string name="menu_zoom">Масштаб</string>
+<string name="menu_see_only_visible">Только видимые</string>
+<string name="menu_see_only_hidden">Только скрытые</string>
+<string name="menu_see_all">Все приложения</string>
+<string name="empty_folder">Долгое касание для добавления элементов в папку.\nБольше настроек при редактировании элемента папки.</string>
+<string name="file_picker_activity_up">Вверх</string>
+
+<string name="settings">Все настройки</string>
+<string name="general_t">Основные настройки</string>
+<string name="general_s">Язык, кнопки, жесты,…</string>
+<string name="dashboard_t">Рабочий стол</string>
+<string name="dashboard_s">Вид элементов, макет рабочего стола и прокрутка</string>
+<string name="app_drawer_t">Меню приложений</string>
+<string name="app_drawer_s">Настройки списка приложений</string>
+<string name="app_killer_t">Выгрузка приложений</string>
+<string name="app_killer_s">Закрытие приложений с помощью Lightning</string>
+<string name="donate_t">Пожертвование</string>
+<string name="donate_s">Нравится приложение и хочешь поддержать?</string>
+<string name="backup_t">Резервное копирование настроек</string>
+<string name="restore_t">Восстановление настроек</string>
+<string name="rate_t">Оценить Lightning</string>
+<string name="rate_s">Выскажите свое мнение на Google Play</string>
+<string name="facebook_t">Страничка на Google+</string>
+<string name="facebook_s">Следите за обновлениями, предлагайте новые функции, сообщайте об ошибках</string>
+<string name="ld_t">Меню приложений Lightning</string>
+<string name="ld_s">Улучшенное меню приложений</string>
+<string name="customize_ll">Настройка Lightning</string>
+
+
+
+<!-- <string name="preference_workspace_contextual_config_category">Contextual setup</string> -->
+<!-- <string name="per_or_title">Setup based on screen orientation</string> -->
+<!-- <string name="per_or_summary">Let you use a totally distinct setup for each screen orientation</string> -->
+<!-- <string-array name="per_or_entries"> -->
+<!-- <item>One setup for all orientations</item> -->
+<!-- <item>One setup for portrait, another one for landscape</item> -->
+<!-- //        <item>One for each orientation (0, 90, 180 and 270°)</item> -->
+<!-- </string-array> -->
+
+<string name="language_t">Языки</string>
+<string name="language_s">Выбрать или установить языковой пакет</string>
+<string name="lg_pick_t">Выбрать языковой пакет</string>
+<string name="lg_pick_s">Произойдет перезапуск Lightning</string>
+<string name="lg_install_t">Получить другие языковые пакеты</string>
+<string name="lg_install_s">Установка из Google Play</string>
+
+<string name="lg_contrib_t">Помочь с переводом</string>
+<string name="lg_contrib_s">Создать или обновить свой языковой пакет</string>
+<string name="events_t">События и действия</string>
+<string name="events_s">Настройка реакции на жесты и нажатия кнопок</string>
+<string name="ev_home">Кнопка Домой</string>
+<string name="ev_menu">Кнопка Меню</string>
+<string name="ev_search">Кнопка Поиск</string>
+<string name="ev_item_tap">Касание элемента</string>
+<string name="ev_item_ltap">Долгое касание элемента</string>
+<string name="ev_bg_tap">Касание пустого места</string>
+<string name="ev_bg_dtap">Двойное касание пустого места</string>
+<string name="ev_bg_ltap">Долгое касание пустого места</string>
+<string name="ev_swipe_r">Сдвиг вправо</string>
+<string name="ev_swipe_l">Сдвиг влево</string>
+<string name="ev_swipe_u">Сдвиг вверх</string>
+<string name="ev_swipe_d">Сдвиг вниз</string>
+<string name="ev_swipe2_r">Сдвиг 2 пальцами вправо</string>
+<string name="ev_swipe2_l">Сдвиг 2 пальцами влево</string>
+<string name="ev_swipe2_u">Сдвиг 2 пальцами вверх</string>
+<string name="ev_swipe2_d">Сдвиг 2 пальцами вниз</string>
+
+<string name="an_u">Не настроен</string>
+<string name="an_n">Ничего не делать</string>
+<string name="an_ad">Все приложения</string>
+<string name="an_zfs">Полный экран</string>
+<string name="an_z100">Масштаб 100\%</string>
+<string name="an_zt">Переключатель Полный экран/100\%</string>
+<string name="an_pd">Предыдущий стол</string>
+<string name="an_nd">Следующий стол</string>
+<string name="an_el">Изменить макет</string>
+<string name="an_ao">Добавить элемент</string>
+<string name="an_cl">Настройки Lightning</string>
+<string name="an_cd">Настроить текущий рабочий стол</string>
+<string name="an_la">Запуск приложения</string>
+<string name="an_ls">Запуск ярлыка</string>
+<string name="an_sw">Выбрать обои</string>
+<string name="an_lm">Меню Lightning</string>
+<string name="an_ssb">Видимость строки состояния</string>
+<string name="an_smsb">Показать/скрыть строку состояния и меню Lightning</string>
+<string name="an_sn">Показать уведомления</string>
+<string name="an_s">Поиск</string>
+<string name="an_i_m">Переместить элемент</string>
+<string name="an_i_c">Настроить элемент</string>
+<string name="an_i_me">Меню элемента</string>
+<string name="an_i_l">Запуск элемента</string>
+
+<string name="auto_edit_t">Активировать автоматически</string>
+<string name="auto_edit_s">Открывать редактор макета при добавлении нового элемента</string>
+<string name="page_anim_t">Анимация смены рабочих столов</string>
+
+<string-array name="page_anim_e">
+<item>Нет</item>
+<item>Затухание</item>
+<item>Горизонтальный сдвиг</item>
+<item>Вертикальный сдвиг</item>
+</string-array>
+
+<string name="keep_in_memory_t">Оставаться в памяти</string>
+<string name="keep_in_memory_s">Работает быстрее, но использует больше памяти</string>
+<string name="tools_pick_shortcut">Выберите ярлык</string>
+<string name="tools_pick_widget">Выберите виджет</string>
+<string name="new_style">Создать новый стиль…</string>
+<string name="choose_style_name">Как назовем?</string>
+<string name="delete_style">Удалить этот стиль?</string>
+<string name="relayout_items">Этот стиль имеет меньше столбцов, чем текущий. Продолжить и упорядочить элементы?</string>
+<string name="style_saved">Стиль сохранен</string>
+<string name="style_loaded">Стиль загружен</string>
+<string name="install_widgets">Виджеты Lightning</string>
+<string name="item_settings_icon_copy_failed">Не удалось скопировать иконку :-(</string>
+<string name="tool_not_available">Извините, этот инструмент недоступен</string>
+<string name="default_folder_name">Папка</string>
+<string name="app_added" formatted="true">%s добавлен</string>
+<string name="select_launcher_title">Выбрать оболочкой по умолчанию</string>
+<string name="extras">Дополнительно</string>
+<string name="permission_denied">Нет разрешений. Для ярлыка быстрого вызова установите плагин "LL direct call"</string>
+<string name="appearance">Внешний вид \nСдвиг влево для предпросмотра</string>
+<string name="background_t">Обои</string>
+<string name="background_s">Выбрать обои, оттенок цвета, эффекты прокрутки</string>
+<string name="grid_t">Линии сетки</string>
+<string name="grid_s">Только для режима сетки. Выбрать толщину, цвет и положение</string>
+<string name="folder_look_t">Окна папок</string>
+<string name="folder_look_s">Задать фон, границы, анимацию по умолчанию…</string>
+<string name="this_folder_look_t">Окно текущей папки</string>
+<string name="this_folder_look_s">Задать фон, границы, анимации,…</string>
+<string name="layout_t">Макет</string>
+<string name="layout_s">Выбрать режим расположения элементов (сетка, свободный режим), количество столбцов, строк, высоту строк и т.д.</string>
+<string name="zoom_scroll_t">Масштаб и прокрутка</string>
+<string name="zoom_scroll_s">Как перемещаться в пределах экрана</string>
+<string name="folder_feel_t">Дополнительные настройки папок</string>
+<string name="folder_feel_s">Автозакрытие, исправление анимации.</string>
+<string name="this_folder_feel_t">Эта папка</string>
+<string name="pg_misc_t">Дополнительно</string>
+<string name="pg_misc_s">Ориентация экрана и пр.</string>
+<string name="color_c">Цвет</string>
+
+<string name="wp_w_t">Ширина</string>
+<string name="wp_h_t">Высота</string>
+<string name="wp_auto">Используйте 0 для авторазмера</string>
+<string name="wp_scroll_t">Прокрутка обоев</string>
+<string name="wp_scroll_s">Может повлиять на производительность</string>
+
+<string name="grid_h_color_t">Цвет горизонтальной линии</string>
+<string name="grid_h_size_t">Толщина горизонтальной линии</string>
+<string name="grid_v_color_t">Цвет вертикальной линии</string>
+<string name="grid_v_size_t">Толщина вертикальной линии</string>
+<string name="grid_color_s">Если нужно отключить, то сделайте прозрачным</string>
+<string name="grid_size_s">0 - толщина в 1px</string>
+<string name="grid_above">Перекрывать элементы</string>
+<string name="folder_title">Параметры заголовка</string>
+<string name="display_title">Показывать заголовок</string>
+<string name="font_color">Цвет шрифта</string>
+<string name="font_size">Размер шрифта</string>
+<string name="folder_anims">Анимация</string>
+<string name="anim_in">Открытие</string>
+<string name="anim_out">Закрытие</string>
+
+<string name="behaviour">Поведение</string>
+<string name="free_mode_t">Свободный режим</string>
+<string name="free_mode_s">Элементы добавляются без привязки к сетке</string>
+<string name="dual_pos_t">Двойная позиция</string>
+<string name="dual_pos_s">Разрешить элементам иметь две позиции: одну в портретной ориентации (основная), другую - в альбомной</string>
+<string name="placement">Расположение</string>
+<string name="colums">Столбцов в сетке</string>
+<string name="rows">Строк в сетке</string>
+<string name="mode_t">Режим</string>
+
+<string-array name="mode_e">
+<item>Авто</item>
+<item>Фиксированное число</item>
+<item>Фиксированный размер</item>
+</string-array>
+
+<string name="number">Количество</string>
+<string name="size">Размер</string>
+<string name="col_num_s">Количество столбцов на странице</string>
+<string name="col_size_s">Ширина каждого столбца</string>
+<string name="row_num_s">Количество строк на странице</string>
+<string name="row_size_s">Высота каждой строки</string>
+<string name="scroll_dir_t">Направление прокрутки</string>
+
+<string-array name="scroll_dir_e">
+<item>Авто</item>
+<item>Горизонтально</item>
+<item>Вертикально</item>
+<item>Оба варианта</item>
+<item>Без прокрутки</item>
+</string-array>
+
+<string name="overscroll_t">Анимация остановки прокрутки</string>
+
+<string-array name="overscroll_e">
+<item>Замедление</item>
+<item>Отскок</item>
+<item>Отключено</item>
+</string-array>
+
+<string name="snap_to_pages_t">Привязка к страницам</string>
+<string name="snap_to_pages_s">Всегда останавливать прокрутку на границе страницы</string>
+<string name="fit_item_t">Рабочий стол по размеру его элементов</string>
+<string name="fit_item_s">Размер рабочего стола ограничивается элементами расположенными на нем</string>
+<string name="no_diagonal_scrolling_t">Отключить прокрутку по диагонали</string>
+<string name="no_diagonal_scrolling_s">Для прокрутки только в одном направлении. Отключает прокрутку по диагонали</string>
+<string name="pinch_zoom_t">Масштаб щипком</string>
+<string name="auto_close_t">Автозакрытие</string>
+<string name="auto_close_s">Автоматически закрывать папку при запуске приложения</string>
+<string name="anim_glitch_fix_t">Исправление анимации</string>
+<string name="anim_glitch_fix_s">Добавление отступа в 1px для исправления бага, который появляется только на некоторых версиях Android</string>
+<string name="screen_orient_t">Ориентация экрана</string>
+
+<string-array name="screen_orient_e">
+<item>Авто</item>
+<item>Портретная</item>
+<item>Альбомная</item>
+<item>Системная</item>
+</string-array>
+
+<string name="hide_statusbar_t">Скрыть строку состояния</string>
+<string name="manage">Управление</string>
+<string name="load_style_t">Загрузить стиль</string>
+<string name="load_style_s">Заменить текущую конфигурацию значениями из стиля</string>
+<string name="save_style_t">Сохранить стиль</string>
+<string name="save_style_s">Сохранить текущие настройки как собственный стиль</string>
+<string name="confirm_reset_page">Сбросить этот экран?</string>
+<string name="reset_page_t">Сброс рабочего стола</string>
+<string name="reset_page_s">Удаление элементов на активном рабочем столе и восстановление стиля по умолчанию</string>
+<string name="tab_label">Текст</string>
+<string name="tab_icon">Иконка</string>
+<string name="tab_layout">Позиция</string>
+<string name="tab_box">Зоны</string>
+<string name="tab_misc">Ещё</string>
+<string name="l_main">Основные</string>
+<string name="l_display">Показывать текст</string>
+<string name="l_custom">Изменить заголовок</string>
+<string name="l_size">Размер шрифта</string>
+<string name="l_type_face">Выбрать шрифт…</string>
+<string name="l_style_t">Стиль шрифта</string>
+
+<string-array name="l_style_e">
+<item>Обычный</item>
+<item>Жирный</item>
+<item>Наклонный</item>
+<item>Жирный наклонный</item>
+</string-array>
+
+<string name="l_num_lines">Строк в заголовке</string>
+<string name="l_colors">Цвета</string>
+<string name="l_color_normal">Обычный цвет</string>
+<string name="l_color_selected">Цвет при нажатии</string>
+<string name="l_color_focused">Цвет при перемещении</string>
+<string name="l_shadow">Тень</string>
+<string name="l_shadow_enable">Включить тень</string>
+<string name="l_shadow_radius">Радиус</string>
+<string name="l_shadow_offset_x">Смещение X</string>
+<string name="l_shadow_offset_y">Смещение Y</string>
+<string name="l_shadow_color">Цвет</string>
+<string name="i_main">Основные</string>
+<string name="i_display">Показывать иконку</string>
+<string name="i_custom">Выбрать иконку</string>
+<string name="i_folder_t">Стиль иконки папки</string>
+
+<string-array name="i_folder_e">
+<item>Иконка</item>
+<item>Сетка</item>
+<item>Стопка</item>
+</string-array>
+
+<string name="i_effect">Слои</string>
+<string name="i_e_back">Фоновое изображение</string>
+<string name="i_e_over">Наложение</string>
+<string name="i_e_mask">Маска</string>
+<string name="i_e_scale">Внутренний масштаб</string>
+
+<string name="i_smooth">Сглаживание иконки</string>
+<string name="i_scale_t">Масштаб</string>
+<string name="i_scale_s">Внимание: при масштабе 4x потребуется 16x памяти: это может очень быстро исчерпать память устройства.</string>
+<string name="i_reflect">Отражение</string>
+<string name="i_reflect_enable">Включить отражение</string>
+<string name="i_reflect_overlap">Перекрытие иконкой</string>
+<string name="i_reflect_size">Размер отражения</string>
+<string name="i_reflect_scale">Масштаб отражения</string>
+<string name="la_margin">Отступ заголовка от иконки</string>
+<string name="la_position_t">Положение заголовка</string>
+
+<string-array name="la_position_e">
+<item>Слева</item>
+<item>Сверху</item>
+<item>Справа</item>
+<item>Снизу</item>
+<item>Center</item>
+</string-array>
+
+<string name="b_alignh_t">Горизонтальное выравнивание</string>
+
+<string-array name="b_alignh_e">
+<item>Слева</item>
+<item>По центру</item>
+<item>Справа</item>
+<item>Своё</item>
+</string-array>
+
+<string name="b_alignv_t">Вертикальное выравнивание</string>
+
+<string-array name="b_alignv_e">
+<item>Сверху</item>
+<item>По центру</item>
+<item>Снизу</item>
+<item>Своё</item>
+</string-array>
+
+<string name="b_hint">Выберите одну или несколько областей для активации следующих параметров</string>
+<string name="b_size">Размер области</string>
+<string name="b_color_normal">Обычный цвет</string>
+<string name="b_color_selected">Цвет при нажатии</string>
+<string name="b_color_focused">Цвет при перемещении</string>
+<string name="b_color_s">Установить цвет границ или содержания</string>
+<string name="m_enabled_t">Кликабельность</string>
+<string name="m_enabled_s">Для повторного включения используйте режим редактирования макета</string>
+<string name="m_alpha_t">Прозрачность</string>
+<string name="m_alpha_s">Мило, но медленно. 0 - совсем прозрачно, 255 - абсолютно непрозрачно</string>
+<string name="m_smooth_transform_t">Сглаживание при преобразовании</string>
+<string name="m_smooth_transform_s">Выглядит лучше, уменьшает производительность</string>
+
+<string-array name="preview_item_labels">
+<item>Норма</item>
+<item>Нажатие</item>
+<item>Перемещение</item>
+</string-array>
+
+<string name="il_preview">Предварительный просмотр\n(может отличаться от реальности)</string>
+<string name="preview_toast">Предварительный просмотр\nВсе действия отключены!</string>
+<string name="pick_a_font">Выбрать файл .TTF или .OTF…</string>
+<string name="system_font">Системный шрифт</string>
+<string name="left">слева</string>
+<string name="top">сверху</string>
+<string name="right">справа</string>
+<string name="bottom">снизу</string>
+<string name="margin">отступ</string>
+<string name="border">рамка</string>
+<string name="padding">заполнение</string>
+<string name="content">содержимое</string>
+<string name="ovr_custom">особое</string>
+
+<string name="pick_t">Выбирите иконку из:</string>
+<string name="pick_file">менеджера файлов Lightning</string>
+<string name="pick_gallery">другого менеджера файлов</string>
+<string name="pick_icon_pack">пакета иконок</string>
+
+<string name="tutorials">Обучение</string>
+<string name="donate">Пожертвование</string>
+<string name="other_apps">Другие приложения</string>
+<string name="tut_intro">Введение</string>
+<string name="tut_custo">Настройка объектов</string>
+<string name="tut_free_mode">Свободный режим</string>
+<string name="tut_lock">Блокировка экрана</string>
+<string name="tut_pin">Фиксация элементов</string>
+<string name="tut_scroll">Рабочие столы и навигация</string>
+<string name="dialog_color_picker">Палитра цветов</string>
+
+<string name="shortcut_settings">Настройки Lightning</string>
+<string name="shortcut_actions">Действия Lightning</string>
+
+<string name="no_backup_archive">Нет резервной копии для восстановления</string>
+<string name="backup_in_progress">Идет создание резервной копии...</string>
+<string name="restore_in_progress">Идет восстановление...</string>
+<string name="backup_done">Резервная копия сохранена в:\n%s</string>
+<string name="backup_error">Ошибка создания резервной копии, проверьте достаточно ли места на SD-карте</string>
+<string name="restore_error">Ошибка восстановления, проверьте правильность и читабельность архива</string>
+
+<string name="confirm_delete">Вы действительно хотите удалить этот рабочий стол?\nВосстановить его будет не возможно.</string>
+
+
+<!-- added: 90 -->
+<string name="reset_wp">Сброс</string>
+<string name="bg_sys_wp">Системные обои</string>
+<string name="bg_sys_wp_select_t">Выбрать системные обои</string>
+<string name="bg_sys_wp_select_s">Системные обои установлены на все рабочие столы и меню приложений</string>
+<string name="bg_screen_wp">Обои рабочего стола</string>
+<string name="bg_screen_wp_select_t">Выбрать обои рабочего стола…</string>
+<string name="bg_screen_wp_select_s">Эти обои отображаются поверх системных. Каждый рабочий стол может иметь индивидуальные обои</string>
+<string name="bg_more">Больше</string>
+<string name="bg_more_color_t">Цвет</string>
+<string name="bg_more_color_s">Используйте полностью непрозрачный цвет для отключения обоев. Используйте прозрачный цвет для подкраски обоев.</string>
+
+
+<!-- added: 91 -->
+<string name="ev_long_tap">Долгое касание</string>
+
+<!-- added: 92 -->
+<string name="ev_tap">Касание</string>
+<string name="style_s1">По умолчанию</string>
+<string name="style_s2">Компактный (малкие значки, мелкий текст)</string>
+<string name="style_s3">Читабельный (большие значки, большой текст)</string>
+<string name="style_s4">Список, значки справа</string>
+<string name="style_s5">Список, большой текст, без значков</string>
+<string name="style_s6">Список, большой текст и значки</string>
+<string name="style_s7">Плитка, без текста</string>
+<string name="style_s8">Яркие цвета</string>
+<string name="style_s9">Zune</string>
+<string name="dialog_help_hint_t">Подсказка</string>
+<string name="dialog_help_hint_m">Долгое касание вызывает справку на выбранный пункт настроек.</string>
+<string name="dialog_help_hint_dsa">Больше не показывать</string>
+<string name="m_pin_mode">Режим фиксации</string>
+<string-array name="m_pin_mode_e">
+<item>Не фиксировать</item>
+<item>Горизонтально и Вертикально</item>
+<item>Горизонтально</item>
+<item>Вертикально</item>
+</string-array>
+<string name="m_events">События</string>
+<string name="shortcut_screen">Закладка</string>
+
+<!-- added: 93 -->
+<string name="llx_t">Lightning Launcher eXtreme</string>
+<string name="llx_s">Ultimate launcher. Без компромисов.</string>
+<string name="more_apps_t">Больше бесплатных приложений</string>
+<string name="more_apps_s">От PierroX (инструменты, игры)</string>
+<string name="mi_kill">Остановить</string>
+<string name="killed_freed">Остановлено (%dM освобождено)</string>
+<string name="killed">Остановлено!</string>
+<string name="configure_pages_t">Менеджер рабочих столов</string>
+<string name="configure_pages_s">Добавление и удаление рабочих столов, их порядок, и выбор основного рабочего стола</string>
+<string name="mi_mode_custom">Свой порядок</string>
+<string name="mi_mode_by_name">По имени</string>
+<string name="mi_mode_recent_apps">Недавно запущенные</string>
+<string name="mi_mode_recently_updated">Недавно обновленные</string>
+<string name="mi_mode_frequently_used">Часто используемые</string>
+<string name="mi_mode_running">Запущенные</string>
+<string name="mi_es_edit_layout">Изменить макет</string>
+<string name="mi_es_refresh">Обновить</string>
+<string name="mi_es_settings">Настройки</string>
+<string name="mi_es_folder_settings">Настройки папки</string>
+<string name="mi_uninstall">Удаление</string>
+<string name="my_drawer_title">Свой порядок</string>
+<string name="my_drawer_message">Режим "Свой порядок" позволяет полностью изменить внешний вид списка приложений.\n\nВ этом режиме элементы можно свободно перемещать. Для организации приложений возможно создание папок.\n\nПопробуйте уменьшить масштаб и выбрать "Изменить макет": Вы увидите, что приложения могут размещаться на страницах левее, правее, выше или ниже текущей. Это позволяет расположить приложения таким образом, каким хочется именно Вам.</string>
+<string name="empty_folder_x">пустая папка\nПеретащите элементы в эту папку</string>
+<string name="ll_import_title">Импортировать настройки Lightning</string>
+<string name="ll_import_message">Обнаружен установленный Lightning Launcher.\n\nВсе данные будут импортированы. После окончания, можете удалить классическую версию и пользоваться этой.</string>
+<string name="init_ok">Готово!</string>
+<string name="init_ko">Что-то пошло не так во время копирования файлов!</string>
+<string name="auto_exit_t">Авто выход</string>
+<string name="auto_exit_s">Закрывать меню приложений при запуске приложения</string>
+<string name="icons_t">Набор иконок</string>
+<string name="icons_s">Применить набор иконок или восстановить стандартные</string>
+<string name="apply_icon_pack_t">Применить набор иконок</string>
+<string name="apply_icon_pack_s">Работает с наборами для ADW и некоторыми другими</string>
+<string name="icon_pack_no_appfilter">В наборе нет иконок приложений</string>
+<string name="revert_custom_icons_t">Сбросить пользовательские иконки</string>
+<string name="revert_custom_icons_s">В том числе эффекты и внутренний масштаб</string>
+<string name="please_wait">Пожалуйста подождите…</string>
+<string name="app_not_valid">Приложение не установлено. Хотите найти его на Google Play или выбрать другое?</string>
+<string name="app_store">Магазин приложений Google</string>
+
+<!-- added 95 -->
+<string name="dtext">Динамический текст</string>
+<string name="tab_dt_data">Данные</string>
+<string name="dt_source_t">Отображаемый текст</string>
+<string-array name="dt_source_e">
+<item>Непрочитанные SMS</item>
+<item>Непрочитанная почта</item>
+<item>Пропущенные звонки</item>
+<item>Дата и Время</item>
+<item>Хранилище</item>
+<item>Уровень заряда</item>
+<item>Оперативная память</item>
+<item>Свободная оперативная память</item>
+</string-array>
+<string name="dt_date_ef_t">Простой формат</string>
+<string-array name="dt_date_ef_e">
+<item>Дата</item>
+<item>Время</item>
+<item>Дата и Время</item>
+</string-array>
+<string-array name="dt_date_ef_v">
+<item>yyyy-MM-dd</item>
+<item>HH:mm:ss</item>
+<item>yyyy-MM-dd HH:mm:ss</item>
+</string-array>
+<string name="dt_date_xf_t">Собственный формат</string>
+<string name="dt_date_xf_s">Долгое касание для справки</string>
+<string name="dt_display_empty_t">Отображать при пустом</string>
+<string name="dt_format_error">Ошибка в формате</string>
+<string name="dt_storage_s_t">Выберите хранилище</string>
+<string-array name="dt_storage_s_e">
+<item>Внутренние </item>
+<item> Внешние</item>
+</string-array>
+<string name="dt_storage_f_t">Вид отображения</string>
+<string-array name="dt_storage_f_e">
+<item>Нормальный </item>
+<item> Короткий </item>
+<item> Проценты </item>
+<item> Байты</item>
+</string-array>
+<string name="dt_storage_w_t">Что отображать</string>
+<string-array name="dt_storage_w_e">
+<item>Осталось места</item>
+<item>Занято места</item>
+<item>Доступно</item>
+</string-array>
+
+<!-- added: 99 -->
+<string name="trans_statusbar_t">Прозрачная строка состояния</string>
+<string name="trans_statusbar_s">Только для поддерживающих эту функцию устройств</string>
+
+<!-- added: 103 -->
+<string name="swap_items_t">Смена элементов</string>
+<string name="swap_items_s">Менять местами элементы при наложении друг на друга ( только в режиме сетки)</string>
+<string name="rearrange_items_t">Перестраивать элементы</string>
+<string name="rearrange_items_s">Автоматически выстраивать элементы по сетке заполняя пробелы</string>
+
+<!-- added: 104 -->
+<string name="backup_restore_t">Сохранить, восстановить или экспортировать шаблон</string>
+<string name="an_gh">Перейти на домашний рабочий стол</string>
+<string name="an_ghz100">Перейти на домашний рабочий стол, установите масштаб 100\%</string>
+<string name="an_sd">Перейти на указанный рабочий стол</string>
+<string name="an_re">Перезапустить приложение</string>
+
+<!-- added 105 -->
+<string name="grid_pl_t">Все настройки для ориентации:</string>
+<string-array name="grid_pl_e">
+<item>Портретной и Ландшафтной</item>
+<item>Портретной</item>
+<item>Ландшафтной</item>
+</string-array>
+
+<!-- added 106 -->
+<string name="apply_tmpl_t">Применить этот шаблон</string>
+<string name="apply_tmpl_g">Применение шаблона…</string>
+<string name="apply_tmpl_e">Невозможно применить шаблон!</string>
+<string name="tmpl_t">Шаблоны</string>
+<string name="tmpl_s">Обзор и выбор шаблонов, экспорт APK</string>
+<string name="tmpl_a_t">Загрузить шаблон</string>
+<string name="tmpl_a_s">Загрузка шаблона из установленного APK</string>
+<string name="tmpl_b_t">Обзор существующих шаблонов</string>
+<string name="tmpl_b_s">Получить новые темы</string>
+<string name="tmpl_e_t">Экспорт шаблона</string>
+<string name="tmpl_e_s">Долгое касание, чтобы прочитать инструкцию</string>
+<string name="tmpl_c">Выберите шаблон</string>
+<string name="tmpl_e_m">Экспортирование…</string>
+<string name="tmpl_e_d">Экспорт завершен</string>
+<string name="tmpl_e_e">Ошибка при экспорте!</string>
+<string name="tmpl_check">Открытие шаблона…</string>
+<string name="tmpl_check_e">Невозможно открыть шаблон!</string>
+<string name="tmpl_check_ut">Необходимо обновить</string>
+<string name="tmpl_check_um">Этот шаблон был создан для новой версии Lightning Launcher, вы хотите его обновить?</string>
+<string name="tmpl_get_llx">Получить Lightning Launcher eXtreme</string>
+<string name="tmpl_warn_t">Внимание</string>
+<string name="tmpl_warn_c">Всё-равно продолжить</string>
+<string name="tmpl_warn_m">Шаблон может быть применен, но были обнаружены некоторые проблемы:</string>
+<string name="tmpl_warn_llx">• этот шаблон был разработан для Lightning Launcher eXtreme, он может использовать дополнительные возможности, недоступные в этой версии.</string>
+<string name="tmpl_warn_screen">• этот шаблон не соответствует характеристикам Вашего экрана. Некоторые элементы могут неправильно отображаться. </string>
+<string name="tmpl_warn_widget">• ваше устройство не может автоматически восстановить виджеты, вам нужно будет восстановить их вручную.</string>
+<string name="widget_e">Не удалось загрузить этот виджет :(\nКоснитесь, чтобы выбрать другой.</string>
+<string name="tmpl_s_p">Выберите рабочий стол для экспорта</string>
+<string name="an_ctf">Закрыть верхнюю папку</string>
+<string name="an_caf">Закрыть все папки</string>
+<string name="ev_screen_on">Вкл. экран</string>
+<string name="ev_screen_off">Выкл. экран</string>
+<string name="an_sa">Поиск приложений</string>
+
+<!-- added 111 -->
+<string name="gc_hpie_t">Сохранять положение закрепленных элементов</string>
+
+<!-- added 113 -->
+<string name="tab_stop_point">Точка остановки</string>
+<string name="sp_b">Поведение</string>
+<string name="sp_ss">Стоп прокрутки</string>
+<string name="sp_sd">Стоп смещения</string>
+<string name="sp_ba">Барьер</string>
+<string name="sp_dw">Ширина рабочего стола</string>
+<string name="sp_n">Привязка</string>
+<string name="sp_d">Направление</string>
+<string name="sp_dlr">Слева направо</string>
+<string name="sp_drl">Справа налево</string>
+<string name="sp_dtb">Сверху вниз</string>
+<string name="sp_dbt">Снизу вверх</string>
+<string name="assp_t">Всегда показывать точки остановки</string>
+<string name="assp_s">Точки остановки всегда отображаются, даже в нормальном режиме</string>
+<string name="gc_edit">Редактор макета</string>
+
+<!-- added 116 -->
+<string name="backup_d">Резервная копия</string>
+<string name="an_of">Открыть папку</string>
+<string name="sf">Выбор папки</string>
+<string name="br_n">Имя архива</string>
+<string name="br_a">Выберите действие</string>
+<string name="br_r">Переименовать</string>
+<string name="br_d">Удалить</string>
+<string name="br_s">Отправить</string>
+<string name="br_dc">Удалить этот архив?</string>
+<string name="br_rc">Восстановить этот архив?</string>
+<string name="dt_gml_t">Ярлык Gmail</string>
+
+<!-- added 117 -->
+<string name="mi_copy_to_screen">Копировать…</string>
+<string name="f_p">Размещение</string>
+<string name="f_ac">При использовании своего выравнивания</string>
+<string name="f_l">Влево</string>
+<string name="f_t">Вверх</string>
+<string name="f_af">Появление/Затухание</string>
+<string name="sp_e">Выравнивание</string>
+<string name="sp_el">Влево</string>
+<string name="sp_er">Вправо</string>
+<string name="sp_et">Вверх</string>
+<string name="sp_eb">Вниз</string>
+
+<!-- added 119 -->
+<string name="np">Картинка фона</string>
+<string name="np_d">Долгое касание показывает документацию</string>
+<string name="np_n"> обычный фон </string>
+<string name="np_s">Фон при касании</string>
+<string name="np_f">Фон при перемещении</string>
+<string name="np_r">Картинка фона</string>
+<string-array name="anim2_e">
+<item>Нет</item>
+<item>Открыть/Закрыть</item>
+<item>Сдвиг вправо</item>
+<item>Сдвиг влево</item>
+<item>Сдвиг вниз</item>
+<item>Сдвиг вверх</item>
+</string-array>
+
+<!-- added 121 -->
+<string name="ev_op">Повернуть вертикально</string>
+<string name="ev_ol">Повернуть горизонтально</string>
+<string name="an_gdp">Перейти в указанный рабочий стол и позицию</string>
+<string name="cof_t">Закрыть другие папки</string>
+<string name="cof_s">Разрешить только одну открытую папку</string>
+
+<!-- added 123 -->
+<string name="t_nb">Прозрачная строка навигации</string>
+<string name="gb_l">Слева</string>
+<string name="gb_t">Сверху</string>
+<string name="gb_w">Ширина</string>
+<string name="gb_h">Высота</string>
+<string name="gb_a">Угол</string>
+<string name="gb_sx">Масштаб X</string>
+<string name="gb_sy">Масштаб Y</string>
+<string name="gb_kx">Наклон X</string>
+<string name="gb_ky">Наклон Y</string>
+<string name="mi_geometry">Геометрия</string>
+
+<!-- added 134 -->
+<string name="efolder">Панель</string>
+<!--<string name="mi_bo">Box options</string>-->
+<string name="mc_ef">Настройки панели</string>
+
+<!-- added 135 -->
+<string name="mi_lmg">Не выравнивать по сетке</string>
+<string name="mi_lmf">Выравнивать по сетке</string>
+<string name="mi_mop">Вынести из панели</string>
+
+<!-- added 137 -->
+<string name="container">Размер панели</string>
+<string name="uds_t">Использовать размер рабочего стола</string>
+<string name="uds_s">Вычислить размер ячейки по размеру рабочего стола</string>
+<string name="mi_l">Заблокировать</string>
+<string name="mi_ul">Разблокировать</string>
+
+<!-- added 141 -->
+<string name="ev_menul">Кнопка меню (долго)</string>
+<string name="ev_back">Кнопка назад</string>
+<string name="ev_backl">Кнопка назад (долго)</string>
+
+<!-- added 149 -->
+<string name="mi_i">Элементы…</string>
+<string name="mi_ic">Компактно</string>
+<string name="mi_isa">Сортировка a-я</string>
+<string name="mi_isd">Сортировка я-a</string>
+
+<!-- added 151 -->
+<string name="an_us">Разблокировать экран</string>
+<string name="nly">Сейчас не блокируется</string>
+<string name="s_ls_t">Экран блокировки</string>
+<string name="s_ls_s">Выберите рабочий стол для экрана блокировки. Долгое касание для учебника.</string>
+<string name="s_ls_s_t">Выбрать/Отключить экран блокировки</string>
+<string name="s_ls_s_s">Выберите рабочий стол. Нажмите Отмена для отключения экрана блокировки</string>
+<string name="s_ls_s_c">Экран блокировки отключен.</string>
+<string name="i_ul">Разблокировщик</string>
+
+<!-- added 152 -->
+<string name="ukp_na">Плагин Разблокировщика не установлен. Нажмите для установки.</string>
+
+<!-- added 155 -->
+<string name="s_ls_w">Перед блокировкой убедитесь, что разблокировка работает корректно через плагин Unlocker или через действие Unlock screen.</string>
+
+<!-- added 158 -->
+<string name="m_sel_e_t">Эффект выбора</string>
+<string-array name="m_sel_e_e">
+<item>Обычный</item>
+<item>Holo</item>
+<item>Material</item>
+</string-array>
+
+<!-- added 159 -->
+<string name="sp_w">Точка остановки конфликтует с настройкой \'Привязка к страницам\': она автоматически отключена.</string>
+
+<!-- added 162 -->
+<string name="i_rot_t">Поворот</string>
+<string name="i_rot_s">Поворачивать объект вместе с экраном</string>
+
+<!-- added 164 -->
+<string name="sc_name">Имя</string>
+<string name="sc_new">Создать</string>
+<string name="sc_delete">Удалить</string>
+<string name="sc_edit">Править...</string>
+<string name="sc_help">Помощь</string>
+<string name="sc_deleted">Неизвестный или удаленный скрипт, будет создан новый</string>
+<string name="sc_untitled">Безымянный скрипт</string>
+<string name="sc_dn_t">Название скрипта</string>
+<string name="sc_dd_t">Подтвердите</string>
+<string name="sc_dd_m">Этот скрипт может использоваться другим действием. Точно удалять?</string>
+<string name="sc_dc_t">Результат проверки синтакса</string>
+<string name="sc_dc_ok">Вроде бы нет ошибок</string>
+<string name="an_rs">Запустить скрипт</string>
+<string name="sc_view">Посмотреть скрипт</string>
+<string name="sc_disable">Отключить</string>
+<string name="sc_editor">Редактор скриптов</string>
+<string name="ev_pos">Положение изменено</string>
+<string name="sp_re">Произошло событие</string>
+<string name="ev_load">Загрузка</string>
+<string name="an_b">Вернуться</string>
+
+<!-- added 170 -->
+<string name="tmpl_fn">Шаблон</string>
+<string name="br_ob">Заменить резервной копией</string>
+<string name="br_ot">Заменить шаблоном</string>
+<string name="sc_ma">Категории</string>
+<string name="sc_ml">Меню Lightning</string>
+<string name="sc_mi">Меню элемента</string>
+<string name="sc_mc">Свое меню</string>
+<string name="mi_s">Скрипты...</string>
+<string name="an_cm">Меню своих скриптов</string>
+<string name="tmpl_r">Заменить: полностью заменить текущие настройки</string>
+<string name="tmpl_m">Объединить: сохранить текущие настройки, импортировать шаблон как новые рабочие столы</string>
+<string name="tmpl_u">Обновить: сохранить рабочие столы и объекты, только применить стили из шаблона</string>
+<string name="tmpl_b">Сделайте резервную копию</string>
+<string name="apply_tmpl_m">Вы собираетесь применить шаблон \'%s\':</string>
+
+<!-- added 171 -->
+<string name="s_ls_lu_t">Разблокировка при запуске</string>
+<string name="s_ls_lu_s">Запуск приложения разблокирует экран</string>
+
+<!-- added 173 -->
+<string name="tmpl_w">Загрузить обои</string>
+
+<!-- added 174 -->
+<string name="no_lim_t">Бесконечная прокрутка</string>
+<string name="no_lim_s">Рабочий стол будет прокручиваться за границы</string>
+
+<!-- added 175 -->
+<string name="mi_h">Иерархия...</string>
+<string name="mi_if">Информация</string>
+
+<!-- added 176 -->
+<string name="in_s">Задать имя</string>
+<string name="mi_b">Вернуться</string>
+<string name="mi_im">Меню элемента</string>
+
+<!-- added 178 -->
+<string name="em_t">Режим Эксперта</string>
+<string name="em_s">Раскройте потенциал Lightning c дополнительнми настройками</string>
+<string name="bm_c">Цвет</string>
+<string name="bm_bg">Картинка фона</string>
+<string name="bm_prev">Просмотр</string>
+<string name="rs_t">Запуск скриптов</string>
+<string name="rs_s">Разрешить запуск скриптов</string>
+<string name="rs_w">Внимание: запуск скриптов отключен в общих настройках</string>
+<string name="h_ad">Здесь находятся Ваши приложения.\nВы можете запускать программы отсюда или добавить их на рабочий стол: после долгого касания на приложение выберите \"Ярлык на рабочий стол\".\n\nКоснитесь, чтобы узнать больше.</string>
+<string name="h_f">Вы добавили папку. Папки могут содержать приложения, виджеты и другие папки.\n\nПотяните объект, задержите его над папкой до конца анимации и отпустите: так он окажется внутри папки.\n\nКоснитесь, чтобы узнать больше о папках.</string>
+<string name="h_p">Вот ваша первая панель.\nПанели ведут себя почти как папки: потяните объект, задержите его над панелью до конца анимации и отпустите.\n\nКоснитесь, чтобы узнать больше о панелях.</string>
+<string name="h_t">Совет</string>
+<string name="h_k">Это Ваш рабочий стол. Долгим касанием можно добавить элементы (приложения, виджеты, папки и прочее) и попасть в настройки.\n\nСтраницы создаются как только Вы размещаете на них элементы: не только слева и справа, но и сверху и снизу\n\nКоснитесь, чтобы узнать больше о концепции Lightning Launcher.</string>
+<string name="tut_concepts">Концепция</string>
+<string name="tut_wiki">Вики</string>
+
+<!-- added 185 -->
+<string name="mi_pick_sh">Ярлык</string>
+<string name="ev_paused">Не активно</string>
+<string name="ev_resumed">Активно</string>
+<string name="ad_ab_c_t">Панель действий</string>
+<string name="ad_ab_b">Изображение фона</string>
+<string name="ad_ab_h">Скрыть панель действий</string>
+
+<!-- added 189 -->
+<string name="hw_t">Ok Google</string>
+<string name="hw_s">Говорите в Ваше устройство</string>
+<string name="ad_ab_ss">Показывать при прокрутке</string>
+
+<!-- added 191 -->
+<string name="ip">Выбор изображения</string>
+<string name="ip_none">Нет изображения</string>
+<string name="ip_camera">Камера</string>
+<string name="ip_ext_file">Внеш.файл-браузер</string>
+<string name="ip_bgcolor">Цвет фона</string>
+<string name="delete_file">Удалить этот файл?</string>
+
+<string-array name="ip_s">
+<item>Набор иконок</item>
+<item>Файл</item>
+<item>Приложение</item>
+<item>Встроенные</item>
+</string-array>
+
+<!-- added 195 -->
+<string name="ev_touch">Касание</string>
+
+<!-- added 200 -->
+<string name="sc_data">Данные для скрипта</string>
+<string name="sc_send">Отправить</string>
+<string name="mi_ls">Загрузить скрипт…</string>
+<string name="ls_ok">Скрипт успешно загружен</string>
+<string name="ls_ko">Невозможно загрузить скрипт</string>
+<string name="ls_b">Искать в магазине приложений</string>
+<string name="ur">Критическая ошибка</string>
+
+<!-- added 201 -->
+<string name="in_t">Задать имя</string>
+
+<!-- added 208 -->
+<string name="wrap_s">Сферическая бесшовная прокрутка</string>
+<string name="i_cf_t">Раскрасить</string>
+<string name="i_cf_s">Используйте прозрачность для регулировки насыщенности</string>
+<string name="sbo_t">Выводить содержимое поверх строки состояния</string>
+<string name="nbo_t">Выводить содержимое поверх строки навигации</string>
+<string name="sb_t">Системные панели</string>
+<string name="sb_s">Настройка скрытия и прозрачности строки состояния и навигации</string>
+<string name="sbc_t">Цвет строки состояния</string>
+<string name="nbc_t">Цвет строки навигации</string>
+<string name="sb_c">Строка состояния</string>
+<string name="nb_c">Строка навигации</string>
+<string name="mi_app_store">Магазин приложений</string>
+
+<!-- added 217 -->
+<string name="an_um">Меню пользователя</string>
+
+<!-- added 218 -->
+<string name="gc_as_t">Тема</string>
+<!--<string name="gc_as_c">App style changed: restarting</string>-->
+<string-array name="gc_as_e">
+<item>Светлая</item>
+<item>Темная</item>
+</string-array>
+<string name="i_rm_t">Эффект Material</string>
+<string name="i_rm_s">Уменьшить искажения на границах элементов</string>
+<string name="icon_font">Иконочный шрифт</string>
+<string name="um_t">Темы</string>
+<string name="pi">Индикатор страницы</string>
+<string name="tab_page_indicator">Индикатор</string>
+<string name="pi_style">Стиль</string>
+<string-array name="pi_style_e">
+<item>Точки</item>
+<item>Горизонтальные линии</item>
+<item>Вертикальные линии</item>
+<item>Таблица</item>
+<item>Текст</item>
+</string-array>
+<string name="pi_rf_t">Формат текста</string>
+<string name="pi_dmx_t">Интервал по горизонтали</string>
+<string name="pi_dmy_t">Интервал по вертикали</string>
+<string name="pi_dmor">Радиус окружности</string>
+<string name="pi_dmoc">Цвет окружности</string>
+<string name="pi_dmow">Толщина окружности</string>
+<string name="pi_dmir">Радиус заливки</string>
+<string name="pi_dmic">Цвет заливки</string>
+<string name="pi_mosc">Цвет границы таблицы</string>
+<string name="pi_mosw">Толщина границы таблицы</string>
+<string name="pi_mofc">Цвет фона таблицы</string>
+<string name="pi_misc">Цвет границы индикатора</string>
+<string name="pi_misw">Толщина границы индикатора</string>
+<string name="pi_mifc">Цвет фона индикатора</string>
+<string name="pi_lbc">Цвет фона</string>
+<string name="pi_lbw">Ширина фона</string>
+<string name="pi_lfc">Цвет курсора</string>
+<string name="pi_lfw">Толщина курсора</string>
+<string name="pi_lg">Положение</string>
+<string-array name="pi_lg_e">
+<item>По центру</item>
+<item>Справа или снизу</item>
+<item>Слева или сверху</item>
+</string-array>
+<string name="ac_s">Иконка и Текст</string>
+<string name="ac_c">Контейнер</string>
+<string name="ac_d">Динамическое содержимое</string>
+<string name="ac_m">Ещё</string>
+<string name="ai_t">Текст</string>
+<string name="ai_i">Иконка</string>
+<string name="ai_sb">Боковая панель</string>
+<string name="ai_b">Счетчик</string>
+<string name="ac_n">Навигация</string>
+<string name="ai_bo">Закладка</string>
+<string name="ai_d">Пустой элемент</string>
+<string name="h_sb">Боковая панель - это настраиваемая папка. Бросайте элементы сюда для перемещения их на панель. Чтобы показать или скрыть панель коснитесь иконки, либо назначьте это действие на жест или событие. Для привязки панели к другой стороне экрана измените параметры выравнивания.</string>
+<string name="mi_exel">Выйти из режима макета</string>
+<string name="h_pi">Индикатор страницы показывает положение текущей страницы на рабочем столе. По умолчанию он закреплен и НЕ кликабелен. Войдите в режим макета для изменения стиля, цвета и пр.</string>
+<string name="h_sp">Точка остановки прокрутки - это инструмент для создания собственной схемы прокрутки: прокрутка рабочего стола остановится в этой точке. Точки остановки видно только в режиме макета.</string>
+<string name="h_b">Закладка хранит текущую позицию на рабочем столе и масштаб. После создания закладки её можно переместить в любое место на рабочем столе, папке или панели. Касание закладки автоматически переносит в позицию, которую она хранит.</string>
+<string name="sc_h">Проведите пальцем от левого края, чтобы раскрыть меню</string>
+<string name="sc_a">Действия</string>
+<string name="sc_o">Опции</string>
+<string name="sc_w">Перенос по словам</string>
+<string name="wrapx_t">Бесшовный режим X</string>
+<string name="wrapy_t">Бесшовный режим Y</string>
+<string name="h_w">Бесшовный режим автоматически отключается при редактировании макета, иначе пусты страницы будут недоступны. Следует помнить, что некоторые элементы могут исчезнуть при входе в режим редактирования: они просто отображаются на своей изначальной позиции на столе, а не "заворачиваются".\nБесшовный режим снова активируется при выходе из режима редактирования.</string>
+<string name="ad_bc">Выбрано:</string>
+<string name="an_wt">Касание обоев (для KLWP)</string>
+<string name="an_wst">Доп. касание обоев (для KLWP)</string>
+<string name="ds_sh">Начните здесь</string>
+<string name="ds_uc">Общество пользователей</string>
+<string name="ds_tt">Советы и рекомендации</string>
+<string name="ds_br">Сохранить и Восстановить</string>
+<string name="ds_hn">Совет: для создания новой страницы, просто создайте элемент и перетащите за пределы существующей страницы.\nТак можно добавлять страницы справа, слева, сверху и снизу. Попробуйте.</string>
+<string name="ds_um">Совет: проведите одним или двумя пальцами вверх, чтобы открыть меню пользователя (настраивается).\nДолгое касание вызывает контекстное меню. </string>
+<string name="ds_z">Масштаб</string>
+<string name="sc_import">Импортировать…</string>
+<string name="sc_si_t">Нечем импортировать скрипт</string>
+<string name="sc_si_m">Хотите установить из Google Play?</string>
+<string name="adm_t">Категории</string>
+<string name="adm_s">Категории отображаемые в меню приложений</string>
+<string name="adm_z">Нужно выбрать хотя бы одну категорию…</string>
+
+<!-- added 224 -->
+<string name="tr_fl_t">Разблокируйте Lightning, чтобы воспользоваться функцией</string>
+<string name="tr_fl_m">Обновите до Lightning Launcher eXtreme, чтобы воспользоваться функциями:\n\n- Расширенное меню приложений (папки, строка действий, категории).\n- Добавление, удаление, изменение порядка рабочих столов.\n- Отдельные обои на каждый рабочий стол.\n- Счетчики непрочитанного и динамический текст.\n- Настраиваемый экран блокировки.\n- Функция завершения приложений.\n\nЕсли Вы раньше разблокировали Lightning, то нажмите "OK", чтобы активировать эту версию.</string>
+<string name="tr_pw">Подождите…</string>
+<string name="tr_ty">Спасибо за поддержку Lightning!</string>
+<string name="tr_eu">Извините, произошла ошибка…</string>
+<string name="tr_c">Отменено</string>
+<string name="tr_br_s">Эта функция доступна в полной версии</string>
+<string name="tr_rs_t">Получите всю мощь Lightning</string>
+<string name="tr_rs_s">Обновите Lightning для доступа ко всем свежим функциям</string>
+<string name="tr_w">Спасибо за тестирование Lightning!\n\nПриложение будет работать в пробном режиме 7 дней: все функции доступны без каких-либо ограничений в течении этого периода. После окончания пробного периода, приложением можно будет пользоваться и дальше, но режим редактирования будет не доступен.\n\nЕсли Вам понравилось приложение и хотите его поддержать, то подумайте о приобретении ключа для разблокировки.\n\nСпасибо!</string>
+<string name="tr_l">%d дней осталось до окончания пробного периода</string>
+<string name="tr_rm">Lightning нуждается в Вашем отзыве!\n\nНе хотите ли потратить несколько секунд на оценку приложения в Google Play?\n</string>
+<string name="ds_hls">Это пример экрана блокировки, который Вы можете настроить по своему желанию.\nДобавляйте приложения или виджеты и активируйте их в настройках экрана блокировки (коснитесь здесь).</string>
+<string name="ic">Обрезка изображения</string>
+<string name="bg_st">Положение</string>
+<string-array name="bg_st_e">
+<item>По центру, не масштабировать</item>
+<item>Подогнать по ширине и высоте</item>
+<!--<item>Center crop</item>-->
+<!--<item>Center inside</item>-->
+</string-array>
+<string name="rect">Прямоугольник обрезки</string>
+<string name="ip_solid">Однотонный цвет</string>
+<string name="ip_search">Поиск…</string>
+<string name="sst">Выберите скрипт</string>
+<string name="ips_t">Размер буфера для изображений</string>
+<string name="ips_s">До изменения значения ознакомьтесь с документацией</string>
+
+<!-- added 231 -->
+<string name="v_m">Видимость…</string>
+<string name="v_a">Все</string>
+<string name="v_ov">Только видимые</string>
+<string name="v_oh">Только скрытые</string>
+<string name="ad_ab_tc">Цвет текста</string>
+
+<!-- added 233 -->
+<string name="cv">Собственный вид</string>
+<string name="h_cv">Следует использовать в сложных случаях. Позволяет использует встроенный в Android класс View через скрипт. Следовательно, требует глубокого понимания работы скриптов и устройства Android.</string>
+<string name="cv_c">Создать скрипт</string>
+<string name="cv_d">Удалить скрипт</string>
+<string name="eb_u">Отменить</string>
+<string name="eb_r">Повторить</string>
+<string name="eb_bh">Скрыть линейки редактора</string>
+<string name="eb_bs">Показать линейки редактора</string>
+<string name="eb_pr">Дублировать</string>
+<string name="eb_ms">Мультивыбор</string>
+<string name="eb_snap">Привязка</string>
+<string name="eb_prop">Свойства</string>
+<string name="ds">Настройки рабочего стола</string>
+<string name="ads">Настройки меню приложений</string>
+<string name="cdi">Один или больше виджет будет удален. Удаленный виджет не может быть полностью восстановлен. Возможно, Вам придется заново настроить его содержимое. Продолжить?</string>
+<string name="st_c">Копировать стиль</string>
+<string name="st_p">Вставить стиль</string>
+<string name="st_d">Стиль скопирован. Выберите "Вставить стиль" для дублирования.</string>
+<string name="mi_actions">Действия…</string>
+<string name="nois">Ничего не выбрано</string>
+<string name="lightning">Lightning</string>
+<string name="folder">Папка</string>
+<string name="tg">Запускать:</string>
+<string name="tg_d">На рабочем столе</string>
+<string name="tg_ad">В меню приложений</string>
+<string name="tg_ls">На экране блокировки</string>
+<string name="tg_bg">В фоне</string>
+<string name="tss">Скрипт Lightning</string>
+<string name="mi_nos">Нет скрипта</string>
+<string name="mi_nos1">Я же говорил, что скрипта нет ;-)</string>
+<string name="mi_nos2">Не тупи, здесь нет скрипта.</string>
+<string name="mi_nos3">Эй! Читать умеешь?</string>
+<string name="mi_nos4">Ну хватит уже, остановись. А то мне придется создать скрипт.</string>
+<string name="mi_nos5">Oк, если только так ты от меня отстанешь, то уговорил, создам я скрипт…</string>
+<string name="mi_nost">Запускай</string>
+<string name="sm_f">Сместить в начало</string>
+<string name="sm_p">Сместить влево</string>
+<string name="sm_d">Удалить</string>
+<string name="sm_h">Установить домашним</string>
+<string name="sm_a">Новый</string>
+<string name="sm_c">Дублировать</string>
+<string name="sm_n">Сдвинуть вправо</string>
+<string name="sm_l">Сдвинуть в конец</string>
+<string name="sm_cn">Копия</string>
+<string name="sm_an">Новый рабочий стол</string>
+<string name="ip_e">Нет иконок</string>
+<string name="cv_dfl">Собственный вид не найден.\nНажмите, чтобы попробовать снова.</string>
+<string name="ad_mdh">Для настройки перейдите в "Свой порядок"</string>
+<string name="tab_bind">Связи</string>
+<string name="bd_a">Добавить связь…</string>
+<string name="bd_p">Свойство</string>
+<string name="bd_v">Значение</string>
+<string name="pg">Позиция в сетке</string>
+<string name="pf">Позиция вне сетки</string>
+<string name="pd">Заглушка</string>
+<string name="pv">Видимость</string>
+<string name="pe">Включено</string>
+<string name="pl">Заголовок</string>
+<string name="pit">Свойства элемента</string>
+<string name="bd_s">Выбрать…</string>
+<string name="bvc_dt">Дата и время</string>
+<string name="bv_pick">Выберите переменную</string>
+<string name="bv_sec">Секунда</string>
+<string name="bv_min">Минута</string>
+<string name="bv_h24">Час (24)</string>
+<string name="bv_h12">Час (12)</string>
+<string name="bv_ampm">AM/PM</string>
+<string name="bv_day">День</string>
+<string name="bv_mon">Месяц</string>
+<string name="bv_week">Неделя</string>
+<string name="bv_year">Год</string>
+<string name="bv_dayn">Название дня</string>
+<string name="bv_monn">Название месяца</string>
+<string name="bvc_bat">Батарея</string>
+<string name="bv_batl">Уровень</string>
+<string name="bv_batst">Статус</string>
+<string name="bv_batv">Напряжение</string>
+<string name="bv_batp">Заряжается</string>
+<string name="bvc_stor">Хранилище</string>
+<string name="bv_ith">Внутреннее Всего</string>
+<string name="bv_ifh">Внутреннее Свободно</string>
+<string name="bv_eth">Внешнее Всего</string>
+<string name="bv_efh">Внешнее Свободно</string>
+<string name="bv_it">Внутреннее Всего (число)</string>
+<string name="bv_if">Внутреннее Свободно (число)</string>
+<string name="bv_et">Внешнее Всего (число)</string>
+<string name="bv_ef">Внешнее Свободно (число)</string>
+<string name="bvc_cpu">Процессор</string>
+<string name="bv_cu">Использовано</string>
+<string name="bv_cr">Пользователь</string>
+<string name="bv_cn">Приоритет</string>
+<string name="bv_cs">Система</string>
+<string name="bv_ci">Простой</string>
+<string name="bv_co">Ввод/Вывод</string>
+<string name="bv_cq">Прерывания</string>
+<string name="bv_cf">Программные прерывания</string>
+<string name="bvc_screen">Экран</string>
+<string name="bv_o">Ориентация</string>
+<string name="v_o">Прочее</string>
+<string name="an_sv">Установите переменную</string>
+<string name="sv_n">Имя переменной (без $)</string>
+<string name="tsv">Переменная Lightning</string>
+<string name="bv_ts">Отметка времени</string>
+<string name="eb_sh">Показать скрытые элементы</string>
+<string name="pz">Z-индекс</string>
+<string name="pb">Зоны</string>
+
+<string name="ov_t">Плавающий стол</string>
+<string name="ov_s">Рабочий стол, который можно вызвать сдвигом от края экрана поверх любого приложения.</string>
+<string name="ov_st">Выбор плавающего стола</string>
+<string name="ov_ss">Выберите рабочий стол. Нажмите Отмена для отключения плавающего стола</string>
+<string name="ov_dht">Показывать зоны</string>
+<string name="ov_dhs">Зоны вызова плавающего стола. Удобно для отладки (Зеленая - зона открывания, Красная - зона закрывания)</string>
+<string name="ov_lht">Скрывать при запуске</string>
+<string name="ov_lhs">Скрывать плавающий стол при запуске приложения</string>
+<string name="ov_d">Плавающий стол был отключен</string>
+<string name="an_so">Показать плавающий стол</string>
+<string name="an_ho">Скрыть плавающий стол</string>
+<string name="ov_shp">Позиция зоны открывания</string>
+<string name="ov_shs">Размер зоны открывания</string>
+<string name="ov_hhp">Позиция зоны закрывания</string>
+<string name="ov_hhs">Размер зоны закрывания</string>
+<string-array name="ov_hp_e">
+<item>Левый край, верх</item>
+<item>Левый край, центр</item>
+<item>Левый край, низ</item>
+<item>Правый край, верх</item>
+<item>Правый край, центр</item>
+<item>Правый край, низ</item>
+<item>Верхний край, лево</item>
+<item>Верхний край, центр</item>
+<item>Верхний край, право</item>
+<item>Нижний край, лево</item>
+<item>Нижний край, центр</item>
+<item>Нижний край, право</item>
+</string-array>
+<string name="f_afo">Автоматически искать начало папки</string>
+<string name="f_afos">Изменения вступят в силу при следующем запуске</string>
+<string name="ov_hhw">Ширина зоны закрывания</string>
+<string name="ov_shw">Ширина зоны открывания</string>
+<string name="ha_t">Использовать аппаратное ускорение</string>
+<string name="ev_cia">Элемент добавлен</string>
+<string name="ev_cir">Элемент удален</string>
+<string name="pc">Кликабельно</string>
+<string name="nip">Нет набора иконок</string>
+<string name="m_la_t">Запустить анимацию</string>
+<string-array name="m_la_e">
+<item>Нет</item>
+<item>Затухание</item>
+<item>Системная</item>
+<item>Slide up</item>
+<item>Slide down</item>
+<item>Slide left</item>
+<item>Slide right</item>
+<item>Scale from center</item>
+</string-array>
+<string name="lh">Задать свой заголовок (HTML5 поддерживается)</string>
+<string name="hs_ed">Изменить</string>
+<string name="an_ohs">Открыть окно иерархии</string>
+<string name="ov_pt">Настройки</string>
+<string name="ov_ps">Плавающий стол требует разрешения рисовать поверх других приложений</string>
+<string name="ism_t">Размер</string>
+<string-array name="ism_e">
+<item>Стандартный</item>
+<item>Реальный</item>
+<item>Максимальный, сохранить пропорции</item>
+<item>Максимальный, растягивать</item>
+<item>Normalized</item>
+</string-array>
+<string name="mi_cfp">Преобразовать в панель</string>
+<string name="mi_cpf">Преобразовать в папку</string>
+<string name="ldo_t">Блокировать плавающий стол</string>
+<string name="ldo_s">На заблокированном экране плавающий стол отключается. Снова включается при разблокировании.</string>
+<string name="pr_t">Запрашивать разрешение</string>
+<string name="pr_s">Для выполнения задачи, Lightning Launcher требует ваше разрешение:</string>
+<string name="pr_r1">поиск резервной копии и шаблонов на внешнем хранилище</string>
+<string name="pr_r2">запись резервных копий и шаблонов на внешнее хранилище</string>
+<string name="pr_r3">чтение файлов шрифтов на внешнем хранилище</string>
+<string name="pr_r4">чтение изображений на внешнем хранилище</string>
+<string name="pr_r5">запись извлеченных изображений на внешнее хранилище</string>
+<string name="pr_r6">чтение данных шаблона</string>
+<string name="pr_r7">извлечение файлов шаблона во временное хранилище</string>
+<string name="pr_r8">экспорт скрипта на внешнее хранилище для чтения другим редактором</string>
+<string name="pr_r9">закрытие приложений</string>
+<string name="pr_r10">получение списка доступных аккаунтов Google</string>
+<string name="pr_r11">запрос журнала звонков для поиска пропущенных</string>
+<string name="pr_r12">чтение количества непрочитанных сообщений</string>
+<string name="pr_r13">совершение вызовов с рабочего стола</string>
+<string name="pr_f1">Невозможно прочитать или записать резервную копию/шаблон</string>
+<string name="pr_f2">Невозможно выбрать шрифт</string>
+<string name="pr_f3">Невозможно выбрать изображение</string>
+<string name="pr_f4">Невозможно обработать шаблон</string>
+<string name="pr_f5">Невозможно закрыть приложение</string>
+<string name="mi_sel">Выбрать…</string>
+<string name="mi_sa">Все</string>
+<string name="mi_sn">Ничего</string>
+<string name="mi_ss">На Экране</string>
+<string name="mi_si">Перевернуть</string>
+<string name="mi_sr">Область</string>
+<string name="ms_m">, +%d и более</string>
+<string name="h_cl">Заблокировано и не может быть изменено. Долгое нажатие на пустое место и выберите разблокировать, для возможности редактирования.</string>
+<string name="no_um_ad">The user menu is not available in the app drawer.</string>
+<string name="ds_0">Default desktop</string>
+<string name="ds_1">Sample lock screen</string>
+<string name="sc_all">Include sub directories</string>
+<string name="nfh">Nothing to display here</string>
+<string name="sc_path">Current path</string>
+<string name="lwp">Lightning Live Wallpaper</string>
+<string name="sd">Please select a desktop\nfor your live wallpaper</string>
+<string name="ad_b">Built-ins</string>
+<string name="ad_p">Plugins</string>
+<string name="ev_m">Menu</string>
+<string name="lwp_ev_t">Use standard touch events</string>
+<string name="lwp_ev_s">React to touches as a normal app, allowing wallpaper swipe and scroll</string>
+<string name="iab_no">No, thanks</string>
+<string name="iab_y_key">Yes (key)</string>
+<string name="iab_y_app">Yes (in-app)</string>
+<string name="iab_ul_lwp_t">Not enabled yet</string>
+<string name="iab_ul_lwp_m">The Lightning Live Wallpaper is not yet enabled\n\nSupport the developer and help making Lightning the best launcher ever!</string>
+<string name="an_i_as">Show app shortcuts</string>
+<string name="as_no_s">No app shortcut for this item</string>
+<string name="as_no_hp_t">No app shortcut permission</string>
+<string name="as_no_hp_m">In order to access app shortcuts, Lightning Launcher needs to be the default launcher, otherwise it has no app shortcut permission.\n\nNote: you may see this message twice before you can select \'Always\' in the launcher selection box.</string>
+<string name="as_nf">Shortcut disabled</string>
+<string name="sp_none">No script</string>
+<string name="widget_count">(%d widgets)</string>
+
+
+<!-- deprecated: before 90 -->
+<string-array name="d01"/>
+<string name="d0"/>
+<string name="d1"/>
+
+<!-- deprecated: 90 -->
+<string name="color_t"/>
+<string name="color_s"/>
+<string name="wp_c"/>
+<string name="wp_t"/>
+<string name="wp_select_t"/>
+<string name="wp_select_s"/>
+<string name="wp_tint_color_t"/>
+<string name="wp_tint_color_s"/>
+<string name="wp_soft_t"/>
+<string name="wp_soft_s"/>
+
+<!-- deprecated: 92 -->
+<string name="theme_label_classic"/>
+<string name="theme_label_compact"/>
+<string name="theme_label_list_icons"/>
+<string name="theme_label_list_labels"/>
+<string name="theme_label_icons_only"/>
+
+<!-- deprecated: 93 -->
+<string name="app_not_installed"/>
+
+<!-- deprecated: 95 -->
+<string name="app_screen_switcher_t"/>
+<string name="app_screen_switcher_s"/>
+
+<!-- deprecated: 103 -->
+<string-array name="action_names">
+<item>Ничего не делать (блокировано)</item>
+<item>Меню приложений</item>
+<item>Полный экран</item>
+<item>Масштаб 100\%</item>
+<item>Переключатель Полный экран/100\%</item>
+<item>Предыдущий стол</item>
+<item>Следующий стол</item>
+<item>Изменить макет</item>
+<item>Добавить элемент</item>
+<item>Настройки Lightning</item>
+<item>Настроить текущий рабочий стол или папку</item>
+<item>Запуск приложения</item>
+<item>Запуск ярлыка</item>
+<item>Выбрать обои</item>
+<item>Меню Lightning</item>
+<item>Видимость строки состояния</item>
+<item>Показать/скрыть строку состояния и меню Lightning</item>
+<item>Показать уведомления</item>
+<item>Поиск</item>
+<item>Переместить элемент</item>
+<item>Настроить элемент</item>
+<item>Меню элемента</item>
+<item>Запуск элемента</item>
+</string-array>
+
+<!-- deprecated: 114 -->
+<string name="auto_stop_t">Останавливать прокрутку</string>
+<string name="auto_stop_s">Автоматически останавливать прокрутку у краев экрана</string>
+
+<!-- deprecated: 116 -->
+<string name="select_backup">Выберите резервную копию для восстановления</string>
+
+<!-- deprecated: 119 -->
+<string-array name="anim_e">
+<item>Нет</item>
+<item>Открыть/Закрыть</item>
+<item>Появление/Затухание</item>
+</string-array>
+
+<!-- deprecated: 124 -->
+<string name="mi_reset">Сброс масштаба/поворота</string>
+
+<!-- deprecated: 125 -->
+<string name="gc_sfde">Прокрутка одним пальцем в режиме редактирования</string>
+
+<!-- deprecated: 135 -->
+<string name="grid_pl">Переключать Портрет/Ландшафт</string>
+
+<!-- deprecated: 144 -->
+<string name="scroll_speed_t">Скорость прокрутки</string>
+
+<!-- deprecated: 170 -->
+<string name="apply_tmpl_p">Сохранить перед применением</string>
+<string name="apply_tmpl_n">Только применить</string>
+
+<!-- deprecated: 191 -->
+<string name="pick_default">Стандартная иконка</string>
+
+<!-- deprecated: 208 -->
+<string name="bo_t">Прозрачные панели и наложение содержимого</string>
+<string name="ad_ab_c_s">Фоновое изображение, видимость</string>
+
+<!-- deprecated: 221 -->
+<string name="wrap_t">Бесшовный режим</string>
+
+<!-- deprecated: beyond -->
+<string name="ip_blank">Пустое изображение</string>
+<string name="min_ram_t">Минимизировать использование памяти</string>
+<string name="min_ram_s">Меньше использует память, но чуть медленнее работает. Требует перезагрузки.</string>
+<string name="mi_es_show_hidden">Показать скрытые</string>
+<string name="mi_es_hide_hidden">Спрятать скрытые</string>
+<string name="mi_zorder">На передний/задний план</string>
+<string name="snap_t">Привязка</string>
+<string-array name="snap_e">
+<item>Нет</item>
+<item>Центр</item>
+<item>Края</item>
+<item>Центр и края</item>
+</string-array>
+<string name="copy_style_toast">Выберите элемент для копирования его стиля</string>
+<string name="copy_style_cancel">Копирование стиля отменено</string>
+<string name="copy_style_done">Стиль скопирован</string>
+<string name="mi_edit_copy_style">Копировать стиль</string>
+<string name="mi_app">Приложение…</string>
+<string name="mi_fo">Настройки папки</string>
+<string name="items_t">Элементы</string>
+<string name="items_s">Шрифты, цвета, иконки, границы, отступы и многое другое</string>
+<string name="mi_es_add_folder">Добавить папку</string>
+<string name="mi_es_add_pi">Добавить индикатор страницы</string>
+<string name="gc_hpie_s">Долгое касание, чтобы открыть описание</string>
+<string name="tut_basic_editing">Первые шаги</string>
+<string name="hide_statusbar_s">Для ее показа нажмите кнопку Меню</string>
+<string name="mph"></string>
+<string name="tr_ut">О Lightning</string>
+<string name="tr_um">Спасибо, что, давно пользуетесь бесплатной версией Lighting Launcher!\n\nYou are a long time user of the free version of Lighting Launcher, thank you.\n\nХотя эта версия заменена пробной версией, Вы всё-равно сможете пользоваться всеми существующими функциями бесплатно, а также большинством усовершенствований полной версии с момента последнего обновления.\n\nЕсли хотите поддержать приложение, то подумайте о приобретении ключа для разблокировки со специальной скидкой.\n\nСпасибо!</string>
+<string name="ip_bic">Некорректный набор иконок</string>
+
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
+<string name="default_pack_name">Русский</string>
+
+<!-- Do not change -->
+<string name="aaa" />
+<string name="zzz" />
+
+<string-array name="aaa1" />
+<string-array name="zzz1" />
+
+</resources>

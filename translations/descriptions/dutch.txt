@@ -1,0 +1,27 @@
+Lightning Launcher is een snelle, lichte en volledig aanpasbare home screen launcher voor Android.
+
+Belangrijkste features:
+
+- grote variëteit aan layouts: raster, enkele kolom, horizontaal, verticaal, vrije positie, ...
+- oneindige visuele customisatie: verander labels, iconen, lettertypes, kleuren, uitlijning, afmetingen enz.
+- innovatief concept: jouw home screen is zoals een oneindig oppervlak waar apps en widgets overal kunnen geplaatst worden
+- ieder item (app, shortcut, widget,...) kan individueel worden aangepast, vergroot, verkleind, gedraaid,... om de leesbaarheid te verhogen, enkele waardevolle pixels te winnen in een krappe layout of gewoon voor de fun.
+- ondersteunt speciale mappen, die widgets en zelfs andere mappen kunnen bevatten. Elke map kan volledig aangepast worden, zowel de layout als het grafisch aspect.
+- ondersteunt  configureerbare toetsen en gebaren: link de actie die jij verkiest aan de toets van jouw voorkeur, start eender welke app je wil met een veeg van je vinger
+- vanaf nul opgebouwd om de meest batterij- en geheugenbesparende launcher te zijn. Hoe meer geheugen je hebt voor apps, hoe sneller ze zullen werken en hoe langer je batterij zal meegaan.
+- en nog veel meer...
+
+
+Lightning Launcher is gratis, heeft geen reclame, internet- of roottoegang nodig. Er is geen full/pro/prime of HD versie. Alle Lightening kracht is hier en beschikbaar in een klein en heel efficiënt pakketje. Indien gewenst kan je een kijkje nemen naar de extra apps. Je kan één van deze extra apps kopen voor wat meer luxe-features en om Lightning Launcher en zijn developer te helpen om dit de beste launcher ooit te maken.
+
+Alle opmerkingen, voorstellen en bug rapporten zijn welkom maar zijn moeilijk op te volgen vanuit de Market, gelieve een mailtje te sturen naar pierrox@pierrox.net.
+Bezoek ook onze facebook page http://www.facebook.com/LightningLauncher om op de hoogte te blijven van wat momenteel in ontwikkeling is, om features aan te vragen of gewoon om een vraag te stellen.
+
+Lightning Launcher: jouw home screen, jouw stijl!
+Veel plezier!
+
+Toestemmingen:
+- CALL_PHONE: nodig voor "direct bellen" shortcuts, deze toestemming is nodig bij alle launchers die contactpersoon shortcuts supporteren. LL zal nooit iemand opbellen in jouw naam.
+- EXPAND_STATUS_BAR: zoals de naam al aangeeft, gebruikt voor de "Toon status bar" actie.
+- SET_WALLPAPER_HINTS: gebruikt om de wallpaper dimensie in te stellen
+- geen andere toestemmingen nodig!
