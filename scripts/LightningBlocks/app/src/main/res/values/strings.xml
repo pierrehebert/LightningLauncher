@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lightning Blocks</string>
+
+    <string name="sketch">Create a Lightning Blocks game</string>
+</resources>

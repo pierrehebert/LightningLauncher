@@ -1,0 +1,13 @@
+<resources>
+    <!-- This is the package name -->
+    <string name="app_name">Sample LLX Script</string>
+
+    <!-- This is the name displayed when browsing available script package -->
+    <string name="hello_name">Sample: hello</string>
+
+    <!-- This is the name of the script once loaded in the launcher (visible in the script editor and the script menus) -->
+    <string name="script_name">Say hello</string>
+
+
+    <string name="counter_name">Lightning Sample Counter</string>
+</resources>

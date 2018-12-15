@@ -1,0 +1,4 @@
+<resources>
+    <!-- This is the package name -->
+    <string name="app_name">Lightning 3D Compass</string>
+</resources>

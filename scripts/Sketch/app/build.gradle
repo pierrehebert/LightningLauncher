@@ -1,0 +1,23 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "net.pierrox.lightning_launcher.llscript.sketch"
+        minSdkVersion 8
+        targetSdkVersion 25
+        versionCode 5
+        versionName "2.0"
+    }
+
+    buildTypes {
+        release {
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

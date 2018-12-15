@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.pierrox.lightning_launcher.llscript.week_day">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher">
+
+        <!--A sample plugin to demonstrate how to use the object oriented model-->
+        <activity
+            android:name=".WeekDay"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="net.pierrox.lightning_launcher.script.PLUGIN"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

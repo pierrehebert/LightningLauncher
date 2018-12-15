@@ -1,0 +1,10 @@
+<resources>
+    <!-- This is the package name -->
+    <string name="app_name">Share app\'s component name Script</string>
+
+    <!-- This is the name displayed when browsing available script package -->
+    <string name="browse_name">Share app\'s component name</string>
+
+    <!-- This is the name of the script once loaded in the launcher (visible in the script editor and the script menus) -->
+    <string name="script_name">Share app\'s component name</string>
+</resources>

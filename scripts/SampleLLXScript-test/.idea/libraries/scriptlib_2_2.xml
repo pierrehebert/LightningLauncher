@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="scriptlib-2.2">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.faendir.lightninglauncher/scriptlib/2.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.faendir.lightninglauncher/scriptlib/2.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.faendir.lightninglauncher/scriptlib/2.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.faendir.lightninglauncher/scriptlib/2.2/80db41f89308a57100ebd81d159e12edc293ddb4/scriptlib-2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
