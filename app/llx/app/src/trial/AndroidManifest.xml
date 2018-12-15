@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application>
+        <activity android:name="net.pierrox.lightning_launcher.activities.AppUnlocker"
+            android:theme="@style/AppDialog"/>
+
+        <provider android:name="net.pierrox.lightning_launcher.util.ApiProvider" android:authorities="${provider_authority}"
+            android:exported="true" />
+    </application>
+</manifest>

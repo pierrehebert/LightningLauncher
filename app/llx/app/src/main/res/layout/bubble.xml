@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.pierrox.lightning_launcher.views.BubbleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bubble"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:elevation="9dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/bubble_bg">
+        <net.pierrox.lightning_launcher.views.FillLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/bbl_title_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/bbl_ttl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/bbl_ttl" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_primary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bbl_btns_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <Button
+                            android:id="@+id/bbl_edit"
+                            android:text="O"
+                            style="@style/bubble_item_icon"/>
+                        <Button
+                            android:id="@+id/bbl_add"
+                            android:text="7"
+                            style="@style/bubble_item_icon"/>
+                        <Button
+                            android:id="@+id/bbl_clone"
+                            android:text="6"
+                            style="@style/bubble_item_icon"/>
+                        <Button
+                            android:id="@+id/bbl_settings"
+                            android:text="["
+                            style="@style/bubble_item_icon"/>
+                        <Button
+                            android:id="@+id/bbl_rm"
+                            android:text="4"
+                            style="@style/bubble_item_icon"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_primary"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bubble_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </net.pierrox.lightning_launcher.views.FillLinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/bubble_arrow_down_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/bubble_arrow_up_bg" />
+
+</net.pierrox.lightning_launcher.views.BubbleLayout>

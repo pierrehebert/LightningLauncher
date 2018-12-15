@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <net.pierrox.lightning_launcher.views.NativeWallpaperView
+        android:id="@id/wp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/sb_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@id/desktop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transformPivotX="0px"
+            android:transformPivotY="0px">
+            <net.pierrox.lightning_launcher.views.ItemLayout
+                android:id="@+id/drawer_il"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <FrameLayout
+                android:id="@id/folder_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </FrameLayout>
+
+	<ProgressBar 
+	    android:id="@+id/drawer_progress"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/edit_controls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ViewAnimator
+        android:id="@+id/ab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ab_height"
+        android:gravity="center_vertical"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        style="@style/ab_bg">
+
+        <LinearLayout
+            android:id="@+id/drawer_actions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/drawer_mode_grp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@drawable/ab_btn_bg">
+
+                <TextView
+                    android:id="@+id/drawer_mode_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    style="@style/ab_text"/>
+
+                <TextView
+                    android:id="@+id/drawer_mode_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="7dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    style="@style/ab_text"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/drawer_zoom"
+                style="@style/ab_btn_icon"
+                android:text="J"/>
+
+            <TextView
+                android:id="@+id/drawer_search"
+                style="@style/ab_btn_icon"
+                android:text="I"/>
+
+            <TextView
+                android:id="@+id/drawer_more"
+                style="@style/ab_btn_icon"
+                android:text="H"/>
+
+        </LinearLayout>
+
+        <net.pierrox.lightning_launcher.views.EditTextIme
+            android:id="@+id/drawer_search_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:padding="7dp"
+            style="@style/ab_text"/>
+
+        <LinearLayout
+            android:id="@+id/batch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/batch_ok"
+                style="@style/ab_btn_icon"
+                android:text="p"/>
+
+            <TextView
+                android:id="@+id/batch_count"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                style="@style/ab_text"/>
+
+            <TextView
+                android:id="@+id/batch_add"
+                style="@style/ab_btn_icon"
+                android:text="G"/>
+        </LinearLayout>
+
+    </ViewAnimator>
+</FrameLayout>

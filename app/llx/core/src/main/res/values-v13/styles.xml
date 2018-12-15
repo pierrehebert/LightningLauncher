@@ -1,0 +1,19 @@
+<resources>
+    <style name="AppDark" parent="android:Theme.Holo" />
+    <style name="AppLight" parent="android:Theme.Holo.Light" />
+
+    <style name="AppDarkNoActionBarWallpaper" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+	<style name="AppDarkNoActionBar" parent="android:Theme.Holo.NoActionBar" />
+    <style name="AppDarkTranslucent" parent="android:Theme.Holo.Dialog.NoActionBar" />
+
+    <style name="AppLightNoActionBarWallpaper" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+    <style name="AppLightNoActionBar" parent="android:Theme.Holo.Light.NoActionBar" />
+    <style name="AppLightTranslucent" parent="android:Theme.Holo.Light.Dialog.NoActionBar" />
+
+    <style name="AppDialog" parent="android:Theme.Holo.Light.Dialog.NoActionBar" />
+
+</resources>

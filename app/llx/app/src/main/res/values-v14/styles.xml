@@ -1,0 +1,6 @@
+<resources>
+    <style name="list_item">
+        <item name="android:paddingLeft">?android:attr/listPreferredItemPaddingLeft</item>
+        <item name="android:paddingRight">?android:attr/listPreferredItemPaddingRight</item>
+    </style>
+</resources>

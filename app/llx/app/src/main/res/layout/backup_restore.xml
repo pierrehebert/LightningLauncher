@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp">
+        
+	    <Button
+	        android:id="@+id/backup"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.5"
+	        android:layout_height="match_parent"
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
+	    
+   	    <Button
+	        android:id="@+id/export"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.5"
+	        android:layout_height="match_parent"
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
+	    
+	</LinearLayout>
+
+    <ListView
+        android:id="@+id/archives"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"/>
+
+
+</LinearLayout>

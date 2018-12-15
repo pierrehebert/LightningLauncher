@@ -1,0 +1,166 @@
+Index: core/src/main/java/net/pierrox/lightning_launcher/views/FolderView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/views/FolderView.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/views/FolderView.java	(revision Shelved version)
+@@ -24,7 +24,7 @@
+ import android.widget.LinearLayout;
+ import android.widget.TextView;
+ 
+-public class FolderView extends BoxLayout {
++public class FolderView extends BoxLayout implements SharedAsyncGraphicsDrawable.SharedAsyncGraphicsDrawableListener {
+ 	private static final int ANIM_DURATION=400;
+ 	
+ 	private LinearLayout mContainer;
+@@ -43,7 +43,8 @@
+ 	private ItemLayout mItemLayout;
+ 	
+ 	private boolean mOpen;
++	private boolean mResumed;
+-	
++
+ 	private boolean mEditMode;
+ 
+     private boolean mAllowEmptyMessage = true;
+@@ -78,6 +79,9 @@
+ 	}
+ 	
+ 	public void configure(Folder folder, Page c) {
++        if(mFolderConfig !=null && mFolderConfig.box.bgFolder != null) {
++            mFolderConfig.box.bgFolder.setListener(null);
++        }
+ 		mOpenerId=folder.getId();
+ 		mFolderConfig=folder.getFolderConfig();
+ 
+@@ -103,7 +107,17 @@
+ //			}
+ //		}
+ 
++        SharedAsyncGraphicsDrawable bgFolder = mFolderConfig.box.bgFolder;
++        if(bgFolder != null) {
++            bgFolder.setListener(this);
+-		
++
++            if(mResumed && mOpen) {
++                bgFolder.resume();
++            }
++        }
++
++
++		
+ 		int visibility=mFolderConfig.titleVisibility ? View.VISIBLE : View.GONE; 
+ 		mTitle.setVisibility(visibility);
+ 		mSeparator.setVisibility(visibility);
+@@ -178,7 +192,10 @@
+ 		setVisibility(View.VISIBLE);
+         mWaitingForLayoutToBeginAnimation = true;
+ 		mOpen=true;
++        if(mResumed && mFolderConfig.box.bgFolder != null) {
++            mFolderConfig.box.bgFolder.resume();
+-	}
++        }
++	}
+ 	
+ 	public void close(boolean animate) {
+ 		mOpen=false;
+@@ -190,8 +207,27 @@
+             }
+ 		}
+         setVisibility(View.GONE);
++        if(mFolderConfig.box.bgFolder != null) {
++            mFolderConfig.box.bgFolder.pause();
+-    }
++        }
++    }
+-	
++
++    public void resume() {
++        mResumed = true;
++        mPage.resume();
++        if(mOpen && mFolderConfig.box.bgFolder != null) {
++            mFolderConfig.box.bgFolder.resume();
++        }
++    }
++
++    public void pause() {
++        mResumed = false;
++        mPage.pause();
++        if(mFolderConfig.box.bgFolder != null) {
++            mFolderConfig.box.bgFolder.pause();
++        }
++    }
++	
+ 	public int getOpenerId() {
+ 		return mOpenerId;
+ 	}
+@@ -338,5 +374,15 @@
+ 			}
+ 		});
+         return a;
++	}
++
++    @Override
++    public void onSharedAsyncGraphicsDrawableInvalidated() {
++        invalidate();
++    }
++
++    @Override
++    public void onSharedAsyncGraphicsDrawableSizeChanged() {
++        invalidate();
+-	}
++    }
+ }
+Index: core/src/main/java/net/pierrox/lightning_launcher/engine/LightningEngine.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/engine/LightningEngine.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/engine/LightningEngine.java	(revision Shelved version)
+@@ -226,7 +226,7 @@
+             if (mFolderViews != null) {
+                 for (FolderView fv : mFolderViews) {
+                     if (fv.isOpen()) {
+-                        fv.getPage().pause();
++                        fv.pause();
+                     }
+                 }
+             }
+@@ -245,7 +245,7 @@
+             if (mFolderViews != null) {
+                 for (FolderView fv : mFolderViews) {
+                     if (fv.isOpen()) {
+-                        fv.getPage().resume();
++                        fv.resume();
+                     }
+                 }
+             }
+@@ -909,7 +909,7 @@
+                 from = new Point(x, y);
+             }
+             if(mIsResumed) {
+-                c.resume();
++                fv.resume();
+             }
+             fv.open(from);
+ 
+@@ -942,7 +942,7 @@
+             onFolderClosed(fv.getPage().id);
+             fv.close(animate);
+             if(mIsResumed) {
+-                fv.getPage().pause();
++                fv.pause();
+             }
+             setActivePageWithTopmostPage();
+             setTargetPage(getTopmostPage().id);
+@@ -960,7 +960,7 @@
+                 onFolderClosed(f.getPageNum());
+                 fv.close(true);
+                 if(mIsResumed) {
+-                    fv.getPage().pause();
++                    fv.pause();
+                 }
+             }
+         }

@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+def appendVersionNameVersionCode(variant, defaultConfig) {
+    variant.outputs.all { output ->
+        if (output.zipAlign) {
+            def file = output.outputFile
+            def fileName = file.name.replace(".apk", "-" + defaultConfig.versionCode + ".apk")
+            fileName = fileName.replace("app", "lightning_launcher")
+            output.outputFileName = fileName
+        }
+
+//        def file = output.packageApplication.file
+//        def fileName = file.name.replace(".apk", "-" + defaultConfig.versionCode + ".apk")
+//        fileName = fileName.replace("app", "lightning_launcher")
+//        output.packageApplication.outputFileName = fileName
+    }
+}
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        versionCode 321
+        versionName "14.2 (r2910)"
+        buildConfigField "boolean", "IS_BETA", "false" //  change in core too
+
+        minSdkVersion 8
+        targetSdkVersion 26
+    }
+
+//    dexOptions {
+//        incremental true
+//    }
+
+    buildTypes {
+        debug {
+            manifestPlaceholders += [provider_authority: "net.pierrox.lightning_launcher"]
+        }
+        release {
+            manifestPlaceholders += [provider_authority: "net.pierrox.lightning_launcher_extreme"]
+
+            minifyEnabled true
+            proguardFiles 'proguard.cfg'
+            //proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+
+            applicationVariants.all { variant ->
+                appendVersionNameVersionCode(variant, defaultConfig)
+            }
+        }
+    }
+
+    flavorDimensions "version", "abi"
+
+    productFlavors {
+        extreme {
+            manifestPlaceholders += [app_name: "LLAppExtreme"]
+            applicationId "net.pierrox.lightning_launcher_extreme"
+            dimension "version"
+            buildConfigField "boolean", "IS_TRIAL", "false"
+        }
+        trial {
+            manifestPlaceholders += [app_name: "LLAppTrial"]
+            applicationId "net.pierrox.lightning_launcher"
+            dimension "version"
+            buildConfigField "boolean", "IS_TRIAL", "true"
+        }
+
+        x86 {
+            dimension "abi"
+            versionCode Integer.parseInt("8" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "x86"
+            }
+        }
+        armv7 {
+            dimension "abi"
+            versionCode Integer.parseInt("2" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "armeabi-v7a"
+            }
+        }
+        arm {
+            dimension "abi"
+            versionCode Integer.parseInt("1" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "armeabi"
+            }
+        }
+        //mips64 {
+        //    versionCode Integer.parseInt("6" + defaultConfig.versionCode)
+        //    ndk {
+        //        abiFilter "mips64"
+        //    }
+        //}
+        //mips {
+        //    versionCode Integer.parseInt("5" + defaultConfig.versionCode)
+        //    ndk {
+        //        abiFilter "mips"
+        //    }
+        //}
+        //armv64 {
+        //    versionCode Integer.parseInt("3" + defaultConfig.versionCode)
+        //    ndk {
+        //        abiFilter "arm64-v8a"
+        //    }
+        //}
+    }
+}
+
+dependencies {
+    compile project(':core')
+}

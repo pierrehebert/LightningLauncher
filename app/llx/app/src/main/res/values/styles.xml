@@ -1,0 +1,159 @@
+<resources>
+
+
+    <style name="bubble_bg">
+        <item name="android:background">@drawable/bubble_v9</item>
+    </style>
+    <style name="bubble_arrow_up_bg">
+        <item name="android:src">@drawable/arrow_up_v9</item>
+    </style>
+    <style name="bubble_arrow_down_bg">
+        <item name="android:src">@drawable/arrow_down_v9</item>
+    </style>
+	<style name="bubble_item_base">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:paddingTop">7dip</item>
+		<item name="android:paddingBottom">7dip</item>
+		<item name="android:paddingLeft">12dip</item>
+		<item name="android:paddingRight">12dip</item>
+		<item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">#262626</item>
+	</style>
+    <style name="bubble_item" parent="bubble_item_base">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@android:drawable/list_selector_background</item>
+    </style>
+    <style name="bubble_item_icon" parent="bubble_item">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@null</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="bbl_ttl_base">
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:padding">3dp</item>
+    </style>
+    <style name="bbl_ttl" parent="bbl_ttl_base">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+	<style name="sm_button" parent="ab_text">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/icon_text_size</item>
+		<item name="android:background">@drawable/ab_btn_bg</item>
+	</style>
+
+    <style name="ip_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/icon_text_size</item>
+    </style>
+
+    <style name="ab_bg">
+        <item name="android:background">@drawable/ab_bg_v9</item>
+    </style>
+    <style name="ab_text" parent="android:TextAppearance.Medium"/>
+
+    <style name="sc_text_base">
+        <item name="android:inputType">textMultiLine|textNoSuggestions</item>
+        <item name="android:typeface">monospace</item>
+
+        <item name="android:gravity">top</item>
+    </style>
+
+    <style name="sc_text" parent="sc_text_base"/>
+
+    <style name="ab_btn_icon" parent="ab_text">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/ab_btn_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">26dp</item>
+    </style>
+
+    <dimen name="eb_bar_size">38dp</dimen>
+    <dimen name="eb_text_size">20dp</dimen>
+    <style name="eb_bar">
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@color/eb_bar_bg</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <style name="eb_btn">
+        <item name="android:textColor">@color/eb_btn_text</item>
+        <item name="android:textSize">@dimen/eb_text_size</item>
+        <item name="android:background">@drawable/eb_btn_bg</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="eb_btn.h" parent="eb_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="eb_btn.v" parent="eb_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="eb_sep">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:background">#dfff</item>
+    </style>
+    <style name="hs_btn" parent="eb_btn">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <color name="bubble_item_bg_normal">#ffe6e6e6</color>
+    <color name="bubble_item_bg_pressed">#ffc0c0c0</color>
+    <color name="color_text">?android:attr/colorForeground</color>
+    <color name="color_text_pressed">?android:attr/colorPressedHighlight</color>
+    <color name="color_text_disabled">?android:attr/textColorPrimary</color>
+    <color name="eb_btn_pressed">#fff</color>
+    <color name="eb_btn_activated">#dfff</color>
+    <color name="eb_bar_bg">#8fff</color>
+
+    <dimen name="pref_padding">0dp</dimen>
+	<dimen name="bubble_arrow_shift">5px</dimen>
+    <dimen name="icon_text_size">24dp</dimen>
+    <dimen name="large_icon_text_size">24dp</dimen>
+    <dimen name="max_box_editor_width">400dp</dimen>
+    <dimen name="ab_height">48dp</dimen>
+    <dimen name="pref_height">40dp</dimen>
+    <dimen name="pref_size_category">12dp</dimen>
+    <dimen name="pref_size_title">15dp</dimen>
+    <dimen name="pref_size_summary">11dp</dimen>
+    <dimen name="hierarchy_indent">20dp</dimen>
+
+    <dimen name="add_item_margin">4dp</dimen>
+    <style name="list_item">
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+    </style>
+
+    <style name="zorder_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">6dp</item>
+    </style>
+    <dimen name="list_item_icon_size">48dp</dimen>
+</resources>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/eb_top"
+        android:layout_width="@dimen/eb_bar_size"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:weightSum="10"
+        style="@style/eb_bar"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/eb_edit"
+            android:text="O"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_pos"
+            android:text="5"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_action"
+            android:text="o"
+            style="@style/eb_btn.v"/>
+        <View
+            style="@style/eb_sep"/>
+        <Button
+            android:id="@+id/eb_cstyle"
+            android:text="!"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_pstyle"
+            android:text="$"
+            style="@style/eb_btn.v"/>
+        <View
+            style="@style/eb_sep"/>
+        <Button
+            android:id="@+id/eb_add"
+            android:text="7"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_clone"
+            android:text="6"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_rm"
+            android:text="4"
+            style="@style/eb_btn.v"/>
+        <View
+            style="@style/eb_sep"/>
+        <Button
+            android:id="@+id/eb_undo"
+            android:text="2"
+            style="@style/eb_btn.v"/>
+        <Button
+            android:id="@+id/eb_redo"
+            android:text="3"
+            style="@style/eb_btn.v"/>
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/eb_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/eb_bar_size"
+        android:weightSum="9"
+        android:layout_gravity="bottom"
+        style="@style/eb_bar">
+
+        <Button
+            android:id="@+id/eb_ms"
+            android:text=":"
+            style="@style/eb_btn.h"/>
+         <Button
+            android:id="@+id/eb_sh"
+            android:text="K"
+            style="@style/eb_btn.h"/>
+         <Button
+            android:id="@+id/eb_hp"
+            android:text="\?"
+            style="@style/eb_btn.h"/>
+        <Button
+            android:id="@+id/eb_snap"
+            android:text=";"
+            style="@style/eb_btn.h"/>
+        <Button
+            android:id="@+id/eb_ge"
+            android:text="9"
+            style="@style/eb_btn.h"/>
+         <Button
+             android:id="@+id/eb_prop"
+             android:text="%"
+             style="@style/eb_btn.h"/>
+        <Button
+            android:id="@+id/eb_lock"
+            android:text="&lt;"
+            style="@style/eb_btn.h"
+            android:visibility="gone"/>
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"/>-->
+        <!--<Button-->
+            <!--android:id="@+id/eb_as"-->
+            <!--android:text="N"-->
+            <!--style="@style/eb_btn.h"/>-->
+        <Button
+            android:id="@+id/eb_gs"
+            android:text="N"
+            style="@style/eb_btn.h"/>
+        <Button
+            android:id="@+id/eb_cs"
+            android:text="["
+            style="@style/eb_btn.h"/>
+
+         <Button
+             android:id="@+id/eb_h"
+             android:text="]"
+             style="@style/eb_btn.h"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        style="@style/bubble_bg"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/gb_e1"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:textSize="9dp"/>
+            <Button
+                android:id="@+id/gb_e2"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:textSize="9dp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/gb_vm"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/gb_hm"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"/>
+            <Button
+                android:id="@+id/gb_m"
+                android:layout_width="52dp"
+                android:layout_height="48dp"
+                android:text="•"/>
+            <Button
+                android:id="@+id/gb_hp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/gb_vp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="4">
+
+            <ImageButton
+                android:id="@+id/move_bottom"
+                android:src="@drawable/move_bottom"
+                style="@style/zorder_btn" />
+
+            <ImageButton
+                android:id="@+id/move_down"
+                android:src="@drawable/move_down"
+                style="@style/zorder_btn" />
+
+            <ImageButton
+                android:id="@+id/move_up"
+                android:src="@drawable/move_up"
+                style="@style/zorder_btn" />
+
+            <ImageButton
+                android:id="@+id/move_top"
+                android:src="@drawable/move_top"
+                style="@style/zorder_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_prop_cont"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        style="@style/bubble_bg">
+
+        <LinearLayout
+            android:id="@+id/edit_prop_handle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/eb_bar_size"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/edit_prop_pos"
+                android:layout_width="@dimen/eb_bar_size"
+                android:layout_height="match_parent"
+                android:text=">"/>
+            <TextView
+                android:id="@+id/edit_prop_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/edit_prop_mode_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"/>
+            <Button
+                android:id="@+id/edit_prop_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/edit_prop_mode_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_primary"/>
+
+        <net.pierrox.lightning_launcher.views.CustomizeItemView
+            android:id="@+id/edit_prop_box"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_action_box"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/eb_bar_size"
+        android:layout_marginRight="@dimen/eb_bar_size"
+        android:orientation="horizontal"
+        style="@style/eb_bar">
+
+        <!-- child views added at runtime -->
+
+    </LinearLayout>
+
+    <net.pierrox.lightning_launcher.views.EditBarHiderView
+        android:id="@+id/eb_hider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom|right"
+        android:scaleType="center"
+        style="@style/eb_bar"/>
+</merge>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 Daniel Nilsson
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:orientation="vertical">
+		
+	<net.margaritov.preference.colorpicker.ColorPickerView
+		android:id="@+id/color_picker_view"
+		android:layout_width="match_parent"
+		android:layout_height="0dip"
+		android:layout_weight="1"
+		android:layout_gravity="center"
+		android:tag="portrait"
+		android:layerType="software"
+	/>
+
+	<FrameLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="7dip">
+		<EditText
+		    android:id="@+id/hex_editor"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+		    android:inputType="textNoSuggestions"
+		    android:maxLength="8"
+		    android:ems="10" >
+		</EditText>
+	</FrameLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="48dp"
+		android:orientation="horizontal"
+		android:layout_margin="10dp">
+		
+		<FrameLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" >
+
+            <net.margaritov.preference.colorpicker.ColorPickerPanelView
+                android:id="@+id/old_color_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:shadowColor="#fff"
+                android:shadowRadius="1"
+                android:text="@android:string/cancel"
+                android:textColor="#000"
+                android:textStyle="bold" />
+        </FrameLayout>
+	
+		<View 
+		    android:layout_width="20dp"
+		    android:layout_height="match_parent"/>
+
+		<FrameLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" >
+
+            <net.margaritov.preference.colorpicker.ColorPickerPanelView
+                android:id="@+id/new_color_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:shadowColor="#fff"
+                android:shadowRadius="3"
+                android:text="@android:string/ok"
+                android:textColor="#000"
+                android:textStyle="bold" />
+        </FrameLayout>	
+	</LinearLayout>
+	
+</LinearLayout>

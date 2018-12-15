@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/sm_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone"/>
+
+    <HorizontalScrollView
+        android:id="@+id/sm_scroller"
+        android:layout_width="wrap_content"
+    	android:layout_height="0dp"
+    	android:layout_weight="1">
+        <LinearLayout 
+            android:id="@+id/sm_container"
+            android:animateLayoutChanges="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+            
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/sm_ok"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="@android:string/ok"
+        android:visibility="gone"/>
+    
+    <LinearLayout
+        android:id="@+id/sm_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:weightSum="10"
+        style="@style/ab_bg">
+        
+        <Button
+            android:id="@+id/sm_first"
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_previous"
+            style="@style/sm_button"/>
+
+        <View
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_home"
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_delete"
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_add"
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_clone"
+            style="@style/sm_button"/>
+
+        <View
+            style="@style/sm_button"/>
+
+        <Button
+            android:id="@+id/sm_next"
+            style="@style/sm_button"/>
+        <Button
+            android:id="@+id/sm_last"
+            style="@style/sm_button"/>
+    </LinearLayout>
+</LinearLayout>

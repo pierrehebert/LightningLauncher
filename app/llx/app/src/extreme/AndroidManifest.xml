@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <permission android:name="net.pierrox.lightning_launcher.lwp_key" android:label="lwp" android:protectionLevel="signature"/>
+
+    <application>
+        <provider android:name="net.pierrox.lightning_launcher.util.ApiProvider" android:authorities="net.pierrox.lightning_launcher_extreme.api"
+            android:exported="true" />
+
+        <activity android:name="net.pierrox.lightning_launcher.PurchaseProcess"
+                  android:theme="@style/AppDialog"/>
+
+        <activity
+            android:name="net.pierrox.lightning_launcher.LWPSettings"
+            android:exported="true"
+            android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <service
+            android:name="net.pierrox.lightning_launcher.util.LightningLWPService"
+            android:enabled="true"
+            android:label="@string/lwp"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/lwp" >
+            </meta-data>
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:id="@+id/workspace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.pierrox.lightning_launcher.views.NativeWallpaperView
+            android:id="@+id/wp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@id/desktop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <net.pierrox.lightning_launcher.views.ItemLayout
+                android:id="@+id/window_il"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <FrameLayout
+                android:id="@+id/folder_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <!--<include layout="@layout/edit_controls"/>-->
+    </FrameLayout>
+
+    <View
+        android:id="@+id/show_handle"
+        android:layout_width="20dp"
+        android:layout_height="60dp"/>
+
+    <View
+        android:id="@+id/hide_handle"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

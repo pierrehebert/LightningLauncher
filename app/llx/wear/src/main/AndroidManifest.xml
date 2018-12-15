@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.pierrox.lightning_launcher.wear">
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="net.pierrox.lightning_launcher.wear.LLAppWear"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault">
+        <!-- android:icon="@mipmap/ic_launcher" -->
+        <uses-library android:name="com.google.android.wearable" android:required="false" />
+
+        <activity
+            android:name="net.pierrox.lightning_launcher.wear.activities.Starter"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+
+            <meta-data
+                android:name="com.google.android.clockwork.home.preview"
+                android:resource="@drawable/icon" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--<category android:name="android.intent.category.HOME" />-->
+            </intent-filter>
+        </activity>
+
+        <service android:name="net.pierrox.lightning_launcher.wear.overlay.WearWindowService"/>
+    </application>
+
+</manifest>

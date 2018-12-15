@@ -1,0 +1,29 @@
+<resources>
+    <style name="AppDark" parent="android:Theme" />
+    <style name="AppLight" parent="AppDark" />
+
+    <style name="AppDarkNoActionBarWallpaper" parent="android:Theme.Wallpaper.NoTitleBar" />
+    <style name="AppDarkNoActionBar" parent="android:Theme.NoTitleBar" />
+    <style name="AppDarkTranslucent" parent="android:Theme.Translucent.NoTitleBar" />
+
+    <style name="AppLightNoActionBarWallpaper" parent="AppDarkNoActionBarWallpaper" />
+    <style name="AppLightNoActionBar" parent="AppDarkNoActionBar" />
+    <style name="AppLightTranslucent" parent="AppDarkTranslucent" />
+    <style name="AppDialog" parent="android:Theme.Dialog" />
+
+
+    <style name="NoDisplay" parent="AppLightNoActionBarWallpaper">
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <color name="color_accent">#ffff5722</color>
+    <color name="color_primary">#ffff5722</color>
+    <color name="color_primary_dark">#ffE64A19</color>
+
+    <dimen name="min_handle_content_size">48dp</dimen>
+</resources>

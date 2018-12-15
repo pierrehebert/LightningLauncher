@@ -1,0 +1,212 @@
+Index: app/src/main/java/net/pierrox/lightning_launcher/views/CustomizeItemView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/net/pierrox/lightning_launcher/views/CustomizeItemView.java	(revision Local version)
++++ app/src/main/java/net/pierrox/lightning_launcher/views/CustomizeItemView.java	(revision Shelved version)
+@@ -123,6 +123,7 @@
+     private LLPreferenceList mItemLabelStyle;
+     private LLPreference mItemLabelFont;
+     private LLPreferenceSlider mItemLabelNumLines;
++    private LLPreferenceSlider mItemLabelRotation;
+     private LLPreferenceColor mItemLabelColorNormal;
+     private LLPreferenceColor mItemLabelColorSelected;
+     private LLPreferenceColor mItemLabelColorFocused;
+@@ -424,6 +425,7 @@
+         prefs_label.add(mItemLabelStyle = new LLPreferenceList(context, ID_mItemLabelStyle, R.string.l_style_t, R.array.l_style_e, 0));
+         prefs_label.add(mItemLabelFont = new LLPreference(context, ID_mItemLabelFont, R.string.l_type_face, 0));
+         prefs_label.add(mItemLabelNumLines = new LLPreferenceSlider(context, ID_mItemLabelNumLines, R.string.l_num_lines, 0, LLPreferenceSlider.ValueType.INT, 1, 5, 1, null));
++        prefs_label.add(mItemLabelRotation = new LLPreferenceSlider(context, ID_mItemLabelRotation, R.string.l_rot, 0, LLPreferenceSlider.ValueType.FLOAT, 0, 360, 1, null));
+ 
+         mItemLabelColorNormal = new LLPreferenceColor(context, ID_mItemLabelColorNormal, R.string.l_color_normal, 0, true);
+         mItemLabelColorSelected = new LLPreferenceColor(context, ID_mItemLabelColorSelected, R.string.l_color_selected, 0, true);
+@@ -747,6 +749,7 @@
+         mItemLabelSize.setValue(sc.labelFontSize, sc_def == null ? null : sc_def.labelFontSize);
+         mItemLabelStyle.setValue(sc.labelFontStyle, sc_def == null ? null : sc_def.labelFontStyle);
+         mItemLabelNumLines.setValue(sc.labelMaxLines, sc_def == null ? null : (float) sc_def.labelMaxLines);
++        mItemLabelRotation.setValue(sc.labelRotation, sc_def == null ? null : (float) sc_def.labelRotation);
+ 
+         mItemLabelColorNormal.setValue(sc.labelFontColor, sc_def == null ? null : sc_def.labelFontColor);
+         mItemLabelColorSelected.setValue(sc.selectionColorLabel, sc_def == null ? null : sc_def.selectionColorLabel);
+@@ -1907,6 +1910,7 @@
+             sc.labelFontSize = mItemLabelSize.getValue();
+             sc.labelFontStyle = (ShortcutConfig.FontStyle) mItemLabelStyle.getValueEnum();
+             sc.labelMaxLines = (int) mItemLabelNumLines.getValue();
++            sc.labelRotation = (int) mItemLabelRotation.getValue();
+             if(!mItemLabelColorBasic.isVisible()) {
+                 sc.labelFontColor = mItemLabelColorNormal.getColor();
+                 sc.selectionColorLabel = mItemLabelColorSelected.getColor();
+@@ -2171,6 +2175,8 @@
+     private static final int ID_mItemMiscHardwareAccelerated = 198;
+     private static final int ID_mItemMiscLaunchAnimation = 199;
+     private static final int ID_mItemIconSizeMode = 200;
++    private static final int ID_mItemLabelRotation = 201;
++
+ 
+     private static final int ID_mItemDtSource = 10004;
+     private static final int ID_mItemDtDateEasyFormat = 10005;
+Index: core/src/main/java/net/pierrox/lightning_launcher/configuration/ShortcutConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/configuration/ShortcutConfig.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/configuration/ShortcutConfig.java	(revision Shelved version)
+@@ -76,6 +76,7 @@
+     public float labelShadowOffsetX=1;
+     public float labelShadowOffsetY=1;
+     public int labelShadowColor=0xaa000000;
++    public float labelRotation;
+     
+     public float iconEffectScale=1f;
+ 
+@@ -173,6 +174,7 @@
+             tv.setShadowLayer(labelShadowRadius, labelShadowOffsetX, labelShadowOffsetY, labelShadowColor);
+         }
+         tv.setfixWidth(labelShadow || labelFontStyle== ShortcutConfig.FontStyle.ITALIC || labelFontStyle== ShortcutConfig.FontStyle.BOLD_ITALIC);
++        tv.setRotation(labelRotation);
+     }
+ 
+     private static Typeface getTypeFace(String font_path) {
+\ No newline at end of file
+Index: core/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/res/values/strings.xml	(revision Local version)
++++ core/src/main/res/values/strings.xml	(revision Shelved version)
+@@ -1242,6 +1242,7 @@
+     <string name="mi_cpf">Convert to folder</string>
+     <string name="ldo_t">No floating desktop</string>
+     <string name="ldo_s">When locked, the floating desktop is disabled. It is re-enabled upon unlock.</string>
++    <string name="l_rot">Rotation</string>
+ 
+ 
+     <!-- deprecated: before 90 -->
+Index: core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertySet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertySet.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertySet.java	(revision Shelved version)
+@@ -155,6 +155,7 @@
+  * 		<tr><td><a href="/help/app/topic.php?id=5">s.labelFontTypeFace</a></td>   <td>string</td>  <td>Read/Write</td>  <td></td></tr>
+  * 		<tr><td><a href="/help/app/topic.php?id=4">s.labelFontStyle</a></td>   <td>string</td>  <td>Read/Write</td>  <td>NORMAL|ITALIC|BOLD|BOLD_ITALIC</td></tr>
+  * 		<tr><td><a href="/help/app/topic.php?id=6">s.labelMaxLines</a></td>   <td>int</td>  <td>Read/Write</td>  <td>&gt;0</td></tr>
++ * 		<tr><td><a href="/help/app/topic.php?id=201">s.labelRotation</a></td>   <td>float</td>  <td>Read/Write</td>  <td>degrees</td></tr>
+  * 		<tr><td><a href="/help/app/topic.php?id=15">s.iconVisibility</a></td>   <td>boolean</td>  <td>Read/Write</td>  <td></td></tr>
+  * 		<tr><td><a href="/help/app/topic.php?id=200">s.iconSizeMode</a></td>   <td>string</td>  <td>Read/Write</td>STANDARD|REAL|FULL_SCALE<td></td></tr>
+  * 		<tr><td><a href="/help/app/topic.php?id=19">s.iconScale</a></td>   <td>float</td>  <td>Read/Write</td>  <td></td></tr>
+Index: core/src/main/java/net/pierrox/lightning_launcher/script/api/Property.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/script/api/Property.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/script/api/Property.java	(revision Shelved version)
+@@ -60,6 +60,7 @@
+     public static final String PROP_TEXT_COLOR_SELECTED = "s.selectionColorLabel";
+     public static final String PROP_TEXT_COLOR_FOCUSED = "s.focusColorLabel";
+     public static final String PROP_TEXT_FONT_STYLE = "s.labelFontStyle";
++    public static final String PROP_TEXT_ROTATION = "s.labelRotation";
+ 
+     /**
+      * @hide
+Index: core/src/main/java/net/pierrox/lightning_launcher/views/MyTextView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/views/MyTextView.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/views/MyTextView.java	(revision Shelved version)
+@@ -26,6 +26,11 @@
+     }
+ 
+     @Override
++    public void setRotation(float rotation) {
++//        super.setRotation(rotation);
++    }
++
++    @Override
+     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+         if(mFixWidth != 0) {
+Index: core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertyEditor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertyEditor.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/script/api/PropertyEditor.java	(revision Shelved version)
+@@ -175,7 +175,18 @@
+                         // pass
+                     }
+                     handled = true;
++                } else if(key.equals(Property.PROP_TEXT_ROTATION)) {
++                    page_config.defaultShortcutConfig.labelRotation = (float) value;
++                    for(net.pierrox.lightning_launcher.data.Item it : page.items) {
++                        if(it instanceof net.pierrox.lightning_launcher.data.Shortcut) {
++                            net.pierrox.lightning_launcher.data.Shortcut shortcut = (net.pierrox.lightning_launcher.data.Shortcut) it;
++                            if(shortcut.hasSharedShortcutConfig()) {
++                                shortcut.updateLabelRotation();
+-                }
++                            }
++                        }
++                    }
++                    handled = true;
++                }
+                 if(handled) {
+                     mBundle.remove(key);
+                     keys.remove(i);
+@@ -232,6 +243,10 @@
+                     } catch(IllegalArgumentException e) {
+                         // pass
+                     }
++                    handled = true;
++                } else if(key.equals(Property.PROP_TEXT_ROTATION)) {
++                    shortcut.modifyShortcutConfig().labelRotation = (float) value;
++                    shortcut.updateLabelRotation();
+                     handled = true;
+                 }
+                 if(handled) {
+Index: core/src/main/res/values/public.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/res/values/public.xml	(revision Local version)
++++ core/src/main/res/values/public.xml	(revision Shelved version)
+@@ -891,7 +891,8 @@
+     <public id="889" name="mi_cpf" type="string" />
+     <public id="890" name="ldo_s" type="string" />
+     <public id="891" name="ldo_t" type="string" />
+-    <public id="892" name="zzz" type="string" />
++    <public id="892" name="l_rot" type="string" />
++    <public id="893" name="zzz" type="string" />
+ 
+     <public id="0" name="aaa1" type="array" />
+     <public id="1" name="d01" type="array" />
+Index: core/src/main/java/net/pierrox/lightning_launcher/data/Shortcut.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/src/main/java/net/pierrox/lightning_launcher/data/Shortcut.java	(revision Local version)
++++ core/src/main/java/net/pierrox/lightning_launcher/data/Shortcut.java	(revision Shelved version)
+@@ -117,6 +117,13 @@
+         updateLabelColor();
+ 	}
+ 
++    public void updateLabelRotation() {
++        TextView tv=mIconLabelView.getTextView();
++        if(tv!=null) {
++            tv.setRotation(mShortcutConfig.labelRotation);
++        }
++    }
++
+     public void updateLabelColor() {
+         if(mIconLabelView!=null) {
+             TextView tv=mIconLabelView.getTextView();

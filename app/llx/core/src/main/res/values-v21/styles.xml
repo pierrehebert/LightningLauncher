@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppDark" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/color_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="android:colorAccent">@color/color_accent</item>
+    </style>
+    <style name="AppLight" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/color_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="android:colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="AppDarkNoActionBarWallpaper" parent="AppDark">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+    <style name="AppDarkNoActionBar" parent="AppDark">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppDarkTranslucent" parent="android:Theme.Material.Dialog.NoActionBar" />
+
+    <style name="AppLightNoActionBarWallpaper" parent="AppLight">
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+    <style name="AppLightNoActionBar" parent="AppLight">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppLightTranslucent" parent="android:Theme.Material.Light.Dialog.NoActionBar" />
+
+    <style name="AppDialog" parent="android:Theme.Material.Light.Dialog.NoActionBar">
+        <item name="android:colorPrimary">@color/color_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="android:colorAccent">@color/color_accent</item>
+    </style>
+</resources>

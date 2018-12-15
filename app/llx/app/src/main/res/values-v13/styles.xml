@@ -1,0 +1,29 @@
+<resources>
+    <style name="bubble_bg">
+        <item name="android:background">@drawable/bubble_v13</item>
+    </style>
+    <style name="bubble_arrow_up_bg">
+        <item name="android:src">@drawable/arrow_up_v13</item>
+    </style>
+    <style name="bubble_arrow_down_bg">
+        <item name="android:src">@drawable/arrow_down_v13</item>
+    </style>
+    <style name="bubble_item" parent="bubble_item_base">
+        <item name="android:background">@drawable/bubble_item_bg</item>
+    </style>
+    <style name="bbl_ttl" parent="bbl_ttl_base">
+        <item name="android:background">@drawable/bubble_item_bg</item>
+    </style>
+
+    <style name="ab_bg">
+        <item name="android:background">@drawable/ab_bg_v13</item>
+    </style>
+    <style name="ab_text" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"/>
+
+    <style name="sc_text" parent="sc_text_base">
+        <item name="android:background">@null</item>
+    </style>
+
+    <dimen name="pref_padding">0dp</dimen>
+    <dimen name="bubble_arrow_shift">10px</dimen>
+</resources>

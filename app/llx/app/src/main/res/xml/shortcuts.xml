@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+           xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="script-editor"
+        android:enabled="true"
+        android:icon="@drawable/script_editor"
+        android:shortcutShortLabel="@string/sc_editor"
+        tools:targetApi="n_mr1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="net.pierrox.lightning_launcher_extreme"
+            android:targetClass="net.pierrox.lightning_launcher.activities.ScriptEditor" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="app-drawer"
+        android:enabled="true"
+        android:icon="@drawable/all_apps"
+        android:shortcutShortLabel="@string/all_apps"
+        tools:targetApi="n_mr1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="net.pierrox.lightning_launcher_extreme"
+            android:targetClass="net.pierrox.lightning_launcher.activities.AppDrawerX" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="backup-restore"
+        android:enabled="true"
+        android:icon="@drawable/backup"
+        android:shortcutShortLabel="@string/ds_br"
+        tools:targetApi="n_mr1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="net.pierrox.lightning_launcher_extreme"
+            android:targetClass="net.pierrox.lightning_launcher.activities.BackupRestore" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="settings"
+        android:enabled="true"
+        android:icon="@drawable/settings"
+        android:shortcutShortLabel="@string/mi_es_settings"
+        tools:targetApi="n_mr1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="net.pierrox.lightning_launcher_extreme"
+            android:targetClass="net.pierrox.lightning_launcher.activities.RootSettings" />
+    </shortcut>
+
+
+</shortcuts>
+

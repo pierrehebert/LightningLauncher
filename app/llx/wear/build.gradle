@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "net.pierrox.lightning_launcher.wear"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "std"
+
+    productFlavors {
+        x86 {
+            dimension "std"
+            versionCode Integer.parseInt("8" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "x86"
+            }
+        }
+        armv7 {
+            dimension "std"
+            versionCode Integer.parseInt("2" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "armeabi-v7a"
+            }
+        }
+        arm {
+            dimension "std"
+            versionCode Integer.parseInt("1" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "armeabi"
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.support:wearable:1.2.0'
+    provided 'com.google.android.wearable:wearable:1.0.0'
+    compile 'com.google.android.gms:play-services-wearable:6.5.87'
+    compile project(':core')
+}

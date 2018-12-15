@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/screen_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/ab_text"
+        android:textSize="30dp"
+        android:text="F"/>
+
+    <FrameLayout 
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@android:drawable/gallery_thumb">
+	    
+		<LinearLayout
+		    android:id="@+id/screen_border"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical" >
+		
+		        <ImageView
+		            android:id="@+id/screen_icon"
+		            android:layout_width="48dp"
+		            android:layout_height="48dp"
+		            android:src="@drawable/icon" />
+		
+		        <TextView
+		            android:id="@+id/screen_label"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="match_parent"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:padding="7dp"
+		            android:ellipsize="marquee"
+		            android:textColor="#fff"
+		            android:singleLine="true" />
+		        
+				<CheckBox 
+		            android:id="@+id/screen_selected"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"/>    
+		    </LinearLayout>
+		    
+		    <View 
+		        android:layout_width="match_parent"
+		        android:layout_height="1px"
+		        android:background="#fff"/>
+		
+            <ImageView
+                android:id="@+id/screen_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+		</LinearLayout>
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.pierrox.lightning_launcher.views.EventFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       android:id="@+id/workspace"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@id/desktop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <net.pierrox.lightning_launcher.views.ImageWallpaperView
+            android:id="@+id/wp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <net.pierrox.lightning_launcher.views.ItemLayout
+            android:id="@+id/lwp_il"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:id="@+id/folder_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/empty_c"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000">
+
+            <Button
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</net.pierrox.lightning_launcher.views.EventFrameLayout>

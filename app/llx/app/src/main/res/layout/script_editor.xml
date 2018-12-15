@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sc_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/sc_h"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal" />
+
+        <fr.xgouchet.texteditor.ui.AdvancedEditText
+            android:id="@+id/sc_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/sc_text" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left">
+
+        <LinearLayout
+            android:id="@+id/completions"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/left_pane"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout
+                android:id="@+id/left_pane_c"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:attr/colorBackground"
+                android:padding="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sc_name"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:background="?android:attr/colorForeground"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <Spinner
+                        android:id="@+id/sc_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Button
+                        android:id="@+id/sc_edit_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/icon_text_size"
+                        android:text="O"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sc_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sc_path"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:background="?android:attr/colorForeground"/>
+
+                <Button
+                    android:id="@+id/sc_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"/>
+
+                <CheckBox
+                    android:id="@+id/sc_sd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/sc_ma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/sc_ma"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="?android:attr/colorForeground"/>
+
+                    <CheckBox
+                        android:id="@+id/sc_ml"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_ml"/>
+
+                    <CheckBox
+                        android:id="@+id/sc_mi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_mi"/>
+
+                    <CheckBox
+                        android:id="@+id/sc_mc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_mc"/>
+            <TextView
+                android:id="@+id/sc_o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sc_o"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="?android:attr/colorForeground"/>
+
+            <CheckBox
+                android:id="@+id/sc_w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/sc_w"/>
+
+            <TextView
+                android:id="@+id/sc_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/sc_a"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="?android:attr/colorForeground"/>
+
+                    <Button
+                        android:id="@+id/sc_import"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_import"/>
+
+                    <Button
+                        android:id="@+id/sc_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_new"/>
+
+                    <Button
+                        android:id="@+id/sc_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_delete"/>
+
+                    <Button
+                        android:id="@+id/sc_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_edit"/>
+
+                    <Button
+                        android:id="@+id/sc_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_help"/>
+
+                    <Button
+                        android:id="@+id/sc_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sc_send"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/drawer_shadow"/>
+
+    </LinearLayout>
+
+</FrameLayout>
