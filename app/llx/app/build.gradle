@@ -14,6 +14,24 @@ def appendVersionNameVersionCode(variant, defaultConfig) {
 //        output.packageApplication.outputFileName = fileName
     }
 }
+
+if(project.hasProperty("signing.properties") && new File(project.property("signing.properties")).exists()) {
+
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(project.property("signing.properties"))))
+
+    android {
+        signingConfigs {
+            release {
+                storeFile file(props['sp.storeFile'])
+                keyAlias props['sp.keyAlias']
+                storePassword props['sp.storePassword']
+                keyPassword props['sp.keyPassword']
+            }
+        }
+    }
+}
+
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
@@ -40,7 +58,7 @@ android {
 
             minifyEnabled true
             proguardFiles 'proguard.cfg'
-            //proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            signingConfig signingConfigs.release
 
             applicationVariants.all { variant ->
                 appendVersionNameVersionCode(variant, defaultConfig)
