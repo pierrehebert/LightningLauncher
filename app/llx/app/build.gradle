@@ -29,6 +29,12 @@ if(project.hasProperty("signing.properties") && new File(project.property("signi
                 keyPassword props['sp.keyPassword']
             }
         }
+
+        buildTypes {
+            release {
+                signingConfig signingConfigs.release
+            }
+        }
     }
 }
 
@@ -58,7 +64,6 @@ android {
 
             minifyEnabled true
             proguardFiles 'proguard.cfg'
-            signingConfig signingConfigs.release
 
             applicationVariants.all { variant ->
                 appendVersionNameVersionCode(variant, defaultConfig)
