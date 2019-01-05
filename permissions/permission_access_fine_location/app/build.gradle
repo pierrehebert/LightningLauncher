@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+if(project.hasProperty("signing.properties") && new File(project.property("signing.properties")).exists()) {
+
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(project.property("signing.properties"))))
+
+    android {
+        signingConfigs {
+            release {
+                storeFile file(props['sp.storeFile'])
+                keyAlias props['sp.keyAlias']
+                storePassword props['sp.storePassword']
+                keyPassword props['sp.keyPassword']
+            }
+        }
+
+        buildTypes {
+            release {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "net.pierrox.lightning_launcher.permission.access_fine_location"
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
