@@ -31,6 +31,9 @@ if(project.hasProperty("signing.properties") && new File(project.property("signi
         }
 
         buildTypes {
+            debug {
+                signingConfig signingConfigs.release
+            }
             release {
                 signingConfig signingConfigs.release
             }
