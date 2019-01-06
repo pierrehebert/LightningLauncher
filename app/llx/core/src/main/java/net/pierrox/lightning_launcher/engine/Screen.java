@@ -1,5 +1,6 @@
 package net.pierrox.lightning_launcher.engine;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
@@ -45,6 +46,7 @@ import net.pierrox.lightning_launcher.configuration.PageConfig;
 import net.pierrox.lightning_launcher.data.Box;
 import net.pierrox.lightning_launcher.data.ContainerPath;
 import net.pierrox.lightning_launcher.data.EmbeddedFolder;
+import net.pierrox.lightning_launcher.data.Error;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.Folder;
 import net.pierrox.lightning_launcher.data.Item;
@@ -148,6 +150,8 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
 
     private ArrayList<ItemLayout> mItemLayouts = new ArrayList<>();
 
+    private ArrayList<Error> mErrors;
+
     public Screen(Context context, int content_view) {
         LLApp app = LLApp.get();
         app.onScreenCreated(this);
@@ -238,6 +242,9 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         if(!mIsResumed) {
             mIsResumed = true;
 
+            // clear errors, they will be accumulated in an array, should they appear during resume
+            mErrors = null;
+
             LLApp.get().onScreenResumed(this);
 
             updateOrientationOrRotation();
@@ -257,6 +264,32 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
 
             if(mOrientationEventListener != null) {
                 mOrientationEventListener.enable();
+            }
+
+            if(mErrors != null) {
+                // gather permission errors in a single set in order to bubble a single event
+                ArrayList<Error> permission_errors = new ArrayList<>();
+                for (Error e : mErrors) {
+                    if (e.isPermission()) {
+                        if(!permission_errors.contains(e)) {
+                            permission_errors.add(e);
+                        }
+                    } else {
+                        onUnhandledError(e);
+                    }
+                }
+                int n = permission_errors.size();
+                if (n > 0) {
+                    String[] p = new String[n];
+                    int[] m = new int[n];
+                    n = 0;
+                    for (Error e : permission_errors) {
+                        p[n] = e.getPermission();
+                        m[n] = e.getMsg();
+                        n++;
+                    }
+                    onMissingPermissions(p, m);
+                }
             }
         }
     }
@@ -349,10 +382,20 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     /**
      * Missing permission detected
      */
-    public void onDirectDialPermissionNeeded() {
-        Toast.makeText(mContext, "Direct dial permission is needed", Toast.LENGTH_SHORT).show();
+    protected void onMissingPermissions(String[] permissions, int[] msgs) {
+        String msg = getContext().getString(R.string.pr_f);
+        for (int m : msgs) {
+            msg += "\n - "+getContext().getString(m);
+        }
+        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Fallback for future errors that have not specific handling
+     */
+    public void onUnhandledError(Error error) {
+        Toast.makeText(mContext, error.toString(), Toast.LENGTH_SHORT).show();
+    }
 
     /**
      * Set the active ('focused') page
@@ -1649,7 +1692,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                 return;
             }  catch(SecurityException e2) {
                 if(Intent.ACTION_CALL.equals(intent.getAction())) {
-                    onDirectDialPermissionNeeded();
+                    onMissingPermissions(new String[]{Manifest.permission.CALL_PHONE}, new int[]{R.string.pr_r13});
                     return;
                 }
             }  catch(Exception e2) {
@@ -2278,6 +2321,21 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         for (ItemView itemView : itemViews) {
             itemView.getItem().getPage().getEngine().getVariableManager().updateBindings(itemView, item.getItemConfig().bindings, apply, this, true);
         }
+    }
+
+    @Override
+    public void onItemError(Item item, Error error) {
+        // check that the item belongs to this screen
+        if(getItemViewsForItem(item).length == 0) {
+            return;
+        }
+
+        // accumulate errors, so that the consumer above can display a synthetic report
+        // at the moment the source item is not used, and not kept
+        if(mErrors == null) {
+            mErrors = new ArrayList<>(3);
+        }
+        mErrors.add(error);
     }
 
     @Override

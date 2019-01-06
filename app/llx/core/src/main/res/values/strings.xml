@@ -1244,11 +1244,14 @@
     <string name="pr_r11">query the phone call log for missed calls</string>
     <string name="pr_r12">read the number of unread SMS</string>
     <string name="pr_r13">directly dial a phone number from the home screen</string>
+    <string name="pr_f">Missing permission(s):</string>
     <string name="pr_f1">Cannot read or write backups/templates</string>
     <string name="pr_f2">Cannot pick font</string>
     <string name="pr_f3">Cannot pick image</string>
     <string name="pr_f4">Cannot process template</string>
     <string name="pr_f5">Cannot kill app</string>
+    <string name="pr_rcl_rms">Starting at January 9th, 2019, due to Google policy changes, launchers are not allowed anymore to display unread sms and missed phone calls count.\n\nFortunately Lightning offers a workaround to re-enable this feature. Please hit the "OK" button to re-enable the feature.</string>
+    <string name="pr_inst">Would you like to install a permission package?</string>
     <string name="mi_sel">Select…</string>
     <string name="mi_sa">All</string>
     <string name="mi_sn">None</string>

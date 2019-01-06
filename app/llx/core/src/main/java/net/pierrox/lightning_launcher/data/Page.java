@@ -85,6 +85,7 @@ public class Page implements Item.OnItemEventListener, ItemConfigStylable, Short
         @Override public void onItemTransformChanged(Item item, boolean fast) { }
         @Override public void onItemCellChanged(Item item) { }
         @Override public void onItemBindingsChanged(Item item, boolean apply) { }
+        @Override public void onItemError(Item item, Error error) { }
         @Override public void onShortcutLabelChanged(Shortcut shortcut) { }
         @Override public void onFolderPageIdChanged(Folder folder, int oldPageId) { }
     }
@@ -439,6 +440,11 @@ public class Page implements Item.OnItemEventListener, ItemConfigStylable, Short
     @Override
     public void onItemBindingsChanged(Item item, boolean apply) {
         mListener.onItemBindingsChanged(item, apply);
+    }
+
+    @Override
+    public void onItemError(Item item, Error error) {
+        mListener.onItemError(item, error);
     }
 
     @Override

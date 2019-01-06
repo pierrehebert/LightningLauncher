@@ -161,12 +161,20 @@ public class DynamicText extends Shortcut {
                         case MISSED_CALLS:
                             String[] projection = { CallLog.Calls.CACHED_NAME, CallLog.Calls.CACHED_NUMBER_LABEL, CallLog.Calls.TYPE };
                             String where = CallLog.Calls.TYPE+"="+CallLog.Calls.MISSED_TYPE+" and "+CallLog.Calls.NEW+"=1";
-                            mCursor = context.getContentResolver().query(CallLog.Calls.CONTENT_URI, projection, where, null, null);
+                            try {
+                                mCursor = context.getContentResolver().query(CallLog.Calls.CONTENT_URI, projection, where, null, null);
+                            } catch(SecurityException e) {
+                                mPage.onItemError(this, Error.MISSING_PERMISSION_READ_CALL_LOG);
+                            }
                             break;
 
                         case UNREAD_SMS:
                             Uri sms_content = Uri.parse("content://sms");
-                            mCursor = context.getContentResolver().query(sms_content, null,"read = 0", null, null);
+                            try {
+                                mCursor = context.getContentResolver().query(sms_content, null, "read = 0", null, null);
+                            } catch(SecurityException e) {
+                                mPage.onItemError(this, Error.MISSING_PERMISSION_READ_SMS);
+                            }
                             break;
 
                         case UNREAD_GMAIL:

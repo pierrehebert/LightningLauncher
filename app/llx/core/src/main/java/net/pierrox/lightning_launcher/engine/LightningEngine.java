@@ -14,6 +14,7 @@ import android.util.SparseIntArray;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.ContainerPath;
+import net.pierrox.lightning_launcher.data.Error;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Folder;
@@ -373,6 +374,11 @@ public class LightningEngine implements Page.PageListener {
     @Override
     public void onItemBindingsChanged(Item item, boolean apply) {
         for (Page.PageListener listener : mPageListeners) listener.onItemBindingsChanged(item, apply);
+    }
+
+    @Override
+    public void onItemError(Item item, Error error) {
+        for (Page.PageListener listener : mPageListeners) listener.onItemError(item, error);
     }
 
     @Override

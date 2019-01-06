@@ -99,6 +99,7 @@ import net.pierrox.lightning_launcher.data.ContainerPath;
 import net.pierrox.lightning_launcher.data.CustomView;
 import net.pierrox.lightning_launcher.data.DynamicText;
 import net.pierrox.lightning_launcher.data.EmbeddedFolder;
+import net.pierrox.lightning_launcher.data.Error;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Folder;
@@ -168,7 +169,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     private static final int DIALOG_IMPORT_LL=204;
     private static final int DIALOG_STOP_POINT=206;
     private static final int DIALOG_WRAP=207;
-    private static final int DIALOG_NO_HOST_PERMISSION=208;
+    private static final int DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION =208;
 
 	private static final String SIS_NAVIGATION="a";
 	private static final String SIS_ALLOCATED_APP_WIDGET_ID="b";
@@ -1239,6 +1240,30 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             // should be transmitted to the CustomizeItemView instance
             if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 Toast.makeText(this, R.string.pr_f2, Toast.LENGTH_LONG).show();
+            }
+        } else if(requestCode == REQUEST_PERMISSION_BASE) {
+             if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                 String msg;
+                 if(permissions[0].equals(Error.MISSING_PERMISSION_READ_CALL_LOG.getPermission()) ||
+                    permissions[0].equals(Error.MISSING_PERMISSION_READ_SMS.getPermission())) {
+                     msg = getString(R.string.pr_rcl_rms);
+                 } else {
+                     msg = getString(R.string.pr_f);
+                     for (String p : permissions) {
+                         msg += "\n - " + p;
+                     }
+                     msg += "\n" + getString(R.string.pr_inst);
+                 }
+                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                 builder.setMessage(msg);
+                 builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                     @Override
+                     public void onClick(DialogInterface dialogInterface, int i) {
+                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Version.PERMISSIONS_INFO)));
+                     }
+                 });
+                 builder.setNegativeButton(android.R.string.cancel, null);
+                 builder.show();
             }
         }
     }
@@ -2327,7 +2352,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             builder.setPositiveButton(android.R.string.ok, null);
             return builder.create();
 
-        case DIALOG_NO_HOST_PERMISSION:
+        case DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION:
             builder = new AlertDialog.Builder(this);
             builder.setTitle(R.string.as_no_hp_t);
             builder.setMessage(R.string.as_no_hp_m);
@@ -3218,12 +3243,6 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             LLApp.get().showFeatureLockedDialog(this);
             return;
         }
-        if(!checkPermissions(
-                new String[]{Manifest.permission.READ_CALL_LOG},
-                new int[]{R.string.pr_r11},
-                ResourceWrapperActivity.REQUEST_PERMISSION_BASE)) {
-            return;
-        }
         ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
         Page page = il.getPage();
         DynamicText item = Utils.addDynamicText(page, DynamicTextConfig.Source.MISSED_CALLS, false);
@@ -3720,7 +3739,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                         view.getHitRect(bounds);
                         launcherApps.startShortcut(shortcutInfo, bounds, null);
                     } else {
-                        showDialog(DIALOG_NO_HOST_PERMISSION);
+                        showDialog(DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION);
                     }
                 }
             };
@@ -4088,7 +4107,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     private void showAppShortcuts(ItemView itemView) {
         LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
         if(!launcherApps.hasShortcutHostPermission()) {
-            showDialog(DIALOG_NO_HOST_PERMISSION);
+            showDialog(DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION);
             return;
         }
 
@@ -6268,12 +6287,12 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
         @Override
         public void onLauncherAppsNoHostPermission(ItemView itemView) {
-            showDialog(DIALOG_NO_HOST_PERMISSION);
+            showDialog(DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION);
         }
 
         @Override
-        public void onDirectDialPermissionNeeded() {
-            checkPermissions(new String[]{Manifest.permission.CALL_PHONE}, new int[]{R.string.pr_r13}, REQUEST_PERMISSION_BASE);
+        public void onMissingPermissions(String[] permissions, int[] msgs) {
+            checkPermissions(permissions, msgs, REQUEST_PERMISSION_BASE);
         }
 
         @Override

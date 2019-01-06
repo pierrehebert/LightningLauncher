@@ -46,6 +46,7 @@ public abstract class Item implements ItemConfigStylable {
         void onItemTransformChanged(Item item, boolean fast);
         void onItemCellChanged(Item item);
         void onItemBindingsChanged(Item item, boolean apply);
+        void onItemError(Item item, Error error);
         void onShortcutLabelChanged(Shortcut shortcut);
         void onFolderPageIdChanged(Folder folder, int oldPageId);
     }
