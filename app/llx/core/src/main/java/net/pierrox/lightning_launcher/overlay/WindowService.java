@@ -162,11 +162,15 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
         mItemLayout=(ItemLayout) mWorkspaceView.findViewById(R.id.window_il);
         mScreen.takeItemLayoutOwnership(mItemLayout);
         mItemLayout.setHonourFocusChange(false);
-
+    
+        int windowType = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+                ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                : WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+    
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
+                windowType,
                 0
 //                        |WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
 //                        |WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
