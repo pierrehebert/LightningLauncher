@@ -2,6 +2,8 @@ package net.pierrox.lightning_launcher;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Build;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,8 +17,41 @@ import net.pierrox.lightning_launcher.overlay.WindowService;
 import net.pierrox.lightning_launcher.prefs.LLPreference;
 import net.pierrox.lightning_launcher.script.Script;
 import net.pierrox.lightning_launcher.util.EmptyService;
+import net.pierrox.lightning_launcher.util.MPReceiver;
 
 public abstract class LLAppPhone extends LLApp {
+
+    private MPReceiver mMPReceiver;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        // Implicit broadcasts cannot be registered anymore in the manifest starting at Android O,
+        // however it is still possible to register them at runtime.
+        // the consequence is that these events will not be received if the app is not running,
+        // and a systematic check has to be made at startup.
+        // TODO when the check is implemented, also delete the broadcast receiver entry in the manifest
+        // and register the receiver here for all platform versions.
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mMPReceiver = new MPReceiver();
+
+            IntentFilter intent_filter = new IntentFilter();
+            intent_filter.addAction(Intent.ACTION_PACKAGE_REMOVED);
+            intent_filter.addAction(Intent.ACTION_PACKAGE_REPLACED);
+            intent_filter.addAction(Intent.ACTION_PACKAGE_ADDED);
+            intent_filter.addDataScheme("package");
+
+            registerReceiver(mMPReceiver, intent_filter);
+        }
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+
+        unregisterReceiver(mMPReceiver);
+    }
 
     @Override
     public Intent getLockscreenServiceIntent() {
