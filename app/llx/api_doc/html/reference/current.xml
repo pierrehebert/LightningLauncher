@@ -8021,7 +8021,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="path" type="net.pierrox.lightning_launcher.views.svg.SvgPath">
+<parameter name="path" type="net.pierrox.android.lsvg.SvgPath">
 </parameter>
 </constructor>
 <method name="getFillPaint"

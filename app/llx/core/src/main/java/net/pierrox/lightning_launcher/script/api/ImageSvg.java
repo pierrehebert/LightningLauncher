@@ -3,7 +3,7 @@ package net.pierrox.lightning_launcher.script.api;
 import android.graphics.drawable.Drawable;
 
 import net.pierrox.lightning_launcher.script.api.svg.SvgSvg;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgDrawable;
 
 /**
  * An image backed by a SVG document

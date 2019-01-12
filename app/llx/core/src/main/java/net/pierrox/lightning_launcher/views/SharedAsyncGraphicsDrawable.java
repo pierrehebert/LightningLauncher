@@ -19,7 +19,7 @@ import net.pierrox.lightning_launcher.script.ScriptExecutor;
 import net.pierrox.lightning_launcher.script.api.ImageScript;
 import net.pierrox.lightning_launcher.script.api.Item;
 import net.pierrox.lightning_launcher.util.AnimationDecoder;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgDrawable;
 
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.Scriptable;

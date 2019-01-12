@@ -3,7 +3,7 @@ package net.pierrox.lightning_launcher.views;
 import android.graphics.Bitmap;
 
 import net.pierrox.lightning_launcher.util.AnimationDecoder;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgDrawable;
 
 public class Graphics {
     private Bitmap mBitmap;

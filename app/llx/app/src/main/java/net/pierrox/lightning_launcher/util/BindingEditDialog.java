@@ -26,10 +26,10 @@ import net.pierrox.lightning_launcher.views.IconView;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 import net.pierrox.lightning_launcher.views.item.ShortcutView;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
-import net.pierrox.lightning_launcher.views.svg.SvgElement;
-import net.pierrox.lightning_launcher.views.svg.SvgGroup;
-import net.pierrox.lightning_launcher.views.svg.SvgPath;
+import net.pierrox.android.lsvg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgElement;
+import net.pierrox.android.lsvg.SvgGroup;
+import net.pierrox.android.lsvg.SvgPath;
 import net.pierrox.lightning_launcher_extreme.R;
 
 import java.util.ArrayList;

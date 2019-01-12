@@ -20,10 +20,10 @@ import net.pierrox.lightning_launcher.views.ItemLayout;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 import net.pierrox.lightning_launcher.views.item.ShortcutView;
-import net.pierrox.lightning_launcher.views.svg.SvgElement;
-import net.pierrox.lightning_launcher.views.svg.SvgGroup;
-import net.pierrox.lightning_launcher.views.svg.SvgPath;
-import net.pierrox.lightning_launcher.views.svg.SvgSvg;
+import net.pierrox.android.lsvg.SvgElement;
+import net.pierrox.android.lsvg.SvgGroup;
+import net.pierrox.android.lsvg.SvgPath;
+import net.pierrox.android.lsvg.SvgSvg;
 
 import org.mozilla.javascript.ScriptRuntime;
 

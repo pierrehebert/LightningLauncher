@@ -12,7 +12,7 @@ public class SvgGroup extends SvgElement {
     /**
      * @hide
      */
-    SvgGroup(net.pierrox.lightning_launcher.views.svg.SvgGroup svgGroup) {
+    SvgGroup(net.pierrox.android.lsvg.SvgGroup svgGroup) {
         super(svgGroup);
     }
 
@@ -21,8 +21,8 @@ public class SvgGroup extends SvgElement {
      */
     public SvgElement[] getChildren() {
         if(mChildren == null) {
-            net.pierrox.lightning_launcher.views.svg.SvgGroup group = (net.pierrox.lightning_launcher.views.svg.SvgGroup) mSvgElement;
-            ArrayList<net.pierrox.lightning_launcher.views.svg.SvgElement> children = group.getChildren();
+            net.pierrox.android.lsvg.SvgGroup group = (net.pierrox.android.lsvg.SvgGroup) mSvgElement;
+            ArrayList<net.pierrox.android.lsvg.SvgElement> children = group.getChildren();
             int size = children.size();
             mChildren = new SvgElement[size];
             for(int i=0; i<size; i++) {

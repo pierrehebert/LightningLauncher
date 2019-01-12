@@ -8,7 +8,7 @@ import android.graphics.Path;
  */
 
 public class SvgPath extends SvgElement {
-    public SvgPath(net.pierrox.lightning_launcher.views.svg.SvgPath path) {
+    public SvgPath(net.pierrox.android.lsvg.SvgPath path) {
         super(path);
     }
 
@@ -19,7 +19,7 @@ public class SvgPath extends SvgElement {
      */
     public void setFillPaint(Paint fillPaint) {
 
-        ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).setFillPaint(fillPaint);
+        ((net.pierrox.android.lsvg.SvgPath)mSvgElement).setFillPaint(fillPaint);
     }
 
     /**
@@ -27,7 +27,7 @@ public class SvgPath extends SvgElement {
      * If the paint object is modified, the element need to be refreshed using {@link SvgElement#invalidate()}
      */
     public Paint getFillPaint() {
-        return ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).getFillPaint();
+        return ((net.pierrox.android.lsvg.SvgPath)mSvgElement).getFillPaint();
     }
 
     /**
@@ -36,7 +36,7 @@ public class SvgPath extends SvgElement {
      * @param strokePaint paint, either a new one, or the paint returned by {@link #getStrokePaint()}
      */
     public void setStrokePaint(Paint strokePaint) {
-        ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).setStrokePaint(strokePaint);
+        ((net.pierrox.android.lsvg.SvgPath)mSvgElement).setStrokePaint(strokePaint);
     }
 
     /**
@@ -44,7 +44,7 @@ public class SvgPath extends SvgElement {
      * If the paint object is modified, the element need to be refreshed using {@link SvgElement#invalidate()}
      */
     public Paint getStrokePaint() {
-        return ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).getStrokePaint();
+        return ((net.pierrox.android.lsvg.SvgPath)mSvgElement).getStrokePaint();
     }
 
     /**
@@ -53,7 +53,7 @@ public class SvgPath extends SvgElement {
      * @return true if the path specification has been parsed correctly, false if couldn't be understood
      */
     public boolean setPath(String d) {
-        return ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).setPath(d);
+        return ((net.pierrox.android.lsvg.SvgPath)mSvgElement).setPath(d);
     }
 
     /**
@@ -61,7 +61,7 @@ public class SvgPath extends SvgElement {
      * If the path object is modified, the element need to be refreshed using {@link SvgElement#invalidate()}
      */
     public Path getPath() {
-        return ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).getPath();
+        return ((net.pierrox.android.lsvg.SvgPath)mSvgElement).getPath();
     }
 
     /**
@@ -70,6 +70,6 @@ public class SvgPath extends SvgElement {
      * @return true if the style specification has been parsed correctly, false if couldn't be understood
      */
     public boolean setStyle(String style) {
-        return ((net.pierrox.lightning_launcher.views.svg.SvgPath)mSvgElement).setStyle(style);
+        return ((net.pierrox.android.lsvg.SvgPath)mSvgElement).setStyle(style);
     }
 }

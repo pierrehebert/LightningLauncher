@@ -24,7 +24,7 @@ import net.pierrox.lightning_launcher.configuration.ShortcutConfigStylable;
 import net.pierrox.lightning_launcher.util.AnimationDecoder;
 import net.pierrox.lightning_launcher.views.Graphics;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 import net.pierrox.lightning_launcher.views.item.ShortcutView;
 

@@ -4,7 +4,7 @@ public class SvgRadialGradient extends SvgElement {
     /**
      * @hide
      */
-    SvgRadialGradient(net.pierrox.lightning_launcher.views.svg.SvgRadialGradient svgRadialGradient) {
+    SvgRadialGradient(net.pierrox.android.lsvg.SvgRadialGradient svgRadialGradient) {
         super(svgRadialGradient);
     }
 }

@@ -50,7 +50,7 @@ android {
         versionName "14.2.1 (f77736e)"
         buildConfigField "boolean", "IS_BETA", "false" //  change in core too
 
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 26
     }
 

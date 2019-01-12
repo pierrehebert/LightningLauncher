@@ -14,11 +14,11 @@ public class SvgSvg extends SvgGroup {
      * @hide
      */
     /*package*/
-    public SvgSvg(net.pierrox.lightning_launcher.views.svg.SvgSvg svgSvg) {
+    public SvgSvg(net.pierrox.android.lsvg.SvgSvg svgSvg) {
         super(svgSvg);
     }
 
     public SvgElement getElementById(String id) {
-        return create(((net.pierrox.lightning_launcher.views.svg.SvgSvg)mSvgElement).getElementById(id));
+        return create(((net.pierrox.android.lsvg.SvgSvg)mSvgElement).getElementById(id));
     }
 }

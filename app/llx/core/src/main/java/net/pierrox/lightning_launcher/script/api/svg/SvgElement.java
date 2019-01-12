@@ -7,12 +7,12 @@ import android.graphics.Matrix;
  */
 
 public class SvgElement {
-    protected net.pierrox.lightning_launcher.views.svg.SvgElement mSvgElement;
+    protected net.pierrox.android.lsvg.SvgElement mSvgElement;
 
     /**
      * @hide
      */
-    /*package*/ SvgElement(net.pierrox.lightning_launcher.views.svg.SvgElement svgElement) {
+    /*package*/ SvgElement(net.pierrox.android.lsvg.SvgElement svgElement) {
         mSvgElement = svgElement;
     }
 
@@ -71,18 +71,18 @@ public class SvgElement {
     /**
      * @hide
      */
-    /*package*/ static SvgElement create(net.pierrox.lightning_launcher.views.svg.SvgElement child) {
-        Class<? extends net.pierrox.lightning_launcher.views.svg.SvgElement> cls = child.getClass();
-        if(cls == net.pierrox.lightning_launcher.views.svg.SvgSvg.class) {
-            return new SvgSvg((net.pierrox.lightning_launcher.views.svg.SvgSvg) child);
-        } else if(cls == net.pierrox.lightning_launcher.views.svg.SvgGroup.class) {
-            return new SvgGroup((net.pierrox.lightning_launcher.views.svg.SvgGroup) child);
-        } else if(cls == net.pierrox.lightning_launcher.views.svg.SvgLinearGradient.class) {
-            return new SvgLinearGradient((net.pierrox.lightning_launcher.views.svg.SvgLinearGradient) child);
-        } else if(cls == net.pierrox.lightning_launcher.views.svg.SvgRadialGradient.class) {
-            return new SvgRadialGradient((net.pierrox.lightning_launcher.views.svg.SvgRadialGradient) child);
-        } else if(cls == net.pierrox.lightning_launcher.views.svg.SvgPath.class) {
-            return new SvgPath((net.pierrox.lightning_launcher.views.svg.SvgPath) child);
+    /*package*/ static SvgElement create(net.pierrox.android.lsvg.SvgElement child) {
+        Class<? extends net.pierrox.android.lsvg.SvgElement> cls = child.getClass();
+        if(cls == net.pierrox.android.lsvg.SvgSvg.class) {
+            return new SvgSvg((net.pierrox.android.lsvg.SvgSvg) child);
+        } else if(cls == net.pierrox.android.lsvg.SvgGroup.class) {
+            return new SvgGroup((net.pierrox.android.lsvg.SvgGroup) child);
+        } else if(cls == net.pierrox.android.lsvg.SvgLinearGradient.class) {
+            return new SvgLinearGradient((net.pierrox.android.lsvg.SvgLinearGradient) child);
+        } else if(cls == net.pierrox.android.lsvg.SvgRadialGradient.class) {
+            return new SvgRadialGradient((net.pierrox.android.lsvg.SvgRadialGradient) child);
+        } else if(cls == net.pierrox.android.lsvg.SvgPath.class) {
+            return new SvgPath((net.pierrox.android.lsvg.SvgPath) child);
         } else {
             return new SvgElement(child);
         }

@@ -63,7 +63,7 @@ import net.pierrox.lightning_launcher.R;
 import net.pierrox.lightning_launcher.views.Graphics;
 import net.pierrox.lightning_launcher.views.ItemLayout;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
-import net.pierrox.lightning_launcher.views.svg.SvgDrawable;
+import net.pierrox.android.lsvg.SvgDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 
 import org.mozilla.javascript.Callable;

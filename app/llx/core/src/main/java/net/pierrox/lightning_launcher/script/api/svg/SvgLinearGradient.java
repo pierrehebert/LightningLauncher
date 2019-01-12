@@ -4,7 +4,7 @@ public class SvgLinearGradient extends SvgElement {
     /**
      * @hide
      */
-    SvgLinearGradient(net.pierrox.lightning_launcher.views.svg.SvgLinearGradient svgLinearGradient) {
+    SvgLinearGradient(net.pierrox.android.lsvg.SvgLinearGradient svgLinearGradient) {
         super(svgLinearGradient);
     }
 }
