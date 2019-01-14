@@ -3,8 +3,6 @@ package net.pierrox.lightning_launcher.views;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -2509,11 +2507,36 @@ public class ItemLayout extends ViewGroup {
     	
     	if(mGrabEventTarget!=null) {
     		boolean res=dispatchTransformedEventToMotionTarget(mGrabEventTarget, ev, true);
-    		if(actionCode == MotionEvent.ACTION_UP || actionCode == MotionEvent.ACTION_CANCEL) {
-    			mGrabEventTarget = null;
-    			mLastTouchedItemView = null;
-    		}
-    		return res;
+            if(mHasChildOverscrolled) {
+                // if overscolling has been detected in a child container, cancel the motion target
+                // and start using drag events for ourself (this replicate the code below for the
+                // move event)
+                mHasChildOverscrolled = false;
+                ev.setAction(MotionEvent.ACTION_CANCEL);
+                dispatchTransformedEventToMotionTarget(mGrabEventTarget, ev, false);
+                mMyMotionTarget=null;
+                mGrabEventTarget=null;
+
+                // link with drag start below
+                mGestureMode=GESTURE_DRAG;
+                mDownX=ex;
+                mDownY=ey;
+                dx=0;
+                dy=0;
+                mDragHorizontal=mChildOverscrollHorizontal;
+                mVelocityTracker=VelocityTracker.obtain();
+
+                mMinDragDx = -Float.MAX_VALUE;
+                mMaxDragDx = Float.MAX_VALUE;
+                mMinDragDy = -Float.MAX_VALUE;
+                mMaxDragDy = Float.MAX_VALUE;
+            } else {
+                if (actionCode == MotionEvent.ACTION_UP || actionCode == MotionEvent.ACTION_CANCEL) {
+                    mGrabEventTarget = null;
+                    mLastTouchedItemView = null;
+                }
+                return res;
+            }
     	}
     	
     	
@@ -2945,6 +2968,7 @@ public class ItemLayout extends ViewGroup {
         						mGestureMode=GESTURE_SWIPE;
         					}
         				} else if((dx*dx+dy*dy)>mTouchSlopSquare) {
+        				    // link with child overscroll management above
 		            		mGestureMode=GESTURE_DRAG;
 		            		mDownX=ex;
 		                    mDownY=ey;
@@ -3170,6 +3194,15 @@ public class ItemLayout extends ViewGroup {
 		return false;
 	}
 
+	private boolean mHasChildOverscrolled;
+	private boolean mChildOverscrollHorizontal;
+
+	// called by a child item layout when it detects overscrolling
+	private void setChildHasOverscrolled(boolean horizontal) {
+	    mHasChildOverscrolled = true;
+	    mChildOverscrollHorizontal = horizontal;
+    }
+
     private float mPrevTouchX;
     private float mPrevTouchY;
 
@@ -3250,8 +3283,28 @@ public class ItemLayout extends ViewGroup {
 
     private float[] checkLimits(float dx, float dy) {
         if(mPage.config.overScrollMode==OverScrollMode.NONE) {
-            if(dx>mMaxDx) dx=mMaxDx; else if(dx<mMinDx) dx=mMinDx;
-            if(dy>mMaxDy) dy=mMaxDy; else if(dy<mMinDy) dy=mMinDy;
+            boolean overscroll = false;
+            if(dx>mMaxDx) {
+                dx=mMaxDx;
+                overscroll = true;
+            } else if(dx<mMinDx) {
+                dx=mMinDx;
+                overscroll = true;
+            }
+            if(dy>mMaxDy) {
+                dy=mMaxDy;
+                overscroll = true;
+            } else if(dy<mMinDy) {
+                dy=mMinDy;
+                overscroll = true;
+            }
+            if(overscroll) {
+                if(mOpenerItemView != null) {
+                    // notify the parent that we overscrolled
+                    ItemLayout parentItemLayout = mOpenerItemView.getParentItemLayout();
+                    parentItemLayout.setChildHasOverscrolled(mDragHorizontal);
+                }
+            }
         } else {
             if(dx>mMaxDx) {
                 final float max_over=getWidth();
