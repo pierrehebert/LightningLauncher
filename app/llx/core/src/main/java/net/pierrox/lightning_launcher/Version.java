@@ -16,6 +16,6 @@ public class Version {
     public static Uri BROWSE_PLUGINS_URI=Uri.parse("http://directory.lightninglauncher.com/plugins/");
 
     public static String WIKI_PREFIX="http://www.lightninglauncher.com/wiki/doku.php?id=";
-    public static String USER_COMMUNITY="https://plus.google.com/u/0/communities/109017480579703391739";
+    public static String USER_COMMUNITY="https://community.lightninglauncher.com/";
     public static String PERMISSIONS_INFO="https://www.lightninglauncher.com/wordpress/permissions-handling/";
 }

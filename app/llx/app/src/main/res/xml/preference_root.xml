@@ -42,7 +42,7 @@
             android:key="f">
 			<intent
 				android:action="android.intent.action.VIEW"
-				android:data="https://plus.google.com/u/0/communities/109017480579703391739"/>
+				android:data="https://community.lightninglauncher.com/"/>
 		</Preference>  
 	
 		<Preference
