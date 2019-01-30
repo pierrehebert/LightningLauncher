@@ -46,8 +46,8 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        versionCode 324
-        versionName "14.3-beta2 (5f96ad0)"
+        versionCode 325
+        versionName "14.3-beta3 (ec5b56b)"
         buildConfigField "boolean", "IS_BETA", "true" //  change in core too
 
         minSdkVersion 14
