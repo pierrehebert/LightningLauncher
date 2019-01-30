@@ -100,10 +100,11 @@
 			android:name="net.pierrox.lightning_launcher.util.EmptyService"
 			android:exported="false" />
 		
-<!-- 		<provider -->
-<!-- 			android:name=".util.FileProvider" -->
-<!-- 			android:authorities="net.pierrox.lightning_launcher.files" -->
-<!-- 			android:exported="true"/> -->
+ 		<provider
+ 			android:name="net.pierrox.lightning_launcher.util.FileProvider"
+ 			android:authorities="net.pierrox.lightning_launcher.files"
+ 			android:exported="true"
+            android:grantUriPermissions="true"/>
         
     	<activity
             android:name="net.pierrox.lightning_launcher.activities.RootSettings"

@@ -74,6 +74,7 @@ import net.pierrox.lightning_launcher.script.api.RectL;
 import net.pierrox.lightning_launcher.script.api.Shortcut;
 import net.pierrox.lightning_launcher.script.api.StopPoint;
 import net.pierrox.lightning_launcher.util.FileAndDirectoryPickerDialog;
+import net.pierrox.lightning_launcher.util.FileProvider;
 import net.pierrox.lightning_launcher_extreme.BuildConfig;
 import net.pierrox.lightning_launcher_extreme.R;
 
@@ -802,7 +803,9 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
 			String type = "text/javascript";
 			intent = new Intent(Intent.ACTION_EDIT);
-			intent.setDataAndType(Uri.fromFile(to), type);
+			Uri uri = FileProvider.getUriForFile(to);
+			intent.setDataAndType(uri, type);
+			intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
 			try {
 				startActivityForResult(intent, REQUEST_EDIT_SCRIPT);
