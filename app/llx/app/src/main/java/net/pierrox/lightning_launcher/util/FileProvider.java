@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 
 import net.pierrox.lightning_launcher.activities.ScriptEditor;
+import net.pierrox.lightning_launcher.data.FileUtils;
 
 
 /** A bare minimum provider to prevent exposng file uris */
@@ -48,14 +49,18 @@ public class FileProvider extends ContentProvider {
 
 	@Override
 	public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
-		File f=new File(uri.getPath());
+		String path = uri.getPath().substring(1);
+		if(!path.startsWith(FileUtils.LL_TMP_DIR.getAbsolutePath())) {
+			throw new IllegalArgumentException();
+		}
 
+		File f=new File(path);
 		if (f.exists()) {
 			ParcelFileDescriptor pfd=ParcelFileDescriptor.open(f, ParcelFileDescriptor.MODE_READ_WRITE);
 			return pfd;
 		}
 
-		throw new FileNotFoundException(uri.getPath());
+		throw new FileNotFoundException(path);
 	}
 
 	public static Uri getUriForFile(File to) {
