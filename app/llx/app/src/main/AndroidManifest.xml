@@ -56,6 +56,9 @@
 				<category android:name="android.intent.category.DEFAULT" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT" />
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET" />
             </intent-filter>
 
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />

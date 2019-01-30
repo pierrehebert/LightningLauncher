@@ -42,6 +42,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.os.Process;
 import android.os.SystemClock;
 import android.os.UserHandle;
@@ -663,6 +664,12 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 			int page=mEngine.readCurrentPage(mGlobalConfig.homeScreen);
 			setPagerPage(page, Screen.PAGE_DIRECTION_HINT_AUTO);
 		}
+        Intent intent = getIntent();
+        if(LauncherApps.ACTION_CONFIRM_PIN_SHORTCUT.equals(intent.getAction())) {
+            addPinnedShortcut(intent);
+        } else if(LauncherApps.ACTION_CONFIRM_PIN_APPWIDGET.equals(intent.getAction())) {
+            addAppWidget(intent);
+        }
 	}
 
 	@Override
@@ -834,7 +841,11 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             return;
         }
 
-        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_LOAD_SCRIPT_FROM_PACKAGE)) {
+        if(LauncherApps.ACTION_CONFIRM_PIN_SHORTCUT.equals(intent.getAction())) {
+            addPinnedShortcut(intent);
+        } else if(LauncherApps.ACTION_CONFIRM_PIN_APPWIDGET.equals(intent.getAction())) {
+            addAppWidget(intent);
+        } else if(intent.hasExtra(LightningIntent.INTENT_EXTRA_LOAD_SCRIPT_FROM_PACKAGE)) {
             loadScriptFromPackage((Intent) intent.getParcelableExtra(LightningIntent.INTENT_EXTRA_LOAD_SCRIPT_FROM_PACKAGE), false);
         } else {
             mScreen.setTargetItemLayout(null);
@@ -3311,6 +3322,69 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         return s;
     }
 
+    @TargetApi(Build.VERSION_CODES.O)
+    private void addPinnedShortcut(Intent intent) {
+        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
+        if(extra instanceof LauncherApps.PinItemRequest) {
+            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
+            if (request.getRequestType() == LauncherApps.PinItemRequest.REQUEST_TYPE_SHORTCUT) {
+                final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
+                ShortcutInfo shortcutInfo = request.getShortcutInfo();
+
+                final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
+                Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+
+                Intent si = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
+
+                final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
+                Page page = il.getPage();
+                float scale = il.getCurrentScale();
+                final Item newItem = Utils.addShortcut(shortcutInfo.getShortLabel().toString(), icon, si, page, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale, true);
+
+                mUndoStack.storePageAddItem(newItem);
+                editItem(il, newItem);
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
+                    }
+                }, 1000);
+
+                request.accept();
+            }
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.O)
+    private void addAppWidget(Intent intent) {
+        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
+        if(extra instanceof LauncherApps.PinItemRequest) {
+            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
+            AppWidgetProviderInfo info = request.getAppWidgetProviderInfo(this);
+            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
+            int allocatedAppWidgetId = LLApp.get().getAppWidgetHost().allocateAppWidgetId();
+            appWidgetManager.bindAppWidgetIdIfAllowed(allocatedAppWidgetId, info.getProfile(), info.provider, null);
+            final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
+            Page page = il.getPage();
+            float scale = il.getCurrentScale();
+            final Widget newItem = Utils.addAppWidget(page, il, allocatedAppWidgetId, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale);
+            mUndoStack.storePageAddItem(newItem);
+
+            editItem(il, newItem);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
+                }
+            }, 1000);
+
+            request.accept();
+        }
+    }
+
     private void configureHandlesForItemView(ItemView itemView, HandleView.Mode mode, boolean show_handles) {
         HandleView hv = mEditItemLayout.getHandleView();
         if (mode == null) {
@@ -4130,7 +4204,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         List<ShortcutInfo> shortcuts = null;
         if(activity != null) {
             LauncherApps.ShortcutQuery query = new LauncherApps.ShortcutQuery();
-            query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC);
+            query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC | LauncherApps.ShortcutQuery.FLAG_MATCH_PINNED);
             query.setActivity(activity);
             shortcuts = launcherApps.getShortcuts(query, userHandle);
         }
