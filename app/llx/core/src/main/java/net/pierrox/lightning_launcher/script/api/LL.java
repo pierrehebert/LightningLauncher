@@ -2,15 +2,14 @@ package net.pierrox.lightning_launcher.script.api;
 
 import android.content.Context;
 import android.content.Intent;
-
 import net.dinglisch.android.tasker.TaskerIntent;
-import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
+import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.script.api.screen.ActivityScreen;
 import net.pierrox.lightning_launcher.script.api.screen.HomeScreen;
 import net.pierrox.lightning_launcher.views.ItemLayout;
-
 import org.mozilla.javascript.Scriptable;
 
 /**
@@ -35,9 +34,9 @@ public class LL {
 	 */
 	public Desktop getCurrentDesktop() {
         int id = mLightning.getEngine().readCurrentPage(mLightning.getConfiguration().getHomeDesktopId());
-        Screen screen = LLApp.get().getScreen(Screen.Identity.HOME);
+        Screen screen = LLApp.get().getScreen(ScreenIdentity.HOME);
         if(screen == null) {
-            screen = LLApp.get().getScreen(Screen.Identity.BACKGROUND);
+            screen = LLApp.get().getScreen(ScreenIdentity.BACKGROUND);
         }
 
         screen.loadRootItemLayout(id, false, false, true);
@@ -51,9 +50,9 @@ public class LL {
 	 */
 	public Desktop getHomeDesktop() {
         int id = mLightning.getConfiguration().getHomeDesktopId();
-        Screen screen = LLApp.get().getScreen(Screen.Identity.HOME);
+        Screen screen = LLApp.get().getScreen(ScreenIdentity.HOME);
         if(screen == null) {
-            screen = LLApp.get().getScreen(Screen.Identity.BACKGROUND);
+            screen = LLApp.get().getScreen(ScreenIdentity.BACKGROUND);
         }
 
         screen.loadRootItemLayout(id, false, false, true);
@@ -71,11 +70,11 @@ public class LL {
             return null;
         }
 
-        Screen screen = LLApp.get().getScreen(Screen.Identity.LOCK);
+        Screen screen = LLApp.get().getScreen(ScreenIdentity.LOCK);
         if(screen == null) {
-            screen = LLApp.get().getScreen(Screen.Identity.HOME);
+            screen = LLApp.get().getScreen(ScreenIdentity.HOME);
             if(screen == null) {
-                screen = LLApp.get().getScreen(Screen.Identity.BACKGROUND);
+                screen = LLApp.get().getScreen(ScreenIdentity.BACKGROUND);
             }
         }
 
@@ -93,7 +92,7 @@ public class LL {
             return null;
         }
 
-        Screen screen = LLApp.get().getScreen(Screen.Identity.FLOATING);
+        Screen screen = LLApp.get().getScreen(ScreenIdentity.FLOATING);
         if(screen == null) {
             return null;
         }
@@ -122,9 +121,9 @@ public class LL {
 	public Container getContainerById(int id) {
         Screen screen;
         if(id == Page.APP_DRAWER_PAGE) {
-            screen = LLApp.get().getScreen(Screen.Identity.APP_DRAWER);
+            screen = LLApp.get().getScreen(ScreenIdentity.APP_DRAWER);
             if(screen == null) {
-                screen = LLApp.get().getScreen(Screen.Identity.BACKGROUND);
+                screen = LLApp.get().getScreen(ScreenIdentity.BACKGROUND);
             }
             return mLightning.createScreen(screen).getContainerById(id);
         } else {
@@ -139,7 +138,7 @@ public class LL {
 	 * @param name name of the desktop
 	 */
 	public Desktop getDesktopByName(String name) {
-        Screen dashboardScreen = LLApp.get().getScreen(Screen.Identity.HOME);
+        Screen dashboardScreen = LLApp.get().getScreen(ScreenIdentity.HOME);
         if(dashboardScreen != null) {
             return new HomeScreen(mLightning, dashboardScreen).getDesktopByName(name);
         } else {

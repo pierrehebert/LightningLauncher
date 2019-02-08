@@ -86,6 +86,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.Version;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.DynamicTextConfig;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -2768,7 +2769,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                 mHandler.removeCallbacks(mSetLiveWallpaperVisibility);
                 mSetLiveWallpaperVisibility = null;
             }
-            final Screen lwp = LLApp.get().getScreen(Screen.Identity.LIVE_WALLPAPER);
+            final Screen lwp = LLApp.get().getScreen(ScreenIdentity.LIVE_WALLPAPER);
             if(lwp != null) {
                 if(delay != 0) {
                     mSetLiveWallpaperVisibility = new Runnable() {
@@ -6135,8 +6136,8 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.HOME;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.HOME;
         }
 
         @Override

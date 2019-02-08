@@ -11,6 +11,7 @@ import net.pierrox.lightning_launcher.activities.AppDrawerX;
 import net.pierrox.lightning_launcher.activities.Dashboard;
 import net.pierrox.lightning_launcher.activities.LockScreen;
 import net.pierrox.lightning_launcher.activities.ScriptEditor;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.overlay.WindowService;
@@ -132,7 +133,7 @@ public abstract class LLAppPhone extends LLApp {
     // FIXME rename this to displayDashboardPage or better
     @Override
     public void displayPagerPage(int page, boolean reset_navigation_history) {
-        Screen homeScreen = getScreen(Screen.Identity.HOME);
+        Screen homeScreen = getScreen(ScreenIdentity.HOME);
         if(homeScreen != null) {
             homeScreen.loadRootItemLayout(page, reset_navigation_history, true, true);
         } else {

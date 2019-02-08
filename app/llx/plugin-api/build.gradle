@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+}
+
+dependencies {
+    implementation 'com.josesamuel:remoter-annotations:1.1.9'
+    annotationProcessor 'com.josesamuel:remoter:1.1.9'
+    implementation 'org.parceler:parceler-api:1.1.12'
+    annotationProcessor 'org.parceler:parceler:1.1.12'
+}

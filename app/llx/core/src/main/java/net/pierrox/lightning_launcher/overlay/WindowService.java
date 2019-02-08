@@ -33,6 +33,7 @@ import android.widget.FrameLayout;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
 import net.pierrox.lightning_launcher.activities.ResourcesWrapperHelper;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.Page;
@@ -962,8 +963,8 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.FLOATING;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.FLOATING;
         }
 
         @Override

@@ -16,6 +16,7 @@ import net.pierrox.lightning_launcher.Version;
 import net.pierrox.lightning_launcher.activities.Customize;
 import net.pierrox.lightning_launcher.activities.Dashboard;
 import net.pierrox.lightning_launcher.activities.RootSettings;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.data.ContainerPath;
 import net.pierrox.lightning_launcher.data.LightningIntent;
 import net.pierrox.lightning_launcher.data.Page;
@@ -31,7 +32,7 @@ public class PhoneUtils {
 
         // arguments: either page is null (use il.getPage) or il is null (try to retrieve il from dashboard using page)
         if(il == null) {
-            Screen screen = LLApp.get().getScreen(Screen.Identity.HOME);
+            Screen screen = LLApp.get().getScreen(ScreenIdentity.HOME);
             if(screen != null) {
                 ItemLayout[] ils = screen.getItemLayoutsForPage(page.id);
                 if(ils.length > 0) {
