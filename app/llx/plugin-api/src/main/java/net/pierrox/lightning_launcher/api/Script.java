@@ -1,12 +1,13 @@
 package net.pierrox.lightning_launcher.api;
 
 import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
 
 /**
  * @author lukas
  * @since 08.02.19
  */
-@Parcel
+@Parcel(Parcel.Serialization.BEAN)
 public class Script {
 	public static final int NO_ID = -1;
 	public static final int FLAG_ALL = 0;
@@ -27,6 +28,7 @@ public class Script {
 		this.flags = flags;
 	}
 
+	@ParcelConstructor
 	public Script(int id, String text, String name, String path, int flags) {
 		this.id = id;
 		this.text = text;
