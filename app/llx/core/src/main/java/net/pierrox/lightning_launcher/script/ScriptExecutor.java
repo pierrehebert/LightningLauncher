@@ -671,7 +671,18 @@ public class ScriptExecutor {
         if(!canRunScript(script)) {
             return null;
         }
+        return runScriptAsFunction(screen, script, parameters, arguments, allow_continuation, display_errors);
+    }
 
+    public Object runScriptAsFunction(Screen screen, String code, String parameters, Object[] arguments, boolean allow_continuation, boolean display_errors) {
+        if(!canRunScriptGlobally()) {
+            return null;
+        }
+        Script script = new Script(mEngine.getScriptManager(), Script.TYPE_IN_MEMORY, Script.NO_ID, null, code, null);
+        return runScriptAsFunction(screen, script, parameters, arguments, allow_continuation, display_errors);
+    }
+
+    private Object runScriptAsFunction(Screen screen, Script script, String parameters, Object[] arguments, boolean allow_continuation, boolean display_errors) {
         mCurrentScript = script;
         if(mCurrentScript != null && !mCurrentScript.hasFlag(Script.FLAG_DISABLED)) {
             prepareScriptScope();

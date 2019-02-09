@@ -17,6 +17,7 @@ public class Script extends JsonLoader {
     public static final int TYPE_BUILTIN = 1;
     public static final int TYPE_TARGET = 2;
     public static final int TYPE_SET_VARIABLE = 3;
+    public static final int TYPE_IN_MEMORY = 4;
 
 	public static final int TARGET_NONE = -1;
 	public static final int TARGET_DESKTOP = 0;

@@ -27,6 +27,7 @@
     <!-- Tasker -->
     <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
 
+    <!-- TODO: add description -->
     <permission
             android:name="net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE"
             android:protectionLevel="dangerous"/>
