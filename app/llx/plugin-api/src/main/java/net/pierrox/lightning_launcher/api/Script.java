@@ -21,6 +21,15 @@ public class Script {
 	private String path;
 	private int flags;
 
+	public Script(int id) {
+		this.id = id;
+	}
+
+	public Script(String name, String path) {
+		this.name = name;
+		this.path = path;
+	}
+
 	public Script(String text, String name, String path, int flags) {
 		this.text = text;
 		this.name = name;

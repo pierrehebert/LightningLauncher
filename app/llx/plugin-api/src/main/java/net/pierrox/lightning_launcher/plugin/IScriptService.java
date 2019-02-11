@@ -6,7 +6,11 @@ import net.pierrox.lightning_launcher.api.ScriptException;
 import remoter.annotations.ParamIn;
 import remoter.annotations.Remoter;
 
+import java.util.List;
+
 /**
+ * All methods in this class which take a {@link Script} as parameter will try to identify it first by id and the by name/path
+ *
  * @author lukas
  * @since 08.02.19
  */
@@ -31,17 +35,32 @@ public interface IScriptService {
 	int updateScript(@ParamIn Script script);
 
 	/**
+	 * Deletes a script
+	 *
+	 * @param script the script to delete
+	 */
+	void deleteScript(@ParamIn Script script);
+
+	/**
 	 * Fetches a script
 	 *
-	 * @param id script id to fetch
+	 * @param script the script to fetch
 	 * @return the script or null if it does not exist
 	 */
-	Script getScript(int id);
+	Script getScript(@ParamIn Script script);
+
+	/**
+	 * Fetches all scripts matching certain flags
+	 *
+	 * @param flags the flags to match (e.g. {@link Script#FLAG_ALL}
+	 * @return scripts found
+	 */
+	List<Script> getScriptsMatching(int flags);
 
 	/**
 	 * runs the script with the given id and optional data
 	 */
-	void runScript(int id, String data_, @ParamIn ScreenIdentity screen) throws ScriptException;
+	void runScript(@ParamIn Script script, String data_, @ParamIn ScreenIdentity screen) throws ScriptException;
 
 	/**
 	 * runs the given code. Code must end with a return statement
