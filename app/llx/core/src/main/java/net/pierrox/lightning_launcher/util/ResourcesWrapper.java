@@ -29,9 +29,8 @@ public class ResourcesWrapper extends Resources {
 				Context translations_context = context.createPackageContext(pkg_name, 0);
 				mTranslationsResources = translations_context.getResources();
 
-				int initialCapacity = R.string.zzz - R.string.aaa + 10;
-				mStringTranslationMap = new SparseArray<>(initialCapacity);
-				mStringArrayTranslationMap = new SparseArray<>(initialCapacity);
+				mStringTranslationMap = new SparseArray<>(2000);
+				mStringArrayTranslationMap = new SparseArray<>(2000);
 
 				// this will be reached using the App context
 				sSharedInstance = this;

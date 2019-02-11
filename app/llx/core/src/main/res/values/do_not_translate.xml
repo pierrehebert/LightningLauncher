@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Lightning Launcher</string>
+    <string name="default_pack_name" translatable="false">English</string>
+</resources>

@@ -519,7 +519,7 @@ public class Customize extends ResourceWrapperActivity implements
 		} else if (preference == mPGReset) {
 			displayDialog(DIALOG_CONFIRM_RESET_PAGE);
 		} else if (preference == mPGBackgroundSelectSystemWallpaper) {
-			startActivity(Intent.createChooser(new Intent(Intent.ACTION_SET_WALLPAPER), getString(R.string.wp_select_t)));
+			startActivity(Intent.createChooser(new Intent(Intent.ACTION_SET_WALLPAPER), getString(R.string.bg_sys_wp_select_t)));
 		} else if (preference == mPGBackgroundSelectScreenWallpaper) {
             ImagePicker.startActivity(this, REQUEST_PICK_SCREEN_WALLPAPER);
         } else if (preference == mPGApplyIconPack) {
