@@ -526,7 +526,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         mUndoStack.setUndoListener(this);
 
 
-        if(BuildConfig.IS_BETA) {
+        if(BuildConfig.HAS_UEC) {
             Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
                 @Override
                 public void uncaughtException(Thread paramThread, Throwable paramThrowable) {
