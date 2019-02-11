@@ -11,7 +11,7 @@ import remoter.annotations.Remoter;
  * @since 08.02.19
  */
 @Remoter
-public interface IPluginService {
+public interface IScriptService {
 	String PERMISSION = "net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE";
 
 	/**

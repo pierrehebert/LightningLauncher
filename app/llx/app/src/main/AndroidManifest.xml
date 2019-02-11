@@ -357,7 +357,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="net.pierrox.lightning_launcher.util.PluginService"
+        <service android:name="net.pierrox.lightning_launcher.util.ScriptService"
                  android:permission="net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE"
                  android:exported="true"/>
 

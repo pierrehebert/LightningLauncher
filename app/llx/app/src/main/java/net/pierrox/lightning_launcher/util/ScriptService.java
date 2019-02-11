@@ -9,7 +9,7 @@ import net.pierrox.lightning_launcher.api.Script;
 import net.pierrox.lightning_launcher.api.ScriptException;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
 import net.pierrox.lightning_launcher.engine.Screen;
-import net.pierrox.lightning_launcher.plugin.IPluginService;
+import net.pierrox.lightning_launcher.plugin.IScriptService;
 import net.pierrox.lightning_launcher.plugin.IPluginService_Stub;
 import net.pierrox.lightning_launcher.script.ScriptExecutor;
 import net.pierrox.lightning_launcher.script.ScriptManager;
@@ -18,7 +18,7 @@ import net.pierrox.lightning_launcher.script.ScriptManager;
  * @author lukas
  * @since 05.02.19
  */
-public class PluginService extends Service implements IPluginService {
+public class ScriptService extends Service implements IScriptService {
 	private LightningEngine mEngine;
 
 	@Override
