@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.HashMap;
 
 public class Script extends JsonLoader {
-	public static final int NO_ID = -1;
+	public static final int NO_ID = net.pierrox.lightning_launcher.api.Script.NO_ID;
 
     public static final int TYPE_FILE = 0;
     public static final int TYPE_BUILTIN = 1;
@@ -25,11 +25,11 @@ public class Script extends JsonLoader {
 	public static final int TARGET_LOCK_SCREEN = 2;
 	public static final int TARGET_BACKGROUND = 3;
 
-	public static final int FLAG_ALL = 0;
-	public static final int FLAG_DISABLED = 1;
-	public static final int FLAG_APP_MENU = 2;
-	public static final int FLAG_ITEM_MENU = 4;
-	public static final int FLAG_CUSTOM_MENU = 8;
+	public static final int FLAG_ALL = net.pierrox.lightning_launcher.api.Script.FLAG_ALL;
+	public static final int FLAG_DISABLED = net.pierrox.lightning_launcher.api.Script.FLAG_DISABLED;
+	public static final int FLAG_APP_MENU = net.pierrox.lightning_launcher.api.Script.FLAG_APP_MENU;
+	public static final int FLAG_ITEM_MENU = net.pierrox.lightning_launcher.api.Script.FLAG_ITEM_MENU;
+	public static final int FLAG_CUSTOM_MENU = net.pierrox.lightning_launcher.api.Script.FLAG_CUSTOM_MENU;
 
     // public fields use for JSON serialization
 	public int id = Script.NO_ID;
