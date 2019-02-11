@@ -27,10 +27,11 @@
     <!-- Tasker -->
     <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
 
-    <!-- TODO: add description -->
     <permission
-            android:name="net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE"
-            android:protectionLevel="dangerous"/>
+            android:name="net.pierrox.lightning_launcher.USE_SCRIPT_SERVICE"
+            android:protectionLevel="dangerous"
+            android:label="@string/permission_label"
+            android:description="@string/permission_description"/>
 
 
     <supports-screens
@@ -38,15 +39,15 @@
         android:normalScreens="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
-    
-      	
+
+
     <application
         android:name="net.pierrox.lightning_launcher.${app_name}"
     	android:icon="@drawable/icon"
         android:theme="@style/AppLightTranslucent"
     	android:label="@string/app_name">
-    	
-        <activity 
+
+        <activity
         	android:name="net.pierrox.lightning_launcher.activities.Dashboard"
             android:label="@string/app_name"
             android:launchMode="singleTask"
@@ -55,7 +56,7 @@
             android:theme="@style/AppLightNoActionBarWallpaper"
             android:windowSoftInputMode="adjustNothing"
 			android:configChanges="keyboardHidden|orientation|screenSize|mcc|mnc">
-			
+
             <intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.HOME" />
@@ -85,12 +86,12 @@
             android:excludeFromRecents="true"
             android:windowSoftInputMode="adjustNothing"
 			android:configChanges="keyboardHidden|orientation|screenSize|mcc|mnc">
-            
+
             <intent-filter>
                 <action android:name="net.pierrox.lightning_launcher.ALL_APPS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-		    
+
             <intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -105,13 +106,13 @@
         <service
 			android:name="net.pierrox.lightning_launcher.util.EmptyService"
 			android:exported="false" />
-		
+
  		<provider
  			android:name="net.pierrox.lightning_launcher.util.FileProvider"
  			android:authorities="net.pierrox.lightning_launcher.files"
  			android:exported="true"
             android:grantUriPermissions="true"/>
-        
+
     	<activity
             android:name="net.pierrox.lightning_launcher.activities.RootSettings"
             android:excludeFromRecents="true"
@@ -159,20 +160,20 @@
             </intent-filter>
 
         </activity>
-    	
+
     	<activity
             android:name="net.pierrox.lightning_launcher.activities.Customize"
             android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:excludeFromRecents="true"
             android:label="@string/customize_ll"/>
-		
+
     	<activity
     	    android:name="net.pierrox.lightning_launcher.activities.CustomizeA"
             android:configChanges="keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:label="@string/customize_ll"
     	    android:theme="@style/AppLightTranslucent" />
-    	    
+
 		<activity
             android:name="net.pierrox.lightning_launcher.activities.ScriptEditor"
             android:label="@string/sc_editor"
@@ -187,12 +188,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		
+
 		<activity
             android:name="net.pierrox.lightning_launcher.activities.StyleChooser"
             android:excludeFromRecents="true"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-		
+
 		<activity android:name="net.pierrox.lightning_launcher.activities.Shortcuts"
             android:label="@string/shortcut_settings">
             <intent-filter>
@@ -200,7 +201,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
+
         <activity
             android:name="net.pierrox.lightning_launcher.activities.ScreenManager"
             android:excludeFromRecents="true"
@@ -296,7 +297,7 @@
 				<data android:scheme="package" />
 			</intent-filter>
 		</receiver>
-		
+
 		<receiver
 		    android:name="net.pierrox.lightning_launcher.util.ShortcutReceiver"
 		    android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
@@ -323,7 +324,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 		</activity>
-		
+
 		<!-- 		Default language pack -->
 		<activity
             android:name="net.pierrox.lightning_launcher.activities.dummy.D2"
@@ -362,5 +363,5 @@
                  android:exported="true"/>
 
 	</application>
-    
+
 </manifest>
