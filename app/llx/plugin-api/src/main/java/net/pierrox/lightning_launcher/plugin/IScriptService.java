@@ -60,7 +60,7 @@ public interface IScriptService {
 	/**
 	 * runs the script with the given id and optional data
 	 */
-	void runScript(@ParamIn Script script, String data_, @ParamIn ScreenIdentity screen) throws ScriptException;
+	void runScript(@ParamIn Script script, String data, @ParamIn ScreenIdentity screen) throws ScriptException;
 
 	/**
 	 * runs the given code. Code must end with a return statement
