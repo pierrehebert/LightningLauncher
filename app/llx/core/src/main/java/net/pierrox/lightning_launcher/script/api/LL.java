@@ -412,7 +412,7 @@ public class LL {
      *
      * @return an Array of Folder items, sorted top to bottom (topmost folder is at index 0).
      *
-     * @deprecated use {@link Screen#getOpenFolders()} instead together with {@link Lightning#getActiveScreen()}
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getOpenFolders()} instead together with {@link Lightning#getActiveScreen()}
      * (Difference: returns a java array instead of {@link Array}, convert if necessary)
      * <br><code>LL.getOpenFolders() ~> getActiveScreen().getOpenFolders()</code>
      */
@@ -431,7 +431,7 @@ public class LL {
      * @param id item identifier
      * @return an item, or null if this id is not known.
      *
-     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getItemById(int)} instead together with a {@link Screen}
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getItemById(int)} instead together with a {@link net.pierrox.lightning_launcher.script.api.screen.Screen}
      * <br><code>LL.getItemById(id) -> getEvent().getScreen().getItemById(id)</code>
      */
     public Item getItemById(int id) {
