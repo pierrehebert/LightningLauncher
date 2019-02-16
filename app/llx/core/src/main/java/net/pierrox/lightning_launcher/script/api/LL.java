@@ -14,7 +14,7 @@ import net.pierrox.lightning_launcher.views.ItemLayout;
 import org.mozilla.javascript.Scriptable;
 
 /**
- * The main object to access Lightning Launcher features. 
+ * The main object to access Lightning Launcher features.
  * The LL object gives access to desktops, items or give contextual data on the event.
  * @deprecated use {@link Lightning} instead.
  */
@@ -133,7 +133,7 @@ public class LL {
 	}
 	
 	/**
-	 * Returns a desktop by its name, as set in the "Configure desktop" screen. The desktop name can be retrieved using {@link Desktop#getName()}. 
+	 * Returns a desktop by its name, as set in the "Configure desktop" screen. The desktop name can be retrieved using {@link Desktop#getName()}.
 	 * This method will return null if no desktop by that name can be found
 	 * 
 	 * @param name name of the desktop
@@ -301,7 +301,7 @@ public class LL {
     }
     
     /**
-     * Write data to a file. This is for logging and debug purpose only. The path is not configurable and is: <external storage>/LightningLauncher/script/log.txt.
+     * Write data to a file. This is for logging and debug purpose only. The path is not configurable and is: {@literal <}external storage{@literal >}/LightningLauncher/script/log.txt.
      * Please note that this method won't add newlines automatically when appending data.
      * @param data text to write to the file
      * @param append whether to clear the file before to write data, or append data to the existing content 
@@ -369,7 +369,7 @@ public class LL {
 
     /**
      * Create an image from a package and a resource name.
-     * For instance:<code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
+     * For instance: <code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
      * The density used is either the one given by ActivityManager.getLauncherLargeIconDensity if available, or the current one.
      * @param pkg name of the package, use "android" to access system resources.
      * @param name name of the drawable resource
