@@ -16,6 +16,7 @@ import org.mozilla.javascript.Scriptable;
 /**
  * The main object to access Lightning Launcher features.
  * The LL object gives access to desktops, items or give contextual data on the event.
+ *
  * @deprecated use {@link Lightning} instead.
  */
 public class LL {
@@ -117,6 +118,7 @@ public class LL {
 	
 	/**
 	 * Returns a container by its id.
+     *
      * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getContainerById(int)}
 	 */
 	public Container getContainerById(int id) {
@@ -149,6 +151,7 @@ public class LL {
 	
 	/**
 	 * Go to a specified desktop, without changing the current position in this desktop.
+     *
 	 * @param id desktop identifier
 	 */
 	public void goToDesktop(int id) {
@@ -157,6 +160,7 @@ public class LL {
 	
 	/**
 	 * Go to a specified desktop and set the current absolute position in this desktop, setting a scale of 1 and using animations. This method does nothing when the script is run in background.
+     *
 	 * @param id desktop identifier
 	 * @param x absolute X position, in pixel
 	 * @param y absolute Y position, in pixel
@@ -167,6 +171,7 @@ public class LL {
 	
 	/**
 	 * Go to a specified desktop and set the current absolute position in this desktop. This method does nothing when the script is run in background.
+     *
 	 * @param id desktop identifier
 	 * @param x absolute X position, in pixel
 	 * @param y absolute Y position, in pixel
@@ -181,6 +186,7 @@ public class LL {
 	/**
 	 * Returns the event object associated with this script execution.
 	 * The event provides contextual data, such as the current desktop, which item has been tapped, and so on.
+     *
      * @deprecated use {@link Lightning#getEvent_()}
 	 */
 	public Event getEvent() {
@@ -205,6 +211,7 @@ public class LL {
 
     /**
      * Run a Lightning action. This method does nothing when the script is run in background.
+     *
      * @param action action code (one of the values defined in {@link net.pierrox.lightning_launcher.script.api.EventHandler}
      * @param item item to be used as the target (only useful with actions requiring an item)
      * @param data optional data to send to be used by the action, use null if none
@@ -216,8 +223,10 @@ public class LL {
     /**
      * Run another script.
      * Optional data can be transmitted to the called script and retrieved using {@link Event#getData()}.
+     *
      * @param name name of the script as found in the script editor
      * @param data optional data to send to the script. Use JSON to pass more than a string.
+     *
      * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#runScript(String, String)}
      */
     public void runScript(final String name, final String data) {
@@ -247,6 +256,7 @@ public class LL {
 
     /**
      * Retrieve a script by name
+     *
      * @param name as given by Script#getName()
      * @return a script or null if not found
      */
@@ -256,6 +266,7 @@ public class LL {
 
     /**
      * Retrieve a script by its unique identifier
+     *
      * @param id identifier as given by Script#getId()
      * @return a script or null if no script with this id
      */
@@ -303,6 +314,7 @@ public class LL {
     /**
      * Write data to a file. This is for logging and debug purpose only. The path is not configurable and is: {@literal <}external storage{@literal >}/LightningLauncher/script/log.txt.
      * Please note that this method won't add newlines automatically when appending data.
+     *
      * @param data text to write to the file
      * @param append whether to clear the file before to write data, or append data to the existing content 
      */
@@ -328,6 +340,7 @@ public class LL {
     /**
      * Returns the list of currently open folders. This function returns the opener item, not the container itself.
      * This method will return null when the script is executed in the background.
+     *
      * @return an Array of Folder items, sorted top to bottom (topmost folder is at index 0).
      */
     public Array getOpenFolders() {
@@ -341,8 +354,10 @@ public class LL {
     
     /**
      * Returns an item by its id. This is a shortcut avoiding to traverse the list of all desktops and folders.
+     *
      * @param id item identifier
      * @return an item, or null if this id is not known.
+     *
      * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getItemById(int)}
      */
     public Item getItemById(int id) {
@@ -352,6 +367,7 @@ public class LL {
     /**
      * Create a blank new image of the specified size. Pixel format is always ARGB 8888.
      * Take care when creating images since it can rapidly exhaust memory and lead to a crash.
+     *
      * @return can return null if not enough memory
      */
     public ImageBitmap createImage(int width, int height) {
@@ -360,6 +376,7 @@ public class LL {
 
     /**
      * Create an image from the specified file.
+     *
      * @param path path of the image
      * @return can return null if an image cannot be read from the file (not an image or not enough memory)
      */
@@ -371,6 +388,7 @@ public class LL {
      * Create an image from a package and a resource name.
      * For instance: <code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
      * The density used is either the one given by ActivityManager.getLauncherLargeIconDensity if available, or the current one.
+     *
      * @param pkg name of the package, use "android" to access system resources.
      * @param name name of the drawable resource
      * @return can return null if an image cannot be read from the package (unknown package, wrong resource name or not enough memory)
@@ -395,6 +413,7 @@ public class LL {
     /**
      * Create a blank animation: frames are created fully transparent and need to be drawn.
      * Notes: animations created this way are memory expensive and cannot be persisted (yet). This means that Shortcut.setCustomIcon() wont't work, but Shortcut.setImage() will.
+     *
      * @param width image width
      * @param height image height
      * @param count number of frames to allocate
@@ -413,6 +432,7 @@ public class LL {
      *     <li>load scripts and set them as event handler (useful in script plugins)</li>
      *     <li>load JSON data, such as theme colors, data, etc.</li>
      * </ul>
+     *
      * @param pkg package name from which to read resources
      * @param name name of the raw resource. It must not contain the extension of the raw file, this is the Android identifier.
      * @return a string or null if the resource cannot be found or read
@@ -433,6 +453,7 @@ public class LL {
      * Example:<code><pre>
      * var intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pierrox.net/")
      * LL.startActivity(intent);</pre></code>
+     *
      * @param intent intent to start the activity
      * @return true if launch is successful, false if activity not found or permission denied
      */
@@ -450,6 +471,7 @@ public class LL {
      *     <li>token: String, optional value passed as third argument in startActivityForResult</li>
      * </ul>
      * This method cannot be called when the executing script is run in the background. In that case it will do nothing and return false
+     *
      * @param intent intent to start the activity
      * @param receiver a script to execute upon activity end
      * @param token an optional string data that you can transmit to the receiver script
@@ -466,6 +488,7 @@ public class LL {
 
     /**
      * Send a tasker intent, optionally waiting for its completion to return.
+     *
      * @param intent an intent built with TaskerIntent (see http://tasker.dinglisch.net/invoketasks.html for samples)
      * @param synchronous when true, Lightning will wait for Tasker task completion before to return, otherwise it will return immediately
      * @return when synchronous is true returns true if the intent has been sent successfully and Tasker reports a success too, when synchronous is false this method always returns true..
@@ -490,6 +513,7 @@ public class LL {
     /**
      * Translate a Java class into a JavaScript object.
      * This is a convenience method that avoid repeated use of fully qualified names while scripting Java.
+     *
      * @param name fully qualified class name
      * @return true if the operation succeeded, false if the class cannot be loaded or if already bound
      */
@@ -499,6 +523,7 @@ public class LL {
 
     /**
      * Request the user to pick a color.
+     *
      * @param title text displayed at the top of the dialog
      * @param color initial color to display
      * @param hasAlpha whether to display the transparency slider. It will not enforce a fully opaque color, it only acts on the slider visibility.
@@ -517,6 +542,7 @@ public class LL {
      * Request the user to enter a numeric value.
      * When using the "%" unit, valueType must be set to FLOAT: the dialog will scale a decimal value so that 0.75 is displayed as 75%.
      * Warning: the returned value may be subject to rounding errors.
+     *
      * @param title text displayed at the top of the dialog
      * @param value initial value to display
      * @param valueType either INT or FLOAT. It will default to FLOAT if valueType is not a known value.
@@ -540,6 +566,7 @@ public class LL {
      * Warning: images returned by this function may be very large, take care at memory use as exceeding limits will make the launcher crash.
      * Use the maxPixels parameter: the image will be scaled by a power of two so that its number of pixels is below or equal.
      * This function supports picking bitmaps and nine patches.
+     *
      * @param maxPixels maximum number of pixels in the returned image (width x height), 0 for no limit, 1048576 is one mega pixels (1024 x 1024)
      * @return an {@link net.pierrox.lightning_launcher.script.api.Image}, or null if the user canceled the operation, or if the image cannot be loaded
      */
@@ -555,6 +582,7 @@ public class LL {
     /**
      * Request the user to select an area in the image.
      * Warning: because images need to be persisted to file while cropping, this method may be slow.
+     *
      * @param image image to be cropped
      * @param full_size handling big images can be slow or request too much memory, by setting full_size to false this will allow this method to downscale images (approx. the size of the screen)
      * @return a cropped image, or null if the operation failed or the user canceled it
