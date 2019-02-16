@@ -466,7 +466,7 @@ public class LL {
 
     /**
      * Create an image from a package and a resource name.
-     * For instance: <br><code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
+     * For instance: <code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
      * The density used is either the one given by ActivityManager.getLauncherLargeIconDensity if available, or the current one.
      *
      * @param pkg name of the package, use "android" to access system resources.
@@ -719,7 +719,7 @@ public class LL {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <br><code>LL.getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      *
      * @deprecated use {@link Lightning#setVariableBoolean(String, boolean)} instead
      * <br><code>LL.setVariableBoolean(name, value) -> setVariableBoolean(name, value)</code>
@@ -729,7 +729,7 @@ public class LL {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <br><code>LL.getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      *
      * @deprecated use {@link Lightning#setVariableInteger(String, long)} instead
      * <br><code>LL.setVariableInteger(name, value) -> setVariableInteger(name, value)</code>
@@ -739,7 +739,7 @@ public class LL {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <br><code>LL.getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      *
      * @deprecated use {@link Lightning#setVariableFloat(String, float)} instead
      * <br><code>LL.setVariableFloat(name, value) -> setVariableFloat(name, value)</code>
@@ -749,7 +749,7 @@ public class LL {
     }
 
     /**
-     * Set a string variable. This is a shortcut for <br><code>LL.getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a string variable. This is a shortcut for <code>LL.getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      *
      * @deprecated use {@link Lightning#setVariableString(String, String)} instead
      * <br><code>LL.setVariableString(name, value) -> setVariableString(name, value)</code>
