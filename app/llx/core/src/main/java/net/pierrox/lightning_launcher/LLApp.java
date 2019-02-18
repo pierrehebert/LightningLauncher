@@ -12,8 +12,8 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.view.ViewGroup;
-
 import net.pierrox.lightning_launcher.activities.ResourcesWrapperHelper;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.SystemConfig;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Item;
@@ -26,7 +26,6 @@ import net.pierrox.lightning_launcher.script.api.Property;
 import net.pierrox.lightning_launcher.views.MyAppWidgetHostView;
 import net.pierrox.lightning_launcher.views.NativeImage;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
-
 import org.json.JSONObject;
 
 import java.io.File;
@@ -248,7 +247,7 @@ public abstract class LLApp extends Application {
 
     public void onScreenCreated(Screen screen) {
         int index;
-        if(screen.getIdentity() == Screen.Identity.LIVE_WALLPAPER) {
+        if(screen.getIdentity() == ScreenIdentity.LIVE_WALLPAPER) {
             // never put the live wallpaper at the top of the stack, always the bottom
             index = 0;
         } else {
@@ -263,7 +262,7 @@ public abstract class LLApp extends Application {
 
     public void onScreenResumed(Screen screen) {
         // never bring the LWP to the top of the stack
-        if(screen.getIdentity() != Screen.Identity.LIVE_WALLPAPER && mScreens.size() > 1) {
+        if(screen.getIdentity() != ScreenIdentity.LIVE_WALLPAPER && mScreens.size() > 1) {
             mScreens.remove(screen);
             mScreens.add(screen);
         }
@@ -271,7 +270,7 @@ public abstract class LLApp extends Application {
 
     public void onScreenPaused(Screen screen) {
         // the LWP is always at the bottom of the stack
-        if(screen.getIdentity() != Screen.Identity.LIVE_WALLPAPER) {
+        if(screen.getIdentity() != ScreenIdentity.LIVE_WALLPAPER) {
             int size = mScreens.size();
             if (size > 2) {
                 mScreens.remove(screen);
@@ -280,7 +279,7 @@ public abstract class LLApp extends Application {
         }
     }
 
-    public Screen getScreen(Screen.Identity identity) {
+    public Screen getScreen(ScreenIdentity identity) {
         for (Screen screen : mScreens) {
             if(screen.getIdentity() == identity) {
                 return screen;
@@ -420,8 +419,8 @@ public abstract class LLApp extends Application {
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.BACKGROUND;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.BACKGROUND;
         }
 
         @Override

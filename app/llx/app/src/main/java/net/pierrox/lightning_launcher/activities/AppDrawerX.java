@@ -40,6 +40,7 @@ import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
 import net.pierrox.lightning_launcher.configuration.PageConfig;
@@ -1682,8 +1683,8 @@ public class AppDrawerX extends Dashboard implements EditTextIme.OnEditTextImeLi
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.APP_DRAWER;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.APP_DRAWER;
         }
 
         @Override

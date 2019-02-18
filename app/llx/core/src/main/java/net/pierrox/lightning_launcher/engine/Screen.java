@@ -39,6 +39,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
@@ -89,17 +90,6 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     public static final int PAGE_DIRECTION_HINT_AUTO = 0;
     public static final int PAGE_DIRECTION_HINT_DONT_MOVE = 2;
     public static final int PAGE_DIRECTION_HINT_NO_ANIMATION = 3;
-
-    public enum Identity {
-        BACKGROUND,
-        HOME,
-        APP_DRAWER,
-        LOCK,
-        FLOATING,
-        CUSTOMIZE,
-        DESKTOP_PREVIEW,
-        LIVE_WALLPAPER
-    }
 
     private static final String SIS_TARGET_ITEM_LAYOUT="sa";
     private static final String SIS_LAST_TOUCHED_X="sb";
@@ -298,7 +288,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         return !mIsResumed;
     }
 
-    public abstract Identity getIdentity();
+    public abstract ScreenIdentity getIdentity();
 
     public Context getContext() {
         return mContext;

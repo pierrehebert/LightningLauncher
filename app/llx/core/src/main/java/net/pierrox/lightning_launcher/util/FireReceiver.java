@@ -5,14 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Pair;
-
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.LightningIntent;
-import net.pierrox.lightning_launcher.engine.Screen;
-import net.pierrox.lightning_launcher.script.Script;
 import net.pierrox.lightning_launcher.engine.variable.Variable;
 import net.pierrox.lightning_launcher.engine.variable.VariableManager;
+import net.pierrox.lightning_launcher.script.Script;
 
 import java.net.URISyntaxException;
 
@@ -66,6 +65,6 @@ public class FireReceiver extends BroadcastReceiver {
 
     private void runBackgroundScript(Integer id, String data) {
         LLApp app = LLApp.get();
-        app.getAppEngine().getScriptExecutor().runScript(app.getScreen(Screen.Identity.BACKGROUND), id, "BACKGROUND", data);
+        app.getAppEngine().getScriptExecutor().runScript(app.getScreen(ScreenIdentity.BACKGROUND), id, "BACKGROUND", data);
     }
 }

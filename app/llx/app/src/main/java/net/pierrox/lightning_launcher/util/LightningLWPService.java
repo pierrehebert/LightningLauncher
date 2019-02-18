@@ -24,6 +24,7 @@ import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.LLAppExtreme;
 import net.pierrox.lightning_launcher.LWPSettings;
 import net.pierrox.lightning_launcher.activities.ResourcesWrapperHelper;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.Page;
@@ -288,8 +289,8 @@ public class LightningLWPService extends WallpaperService {
             }
 
             @Override
-            public Identity getIdentity() {
-                return Identity.LIVE_WALLPAPER;
+            public ScreenIdentity getIdentity() {
+                return ScreenIdentity.LIVE_WALLPAPER;
             }
 
             @Override

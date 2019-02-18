@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.Item;
@@ -221,8 +222,8 @@ public class LockScreen extends Dashboard {
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.LOCK;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.LOCK;
         }
 
         @Override

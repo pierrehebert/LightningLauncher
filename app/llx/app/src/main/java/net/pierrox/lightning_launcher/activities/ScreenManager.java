@@ -39,6 +39,7 @@ import android.widget.Toast;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.LLAppPhone;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.Item;
 import net.pierrox.lightning_launcher.data.LightningIntent;
@@ -159,8 +160,8 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
     private void init() {
 		mScreen = new net.pierrox.lightning_launcher.engine.Screen(this, 0) {
 			@Override
-			public Identity getIdentity() {
-				return Identity.DESKTOP_PREVIEW;
+			public ScreenIdentity getIdentity() {
+				return ScreenIdentity.DESKTOP_PREVIEW;
 			}
 
 			@Override

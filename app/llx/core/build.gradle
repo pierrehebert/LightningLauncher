@@ -38,4 +38,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/dx.jar')
     compile 'net.pierrox.android:lsvg:1.0'
+    compile project(':plugin-api')
 }

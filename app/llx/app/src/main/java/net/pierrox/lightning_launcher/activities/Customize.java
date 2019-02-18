@@ -33,6 +33,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.Version;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.FolderConfig.FolderAnimation;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -247,8 +248,8 @@ public class Customize extends ResourceWrapperActivity implements
 		} else {
 			mScreen = new Screen(this, 0) {
 				@Override
-				public Identity getIdentity() {
-					return Identity.CUSTOMIZE;
+				public ScreenIdentity getIdentity() {
+					return ScreenIdentity.CUSTOMIZE;
 				}
 
 				@Override

@@ -300,46 +300,46 @@ public class Lightning {
      * Return the home screen, null if not created yet
      */
     public HomeScreen getHomeScreen() {
-        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.HOME));
+        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.HOME));
     }
 
     /**
      * Return the app drawer screen, null if not created yet
      */
     public ActivityScreen getAppDrawerScreen() {
-        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.APP_DRAWER));
+        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.APP_DRAWER));
     }
 
     /**
      * Return the lock screen, null if not created yet
      */
     public ActivityScreen getLockScreen() {
-        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.LOCK));
+        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LOCK));
     }
 
     /**
      * Return the floating screen, null if not created yet
      */
     public Screen getFloatingScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.FLOATING));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.FLOATING));
     }
 
     /**
      * Return the live wallpaper screen, null if not created yet
      */
     public Screen getLiveWallpaperScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.LIVE_WALLPAPER));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LIVE_WALLPAPER));
     }
 
     /**
      * Return the background screen. This special screen is used when running background scripts. It can be used to query items and containers, but position and size may not be computed since the screen is not displayed and has no size.
      */
     public Screen getBackgroundScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.BACKGROUND));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.BACKGROUND));
     }
 
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
-        if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.Screen.Identity.HOME) {
+        if(screen.getIdentity() == net.pierrox.lightning_launcher.api.ScreenIdentity.HOME) {
             return new HomeScreen(this, screen);
         } else if(screen.getContext() instanceof Activity) {
             return new ActivityScreen(this, screen);

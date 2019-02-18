@@ -6,13 +6,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.R;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
-import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.script.Script;
-import net.pierrox.lightning_launcher.R;
 
 public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
     private final static String INTENT_EXTRA_TYPE = "t";
@@ -81,7 +80,7 @@ public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
             case TYPE_RUN_ACTION:
                 int action = intent.getIntExtra(INTENT_EXTRA_ACTION, GlobalConfig.NOTHING);
                 String data = intent.getStringExtra(INTENT_EXTRA_DATA);
-                app.getScreen(Screen.Identity.BACKGROUND).runAction(app.getAppEngine(), "BACKGROUND", new EventAction(action, data));
+                app.getScreen(ScreenIdentity.BACKGROUND).runAction(app.getAppEngine(), "BACKGROUND", new EventAction(action, data));
                 finish();
                 break;
         }
