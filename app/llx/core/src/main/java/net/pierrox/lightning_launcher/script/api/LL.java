@@ -95,7 +95,8 @@ public class LL {
 	/**
 	 * Returns the desktop used as the floating desktop, or null if not set.
      *
-     * @deprecated no alternative
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getCurrentDesktop()} instead together with {@link Lightning#getFloatingScreen()}
+     * <br><code>LL.getFloatingDesktop() -> getFloatingScreen().getCurrentDesktop()</code>
 	 */
 	public Desktop getFloatingDesktop() {
         int id = mLightning.getConfiguration().getFloatingDesktopId();
