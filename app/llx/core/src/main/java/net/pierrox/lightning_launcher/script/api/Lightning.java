@@ -339,7 +339,9 @@ public class Lightning {
     }
 
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
-        if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.Screen.Identity.HOME) {
+        if(screen == null){
+            return null;
+        }else if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.Screen.Identity.HOME) {
             return new HomeScreen(this, screen);
         } else if(screen.getContext() instanceof Activity) {
             return new ActivityScreen(this, screen);
