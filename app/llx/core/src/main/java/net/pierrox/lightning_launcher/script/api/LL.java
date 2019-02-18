@@ -394,7 +394,9 @@ public class LL {
      * Returns whether the current context is paused. It often means that Lightning Launcher is not displayed, for instance because another app is running.
      * When the script is executed in the background this method always returns true.
      *
-     * @deprecated no alternative
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#isPaused()} instead together with {@link Lightning#getHomeScreen()}
+     * (difference: this function returns false if any screen is not paused, not only the HomeScreen. For an exact substitute check all the other screens too)
+     * <br><code>LL.isPaused(tag) ~> getHomeScreen().isPaused()</code>
      */
     public boolean isPaused() {
         boolean paused = true;
