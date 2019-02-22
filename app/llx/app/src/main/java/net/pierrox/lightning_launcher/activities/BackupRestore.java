@@ -22,6 +22,7 @@ import net.pierrox.lightning_launcher.data.Item;
 import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
 import net.pierrox.lightning_launcher.data.Utils;
+import net.pierrox.lightning_launcher.util.FileProvider;
 import net.pierrox.lightning_launcher_extreme.R;
 
 import org.json.JSONObject;
@@ -297,8 +298,10 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                                 case 3:
                                     Intent shareIntent = new Intent();
                                     shareIntent.setAction(Intent.ACTION_SEND);
-                                    shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(FileUtils.LL_EXT_DIR +"/"+mArchiveName)));
+                                    Uri uri = FileProvider.getUriForFile(new File(FileUtils.LL_EXT_DIR +"/"+mArchiveName));
+                                    shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                                     shareIntent.setType("application/zip");
+                                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                     startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.br_s)));
                                     break;
                                 case 4:
