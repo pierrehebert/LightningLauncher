@@ -43,7 +43,6 @@ if(project.hasProperty("signing.properties") && new File(project.property("signi
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
 
     defaultConfig {
         versionCode 325
