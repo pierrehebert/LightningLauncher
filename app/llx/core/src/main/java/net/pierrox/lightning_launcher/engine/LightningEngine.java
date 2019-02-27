@@ -652,7 +652,7 @@ public class LightningEngine implements Page.PageListener {
             if (item.getClass() == Shortcut.class) {
                 Shortcut shortcut = (Shortcut) item;
                 Intent intent = shortcut.getIntent();
-                if (Shortcut.INTENT_ACTION_APP_SHORTCUT.equals(intent.getAction())) {
+                if (intent != null && Shortcut.INTENT_ACTION_APP_SHORTCUT.equals(intent.getAction())) {
                     return intent;
                 }
             }

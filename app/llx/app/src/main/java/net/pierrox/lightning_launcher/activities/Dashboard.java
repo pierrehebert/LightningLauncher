@@ -3325,37 +3325,21 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
     @TargetApi(Build.VERSION_CODES.O)
     private void addPinnedShortcut(Intent intent) {
-        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
-        if(extra instanceof LauncherApps.PinItemRequest) {
-            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
-            if (request.getRequestType() == LauncherApps.PinItemRequest.REQUEST_TYPE_SHORTCUT) {
-                final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-                ShortcutInfo shortcutInfo = request.getShortcutInfo();
+        Utils.ShortcutDescription sd = Utils.createPinItemRequestFromIntent(this, intent);
+        if(sd != null) {
+            final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
+            Page page = il.getPage();
+            float scale = il.getCurrentScale();
+            final Item newItem = Utils.addShortcut(sd.name, sd.icon, sd.intent, page, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale, true);
 
-                final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
-                Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
-
-                Intent si = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
-
-                final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
-                Page page = il.getPage();
-                float scale = il.getCurrentScale();
-                final Item newItem = Utils.addShortcut(shortcutInfo.getShortLabel().toString(), icon, si, page, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale, true);
-
-                mUndoStack.storePageAddItem(newItem);
-                editItem(il, newItem);
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
-                    }
-                }, 1000);
-
-                request.accept();
-            }
+            mUndoStack.storePageAddItem(newItem);
+            editItem(il, newItem);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
+                }
+            }, 1000);
         }
     }
 

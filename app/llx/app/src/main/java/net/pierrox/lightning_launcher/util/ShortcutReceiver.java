@@ -61,20 +61,21 @@ public class ShortcutReceiver extends BroadcastReceiver {
         if(duplicate || found==null) {
             int icon_size=(int)(home_page.config.defaultShortcutConfig.iconScale* Utils.getStandardIconSize());
             Utils.ShortcutDescription sd=Utils.createShortcutFromIntent(context, data, icon_size);
+            if(sd != null) {
+                int id = home_page.findFreeItemId();
+                int[] cell = Utils.findFreeCell(home_page);
+                Shortcut shortcut = new Shortcut(home_page);
+                File icon_dir = home_page.getAndCreateIconDir();
+                shortcut.init(id, new Rect(cell[0], cell[1], cell[0] + 1, cell[1] + 1), null, sd.name, sd.intent);
 
-            int id=home_page.findFreeItemId();
-            int[] cell=Utils.findFreeCell(home_page);
-            Shortcut shortcut=new Shortcut(home_page);
-            File icon_dir=home_page.getAndCreateIconDir();
-            shortcut.init(id, new Rect(cell[0], cell[1], cell[0]+1, cell[1]+1), null, sd.name, sd.intent);
+                if (sd.icon != null) {
+                    File icon_file = shortcut.getDefaultIconFile();
+                    Utils.saveIconToFile(icon_file, sd.icon);
+                    sd.icon.recycle();
+                }
 
-            if(sd.icon != null) {
-                File icon_file=shortcut.getDefaultIconFile();
-                Utils.saveIconToFile(icon_file, sd.icon);
-                sd.icon.recycle();
+                home_page.addItem(shortcut);
             }
-
-            home_page.addItem(shortcut);
         }
     }
 

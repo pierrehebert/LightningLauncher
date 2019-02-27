@@ -1,5 +1,6 @@
 package net.pierrox.lightning_launcher.data;
 
+import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,9 +12,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.LauncherApps;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.pm.ShortcutInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -1032,6 +1035,10 @@ public class Utils {
 	public static ShortcutDescription createShortcutFromIntent(Context context, Intent data, int max_icon_size) {
     	// this comes from Launcher2
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
+        if(intent == null) {
+            return null;
+        }
+
         String name = data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
         Parcelable bitmap = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_ICON);
 
@@ -1061,6 +1068,37 @@ public class Utils {
         
         return sd;
 	}
+
+	@TargetApi(Build.VERSION_CODES.O)
+    public static ShortcutDescription createPinItemRequestFromIntent(Context context, Intent intent) {
+        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
+        if(extra instanceof LauncherApps.PinItemRequest) {
+            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
+            if (request.getRequestType() == LauncherApps.PinItemRequest.REQUEST_TYPE_SHORTCUT) {
+                final LauncherApps launcherApps = (LauncherApps) context.getSystemService(Context.LAUNCHER_APPS_SERVICE);
+                ShortcutInfo shortcutInfo = request.getShortcutInfo();
+
+                final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
+                Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+
+                Intent si = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
+
+                ShortcutDescription sd=new ShortcutDescription();
+                sd.name = shortcutInfo.getShortLabel().toString();
+                sd.icon = icon;
+                sd.intent = si;
+
+                request.accept();
+
+                return sd;
+            }
+        }
+
+        return null;
+    }
 	
 	public static void deleteDirectory(File dir, boolean delete_root) {
 		File[] files=dir.listFiles();
@@ -1479,7 +1517,17 @@ public class Utils {
 	
 	public static Item addAndroidShortcutFromIntent(Context context, Intent data, Page page, int x, int y, float scale) {
 		int icon_size=(int)(page.config.defaultShortcutConfig.iconScale*getStandardIconSize());
+
 		ShortcutDescription sd=createShortcutFromIntent(context, data, icon_size);
+        if(sd == null) {
+            sd = createPinItemRequestFromIntent(context, data);
+        }
+
+        if(sd == null) {
+            sd = new ShortcutDescription();
+            sd.name = "no shortcut";
+            sd.intent = new Intent();
+        }
 
         return addShortcut(sd.name, sd.icon, sd.intent, page, x, y, scale, true);
 	}
