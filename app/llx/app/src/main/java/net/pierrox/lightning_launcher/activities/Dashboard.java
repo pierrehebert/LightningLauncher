@@ -863,7 +863,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             mScreen.runAction(mEngine, "SHORTCUT", eventAction);
             handled = true;
         } else {
-            if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+            if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                 mScreen.executeGoToDesktopPositionIntent(intent);
                 handled = true;
             }
@@ -945,7 +945,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                 case REQUEST_SELECT_SHORTCUT_FOR_ADD1:
                     ComponentName cn = data.getComponent();
                     if(cn != null && cn.getClassName().endsWith(".activities.ShortcutsS")) {
-                        Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null);
+                        Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null, true);
                         newItem=Utils.addAndroidShortcutFromIntent(this, shortcut, page, mScreen.getLastTouchedAddX(), mScreen.getLastTouchedAddY(), scale);
                         mUndoStack.storePageAddItem(newItem);
                     } else {
@@ -3282,7 +3282,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     private void addBookmark() {
         ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
         Page page = il.getPage();
-        Intent intent = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null);
+        Intent intent = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null, true);
         Item item = Utils.addAndroidShortcutFromIntent(this, intent, page, mScreen.getLastTouchedAddX(), mScreen.getLastTouchedAddY(), il.getCurrentScale());
         mUndoStack.storePageAddItem(item);
         boolean wasInEditMode = il.getEditMode();

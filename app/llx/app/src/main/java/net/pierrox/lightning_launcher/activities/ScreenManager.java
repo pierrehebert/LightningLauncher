@@ -419,7 +419,7 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
             int p = (Integer)v.getTag();
             Screen screen = mScreens.get(getScreenIndex(p));
             Page page = mLightningEngine.getOrLoadPage(p);
-            Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, null, page, screen.label, screen.icon);
+            Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, null, page, screen.label, screen.icon, true);
             setResult(RESULT_OK, shortcut);
             finish();
 		} else if(mMode==SCREEN_MODE_SELECT_MULTIPLE) {
@@ -637,7 +637,7 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
                     Intent intent = s.getIntent();
                     ComponentName cn=intent.getComponent();
                     if(cn!=null && cn.compareTo(ll_component_name)==0) {
-                        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE) && intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, 0)==screen.page) {
+                        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP) && intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, 0)==screen.page) {
                             // it looks like a screen&position shortcut
                             if(update_icon) {
                             	icon_dir.mkdirs();

@@ -1118,39 +1118,46 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
 
 
     public void executeGoToDesktopPositionIntent(Intent intent) {
-        int page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, Page.FIRST_DASHBOARD_PAGE);
+        int page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, Page.FIRST_DASHBOARD_PAGE);
         if(Page.isDashboard(page) && page != getCurrentRootPage().id) {
             loadRootItemLayout(page, false, true, true);
         }
-        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_TX)) {
-            float x = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TX, 0);
-            float y = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TY, 0);
-            float s = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TS, 1);
-            goToDesktopPosition(page, x, y, s, true);
+        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_X)) {
+            float x = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_X, 0);
+            float y = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_Y, 0);
+            float s = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_SCALE, 1);
+            boolean absolute = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ABSOLUTE, true);
+            boolean animate = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ANIMATE, true);
+
+            goToDesktopPosition(page, x, y, s, animate, absolute);
         }
     }
 
-    public void goToDesktopPosition(int page, float x, float y, float s, boolean animate) {
+    public void goToDesktopPosition(int page, float x, float y, float s, boolean animate, boolean absolute) {
         if(Page.isDashboard(page) && page != getCurrentRootPage().id) {
             ItemLayout il = loadRootItemLayout(page, false, true, animate);
-            goToItemLayoutPosition(il, x, y, s, animate);
+            goToItemLayoutPosition(il, x, y, s, animate, absolute);
         } else {
             ItemLayout[] itemLayouts = getItemLayoutsForPage(page);
             for (ItemLayout il : itemLayouts) {
-                goToItemLayoutPosition(il, x, y, s, animate);
+                goToItemLayoutPosition(il, x, y, s, animate, absolute);
             }
         }
     }
 
-    public void goToItemLayoutPosition(ItemLayout il, float x, float y, float s, boolean animate) {
+    public void goToItemLayoutPosition(ItemLayout il, float x, float y, float s, boolean animate, boolean absolute) {
         Page page = il.getPage();
         if(page.isDashboard() && page != getCurrentRootPage()) {
             loadRootItemLayout(page.id, false, true, true);
         }
-        if(animate) {
-            il.animateZoomTo(x, y, s);
+        if(absolute) {
+            if (animate) {
+                il.animateZoomTo(x, y, s);
+            } else {
+                il.moveTo(x, y, s);
+            }
         } else {
-            il.moveTo(x, y, s);
+            il.goToPage(x, y, s, animate);
         }
     }
 
@@ -1629,7 +1636,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                 if(eventAction != null) {
                     runAction(engine, "SHORTCUT", eventAction, itemView.getParentItemLayout(), itemView);
                 } else {
-                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                         executeGoToDesktopPositionIntent(intent);
                     }
                 }
@@ -1767,7 +1774,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                         if (eventAction != null) {
                             runAction(engine, source, eventAction, il, itemView);
                         } else {
-                            if (intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+                            if (intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                                 executeGoToDesktopPositionIntent(intent);
                             }
                         }

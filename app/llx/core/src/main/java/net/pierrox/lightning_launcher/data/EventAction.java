@@ -11,6 +11,7 @@ import net.pierrox.lightning_launcher.engine.variable.Variable;
 import net.pierrox.lightning_launcher.script.Script;
 
 import java.net.URISyntaxException;
+import java.text.DecimalFormat;
 
 public class EventAction {
     public int action;
@@ -84,9 +85,19 @@ public class EventAction {
                 case GlobalConfig.GO_DESKTOP_POSITION:
                     try {
                         Intent intent = Intent.parseUri(data, 0);
-                        int p = intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, Page.FIRST_DASHBOARD_PAGE);
+                        int p = intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, Page.FIRST_DASHBOARD_PAGE);
                         Page page = engine.getOrLoadPage(p);
-                        return Utils.formatPageName(page, page.findFirstOpener());
+                        String description = Utils.formatPageName(page, page.findFirstOpener());
+                        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_X)) {
+                            float x = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_X, 0);
+                            float y = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_Y, 0);
+                            float s = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_SCALE, 1);
+                            boolean absolute = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ABSOLUTE, true);
+                            DecimalFormat df = new DecimalFormat("0.##");
+                            description += absolute ? " @" : " +";
+                            description += df.format(x)+"x"+df.format(y)+"/"+df.format(s);
+                        }
+                        return description;
                     } catch (URISyntaxException e) {
                         // pass
                     }

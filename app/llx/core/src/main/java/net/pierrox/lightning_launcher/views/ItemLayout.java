@@ -1229,6 +1229,16 @@ public class ItemLayout extends ViewGroup {
     	computeCurrentLocalTransformValues();
     }
 
+    public void goToPage(float x, float y, float to_scale, boolean animate) {
+        float to_x = (x * getWidth()) * to_scale;
+        float to_y = (y * getHeight()) * to_scale;
+        if(animate) {
+            animateZoomTo(to_x, to_y, to_scale);
+        } else {
+            moveTo(to_x, to_y, to_scale);
+        }
+    }
+
     // recenter the view on the primary page after it has been scrolled multiple times in seamless mode
     public void recenter() {
         if(!mItemsBoundingBox.isEmpty()) { // this check does not apply if the ItemLayout has not been measured yet

@@ -27,7 +27,7 @@ import net.pierrox.lightning_launcher.views.ItemLayout;
 import net.pierrox.lightning_launcher_extreme.R;
 
 public class PhoneUtils {
-    public static Intent createDesktopBookmarkShortcut(Context context, ItemLayout il, Page page, String label, Bitmap icon) {
+    public static Intent createDesktopBookmarkShortcut(Context context, ItemLayout il, Page page, String label, Bitmap icon, boolean animate) {
         Matrix transform = null;
 
         // arguments: either page is null (use il.getPage) or il is null (try to retrieve il from dashboard using page)
@@ -44,27 +44,30 @@ public class PhoneUtils {
             transform = il.getLocalTransform();
         }
 
-        Intent intent = new Intent(context, Dashboard.class);
         float[] matrix_values = new float[9];
         if(transform == null) {
             transform = new Matrix();
         }
         transform.getValues(matrix_values);
-        intent.putExtra(LightningIntent.INTENT_EXTRA_PAGE, page.id);
         float x = matrix_values[Matrix.MTRANS_X];
         float y = matrix_values[Matrix.MTRANS_Y];
         float s = matrix_values[Matrix.MSCALE_X];
+        boolean absolute;
         if(il != null) {
             RectF r = il.getVirtualEditBordersBounds();
             if(r != null) {
                 x -= r.left;
                 y -= r.top;
             }
+            x /= il.getWidth();
+            y /= il.getHeight();
+            absolute = false;
+        } else {
+            absolute = true;
         }
 
-        intent.putExtra(LightningIntent.INTENT_EXTRA_TX, x);
-        intent.putExtra(LightningIntent.INTENT_EXTRA_TY, y);
-        intent.putExtra(LightningIntent.INTENT_EXTRA_TS, s);
+        Intent intent = getDesktopBookmarkIntent(context, page.id, x, y, s, animate, absolute);
+
         Intent shortcut = new Intent();
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, intent);
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME, label==null? context.getString(net.pierrox.lightning_launcher.R.string.shortcut_screen) : label);
@@ -76,6 +79,19 @@ public class PhoneUtils {
         }
 
         return shortcut;
+    }
+
+    public static Intent getDesktopBookmarkIntent(Context context, int page, float x, float y, float scale, boolean animate, boolean absolute) {
+        Intent intent = new Intent(context, Dashboard.class);
+
+        intent.putExtra(LightningIntent.INTENT_EXTRA_DESKTOP, page);
+        intent.putExtra(LightningIntent.INTENT_EXTRA_X, x);
+        intent.putExtra(LightningIntent.INTENT_EXTRA_Y, y);
+        intent.putExtra(LightningIntent.INTENT_EXTRA_SCALE, scale);
+        intent.putExtra(LightningIntent.INTENT_EXTRA_ANIMATE, animate);
+        intent.putExtra(LightningIntent.INTENT_EXTRA_ABSOLUTE, absolute);
+
+        return intent;
     }
 
     public static void showPreferenceHelp(Context context, LLPreference preference) {

@@ -299,17 +299,17 @@ public class LightningLWPService extends WallpaperService {
             }
 
             @Override
-            public void goToDesktopPosition(int page, float x, float y, float s, boolean animate) {
+            public void goToDesktopPosition(int page, float x, float y, float s, boolean animate, boolean absolute) {
                 if(Page.isDashboard(page) && page != getCurrentRootPage().id) {
                     LightningEngine engine = mMainPage.getEngine();
                     engine.getGlobalConfig().lwpScreen = page;
                     engine.notifyGlobalConfigChanged();
                     ItemLayout il = loadRootItemLayout(page, false, true, animate);
-                    goToItemLayoutPosition(il, x, y, s, animate);
+                    goToItemLayoutPosition(il, x, y, s, animate, absolute);
                 } else {
                     ItemLayout[] itemLayouts = getItemLayoutsForPage(page);
                     for (ItemLayout il : itemLayouts) {
-                        goToItemLayoutPosition(il, x, y, s, animate);
+                        goToItemLayoutPosition(il, x, y, s, animate, absolute);
                     }
                 }
             }

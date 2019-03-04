@@ -174,7 +174,7 @@ public class LL {
 	 */
 	public void goToDesktopPosition(int id, float x, float y, float scale, boolean animate) {
         net.pierrox.lightning_launcher.script.api.screen.Screen screen = mLightning.getScriptScreen();
-        screen.getScreen().goToDesktopPosition(id, -x * scale, -y * scale, scale, animate);
+        screen.getScreen().goToDesktopPosition(id, -x * scale, -y * scale, scale, animate, true);
 	}
 
 	/**
