@@ -53,7 +53,9 @@ public class LL {
 	 * Returns the home desktop.
      * As of Lightning V14, this method looks for the desktop in the home screen, then in the background desktop.
      *
-     * @deprecated no alternative
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getContainerById(int)} instead together with {@link Configuration#getHomeDesktopId()}
+     * <br><code>LL.getHomeDesktop() -> getHomeScreen().getContainerById(getConfiguration().getHomeDesktopId())</code>
+     * (note: in some rare cases {@link Lightning#getHomeScreen()} may return null. If necessary consider searching on {@link Lightning#getBackgroundScreen()} as an alternative)
 	 */
 	public Desktop getHomeDesktop() {
         int id = mLightning.getConfiguration().getHomeDesktopId();
@@ -71,7 +73,9 @@ public class LL {
 	 * Returns the desktop used as the lock screen, or null if not set.
      * As of Lightning V14, this method looks for the desktop in the lock screen, then in the home screen, and finally in the background desktop.
      *
-     * @deprecated no alternative
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getContainerById(int)} instead together with {@link Configuration#getLockscreenDesktopId()}
+     * <br><code>LL.getLockscreenDesktop() -> getLockScreen().getContainerById(getConfiguration().getLockscreenDesktopId())</code>
+     * (note: in most cases {@link Lightning#getLockScreen()} may return null. If necessary consider searching on {@link Lightning#getHomeScreen()} or {@link Lightning#getBackgroundScreen()} as an alternative)
 	 */
 	public Desktop getLockscreenDesktop() {
         int id = mLightning.getConfiguration().getLockscreenDesktopId();
@@ -95,8 +99,8 @@ public class LL {
 	/**
 	 * Returns the desktop used as the floating desktop, or null if not set.
      *
-     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getCurrentDesktop()} instead together with {@link Lightning#getFloatingScreen()}
-     * <br><code>LL.getFloatingDesktop() -> getFloatingScreen().getCurrentDesktop()</code>
+     * @deprecated use {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getContainerById(int)} instead together with {@link Configuration#getFloatingDesktopId()}
+     * <br><code>LL.getFloatingDesktop(); -> getFloatingScreen().getContainerById(getConfiguration().getFloatingDesktopId())</code>
 	 */
 	public Desktop getFloatingDesktop() {
         int id = mLightning.getConfiguration().getFloatingDesktopId();
