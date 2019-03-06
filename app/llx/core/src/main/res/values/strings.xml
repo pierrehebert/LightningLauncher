@@ -836,8 +836,7 @@
     <string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
     <string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
     <string name="tmpl_b">Make a backup first</string>
-    <string name="apply_tmpl_m">You are about to apply the template \'%s\':</string>
-    
+
     <!-- added 171 -->
     <string name="s_ls_lu_t">Launch unlock</string>
     <string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>

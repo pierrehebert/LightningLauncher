@@ -242,7 +242,6 @@ public class ApplyTemplate extends ResourceWrapperActivity {
                 cb_wallpaper.setText(R.string.tmpl_w);
 
                 builder.setView(content);
-                builder.setMessage(getString(R.string.apply_tmpl_m, mTemplateDisplayName));
                 builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
