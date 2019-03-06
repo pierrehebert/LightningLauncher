@@ -27,6 +27,11 @@
     <!-- Tasker -->
     <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
 
+    <permission
+            android:name="net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE"
+            android:protectionLevel="dangerous"/>
+
+
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
@@ -350,6 +355,10 @@
                 <action android:name="org.adw.launcher.icons.ACTION_PICK_ICON" />
             </intent-filter>
         </activity>
+
+        <service android:name="net.pierrox.lightning_launcher.util.PluginService"
+                 android:permission="net.pierrox.lightning_launcher.USE_PLUGIN_SERVICE"
+                 android:exported="true"/>
 
 	</application>
     
