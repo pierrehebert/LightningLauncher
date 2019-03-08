@@ -18,4 +18,17 @@ sed -i 's/getEvent_/getEvent/g' html/reference/net/pierrox/lightning_launcher/sc
 sed -i 's/getEvent_/getEvent/g' html/reference/net/pierrox/lightning_launcher/script/api/LL.html
 sed -i 's/getEvent_/getEvent/g' html/reference/current.xml
 
-scp -r html pierrot@ruby:~/tmp
+
+echo "beta? y/n [n]"
+read answer
+if [ "$answer" = "y" ]; then
+	dir=api-beta
+else
+	dir=api
+fi
+rm -rf llx-$dir
+cp -r html llx-$dir
+tar czf llx-$dir.tar.gz llx-$dir
+scp llx-$dir.tar.gz pierrot@vmail:/home/www/lightninglauncher.com/docs/www/scripting/reference/downloadable
+ssh pierrot@vmail "cd /home/www/lightninglauncher.com/docs/www/scripting/reference && rm -rf $dir && tar xf downloadable/llx-$dir.tar.gz && mv llx-$dir $dir"
+rm -rf llx-$dir.tar.gz llx-$dir
