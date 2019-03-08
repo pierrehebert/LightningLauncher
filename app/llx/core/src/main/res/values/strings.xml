@@ -102,13 +102,16 @@
 <string name="app_killer_s">Kill apps with Lightning</string>
 <string name="donate_t">Donate</string>
 <string name="donate_s">Want to support Lightning?</string>
-<string name="backup_t">Backup</string>
+<string name="backup_t">Create a backup</string>
+<string name="import_t">Load an external file</string>
+<string name="import_e">Import failed!</string>
+<string name="importing">Import in progress</string>
 <string name="restore_t">Restore</string>
 <string name="rate_t">Rate Lightning</string>
 <string name="rate_s">Tell us what you think</string>
 <string name="facebook_t">Lightning Launcher on Google+</string>
 <string name="facebook_s">App update news, suggest a feature, or report a bug</string>
-    <string name="ld_t">Lightning Drawer</string>
+<string name="ld_t">Lightning Drawer</string>
 <string name="ld_s">A highly advanced All Apps page.</string>
 <string name="customize_ll">Customize Lightning</string>
 
@@ -633,7 +636,7 @@
 <string name="tmpl_a_s">Load it from an installed APK</string>
 <string name="tmpl_b_t">Browse existing templates</string>
 <string name="tmpl_b_s">Get fresh new themes</string>
-<string name="tmpl_e_t">Export template</string>
+<string name="tmpl_e_t">Create a template</string>
 <string name="tmpl_e_s">Long tap to read the tutorial</string>
 <string name="tmpl_c">Select a template</string>
 <string name="tmpl_e_m">Exporting…</string>

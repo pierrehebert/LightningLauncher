@@ -16,6 +16,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 public class FileUtils {
 	public static final String WALLPAPER_DIR = "wp";
@@ -44,6 +45,15 @@ public class FileUtils {
     public static final File LL_EXT_DIR =new File(Environment.getExternalStorageDirectory(), "LightningLauncher");
     public static final File LL_TMP_DIR =new File(LL_EXT_DIR, "tmp");
     public static final File LL_EXT_SCRIPT_DIR = new File(LL_EXT_DIR, "script");
+
+
+	private static byte[] copy_buffer=new byte[4096];
+	public static void copyStream(InputStream from, OutputStream to) throws IOException {
+		int n;
+		while((n=from.read(copy_buffer))!=-1) {
+			to.write(copy_buffer, 0, n);
+		}
+	}
 
 	public static void saveStringToFile(String what, File out) throws IOException {
 		FileOutputStream fos=null;

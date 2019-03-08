@@ -376,7 +376,7 @@ public class BackupRestoreTool {
 		try {
 			ZipEntry ze=new ZipEntry(to+"/"+name);
 			zos.putNextEntry(ze);
-			copy(is, zos);
+			FileUtils.copyStream(is, zos);
 			zos.closeEntry();
 		} finally {
 			try { is.close(); } catch(Exception e) {/*pass*/}
@@ -512,7 +512,7 @@ public class BackupRestoreTool {
 						parent.mkdirs();
 					}
 					fos=new FileOutputStream(out);
-					copy(zis, fos);
+					FileUtils.copyStream(zis, fos);
 				} catch(IOException e) {
 					throw e;
 				} finally {
@@ -547,7 +547,7 @@ public class BackupRestoreTool {
             try {
                 File out = new File(FileUtils.LL_TMP_DIR, name.substring(l));
                 fos=new FileOutputStream(out);
-                copy(zis, fos);
+				FileUtils.copyStream(zis, fos);
             } finally {
                 if(fos!=null) try { fos.close(); } catch(Exception e) {}
             }
@@ -603,21 +603,13 @@ public class BackupRestoreTool {
 					parent.mkdirs();
 				}
 				fos=new FileOutputStream(out);
-				copy(zis, fos);
+				FileUtils.copyStream(zis, fos);
 			} finally {
 				if(fos!=null) try { fos.close(); } catch(Exception e) {}
 			}
 		}
 		
 		return ze;
-	}
-	
-	private static byte[] copy_buffer=new byte[4096];
-	private static void copy(InputStream from, OutputStream to) throws IOException {
-		int n;
-		while((n=from.read(copy_buffer))!=-1) {
-			to.write(copy_buffer, 0, n);
-		}
 	}
 	
 	private static ZipEntry skipZipEntries(ZipInputStream zis, String prefix) throws IOException {
