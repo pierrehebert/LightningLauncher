@@ -314,7 +314,7 @@ public class Lightning {
      * Return the lock screen, null if not created yet
      */
     public ActivityScreen getLockScreen() {
-        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LOCK));
+        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LOCK));
     }
 
     /**
@@ -339,7 +339,9 @@ public class Lightning {
     }
 
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
-        if(screen.getIdentity() == net.pierrox.lightning_launcher.api.ScreenIdentity.HOME) {
+        if(screen == null){
+            return null;
+        } else if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.ScreenIdentity.HOME) {
             return new HomeScreen(this, screen);
         } else if(screen.getContext() instanceof Activity) {
             return new ActivityScreen(this, screen);
