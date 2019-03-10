@@ -14,6 +14,7 @@ import com.faendir.rhino_android.RhinoAndroidHelper;
 
 import net.dinglisch.android.tasker.TaskerIntent;
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
@@ -341,7 +342,7 @@ public class Lightning {
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
         if(screen == null){
             return null;
-        } else if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.ScreenIdentity.HOME) {
+        } else if(screen.getIdentity() == ScreenIdentity.HOME) {
             return new HomeScreen(this, screen);
         } else if(screen.getContext() instanceof Activity) {
             return new ActivityScreen(this, screen);
