@@ -42,8 +42,8 @@ import java.util.ArrayList;
 
 /**
  * Entry point for most Lightning Launcher scripted features.
- * The Lightning object is the root object in the script context, hence its functions can be called without naming it, unlike with the deprecated LL object.
- * For instance, instead of using <code>LL.getDesktopByName('d')</code>, simply use <code>getDesktopByName('d')</code>
+ * The Lightning object is the root object in the script context, hence its functions can be called without naming it (unlike the rest of the classes).
+ * For instance, instead of using <code style="color:#333">Lightning.alert('Hello World')</code>, simply use <code>alert('Hello World')</code>
  */
 public class Lightning {
 
