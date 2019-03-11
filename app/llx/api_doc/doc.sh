@@ -16,6 +16,7 @@ javadoc \
 
 sed -i 's/getEvent_/getEvent/g' html/reference/net/pierrox/lightning_launcher/script/api/Lightning.html
 sed -i 's/getEvent_/getEvent/g' html/reference/net/pierrox/lightning_launcher/script/api/LL.html
+sed -i 's/getEvent_/getEvent/g' html/reference/net/pierrox/lightning_launcher/script/api/Event.html
 sed -i 's/getEvent_/getEvent/g' html/reference/current.xml
 
 
