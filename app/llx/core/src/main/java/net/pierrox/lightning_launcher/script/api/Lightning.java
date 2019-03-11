@@ -352,21 +352,21 @@ public class Lightning {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableBoolean(String name, boolean value) {
         setVariable(name, value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableInteger(String name, long value) {
         setVariable(name, (int)value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableFloat(String name, float value) {
         if(Float.isNaN(value)) {
@@ -376,7 +376,7 @@ public class Lightning {
     }
 
     /**
-     * Set a string variable. This is a shortcut for <code>LL.getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a string variable. This is a shortcut for <code>getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableString(String name, String value) {
         setVariable(name, value);

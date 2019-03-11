@@ -93,7 +93,7 @@ public class Script {
      * </pre></code>
      * And then use it this way:
      * <code><pre>
-     *     eval(LL.getScript("some_script"));
+     *     eval(getScriptByName("some_script").getText());
      *     doSomething();
      * </pre></code>
      */

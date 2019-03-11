@@ -272,7 +272,7 @@ public class Screen {
      * Start an activity.
      * Example:<code><pre>
      * var intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pierrox.net/")
-     * LL.startActivity(intent);</pre></code>
+     * getActiveScreen().startActivity(intent);</pre></code>
      * @param intent intent to start the activity
      * @return true if launch is successful, false if activity not found or permission denied
      */

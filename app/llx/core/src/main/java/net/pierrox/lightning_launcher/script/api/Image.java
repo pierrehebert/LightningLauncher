@@ -264,7 +264,7 @@ public abstract class Image {
 
     /**
      * Create an image from a package and a resource name.
-     * For instance:<code>LL.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
+     * For instance:<code>Image.createImage("net.pierrox.lightning_launcher_extreme", "icon")</code>
      * The density used is either the one given by ActivityManager.getLauncherLargeIconDensity if available, or the current one.
      * @param pkg name of the package, use "android" to access system resources.
      * @param name name of the drawable resource

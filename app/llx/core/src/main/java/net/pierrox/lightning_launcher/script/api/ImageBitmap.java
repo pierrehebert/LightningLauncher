@@ -18,7 +18,7 @@ import java.io.IOException;
 
 /**
  * Wraps a static bitmap.
- * Such an image can be loaded from file, created using {@link LL#createImage(int, int)}, or obtained from items icons.
+ * Such an image can be loaded from file, created using {@link Image#createImage(int, int)}, or obtained from items icons.
  */
 public class ImageBitmap extends Image {
     private Bitmap mBitmap;
@@ -101,7 +101,7 @@ public class ImageBitmap extends Image {
      * <ul>
      *     <li>{@link net.pierrox.lightning_launcher.script.api.Shortcut#getDefaultIcon()}</li>
      *     <li>{@link net.pierrox.lightning_launcher.script.api.Shortcut#getCustomIcon()}</li>
-     *     <li>{@link net.pierrox.lightning_launcher.script.api.LL#createImage(String)}</li>
+     *     <li>{@link Image#createImage(String)}</li>
      * Calling this method on an image without source file will do nothing.
      */
     public void save() {

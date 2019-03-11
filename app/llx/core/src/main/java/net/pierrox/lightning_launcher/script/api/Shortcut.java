@@ -30,7 +30,7 @@ public class Shortcut extends Item {
 	}
 
     /**
-     * Launch the intent associated with this shortcut. This generic method does nothing when the script is run in background: in this context an app or shortcut can be launched using LL.getContext().startActivity(item.getIntent)); instead.
+     * Launch the intent associated with this shortcut. This generic method does nothing when the script is run in background: in this context an app or shortcut can be launched using <code>getActiveScreen().getContext().startActivity(item.getIntent));</code> instead.
      */
 	public void launch() {
         mItemView.getParentItemLayout().getScreen().launchItem(mItemView);
