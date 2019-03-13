@@ -647,6 +647,16 @@ public class Lightning {
             return false;
         }
     }
+    
+    /**
+     * Displays a toast (small message at the bottom of the screen).
+     * This is equivalent to <code>Toast.makeText(getEvent().getScreen().getContext(), text, Toast.LENGTH_LONG).show()</code>
+     * (you can use that code directly if you want a LENGTH_SHORT toast or to save the toast object instead of showing it).
+     * @param text message to display
+     */
+    public void toast(String text){
+        android.widget.Toast.makeText(getScriptScreen().getContext(), text, android.widget.Toast.LENGTH_LONG).show();
+    }
 
     /**
      * Execute a function later.
