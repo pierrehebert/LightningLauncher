@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import com.faendir.rhino_android.RhinoAndroidHelper;
 
@@ -573,7 +574,7 @@ public class Lightning {
                 context.sendBroadcast(intent);
                 throw pending;
             } catch(IllegalStateException e) {
-                android.widget.Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
@@ -637,13 +638,13 @@ public class Lightning {
                 throw pending;
             } catch (IllegalStateException e) {
                 // not called with continuation support
-                android.widget.Toast.makeText(context, "cannot display \"" + message + "\" in this context", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot display \"" + message + "\" in this context", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
             }
         } else {
-            android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -655,7 +656,7 @@ public class Lightning {
      * @param text message to display
      */
     public void toast(String text){
-        android.widget.Toast.makeText(getScriptScreen().getContext(), text, android.widget.Toast.LENGTH_LONG).show();
+        Toast.makeText(getScriptScreen().getContext(), text, Toast.LENGTH_LONG).show();
     }
 
     /**
