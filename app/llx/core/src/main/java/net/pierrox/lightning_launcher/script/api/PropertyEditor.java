@@ -33,7 +33,7 @@ import java.util.HashMap;
 
 /**
  * Utility to modify one or more configuration settings at once. Modify one or more properties using the same PropertyEditor, then call {@link #commit()} to validate changes.
- * This object is retrieved using {@link PropertySet#edit()}. You can chain calls this way:
+ * An instance of this object can be retrieved with {@link PropertySet#edit()}. You can chain calls this way:
  * <pre><code>
  * 	property_set.edit()
  * 		.setInteger("someProperty", some_value)

@@ -28,6 +28,8 @@ import java.lang.reflect.Field;
  * Utility class to manipulate images (icons, backgrounds, etc.).
  * This is the base class for various kind of images. Each image type (bitmap, nine patch, animation, scripted) have their own set of features.
  * Please refer to their respective documentation.
+ *
+ * An instance of this object can be created with {@link #createImage(String)}, {@link #createImage(String, String)}, {@link #fromDrawable(Lightning, Drawable, Item, File)}; or retrieved with {@link Folder#getWindowBackground()}, {@link net.pierrox.lightning_launcher.script.api.Item#getBoxBackground(String)}, {@link Shortcut#getDefaultIcon()}, {@link Shortcut#getCustomIcon()}, {@link Shortcut#getImage()}, {@link Shortcut#getIconLayer(String)} or {@link net.pierrox.lightning_launcher.script.api.screen.ActivityScreen#pickImage(int)}.
  */
 public abstract class Image {
     protected Lightning mLightning;

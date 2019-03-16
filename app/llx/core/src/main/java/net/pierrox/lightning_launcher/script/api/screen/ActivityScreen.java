@@ -15,6 +15,8 @@ import org.mozilla.javascript.Function;
 
 /**
  * A screen backed with an Android Activity.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Screen} when that returned Screen is an ActivityScreen; or with {@link Lightning#getAppDrawerScreen()} or {@link Lightning#getLockScreen()}.
  */
 public class ActivityScreen extends Screen {
     /**

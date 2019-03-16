@@ -12,6 +12,8 @@ import java.io.File;
  * A kind of image which can play an animation (often loaded from GIF files).
  *
  * <b>Note</b>: as of today backgrounds and icon layers do not support animations, only the first frame will be displayed.
+ *
+ * An instance of this object can be created with {@link Image#createAnimation(int, int, int, int, int)}; or retrieved with any function that returns an {@link Image} when that image is an ImageAnimation.
  */
 public class ImageAnimation extends Image {
     private SharedAsyncGraphicsDrawable mDrawable;

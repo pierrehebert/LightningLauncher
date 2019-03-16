@@ -9,6 +9,8 @@ import java.util.LinkedHashMap;
 
 /**
  * Enumeration class. Represents a Property object {@see PropertySet} {@see PropertyEditor}.
+ *
+ * An instance of this object can be created with {@link #getByName(String)}.
  */
 public class Property {
     public static final int TYPE_UNKNOWN = -1;

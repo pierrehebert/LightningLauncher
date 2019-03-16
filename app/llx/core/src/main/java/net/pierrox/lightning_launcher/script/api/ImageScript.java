@@ -12,7 +12,8 @@ import org.mozilla.javascript.Scriptable;
 /**
  * ImageScript is a way to draw images or animations without the need for intermediate bitmaps.
  * Such images are scalable and memory efficient.
- * Instances of ImageScript can be created with {@link Image#createImage(Scriptable, int, int)}.
+ *
+ * An instance of this object can be created with {@link Image#createImage(Scriptable, int, int)}; or retrieved with any function that returns an {@link Image} when that image is an ImageScript.
  *
  * The Scriptable object must have a "draw" function, and optionally a "pause" and "resume" functions. These functions are called with a DrawingContext instance.
  * <br/><br/>

@@ -34,6 +34,8 @@ import org.mozilla.javascript.Scriptable;
  *
  * Since Lightning V14 allows the same container to be displayed multiple times on the same screen, it is possible to retrieve
  * several Item objects linked with the same underlying data. The identifier (see {@link #getId()}) will then be the same.
+ *
+ * An instance of this object can be retrieved with {@link Event#getItem()}, {@link Screen#getItemById(int)}, {@link Screen#getAllItemsById(int)}, {@link Container#getAllItems()}, {@link Container#getItemById(int)}, {@link Container#getItemByName(String)}, {@link Container#cloneItem(Item)}, {@link Container#moveItem(Item, Container)}, {@link Container#getOpener()} or {@link ImageScript.DrawingContext#getItem()}; or by using directly the special variable 'item' (which is the current Item) when running a 'Menu' event.
  */
 public class Item {
 	

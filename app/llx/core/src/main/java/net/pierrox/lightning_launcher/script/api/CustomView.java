@@ -8,6 +8,8 @@ import net.pierrox.lightning_launcher.views.item.ItemView;
 
 /**
  * A CustomView is an advance special item that can display any Android View.
+ *
+ * An instance of this object can be retrieved with {@link Container#addCustomView(float, float)}; or with any function that returns an {@link Item} when that returned item is a CustomView; or by using directly the special variable 'item' (which is the current CustomView) when running a 'Create/Destroy script' event.
  */
 public class CustomView extends Item {
     /**

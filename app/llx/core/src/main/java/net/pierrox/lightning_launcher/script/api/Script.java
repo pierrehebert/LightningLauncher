@@ -9,6 +9,8 @@ import java.util.HashMap;
 /**
  * This object is used to access script properties such as text, tag and menu attributes.
  * Warning: this API is currently experimental.
+ *
+ * An instance of this object can be retrieved with {@link Lightning#getCurrentScript()}, {@link Lightning#getScriptByName(String)}, {@link Lightning#getScriptByPathAndName(String, String)}, {@link Lightning#getScriptById(String)}, {@link Lightning#createScript(String, String, String, int)} or {@link Lightning#getAllScriptMatching(int)}.
  */
 public class Script {
     public static final int FLAG_ALL = net.pierrox.lightning_launcher.script.Script.FLAG_ALL;

@@ -30,6 +30,9 @@ import android.util.Pair;
  * <li>Page Indicator: item, shortcut and page indicator properties</li>
  * <li>Other objects: contains item properties only</li>
  * </ul>
+ *
+ * An instance of this object can be retrieved with {@link Item#getProperties()}, {@link Container#getProperties()} or {@link Configuration#getProperties()}.
+ *
  * The list of supported properties can be found below. Behavior when setting a value for a property marked as read only is unspecified and can lead to data loss.
  * The same may appear when setting a value out of its bounds. These cases are currently not checked.
  *

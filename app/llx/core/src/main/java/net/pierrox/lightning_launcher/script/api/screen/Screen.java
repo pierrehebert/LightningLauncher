@@ -25,6 +25,8 @@ import java.util.ArrayList;
  *     <li>the lock screen (see {@link ActivityScreen})</li>
  *     <li>the floating desktop</li>
  * </ul>
+ *
+ * An instance of this object can be retrieved with {@link Event#getScreen()}, {@link Item#getScreen()}, {@link Lightning#getActiveScreen()}, {@link Lightning#getFloatingScreen()}, {@link Lightning#getLiveWallpaperScreen()}, {@link Lightning#getBackgroundScreen()}
  */
 public class Screen {
     private static final String EVENT_SOURCE_SCRIPT = "RUN_SCRIPT";

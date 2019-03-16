@@ -27,6 +27,8 @@ import org.mozilla.javascript.Scriptable;
 
 /**
  * The container can be either a desktop, a folder or a panel. Its role is to manage items inside.
+ *
+ * An instance of this object can be retrieved with {@link Event#getContainer()}, {@link Item#getParent()}, {@link Folder#getContainer()}, {@link Panel#getContainer()}, {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getContainerById(int)}, {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getAllContainersById(int)} or {@link Screen#getFocusedContainer()}; or by using directly the special variable 'container' (which is the current Container) when running a 'Menu' event.
  */
 public class Container {
 	public static final int NONE = Page.NONE;

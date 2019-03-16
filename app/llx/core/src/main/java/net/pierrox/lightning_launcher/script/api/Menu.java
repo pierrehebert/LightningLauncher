@@ -7,6 +7,8 @@ import org.mozilla.javascript.Function;
 
 /**
  * Provides an access to the popup menu, so that it can be customized.
+ *
+ * An instance of this object can be retrieved by using directly the special variable 'menu' (which is the current Menu) when running a 'Menu' event.
  */
 public class Menu {
     /** Main item menu in edit mode */

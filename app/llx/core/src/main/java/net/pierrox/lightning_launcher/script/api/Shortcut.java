@@ -18,7 +18,9 @@ import java.io.File;
 
 /**
  * A shortcut is a label and an icon, tapping on it will usually launch an app. 
- * It is used for both so called 'apps' and 'shortcuts' because these two objects are really the same thing (technically) 
+ * It is used for both so called 'apps' and 'shortcuts' because these two objects are really the same thing (technically)
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Item} when that returned item is a Shortcut; or with {@link Container#addShortcut(String, Intent, float, float)}.
  */
 public class Shortcut extends Item {
 	

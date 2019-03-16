@@ -19,6 +19,8 @@ import java.io.IOException;
 /**
  * Wraps a static bitmap.
  * Such an image can be loaded from file, created using {@link Image#createImage(int, int)}, or obtained from items icons.
+ *
+ * An instance of this object can be created with {@link Image#createImage(int, int)} or {@link Image#createTextIcon(String, int, int, int, Typeface)}; or retrieved with any function that returns an {@link Image} when that image is an ImageBitmap; or with {@link ImageAnimation#getFrameImage(int)} or {@link net.pierrox.lightning_launcher.script.api.screen.ActivityScreen#cropImage(ImageBitmap, boolean)}.
  */
 public class ImageBitmap extends Image {
     private Bitmap mBitmap;
