@@ -340,6 +340,9 @@ public class Lightning {
         return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.BACKGROUND));
     }
 
+    /**
+     * @hide
+     */
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
         if(screen == null){
             return null;

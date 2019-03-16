@@ -286,8 +286,10 @@ public class PropertySet {
 	}
 
 	private Type mType;
-
-
+	
+	/**
+	 * @hide
+	 */
 	/*package*/ public PropertySet(Lightning lightning, Object script_object) {
 		mLightning = lightning;
         mScriptObject = script_object;
