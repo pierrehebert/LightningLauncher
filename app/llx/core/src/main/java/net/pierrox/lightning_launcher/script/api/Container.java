@@ -7,15 +7,13 @@ import android.view.ViewGroup;
 
 import com.faendir.rhino_android.RhinoAndroidHelper;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import net.pierrox.lightning_launcher.R;
 import net.pierrox.lightning_launcher.data.EmbeddedFolder;
 import net.pierrox.lightning_launcher.data.IconPack;
-import net.pierrox.lightning_launcher.engine.LightningEngine;
 import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.data.Utils;
+import net.pierrox.lightning_launcher.engine.LightningEngine;
+import net.pierrox.lightning_launcher.script.api.screen.Screen;
 import net.pierrox.lightning_launcher.views.ItemLayout;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 
@@ -24,6 +22,9 @@ import org.mozilla.javascript.ContinuationPending;
 import org.mozilla.javascript.NativeJavaObject;
 import org.mozilla.javascript.ScriptRuntime;
 import org.mozilla.javascript.Scriptable;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * The container can be either a desktop, a folder or a panel. Its role is to manage items inside.

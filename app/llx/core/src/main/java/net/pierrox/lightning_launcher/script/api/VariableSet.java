@@ -1,7 +1,6 @@
 package net.pierrox.lightning_launcher.script.api;
 
 import net.pierrox.lightning_launcher.engine.variable.Value;
-import net.pierrox.lightning_launcher.engine.variable.Variable;
 import net.pierrox.lightning_launcher.engine.variable.VariableManager;
 
 /**

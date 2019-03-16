@@ -2,7 +2,6 @@ package net.pierrox.lightning_launcher.script.api;
 
 import android.view.View;
 
-import net.pierrox.lightning_launcher.script.api.screen.Screen;
 import net.pierrox.lightning_launcher.views.item.CustomViewView;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 

@@ -1,6 +1,6 @@
 package net.pierrox.lightning_launcher.script.api;
 
-import java.lang.reflect.Field;
+import android.util.Pair;
 
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -8,9 +8,10 @@ import net.pierrox.lightning_launcher.configuration.ItemConfig;
 import net.pierrox.lightning_launcher.configuration.PageConfig;
 import net.pierrox.lightning_launcher.configuration.ShortcutConfig;
 import net.pierrox.lightning_launcher.configuration.ShortcutConfigStylable;
-import net.pierrox.lightning_launcher.data.*;
+import net.pierrox.lightning_launcher.data.EventAction;
+import net.pierrox.lightning_launcher.data.Page;
 
-import android.util.Pair;
+import java.lang.reflect.Field;
 
 /**
  * Access to container and item properties (aka settings).

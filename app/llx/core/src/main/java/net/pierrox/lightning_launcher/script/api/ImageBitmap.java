@@ -2,12 +2,11 @@ package net.pierrox.lightning_launcher.script.api;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.view.View;
 
 import net.pierrox.lightning_launcher.LLApp;
-import net.pierrox.lightning_launcher.engine.*;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;

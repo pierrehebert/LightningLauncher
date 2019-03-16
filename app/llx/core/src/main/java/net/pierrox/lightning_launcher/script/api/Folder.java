@@ -3,7 +3,6 @@ package net.pierrox.lightning_launcher.script.api;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 
-import net.pierrox.lightning_launcher.data.*;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.views.FolderView;
 import net.pierrox.lightning_launcher.views.ItemLayout;

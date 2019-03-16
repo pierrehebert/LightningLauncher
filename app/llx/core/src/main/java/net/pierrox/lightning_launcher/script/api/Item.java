@@ -1,10 +1,6 @@
 package net.pierrox.lightning_launcher.script.api;
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -13,9 +9,10 @@ import android.widget.TextView;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
-import net.pierrox.lightning_launcher.data.*;
 import net.pierrox.lightning_launcher.data.Box;
+import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.data.Shortcut;
+import net.pierrox.lightning_launcher.data.Utils;
 import net.pierrox.lightning_launcher.script.api.screen.Screen;
 import net.pierrox.lightning_launcher.views.IconLabelView;
 import net.pierrox.lightning_launcher.views.ItemLayout;
@@ -26,6 +23,10 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.NativeJavaObject;
 import org.mozilla.javascript.ScriptRuntime;
 import org.mozilla.javascript.Scriptable;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * The item is the base class for other objects that can be found in a container (shortcuts, folders, etc.).
