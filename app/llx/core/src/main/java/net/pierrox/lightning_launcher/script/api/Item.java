@@ -61,7 +61,11 @@ public class Item {
 		object.setPrototype(new NativeJavaObject(scope, this, null));
 		return object;
 	}
-
+	
+	/**
+	 * Return the Screen where this item is placed.
+	 * @return the screen containing this item
+	 */
 	public Screen getScreen() {
 		return mLightning.createScreen(mItemView.getParentItemLayout().getScreen());
 	}

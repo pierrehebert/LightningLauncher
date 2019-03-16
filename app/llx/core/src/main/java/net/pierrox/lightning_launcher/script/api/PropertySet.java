@@ -14,14 +14,14 @@ import android.util.Pair;
 
 /**
  * Access to container and item properties (aka settings).
- * This object provides a way to query for configuration options as well as a mean to update them (see {@link #edit()}.
- * Properties are accessed through their named. There are different property classes:
+ * This object provides a way to query for configuration options as well as a mean to update them (see {@link #edit()}).
+ * Properties are accessed through their name. There are different property classes:
  * <ul>
  * <li>container properties: options that can be seen in the desktop, folder and panel settings screen</li>
  * <li>item properties: options available to all objects (such as box properties or pin mode)</li>
  * <li>shortcut properties: options related to text/icon objects (including apps, shortcuts, folders and dynamic texts)</li>
- * <li>folder properties: options related to folder window (hence only for folder objects)</li>  
- * </ul> 
+ * <li>folder properties: options related to folder window (hence only for folder objects)</li>
+ * </ul>
  * Available properties depends on the object from which this PropertySet is retrieved:
  * <ul>
  * <li>Container: contains properties for the container and default properties for items, shortcuts and folders.</li>
@@ -32,7 +32,7 @@ import android.util.Pair;
  * </ul>
  * The list of supported properties can be found below. Behavior when setting a value for a property marked as read only is unspecified and can lead to data loss.
  * The same may appear when setting a value out of its bounds. These cases are currently not checked.
- * 
+ *
  * <br><br><b>Container properties:</b>
  * <table>
  * 	<thead><tr><td>Name</td><td>Type</td><td>Access</td><td>Admissible values</td></tr></thead>
@@ -57,7 +57,7 @@ import android.util.Pair;
  * 		<tr><td><a href="/help/app/topic.php?id=61">gridLayoutModeVerticalLineColor</a></td><td>int</td><td>Read/Write</td><td>argb color</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=62">gridLayoutModeVerticalLineThickness</a></td><td>float</td><td>Read/Write</td><td>&gt;=0</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=63">gridAbove</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
- * 		
+ *
  * 		<tr><td><a href="/help/app/topic.php?id=53">bgSystemWPScroll</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=54">bgSystemWPWidth</a></td><td>int</td><td>Read/Write</td><td>&gt;0</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=55">bgSystemWPHeight</a></td><td>int</td><td>Read/Write</td><td>&gt;0</td></tr>
@@ -118,7 +118,7 @@ import android.util.Pair;
  * 		<tr><td><a href="/help/app/topic.php?id=194">adActionBarTextColor</a></td><td>int</td><td>Read/Write</td><td>argb color</td></tr>
  * 	</tbody>
  * </table>
- * 
+ *
  * <br><br><b>Item properties:</b>
  * <table>
  * 	<thead><tr><td>Name</td><td>Type</td><td>Access</td><td>Admissible values</td></tr></thead>
@@ -148,7 +148,7 @@ import android.util.Pair;
 
  * 	</tbody>
  * </table>
- * 
+ *
  * <br><br><b>Shortcut properties:</b>
  * <table>
  * 	<thead><tr><td>Name</td><td>Type</td><td>Access</td><td>Admissible values</td></tr></thead>
@@ -180,7 +180,7 @@ import android.util.Pair;
  * 		<tr><td><a href="/help/app/topic.php?id=162">s.iconColorFilter</a></td>   <td>int</td>  <td>Read/Write</td>  <td>argb color</td></tr>
  * 	</tbody>
  * </table>
- * 
+ *
  * <br><br><b>Folder properties:</b>
  * <table>
  * 	<thead><tr><td>Name</td><td>Type</td><td>Access</td><td>Admissible values</td></tr></thead>
@@ -412,7 +412,7 @@ public class PropertySet {
 				}
 				break;
 				
-			case 's': 
+			case 's':
 				if(page != null) {
 					config = page.config.defaultShortcutConfig;
 				} else if(item instanceof ShortcutConfigStylable) {

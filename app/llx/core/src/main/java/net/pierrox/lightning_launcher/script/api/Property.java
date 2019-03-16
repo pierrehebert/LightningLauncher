@@ -7,6 +7,9 @@ import net.pierrox.lightning_launcher.R;
 
 import java.util.LinkedHashMap;
 
+/**
+ * Enumeration class. Represents a Property object {@see PropertySet} {@see PropertyEditor}.
+ */
 public class Property {
     public static final int TYPE_UNKNOWN = -1;
     public static final int TYPE_BOOLEAN = 0;

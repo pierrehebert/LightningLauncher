@@ -6,6 +6,9 @@ import net.pierrox.lightning_launcher.script.api.screen.Screen;
 import net.pierrox.lightning_launcher.views.item.CustomViewView;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 
+/**
+ * A CustomView is an advance special item that can display any Android View.
+ */
 public class CustomView extends Item {
     /**
      * @hide

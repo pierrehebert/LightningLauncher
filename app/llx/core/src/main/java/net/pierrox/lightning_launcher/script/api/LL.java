@@ -514,7 +514,7 @@ public class LL {
      * @return an animation or null in case of error (most likely out of memory)
      *
      * @deprecated use {@link Image#createAnimation(int, int, int, int, int)} instead
-     * <br><code>LL.createAnimation(width, height, count, duration, loopCount) -> Image.createImage(width, height, count, duration, loopCount)</code>
+     * <br><code>LL.createAnimation(width, height, count, duration, loopCount) -> Image.createAnimation(width, height, count, duration, loopCount)</code>
      */
     public ImageAnimation createAnimation(int width, int height, int count, int duration, int loopCount) {
         return Image.createAnimation(width, height, count, duration, loopCount);
