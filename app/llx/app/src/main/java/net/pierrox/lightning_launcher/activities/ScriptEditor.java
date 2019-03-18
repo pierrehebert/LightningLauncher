@@ -344,6 +344,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		mScriptText = (AdvancedEditText) findViewById(R.id.sc_text);
         mScriptText.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.NORMAL));
         mScriptText.addTextChangedListener(mScriptTextWatcher);
+        mScriptText.addTextChangedListener(mScriptTextWatcherIndent);
         mScriptText.setListener(new AdvancedEditText.OnAdvancedEditTextEvent() {
             private float mInitialTextSize;
             @Override
@@ -1240,4 +1241,72 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		b.setOnLongClickListener(mCompletionButtonLongClickListener);
 		mCompletionsViewGroup.addView(b);
 	}
+	
+	
+	// ------------- autoindentation ------------
+	
+	String mSpanNewline = "mSpanNewline";
+	public static final int INDENT_SIZE = 2;
+	
+	TextWatcher mScriptTextWatcherIndent = new TextWatcher() {
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		}
+		
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			if(count == 1 && s.charAt(start) == '\n'){
+				mScriptText.getText().setSpan(mSpanNewline,start,start,0);
+			}
+		}
+		
+		@Override
+		public void afterTextChanged(Editable editable) {
+			int posEnter = editable.getSpanStart(mSpanNewline);
+			editable.removeSpan(mSpanNewline);
+			if (posEnter == -1 || editable.charAt(posEnter) != '\n') return;
+			
+			int pos = posEnter;
+			
+			//get previous char
+			char prev = pos == 0 ? '\0' : editable.charAt(pos-1);
+			
+			//goto previous line
+			do {
+				pos--;
+			} while(pos >= 0 && editable.charAt(pos) != '\n');
+			
+			
+			//find indent size
+			int n = 0;
+			boolean cont = true;
+			while(cont){
+				pos++;
+				switch (editable.charAt(pos)){
+					case ' ':
+						n++;
+						break;
+					case '\t':
+						n+=INDENT_SIZE;
+						break;
+					default:
+						cont = false;
+				}
+			}
+			//add indent size
+			switch (prev){
+				case '{':
+					n+=INDENT_SIZE;
+					break;
+				case '}':
+					n-=INDENT_SIZE;
+					break;
+			}
+			
+			//write indent
+			for(int i=0;i<n;++i){
+				editable.insert(posEnter + 1, " ");
+			}
+		}
+	};
 }
