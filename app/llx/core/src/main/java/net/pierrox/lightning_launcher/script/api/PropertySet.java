@@ -64,7 +64,9 @@ import android.util.Pair;
  * 		<tr><td><a href="/help/app/topic.php?id=57">bgColor</a></td><td>int</td><td>Read/Write</td><td>argb color</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=97">statusBarHide</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=109">statusBarColor</a></td><td>int</td><td>Read/Write</td><td>argb color</td></tr>
+ * 		<tr><td><a href="/help/app/topic.php?id=513">statusBarLight</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=138">navigationBarColor</a></td><td>int</td><td>Read/Write</td><td>argb color</td></tr>
+ * 		<tr><td><a href="/help/app/topic.php?id=514">navigationBarLight</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=138">statusBarOverlap</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=138">navigationBarOverlap</a></td><td>boolean</td><td>Read/Write</td><td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=96">screenOrientation</a></td><td>string</td><td>Read/Write</td><td>AUTO|PORTRAIT|LANDSCAPE|SYSTEM</td></tr>

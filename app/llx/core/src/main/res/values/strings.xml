@@ -928,7 +928,9 @@
     <string name="sb_t">System bars</string>
     <string name="sb_s">Set status and navigation bars visibility, transparency, etc.</string>
     <string name="sbc_t">Status bar tint color</string>
+    <string name="sbl_t">Light status bar</string>
     <string name="nbc_t">Navigation bar tint color</string>
+    <string name="nbl_t">Light navigation bar</string>
     <string name="sb_c">Status bar</string>
     <string name="nb_c">Navigation bar</string>
     <string name="mi_app_store">Play Store</string>

@@ -1190,11 +1190,17 @@ public class Customize extends ResourceWrapperActivity implements
 
                     if (Build.VERSION.SDK_INT >= 19) {
                         mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarColor = new LLPreferenceColor(this, ID_mPGSystemBarsStatusBarColor, R.string.sbc_t, 0, pc.statusBarColor, null, true));
+						if (Build.VERSION.SDK_INT >= 23) {
+							mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarLight = new LLPreferenceCheckBox(this, ID_mPGSystemBarsStatusBarLight, R.string.sbl_t, 0, pc.statusBarLight, null));
+						}
                         mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarOverlap = new LLPreferenceCheckBox(this, ID_mPGSystemBarsStatusBarOverlap, R.string.sbo_t, 0, pc.statusBarOverlap, null));
 
                         if (mSystemBarTintManager == null || (mSystemBarTintManager != null && mSystemBarTintManager.getConfig().hasNavigationBar())) {
                             mPreferencesPageSystemBars.add(new LLPreferenceCategory(this, R.string.nb_c));
                             mPreferencesPageSystemBars.add(mPGSystemBarsNavigationBarColor = new LLPreferenceColor(this, ID_mPGSystemBarsNavigationBarColor, R.string.nbc_t, 0, pc.navigationBarColor, null, true));
+							if (Build.VERSION.SDK_INT >= 26) {
+								mPreferencesPageSystemBars.add(mPGSystemBarsNavigationBarLight = new LLPreferenceCheckBox(this, ID_mPGSystemBarsNavigationBarLight, R.string.nbl_t, 0, pc.navigationBarLight, null));
+							}
                             mPreferencesPageSystemBars.add(mPGSystemBarsNavBarOverlap = new LLPreferenceCheckBox(this, ID_mPGSystemBarsNavBarOverlap, R.string.nbo_t, 0, pc.navigationBarOverlap, null));
                         }
                     }
@@ -1637,7 +1643,9 @@ public class Customize extends ResourceWrapperActivity implements
             if(mPGSystemBarsStatusBarOverlap != null) pc.statusBarOverlap = mPGSystemBarsStatusBarOverlap.isChecked();
             if(mPGSystemBarsNavBarOverlap != null) pc.navigationBarOverlap = mPGSystemBarsNavBarOverlap.isChecked();
             if(mPGSystemBarsStatusBarColor != null) pc.statusBarColor = mPGSystemBarsStatusBarColor.getColor();
+            if(mPGSystemBarsStatusBarLight != null) pc.statusBarLight = mPGSystemBarsStatusBarLight.isChecked();
             if(mPGSystemBarsNavigationBarColor != null) pc.navigationBarColor = mPGSystemBarsNavigationBarColor.getColor();
+            if(mPGSystemBarsNavigationBarLight != null) pc.navigationBarLight = mPGSystemBarsNavigationBarLight.isChecked();
             pc.statusBarHide = mPGSystemBarsHideStatusBar.isChecked();
             if(is_app_drawer) {
                 pc.autoExit = mPGMiscAutoExit.isChecked();
@@ -2100,7 +2108,9 @@ public class Customize extends ResourceWrapperActivity implements
     private LLPreferenceCheckBox mPGSystemBarsStatusBarOverlap;
     private LLPreferenceCheckBox mPGSystemBarsNavBarOverlap;
     private LLPreferenceColor mPGSystemBarsStatusBarColor;
+    private LLPreferenceCheckBox mPGSystemBarsStatusBarLight;
     private LLPreferenceColor mPGSystemBarsNavigationBarColor;
+    private LLPreferenceCheckBox mPGSystemBarsNavigationBarLight;
 
     private LLPreferenceColor mPGAppDrawerABTextColor;
     private LLPreference mPGAppDrawerABBackground;
@@ -2277,7 +2287,9 @@ public class Customize extends ResourceWrapperActivity implements
     private static final int ID_mPGSystemBarsNavBarOverlap = 164;
     private static final int ID_mPGSystemBars = 165;
     private static final int ID_mPGSystemBarsStatusBarColor = 166;
+    private static final int ID_mPGSystemBarsStatusBarLight = 513;
     private static final int ID_mPGSystemBarsNavigationBarColor = 167;
+    private static final int ID_mPGSystemBarsNavigationBarLight = 514;
     private static final int ID_mGCAppStyle = 168;
     private static final int ID_mPGADCategories = 190;
     private static final int ID_mPGBackgroundScaleType = 191;

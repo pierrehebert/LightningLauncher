@@ -29,7 +29,9 @@ public class Property {
 
     public static final String PROP_PAGE_BG_COLOR = "bgColor";
     public static final String PROP_PAGE_STATUS_BAR_COLOR = "statusBarColor";
+    public static final String PROP_PAGE_STATUS_BAR_LIGHT = "statusBarLight";
     public static final String PROP_PAGE_NAV_BAR_COLOR = "navigationBarColor";
+    public static final String PROP_PAGE_NAV_BAR_LIGHT = "navigationBarLight";
     public static final String PROP_PAGE_SCROLLING_DIRECTION = "scrollingDirection";
 //    public static final String PROP_PAGE_ICON_PACK = "iconPack";
 

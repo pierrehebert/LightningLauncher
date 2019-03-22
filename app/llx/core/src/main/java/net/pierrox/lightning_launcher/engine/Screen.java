@@ -1480,6 +1480,24 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                 flags &= ~(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
                 mWindow.setFlags(flags, 0xffffffff);
 
+                if (Build.VERSION.SDK_INT >= 23) {
+                    int f = mContentView.getSystemUiVisibility();
+                    if(c.statusBarLight) {
+                        f |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                    } else {
+                        f &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                    }
+                    mContentView.setSystemUiVisibility(f);
+                }
+                if (Build.VERSION.SDK_INT >= 26) {
+                    int f = mContentView.getSystemUiVisibility();
+                    if(c.navigationBarLight) {
+                        f |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+                    } else {
+                        f &= ~View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+                    }
+                    mContentView.setSystemUiVisibility(f);
+                }
                 try {
                     Method setStatusBarColor = mWindow.getClass().getMethod("setStatusBarColor", int.class);
                     setStatusBarColor.invoke(mWindow, 0);
