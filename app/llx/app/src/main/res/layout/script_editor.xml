@@ -13,41 +13,39 @@
             android:id="@+id/sc_h"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_gravity="center_horizontal"
             android:text="@string/sc_h"
-            android:textStyle="italic"
-            android:layout_gravity="center_horizontal" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="italic" />
 
-        <fr.xgouchet.texteditor.ui.AdvancedEditText
-            android:id="@+id/sc_text"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/sc_text" />
+            android:layout_weight="1">
 
-    </LinearLayout>
+            <fr.xgouchet.texteditor.ui.AdvancedEditText
+                android:id="@+id/sc_text"
+                style="@style/sc_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:orientation="vertical">
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left">
-
-            <LinearLayout
-                android:id="@+id/completions"
+            <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
-        </HorizontalScrollView>
+                android:layout_gravity="bottom|left">
+
+                <LinearLayout
+                    android:id="@+id/completions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </FrameLayout>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left">
+            android:layout_gravity="bottom|center_horizontal">
 
             <LinearLayout
                 android:id="@+id/shortcuts"

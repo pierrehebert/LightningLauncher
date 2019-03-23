@@ -1372,6 +1372,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			new ShortcutText("(", ")"),
 			new ShortcutText("[", "]"),
 			new ShortcutText("{", "}"),
+			new ShortcutText("var ", ""),
 	};
 	
 	private View.OnClickListener mShortcutButtonClickListener = new View.OnClickListener() {
