@@ -49,9 +49,8 @@ import net.pierrox.lightning_launcher.Version;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Utils;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
-import net.pierrox.lightning_launcher.script.ScriptManager;
 import net.pierrox.lightning_launcher.script.Script;
-import net.pierrox.lightning_launcher.script.api.Array;
+import net.pierrox.lightning_launcher.script.ScriptManager;
 import net.pierrox.lightning_launcher.script.api.Box;
 import net.pierrox.lightning_launcher.script.api.Container;
 import net.pierrox.lightning_launcher.script.api.Desktop;
@@ -71,7 +70,6 @@ import net.pierrox.lightning_launcher.script.api.Panel;
 import net.pierrox.lightning_launcher.script.api.PropertyEditor;
 import net.pierrox.lightning_launcher.script.api.PropertySet;
 import net.pierrox.lightning_launcher.script.api.RectL;
-import net.pierrox.lightning_launcher.script.api.Shortcut;
 import net.pierrox.lightning_launcher.script.api.StopPoint;
 import net.pierrox.lightning_launcher.util.FileAndDirectoryPickerDialog;
 import net.pierrox.lightning_launcher.util.FileProvider;
@@ -956,7 +954,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	private void buildAutoCompleteTokens() {
 		sAutoCompleteTokens = new ArrayList<>();
 		Class<?>[] classes = {
-				Array.class,
+				//Array.class,
 				Box.class,
 				net.pierrox.lightning_launcher.script.api.Binding.class,
 				Container.class,
@@ -981,7 +979,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 				PropertySet.class,
 				RectL.class,
 				net.pierrox.lightning_launcher.script.api.Script.class,
-				Shortcut.class,
+				net.pierrox.lightning_launcher.script.api.Shortcut.class,
 				net.pierrox.lightning_launcher.script.api.Lightning.class,
 				net.pierrox.lightning_launcher.script.api.Menu.class,
                 ComponentName.class,
