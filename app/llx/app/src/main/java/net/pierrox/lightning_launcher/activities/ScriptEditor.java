@@ -302,6 +302,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
 //        mCompletionsListView = (ListView) findViewById(R.id.completions);
         mCompletionsViewGroup = (ViewGroup) findViewById(R.id.completions);
+        initializeShortcuts((ViewGroup) findViewById(R.id.shortcuts));
+        
 		Button btn;
 		
 		btn = (Button)findViewById(R.id.sc_import);
@@ -1309,4 +1311,89 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			}
 		}
 	};
+	
+	
+	// -------------- shortcuts --------------------
+	
+	private interface Shortcut {
+		String getLabel();
+		void apply(AdvancedEditText editText);
+	}
+	
+	private static class ShortcutKey implements Shortcut {
+		int key;
+		String label;
+		
+		ShortcutKey(String label, int key) {
+			this.key = key;
+			this.label = label;
+		}
+		
+		@Override
+		public String getLabel() {
+			return label;
+		}
+		
+		@Override
+		public void apply(AdvancedEditText editText) {
+			editText.dispatchKeyEvent(new KeyEvent(0, 0, KeyEvent.ACTION_DOWN,
+					key, 0));
+			editText.dispatchKeyEvent(new KeyEvent(0, 0, KeyEvent.ACTION_UP,
+					key, 0));
+		}
+	}
+	
+	private static class ShortcutText implements Shortcut {
+		String preText;
+		String postText;
+		
+		ShortcutText(String preText, String postText) {
+			this.preText = preText;
+			this.postText = postText;
+		}
+		
+		@Override
+		public String getLabel() {
+			return preText + "·" + postText;
+		}
+		
+		@Override
+		public void apply(AdvancedEditText editText) {
+			int start = editText.getSelectionStart();
+			int end = editText.getSelectionEnd();
+			editText.getEditableText().replace(start, end, preText+postText);
+			editText.setSelection(start + preText.length());
+		}
+	}
+	
+	private static Shortcut[] mShortcuts = new Shortcut[]{
+			new ShortcutKey("←",KeyEvent.KEYCODE_DPAD_LEFT),
+			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
+			new ShortcutKey("↓",KeyEvent.KEYCODE_DPAD_DOWN),
+			new ShortcutKey("→",KeyEvent.KEYCODE_DPAD_RIGHT),
+			new ShortcutText("(", ")"),
+			new ShortcutText("[", "]"),
+			new ShortcutText("{", "}"),
+	};
+	
+	private View.OnClickListener mShortcutButtonClickListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			Button btn = (Button) v;
+			Shortcut shortcut = (Shortcut) btn.getTag();
+			shortcut.apply(mScriptText);
+			//mInputMethodManager.restartInput(mScriptText);
+		}
+	};
+	
+	private void initializeShortcuts(ViewGroup view) {
+		LayoutInflater inflater = getLayoutInflater();
+		for (Shortcut shortcut : mShortcuts) {
+			Button b = (Button) inflater.inflate(R.layout.sc_btn, null);
+			b.setTag(shortcut);
+			b.setText(shortcut.getLabel());
+			b.setOnClickListener(mShortcutButtonClickListener);
+			view.addView(b);
+		}
+	}
 }

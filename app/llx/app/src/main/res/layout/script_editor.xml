@@ -26,17 +26,37 @@
 
     </LinearLayout>
 
-    <HorizontalScrollView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left">
+        android:layout_gravity="bottom|left"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/completions"
-            android:orientation="horizontal"
+        <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </HorizontalScrollView>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left">
+
+            <LinearLayout
+                android:id="@+id/completions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left">
+
+            <LinearLayout
+                android:id="@+id/shortcuts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/left_pane"
