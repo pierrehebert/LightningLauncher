@@ -1507,7 +1507,6 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                     e.printStackTrace();
                 }
             } else {
-                flags &= ~WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
                 flags |= WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION;
                 mWindow.setFlags(flags, 0xffffffff);
             }
