@@ -1,10 +1,6 @@
 package net.pierrox.lightning_launcher.script.api;
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -13,9 +9,10 @@ import android.widget.TextView;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
-import net.pierrox.lightning_launcher.data.*;
 import net.pierrox.lightning_launcher.data.Box;
+import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.data.Shortcut;
+import net.pierrox.lightning_launcher.data.Utils;
 import net.pierrox.lightning_launcher.script.api.screen.Screen;
 import net.pierrox.lightning_launcher.views.IconLabelView;
 import net.pierrox.lightning_launcher.views.ItemLayout;
@@ -27,6 +24,10 @@ import org.mozilla.javascript.NativeJavaObject;
 import org.mozilla.javascript.ScriptRuntime;
 import org.mozilla.javascript.Scriptable;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 /**
  * The item is the base class for other objects that can be found in a container (shortcuts, folders, etc.).
  * There are specific classes for some items (shortcut, folder, ...) when these items provides custom services. 
@@ -34,6 +35,8 @@ import org.mozilla.javascript.Scriptable;
  *
  * Since Lightning V14 allows the same container to be displayed multiple times on the same screen, it is possible to retrieve
  * several Item objects linked with the same underlying data. The identifier (see {@link #getId()}) will then be the same.
+ *
+ * An instance of this object can be retrieved with {@link Event#getItem()}, {@link Screen#getItemById(int)}, {@link Screen#getAllItemsById(int)}, {@link Container#getAllItems()}, {@link Container#getItemById(int)}, {@link Container#getItemByName(String)}, {@link Container#cloneItem(Item)}, {@link Container#moveItem(Item, Container)}, {@link Container#getOpener()} or {@link ImageScript.DrawingContext#getItem()}; or by using directly the special variable 'item' (which is the current Item) when running a 'Menu' event.
  */
 public class Item {
 	
@@ -61,7 +64,11 @@ public class Item {
 		object.setPrototype(new NativeJavaObject(scope, this, null));
 		return object;
 	}
-
+	
+	/**
+	 * Return the Screen where this item is placed.
+	 * @return the screen containing this item
+	 */
 	public Screen getScreen() {
 		return mLightning.createScreen(mItemView.getParentItemLayout().getScreen());
 	}

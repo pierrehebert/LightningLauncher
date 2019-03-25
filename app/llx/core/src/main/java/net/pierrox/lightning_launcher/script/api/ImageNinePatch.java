@@ -6,6 +6,8 @@ import android.graphics.drawable.NinePatchDrawable;
 
 /**
  * Wraps a Nine Patch image.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Image} when that image is an ImageNinePatch.
  */
 public class ImageNinePatch extends Image {
 

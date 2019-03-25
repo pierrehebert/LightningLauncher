@@ -344,6 +344,7 @@ public class ScriptExecutor {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     mCurrentScriptDialog = false;
                     mCurrentScript.setFlag(Script.FLAG_DISABLED, true);
+                    Toast.makeText(context, R.string.sc_disable_toast, Toast.LENGTH_LONG).show();
                 }
             });
             builder.setCancelable(false);
@@ -406,6 +407,7 @@ public class ScriptExecutor {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     mCurrentScriptDialog = false;
                     script.setFlag(Script.FLAG_DISABLED, true);
+                    Toast.makeText(context, R.string.sc_disable_toast, Toast.LENGTH_LONG).show();
                     continuePendingContinuation(pending, input == null ? false : null);
                 }
             });

@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import com.faendir.rhino_android.RhinoAndroidHelper;
 
@@ -42,8 +43,8 @@ import java.util.ArrayList;
 
 /**
  * Entry point for most Lightning Launcher scripted features.
- * The Lightning object is the root object in the script context, hence its functions can be called without naming it, unlike with the deprecated LL object.
- * For instance, instead of using <code>LL.getDesktopByName('d')</code>, simply use <code>getDesktopByName('d')</code>
+ * The Lightning object is the root object in the script context, hence its functions can be called without naming it (unlike the rest of the classes).
+ * For instance, instead of using <code style="color:#333">Lightning.alert('Hello World')</code>, simply use <code>alert('Hello World')</code>
  */
 public class Lightning {
 
@@ -339,6 +340,9 @@ public class Lightning {
         return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.BACKGROUND));
     }
 
+    /**
+     * @hide
+     */
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
         if(screen == null){
             return null;
@@ -352,21 +356,21 @@ public class Lightning {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableBoolean(String name, boolean value) {
         setVariable(name, value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableInteger(String name, long value) {
         setVariable(name, (int)value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableFloat(String name, float value) {
         if(Float.isNaN(value)) {
@@ -376,7 +380,7 @@ public class Lightning {
     }
 
     /**
-     * Set a string variable. This is a shortcut for <code>LL.getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a string variable. This is a shortcut for <code>getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableString(String name, String value) {
         setVariable(name, value);
@@ -573,7 +577,7 @@ public class Lightning {
                 context.sendBroadcast(intent);
                 throw pending;
             } catch(IllegalStateException e) {
-                android.widget.Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
@@ -637,15 +641,25 @@ public class Lightning {
                 throw pending;
             } catch (IllegalStateException e) {
                 // not called with continuation support
-                android.widget.Toast.makeText(context, "cannot display \"" + message + "\" in this context", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot display \"" + message + "\" in this context", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
             }
         } else {
-            android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             return false;
         }
+    }
+    
+    /**
+     * Displays a toast (small message at the bottom of the screen).
+     * This is equivalent to <code>Toast.makeText(getEvent().getScreen().getContext(), text, Toast.LENGTH_LONG).show()</code>
+     * (you can use that code directly if you want a LENGTH_SHORT toast or to save the toast object instead of showing it).
+     * @param text message to display
+     */
+    public void toast(String text){
+        Toast.makeText(getScriptScreen().getContext(), text, Toast.LENGTH_LONG).show();
     }
 
     /**

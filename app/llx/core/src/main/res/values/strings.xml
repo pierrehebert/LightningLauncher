@@ -1311,7 +1311,9 @@
     
     
     <string name="permission_label">Use Script Service</string>
-    <string name="permission_description">Allows to view, create, editm delete and run scripts in Lightning Launcher.</string>
+    <string name="permission_description">Allows to view, create, edit, delete and run scripts in Lightning Launcher.</string>
+
+    <string name="sc_disable_toast">Script disabled. Open it in the editor to enable again</string>
 
 
     <!-- deprecated: before 90 -->

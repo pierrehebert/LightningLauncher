@@ -3,8 +3,8 @@
     <h1>Lightning Launcher Scripting API</h1>
 
     <h2>Introduction</h2>
-    <p>Starting at version 10 (alpha 9.9), Lightning Launcher has support for extending its behavior through JavaScript. This is an advanced and extremly powerful feature, and for this reason it requires some care.</p>
-    <p>The description of LL script APIs can be found here {@link net.pierrox.lightning_launcher.script.api}. The {@link LL} objet is the entry point for most things.</p>
+    <p>Starting at version 10 (alpha 9.9), Lightning Launcher has support for extending its behavior through JavaScript. This is an advanced and extremely powerful feature, and for this reason it requires some care.</p>
+    <p>The description of LL script APIs can be found here {@link net.pierrox.lightning_launcher.script.api}. The {@link LL} object is the entry point for most things.</p>
 
     <h2>Available Android classes</h2>
     <p>Some Android classes can be directly used through scripting (creation of new instances, access to static fields - aka constants - and method calls). The list of supported classes are:
@@ -35,26 +35,26 @@
 	<li>TaskerIntent</li>
 	<li>ActionCodes</li>
 	</ul>
-Other classes can be accessed through their fully qualified name. For instance, should you need to access accelerometers, you may want to use <code>android.hardware.Sensor.TYPE_ACCELEROMETER</code>. Using <code>LL.bindClass(String name)</code> will conveniently suppress the need for explicit package naming (<code>Sensor.TYPE_ACCELEROMETER</code> would be enough if <code>LL.bindClass("android.hardware.Sensor");</code> has been called previously.
+Other classes can be accessed through their fully qualified name. For instance, should you need to access accelerometers, you may want to use <code>android.hardware.Sensor.TYPE_ACCELEROMETER</code>. Using <code>bindClass(String name)</code> will conveniently suppress the need for explicit package naming (<code>Sensor.TYPE_ACCELEROMETER</code> would be enough if <code>bindClass("android.hardware.Sensor");</code> has been called previously.
 </p>
 
     <h2>Things to be aware of</h2>
     <p>Use the new Script Editor icon (in your app drawer) to quickly edit scripts. No need to configure events and select run a script: just launch the script editor and it will open on the last edited script.</p>
 
     <h2>DOs and DON'Ts</h2>
-    <h3>Use and absuse from variables</h3>
+    <h3>Use and abuse from variables</h3>
     <p>API calls are expensive, and you never know what is hidden behind. It is a good idea to keep return values in local variables to minimize API calls. For instance:
     <pre>
-    alert(LL.getEvent().getTouchX()+" / "+LL.getEvent().getTouchY()); /* BAD */
+    alert(getEvent().getTouchX()+" / "+getEvent().getTouchY()); /* BAD */
 
-    var e = LL.getEvent();
+    var e = getEvent();
     alert(e.getTouchX()+" / "+e.getTouchY()); /* BETTER */
     </pre>
     </p>
     <h3>Not suitable for (smooth) animations</h3>
     <p>While it is possible to move, rotate or change items configuration, performances may not be enough to sustain a 60Hz animation rate.</p>
     <h3>Timers</h3>
-    <p>It is possible to set timers using setTimeout. Pay special attention to clear these timers when needed, LL won't do this for you. If you don't clear timers, you may severly increase CPU use and battery consumption.</p>
+    <p>It is possible to set timers using setTimeout. Pay special attention to clear these timers when needed, LL won't do this for you. If you don't clear timers, you may severely increase CPU use and battery consumption.</p>
 
     <h3>Object references</h3>
     <p>Avoid keeping references to objects returned by LL APIs in the script side, otherwise you may leak data. It is possible to use <pre>self</pre> to store data that are kept between two script execution (and can be shared between scripts), but try to avoid this as much as possible.</p>

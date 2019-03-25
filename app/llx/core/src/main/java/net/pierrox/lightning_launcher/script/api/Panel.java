@@ -5,6 +5,8 @@ import net.pierrox.lightning_launcher.views.item.ItemView;
 
 /**
  * The panel is a special kind of item, providing access to items contained in this panel.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Item} when that returned item is a Panel; or with {@link Container#addPanel(float, float, float, float)}.
  */
 public class Panel extends Item {
 

@@ -49,8 +49,8 @@ import net.pierrox.lightning_launcher.Version;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Utils;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
-import net.pierrox.lightning_launcher.script.ScriptManager;
 import net.pierrox.lightning_launcher.script.Script;
+import net.pierrox.lightning_launcher.script.ScriptManager;
 import net.pierrox.lightning_launcher.script.api.Array;
 import net.pierrox.lightning_launcher.script.api.Box;
 import net.pierrox.lightning_launcher.script.api.Container;
@@ -64,7 +64,6 @@ import net.pierrox.lightning_launcher.script.api.ImageNinePatch;
 import net.pierrox.lightning_launcher.script.api.ImageScript;
 import net.pierrox.lightning_launcher.script.api.ImageSvg;
 import net.pierrox.lightning_launcher.script.api.Item;
-import net.pierrox.lightning_launcher.script.api.LL;
 import net.pierrox.lightning_launcher.script.api.Lightning;
 import net.pierrox.lightning_launcher.script.api.PageIndicator;
 import net.pierrox.lightning_launcher.script.api.Panel;
@@ -240,7 +239,9 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 	}
 	private static ArrayList<TokenMethod> sAutoCompleteTokens;
-	private static TokenClass sLLToken = new TokenClass(LL.class);
+	private static Token[] sMainTokens = new Token[]{
+			new TokenMethod(Lightning.class, "getEvent", "void", new Class[0])
+	};
 
     private Animation mLeftPaneAnimIn;
     private Animation mLeftPaneAnimOut;
@@ -967,7 +968,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 				ImageScript.class,
 				ImageSvg.class,
 				Item.class,
-				LL.class,
+				//LL.class,
 				Lightning.class,
 				Panel.class,
                 StopPoint.class,
@@ -1205,7 +1206,10 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
 		mCompletionsViewGroup.removeAllViews();
 		final LayoutInflater inflater = getLayoutInflater();
-		addSugestion(inflater, sLLToken);
+		if(completions.isEmpty()) {
+			// add main Tokens if no others are available
+			addSugestions(inflater, sMainTokens);
+		}
 		for (ArrayList<Token> tokens : completions) {
 			addSugestion(inflater, tokens);
 		}
@@ -1226,10 +1230,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		completions.add(l);
 	}
 
-	private void addSugestion(LayoutInflater inflater, Token token) {
-		ArrayList<Token> l = new ArrayList<>(1);
-		l.add(token);
-		addSugestion(inflater, l);
+	private void addSugestions(LayoutInflater inflater, Token[] tokens) {
+		for (Token token : tokens) {
+			ArrayList<Token> l = new ArrayList<>(1);
+			l.add(token);
+			addSugestion(inflater, l);
+		}
 	}
 
 	private void addSugestion(LayoutInflater inflater, ArrayList<Token> tokens) {

@@ -1762,10 +1762,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             if(mNoScriptCounter == 5) {
                 ScriptManager sm = mEngine.getScriptManager();
                 Script easter_egg = sm.createScriptForFile(getString(R.string.mi_nost), "/"+getPackageName().replace('.', '/'));
-                easter_egg.setSourceText("LL.bindClass('android.view.animation.AccelerateDecelerateInterpolator');\n" +
-                        "LL.bindClass('android.view.animation.AnimationUtils');\n" +
+                easter_egg.setSourceText("bindClass('android.view.animation.AccelerateDecelerateInterpolator');\n" +
+                        "bindClass('android.view.animation.AnimationUtils');\n" +
                         "\n" +
-                        "var item = LL.getEvent().getItem();\n" +
+                        "var item = getEvent().getItem();\n" +
                         "\n" +
                         "var properties = item.getProperties();\n" +
                         "var was_on_grid = properties.getBoolean('i.onGrid');\n" +

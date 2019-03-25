@@ -3,7 +3,6 @@ package net.pierrox.lightning_launcher.script.api;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 
-import net.pierrox.lightning_launcher.data.*;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.views.FolderView;
 import net.pierrox.lightning_launcher.views.ItemLayout;
@@ -12,7 +11,9 @@ import net.pierrox.lightning_launcher.views.item.ItemView;
 import java.io.File;
 
 /**
- * The folder item extends the shortcut (because it have a label and an icon) and add folder specific services such as open/close. 
+ * The folder item extends the shortcut (because it have a label and an icon) and add folder specific services such as open/close.
+ *
+ * An instance of this object can be retrieved with any function that returns a {@link Shortcut} when that returned shortcut is a Folder; or with {@link Container#addFolder(String, float, float)} or {@link net.pierrox.lightning_launcher.script.api.screen.Screen#getOpenFolders()}.
  */
 public class Folder extends Shortcut {
 

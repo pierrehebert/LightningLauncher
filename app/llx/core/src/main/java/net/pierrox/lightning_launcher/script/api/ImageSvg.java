@@ -7,6 +7,8 @@ import net.pierrox.android.lsvg.SvgDrawable;
 
 /**
  * An image backed by a SVG document
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Image} when that image is an ImageSvg.
  */
 
 public class ImageSvg extends Image {

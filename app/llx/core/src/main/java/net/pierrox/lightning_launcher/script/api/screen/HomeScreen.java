@@ -7,6 +7,8 @@ import net.pierrox.lightning_launcher.views.ItemLayout;
 
 /**
  * A specialized ActivityScreen used for the main home screen.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link ActivityScreen} when that returned ActivityScreen is a HomeScreen; or with {@link Lightning#getHomeScreen()}.
  */
 public class HomeScreen extends ActivityScreen {
     /**

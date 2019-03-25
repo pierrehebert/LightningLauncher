@@ -2,6 +2,7 @@ package net.pierrox.lightning_launcher.script.api;
 
 /**
  * A binding links a "target" (a property) with a "formula" (a value).
+ * An instance of this object can be created with {@link #Binding(String, String, boolean)}; or retrieved with {@link Item#getBindingByTarget(String)} or {@link Item#getBindings()}.
  */
 public class Binding {
     private boolean enabled;

@@ -42,25 +42,26 @@ public class ScriptManager {
 
         BUILTINS = new Script[] {
                 new Script(this, Script.TYPE_BUILTIN, BUILTIN_USER_MENU, null,
-                        "var item = LL.getEvent().getItem();\n"+
-                                "LL.runAction(EventHandler.CLOSE_TOPMOST_FOLDER);\n"+
+                        "var item = getEvent().getItem();\n"+
+                                "var screen = getEvent().getScreen();\n"+
+                                "screen.runAction(EventHandler.CLOSE_TOPMOST_FOLDER);\n"+
                                 "switch(item.getName()) {\n"+
-                                "  case 'wallpaper': LL.runAction(EventHandler.SELECT_WALLPAPER); break;\n"+
+                                "  case 'wallpaper': screen.runAction(EventHandler.SELECT_WALLPAPER); break;\n"+
                                 "  case 'theme': " +
-                                "      var intent=new Intent(Intent.ACTION_VIEW, Uri.parse('"+ Version.BROWSE_TEMPLATES_URI+"'));"+
+                                "      var intent=new Intent(Intent.ACTION_VIEW, Uri.parse('"+ Version.BROWSE_TEMPLATES_URI+"'));\n"+
                                 "      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);\n"+
-                                "      LL.startActivity(intent);\n"+
+                                "      screen.startActivity(intent);\n"+
                                 "      break;\n"+
-                                "  case 'add_item': LL.runAction(EventHandler.ADD_ITEM); break;\n"+
-                                "  case 'edit_layout': LL.runAction(EventHandler.EDIT_LAYOUT); break;\n"+
-                                "  case 'settings': LL.runAction(EventHandler.CUSTOMIZE_LAUNCHER); break;\n"+
+                                "  case 'add_item': screen.runAction(EventHandler.ADD_ITEM); break;\n"+
+                                "  case 'edit_layout': screen.runAction(EventHandler.EDIT_LAYOUT); break;\n"+
+                                "  case 'settings': screen.runAction(EventHandler.CUSTOMIZE_LAUNCHER); break;\n"+
                                 "}",
                         null
                 ),
                 new Script(this, Script.TYPE_BUILTIN, BUILTIN_REPOSITORY_IMPORTER, null,
                         "/*Script necessary for the repository importer to work correctly.*/\n" +
                                 "\n" +
-                                "eval(\"function toEval(){\\n\"+LL.loadRawResource(\"com.trianguloy.llscript.repository\",\"executor\")+\"\\n}\");\n" +
+                                "eval(\"function toEval(){\\n\"+loadRawResource(\"com.trianguloy.llscript.repository\",\"executor\")+\"\\n}\");\n" +
                                 "toEval();﻿",
                         null
                 )

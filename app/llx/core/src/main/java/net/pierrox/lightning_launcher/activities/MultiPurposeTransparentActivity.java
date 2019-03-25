@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
 import net.pierrox.lightning_launcher.api.ScreenIdentity;
@@ -68,7 +70,9 @@ public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // should pass the base dir of the engine in the intent and use it instead of the default engine
-                        LLApp.get().getAppEngine().getScriptManager().getOrLoadScript(script_id).setFlag(Script.FLAG_DISABLED, true);
+                        LLApp llApp = LLApp.get();
+                        llApp.getAppEngine().getScriptManager().getOrLoadScript(script_id).setFlag(Script.FLAG_DISABLED, true);
+                        Toast.makeText(llApp, R.string.sc_disable_toast, Toast.LENGTH_LONG).show();
                         finish();
                     }
                 });
