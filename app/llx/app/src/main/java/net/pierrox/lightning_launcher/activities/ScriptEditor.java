@@ -1246,6 +1246,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	// ------------- autoindentation ------------
 	
 	String mSpanNewline = "mSpanNewline";
+	String mSpanEndBracket = "mSpanEndBracket";
 	public static final int INDENT_SIZE = 2;
 	
 	TextWatcher mScriptTextWatcherIndent = new TextWatcher() {
@@ -1258,57 +1259,113 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			if(count == 1 && s.charAt(start) == '\n'){
 				mScriptText.getText().setSpan(mSpanNewline,start,start,0);
 			}
+			if(count == 1 && s.charAt(start) == '}'){
+				mScriptText.getText().setSpan(mSpanEndBracket, start, start, 0);
+			}
 		}
 		
 		@Override
 		public void afterTextChanged(Editable editable) {
-			int posEnter = editable.getSpanStart(mSpanNewline);
+			int spanPos;
+			
+			spanPos = editable.getSpanStart(mSpanNewline);
 			editable.removeSpan(mSpanNewline);
-			if (posEnter == -1 || editable.charAt(posEnter) != '\n') return;
+			if (spanPos != -1 && editable.charAt(spanPos) == '\n')
+				onNewLine(spanPos, editable);
 			
-			int pos = posEnter;
+			spanPos = editable.getSpanStart(mSpanEndBracket);
+			editable.removeSpan(mSpanEndBracket);
+			if (spanPos != -1 && editable.charAt(spanPos) == '}')
+				onEndBracket(spanPos, editable);
 			
-			//get previous char
-			char prev = pos == 0 ? '\0' : editable.charAt(pos-1);
-			
-			//goto previous line
-			do {
-				pos--;
-			} while(pos >= 0 && editable.charAt(pos) != '\n');
-			
-			
-			//find indent size
-			int n = 0;
-			boolean cont = true;
-			while(cont){
-				pos++;
-				switch (editable.charAt(pos)){
-					case ' ':
-						n++;
-						break;
-					case '\t':
-						n+=INDENT_SIZE;
-						break;
-					default:
-						cont = false;
-				}
-			}
-			//add indent size
-			switch (prev){
-				case '{':
-					n+=INDENT_SIZE;
-					break;
-				case '}':
-					n-=INDENT_SIZE;
-					break;
-			}
-			
-			//write indent
-			for(int i=0;i<n;++i){
-				editable.insert(posEnter + 1, " ");
-			}
 		}
 	};
+	
+	/**
+	 * Returns the size of the indent in the current line (spaces at the left)
+	 * @param currentpos pos of current line (any char)
+	 * @param editable where to search
+	 * @return
+	 */
+	private int getIndentLength(int currentpos, Editable editable){
+		//goto beginning of line
+		if(currentpos != 0) {
+			do{
+				currentpos--;
+			}while (currentpos >= 0 && editable.charAt(currentpos) != '\n');
+		}
+		currentpos++;
+		
+		//find indent size
+		int n = 0;
+		boolean cont = true;
+		while(cont && currentpos < editable.length()){
+			switch (editable.charAt(currentpos)){
+				case ' ':
+					n++;
+					break;
+				case '\t':
+					n+=INDENT_SIZE;
+					break;
+				//case '\n':
+				default:
+					cont = false;
+			}
+			currentpos++;
+		}
+		return n;
+	}
+	
+	private void onNewLine(int posEnter, Editable editable){
+		
+		int n = getIndentLength(posEnter, editable);
+		StringBuilder indent = new StringBuilder();
+        for(int i=0;i<n;++i){
+            indent.append(" ");
+        }
+		
+		//do if previous line ends in open bracket
+		if(posEnter > 0 && editable.charAt(posEnter - 1) == '{'){
+            
+            //add newline if also following close bracket
+            if(posEnter < editable.length() - 1 && editable.charAt(posEnter + 1) == '}'){
+                editable.insert(posEnter + 1, "\n" + indent.toString()); //warning! this mustn't trigger the 'onNewline' again
+				mScriptText.setSelection(posEnter + 1);
+            }
+            
+            //add indent size
+            for(int i=0;i<INDENT_SIZE;++i){
+                indent.append(" ");
+            }
+		}
+		
+		//write indent
+        editable.insert(posEnter + 1, indent.toString());
+	}
+	
+	private void onEndBracket(int posBracket, Editable editable){
+		
+		int n = getIndentLength(posBracket, editable);
+		
+		// check if first of line
+		if(n >= INDENT_SIZE && (posBracket - n == 0 || editable.charAt(posBracket - n - 1) == '\n')){
+			
+			//remove the first tab, or all the spaces if no tabs found
+			int p = 1;
+			while(p <= INDENT_SIZE){
+				if(editable.charAt(posBracket - p) == '\t'){
+					//tab found, remove
+					editable.replace(posBracket - p, posBracket - p + 1, "");
+					break;
+				}
+				p++;
+			}
+			if(p == INDENT_SIZE + 1){
+				//no tabs found, only spaces, remove them
+				editable.replace(posBracket - INDENT_SIZE, posBracket, "");
+			}
+		}
+	}
 	
 	
 	// -------------- shortcuts --------------------
