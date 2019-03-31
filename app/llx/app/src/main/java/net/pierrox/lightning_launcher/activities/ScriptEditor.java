@@ -1247,6 +1247,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	
 	String mSpanNewline = "mSpanNewline";
 	String mSpanEndBracket = "mSpanEndBracket";
+	boolean mEditing = false;
 	public static final int INDENT_SIZE = 2;
 	
 	TextWatcher mScriptTextWatcherIndent = new TextWatcher() {
@@ -1256,6 +1257,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		
 		@Override
 		public void onTextChanged(CharSequence s, int start, int before, int count) {
+		    if(mEditing) return;
+		    
 			if(count == 1 && s.charAt(start) == '\n'){
 				mScriptText.getText().setSpan(mSpanNewline,start,start,0);
 			}
@@ -1266,6 +1269,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		
 		@Override
 		public void afterTextChanged(Editable editable) {
+		    mEditing = true;
 			int spanPos;
 			
 			spanPos = editable.getSpanStart(mSpanNewline);
@@ -1278,6 +1282,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			if (spanPos != -1 && editable.charAt(spanPos) == '}')
 				onEndBracket(spanPos, editable);
 			
+			mEditing = false;
 		}
 	};
 	
@@ -1329,7 +1334,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             
             //add newline if also following close bracket
             if(posEnter < editable.length() - 1 && editable.charAt(posEnter + 1) == '}'){
-                editable.insert(posEnter + 1, "\n" + indent.toString()); //warning! this mustn't trigger the 'onNewline' again
+                editable.insert(posEnter + 1, "\n" + indent.toString());
 				mScriptText.setSelection(posEnter + 1);
             }
             
