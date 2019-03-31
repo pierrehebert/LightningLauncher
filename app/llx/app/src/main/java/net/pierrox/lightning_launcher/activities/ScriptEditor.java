@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Pair;
 import android.util.SparseArray;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
@@ -1287,13 +1288,13 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	};
 	
 	/**
-	 * Returns the size of the indent in the current line (spaces at the left)
+	 * Returns the size of the indent in the current line (spaces at the left) and the position of the first non-space char
 	 * @param currentpos pos of current line (any char)
 	 * @param editable where to search
-	 * @return
+	 * @return length of indent (number of spaces) and position of first non-space char (can be end of file)
 	 */
-	private int getIndentLength(int currentpos, Editable editable){
-		//goto beginning of line
+	private Pair<Integer, Integer> getLineIndent(int currentpos, Editable editable){
+		// goto beginning of line
 		if(currentpos != 0) {
 			do{
 				currentpos--;
@@ -1301,73 +1302,78 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 		currentpos++;
 		
-		//find indent size
+		// find indent size
 		int n = 0;
 		boolean cont = true;
 		while(cont && currentpos < editable.length()){
 			switch (editable.charAt(currentpos)){
 				case ' ':
 					n++;
+					currentpos++;
 					break;
 				case '\t':
 					n+=INDENT_SIZE;
+					currentpos++;
 					break;
 				//case '\n':
 				default:
 					cont = false;
 			}
-			currentpos++;
 		}
-		return n;
+		return new Pair<>(n, currentpos);
 	}
 	
 	private void onNewLine(int posEnter, Editable editable){
 		
-		int n = getIndentLength(posEnter, editable);
+		int n = getLineIndent(posEnter, editable).first;
 		StringBuilder indent = new StringBuilder();
         for(int i=0;i<n;++i){
             indent.append(" ");
         }
 		
-		//do if previous line ends in open bracket
+		// do if previous line ends in open bracket
 		if(posEnter > 0 && editable.charAt(posEnter - 1) == '{'){
             
-            //add newline if also following close bracket
+            // add newline if also following close bracket
             if(posEnter < editable.length() - 1 && editable.charAt(posEnter + 1) == '}'){
                 editable.insert(posEnter + 1, "\n" + indent.toString());
 				mScriptText.setSelection(posEnter + 1);
             }
             
-            //add indent size
+            // add indent size
             for(int i=0;i<INDENT_SIZE;++i){
                 indent.append(" ");
             }
 		}
 		
-		//write indent
+		// write indent
         editable.insert(posEnter + 1, indent.toString());
 	}
 	
 	private void onEndBracket(int posBracket, Editable editable){
 		
-		int n = getIndentLength(posBracket, editable);
-		
 		// check if first of line
-		if(n >= INDENT_SIZE && (posBracket - n == 0 || editable.charAt(posBracket - n - 1) == '\n')){
+		
+		Pair<Integer, Integer> n_beg = getLineIndent(posBracket, editable);
+		int n = n_beg.first;
+		int beg = n_beg.second;
+		
+		// check if beginning of line and indent to remove
+		if( n >= INDENT_SIZE && posBracket == beg ){
 			
-			//remove the first tab, or all the spaces if no tabs found
+			// remove the first tab, or all the spaces if no tabs found
 			int p = 1;
 			while(p <= INDENT_SIZE){
 				if(editable.charAt(posBracket - p) == '\t'){
 					//tab found, remove
-					editable.replace(posBracket - p, posBracket - p + 1, "");
+					editable.delete(posBracket - p, posBracket - p + 1);
 					break;
 				}
 				p++;
 			}
 			if(p == INDENT_SIZE + 1){
-				//no tabs found, only spaces, remove them
-				editable.replace(posBracket - INDENT_SIZE, posBracket, "");
+				// no tabs found, only spaces, remove them
+				editable.delete(posBracket - INDENT_SIZE, posBracket);
 			}
 		}
 	}
