@@ -2001,7 +2001,7 @@ public class ItemLayout extends ViewGroup {
 
 
         if(mEditMode && mVirtualEditBorders != null) {
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+            canvas.save();
             canvas.scale(mVirtualEditBordersScale, mVirtualEditBordersScale);
             canvas.translate(mVirtualEditBordersBounds.left, mVirtualEditBordersBounds.top);
             mVirtualEditBorders.draw(canvas);
@@ -2308,7 +2308,7 @@ public class ItemLayout extends ViewGroup {
                 } else {
                     Bitmap draggedBitmap = itemView.getDraggedBitmap();
                     if(draggedBitmap != null) {
-                        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                        canvas.save();
                         View sensibleView = itemView.getSensibleView();
                         float px = left + sensibleView.getLeft();
                         float py = top + sensibleView.getTop();

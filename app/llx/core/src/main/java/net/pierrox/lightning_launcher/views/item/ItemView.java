@@ -374,7 +374,7 @@ public abstract class ItemView extends TransformLayout implements TouchEventInte
                 final Bitmap b = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
                 final Canvas canvas = new Canvas(b);
                 float s = 1f / mDraggedBitmapScale;
-                int count = canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                int count = canvas.save();
                 canvas.scale(s, s);
                 if(background != null) background.setAlpha(0); // ripples do not handle setVisible(false, false); (always restart)
                 view.draw(canvas);

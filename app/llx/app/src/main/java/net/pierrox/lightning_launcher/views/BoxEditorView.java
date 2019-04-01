@@ -201,7 +201,7 @@ public class BoxEditorView extends View implements Runnable {
 		canvas.drawText(mBorder+" "+mBottom, w2, mBorderRect.bottom+dh, mTextPaint);
 		canvas.drawText(mPadding+" "+mBottom, w2, mPaddingRect.bottom+dh, mTextPaint);
 		
-		canvas.save(Canvas.MATRIX_SAVE_FLAG);
+		canvas.save();
 		final float rx_r=mOuterRect.right-dh;
 		canvas.rotate(90, rx_r, h2);
 		canvas.drawText(mMargin+" "+mRight, rx_r, h2, mTextPaint);
@@ -209,7 +209,7 @@ public class BoxEditorView extends View implements Runnable {
 		canvas.drawText(/*mPadding+" "+*/mRight, rx_r, h2+sh*2, mTextPaint);
 		canvas.restore();
 		
-		canvas.save(Canvas.MATRIX_SAVE_FLAG);
+		canvas.save();
 		final float rx_l=mOuterRect.left+dh;
 		canvas.rotate(-90, rx_l, h2);
 		canvas.drawText(mMargin+" "+mLeft, rx_l, h2, mTextPaint);

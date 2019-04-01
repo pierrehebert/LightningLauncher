@@ -425,11 +425,6 @@ public class BoxLayout extends ViewGroup implements SharedAsyncGraphicsDrawable.
 	protected void dispatchDraw(Canvas canvas) {
         sTmpRect.set(bl, bt, br, bb);
 
-        if(mAlpha!=255 && Build.VERSION.SDK_INT < 11) {
-            sTmpRectF.set(0, 0, getWidth(), getHeight());
-            canvas.saveLayerAlpha(sTmpRectF, mAlpha, Canvas.HAS_ALPHA_LAYER_SAVE_FLAG);
-        }
-
         if(mCurrentContentColor!=0) {
             sContentPaint.setColor(mCurrentContentColor);
 			canvas.drawRect(sTmpRect, sContentPaint);
@@ -458,7 +453,7 @@ public class BoxLayout extends ViewGroup implements SharedAsyncGraphicsDrawable.
         }
 
         if(mChildView != null) {
-            canvas.save(Canvas.CLIP_SAVE_FLAG);
+            canvas.save();
             canvas.clipRect(pl, pt, getWidth() - pr, getHeight() - pb);
 
             canvas.translate(mChildLeft, mChildTop);
