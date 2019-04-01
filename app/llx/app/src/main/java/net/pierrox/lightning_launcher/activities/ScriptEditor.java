@@ -1299,8 +1299,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			do{
 				currentpos--;
 			}while (currentpos >= 0 && editable.charAt(currentpos) != '\n');
-		}
-		currentpos++;
+            currentpos++;
+        }
 		
 		// find indent size
 		int n = 0;
@@ -1352,31 +1352,51 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	
 	private void onEndBracket(int posBracket, Editable editable){
 		
-		// check if first of line
-		
-		Pair<Integer, Integer> n_beg = getLineIndent(posBracket, editable);
-		int n = n_beg.first;
-		int beg = n_beg.second;
-		
-		// check if beginning of line and indent to remove
-		if( n >= INDENT_SIZE && posBracket == beg ){
-			
-			// remove the first tab, or all the spaces if no tabs found
-			int p = 1;
-			while(p <= INDENT_SIZE){
-				if(editable.charAt(posBracket - p) == '\t'){
-					//tab found, remove
-					editable.delete(posBracket - p, posBracket - p + 1);
-					break;
-				}
-				p++;
-			}
-			if(p == INDENT_SIZE + 1){
-				// no tabs found, only spaces, remove them
-				editable.delete(posBracket - INDENT_SIZE, posBracket);
-			}
+		// check if beginning of line
+		if( posBracket == getLineIndent(posBracket, editable).second ){
+		    // decrease indent
+			decreaseIndent( posBracket, editable );
 		}
 	}
+	
+	private void increaseIndent(int posCursor, Editable editable){
+	    
+	    Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
+        int beg = n_beg.second;
+        
+        if(posCursor < beg){
+            // cursor before the start of line, just move there
+            mScriptText.setSelection(beg);
+        } else {
+            // increase indent adding spaces
+            for(int i=0; i< INDENT_SIZE; i++) editable.insert(beg, " ");
+        }
+    }
+    
+    private void decreaseIndent(int posCursor, Editable editable){
+    
+        Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
+        int n = n_beg.first;
+        int beg = n_beg.second;
+    
+        if(posCursor < beg){
+            // cursor before the start of line, just move there
+            mScriptText.setSelection(beg);
+        } else if ( n >= INDENT_SIZE ){
+            // enough intent to remove, remove the first tab, or all the spaces if no tabs found
+            int p = 1;
+            while (p <= INDENT_SIZE) {
+                if (editable.charAt(beg - p) == '\t') {
+                    //tab found, remove
+                    editable.delete(beg - p, beg - p + 1);
+                    return;
+                }
+                p++;
+            }
+            // no tabs found, only spaces, remove them
+            editable.delete(beg - INDENT_SIZE, beg);
+        }
+    }
 	
 	
 	// -------------- shortcuts --------------------
@@ -1387,8 +1407,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	}
 	
 	private static class ShortcutKey implements Shortcut {
-		int key;
-		String label;
+		private int key;
+		private String label;
 		
 		ShortcutKey(String label, int key) {
 			this.key = key;
@@ -1410,8 +1430,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	}
 	
 	private static class ShortcutText implements Shortcut {
-		String preText;
-		String postText;
+		private String preText;
+		private String postText;
 		
 		ShortcutText(String preText, String postText) {
 			this.preText = preText;
@@ -1437,10 +1457,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
 			new ShortcutKey("↓",KeyEvent.KEYCODE_DPAD_DOWN),
 			new ShortcutKey("→",KeyEvent.KEYCODE_DPAD_RIGHT),
-			new ShortcutText("(", ")"),
-			new ShortcutText("[", "]"),
-			new ShortcutText("{", "}"),
-			new ShortcutText("var ", ""),
+            new ShortcutAction(0),
+            new ShortcutAction(1),
+            new ShortcutText("(", ")"),
+            new ShortcutText("[", "]"),
+            new ShortcutText("{", "}"),
+            new ShortcutText("var ", ""),
 	};
 	
 	private View.OnClickListener mShortcutButtonClickListener = new View.OnClickListener() {
