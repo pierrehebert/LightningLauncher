@@ -7363,5 +7363,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             startActivity(new Intent(Dashboard.this, Dashboard.class));
             System.exit(0);
         }
+
+        @Override
+        public void onSystemBarsSizeChanged() {
+            configureSystemBarsPadding(mScreen.getCurrentRootPage().config);
+        }
     }
 }

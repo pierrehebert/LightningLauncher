@@ -24,10 +24,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.DisplayCutout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout.LayoutParams;
@@ -80,11 +82,9 @@ public class SystemBarTintManager {
      * Constructor. Call this in the host activity onCreate method after its
      * content view has been set. You should always create new instances when
      * the host activity is recreated.
-     *
-     * @param activity The host activity.
      */
     @TargetApi(19)
-    public SystemBarTintManager(Window window) {
+    public SystemBarTintManager(final Window window) {
         Context context = window.getContext();
         mStatusBarAnimEnter = AnimationUtils.loadAnimation(context, R.anim.sb_in);
         mStatusBarAnimExit = AnimationUtils.loadAnimation(context, R.anim.sb_out);
@@ -98,7 +98,7 @@ public class SystemBarTintManager {
         setupNavBarLayoutParams();
     }
 
-    public void onOrientationChanged(Window window) {
+    public void onConfigurationChanged(Window window) {
         mConfig = new SystemBarConfig(window);
 
         setupStatusBarLayoutParams();
@@ -383,11 +383,23 @@ public class SystemBarTintManager {
             DisplayMetrics realDm = new DisplayMetrics();
             window.getWindowManager().getDefaultDisplay().getRealMetrics(realDm);
 
+            int dw = 0;
+            int dh = 0;
+            if (Build.VERSION.SDK_INT >= 28) {
+                WindowInsets windowInsets = window.getDecorView().getRootWindowInsets();
+                if(windowInsets != null) {
+                    DisplayCutout cutout = windowInsets.getDisplayCutout();
+                    if(cutout != null) {
+                        dw = cutout.getSafeInsetLeft() + cutout.getSafeInsetRight();
+                        dh = cutout.getSafeInsetTop() + cutout.getSafeInsetBottom();
+                    }
+                }
+            }
             mIsNavigationAtBottom = realDm.widthPixels == dm.widthPixels;
             if(mIsInPortrait || mIsNavigationAtBottom) {
-                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels;// - statusBarHeight;
+                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels - dh;
             } else {
-                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels;
+                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels - dw;
             }
             mHasNavigationBar = (mNavigationBarHeight > 0);
         }

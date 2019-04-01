@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -100,7 +101,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     protected Context mContext;
     private Window mWindow;
     private boolean mHasWindowFocus;
-    private SystemBarTintManager mSystemBarTintManager;
+    protected SystemBarTintManager mSystemBarTintManager;
 
     private ViewGroup mContentView;
     private View mDesktopView;
@@ -298,6 +299,17 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         mWindow = window;
         if(Build.VERSION.SDK_INT>=19) {
             mSystemBarTintManager = new SystemBarTintManager(mWindow);
+        }
+
+        if (Build.VERSION.SDK_INT >= 20) {
+            window.getDecorView().setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+                @Override
+                public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
+                    mSystemBarTintManager.onConfigurationChanged(mWindow);
+                    onSystemBarsSizeChanged();
+                    return windowInsets;
+                }
+            });
         }
     }
 
@@ -1466,6 +1478,10 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         }
     }
 
+    public void onSystemBarsSizeChanged() {
+        // pass, override in subclasses when needed
+    }
+
     public void configureSystemBarsColor(PageConfig c) {
         if(Build.VERSION.SDK_INT>=19) {
             mSystemBarTintManager.setStatusBarTintEnabled(!c.statusBarHide || mForceDisplayStatusBar);
@@ -2042,7 +2058,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     /***************************************** SCREEN ORIENTATION ***********************************/
     public void onOrientationChanged() {
         if(mSystemBarTintManager != null) {
-            mSystemBarTintManager.onOrientationChanged(mWindow);
+            mSystemBarTintManager.onConfigurationChanged(mWindow);
         }
 
         updateOrientationOrRotation();

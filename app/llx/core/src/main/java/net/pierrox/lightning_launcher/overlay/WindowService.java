@@ -13,6 +13,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.util.DisplayMetrics;
 import android.view.ActionMode;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -29,6 +30,8 @@ import android.view.WindowManager;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
@@ -177,6 +180,8 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
 //                        |WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
 //                        |WindowManager.LayoutParams.FLAG_LOCAL_FOCUS_MODE
                         |WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        |WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+                        |WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
                         |0,
                 PixelFormat.TRANSLUCENT);
         lp.gravity = Gravity.LEFT | Gravity.TOP;
@@ -779,18 +784,13 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
     }
 
     private void configureScreen() {
-        Point size = new Point();
-        mWindowManager.getDefaultDisplay().getSize(size);
-        mScreenWidth = size.x;
-        mScreenHeight = size.y;
+        DisplayMetrics realDm = new DisplayMetrics();
+        mWindow.getWindowManager().getDefaultDisplay().getRealMetrics(realDm);
+        mScreenWidth = realDm.widthPixels;
+        mScreenHeight = realDm.heightPixels;
 
-        Resources res = getResources();
-        int sb_height = 0;
-        int resourceId = res.getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            sb_height = res.getDimensionPixelSize(resourceId);
-        }
-        mScreenHeight -= sb_height;
+        SystemBarTintManager.SystemBarConfig config = mScreen.getSystemBarTintManager().getConfig();
+        mScreenHeight -= config.getStatusBarHeight() + config.getNavigationBarHeight();
 
         mWorkspaceView.setLayoutParams(new FrameLayout.LayoutParams(mScreenWidth, mScreenHeight));
 
@@ -993,6 +993,11 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
                 hideWorkspace();
             }
 
+        }
+
+        @Override
+        public void onSystemBarsSizeChanged() {
+            configureScreen();
         }
     }
 }
