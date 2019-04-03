@@ -23,6 +23,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Pair;
 import android.util.SparseArray;
@@ -81,7 +82,9 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 import fr.xgouchet.texteditor.ui.AdvancedEditText;
@@ -1359,18 +1362,42 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 	}
 	
+	private Pair<Integer, Integer> modifyIndent(int posLeft, int posRight, boolean increase, Editable editable){
+		String span = "modifyIntent";
+		editable.setSpan(span, posLeft, posRight, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+		
+		Deque<Integer> positions = new ArrayDeque<>();
+		while(posLeft <= posRight && posLeft < editable.length()){
+			// mark position to indent
+			positions.push(posLeft);
+			posLeft++;
+			
+			// find next line
+			while(posLeft <= posRight && posLeft < editable.length() && editable.charAt(posLeft) != '\n')
+				posLeft++;
+			posLeft++;
+		}
+		
+		for (Integer position : positions) {
+			// indent the lines in reverse order
+			if(increase)
+				increaseIndent(position, editable);
+			else
+				decreaseIndent(position, editable);
+		}
+		
+		//restore span
+		 return new Pair<>(editable.getSpanStart(span), editable.getSpanEnd(span));
+	}
+	
 	private void increaseIndent(int posCursor, Editable editable){
 	    
 	    Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
         int beg = n_beg.second;
         
-        if(posCursor < beg){
-            // cursor before the start of line, just move there
-            mScriptText.setSelection(beg);
-        } else {
-            // increase indent adding spaces
-            for(int i=0; i< INDENT_SIZE; i++) editable.insert(beg, " ");
-        }
+		// increase indent adding spaces
+		for(int i=0; i< INDENT_SIZE; i++) editable.insert(beg, " ");
+    
     }
     
     private void decreaseIndent(int posCursor, Editable editable){
@@ -1379,10 +1406,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         int n = n_beg.first;
         int beg = n_beg.second;
     
-        if(posCursor < beg){
-            // cursor before the start of line, just move there
-            mScriptText.setSelection(beg);
-        } else if ( n >= INDENT_SIZE ){
+        if ( n >= INDENT_SIZE ){
             // enough intent to remove, remove the first tab, or all the spaces if no tabs found
             int p = 1;
             while (p <= INDENT_SIZE) {
@@ -1451,14 +1475,52 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			editText.setSelection(start + preText.length());
 		}
 	}
+	enum SA {
+		DEC_TAB,
+		INC_TAB,
+	}
+	private class ShortcutAction implements Shortcut {
+	    private SA action;
+	    
+        ShortcutAction(SA action) {
+            this.action = action;
+        }
+        
+        @Override
+        public String getLabel() {
+            switch (action) {
+                case DEC_TAB:
+                    return "⇤";
+                case INC_TAB:
+                    return "⇥";
+			}
+            return "?";
+        }
+        
+        @Override
+        public void apply(AdvancedEditText editText) {
+            switch (action) {
+            	case DEC_TAB:
+					Pair<Integer, Integer> selectionI =
+							modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), false, editText.getEditableText());
+					editText.setSelection(selectionI.first, selectionI.second);
+					break;
+				case INC_TAB:
+					Pair<Integer, Integer> selectionD =
+							modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), true, editText.getEditableText());
+					editText.setSelection(selectionD.first, selectionD.second);
+                    break;
+            }
+        }
+    }
 	
-	private static Shortcut[] mShortcuts = new Shortcut[]{
+	private Shortcut[] mShortcuts = new Shortcut[]{
 			new ShortcutKey("←",KeyEvent.KEYCODE_DPAD_LEFT),
 			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
 			new ShortcutKey("↓",KeyEvent.KEYCODE_DPAD_DOWN),
 			new ShortcutKey("→",KeyEvent.KEYCODE_DPAD_RIGHT),
-            new ShortcutAction(0),
-            new ShortcutAction(1),
+            new ShortcutAction(SA.DEC_TAB),
+            new ShortcutAction(SA.INC_TAB),
             new ShortcutText("(", ")"),
             new ShortcutText("[", "]"),
             new ShortcutText("{", "}"),
