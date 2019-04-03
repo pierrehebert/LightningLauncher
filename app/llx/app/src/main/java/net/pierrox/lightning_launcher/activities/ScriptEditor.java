@@ -1264,9 +1264,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		    if(mEditing) return;
 		    
 			if(count == 1 && s.charAt(start) == '\n'){
+				// newline inserted
 				mScriptText.getText().setSpan(mSpanNewline,start,start,0);
 			}
 			if(count == 1 && s.charAt(start) == '}'){
+				// end bracket inserted
 				mScriptText.getText().setSpan(mSpanEndBracket, start, start, 0);
 			}
 		}
@@ -1276,11 +1278,13 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		    mEditing = true;
 			int spanPos;
 			
+			// check newline
 			spanPos = editable.getSpanStart(mSpanNewline);
 			editable.removeSpan(mSpanNewline);
 			if (spanPos != -1 && editable.charAt(spanPos) == '\n')
 				onNewLine(spanPos, editable);
 			
+			// check endbracket
 			spanPos = editable.getSpanStart(mSpanEndBracket);
 			editable.removeSpan(mSpanEndBracket);
 			if (spanPos != -1 && editable.charAt(spanPos) == '}')
@@ -1326,6 +1330,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		return new Pair<>(n, currentpos);
 	}
 	
+	/**
+	 * Called when a newline is inserted. Indents it with the same indentation as the previous line (if any)
+	 * @param posEnter position of the newline char
+	 * @param editable where to indent
+	 */
 	private void onNewLine(int posEnter, Editable editable){
 		
 		int n = getLineIndent(posEnter, editable).first;
@@ -1339,8 +1348,9 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             
             // add newline if also following close bracket
             if(posEnter < editable.length() - 1 && editable.charAt(posEnter + 1) == '}'){
-                editable.insert(posEnter + 1, "\n" + indent.toString());
-				mScriptText.setSelection(posEnter + 1);
+                editable.insert(posEnter + 2, "\n" + indent.toString() + "}");
+				// this avoids moving the cursor
+				editable.replace(posEnter + 1, posEnter + 2, "");
             }
             
             // add indent size
@@ -1353,6 +1363,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         editable.insert(posEnter + 1, indent.toString());
 	}
 	
+	/**
+	 * Called when an ending bracket is inserted. Decreases the indentation.
+	 * @param posBracket where the endbracket was
+	 * @param editable where to unindent
+	 */
 	private void onEndBracket(int posBracket, Editable editable){
 		
 		// check if beginning of line
@@ -1362,6 +1377,14 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 	}
 	
+	/**
+	 * Changes the indentation of all the lines selected
+	 * @param posLeft start of selection
+	 * @param posRight end of selection
+	 * @param increase if trur increase indent, descrease otherwise
+	 * @param editable where to apply the indentation
+	 * @return the new selection (may have changed due to the indentation changes)
+	 */
 	private Pair<Integer, Integer> modifyIndent(int posLeft, int posRight, boolean increase, Editable editable){
 		String span = "modifyIntent";
 		editable.setSpan(span, posLeft, posRight, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
@@ -1390,6 +1413,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		 return new Pair<>(editable.getSpanStart(span), editable.getSpanEnd(span));
 	}
 	
+	/**
+	 * Increases the indentation of a single line
+	 * @param posCursor position of a character in the line that will be indented
+	 * @param editable where to apply the indentation
+	 */
 	private void increaseIndent(int posCursor, Editable editable){
 	    
 	    Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
@@ -1399,7 +1427,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		for(int i=0; i< INDENT_SIZE; i++) editable.insert(beg, " ");
     
     }
-    
+	
+	/**
+	 * Decreases the indentation of a single line
+	 * @param posCursor position of a character in the line that will be indented
+	 * @param editable where to apply the indentation
+	 */
     private void decreaseIndent(int posCursor, Editable editable){
     
         Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
@@ -1425,11 +1458,24 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	
 	// -------------- shortcuts --------------------
 	
+	/**
+	 * Represents a button in the bottom of the editor.
+	 */
 	private interface Shortcut {
+		/**
+		 * Label to display
+		 */
 		String getLabel();
+		
+		/**
+		 * Runned when the button is pressed
+		 */
 		void apply(AdvancedEditText editText);
 	}
 	
+	/**
+	 * This button will send a key to the editText.
+	 */
 	private static class ShortcutKey implements Shortcut {
 		private int key;
 		private String label;
@@ -1453,6 +1499,9 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 	}
 	
+	/**
+	 * This button will insert a text before and after the cursor.
+	 */
 	private static class ShortcutText implements Shortcut {
 		private String preText;
 		private String postText;
@@ -1475,10 +1524,14 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			editText.setSelection(start + preText.length());
 		}
 	}
+	
 	enum SA {
 		DEC_TAB,
 		INC_TAB,
 	}
+	/**
+	 * This button will trigger an action
+	 */
 	private class ShortcutAction implements Shortcut {
 	    private SA action;
 	    
@@ -1514,6 +1567,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         }
     }
 	
+    // list of shortcuts to display
 	private Shortcut[] mShortcuts = new Shortcut[]{
 			new ShortcutKey("←",KeyEvent.KEYCODE_DPAD_LEFT),
 			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
