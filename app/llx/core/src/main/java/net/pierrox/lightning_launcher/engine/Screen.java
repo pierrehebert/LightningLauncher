@@ -189,6 +189,24 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                     }
                 }
             };
+
+            mContentView.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+                @Override
+                public void onViewAttachedToWindow(View view) {
+                    // select API 28 because this is linked with the display cutout stuff
+                    if (Build.VERSION.SDK_INT >= 28) {
+                        WindowInsets insets = mContentView.getRootWindowInsets();
+                        if (insets != null) {
+                            mSystemBarTintManager.onConfigurationChanged(mWindow);
+                            onSystemBarsSizeChanged();
+                        }
+                    }
+                }
+                @Override
+                public void onViewDetachedFromWindow(View view) {
+
+                }
+            });
         }
     }
 
@@ -299,17 +317,6 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         mWindow = window;
         if(Build.VERSION.SDK_INT>=19) {
             mSystemBarTintManager = new SystemBarTintManager(mWindow);
-        }
-
-        if (Build.VERSION.SDK_INT >= 20) {
-            window.getDecorView().setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-                @Override
-                public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
-                    mSystemBarTintManager.onConfigurationChanged(mWindow);
-                    onSystemBarsSizeChanged();
-                    return windowInsets;
-                }
-            });
         }
     }
 

@@ -362,6 +362,13 @@ public class SystemBarTintManager {
 //        private final int mNavigationBarWidth;
         private final boolean mIsNavigationAtBottom;
 
+        // These values are kept in order to be reused when the window insets are not available. This
+        // is the case when the view is not attached to the window. Also, display cutouts are never
+        // available in the context of the overlay desktop. Display cutouts are not supposed to change
+        // so it should be safe enough.
+        private static int sSafeInsetWidth = 0;
+        private static int sSafeInsetHeight = 0;
+
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
         private SystemBarConfig(Window window) {
             Resources res = window.getContext().getResources();
@@ -383,23 +390,21 @@ public class SystemBarTintManager {
             DisplayMetrics realDm = new DisplayMetrics();
             window.getWindowManager().getDefaultDisplay().getRealMetrics(realDm);
 
-            int dw = 0;
-            int dh = 0;
             if (Build.VERSION.SDK_INT >= 28) {
                 WindowInsets windowInsets = window.getDecorView().getRootWindowInsets();
                 if(windowInsets != null) {
                     DisplayCutout cutout = windowInsets.getDisplayCutout();
                     if(cutout != null) {
-                        dw = cutout.getSafeInsetLeft() + cutout.getSafeInsetRight();
-                        dh = cutout.getSafeInsetTop() + cutout.getSafeInsetBottom();
+                        sSafeInsetWidth = cutout.getSafeInsetLeft() + cutout.getSafeInsetRight();
+                        sSafeInsetHeight = cutout.getSafeInsetTop() + cutout.getSafeInsetBottom();
                     }
                 }
             }
             mIsNavigationAtBottom = realDm.widthPixels == dm.widthPixels;
             if(mIsInPortrait || mIsNavigationAtBottom) {
-                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels - dh;
+                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels - sSafeInsetHeight;
             } else {
-                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels - dw;
+                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels - sSafeInsetWidth;
             }
             mHasNavigationBar = (mNavigationBarHeight > 0);
         }
