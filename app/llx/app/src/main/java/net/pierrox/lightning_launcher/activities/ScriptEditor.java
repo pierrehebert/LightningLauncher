@@ -1345,14 +1345,14 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         public void apply(AdvancedEditText editText) {
             switch (action) {
             	case DEC_TAB:
-					Pair<Integer, Integer> selectionI =
-							mIndentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), false, editText.getEditableText());
-					editText.setSelection(selectionI.first, selectionI.second);
+					Pair<Integer, Integer> selectionD =
+							Indentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), false, editText.getEditableText());
+					editText.setSelection(selectionD.first, selectionD.second);
 					break;
 				case INC_TAB:
-					Pair<Integer, Integer> selectionD =
-							mIndentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), true, editText.getEditableText());
-					editText.setSelection(selectionD.first, selectionD.second);
+					Pair<Integer, Integer> selectionI =
+							Indentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), true, editText.getEditableText());
+					editText.setSelection(selectionI.first, selectionI.second);
                     break;
             }
         }

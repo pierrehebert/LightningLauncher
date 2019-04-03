@@ -15,16 +15,16 @@ import java.util.Deque;
 public class Indentation implements TextWatcher {
     private static final int INDENT_SIZE = 2;
     
-    private EditText edTxt;
-    
-    public Indentation(EditText edTxt) {
-        this.edTxt = edTxt;
+    public Indentation(EditText editText) {
+        this.editText = editText;
     }
     
+    
     // ------------ textwatcher ----------------
-    private String mSpanNewline = "mSpanNewline";
-    private String mSpanEndBracket = "mSpanEndBracket";
-    private boolean mEditing = false;
+    private String spanNewline = "spanNewline";
+    private String spanEndBracket = "spanEndBracket";
+    private boolean editing = false;
+    private EditText editText;
     
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -32,74 +32,51 @@ public class Indentation implements TextWatcher {
     
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if(mEditing) return;
+        if(editing) return;
         
         if(count == 1 && s.charAt(start) == '\n'){
             // newline inserted
-            edTxt.getEditableText().setSpan(mSpanNewline,start,start,0);
+            editText.getEditableText().setSpan(spanNewline,start,start,0);
         }
         if(count == 1 && s.charAt(start) == '}'){
             // end bracket inserted
-            edTxt.getEditableText().setSpan(mSpanEndBracket, start, start, 0);
+            editText.getEditableText().setSpan(spanEndBracket, start, start, 0);
         }
     }
     
     @Override
     public void afterTextChanged(Editable editable) {
-        mEditing = true;
+        editing = true;
         int spanPos;
         
         // check newline
-        spanPos = editable.getSpanStart(mSpanNewline);
-        editable.removeSpan(mSpanNewline);
+        spanPos = editable.getSpanStart(spanNewline);
+        editable.removeSpan(spanNewline);
         if (spanPos != -1 && editable.charAt(spanPos) == '\n')
             onNewLine(spanPos, editable);
         
         // check endbracket
-        spanPos = editable.getSpanStart(mSpanEndBracket);
-        editable.removeSpan(mSpanEndBracket);
+        spanPos = editable.getSpanStart(spanEndBracket);
+        editable.removeSpan(spanEndBracket);
         if (spanPos != -1 && editable.charAt(spanPos) == '}')
             onEndBracket(spanPos, editable);
         
-        mEditing = false;
+        editing = false;
     }
     
-    // ------------ functions -----------------
     
     /**
-     * Returns the size of the indent in the current line (spaces at the left) and the position of the first non-space char
-     * @param currentpos pos of current line (any char)
-     * @param editable where to search
-     * @return length of indent (number of spaces) and position of first non-space char (can be end of file)
+     * Called when an ending bracket is inserted. Decreases the indentation.
+     * @param posBracket where the endbracket was
+     * @param editable where to unindent
      */
-    private Pair<Integer, Integer> getLineIndent(int currentpos, Editable editable){
-        // goto beginning of line
-        if(currentpos != 0) {
-            do{
-                currentpos--;
-            }while (currentpos >= 0 && editable.charAt(currentpos) != '\n');
-            currentpos++;
-        }
+    private void onEndBracket(int posBracket, Editable editable){
         
-        // find indent size
-        int n = 0;
-        boolean cont = true;
-        while(cont && currentpos < editable.length()){
-            switch (editable.charAt(currentpos)){
-                case ' ':
-                    n++;
-                    currentpos++;
-                    break;
-                case '\t':
-                    n+=INDENT_SIZE;
-                    currentpos++;
-                    break;
-                //case '\n':
-                default:
-                    cont = false;
-            }
+        // check if beginning of line
+        if( posBracket == getLineIndent(posBracket, editable).second ){
+            // decrease indent
+            decreaseIndent( posBracket, editable );
         }
-        return new Pair<>(n, currentpos);
     }
     
     /**
@@ -135,18 +112,42 @@ public class Indentation implements TextWatcher {
         editable.insert(posEnter + 1, indent.toString());
     }
     
+    // ------------ functions -----------------
+    
     /**
-     * Called when an ending bracket is inserted. Decreases the indentation.
-     * @param posBracket where the endbracket was
-     * @param editable where to unindent
+     * Returns the size of the indent in the current line (spaces at the left) and the position of the first non-space char
+     * @param currentpos pos of current line (any char)
+     * @param editable where to search
+     * @return length of indent (number of spaces) and position of first non-space char (can be end of file)
      */
-    private void onEndBracket(int posBracket, Editable editable){
-        
-        // check if beginning of line
-        if( posBracket == getLineIndent(posBracket, editable).second ){
-            // decrease indent
-            decreaseIndent( posBracket, editable );
+    private static Pair<Integer, Integer> getLineIndent(int currentpos, Editable editable){
+        // goto beginning of line
+        if(currentpos != 0) {
+            do{
+                currentpos--;
+            }while (currentpos >= 0 && editable.charAt(currentpos) != '\n');
+            currentpos++;
         }
+        
+        // find indent size
+        int n = 0;
+        boolean cont = true;
+        while(cont && currentpos < editable.length()){
+            switch (editable.charAt(currentpos)){
+                case ' ':
+                    n++;
+                    currentpos++;
+                    break;
+                case '\t':
+                    n+=INDENT_SIZE;
+                    currentpos++;
+                    break;
+                //case '\n':
+                default:
+                    cont = false;
+            }
+        }
+        return new Pair<>(n, currentpos);
     }
     
     /**
@@ -157,20 +158,19 @@ public class Indentation implements TextWatcher {
      * @param editable where to apply the indentation
      * @return the new selection (may have changed due to the indentation changes)
      */
-    public Pair<Integer, Integer> modifyIndent(int posLeft, int posRight, boolean increase, Editable editable){
+    public static Pair<Integer, Integer> modifyIndent(int posLeft, int posRight, boolean increase, Editable editable){
         String span = "modifyIntent";
         editable.setSpan(span, posLeft, posRight, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         
         Deque<Integer> positions = new ArrayDeque<>();
-        while(posLeft <= posRight && posLeft < editable.length()){
+        while(posLeft <= posRight && posLeft <= editable.length()){
             // mark position to indent
             positions.push(posLeft);
-            posLeft++;
             
-            // find next line
-            while(posLeft <= posRight && posLeft < editable.length() && editable.charAt(posLeft) != '\n')
-                posLeft++;
+            // find next line (next newline char)
             posLeft++;
+            while(posLeft <= posRight && posLeft <= editable.length() && editable.charAt(posLeft - 1) != '\n')
+                posLeft++;
         }
         
         for (Integer position : positions) {
@@ -190,7 +190,7 @@ public class Indentation implements TextWatcher {
      * @param posCursor position of a character in the line that will be indented
      * @param editable where to apply the indentation
      */
-    private void increaseIndent(int posCursor, Editable editable){
+    private static void increaseIndent(int posCursor, Editable editable){
         
         Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
         int beg = n_beg.second;
@@ -205,7 +205,7 @@ public class Indentation implements TextWatcher {
      * @param posCursor position of a character in the line that will be indented
      * @param editable where to apply the indentation
      */
-    private void decreaseIndent(int posCursor, Editable editable){
+    private static void decreaseIndent(int posCursor, Editable editable){
         
         Pair<Integer, Integer> n_beg = getLineIndent(posCursor, editable);
         int n = n_beg.first;
