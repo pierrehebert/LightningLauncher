@@ -2,8 +2,10 @@ package net.pierrox.lightning_launcher.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.os.Build;
 import android.text.Html;
 import android.widget.TextView;
+import net.pierrox.lightning_launcher.LLApp;
 
 public class MyTextView extends TextView {
     private int mFixWidth;
@@ -43,7 +45,13 @@ public class MyTextView extends TextView {
     @Override
     public void setText(CharSequence text, BufferType type) {
         CharSequence t;
-        if(type == BufferType.NORMAL && looksLikeHtml(text)) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            if (text instanceof String) {
+                t = LLApp.get().getMarkdownParser().toMarkdown((String) text);
+            } else {
+                t = text;
+            }
+        } else if (type == BufferType.NORMAL && looksLikeHtml(text)) {
             t = Html.fromHtml(text.toString());
             if(t.length() == 0) {
                 t = text;

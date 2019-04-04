@@ -1,7 +1,9 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.pierrox.lightning_launcher">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="net.pierrox.lightning_launcher">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-sdk tools:overrideLibrary="ru.noties.markwon.html, ru.noties.markwon.renderer"/>
 
 </manifest>

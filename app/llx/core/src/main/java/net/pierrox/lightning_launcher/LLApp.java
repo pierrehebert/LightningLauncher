@@ -27,6 +27,9 @@ import net.pierrox.lightning_launcher.views.MyAppWidgetHostView;
 import net.pierrox.lightning_launcher.views.NativeImage;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
 import org.json.JSONObject;
+import ru.noties.markwon.Markwon;
+import ru.noties.markwon.core.CorePlugin;
+import ru.noties.markwon.html.HtmlPlugin;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -68,6 +71,8 @@ public abstract class LLApp extends Application {
 
     private ArrayList<Screen> mScreens = new ArrayList<>();
     protected Screen mBackgroundScreen;
+
+    private Markwon mMarkdownParser;
 
 	@Override
 	public void onCreate() {
@@ -135,6 +140,11 @@ public abstract class LLApp extends Application {
         registerReceiver(mBroadcastReceiver, intent_filter);
 
         mBackgroundScreen.runAction(mAppEngine, "STARTUP", mAppEngine.getGlobalConfig().startup);
+
+        mMarkdownParser = Markwon.builder(this)
+                .usePlugin(CorePlugin.create())
+                .usePlugin(HtmlPlugin.create())
+                .build();
     }
 	
 	@Override
@@ -307,6 +317,10 @@ public abstract class LLApp extends Application {
 
     public String getLanguage() {
         return mLanguage;
+    }
+
+    public Markwon getMarkdownParser() {
+        return mMarkdownParser;
     }
 
     public abstract Intent getLockscreenServiceIntent();
