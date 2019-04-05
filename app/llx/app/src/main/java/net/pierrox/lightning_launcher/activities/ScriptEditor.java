@@ -75,6 +75,7 @@ import net.pierrox.lightning_launcher.script.api.StopPoint;
 import net.pierrox.lightning_launcher.util.FileAndDirectoryPickerDialog;
 import net.pierrox.lightning_launcher.util.FileProvider;
 import net.pierrox.lightning_launcher.util.Indentation;
+import net.pierrox.lightning_launcher.util.Search;
 import net.pierrox.lightning_launcher_extreme.BuildConfig;
 import net.pierrox.lightning_launcher_extreme.R;
 
@@ -124,6 +125,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	private ArrayAdapter<Script> mScriptAdapter;
 	private List<Script> mAllScripts = new ArrayList<>();
 	private Indentation mIndentation;
+	private Search mSearch;
 
 	private boolean mShowSubDirs;
 
@@ -381,6 +383,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         });
 		mIndentation = new Indentation();
 		mIndentation.register(mScriptText); // TODO: add setting to register/unregister
+		mSearch = new Search(this, mScriptText);
 
 		((TextView)findViewById(R.id.sc_ma)).setText(R.string.sc_ma);
 		((TextView)findViewById(R.id.sc_a)).setText(R.string.sc_a);
@@ -1258,6 +1261,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		String getLabel();
 		
 		/**
+		 * @return true if label is an icon (using LL typeface). False if normal text
+		 */
+		boolean isLabelIcon();
+		
+		/**
 		 * Runned when the button is pressed
 		 */
 		void apply(AdvancedEditText editText);
@@ -1278,6 +1286,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		@Override
 		public String getLabel() {
 			return label;
+		}
+		
+		@Override
+		public boolean isLabelIcon() {
+			return false;
 		}
 		
 		@Override
@@ -1307,6 +1320,11 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		}
 		
 		@Override
+		public boolean isLabelIcon() {
+			return false;
+		}
+		
+		@Override
 		public void apply(AdvancedEditText editText) {
 			int start = editText.getSelectionStart();
 			int end = editText.getSelectionEnd();
@@ -1318,6 +1336,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	enum SA {
 		DEC_TAB,
 		INC_TAB,
+        SEARCH,
+        SEARCHN,
 	}
 	/**
 	 * This button will trigger an action
@@ -1333,14 +1353,23 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         public String getLabel() {
             switch (action) {
                 case DEC_TAB:
-                    return "⇤";
+                    return "A"; // left arrow with bar
                 case INC_TAB:
-                    return "⇥";
+                    return "D"; // right arrow with bar
+                case SEARCH:
+                    return "I"; // magnifier glass
+                case SEARCHN:
+                    return "IC"; // magnifier glass and '>'
 			}
-            return "?";
+            return "n"; // android icon
         }
-        
-        @Override
+		
+		@Override
+		public boolean isLabelIcon() {
+			return true;
+		}
+		
+		@Override
         public void apply(AdvancedEditText editText) {
             switch (action) {
             	case DEC_TAB:
@@ -1353,12 +1382,18 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 							Indentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), true, editText.getEditableText());
 					editText.setSelection(selectionI.first, selectionI.second);
                     break;
+                case SEARCH:
+                	mSearch.showDialog();
+                    break;
+				case SEARCHN:
+					mSearch.searchNext();
             }
         }
     }
 	
     // list of shortcuts to display
 	private Shortcut[] mShortcuts = new Shortcut[]{
+			//TODO: replace the arrows with typeface icons
 			new ShortcutKey("←",KeyEvent.KEYCODE_DPAD_LEFT),
 			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
 			new ShortcutKey("↓",KeyEvent.KEYCODE_DPAD_DOWN),
@@ -1369,6 +1404,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             new ShortcutText("[", "]"),
             new ShortcutText("{", "}"),
             new ShortcutText("var ", ""),
+			new ShortcutAction(SA.SEARCH),
+			new ShortcutAction(SA.SEARCHN),
 	};
 	
 	private View.OnClickListener mShortcutButtonClickListener = new View.OnClickListener() {
@@ -1382,11 +1419,15 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	};
 	
 	private void initializeShortcuts(ViewGroup view) {
+		Typeface typeface = LLApp.get().getIconsTypeface();
+		
 		LayoutInflater inflater = getLayoutInflater();
 		for (Shortcut shortcut : mShortcuts) {
 			Button b = (Button) inflater.inflate(R.layout.sc_btn, null);
 			b.setTag(shortcut);
 			b.setText(shortcut.getLabel());
+			if(shortcut.isLabelIcon())
+				b.setTypeface(typeface);
 			b.setOnClickListener(mShortcutButtonClickListener);
 			view.addView(b);
 		}
