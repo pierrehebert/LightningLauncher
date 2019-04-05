@@ -296,6 +296,7 @@
 <string name="no_diagonal_scrolling_t">Disable diagonal scrolling</string>
 <string name="no_diagonal_scrolling_s">Only scroll in one direction at a time</string>
 <string name="pinch_zoom_t">Pinch to zoom in or out</string>
+<string name="otc_t">Tap outside to close</string>
 <string name="auto_close_t">Auto close</string>
 <string name="auto_close_s">Close the folder as soon as one of its app is launched</string>
 <string name="anim_glitch_fix_t">Animation glitch fix</string>

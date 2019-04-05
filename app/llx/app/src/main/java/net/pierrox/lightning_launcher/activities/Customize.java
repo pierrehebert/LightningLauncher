@@ -1317,6 +1317,7 @@ public class Customize extends ResourceWrapperActivity implements
                         is_folder_page ? R.string.this_folder_feel_t
                                 : R.string.folder_feel_t, R.string.folder_feel_s));
                 mPreferencesPageFolderFeel = new ArrayList<LLPreference>();
+                mPreferencesPageFolderFeel.add(mPGFolderFeelOutsideTapClose = new LLPreferenceCheckBox(this, ID_mPGFolderFeelOutsideTapClose, R.string.otc_t, 0, fc.outsideTapClose, fc_def == null ? null : fc_def.outsideTapClose));
                 mPreferencesPageFolderFeel.add(mPGFolderFeelAutoClose = new LLPreferenceCheckBox(this, ID_mPGFolderFeelAutoClose, R.string.auto_close_t, R.string.auto_close_s, fc.autoClose, fc_def == null ? null : fc_def.autoClose));
                 if(!is_folder_page) {
                     mPreferencesPageFolderFeel.add(mPGFolderFeelCloseOther = new LLPreferenceCheckBox(this, ID_mPGFolderFeelCloseOther, R.string.cof_t, R.string.cof_s, fc.closeOther, fc_def == null ? null : fc_def.closeOther));
@@ -1669,6 +1670,7 @@ public class Customize extends ResourceWrapperActivity implements
                 fc.animationIn = (FolderAnimation) mPGFolderLookAnimOpen.getValueEnum();
                 fc.animationOut = (FolderAnimation) mPGFolderLookAnimClose.getValueEnum();
                 fc.animFade = mPGFolderLookAnimFade.isChecked();
+                fc.outsideTapClose = mPGFolderFeelOutsideTapClose.isChecked();
                 fc.autoClose = mPGFolderFeelAutoClose.isChecked();
                 if(!is_folder) {
                     fc.closeOther = mPGFolderFeelCloseOther.isChecked();
@@ -2174,6 +2176,7 @@ public class Customize extends ResourceWrapperActivity implements
 	private LLPreferenceEventAction mPageEventMenu;
 
 	private LLPreference mPGFolderFeel;
+	private LLPreferenceCheckBox mPGFolderFeelOutsideTapClose;
 	private LLPreferenceCheckBox mPGFolderFeelAutoClose;
 	private LLPreferenceCheckBox mPGFolderFeelCloseOther;
 	private LLPreferenceCheckBox mPGFolderFeelAnimGlitchFix;
@@ -2237,6 +2240,7 @@ public class Customize extends ResourceWrapperActivity implements
 	private static final int ID_mPGZoomScrollDisableDiagonal = 90;
 	private static final int ID_mPGZoomScrollEnablePinch = 91;
 	private static final int ID_mPGFolderFeel = 92;
+	private static final int ID_mPGFolderFeelOutsideTapClose = 515;
 	private static final int ID_mPGFolderFeelAutoClose = 93;
 	private static final int ID_mPGFolderFeelAnimGlitchFix = 94;
 	private static final int ID_mPGMisc = 95;

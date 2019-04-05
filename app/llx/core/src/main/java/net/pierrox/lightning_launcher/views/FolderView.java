@@ -15,6 +15,7 @@ import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -26,11 +27,22 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class FolderView extends BoxLayout {
+public class FolderView extends FrameLayout {
+    public interface OnTapOutsideListener {
+        void onTapOutside(FolderView fv);
+    }
 	private static final int ANIM_DURATION=400;
-	
-	private LinearLayout mContainer;
-	private FrameLayout mInnerContainer;
+
+    // the innermost container where the item layout is attached (no title, no border)
+    private FrameLayout mContentContainer;
+
+	// the container for title and content (without borders)
+	private LinearLayout mInnerContainer;
+
+	// the outer container adds borders around the inner container
+    private BoxLayout mOuterContainer;
+
+
 	private TextView mEmptyMsg;
 	private TextView mTitle;
 	private View mSeparator;
@@ -50,35 +62,40 @@ public class FolderView extends BoxLayout {
 
     private boolean mAllowEmptyMessage = true;
 
+    private OnTapOutsideListener mOnTapOutsideListener;
+
 	public FolderView(Context context) {
-		super(context, null, true);
+		super(context);
 
         setVisibility(View.GONE);
 		
-		mContainer=new LinearLayout(context);
-		mContainer.setOrientation(LinearLayout.VERTICAL);
-		mContainer.setGravity(Gravity.CENTER_HORIZONTAL);
+		mInnerContainer = new LinearLayout(context);
+		mInnerContainer.setOrientation(LinearLayout.VERTICAL);
+		mInnerContainer.setGravity(Gravity.CENTER_HORIZONTAL);
 		
-		mInnerContainer=new FrameLayout(context);
+		mContentContainer = new FrameLayout(context);
 
         mItemLayout=new ItemLayout(context, null);
-        mInnerContainer.addView(mItemLayout, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        mContentContainer.addView(mItemLayout, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 		
 		mEmptyMsg=new TextView(context);
 		mEmptyMsg.setGravity(Gravity.CENTER);
         mEmptyMsg.setPadding(20, 20, 20, 20);
 		FrameLayout.LayoutParams elp=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 		elp.gravity=Gravity.CENTER;
-        mInnerContainer.addView(mEmptyMsg, elp);
+        mContentContainer.addView(mEmptyMsg, elp);
 		
 		mTitle=new MyTextView(context);
 		mTitle.setGravity(Gravity.CENTER);
-		mContainer.addView(mTitle, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+		mInnerContainer.addView(mTitle, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
 		mSeparator=new View(context);
 		mSeparator.setBackgroundColor(0xffffffff);
-		mContainer.addView(mSeparator, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1));
-		mContainer.addView(mInnerContainer, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+		mInnerContainer.addView(mSeparator, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1));
+		mInnerContainer.addView(mContentContainer, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        mOuterContainer = new BoxLayout(context, null, true);
+        addView(mOuterContainer, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 	}
 
     /**
@@ -103,24 +120,12 @@ public class FolderView extends BoxLayout {
 			if(box.size[Box.MR]==0) box.size[Box.MR]=1;
 			if(box.size[Box.MB]==0) box.size[Box.MB]=1;
 		}
-		setChild(mContainer, box);
-//		if(mFolderConfig.borderStyle==FolderBorderStyle.PLAIN) {
-//			setPadding(mFolderConfig.borderPlainLeft, mFolderConfig.borderPlainTop, mFolderConfig.borderPlainRight, mFolderConfig.borderPlainBottom);
-//			setBackgroundColor(mFolderConfig.borderPlainColor);
-//		} else {
-//			if(mFolderConfig.animationGlitchFix) {
-//				// fix for an animation glitch that leaves some unrefreshed pixels sometime
-//				setPadding(1, 1, 1, 1);
-//			}
-//		}
+		mOuterContainer.setChild(mInnerContainer, box);
 
-		
 		int visibility=mFolderConfig.titleVisibility ? View.VISIBLE : View.GONE; 
 		mTitle.setVisibility(visibility);
 		mSeparator.setVisibility(visibility);
 		
-//		mContainer.setBackgroundColor(mFolderConfig.fbackgroundColor);
-//		mContainer.setPadding(mFolderConfig.paddingLeft, mFolderConfig.paddingTop, mFolderConfig.paddingRight, mFolderConfig.paddingBottom);
 		if(mFolderConfig.titleVisibility) {
 			mTitle.setText(folder.getLabel());
 			mTitle.setTextSize(mFolderConfig.titleFontSize);
@@ -149,6 +154,10 @@ public class FolderView extends BoxLayout {
         }
 	}
 
+    public void setOnTapOutsideListener(OnTapOutsideListener onTapOutsideListener) {
+        mOnTapOutsideListener = onTapOutsideListener;
+    }
+
     public void updateEmptyMessageVisibility() {
         if(mPage.items.size()==0 && mAllowEmptyMessage) {
             mEmptyMsg.setVisibility(View.VISIBLE);
@@ -163,23 +172,25 @@ public class FolderView extends BoxLayout {
 		
 		if(mEditMode) {
 			int[] offset=new int[2];
-	    	getLocationInWindow(offset);
+	    	mOuterContainer.getLocationInWindow(offset);
 	    	offset[0]-=container_offset[0];
 	    	offset[1]-=container_offset[1];
 	    	Matrix m=mItemLayout.getLocalTransform();
 	    	m.postTranslate(offset[0], offset[1]);
 	    	mItemLayout.setLocalTransform(m);
 	    	
+	    	mOuterContainer.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+	    	mContentContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 	    	mInnerContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-	    	mContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 	    	mItemLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 		} else {
             if(mFolderConfig.autoFindOrigin) {
                 mItemLayout.setAutoFindOrigin(true);
             }
 
+	    	mOuterContainer.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+	    	mContentContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 	    	mInnerContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-	    	mContainer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 	    	mItemLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 		}
 		
@@ -208,23 +219,25 @@ public class FolderView extends BoxLayout {
 		if(animate) {
             Animation animation = getAnimation(false);
             if(animation != null) {
-                startAnimation(animation);
+                mOuterContainer.startAnimation(animation);
                 return;
             }
 		}
         setVisibility(View.GONE);
     }
 
-    @Override
     public void resume() {
-        super.resume();
+        mOuterContainer.resume();
         mItemLayout.resume();
     }
 
-    @Override
     public void pause() {
-        super.pause();
+        mOuterContainer.pause();
         mItemLayout.pause();
+    }
+
+    public void destroy() {
+	    mOuterContainer.destroy();
     }
 
     public Folder getOpener() {
@@ -277,8 +290,9 @@ public class FolderView extends BoxLayout {
         }
         lp.gravity = gravity;
 
-		setLayoutParams(lp);
-		requestLayout();
+		mOuterContainer.setLayoutParams(lp);
+
+        requestLayout();
 	}
 
     @Override
@@ -288,10 +302,27 @@ public class FolderView extends BoxLayout {
         if(mWaitingForLayoutToBeginAnimation) {
             Animation animation = getAnimation(true);
             if(animation != null) {
-                startAnimation(animation);
+                mOuterContainer.startAnimation(animation);
             }
             mWaitingForLayoutToBeginAnimation = false;
         }
+    }
+
+    @Override
+    public void setOnLongClickListener(View.OnLongClickListener l) {
+        // redirect events on the real folder container
+	    mOuterContainer.setOnLongClickListener(l);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+	    if(mFolderConfig.outsideTapClose && event.getAction() == MotionEvent.ACTION_DOWN) {
+	        if(mOnTapOutsideListener != null) {
+	            mOnTapOutsideListener.onTapOutside(this);
+            }
+            return true;
+        }
+        return false;
     }
 
     private Animation getAnimation(final boolean in) {

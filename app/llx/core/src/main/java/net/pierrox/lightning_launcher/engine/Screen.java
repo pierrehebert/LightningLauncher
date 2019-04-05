@@ -84,7 +84,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.ItemViewListener, Page.PageListener {
+public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.ItemViewListener, Page.PageListener, FolderView.OnTapOutsideListener {
 
     public static final int PAGE_DIRECTION_HINT_BACKWARD = -1;
     public static final int PAGE_DIRECTION_HINT_FORWARD = 1;
@@ -837,6 +837,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                         return runAction(engine, "C_LONG_CLICK", ea.action==GlobalConfig.UNSET ? engine.getGlobalConfig().bgLongTap : ea);
                     }
                 });
+                fv.setOnTapOutsideListener(this);
                 mFolderContainer.addView(fv);
                 mFolderViews.add(fv);
             }
@@ -1019,6 +1020,11 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         for (FolderView fv : fvs) {
             fv.updateEmptyMessageVisibility();
         }
+    }
+
+    @Override
+    public void onTapOutside(FolderView fv) {
+        closeFolder(fv, true);
     }
 
     /***************************************** GEOMETRY ***********************************/
