@@ -8,62 +8,38 @@ import android.widget.EditText;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * Class that [INSERT DESCRIPTION HERE]
+ * Class to manage the Indentation of an EditText.
+ * When registered as the TextWatcher of an edittext it will provide autoindentation on writing
+ * Other functions are available to manage indentation on Editables
  */
-public class Indentation implements TextWatcher {
+public class Indentation {
     private static final int INDENT_SIZE = 2;
     
-    public Indentation(EditText editText) {
-        this.editText = editText;
+    private Map<EditText, IndentationTextWatcher> mRegistered = new HashMap<>();
+    
+    /**
+     * Registers the AutoIndentation on the provided editText (unless it was already registered)
+     */
+    public void register(EditText editText){
+        if(mRegistered.containsKey(editText))
+            return;
+        
+        IndentationTextWatcher itw = new IndentationTextWatcher(editText);
+        editText.addTextChangedListener(itw);
+        mRegistered.put(editText, itw);
     }
     
-    
-    // ------------ textwatcher ----------------
-    private String spanNewline = "spanNewline";
-    private String spanEndBracket = "spanEndBracket";
-    private boolean editing = false;
-    private EditText editText;
-    
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    /**
+     * Unregisters the AutoIndentation on the provided editText (if it was registered before)
+     */
+    public void unregister(EditText editText){
+        if(mRegistered.containsKey(editText))
+            editText.removeTextChangedListener(mRegistered.get(editText));
     }
-    
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if(editing) return;
-        
-        if(count == 1 && s.charAt(start) == '\n'){
-            // newline inserted
-            editText.getEditableText().setSpan(spanNewline,start,start,0);
-        }
-        if(count == 1 && s.charAt(start) == '}'){
-            // end bracket inserted
-            editText.getEditableText().setSpan(spanEndBracket, start, start, 0);
-        }
-    }
-    
-    @Override
-    public void afterTextChanged(Editable editable) {
-        editing = true;
-        int spanPos;
-        
-        // check newline
-        spanPos = editable.getSpanStart(spanNewline);
-        editable.removeSpan(spanNewline);
-        if (spanPos != -1 && editable.charAt(spanPos) == '\n')
-            onNewLine(spanPos, editable);
-        
-        // check endbracket
-        spanPos = editable.getSpanStart(spanEndBracket);
-        editable.removeSpan(spanEndBracket);
-        if (spanPos != -1 && editable.charAt(spanPos) == '}')
-            onEndBracket(spanPos, editable);
-        
-        editing = false;
-    }
-    
     
     /**
      * Called when an ending bracket is inserted. Decreases the indentation.
@@ -227,6 +203,59 @@ public class Indentation implements TextWatcher {
         }else{
             // not enough indent (so no tabs), just remove all the previous spaces
             editable.delete(beg - n, beg);
+        }
+    }
+    
+    
+    // ------------ textwatcher ----------------
+    
+    private class IndentationTextWatcher implements TextWatcher {
+    
+        IndentationTextWatcher(EditText mEditText) {
+            this.mEditText = mEditText;
+        }
+    
+        private String mSpanNewline = "mSpanNewline";
+        private String mSpanEndBracket = "mSpanEndBracket";
+        private boolean mEditing = false;
+        private EditText mEditText;
+    
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+    
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            if(mEditing) return;
+        
+            if(count == 1 && s.charAt(start) == '\n'){
+                // newline inserted
+                mEditText.getEditableText().setSpan(mSpanNewline,start,start,0);
+            }
+            if(count == 1 && s.charAt(start) == '}'){
+                // end bracket inserted
+                mEditText.getEditableText().setSpan(mSpanEndBracket, start, start, 0);
+            }
+        }
+    
+        @Override
+        public void afterTextChanged(Editable editable) {
+            mEditing = true;
+            int spanPos;
+        
+            // check newline
+            spanPos = editable.getSpanStart(mSpanNewline);
+            editable.removeSpan(mSpanNewline);
+            if (spanPos != -1 && editable.charAt(spanPos) == '\n')
+                onNewLine(spanPos, editable);
+        
+            // check endbracket
+            spanPos = editable.getSpanStart(mSpanEndBracket);
+            editable.removeSpan(mSpanEndBracket);
+            if (spanPos != -1 && editable.charAt(spanPos) == '}')
+                onEndBracket(spanPos, editable);
+        
+            mEditing = false;
         }
     }
 }

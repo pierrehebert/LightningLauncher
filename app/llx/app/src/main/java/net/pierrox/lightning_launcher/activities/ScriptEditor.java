@@ -347,9 +347,6 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		mScriptText = (AdvancedEditText) findViewById(R.id.sc_text);
         mScriptText.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.NORMAL));
         mScriptText.addTextChangedListener(mScriptTextWatcher);
-        
-        mIndentation = new Indentation(mScriptText);
-        mScriptText.addTextChangedListener(mIndentation);
         mScriptText.setListener(new AdvancedEditText.OnAdvancedEditTextEvent() {
             private float mInitialTextSize;
             @Override
@@ -382,6 +379,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
                 mScriptText.setTextSize(size);
             }
         });
+		mIndentation = new Indentation();
+		mIndentation.register(mScriptText); // TODO: add setting to register/unregister
 
 		((TextView)findViewById(R.id.sc_ma)).setText(R.string.sc_ma);
 		((TextView)findViewById(R.id.sc_a)).setText(R.string.sc_a);
