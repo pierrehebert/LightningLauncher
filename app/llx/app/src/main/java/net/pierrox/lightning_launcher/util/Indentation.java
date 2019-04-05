@@ -154,7 +154,7 @@ public class Indentation implements TextWatcher {
      * Changes the indentation of all the lines selected
      * @param posLeft start of selection
      * @param posRight end of selection
-     * @param increase if trur increase indent, descrease otherwise
+     * @param increase if true increase indent, decrease otherwise
      * @param editable where to apply the indentation
      * @return the new selection (may have changed due to the indentation changes)
      */
@@ -224,6 +224,9 @@ public class Indentation implements TextWatcher {
             }
             // no tabs found, only spaces, remove them
             editable.delete(beg - INDENT_SIZE, beg);
+        }else{
+            // not enough indent (so no tabs), just remove all the previous spaces
+            editable.delete(beg - n, beg);
         }
     }
 }
