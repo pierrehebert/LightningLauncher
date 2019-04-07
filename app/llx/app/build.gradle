@@ -45,8 +45,8 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        versionCode 326
-        versionName "14.3-beta5 (x)"
+        versionCode 327
+        versionName "14.3-beta5 (5a0cdea512)"
         buildConfigField "boolean", "IS_BETA", "true" //  change in core too
         buildConfigField "boolean", "HAS_UEC", "false"
 
