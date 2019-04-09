@@ -1278,9 +1278,9 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		private int key;
 		private String label;
 		
-		ShortcutKey(String label, int key) {
+		ShortcutKey(int key, String iconLabel) {
 			this.key = key;
-			this.label = label;
+			this.label = iconLabel;
 		}
 		
 		@Override
@@ -1290,7 +1290,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		
 		@Override
 		public boolean isLabelIcon() {
-			return false;
+			return true;
 		}
 		
 		@Override
@@ -1393,11 +1393,10 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	
     // list of shortcuts to display
 	private Shortcut[] mShortcuts = new Shortcut[]{
-			//TODO: replace the arrows with typeface icons
-			new ShortcutKey("←",KeyEvent.KEYCODE_DPAD_LEFT),
-			new ShortcutKey("↑",KeyEvent.KEYCODE_DPAD_UP),
-			new ShortcutKey("↓",KeyEvent.KEYCODE_DPAD_DOWN),
-			new ShortcutKey("→",KeyEvent.KEYCODE_DPAD_RIGHT),
+			new ShortcutKey(KeyEvent.KEYCODE_DPAD_LEFT, "|"),
+			new ShortcutKey(KeyEvent.KEYCODE_DPAD_UP, "~"),
+			new ShortcutKey(KeyEvent.KEYCODE_DPAD_DOWN, "{"),
+			new ShortcutKey(KeyEvent.KEYCODE_DPAD_RIGHT, "}"),
             new ShortcutAction(SA.DEC_TAB),
             new ShortcutAction(SA.INC_TAB),
             new ShortcutText("(", ")"),
