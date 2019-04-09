@@ -42,7 +42,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import net.pierrox.lightning_launcher.LLApp;
@@ -305,49 +304,41 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         mLeftPaneAnimOut = AnimationUtils.makeOutAnimation(this, false);
 
 //        mCompletionsListView = (ListView) findViewById(R.id.completions);
-        mCompletionsViewGroup = (ViewGroup) findViewById(R.id.completions);
+        mCompletionsViewGroup = findViewById(R.id.completions);
         initializeShortcuts((ViewGroup) findViewById(R.id.shortcuts));
         
 		Button btn;
 		
-		btn = (Button)findViewById(R.id.sc_import);
+		btn = findViewById(R.id.sc_import);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_import);
-        btn = (Button)findViewById(R.id.sc_new);
+        btn = findViewById(R.id.sc_new);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_new);
-		btn = (Button)findViewById(R.id.sc_delete);
+		btn = findViewById(R.id.sc_delete);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_delete);
-		btn = (Button)findViewById(R.id.sc_edit);
+		btn = findViewById(R.id.sc_edit);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_edit);
-		btn = (Button)findViewById(R.id.sc_help);
+		btn = findViewById(R.id.sc_help);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_help);
-        btn = (Button)findViewById(R.id.sc_send);
+        btn = findViewById(R.id.sc_send);
 		btn.setOnClickListener(this);
-		btn.setText(R.string.sc_send);
 
 		mScriptAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, mAllScripts);
 		mScriptAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-		((TextView)findViewById(R.id.sc_path)).setText(R.string.sc_path);
-		((TextView)findViewById(R.id.sc_name)).setText(R.string.sc_name);
-		mScriptSpinner = (Spinner) findViewById(R.id.sc_spinner);
+		mScriptSpinner = findViewById(R.id.sc_spinner);
         mScriptSpinner.setLongClickable(true);
 		mScriptSpinner.setOnItemSelectedListener(this);
 		mScriptSpinner.setAdapter(mScriptAdapter);
 		updateScriptsSpinner();
 
-        btn = (Button)findViewById(R.id.sc_edit_name);
+        btn = findViewById(R.id.sc_edit_name);
         btn.setOnClickListener(this);
         btn.setTypeface(LLApp.get().getIconsTypeface());
 
 		if(sAutoCompleteTokens == null) {
 			buildAutoCompleteTokens();
 		}
-		mScriptText = (AdvancedEditText) findViewById(R.id.sc_text);
+		mScriptText = findViewById(R.id.sc_text);
         mScriptText.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.NORMAL));
         mScriptText.addTextChangedListener(mScriptTextWatcher);
         mScriptText.setListener(new AdvancedEditText.OnAdvancedEditTextEvent() {
@@ -385,19 +376,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 		mIndentation = new Indentation();
 		mSearch = new Search(this, mScriptText);
 
-		((TextView)findViewById(R.id.sc_ma)).setText(R.string.sc_ma);
-		((TextView)findViewById(R.id.sc_a)).setText(R.string.sc_a);
-		((TextView)findViewById(R.id.sc_h)).setText(R.string.sc_h);
-		mMenuLightning = (CheckBox) findViewById(R.id.sc_ml);
-		mMenuLightning.setText(R.string.sc_ml);
-		mMenuItem = (CheckBox) findViewById(R.id.sc_mi);
-		mMenuItem.setText(R.string.sc_mi);
-		mMenuCustom = (CheckBox) findViewById(R.id.sc_mc);
-		mMenuCustom.setText(R.string.sc_mc);
+		mMenuLightning = findViewById(R.id.sc_ml);
+		mMenuItem = findViewById(R.id.sc_mi);
+		mMenuCustom = findViewById(R.id.sc_mc);
 
 		mShowSubDirs = mSharedPrefs.getBoolean(PREF_SUB_DIRS, true);
-		CheckBox showSubDirs = (CheckBox) findViewById(R.id.sc_sd);
-		showSubDirs.setText(R.string.sc_all);
+		CheckBox showSubDirs = findViewById(R.id.sc_sd);
 		showSubDirs.setChecked(mShowSubDirs);
 		showSubDirs.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
@@ -411,7 +395,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			}
 		});
 
-		mSelectDirectoryButton = (Button) findViewById(R.id.sc_d);
+		mSelectDirectoryButton = findViewById(R.id.sc_d);
 		mSelectDirectoryButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -438,13 +422,10 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         if(autoindent) mIndentation.register(mScriptText);
         float text_size = mSharedPrefs.getFloat(PREF_FONT_SIZE, mScriptText.getTextSize() / mScaledDensity);
         mScriptText.setTextSize(text_size);
-        ((TextView)findViewById(R.id.sc_o)).setText(R.string.sc_o);
-        CheckBox wordwrap_checkbox = (CheckBox) findViewById(R.id.sc_w);
-        wordwrap_checkbox.setText(R.string.sc_w);
+        CheckBox wordwrap_checkbox = findViewById(R.id.sc_w);
         wordwrap_checkbox.setChecked(wordwrap);
         wordwrap_checkbox.setOnCheckedChangeListener(this);
 		CheckBox autoindent_checkbox = findViewById(R.id.sc_ind);
-		autoindent_checkbox.setText(R.string.sc_ind);
 		autoindent_checkbox.setChecked(autoindent);
 		autoindent_checkbox.setOnCheckedChangeListener(this);
 	
@@ -586,7 +567,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 				.putFloat(PREF_FONT_SIZE, mScriptText.getTextSize()/mScaledDensity)
 				.putString(PREF_DIRECTORY, mCurrentDirectory.getAbsolutePath())
 				.putBoolean(PREF_SUB_DIRS, mShowSubDirs)
-		.commit();
+		.apply();
 
 		if(mScript.id >= 0) {
 			setLastScriptId();
@@ -634,12 +615,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
 			View content = getLayoutInflater().inflate(R.layout.edit_script_dialog, null);
 
-			final EditText nameEditText = (EditText) content.findViewById(R.id.sc_name);
+			final EditText nameEditText = content.findViewById(R.id.sc_name);
 			nameEditText.setText(mScript.name);
 			nameEditText.setSelection(mScript.name.length());
 
-			final EditText pathEditText = (EditText) content.findViewById(R.id.sc_path);
-			final Button pickPathButton = (Button) content.findViewById(R.id.sc_pick_path);
+			final EditText pathEditText = content.findViewById(R.id.sc_path);
+			final Button pickPathButton = content.findViewById(R.id.sc_pick_path);
 			pickPathButton.setTypeface(LLApp.get().getIconsTypeface());
 			pickPathButton.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -854,7 +835,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         switch (buttonView.getId()) {
             case R.id.sc_w:
                 mScriptText.setWordWrap(isChecked);
-                mSharedPrefs.edit().putBoolean(PREF_WORDWRAP, isChecked).commit();
+                mSharedPrefs.edit().putBoolean(PREF_WORDWRAP, isChecked).apply();
                 break;
             case R.id.sc_ind:
                 // toggled autoindentation
@@ -863,7 +844,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
                 } else {
                     mIndentation.unregister(mScriptText);
                 }
-                mSharedPrefs.edit().putBoolean(PREF_AUTOINDENT, isChecked).commit();
+                mSharedPrefs.edit().putBoolean(PREF_AUTOINDENT, isChecked).apply();
                 break;
         }
     }
@@ -941,8 +922,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	}
 
     private void setLastScriptId() {
-        mSharedPrefs.edit().putInt(PREF_LAST_SCRIPT_ID, mScript.id).commit();
-        mSharedPrefs.edit().putInt(PREF_LAST_SCRIPT_LINE, mScriptText.getSelectionLine()).commit();
+        mSharedPrefs.edit().putInt(PREF_LAST_SCRIPT_ID, mScript.id).apply();
+        mSharedPrefs.edit().putInt(PREF_LAST_SCRIPT_LINE, mScriptText.getSelectionLine()).apply();
     }
 
     private void showLeftPane() {
