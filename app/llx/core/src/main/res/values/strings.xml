@@ -1448,6 +1448,7 @@
 <string name="srch_back">Backwards</string>
 <string name="srch_regexp">Regexp</string>
 <string name="srch_case">Match case</string>
+<string name="sc_ind">Autoindentation</string>
 
 
 

@@ -180,6 +180,13 @@
                 android:checked="true"
                 android:text="@string/sc_w"/>
 
+            <CheckBox
+                android:id="@+id/sc_ind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/sc_ind" />
+
             <TextView
                 android:id="@+id/sc_a"
                 android:layout_width="wrap_content"

@@ -101,6 +101,7 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
     private static final String PREF_LAST_SCRIPT_ID = "se_lsi";
     private static final String PREF_LAST_SCRIPT_LINE = "se_lsl";
     private static final String PREF_WORDWRAP = "se_w";
+    private static final String PREF_AUTOINDENT = "se_ind";
     private static final String PREF_FONT_SIZE = "se_fs";
     private static final String PREF_DIRECTORY = "se_d";
     private static final String PREF_SUB_DIRS = "se_sd";
@@ -382,7 +383,6 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             }
         });
 		mIndentation = new Indentation();
-		mIndentation.register(mScriptText); // TODO: add setting to register/unregister
 		mSearch = new Search(this, mScriptText);
 
 		((TextView)findViewById(R.id.sc_ma)).setText(R.string.sc_ma);
@@ -434,6 +434,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
         boolean wordwrap = mSharedPrefs.getBoolean(PREF_WORDWRAP, true);
         mScriptText.setWordWrap(wordwrap);
+        boolean autoindent = mSharedPrefs.getBoolean(PREF_AUTOINDENT, true);
+        if(autoindent) mIndentation.register(mScriptText);
         float text_size = mSharedPrefs.getFloat(PREF_FONT_SIZE, mScriptText.getTextSize() / mScaledDensity);
         mScriptText.setTextSize(text_size);
         ((TextView)findViewById(R.id.sc_o)).setText(R.string.sc_o);
@@ -441,7 +443,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
         wordwrap_checkbox.setText(R.string.sc_w);
         wordwrap_checkbox.setChecked(wordwrap);
         wordwrap_checkbox.setOnCheckedChangeListener(this);
-
+		CheckBox autoindent_checkbox = findViewById(R.id.sc_ind);
+		autoindent_checkbox.setText(R.string.sc_ind);
+		autoindent_checkbox.setChecked(autoindent);
+		autoindent_checkbox.setOnCheckedChangeListener(this);
+	
+	
 		TextPosition position = null;
 		int sel_start = 0, sel_end = 0;
 		Intent intent = getIntent();
@@ -848,6 +855,15 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             case R.id.sc_w:
                 mScriptText.setWordWrap(isChecked);
                 mSharedPrefs.edit().putBoolean(PREF_WORDWRAP, isChecked).commit();
+                break;
+            case R.id.sc_ind:
+                // toggled autoindentation
+                if(isChecked){
+                    mIndentation.register(mScriptText);
+                } else {
+                    mIndentation.unregister(mScriptText);
+                }
+                mSharedPrefs.edit().putBoolean(PREF_AUTOINDENT, isChecked).commit();
                 break;
         }
     }

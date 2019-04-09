@@ -37,8 +37,11 @@ public class Indentation {
      * Unregisters the AutoIndentation on the provided editText (if it was registered before)
      */
     public void unregister(EditText editText){
-        if(mRegistered.containsKey(editText))
-            editText.removeTextChangedListener(mRegistered.get(editText));
+        if(!mRegistered.containsKey(editText))
+            return;
+        
+        editText.removeTextChangedListener(mRegistered.get(editText));
+        mRegistered.remove(editText);
     }
     
     /**
