@@ -1444,9 +1444,15 @@
 <string name="sp_none">No script</string>
 <string name="mi_pick_sh">Select shortcut</string>
 
+<string name="srch_ttl">Search text</string>
+<string name="srch_back">Backwards</string>
+<string name="srch_regexp">Regexp</string>
+<string name="srch_case">Match case</string>
 
-    <!-- Do not translate -->
-    <string name="app_name">Lightning Launcher</string>
+
+
+<!-- Do not translate -->
+<string name="app_name">Lightning Launcher</string>
 <string name="default_pack_name">English</string>
 
 <!-- Do not change -->

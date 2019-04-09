@@ -110,7 +110,6 @@ public class Search {
         }
     }
     
-    
     /**
      * Private: creates the dialog
      */
@@ -118,18 +117,16 @@ public class Search {
         
         View views = mCntx.getLayoutInflater().inflate(R.layout.dialog_search, null);
         
-        
         mEdTxt = views.findViewById(R.id.srch_text);
         mChkBackwards = views.findViewById(R.id.srch_back);
         mChkCase = views.findViewById(R.id.srch_case);
         mChkRegexp = views.findViewById(R.id.srch_regexp);
     
-        //TODO: extract string resources (here and in R.layout.dialog_search )
         mDialog = new AlertDialog.Builder(mCntx)
-                .setTitle("Search text")
+                .setTitle(R.string.srch_ttl)
                 .setView(views)
                 .setCancelable(true)
-                .setPositiveButton("search", new DialogInterface.OnClickListener() {
+                .setPositiveButton(android.R.string.search_go, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // After this code a 'dialog.dismiss()' will be called, so the dialog won't be shown again if necessary.
@@ -143,7 +140,7 @@ public class Search {
                         });
                     }
                 })
-                .setNegativeButton("cancel", null)
+                .setNegativeButton(android.R.string.cancel, null)
                 .create();
     }
 }

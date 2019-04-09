@@ -17,17 +17,17 @@
         android:id="@+id/srch_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Backwards" />
+        android:text="@string/srch_back" />
 
     <CheckBox
         android:id="@+id/srch_case"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Match case" />
+        android:text="@string/srch_case" />
 
     <CheckBox
         android:id="@+id/srch_regexp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Regexp" />
+        android:text="@string/srch_regexp" />
 </LinearLayout>
