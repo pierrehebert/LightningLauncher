@@ -7366,7 +7366,9 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
         @Override
         public void onSystemBarsSizeChanged() {
-            configureSystemBarsPadding(mScreen.getCurrentRootPage().config);
-        }
+            Page page = mScreen.getCurrentRootPage();
+            if(page != null) {
+                configureSystemBarsPadding(page.config);
+            }        }
     }
 }
