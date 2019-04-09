@@ -75,8 +75,9 @@ public class Search {
         Matcher matcher = pattern.matcher(text);
         if(!mChkBackwards.isChecked()) {
             // search fordwards
-            
-            if( matcher.find(mEditText.getSelectionStart() + 1) || matcher.find(0)){
+            int from = mEditText.getSelectionStart();
+            if (from != mEditText.getSelectionEnd()) from++; // avoids returning the current selection
+            if( matcher.find(from) || matcher.find(0)){
                 // found one just after the selection or from the beginning
                 start = matcher.start();
                 end = matcher.end();
