@@ -13,30 +13,48 @@
             android:id="@+id/sc_h"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_gravity="center_horizontal"
             android:text="@string/sc_h"
-            android:textStyle="italic"
-            android:layout_gravity="center_horizontal" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="italic" />
 
-        <fr.xgouchet.texteditor.ui.AdvancedEditText
-            android:id="@+id/sc_text"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/sc_text" />
+            android:layout_weight="1">
+
+            <fr.xgouchet.texteditor.ui.AdvancedEditText
+                android:id="@+id/sc_text"
+                style="@style/sc_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left">
+
+                <LinearLayout
+                    android:id="@+id/completions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/shortcuts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
 
     </LinearLayout>
-
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left">
-
-        <LinearLayout
-            android:id="@+id/completions"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </HorizontalScrollView>
 
     <LinearLayout
         android:id="@+id/left_pane"
@@ -161,6 +179,13 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/sc_w"/>
+
+            <CheckBox
+                android:id="@+id/sc_ind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/sc_ind" />
 
             <TextView
                 android:id="@+id/sc_a"
