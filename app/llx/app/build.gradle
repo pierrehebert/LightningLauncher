@@ -46,7 +46,7 @@ android {
 
     defaultConfig {
         versionCode 328
-        versionName "14.3-beta6 (223d3e33ba)"
+        versionName "14.3-beta7 (x)"
         buildConfigField "boolean", "IS_BETA", "true" //  change in core too
         buildConfigField "boolean", "HAS_UEC", "false"
 
