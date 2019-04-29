@@ -2,6 +2,10 @@ package net.pierrox.lightning_launcher.overlay;
 
 import android.animation.Animator;
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -55,6 +59,9 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
     public static final String INTENT_ACTION_HIDE = "h";
 
     private static final int OPEN_CLOSE_ANIMATION_DURATION = 300;
+
+    private static final String NOTIFICATION_CHANNEL_ID = "LL_SERVICES";
+    private static final int NOTIFICATION_ID = 0;
 
     private WindowScreen mScreen;
 
@@ -332,11 +339,42 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
         configureScreen();
 
         configureDrawer();
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            CharSequence name = "Lightning Services";
+            String description = "Background Launcher activities";
+            int importance = NotificationManager.IMPORTANCE_LOW;
+            NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        Intent notificationIntent = LLApp.get().getWindowServiceIntent();
+        notificationIntent.setAction(WindowService.INTENT_ACTION_SHOW);
+        PendingIntent pendingIntent = PendingIntent.getService(this, 0, notificationIntent, 0);
+
+        Notification.Builder builder;
+        if (Build.VERSION.SDK_INT >= 26) {
+            builder = new Notification.Builder(this, NOTIFICATION_CHANNEL_ID);
+        } else {
+            builder = new Notification.Builder(this);
+        }
+        builder.setContentTitle(getString(R.string.ov_r))
+                .setContentIntent(pendingIntent)
+                .setCategory(Notification.CATEGORY_SERVICE)
+                .setPriority(Notification.PRIORITY_LOW);
+
+        Notification notification = builder.build();
+
+        startForeground(NOTIFICATION_ID, notification);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+
+        stopForeground(true);
 
         final LLApp app = LLApp.get();
 

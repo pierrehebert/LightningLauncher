@@ -1222,6 +1222,7 @@
     <string name="an_ohs">Open the hierarchy screen</string>
     <string name="ov_pt">Setup</string>
     <string name="ov_ps">The overlay desktop requires the permission to draw over other apps</string>
+    <string name="ov_r">The overlay desktop is enabled</string>
     <string name="ism_t">Size mode</string>
     <string-array name="ism_e">
         <item>Standard</item>
