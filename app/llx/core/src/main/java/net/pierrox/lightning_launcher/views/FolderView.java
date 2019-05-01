@@ -320,7 +320,6 @@ public class FolderView extends FrameLayout {
 	        if(mOnTapOutsideListener != null) {
 	            mOnTapOutsideListener.onTapOutside(this);
             }
-            return true;
         }
         return false;
     }
