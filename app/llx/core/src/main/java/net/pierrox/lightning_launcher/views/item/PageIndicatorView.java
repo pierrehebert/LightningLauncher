@@ -142,7 +142,8 @@ public class PageIndicatorView extends ItemView {
         protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
             final int px = mMaxX - mMinX;
             final int py = mMaxY - mMinY;
-            float radius = Math.max(mPageIndicator.dotsInnerRadius, mPageIndicator.dotsOuterRadius + mPageIndicator.dotsOuterStrokeWidth /2);
+            float stroke_width = mPageIndicator.dotsOuterStrokeWidth == 0 ? 1 : mPageIndicator.dotsOuterStrokeWidth;
+            float radius = Math.max(mPageIndicator.dotsInnerRadius, mPageIndicator.dotsOuterRadius + stroke_width);
             int width = (int) Math.ceil((radius * 2) * px + mPageIndicator.dotsMarginX * (px>0 ? px-1 : 0));
             int height = (int) Math.ceil((radius * 2) * py + mPageIndicator.dotsMarginY * (py>0 ? py-1 : 0));
             setMeasuredDimension(width, height);
@@ -161,7 +162,13 @@ public class PageIndicatorView extends ItemView {
                 return;
             }
 
-            float radius = Math.max(mPageIndicator.dotsInnerRadius, mPageIndicator.dotsOuterRadius + mPageIndicator.dotsOuterStrokeWidth /2);
+
+            float stroke_width = mPageIndicator.dotsOuterStrokeWidth == 0 ? 1 : mPageIndicator.dotsOuterStrokeWidth;
+
+            // compute the anti aliasing delta : shift the drawing so that the outer circle is always perfectly aligned
+            float ad = (stroke_width % 2) == 0 ? 0 : 0.5f;
+
+            float radius = Math.max(mPageIndicator.dotsInnerRadius, mPageIndicator.dotsOuterRadius + stroke_width);
             float scaled_cont_x = -(mContainerX-mContainerWidth/2)/mContainerScale;
             float scaled_cont_y = -(mContainerY-mContainerHeight/2)/mContainerScale;
             float pos_x_f = scaled_cont_x / mContainerWidth - 0.5f;
@@ -172,7 +179,7 @@ public class PageIndicatorView extends ItemView {
             for(int y=mMinY; y<mMaxY; y++) {
                 float cx = radius;
                 for(int x=mMinX; x<mMaxX; x++) {
-                    canvas.drawCircle(cx, cy, mPageIndicator.dotsOuterRadius, mOuterCirclePaint);
+                    canvas.drawCircle(cx+ad, cy+ad, mPageIndicator.dotsOuterRadius, mOuterCirclePaint);
 
                     if(x == mMinX && pos_x_f > mMaxX-1) {
                         pos_x_f = x - mMaxX + pos_x_f;
@@ -189,7 +196,7 @@ public class PageIndicatorView extends ItemView {
                     if(dx>1) dx=1; dx = 1-dx;
                     if(dy>1) dy=1; dy = 1-dy;
                     mInnerCirclePaint.setAlpha((int) (255*dx*dy*max_alpha));
-                    canvas.drawCircle(cx, cy, mPageIndicator.dotsInnerRadius, mInnerCirclePaint);
+                    canvas.drawCircle(cx+ad, cy+ad, mPageIndicator.dotsInnerRadius, mInnerCirclePaint);
 
                     cx += radius*2 + mPageIndicator.dotsMarginX;
                 }
