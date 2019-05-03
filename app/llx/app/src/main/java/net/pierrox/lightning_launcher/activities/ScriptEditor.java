@@ -64,7 +64,6 @@ import net.pierrox.lightning_launcher.script.api.ImageNinePatch;
 import net.pierrox.lightning_launcher.script.api.ImageScript;
 import net.pierrox.lightning_launcher.script.api.ImageSvg;
 import net.pierrox.lightning_launcher.script.api.Item;
-import net.pierrox.lightning_launcher.script.api.LL;
 import net.pierrox.lightning_launcher.script.api.Lightning;
 import net.pierrox.lightning_launcher.script.api.PageIndicator;
 import net.pierrox.lightning_launcher.script.api.Panel;
@@ -619,7 +618,20 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
 		if(keyCode == KeyEvent.KEYCODE_TAB) {
-			mScriptText.getText().insert(mScriptText.getSelectionStart(), "\t");
+			if(event.isShiftPressed()){
+				// Shift tab, decrease indent
+				Pair<Integer, Integer> selectionI =
+						Indentation.modifyIndent(mScriptText.getSelectionStart(), mScriptText.getSelectionEnd(), false, mScriptText.getEditableText());
+				mScriptText.setSelection(selectionI.first, selectionI.second);
+			}else if(mScriptText.hasSelection()){
+				// No shift tab && selection, increase indent
+				Pair<Integer, Integer> selectionI =
+						Indentation.modifyIndent(mScriptText.getSelectionStart(), mScriptText.getSelectionEnd(), true, mScriptText.getEditableText());
+				mScriptText.setSelection(selectionI.first, selectionI.second);
+			}else {
+				// No shift tab && no selection, add tab char
+				mScriptText.getText().insert(mScriptText.getSelectionStart(), "\t");
+			}
 			return true;
 		}
 		return super.onKeyUp(keyCode, event);
