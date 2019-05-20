@@ -14,9 +14,10 @@
     <!-- direct dial shortcuts -->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
 
-    <!-- app killer -->
+    <!-- apps management -->
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
 
     <!-- messaging related -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
