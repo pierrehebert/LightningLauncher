@@ -197,7 +197,7 @@ import java.lang.reflect.Field;
  * 		<tr><td><a href="/help/app/topic.php?id=68">f.animationIn</a></td>   <td>string</td>  <td>Read/Write</td>  <td>NONE|OPEN_CLOSE|SLIDE_FROM_LEFT|SLIDE_FROM_RIGHT|SLIDE_FROM_TOP|SLIDE_FROM_BOTTOM</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=69">f.animationOut</a></td>   <td>string</td>  <td>Read/Write</td>  <td>NONE|OPEN_CLOSE|SLIDE_FROM_LEFT|SLIDE_FROM_RIGHT|SLIDE_FROM_TOP|SLIDE_FROM_BOTTOM</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=130">f.animFade</a></td>   <td>boolean</td>  <td>Read/Write</td>  <td>true/false</td></tr>
- * 		<tr><td><a href="/help/app/topic.php?id=17">f.iconStyle</a></td>   <td>string</td>  <td>Read/Write</td>  <td>NORMAL|GRID_2_2|STACK</td></tr>
+ * 		<tr><td><a href="/help/app/topic.php?id=17">f.iconStyle</a></td>   <td>string</td>  <td>Read/Write</td>  <td>NORMAL|GRID_2_2|STACK|GRID_AUTO|GRID_3_3</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=515">f.outsideTapClose</a></td>   <td>boolean</td>  <td>Read/Write</td>  <td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=93">f.autoClose</a></td>   <td>boolean</td>  <td>Read/Write</td>  <td>true/false</td></tr>
  * 		<tr><td><a href="/help/app/topic.php?id=136">f.closeOther</a></td>   <td>boolean</td>  <td>Read/Write</td>  <td>true/false</td></tr>

@@ -23,7 +23,9 @@ public class FolderConfig extends JsonLoader {
 	public enum FolderIconStyle {
 		NORMAL,
 		GRID_2_2,
-		STACK
+		STACK,
+		GRID_AUTO,
+		GRID_3_3
 	}
 	
 //	public enum FolderBorderStyle {

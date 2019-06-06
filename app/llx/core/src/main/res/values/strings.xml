@@ -356,8 +356,10 @@
 
 <string-array name="i_folder_e">
 <item>Icon</item>
-<item>Grid</item>
+<item>Grid 2x2</item>
 <item>Stack</item>
+<item>Grid auto</item>
+<item>Grid 3x3</item>
 </string-array>
 
 <string name="i_effect">Layers</string>
