@@ -621,12 +621,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 			if(event.isShiftPressed()){
 				// Shift tab, decrease indent
 				Pair<Integer, Integer> selectionI =
-						Indentation.modifyIndent(mScriptText.getSelectionStart(), mScriptText.getSelectionEnd(), false, mScriptText.getEditableText());
+						Indentation.modifyIndent(mScriptText.getTrueSelectionStart(), mScriptText.getTrueSelectionEnd(), false, mScriptText.getEditableText());
 				mScriptText.setSelection(selectionI.first, selectionI.second);
 			}else if(mScriptText.hasSelection()){
 				// No shift tab && selection, increase indent
 				Pair<Integer, Integer> selectionI =
-						Indentation.modifyIndent(mScriptText.getSelectionStart(), mScriptText.getSelectionEnd(), true, mScriptText.getEditableText());
+						Indentation.modifyIndent(mScriptText.getTrueSelectionStart(), mScriptText.getTrueSelectionEnd(), true, mScriptText.getEditableText());
 				mScriptText.setSelection(selectionI.first, selectionI.second);
 			}else {
 				// No shift tab && no selection, add tab char
@@ -1359,8 +1359,8 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
 
 		@Override
 		public void apply(AdvancedEditText editText) {
-			int start = editText.getSelectionStart();
-			int end = editText.getSelectionEnd();
+			int start = editText.getTrueSelectionStart();
+			int end = editText.getTrueSelectionEnd();
 			editText.getEditableText().replace(start, end, preText+postText);
 			editText.setSelection(start + preText.length());
 		}
@@ -1407,12 +1407,12 @@ public class ScriptEditor extends ResourceWrapperActivity implements View.OnClic
             switch (action) {
             	case DEC_TAB:
 					Pair<Integer, Integer> selectionD =
-							Indentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), false, editText.getEditableText());
+							Indentation.modifyIndent(editText.getTrueSelectionStart(), editText.getTrueSelectionEnd(), false, editText.getEditableText());
 					editText.setSelection(selectionD.first, selectionD.second);
 					break;
 				case INC_TAB:
 					Pair<Integer, Integer> selectionI =
-							Indentation.modifyIndent(editText.getSelectionStart(), editText.getSelectionEnd(), true, editText.getEditableText());
+							Indentation.modifyIndent(editText.getTrueSelectionStart(), editText.getTrueSelectionEnd(), true, editText.getEditableText());
 					editText.setSelection(selectionI.first, selectionI.second);
                     break;
                 case SEARCH:
