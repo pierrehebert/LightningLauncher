@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * A VariableEditor is a tool to change the value of one or more variable.
- * This object is retrieved using {@link VariableSet#edit()}. You can chain calls this way:
+ * An instance of this object can be retrieved with {@link VariableSet#edit()}. You can chain calls this way:
  * <pre><code>
  * 	variable_set.edit()
  * 		.setInteger("someVariable", some_value)

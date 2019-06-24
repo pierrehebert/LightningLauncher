@@ -543,7 +543,7 @@ public class UndoStack {
 
             try {
                 int zorder = page.items.indexOf(new_item);
-                page.removeItem(new_item, false);
+                page.removeItem(new_item, true);
 
                 exchangeFilesWithUndo(icons, true, false); // restore old files from temp
                 Item old_item = Item.loadItemFromJSONObject(page, mOldJsonItem);
@@ -566,7 +566,7 @@ public class UndoStack {
 
             try {
                 int zorder = page.items.indexOf(old_item);
-                page.removeItem(old_item, false);
+                page.removeItem(old_item, true);
 
                 exchangeFilesWithUndo(icons, false, false); // restore new files from temp
                 Item new_item = Item.loadItemFromJSONObject(page, mNewJsonItem);

@@ -9,11 +9,13 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import com.faendir.rhino_android.RhinoAndroidHelper;
 
 import net.dinglisch.android.tasker.TaskerIntent;
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Page;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
@@ -41,8 +43,8 @@ import java.util.ArrayList;
 
 /**
  * Entry point for most Lightning Launcher scripted features.
- * The Lightning object is the root object in the script context, hence its functions can be called without naming it, unlike with the deprecated LL object.
- * For instance, instead of using <code>LL.getDesktopByName('d')</code>, simply use <code>getDesktopByName('d')</code>
+ * The Lightning object is the root object in the script context, hence its functions can be called without naming it (unlike the rest of the classes).
+ * For instance, instead of using <code style="color:#333">Lightning.alert('Hello World')</code>, simply use <code>alert('Hello World')</code>
  */
 public class Lightning {
 
@@ -300,46 +302,51 @@ public class Lightning {
      * Return the home screen, null if not created yet
      */
     public HomeScreen getHomeScreen() {
-        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.HOME));
+        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.HOME));
     }
 
     /**
      * Return the app drawer screen, null if not created yet
      */
     public ActivityScreen getAppDrawerScreen() {
-        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.APP_DRAWER));
+        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.APP_DRAWER));
     }
 
     /**
      * Return the lock screen, null if not created yet
      */
     public ActivityScreen getLockScreen() {
-        return (HomeScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.LOCK));
+        return (ActivityScreen) createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LOCK));
     }
 
     /**
      * Return the floating screen, null if not created yet
      */
     public Screen getFloatingScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.FLOATING));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.FLOATING));
     }
 
     /**
      * Return the live wallpaper screen, null if not created yet
      */
     public Screen getLiveWallpaperScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.LIVE_WALLPAPER));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.LIVE_WALLPAPER));
     }
 
     /**
      * Return the background screen. This special screen is used when running background scripts. It can be used to query items and containers, but position and size may not be computed since the screen is not displayed and has no size.
      */
     public Screen getBackgroundScreen() {
-        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.engine.Screen.Identity.BACKGROUND));
+        return createScreen(LLApp.get().getScreen(net.pierrox.lightning_launcher.api.ScreenIdentity.BACKGROUND));
     }
 
+    /**
+     * @hide
+     */
     public Screen createScreen(net.pierrox.lightning_launcher.engine.Screen screen) {
-        if(screen.getIdentity() == net.pierrox.lightning_launcher.engine.Screen.Identity.HOME) {
+        if(screen == null){
+            return null;
+        } else if(screen.getIdentity() == ScreenIdentity.HOME) {
             return new HomeScreen(this, screen);
         } else if(screen.getContext() instanceof Activity) {
             return new ActivityScreen(this, screen);
@@ -349,21 +356,21 @@ public class Lightning {
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setBoolean(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableBoolean(String name, boolean value) {
         setVariable(name, value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setInteger(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableInteger(String name, long value) {
         setVariable(name, (int)value);
     }
 
     /**
-     * Set a boolean variable. This is a shortcut for <code>LL.getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a boolean variable. This is a shortcut for <code>getVariables().edit().setFloat(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableFloat(String name, float value) {
         if(Float.isNaN(value)) {
@@ -373,7 +380,7 @@ public class Lightning {
     }
 
     /**
-     * Set a string variable. This is a shortcut for <code>LL.getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
+     * Set a string variable. This is a shortcut for <code>getVariables().edit().setString(name, value).commit();</code>. When modifying several at once, consider using the {@link net.pierrox.lightning_launcher.script.api.PropertyEditor} object instead for best efficiency.
      */
     public void setVariableString(String name, String value) {
         setVariable(name, value);
@@ -570,7 +577,7 @@ public class Lightning {
                 context.sendBroadcast(intent);
                 throw pending;
             } catch(IllegalStateException e) {
-                android.widget.Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot wait for Tasker result in this context, set 'synchronous' to false", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
@@ -634,15 +641,25 @@ public class Lightning {
                 throw pending;
             } catch (IllegalStateException e) {
                 // not called with continuation support
-                android.widget.Toast.makeText(context, "cannot display \"" + message + "\" in this context", android.widget.Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "cannot display \"" + message + "\" in this context", Toast.LENGTH_SHORT).show();
                 return false;
             } finally {
                 org.mozilla.javascript.Context.exit();
             }
         } else {
-            android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             return false;
         }
+    }
+    
+    /**
+     * Displays a toast (small message at the bottom of the screen).
+     * This is equivalent to <code>Toast.makeText(getEvent().getScreen().getContext(), text, Toast.LENGTH_LONG).show()</code>
+     * (you can use that code directly if you want a LENGTH_SHORT toast or to save the toast object instead of showing it).
+     * @param text message to display
+     */
+    public void toast(String text){
+        Toast.makeText(getScriptScreen().getContext(), text, Toast.LENGTH_LONG).show();
     }
 
     /**

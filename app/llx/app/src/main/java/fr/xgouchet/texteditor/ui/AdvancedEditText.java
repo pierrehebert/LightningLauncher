@@ -534,7 +534,21 @@ public class AdvancedEditText extends EditText implements OnKeyListener, OnGestu
 			mHighlightedLine = line;
 		}
 	}
-
+	
+	/**
+	 * Like {@link EditText#getSelectionStart()} but returns the real start, even with a 'negative' selection.
+	 */
+	public int getTrueSelectionStart() {
+		return Math.min(super.getSelectionStart(), super.getSelectionEnd());
+	}
+	
+	/**
+	 * Like {@link EditText#getSelectionEnd()} but returns the real end, even with a 'negative' selection.
+	 */
+	public int getTrueSelectionEnd() {
+		return Math.max(super.getSelectionStart(), super.getSelectionEnd());
+	}
+	
 	/** The line numbers paint */
 	protected Paint mPaintNumbers;
 	/** The line numbers paint */

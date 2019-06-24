@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -39,6 +40,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
@@ -82,24 +84,13 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.ItemViewListener, Page.PageListener {
+public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.ItemViewListener, Page.PageListener, FolderView.OnTapOutsideListener {
 
     public static final int PAGE_DIRECTION_HINT_BACKWARD = -1;
     public static final int PAGE_DIRECTION_HINT_FORWARD = 1;
     public static final int PAGE_DIRECTION_HINT_AUTO = 0;
     public static final int PAGE_DIRECTION_HINT_DONT_MOVE = 2;
     public static final int PAGE_DIRECTION_HINT_NO_ANIMATION = 3;
-
-    public enum Identity {
-        BACKGROUND,
-        HOME,
-        APP_DRAWER,
-        LOCK,
-        FLOATING,
-        CUSTOMIZE,
-        DESKTOP_PREVIEW,
-        LIVE_WALLPAPER
-    }
 
     private static final String SIS_TARGET_ITEM_LAYOUT="sa";
     private static final String SIS_LAST_TOUCHED_X="sb";
@@ -110,7 +101,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     protected Context mContext;
     private Window mWindow;
     private boolean mHasWindowFocus;
-    private SystemBarTintManager mSystemBarTintManager;
+    protected SystemBarTintManager mSystemBarTintManager;
 
     private ViewGroup mContentView;
     private View mDesktopView;
@@ -198,6 +189,24 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                     }
                 }
             };
+
+            mContentView.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+                @Override
+                public void onViewAttachedToWindow(View view) {
+                    // select API 28 because this is linked with the display cutout stuff
+                    if (Build.VERSION.SDK_INT >= 28) {
+                        WindowInsets insets = mContentView.getRootWindowInsets();
+                        if (insets != null) {
+                            mSystemBarTintManager.onConfigurationChanged(mWindow);
+                            onSystemBarsSizeChanged();
+                        }
+                    }
+                }
+                @Override
+                public void onViewDetachedFromWindow(View view) {
+
+                }
+            });
         }
     }
 
@@ -298,7 +307,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         return !mIsResumed;
     }
 
-    public abstract Identity getIdentity();
+    public abstract ScreenIdentity getIdentity();
 
     public Context getContext() {
         return mContext;
@@ -828,6 +837,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                         return runAction(engine, "C_LONG_CLICK", ea.action==GlobalConfig.UNSET ? engine.getGlobalConfig().bgLongTap : ea);
                     }
                 });
+                fv.setOnTapOutsideListener(this);
                 mFolderContainer.addView(fv);
                 mFolderViews.add(fv);
             }
@@ -1012,6 +1022,11 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         }
     }
 
+    @Override
+    public void onTapOutside(FolderView fv) {
+        closeFolder(fv, true);
+    }
+
     /***************************************** GEOMETRY ***********************************/
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -1128,39 +1143,46 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
 
 
     public void executeGoToDesktopPositionIntent(Intent intent) {
-        int page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, Page.FIRST_DASHBOARD_PAGE);
+        int page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, Page.FIRST_DASHBOARD_PAGE);
         if(Page.isDashboard(page) && page != getCurrentRootPage().id) {
             loadRootItemLayout(page, false, true, true);
         }
-        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_TX)) {
-            float x = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TX, 0);
-            float y = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TY, 0);
-            float s = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TS, 1);
-            goToDesktopPosition(page, x, y, s, true);
+        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_X)) {
+            float x = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_X, 0);
+            float y = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_Y, 0);
+            float s = intent.getFloatExtra(LightningIntent.INTENT_EXTRA_SCALE, 1);
+            boolean absolute = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ABSOLUTE, true);
+            boolean animate = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ANIMATE, true);
+
+            goToDesktopPosition(page, x, y, s, animate, absolute);
         }
     }
 
-    public void goToDesktopPosition(int page, float x, float y, float s, boolean animate) {
+    public void goToDesktopPosition(int page, float x, float y, float s, boolean animate, boolean absolute) {
         if(Page.isDashboard(page) && page != getCurrentRootPage().id) {
             ItemLayout il = loadRootItemLayout(page, false, true, animate);
-            goToItemLayoutPosition(il, x, y, s, animate);
+            goToItemLayoutPosition(il, x, y, s, animate, absolute);
         } else {
             ItemLayout[] itemLayouts = getItemLayoutsForPage(page);
             for (ItemLayout il : itemLayouts) {
-                goToItemLayoutPosition(il, x, y, s, animate);
+                goToItemLayoutPosition(il, x, y, s, animate, absolute);
             }
         }
     }
 
-    public void goToItemLayoutPosition(ItemLayout il, float x, float y, float s, boolean animate) {
+    public void goToItemLayoutPosition(ItemLayout il, float x, float y, float s, boolean animate, boolean absolute) {
         Page page = il.getPage();
         if(page.isDashboard() && page != getCurrentRootPage()) {
             loadRootItemLayout(page.id, false, true, true);
         }
-        if(animate) {
-            il.animateZoomTo(x, y, s);
+        if(absolute) {
+            if (animate) {
+                il.animateZoomTo(x, y, s);
+            } else {
+                il.moveTo(x, y, s);
+            }
         } else {
-            il.moveTo(x, y, s);
+            il.goToPage(x, y, s, animate);
         }
     }
 
@@ -1469,6 +1491,10 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
         }
     }
 
+    public void onSystemBarsSizeChanged() {
+        // pass, override in subclasses when needed
+    }
+
     public void configureSystemBarsColor(PageConfig c) {
         if(Build.VERSION.SDK_INT>=19) {
             mSystemBarTintManager.setStatusBarTintEnabled(!c.statusBarHide || mForceDisplayStatusBar);
@@ -1483,6 +1509,24 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                 flags &= ~(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
                 mWindow.setFlags(flags, 0xffffffff);
 
+                if (Build.VERSION.SDK_INT >= 23) {
+                    int f = mContentView.getSystemUiVisibility();
+                    if(c.statusBarLight) {
+                        f |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                    } else {
+                        f &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                    }
+                    mContentView.setSystemUiVisibility(f);
+                }
+                if (Build.VERSION.SDK_INT >= 26) {
+                    int f = mContentView.getSystemUiVisibility();
+                    if(c.navigationBarLight) {
+                        f |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+                    } else {
+                        f &= ~View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+                    }
+                    mContentView.setSystemUiVisibility(f);
+                }
                 try {
                     Method setStatusBarColor = mWindow.getClass().getMethod("setStatusBarColor", int.class);
                     setStatusBarColor.invoke(mWindow, 0);
@@ -1492,7 +1536,6 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                     e.printStackTrace();
                 }
             } else {
-                flags &= ~WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
                 flags |= WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION;
                 mWindow.setFlags(flags, 0xffffffff);
             }
@@ -1639,7 +1682,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                 if(eventAction != null) {
                     runAction(engine, "SHORTCUT", eventAction, itemView.getParentItemLayout(), itemView);
                 } else {
-                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                         executeGoToDesktopPositionIntent(intent);
                     }
                 }
@@ -1777,7 +1820,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
                         if (eventAction != null) {
                             runAction(engine, source, eventAction, il, itemView);
                         } else {
-                            if (intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+                            if (intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                                 executeGoToDesktopPositionIntent(intent);
                             }
                         }
@@ -2028,7 +2071,7 @@ public abstract class Screen implements ItemLayout.ItemLayoutListener, ItemView.
     /***************************************** SCREEN ORIENTATION ***********************************/
     public void onOrientationChanged() {
         if(mSystemBarTintManager != null) {
-            mSystemBarTintManager.onOrientationChanged(mWindow);
+            mSystemBarTintManager.onConfigurationChanged(mWindow);
         }
 
         updateOrientationOrRotation();

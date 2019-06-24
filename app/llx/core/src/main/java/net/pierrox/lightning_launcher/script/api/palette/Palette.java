@@ -47,8 +47,7 @@ import java.util.List;
  * These can be retrieved from the appropriate getter method.
  *
  * <p>
- * Instances can be created with the synchronous factory methods {@link #generate(android.graphics.Bitmap)} and
- * {@link #generate(android.graphics.Bitmap, int)}.
+ * An instance of this object can be created with {@link #generate(android.graphics.Bitmap)} or {@link #generate(android.graphics.Bitmap, int)}.
  * <p>
  * These should be called on a background thread, ideally the one in
  * which you load your images on. Sometimes that is not possible, so asynchronous factory methods

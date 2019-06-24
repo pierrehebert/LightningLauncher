@@ -4,6 +4,8 @@ import net.pierrox.lightning_launcher.views.item.ItemView;
 
 /**
  * The StopPoint object allows getting and setting stop points values.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link Item} when that returned item is a StopPoint; or with {@link Container#addStopPoint(float, float)}.
  */
 public class StopPoint extends Item {
     /**

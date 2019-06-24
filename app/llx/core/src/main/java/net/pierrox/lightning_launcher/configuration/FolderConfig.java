@@ -23,7 +23,9 @@ public class FolderConfig extends JsonLoader {
 	public enum FolderIconStyle {
 		NORMAL,
 		GRID_2_2,
-		STACK
+		STACK,
+		GRID_AUTO,
+		GRID_3_3
 	}
 	
 //	public enum FolderBorderStyle {
@@ -47,6 +49,7 @@ public class FolderConfig extends JsonLoader {
 	public FolderAnimation animationIn=FolderAnimation.OPEN_CLOSE;
 	public FolderAnimation animationOut=FolderAnimation.OPEN_CLOSE;
 	public FolderIconStyle iconStyle=FolderIconStyle.GRID_2_2;
+	public boolean outsideTapClose=false;
 	public boolean autoClose=false;
 	public boolean closeOther=false;
 	public boolean animationGlitchFix=false;

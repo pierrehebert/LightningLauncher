@@ -23,7 +23,9 @@ import net.pierrox.lightning_launcher.data.Utils;
  * <li>Padding bottom:<b>pb</b></li>
  * <li>Content:<b>c</b></li>
  * </ul>
- * 
+ *
+ * An instance of this object can be retrieved with {@link PropertyEditor#getBox(String)} or {@link PropertySet#getBox(String)}.
+ *
  * Example of using the Box object to change item properties:
  * <pre>
  * var color = 0xff00ff00; // pure green

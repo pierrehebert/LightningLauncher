@@ -2,6 +2,10 @@ package net.pierrox.lightning_launcher.overlay;
 
 import android.animation.Animator;
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +17,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.util.DisplayMetrics;
 import android.view.ActionMode;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -30,9 +35,12 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
+import com.readystatesoftware.systembartint.SystemBarTintManager;
+
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.R;
 import net.pierrox.lightning_launcher.activities.ResourcesWrapperHelper;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
 import net.pierrox.lightning_launcher.data.Page;
@@ -51,6 +59,9 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
     public static final String INTENT_ACTION_HIDE = "h";
 
     private static final int OPEN_CLOSE_ANIMATION_DURATION = 300;
+
+    private static final String NOTIFICATION_CHANNEL_ID = "LL_SERVICES";
+    private static final int NOTIFICATION_ID = 0;
 
     private WindowScreen mScreen;
 
@@ -176,6 +187,8 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
 //                        |WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
 //                        |WindowManager.LayoutParams.FLAG_LOCAL_FOCUS_MODE
                         |WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        |WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+                        |WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
                         |0,
                 PixelFormat.TRANSLUCENT);
         lp.gravity = Gravity.LEFT | Gravity.TOP;
@@ -326,11 +339,42 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
         configureScreen();
 
         configureDrawer();
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            CharSequence name = "Lightning Services";
+            String description = "Background Launcher activities";
+            int importance = NotificationManager.IMPORTANCE_LOW;
+            NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        Intent notificationIntent = LLApp.get().getWindowServiceIntent();
+        notificationIntent.setAction(WindowService.INTENT_ACTION_SHOW);
+        PendingIntent pendingIntent = PendingIntent.getService(this, 0, notificationIntent, 0);
+
+        Notification.Builder builder;
+        if (Build.VERSION.SDK_INT >= 26) {
+            builder = new Notification.Builder(this, NOTIFICATION_CHANNEL_ID);
+        } else {
+            builder = new Notification.Builder(this);
+        }
+        builder.setContentTitle(getString(R.string.ov_r))
+                .setContentIntent(pendingIntent)
+                .setCategory(Notification.CATEGORY_SERVICE)
+                .setPriority(Notification.PRIORITY_LOW);
+
+        Notification notification = builder.build();
+
+        startForeground(NOTIFICATION_ID, notification);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+
+        stopForeground(true);
 
         final LLApp app = LLApp.get();
 
@@ -778,18 +822,13 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
     }
 
     private void configureScreen() {
-        Point size = new Point();
-        mWindowManager.getDefaultDisplay().getSize(size);
-        mScreenWidth = size.x;
-        mScreenHeight = size.y;
+        DisplayMetrics realDm = new DisplayMetrics();
+        mWindow.getWindowManager().getDefaultDisplay().getRealMetrics(realDm);
+        mScreenWidth = realDm.widthPixels;
+        mScreenHeight = realDm.heightPixels;
 
-        Resources res = getResources();
-        int sb_height = 0;
-        int resourceId = res.getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            sb_height = res.getDimensionPixelSize(resourceId);
-        }
-        mScreenHeight -= sb_height;
+        SystemBarTintManager.SystemBarConfig config = mScreen.getSystemBarTintManager().getConfig();
+        mScreenHeight -= config.getStatusBarHeight() + config.getNavigationBarHeight();
 
         mWorkspaceView.setLayoutParams(new FrameLayout.LayoutParams(mScreenWidth, mScreenHeight));
 
@@ -962,8 +1001,8 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.FLOATING;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.FLOATING;
         }
 
         @Override
@@ -992,6 +1031,11 @@ public class WindowService extends Service implements LightningEngine.GlobalConf
                 hideWorkspace();
             }
 
+        }
+
+        @Override
+        public void onSystemBarsSizeChanged() {
+            configureScreen();
         }
     }
 }

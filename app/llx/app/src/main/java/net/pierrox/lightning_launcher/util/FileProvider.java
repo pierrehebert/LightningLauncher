@@ -50,7 +50,7 @@ public class FileProvider extends ContentProvider {
 	@Override
 	public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
 		String path = uri.getPath().substring(1);
-		if(!path.startsWith(FileUtils.LL_TMP_DIR.getAbsolutePath())) {
+		if(!path.startsWith(FileUtils.LL_TMP_DIR.getAbsolutePath()) && !path.startsWith(FileUtils.LL_EXT_DIR.getAbsolutePath())) {
 			throw new IllegalArgumentException();
 		}
 

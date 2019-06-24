@@ -7,6 +7,8 @@ import net.pierrox.lightning_launcher.views.ItemLayout;
 
 /**
  * A specialized ActivityScreen used for the main home screen.
+ *
+ * An instance of this object can be retrieved with any function that returns an {@link ActivityScreen} when that returned ActivityScreen is a HomeScreen; or with {@link Lightning#getHomeScreen()}.
  */
 public class HomeScreen extends ActivityScreen {
     /**
@@ -61,9 +63,37 @@ public class HomeScreen extends ActivityScreen {
      * @param y absolute Y position, in pixel
      * @param scale zoom factor (1=100%, 0.5=50%, negative values are acceptable, 0 is not very useful)
      * @param animate whether to animate the move
+     * @see #goToDesktopPage(int, float, float, float, boolean) to use coordinates in page units
      */
     public void goToDesktopPosition(int id, float x, float y, float scale, boolean animate) {
-        mScreen.goToDesktopPosition(id, -x * scale, -y * scale, scale, animate);
+        mScreen.goToDesktopPosition(id, -x * scale, -y * scale, scale, animate, true);
+    }
+
+    /**
+     * Go to a specified desktop and navigate to the specified page, with animation and a 1x scale. This method does nothing when the script is run in background.
+     * The benefit of using page coordinates is that it doesn't depend on the container geometry (screen orientation or resolution).
+     * @param id desktop identifier
+     * @param x horizontal page position
+     * @param y vertical page position
+     * @see #goToDesktopPosition(int, float, float) to use absolute coordinates
+     * @see #goToDesktopPage(int, float, float, float, boolean) to control scale and animation
+     */
+    public void goToDesktopPage(int id, float x, float y) {
+        mScreen.goToDesktopPosition(id, -x, -y, 1, true, false);
+    }
+
+    /**
+     * Go to a specified desktop and navigate to the specified page. This method does nothing when the script is run in background.
+     * The benefit of using page coordinates is that it doesn't depend on the container geometry (screen orientation or resolution).
+     * @param id desktop identifier
+     * @param x horizontal page position
+     * @param y vertical page position
+     * @param scale zoom factor (1=100%, 0.5=50%, negative values are acceptable, 0 is not very useful)
+     * @param animate whether to animate the move
+     * @see #goToDesktopPosition(int, float, float) to use absolute coordinates
+     */
+    public void goToDesktopPage(int id, float x, float y, float scale, boolean animate) {
+        mScreen.goToDesktopPosition(id, -x, -y, scale, animate, false);
     }
 
 }

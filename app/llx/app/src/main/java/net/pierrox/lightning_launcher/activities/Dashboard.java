@@ -86,6 +86,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.Version;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.DynamicTextConfig;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -525,7 +526,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         mUndoStack.setUndoListener(this);
 
 
-        if(BuildConfig.IS_BETA) {
+        if(BuildConfig.HAS_UEC) {
             Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
                 @Override
                 public void uncaughtException(Thread paramThread, Throwable paramThrowable) {
@@ -862,7 +863,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             mScreen.runAction(mEngine, "SHORTCUT", eventAction);
             handled = true;
         } else {
-            if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE)) {
+            if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP)) {
                 mScreen.executeGoToDesktopPositionIntent(intent);
                 handled = true;
             }
@@ -944,7 +945,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                 case REQUEST_SELECT_SHORTCUT_FOR_ADD1:
                     ComponentName cn = data.getComponent();
                     if(cn != null && cn.getClassName().endsWith(".activities.ShortcutsS")) {
-                        Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null);
+                        Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null, true);
                         newItem=Utils.addAndroidShortcutFromIntent(this, shortcut, page, mScreen.getLastTouchedAddX(), mScreen.getLastTouchedAddY(), scale);
                         mUndoStack.storePageAddItem(newItem);
                     } else {
@@ -1761,10 +1762,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             if(mNoScriptCounter == 5) {
                 ScriptManager sm = mEngine.getScriptManager();
                 Script easter_egg = sm.createScriptForFile(getString(R.string.mi_nost), "/"+getPackageName().replace('.', '/'));
-                easter_egg.setSourceText("LL.bindClass('android.view.animation.AccelerateDecelerateInterpolator');\n" +
-                        "LL.bindClass('android.view.animation.AnimationUtils');\n" +
+                easter_egg.setSourceText("bindClass('android.view.animation.AccelerateDecelerateInterpolator');\n" +
+                        "bindClass('android.view.animation.AnimationUtils');\n" +
                         "\n" +
-                        "var item = LL.getEvent().getItem();\n" +
+                        "var item = getEvent().getItem();\n" +
                         "\n" +
                         "var properties = item.getProperties();\n" +
                         "var was_on_grid = properties.getBoolean('i.onGrid');\n" +
@@ -2768,7 +2769,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                 mHandler.removeCallbacks(mSetLiveWallpaperVisibility);
                 mSetLiveWallpaperVisibility = null;
             }
-            final Screen lwp = LLApp.get().getScreen(Screen.Identity.LIVE_WALLPAPER);
+            final Screen lwp = LLApp.get().getScreen(ScreenIdentity.LIVE_WALLPAPER);
             if(lwp != null) {
                 if(delay != 0) {
                     mSetLiveWallpaperVisibility = new Runnable() {
@@ -3281,7 +3282,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     private void addBookmark() {
         ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
         Page page = il.getPage();
-        Intent intent = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null);
+        Intent intent = PhoneUtils.createDesktopBookmarkShortcut(this, il, null, null, null, true);
         Item item = Utils.addAndroidShortcutFromIntent(this, intent, page, mScreen.getLastTouchedAddX(), mScreen.getLastTouchedAddY(), il.getCurrentScale());
         mUndoStack.storePageAddItem(item);
         boolean wasInEditMode = il.getEditMode();
@@ -3324,37 +3325,21 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
     @TargetApi(Build.VERSION_CODES.O)
     private void addPinnedShortcut(Intent intent) {
-        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
-        if(extra instanceof LauncherApps.PinItemRequest) {
-            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
-            if (request.getRequestType() == LauncherApps.PinItemRequest.REQUEST_TYPE_SHORTCUT) {
-                final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-                ShortcutInfo shortcutInfo = request.getShortcutInfo();
+        Utils.ShortcutDescription sd = Utils.createPinItemRequestFromIntent(this, intent);
+        if(sd != null) {
+            final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
+            Page page = il.getPage();
+            float scale = il.getCurrentScale();
+            final Item newItem = Utils.addShortcut(sd.name, sd.icon, sd.intent, page, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale, true);
 
-                final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
-                Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
-
-                Intent si = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
-                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
-
-                final ItemLayout il = mScreen.getTargetOrTopmostItemLayout();
-                Page page = il.getPage();
-                float scale = il.getCurrentScale();
-                final Item newItem = Utils.addShortcut(shortcutInfo.getShortLabel().toString(), icon, si, page, Utils.POSITION_AUTO, Utils.POSITION_AUTO, scale, true);
-
-                mUndoStack.storePageAddItem(newItem);
-                editItem(il, newItem);
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
-                    }
-                }, 1000);
-
-                request.accept();
-            }
+            mUndoStack.storePageAddItem(newItem);
+            editItem(il, newItem);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mScreen.ensureItemViewVisible(il.getItemView(newItem), false);
+                }
+            }, 1000);
         }
     }
 
@@ -6135,8 +6120,8 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         }
 
         @Override
-        public Identity getIdentity() {
-            return Identity.HOME;
+        public ScreenIdentity getIdentity() {
+            return ScreenIdentity.HOME;
         }
 
         @Override
@@ -7378,5 +7363,12 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             startActivity(new Intent(Dashboard.this, Dashboard.class));
             System.exit(0);
         }
+
+        @Override
+        public void onSystemBarsSizeChanged() {
+            Page page = mScreen.getCurrentRootPage();
+            if(page != null) {
+                configureSystemBarsPadding(page.config);
+            }        }
     }
 }

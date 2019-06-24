@@ -162,11 +162,12 @@ public class MPReceiver extends BroadcastReceiver {
 	        	                
 	        	                Bitmap icon=Utils.decodeScaledBitmapResource(rsrc, ri.getIconResource(), s.getStdIconSize());
 	        	                Utils.saveIconToFile(default_icon_file, icon);
-	        	                // do not update items on other pages, since they may have custom labels (two labels is not supported yet)
-	        	                if(p== Page.APP_DRAWER_PAGE) {
+	        	                // do not update items on other pages, since they may have custom labels (two labels is not supported yet) and
+                                // app shortcuts may have extras that would be lost if reseting the intent
+	        	                if(p == Page.APP_DRAWER_PAGE) {
 	        	                	s.setLabel(label);
-	        	                }
-	                        	s.setIntent(intent);
+                                    s.setIntent(intent);
+                                }
                                 s.mLastUpdateTime = now;
 
                                 s.notifyChanged();

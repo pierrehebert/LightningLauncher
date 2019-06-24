@@ -7,27 +7,33 @@
     android:gravity="center_horizontal"
     android:padding="20dp">
 
-    <LinearLayout 
+	<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:padding="15dp">
-        
-	    <Button
-	        android:id="@+id/backup"
-	        android:layout_width="0dp"
-	        android:layout_weight="0.5"
-	        android:layout_height="match_parent"
-	        android:textAppearance="?android:attr/textAppearanceLarge"/>
-	    
-   	    <Button
+        android:layout_height="wrap_content">
+
+		<Button
+			android:id="@+id/backup"
+			android:layout_width="0dp"
+			android:layout_weight="0.5"
+			android:layout_height="wrap_content"/>
+
+		<Button
 	        android:id="@+id/export"
 	        android:layout_width="0dp"
 	        android:layout_weight="0.5"
-	        android:layout_height="match_parent"
-	        android:textAppearance="?android:attr/textAppearanceLarge"/>
+	        android:layout_height="match_parent"/>
 	    
 	</LinearLayout>
+
+	<Button
+		android:id="@+id/import_"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="@android:drawable/divider_horizontal_bright"/>
 
     <ListView
         android:id="@+id/archives"

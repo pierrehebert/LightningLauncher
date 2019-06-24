@@ -95,6 +95,8 @@ public class PageConfig extends JsonLoader {
 	public boolean navigationBarOverlap =false;
     public int statusBarColor=0;
     public int navigationBarColor=0;
+    public boolean statusBarLight=false;
+    public boolean navigationBarLight=false;
 
 	public ScreenOrientation screenOrientation=ScreenOrientation.SYSTEM;
 //	public ScreenRotationWhat screenRotationWhat=ScreenRotationWhat.ROTATE_WORKSPACE;

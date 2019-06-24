@@ -9,7 +9,7 @@ import net.pierrox.lightning_launcher.views.item.ItemView;
 
 /**
  * The event gather useful data dealing with the context of the event, such as which item caused the script to be executed, or what was the container at time of the event.
- * @see LL#getEvent(). 
+ * An instance of this object can be retrieved with {@link Lightning#getEvent_()}.
  */
 public class Event {
 	
@@ -120,7 +120,7 @@ public class Event {
 	}
 	
 	/**
-	 * Optional data that may have passed to this script when run from {@link LL#runScript(String, String)}.
+	 * Optional data that may have passed to this script when run from {@link Screen#runScript(String, String)}.
 	 */
 	public String getData() {
 		return mData;

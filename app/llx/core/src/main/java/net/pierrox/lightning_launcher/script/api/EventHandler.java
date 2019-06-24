@@ -6,6 +6,8 @@ import net.pierrox.lightning_launcher.data.EventAction;
  * Describe an event handler made of an action, some optional data and possibly a handler to execute after this one.
  * Handlers are chained in a linked list. The last handler in the list has no next.
  * When modifying an EventHandler acquired from {@link PropertySet#getEventHandler(String)}, you still need to call {@link PropertyEditor#setEventHandler(String, EventHandler)} to save changes.
+ *
+ * An instance of this object can be created with {@link #EventHandler(int, String)}; or retrieved with {@link PropertySet#getEventHandler(String)}.
  */
 public class EventHandler {
     public static final int UNSET=0;

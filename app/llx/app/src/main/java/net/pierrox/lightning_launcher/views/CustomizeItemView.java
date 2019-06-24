@@ -2535,8 +2535,12 @@ public class CustomizeItemView extends MyViewPager implements LLPreferenceListVi
                 fcs.modifyFolderConfig().iconStyle = (FolderConfig.FolderIconStyle) enumValue;
                 if(object instanceof Folder) {
                     Folder folder = (Folder) object;
-                    Page folder_page = folder.getOrLoadFolderPage();
-                    ShortcutConfig.getIconBackFile(mPage.getIconDir(), folder.getId()).delete();
+
+                    // when switching to a style with a dynamic background, force the recreation of
+                    // the background with a default one, which will in turn trigger the recreation
+                    // of a dynamic background
+                    Utils.resetDynamicFolderBackground(ShortcutConfig.getIconBackFile(mPage.getIconDir(), folder.getId()), folder.getStdIconSize());
+
                     Utils.updateFolderIcon(folder);
                 } else {
                     Utils.updateFolderIconStyle((Page)object);

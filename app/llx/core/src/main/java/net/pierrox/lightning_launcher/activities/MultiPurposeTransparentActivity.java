@@ -6,13 +6,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import net.pierrox.lightning_launcher.LLApp;
+import net.pierrox.lightning_launcher.R;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.EventAction;
-import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.script.Script;
-import net.pierrox.lightning_launcher.R;
 
 public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
     private final static String INTENT_EXTRA_TYPE = "t";
@@ -69,7 +70,9 @@ public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // should pass the base dir of the engine in the intent and use it instead of the default engine
-                        LLApp.get().getAppEngine().getScriptManager().getOrLoadScript(script_id).setFlag(Script.FLAG_DISABLED, true);
+                        LLApp llApp = LLApp.get();
+                        llApp.getAppEngine().getScriptManager().getOrLoadScript(script_id).setFlag(Script.FLAG_DISABLED, true);
+                        Toast.makeText(llApp, R.string.sc_disable_toast, Toast.LENGTH_LONG).show();
                         finish();
                     }
                 });
@@ -81,7 +84,7 @@ public class MultiPurposeTransparentActivity extends ResourceWrapperActivity {
             case TYPE_RUN_ACTION:
                 int action = intent.getIntExtra(INTENT_EXTRA_ACTION, GlobalConfig.NOTHING);
                 String data = intent.getStringExtra(INTENT_EXTRA_DATA);
-                app.getScreen(Screen.Identity.BACKGROUND).runAction(app.getAppEngine(), "BACKGROUND", new EventAction(action, data));
+                app.getScreen(ScreenIdentity.BACKGROUND).runAction(app.getAppEngine(), "BACKGROUND", new EventAction(action, data));
                 finish();
                 break;
         }

@@ -7,6 +7,11 @@ import net.pierrox.lightning_launcher.R;
 
 import java.util.LinkedHashMap;
 
+/**
+ * Enumeration class. Represents a Property object {@see PropertySet} {@see PropertyEditor}.
+ *
+ * An instance of this object can be created with {@link #getByName(String)}.
+ */
 public class Property {
     public static final int TYPE_UNKNOWN = -1;
     public static final int TYPE_BOOLEAN = 0;
@@ -29,7 +34,9 @@ public class Property {
 
     public static final String PROP_PAGE_BG_COLOR = "bgColor";
     public static final String PROP_PAGE_STATUS_BAR_COLOR = "statusBarColor";
+    public static final String PROP_PAGE_STATUS_BAR_LIGHT = "statusBarLight";
     public static final String PROP_PAGE_NAV_BAR_COLOR = "navigationBarColor";
+    public static final String PROP_PAGE_NAV_BAR_LIGHT = "navigationBarLight";
     public static final String PROP_PAGE_SCROLLING_DIRECTION = "scrollingDirection";
 //    public static final String PROP_PAGE_ICON_PACK = "iconPack";
 

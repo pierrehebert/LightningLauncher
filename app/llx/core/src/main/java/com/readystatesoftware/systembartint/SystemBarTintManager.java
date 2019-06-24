@@ -24,10 +24,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.DisplayCutout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout.LayoutParams;
@@ -80,11 +82,9 @@ public class SystemBarTintManager {
      * Constructor. Call this in the host activity onCreate method after its
      * content view has been set. You should always create new instances when
      * the host activity is recreated.
-     *
-     * @param activity The host activity.
      */
     @TargetApi(19)
-    public SystemBarTintManager(Window window) {
+    public SystemBarTintManager(final Window window) {
         Context context = window.getContext();
         mStatusBarAnimEnter = AnimationUtils.loadAnimation(context, R.anim.sb_in);
         mStatusBarAnimExit = AnimationUtils.loadAnimation(context, R.anim.sb_out);
@@ -98,7 +98,7 @@ public class SystemBarTintManager {
         setupNavBarLayoutParams();
     }
 
-    public void onOrientationChanged(Window window) {
+    public void onConfigurationChanged(Window window) {
         mConfig = new SystemBarConfig(window);
 
         setupStatusBarLayoutParams();
@@ -362,6 +362,13 @@ public class SystemBarTintManager {
 //        private final int mNavigationBarWidth;
         private final boolean mIsNavigationAtBottom;
 
+        // These values are kept in order to be reused when the window insets are not available. This
+        // is the case when the view is not attached to the window. Also, display cutouts are never
+        // available in the context of the overlay desktop. Display cutouts are not supposed to change
+        // so it should be safe enough.
+        private static int sSafeInsetWidth = 0;
+        private static int sSafeInsetHeight = 0;
+
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
         private SystemBarConfig(Window window) {
             Resources res = window.getContext().getResources();
@@ -383,11 +390,21 @@ public class SystemBarTintManager {
             DisplayMetrics realDm = new DisplayMetrics();
             window.getWindowManager().getDefaultDisplay().getRealMetrics(realDm);
 
+            if (Build.VERSION.SDK_INT >= 28) {
+                WindowInsets windowInsets = window.getDecorView().getRootWindowInsets();
+                if(windowInsets != null) {
+                    DisplayCutout cutout = windowInsets.getDisplayCutout();
+                    if(cutout != null) {
+                        sSafeInsetWidth = cutout.getSafeInsetLeft() + cutout.getSafeInsetRight();
+                        sSafeInsetHeight = cutout.getSafeInsetTop() + cutout.getSafeInsetBottom();
+                    }
+                }
+            }
             mIsNavigationAtBottom = realDm.widthPixels == dm.widthPixels;
             if(mIsInPortrait || mIsNavigationAtBottom) {
-                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels;// - statusBarHeight;
+                mNavigationBarHeight = realDm.heightPixels - dm.heightPixels - sSafeInsetHeight;
             } else {
-                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels;
+                mNavigationBarHeight = realDm.widthPixels - dm.widthPixels - sSafeInsetWidth;
             }
             mHasNavigationBar = (mNavigationBarHeight > 0);
         }

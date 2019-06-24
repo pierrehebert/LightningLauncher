@@ -39,6 +39,7 @@ import android.widget.Toast;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.LLAppPhone;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.data.Item;
 import net.pierrox.lightning_launcher.data.LightningIntent;
@@ -159,8 +160,8 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
     private void init() {
 		mScreen = new net.pierrox.lightning_launcher.engine.Screen(this, 0) {
 			@Override
-			public Identity getIdentity() {
-				return Identity.DESKTOP_PREVIEW;
+			public ScreenIdentity getIdentity() {
+				return ScreenIdentity.DESKTOP_PREVIEW;
 			}
 
 			@Override
@@ -418,7 +419,7 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
             int p = (Integer)v.getTag();
             Screen screen = mScreens.get(getScreenIndex(p));
             Page page = mLightningEngine.getOrLoadPage(p);
-            Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, null, page, screen.label, screen.icon);
+            Intent shortcut = PhoneUtils.createDesktopBookmarkShortcut(this, null, page, screen.label, screen.icon, true);
             setResult(RESULT_OK, shortcut);
             finish();
 		} else if(mMode==SCREEN_MODE_SELECT_MULTIPLE) {
@@ -636,7 +637,7 @@ public class ScreenManager extends ResourceWrapperActivity implements OnClickLis
                     Intent intent = s.getIntent();
                     ComponentName cn=intent.getComponent();
                     if(cn!=null && cn.compareTo(ll_component_name)==0) {
-                        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE) && intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, 0)==screen.page) {
+                        if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP) && intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, 0)==screen.page) {
                             // it looks like a screen&position shortcut
                             if(update_icon) {
                             	icon_dir.mkdirs();

@@ -1229,6 +1229,16 @@ public class ItemLayout extends ViewGroup {
     	computeCurrentLocalTransformValues();
     }
 
+    public void goToPage(float x, float y, float to_scale, boolean animate) {
+        float to_x = (x * getWidth()) * to_scale;
+        float to_y = (y * getHeight()) * to_scale;
+        if(animate) {
+            animateZoomTo(to_x, to_y, to_scale);
+        } else {
+            moveTo(to_x, to_y, to_scale);
+        }
+    }
+
     // recenter the view on the primary page after it has been scrolled multiple times in seamless mode
     public void recenter() {
         if(!mItemsBoundingBox.isEmpty()) { // this check does not apply if the ItemLayout has not been measured yet
@@ -1991,7 +2001,7 @@ public class ItemLayout extends ViewGroup {
 
 
         if(mEditMode && mVirtualEditBorders != null) {
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+            canvas.save();
             canvas.scale(mVirtualEditBordersScale, mVirtualEditBordersScale);
             canvas.translate(mVirtualEditBordersBounds.left, mVirtualEditBordersBounds.top);
             mVirtualEditBorders.draw(canvas);
@@ -2298,7 +2308,7 @@ public class ItemLayout extends ViewGroup {
                 } else {
                     Bitmap draggedBitmap = itemView.getDraggedBitmap();
                     if(draggedBitmap != null) {
-                        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                        canvas.save();
                         View sensibleView = itemView.getSensibleView();
                         float px = left + sensibleView.getLeft();
                         float py = top + sensibleView.getTop();

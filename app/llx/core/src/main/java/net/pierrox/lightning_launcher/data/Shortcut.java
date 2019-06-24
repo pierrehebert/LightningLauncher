@@ -540,7 +540,7 @@ public class Shortcut extends Item implements ShortcutConfigStylable, SharedAsyn
             // alays filter the reflection (minor overhead compared with other processing involved)
             paint.setFilterBitmap(true);
 
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+            canvas.save();
             canvas.translate(0, boxLayer.bottom+boxLayer.bottom*c.iconReflectionScale-boxImage.height()*c.iconReflectionOverlap);
             canvas.scale(1, -c.iconReflectionScale);
             Paint mirror_icon_paint=new Paint();
@@ -553,7 +553,7 @@ public class Shortcut extends Item implements ShortcutConfigStylable, SharedAsyn
                 back.draw(canvas);
             }
             canvas.saveLayer(0, 0, finalWidth, finalHeight, null, Canvas.ALL_SAVE_FLAG);
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+            canvas.save();
             canvas.drawBitmap(baseIcon, null, boxImage, paint);
             canvas.restore();
             if(mask!=null) {
@@ -568,7 +568,7 @@ public class Shortcut extends Item implements ShortcutConfigStylable, SharedAsyn
 
             canvas.restore(); // matrix
 
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+            canvas.save();
             canvas.translate(0, boxLayer.bottom-boxLayer.height()*c.iconReflectionOverlap+1);
             canvas.drawRect(0, 0, boxLayer.width(), reflection_height, mirror_icon_paint);
             canvas.restore();
@@ -581,7 +581,7 @@ public class Shortcut extends Item implements ShortcutConfigStylable, SharedAsyn
             back.draw(canvas);
         }
         canvas.saveLayer(0, 0, finalWidth, finalHeight, null, Canvas.ALL_SAVE_FLAG);
-        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        canvas.save();
         canvas.drawBitmap(baseIcon, null, boxImage, paint);
         canvas.restore();
         if(mask!=null) {

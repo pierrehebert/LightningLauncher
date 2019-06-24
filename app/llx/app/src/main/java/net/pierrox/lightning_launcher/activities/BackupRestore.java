@@ -2,6 +2,7 @@ package net.pierrox.lightning_launcher.activities;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -20,13 +21,14 @@ import net.pierrox.lightning_launcher.data.FileUtils;
 import net.pierrox.lightning_launcher.data.Folder;
 import net.pierrox.lightning_launcher.data.Item;
 import net.pierrox.lightning_launcher.data.Page;
-import net.pierrox.lightning_launcher.engine.LightningEngine;
 import net.pierrox.lightning_launcher.data.Utils;
+import net.pierrox.lightning_launcher.util.FileProvider;
 import net.pierrox.lightning_launcher_extreme.R;
 
 import org.json.JSONObject;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -36,10 +38,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.OpenableColumns;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
@@ -60,6 +64,8 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
     private static final int DIALOG_CONFIRM_DELETE=6;
     
     private static final int REQUEST_SELECT_PAGES_FOR_EXPORT = 1;
+    private static final int REQUEST_SELECT_FILE_TO_IMPORT = 2;
+    private static final int REQUEST_SELECT_FILE_TO_LOAD = 3;
 
     private ListView mListView;
     private TextView mEmptyView;
@@ -79,7 +85,12 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
         Button backup = (Button) findViewById(R.id.backup);
         backup.setText(R.string.backup_t);
         backup.setOnClickListener(this);
-        
+
+        Button import_ = (Button) findViewById(R.id.import_);
+        import_.setText(R.string.import_t);
+        import_.setOnClickListener(this);
+        import_.setOnLongClickListener(this);
+
         Button export = (Button) findViewById(R.id.export);
         export.setText(R.string.tmpl_e_t);
         export.setOnClickListener(this);
@@ -161,6 +172,10 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                 exportArchive(true);
                 break;
 
+            case R.id.import_:
+                selectFileToLoadOrImport(true);
+                break;
+
             case R.id.export:
                 exportArchive(false);
                 break;
@@ -168,9 +183,17 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
     }
     
 	@Override
-	public boolean onLongClick(View arg0) {
-		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pierrox.net/cmsms/applications/lightning-launcher/templates.html")));
-		return true;
+	public boolean onLongClick(View view) {
+        switch(view.getId()) {
+            case R.id.export:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pierrox.net/cmsms/applications/lightning-launcher/templates.html")));
+                return true;
+
+            case R.id.import_:
+                selectFileToLoadOrImport(false);
+                return true;
+        }
+		return false;
 	}
 
     @Override
@@ -234,7 +257,7 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                 if(mArchiveName != null || mArchiveUri != null) {
                     builder = new AlertDialog.Builder(this);
                     builder.setTitle(R.string.br_rc);
-                    builder.setMessage(mArchiveName==null ? mArchiveUri.getLastPathSegment() : mArchiveName);
+                    builder.setMessage(mArchiveName==null ? getNameForUri(mArchiveUri) : mArchiveName);
                     builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -297,8 +320,10 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                                 case 3:
                                     Intent shareIntent = new Intent();
                                     shareIntent.setAction(Intent.ACTION_SEND);
-                                    shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(FileUtils.LL_EXT_DIR +"/"+mArchiveName)));
+                                    Uri uri = FileProvider.getUriForFile(new File(FileUtils.LL_EXT_DIR +"/"+mArchiveName));
+                                    shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                                     shareIntent.setType("application/zip");
+                                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                     startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.br_s)));
                                     break;
                                 case 4:
@@ -358,6 +383,14 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                 all_pages.add(Integer.valueOf(Page.USER_MENU_PAGE));
 
                 doExportTemplate(mArchiveName, all_pages);
+            }
+        } else if(requestCode == REQUEST_SELECT_FILE_TO_IMPORT){
+    	    if(resultCode == RESULT_OK) {
+    	        importFile(data.getData());
+            }
+        } else if(requestCode == REQUEST_SELECT_FILE_TO_LOAD){
+    	    if(resultCode == RESULT_OK) {
+    	        loadArchive(data.getData(), null);
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -569,5 +602,84 @@ public class BackupRestore extends ResourceWrapperActivity implements View.OnCli
                 Toast.makeText(BackupRestore.this, R.string.restore_error, Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    /**
+     * Request the user to pick an archive.
+     * @param only_load true to directly load the archive without first importing it in the LL_EXT_DIR directory.
+     */
+    private void selectFileToLoadOrImport(boolean only_load) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("*/*");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.import_t)), only_load ? REQUEST_SELECT_FILE_TO_LOAD : REQUEST_SELECT_FILE_TO_IMPORT);
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private void importFile(final Uri uri) {
+        new AsyncTask<Void, Void, File>() {
+            private ProgressDialog mDialog;
+
+            @Override
+            protected void onPreExecute() {
+                mDialog = new ProgressDialog(BackupRestore.this);
+                mDialog.setMessage(getString(R.string.importing));
+                mDialog.setCancelable(false);
+                mDialog.show();
+            }
+
+            @Override
+            protected File doInBackground(Void... voids) {
+                InputStream is = null;
+                FileOutputStream os = null;
+                File outFile = null;
+                try {
+                    String name = getNameForUri(uri);
+                    outFile = new File(FileUtils.LL_EXT_DIR, name);
+
+                    is = getContentResolver().openInputStream(uri);
+                    os = new FileOutputStream(outFile);
+                    FileUtils.copyStream(is, os);
+                    return outFile;
+                } catch (IOException e) {
+                    if(outFile != null) {
+                        outFile.delete();
+                    }
+                    return null;
+                } finally {
+                    try { if(is != null) is.close(); } catch(IOException e) {}
+                    try { if(os != null) os.close(); } catch(IOException e) {}
+                }
+            }
+
+            @Override
+            protected void onPostExecute(File outFile) {
+                mDialog.dismiss();
+                if(outFile != null) {
+                    loadArchivesList();
+                    loadArchive(null, outFile.getName());
+                } else {
+                    Toast.makeText(BackupRestore.this, R.string.import_e, Toast.LENGTH_SHORT).show();
+                }
+            }
+        }.execute((Void) null);
+    }
+
+    private String getNameForUri(Uri uri) {
+        String name = null;
+        if (uri.getScheme().equals("content")) {
+            Cursor cursor = getContentResolver().query(uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    name = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        if (name == null) {
+            name = uri.getLastPathSegment();
+        }
+        return name;
     }
 }

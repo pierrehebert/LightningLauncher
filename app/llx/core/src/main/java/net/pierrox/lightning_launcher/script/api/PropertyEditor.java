@@ -33,7 +33,7 @@ import java.util.HashMap;
 
 /**
  * Utility to modify one or more configuration settings at once. Modify one or more properties using the same PropertyEditor, then call {@link #commit()} to validate changes.
- * This object is retrieved using {@link PropertySet#edit()}. You can chain calls this way:
+ * An instance of this object can be retrieved with {@link PropertySet#edit()}. You can chain calls this way:
  * <pre><code>
  * 	property_set.edit()
  * 		.setInteger("someProperty", some_value)
@@ -158,8 +158,18 @@ public class PropertyEditor {
                     for (Screen screen : LLApp.get().getScreens()) {
                         screen.onPageSystemBarsColorChanged(page);
                     }
+                } else if (key.equals(Property.PROP_PAGE_STATUS_BAR_LIGHT)) {
+                    page_config.statusBarLight = (boolean) value;
+                    for (Screen screen : LLApp.get().getScreens()) {
+                        screen.onPageSystemBarsColorChanged(page);
+                    }
                 } else if (key.equals(Property.PROP_PAGE_NAV_BAR_COLOR)) {
                     page_config.navigationBarColor = (int) value;
+                    for (Screen screen : LLApp.get().getScreens()) {
+                        screen.onPageSystemBarsColorChanged(page);
+                    }
+                } else if (key.equals(Property.PROP_PAGE_NAV_BAR_LIGHT)) {
+                    page_config.navigationBarLight = (boolean) value;
                     for (Screen screen : LLApp.get().getScreens()) {
                         screen.onPageSystemBarsColorChanged(page);
                     }

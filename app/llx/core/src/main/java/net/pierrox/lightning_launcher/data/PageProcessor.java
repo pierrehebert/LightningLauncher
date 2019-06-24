@@ -400,9 +400,9 @@ public class PageProcessor {
 
             cn = intent.getComponent();
             if(cn.getPackageName().equals(pkg_name_to)) {
-                if(intent.hasExtra(LightningIntent.INTENT_EXTRA_PAGE) && translated_page_ids != null) {
-                    int old_bookmark_page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_PAGE, Page.NONE);
-                    intent.putExtra(LightningIntent.INTENT_EXTRA_PAGE, translated_page_ids.get(old_bookmark_page));
+                if(intent.hasExtra(LightningIntent.INTENT_EXTRA_DESKTOP) && translated_page_ids != null) {
+                    int old_bookmark_page = intent.getIntExtra(LightningIntent.INTENT_EXTRA_DESKTOP, Page.NONE);
+                    intent.putExtra(LightningIntent.INTENT_EXTRA_DESKTOP, translated_page_ids.get(old_bookmark_page));
                     modified = true;
                 } else {
                     EventAction ea = Utils.decodeEventActionFromLightningIntent(intent);
@@ -417,10 +417,13 @@ public class PageProcessor {
                 }
 
                 if(do_scale) {
-                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_TX)) {
-                        intent.putExtra(LightningIntent.INTENT_EXTRA_TX, intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TX, 0) * sx);
-                        intent.putExtra(LightningIntent.INTENT_EXTRA_TY, intent.getFloatExtra(LightningIntent.INTENT_EXTRA_TY, 0) * sy);
-                        modified = true;
+                    if(intent.hasExtra(LightningIntent.INTENT_EXTRA_X)) {
+                        boolean absolute = intent.getBooleanExtra(LightningIntent.INTENT_EXTRA_ABSOLUTE, true);
+                        if(absolute) {
+                            intent.putExtra(LightningIntent.INTENT_EXTRA_X, intent.getFloatExtra(LightningIntent.INTENT_EXTRA_X, 0) * sx);
+                            intent.putExtra(LightningIntent.INTENT_EXTRA_Y, intent.getFloatExtra(LightningIntent.INTENT_EXTRA_Y, 0) * sy);
+                            modified = true;
+                        }
                     }
                 }
             }

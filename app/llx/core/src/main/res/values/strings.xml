@@ -102,13 +102,16 @@
 <string name="app_killer_s">Kill apps with Lightning</string>
 <string name="donate_t">Donate</string>
 <string name="donate_s">Want to support Lightning?</string>
-<string name="backup_t">Backup</string>
+<string name="backup_t">Create a backup</string>
+<string name="import_t">Load an external file</string>
+<string name="import_e">Import failed!</string>
+<string name="importing">Import in progress</string>
 <string name="restore_t">Restore</string>
 <string name="rate_t">Rate Lightning</string>
 <string name="rate_s">Tell us what you think</string>
 <string name="facebook_t">Lightning Launcher on Google+</string>
 <string name="facebook_s">App update news, suggest a feature, or report a bug</string>
-    <string name="ld_t">Lightning Drawer</string>
+<string name="ld_t">Lightning Drawer</string>
 <string name="ld_s">A highly advanced All Apps page.</string>
 <string name="customize_ll">Customize Lightning</string>
 
@@ -293,6 +296,7 @@
 <string name="no_diagonal_scrolling_t">Disable diagonal scrolling</string>
 <string name="no_diagonal_scrolling_s">Only scroll in one direction at a time</string>
 <string name="pinch_zoom_t">Pinch to zoom in or out</string>
+<string name="otc_t">Tap outside to close</string>
 <string name="auto_close_t">Auto close</string>
 <string name="auto_close_s">Close the folder as soon as one of its app is launched</string>
 <string name="anim_glitch_fix_t">Animation glitch fix</string>
@@ -352,8 +356,10 @@
 
 <string-array name="i_folder_e">
 <item>Icon</item>
-<item>Grid</item>
+<item>Grid 2x2</item>
 <item>Stack</item>
+<item>Grid auto</item>
+<item>Grid 3x3</item>
 </string-array>
 
 <string name="i_effect">Layers</string>
@@ -633,7 +639,7 @@
 <string name="tmpl_a_s">Load it from an installed APK</string>
 <string name="tmpl_b_t">Browse existing templates</string>
 <string name="tmpl_b_s">Get fresh new themes</string>
-<string name="tmpl_e_t">Export template</string>
+<string name="tmpl_e_t">Create a template</string>
 <string name="tmpl_e_s">Long tap to read the tutorial</string>
 <string name="tmpl_c">Select a template</string>
 <string name="tmpl_e_m">Exporting…</string>
@@ -836,8 +842,7 @@
     <string name="tmpl_m">Merge: keep the current setup, import the template as new desktops</string>
     <string name="tmpl_u">Update: keep desktops and items, apply style from desktops in the template only</string>
     <string name="tmpl_b">Make a backup first</string>
-    <string name="apply_tmpl_m">You are about to apply the template \'%s\':</string>
-    
+
     <!-- added 171 -->
     <string name="s_ls_lu_t">Launch unlock</string>
     <string name="s_ls_lu_s">Apps launched from the lock screen will unlock at the same time</string>
@@ -926,7 +931,9 @@
     <string name="sb_t">System bars</string>
     <string name="sb_s">Set status and navigation bars visibility, transparency, etc.</string>
     <string name="sbc_t">Status bar tint color</string>
+    <string name="sbl_t">Light status bar</string>
     <string name="nbc_t">Navigation bar tint color</string>
+    <string name="nbl_t">Light navigation bar</string>
     <string name="sb_c">Status bar</string>
     <string name="nb_c">Navigation bar</string>
     <string name="mi_app_store">Play Store</string>
@@ -1217,6 +1224,7 @@
     <string name="an_ohs">Open the hierarchy screen</string>
     <string name="ov_pt">Setup</string>
     <string name="ov_ps">The overlay desktop requires the permission to draw over other apps</string>
+    <string name="ov_r">The overlay desktop is enabled</string>
     <string name="ism_t">Size mode</string>
     <string-array name="ism_e">
         <item>Standard</item>
@@ -1305,149 +1313,13 @@
     <string name="svgp_style">#%s style</string>
     <string name="svgp_path">#%s path</string>
 
+    <string name="permission_label">Use Script Service</string>
+    <string name="permission_description">view, create, edit, delete and run scripts in Lightning Launcher</string>
 
-    <!-- deprecated: before 90 -->
-<string-array name="d01"/>
-<string name="d0"/>
-<string name="d1"/>
-
-<!-- deprecated: 90 -->
-<string name="color_t"/>
-<string name="color_s"/>
-<string name="wp_c"/>
-<string name="wp_t"/>
-<string name="wp_select_t"/>
-<string name="wp_select_s"/>
-<string name="wp_tint_color_t"/>
-<string name="wp_tint_color_s"/>
-<string name="wp_soft_t"/>
-<string name="wp_soft_s"/>
-
-<!-- deprecated: 92 -->
-<string name="theme_label_classic"/>
-<string name="theme_label_compact"/>
-<string name="theme_label_list_icons"/>
-<string name="theme_label_list_labels"/>
-<string name="theme_label_icons_only"/>
-
-<!-- deprecated: 93 -->
-<string name="app_not_installed"/>
-
-<!-- deprecated: 95 -->
-<string name="app_screen_switcher_t"/>
-<string name="app_screen_switcher_s"/>
-
-<!-- deprecated: 103 -->
-<string-array name="action_names">
-<item>Do nothing (lock)</item>
-<item>Launch the App Drawer</item>
-<item>Zoom full scale</item>
-<item>Zoom 100p.</item>
-<item>Zoom toggle full scale/100p.</item>
-<item>Previous desktop</item>
-<item>Next desktop</item>
-<item>Edit layout</item>
-<item>Add object</item>
-<item>Customize Lightning</item>
-<item>Customize current desktop or folder</item>
-<item>Launch app</item>
-<item>Launch shortcut</item>
-<item>Select wallpaper</item>
-<item>Launcher menu</item>
-<item>Show/hide status bar</item>
-<item>Show/hide app menu &amp; status bar</item>
-<item>Show notifications</item>
-<item>Search</item>
-<item>Move item</item>
-<item>Customize item</item>
-<item>Item menu</item>
-<item>Launch item</item>
-</string-array>
-
-<!-- deprecated: 114 -->
-<string name="auto_stop_t">Use auto scroll stops</string>
-<string name="auto_stop_s">Automatically stop scrolling at desktop edges</string>
-
-<!-- deprecated: 116 -->
-<string name="select_backup">Select a backup archive to restore</string>
-
-<!-- deprecated: 119 -->
-<string-array name="anim_e">
-<item>None</item>
-<item>Open / Close</item>
-<item>Fade in/out</item>
-</string-array>
-
-<!-- deprecated: 124 -->
-<string name="mi_reset">Reset scale/rotate</string>
-
-<!-- deprecated: 125 -->
-<string name="gc_sfde">Single finger scroll in edit mode</string>
-
-<!-- deprecated: 135 -->
-<string name="grid_pl">Toggle portrait/landscape</string>
-
-<!-- deprecated: 144 -->
-<string name="scroll_speed_t">Scrolling speed</string>
-
-<!-- deprecated: 170 -->
-<string name="apply_tmpl_p">Backup then apply</string>
-<string name="apply_tmpl_n">Only apply</string>
-
-<!-- deprecated: 191 -->
-<string name="pick_default">Default icon</string>
-
-<!-- deprecated: 208 -->
-<string name="bo_t">Transparent bars and content overlap</string>
-<string name="ad_ab_c_s">Background image, visibility</string>
-
-<!-- deprecated: 221 -->
-<string name="wrap_t">Seamless mode</string>
-
-<!-- deprecated: beyond -->
-<string name="ip_blank">Blank image</string>
-<string name="min_ram_t">Minimize memory usage</string>
-<string name="min_ram_s">Lightning will use less RAM, but might slow down a bit. Requires restart</string>
-<string name="mi_es_show_hidden">Show hidden</string>
-<string name="mi_es_hide_hidden">Hide hidden</string>
-<string name="mi_zorder">Move forwards/backwards</string>
-<string name="snap_t">Snapping</string>
-<string-array name="snap_e">
-    <item>None</item>
-    <item>Center</item>
-    <item>Edge</item>
-    <item>Center &amp; Edge</item>
-</string-array>
-<string name="copy_style_toast">Tap an item to copy its style</string>
-<string name="copy_style_cancel">Style copy canceled</string>
-<string name="copy_style_done">Style has been copied.</string>
-<string name="mi_edit_copy_style">Copy a style</string>
-<string name="mi_app">App…</string>
-<string name="mi_fo">Folder settings</string>
-<string name="items_t">Items</string>
-<string name="items_s">Fonts, colors, icons, box settings, and more</string>
-<string name="mi_es_add_folder">Add folder</string>
-<string name="mi_es_add_pi">Add page indicator</string>
-<string name="gc_hpie_s">Long tap for the description</string>
-<string name="tut_basic_editing">First steps</string>
-<string name="hide_statusbar_s">Hit menu to show it</string>
-<string name="mph"></string>
-<string name="tr_ut">About Lightning</string>
-<string name="tr_um">You are a long time user of the free version of Lighting Launcher, thank you.\n\nAlthough this version has been replaced with a trial version, you will still benefit from all previously existing features for free, as well as most improvements made in the full app since the last update.\n\nIf you wish to support this app, please consider purchasing the unlock key at a discounted loyalty price.\n\nThanks!</string>
-<string name="ip_bic">Broken icon pack</string>
-<string name="sp_none">No script</string>
-<string name="mi_pick_sh">Select shortcut</string>
-
-
-    <!-- Do not translate -->
-    <string name="app_name">Lightning Launcher</string>
-<string name="default_pack_name">English</string>
-
-<!-- Do not change -->
-<string name="aaa" />
-<string name="zzz" />
-
-<string-array name="aaa1" />
-<string-array name="zzz1" />
-
+    <string name="sc_disable_toast">Script disabled. Open it in the editor to enable again</string>
+    <string name="srch_ttl">Search text</string>
+    <string name="srch_back">Backwards</string>
+    <string name="srch_regexp">Regexp</string>
+    <string name="srch_case">Match case</string>
+    <string name="sc_ind">Autoindentation</string>
 </resources>

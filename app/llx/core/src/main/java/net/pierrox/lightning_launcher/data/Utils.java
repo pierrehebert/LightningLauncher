@@ -1,5 +1,6 @@
 package net.pierrox.lightning_launcher.data;
 
+import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,9 +12,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.LauncherApps;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.pm.ShortcutInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -1032,6 +1035,10 @@ public class Utils {
 	public static ShortcutDescription createShortcutFromIntent(Context context, Intent data, int max_icon_size) {
     	// this comes from Launcher2
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
+        if(intent == null) {
+            return null;
+        }
+
         String name = data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
         Parcelable bitmap = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_ICON);
 
@@ -1061,6 +1068,37 @@ public class Utils {
         
         return sd;
 	}
+
+	@TargetApi(Build.VERSION_CODES.O)
+    public static ShortcutDescription createPinItemRequestFromIntent(Context context, Intent intent) {
+        Parcelable extra = intent.getParcelableExtra(LauncherApps.EXTRA_PIN_ITEM_REQUEST);
+        if(extra instanceof LauncherApps.PinItemRequest) {
+            LauncherApps.PinItemRequest request = (LauncherApps.PinItemRequest) extra;
+            if (request.getRequestType() == LauncherApps.PinItemRequest.REQUEST_TYPE_SHORTCUT) {
+                final LauncherApps launcherApps = (LauncherApps) context.getSystemService(Context.LAUNCHER_APPS_SERVICE);
+                ShortcutInfo shortcutInfo = request.getShortcutInfo();
+
+                final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
+                Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+
+                Intent si = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
+                si.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
+
+                ShortcutDescription sd=new ShortcutDescription();
+                sd.name = shortcutInfo.getShortLabel().toString();
+                sd.icon = icon;
+                sd.intent = si;
+
+                request.accept();
+
+                return sd;
+            }
+        }
+
+        return null;
+    }
 	
 	public static void deleteDirectory(File dir, boolean delete_root) {
 		File[] files=dir.listFiles();
@@ -1101,6 +1139,59 @@ public class Utils {
         }
     }
 
+    private static final float DYNAMIC_FOLDER_BG_MARGIN=0.03125f;
+
+    private static void buildDynamicFolderBackground(Canvas canvas, int icon_width, int icon_height) {
+        canvas.drawARGB(0, 0, 0, 0);
+        Paint bg_paint=new Paint(Paint.ANTI_ALIAS_FLAG);
+        bg_paint.setShader(new RadialGradient(icon_width/2, icon_height/2, (float) Math.sqrt(icon_width*icon_width+icon_height*icon_height), 0xff59514c, 0xff272424, TileMode.CLAMP));
+        canvas.drawRoundRect(new RectF(0, 0, icon_width, icon_height), DYNAMIC_FOLDER_BG_MARGIN*2*icon_width, DYNAMIC_FOLDER_BG_MARGIN*2*icon_height, bg_paint);
+    }
+
+    public static void resetDynamicFolderBackground(File image_file, int size) {
+        Bitmap icon = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+        Canvas canvas=new Canvas(icon);
+        buildDynamicFolderBackground(canvas, size, size);
+        Utils.saveIconToFile(image_file, icon);
+    }
+
+    private static boolean hasDynamicFolderBackground(File image_file) {
+        // return true if the current folder background is a dynamic one (the one with a gray
+        // rounded rectangle, built with the function above)
+
+        // Historically there has been no metadata to distinguish between the dynamic folder bg and
+        // a manually chosen one. This function naively compares the current bitmap with a reference
+        // dynamically computed bitmap. This is kind of crappy but I can't see a better way to make
+        // it work with existing setups.
+
+        if(!image_file.exists()) {
+            return false;
+        }
+
+        // load the current bitmap (with a max size to limite computations to a reasonable amount)
+        Bitmap current = loadBitmap(image_file, 0, 32, 32);
+
+        // create a reference background with the same size
+        int w = current.getWidth();
+        int h = current.getHeight();
+        Bitmap reference = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas=new Canvas(reference);
+        buildDynamicFolderBackground(canvas, w, h);
+
+        // now compare pixels (only the blue channel, this is probably enough)
+        int diff = 0; // enough for 2^15 pixels
+        for(int x=0; x<w; x++) {
+            for(int y=0; y<h; y++) {
+                int d = (current.getPixel(x, y)&0xff) - (reference.getPixel(x, y)&0xff);
+                diff += d*d;
+            }
+        }
+
+        int s = diff / (w*h);
+
+        return s < 4;
+    }
+
 	public static void updateFolderIcon(Folder folder) {
         Page folder_page = folder.getOrLoadFolderPage();
 		FolderConfig fc = folder.getFolderConfig();
@@ -1111,7 +1202,9 @@ public class Utils {
         
         File icon_effect_background;
         icon_effect_background = ShortcutConfig.getIconBackFile(folder_container_icon_dir, folder.mId);
-        	
+
+        boolean hasDynamicFolderBackground = hasDynamicFolderBackground(icon_effect_background);
+
         Bitmap icon;
         if(style==FolderIconStyle.NORMAL) {
         	icon=null; // do not update the icon, keep the current one
@@ -1161,36 +1254,63 @@ public class Utils {
 	        int icon_height=icon_width;
 	        icon=Bitmap.createBitmap(icon_width, icon_height, Bitmap.Config.ARGB_8888);
 	        Canvas canvas=new Canvas(icon);
-	        
-	        final float margin=0.03125f;
-	        
-	        canvas.drawARGB(0, 0, 0, 0);
-	        
-	        Paint bg_paint=new Paint(Paint.ANTI_ALIAS_FLAG);
-	        bg_paint.setShader(new RadialGradient(icon_width/2, icon_height/2, (float) Math.sqrt(icon_width*icon_width+icon_height*icon_height), 0xff59514c, 0xff272424, TileMode.CLAMP));
-	        canvas.drawRoundRect(new RectF(0, 0, icon_width, icon_height), margin*2*icon_width, margin*2*icon_height, bg_paint);
-	        
-	        
+
+	        if(hasDynamicFolderBackground) {
+                buildDynamicFolderBackground(canvas, icon_width, icon_height);
+            }
+
 	        Paint bitmap_paint=new Paint(Paint.FILTER_BITMAP_FLAG|Paint.ANTI_ALIAS_FLAG);
-	        
-	        if(style==FolderIconStyle.GRID_2_2) {
-	        	final int w=2;
-	        	final int h=2;
+
+	        if(style==FolderIconStyle.GRID_2_2 || style==FolderIconStyle.GRID_3_3 || style==FolderIconStyle.GRID_AUTO) {
+                int l=folder_items.size();
+
+                final int w;
+	        	final int h;
+
+	        	switch(style) {
+                    case GRID_2_2:
+                        w = 2;
+                        h = 2;
+                        break;
+                    case GRID_3_3:
+                        w = 3;
+                        h = 3;
+                        break;
+                    case GRID_AUTO:
+                    default:
+                        if(l <= 4) {
+                            w = 2;
+                            h = 2;
+                        } else {
+                            w = 3;
+                            h = 3;
+                        }
+                        break;
+                }
 	        	
 	        	final float bw=icon_width/(float)w;
 	        	final float bh=icon_height/(float)h;
-	        	final float mw=margin*icon_width;
-	        	final float mh=margin*icon_height;
+	        	final float mw=DYNAMIC_FOLDER_BG_MARGIN*icon_width;
+	        	final float mh=DYNAMIC_FOLDER_BG_MARGIN*icon_height;
 	        	final int max=w*h;
-		        
-		        Paint line_paint=new Paint(Paint.ANTI_ALIAS_FLAG);
-		        line_paint.setColor(0xff8C7F77);
-		        canvas.drawLine(icon_width/2+0.5f, mh, icon_width/2+0.5f, icon_height-mh, line_paint);
-		        canvas.drawLine(mw, icon_height/2+0.5f, icon_width-mh, icon_height/2+0.5f, line_paint);
-		        
-		        storeFolderIconBackground(icon_effect_background, folder_container_icon_dir, folder, icon);
-		        
-		        int l=folder_items.size(); 
+
+	        	if(hasDynamicFolderBackground) {
+                    Paint line_paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+                    line_paint.setColor(0xff8C7F77);
+                    for (int x = 1; x < w; x++) {
+                        float p = x * icon_width / w + 0.5f;
+                        canvas.drawLine(p, mh, p, icon_height - mh, line_paint);
+                    }
+                    for (int y = 1; y < h; y++) {
+                        float p = y * icon_height / h + 0.5f;
+                        canvas.drawLine(mw, p, icon_width - mh, p, line_paint);
+                    }
+
+                    storeFolderIconBackground(icon_effect_background, folder_container_icon_dir, folder, icon);
+                }
+
+                icon.eraseColor(0);
+
 		        int x=0;
 		        int y=0;
 		        int n=0;
@@ -1221,11 +1341,15 @@ public class Utils {
 	        	
 	        	
 	        } else {
-	        	storeFolderIconBackground(icon_effect_background, folder_container_icon_dir, folder, icon);
-		        
+	            if(hasDynamicFolderBackground) {
+	                storeFolderIconBackground(icon_effect_background, folder_container_icon_dir, folder, icon);
+                }
+
+                icon.eraseColor(0);
+
 	        	final int max=4;
-	        	final float mw=margin*icon_width;
-	        	final float mh=margin*icon_height;
+	        	final float mw=DYNAMIC_FOLDER_BG_MARGIN*icon_width;
+	        	final float mh=DYNAMIC_FOLDER_BG_MARGIN*icon_height;
 	        	
 	        	RectF dst=new RectF();
 	        	int n=folder_items.size();
@@ -1269,12 +1393,9 @@ public class Utils {
 	}
 	
 	private static void storeFolderIconBackground(File icon_effect_background, File folder_container_icon_dir, Folder folder, Bitmap icon) {
-		if(!icon_effect_background.exists()) {
-        	Utils.saveIconToFile(icon_effect_background, icon);
-    		ShortcutConfig new_sc = folder.modifyShortcutConfig();
-    		new_sc.loadAssociatedIcons(folder_container_icon_dir, folder.mId);
-        }
-		icon.eraseColor(0);
+        Utils.saveIconToFile(icon_effect_background, icon);
+        ShortcutConfig new_sc = folder.modifyShortcutConfig();
+        new_sc.loadAssociatedIcons(folder_container_icon_dir, folder.mId);
 	}
 
     public static void updateContainerIconIfNeeded(Page page) {
@@ -1479,7 +1600,17 @@ public class Utils {
 	
 	public static Item addAndroidShortcutFromIntent(Context context, Intent data, Page page, int x, int y, float scale) {
 		int icon_size=(int)(page.config.defaultShortcutConfig.iconScale*getStandardIconSize());
+
 		ShortcutDescription sd=createShortcutFromIntent(context, data, icon_size);
+        if(sd == null) {
+            sd = createPinItemRequestFromIntent(context, data);
+        }
+
+        if(sd == null) {
+            sd = new ShortcutDescription();
+            sd.name = "no shortcut";
+            sd.intent = new Intent();
+        }
 
         return addShortcut(sd.name, sd.icon, sd.intent, page, x, y, scale, true);
 	}

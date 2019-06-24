@@ -237,6 +237,7 @@ public class Setup {
 
         final PageConfig dashboard_config = dashboard.config;
         dashboard_config.applyDefaultFolderConfig();
+        dashboard_config.defaultFolderConfig.outsideTapClose = true;
         dashboard_config.screenOrientation = PageConfig.ScreenOrientation.PORTRAIT;
         dashboard_config.gridPRowNum = 6;
         dashboard_config.menuKey = new EventAction(GlobalConfig.USER_MENU, null);
@@ -413,6 +414,7 @@ public class Setup {
         Resources resources = LLApp.get().getResources();
         final PageConfig config = drawer.config;
         config.applyDefaultFolderConfig();
+        config.defaultFolderConfig.outsideTapClose = true;
         config.gridPRowNum = config.gridLRowNum = 4;
         config.scrollingDirection = PageConfig.ScrollingDirection.X;
         if(Build.VERSION.SDK_INT>=19) {

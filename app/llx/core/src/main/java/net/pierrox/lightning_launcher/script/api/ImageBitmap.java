@@ -2,12 +2,11 @@ package net.pierrox.lightning_launcher.script.api;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.view.View;
 
 import net.pierrox.lightning_launcher.LLApp;
-import net.pierrox.lightning_launcher.engine.*;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.views.SharedAsyncGraphicsDrawable;
 import net.pierrox.lightning_launcher.views.item.ItemView;
@@ -18,7 +17,9 @@ import java.io.IOException;
 
 /**
  * Wraps a static bitmap.
- * Such an image can be loaded from file, created using {@link LL#createImage(int, int)}, or obtained from items icons.
+ * Such an image can be loaded from file, created using {@link Image#createImage(int, int)}, or obtained from items icons.
+ *
+ * An instance of this object can be created with {@link Image#createImage(int, int)} or {@link Image#createTextIcon(String, int, int, int, Typeface)}; or retrieved with any function that returns an {@link Image} when that image is an ImageBitmap; or with {@link ImageAnimation#getFrameImage(int)} or {@link net.pierrox.lightning_launcher.script.api.screen.ActivityScreen#cropImage(ImageBitmap, boolean)}.
  */
 public class ImageBitmap extends Image {
     private Bitmap mBitmap;
@@ -101,7 +102,7 @@ public class ImageBitmap extends Image {
      * <ul>
      *     <li>{@link net.pierrox.lightning_launcher.script.api.Shortcut#getDefaultIcon()}</li>
      *     <li>{@link net.pierrox.lightning_launcher.script.api.Shortcut#getCustomIcon()}</li>
-     *     <li>{@link net.pierrox.lightning_launcher.script.api.LL#createImage(String)}</li>
+     *     <li>{@link Image#createImage(String)}</li>
      * Calling this method on an image without source file will do nothing.
      */
     public void save() {

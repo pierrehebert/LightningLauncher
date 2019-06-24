@@ -33,6 +33,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.Version;
+import net.pierrox.lightning_launcher.api.ScreenIdentity;
 import net.pierrox.lightning_launcher.configuration.FolderConfig;
 import net.pierrox.lightning_launcher.configuration.FolderConfig.FolderAnimation;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
@@ -247,8 +248,8 @@ public class Customize extends ResourceWrapperActivity implements
 		} else {
 			mScreen = new Screen(this, 0) {
 				@Override
-				public Identity getIdentity() {
-					return Identity.CUSTOMIZE;
+				public ScreenIdentity getIdentity() {
+					return ScreenIdentity.CUSTOMIZE;
 				}
 
 				@Override
@@ -518,7 +519,7 @@ public class Customize extends ResourceWrapperActivity implements
 		} else if (preference == mPGReset) {
 			displayDialog(DIALOG_CONFIRM_RESET_PAGE);
 		} else if (preference == mPGBackgroundSelectSystemWallpaper) {
-			startActivity(Intent.createChooser(new Intent(Intent.ACTION_SET_WALLPAPER), getString(R.string.wp_select_t)));
+			startActivity(Intent.createChooser(new Intent(Intent.ACTION_SET_WALLPAPER), getString(R.string.bg_sys_wp_select_t)));
 		} else if (preference == mPGBackgroundSelectScreenWallpaper) {
             ImagePicker.startActivity(this, REQUEST_PICK_SCREEN_WALLPAPER);
         } else if (preference == mPGApplyIconPack) {
@@ -1189,11 +1190,17 @@ public class Customize extends ResourceWrapperActivity implements
 
                     if (Build.VERSION.SDK_INT >= 19) {
                         mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarColor = new LLPreferenceColor(this, ID_mPGSystemBarsStatusBarColor, R.string.sbc_t, 0, pc.statusBarColor, null, true));
+						if (Build.VERSION.SDK_INT >= 23) {
+							mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarLight = new LLPreferenceCheckBox(this, ID_mPGSystemBarsStatusBarLight, R.string.sbl_t, 0, pc.statusBarLight, null));
+						}
                         mPreferencesPageSystemBars.add(mPGSystemBarsStatusBarOverlap = new LLPreferenceCheckBox(this, ID_mPGSystemBarsStatusBarOverlap, R.string.sbo_t, 0, pc.statusBarOverlap, null));
 
                         if (mSystemBarTintManager == null || (mSystemBarTintManager != null && mSystemBarTintManager.getConfig().hasNavigationBar())) {
                             mPreferencesPageSystemBars.add(new LLPreferenceCategory(this, R.string.nb_c));
                             mPreferencesPageSystemBars.add(mPGSystemBarsNavigationBarColor = new LLPreferenceColor(this, ID_mPGSystemBarsNavigationBarColor, R.string.nbc_t, 0, pc.navigationBarColor, null, true));
+							if (Build.VERSION.SDK_INT >= 26) {
+								mPreferencesPageSystemBars.add(mPGSystemBarsNavigationBarLight = new LLPreferenceCheckBox(this, ID_mPGSystemBarsNavigationBarLight, R.string.nbl_t, 0, pc.navigationBarLight, null));
+							}
                             mPreferencesPageSystemBars.add(mPGSystemBarsNavBarOverlap = new LLPreferenceCheckBox(this, ID_mPGSystemBarsNavBarOverlap, R.string.nbo_t, 0, pc.navigationBarOverlap, null));
                         }
                     }
@@ -1310,6 +1317,7 @@ public class Customize extends ResourceWrapperActivity implements
                         is_folder_page ? R.string.this_folder_feel_t
                                 : R.string.folder_feel_t, R.string.folder_feel_s));
                 mPreferencesPageFolderFeel = new ArrayList<LLPreference>();
+                mPreferencesPageFolderFeel.add(mPGFolderFeelOutsideTapClose = new LLPreferenceCheckBox(this, ID_mPGFolderFeelOutsideTapClose, R.string.otc_t, 0, fc.outsideTapClose, fc_def == null ? null : fc_def.outsideTapClose));
                 mPreferencesPageFolderFeel.add(mPGFolderFeelAutoClose = new LLPreferenceCheckBox(this, ID_mPGFolderFeelAutoClose, R.string.auto_close_t, R.string.auto_close_s, fc.autoClose, fc_def == null ? null : fc_def.autoClose));
                 if(!is_folder_page) {
                     mPreferencesPageFolderFeel.add(mPGFolderFeelCloseOther = new LLPreferenceCheckBox(this, ID_mPGFolderFeelCloseOther, R.string.cof_t, R.string.cof_s, fc.closeOther, fc_def == null ? null : fc_def.closeOther));
@@ -1636,7 +1644,9 @@ public class Customize extends ResourceWrapperActivity implements
             if(mPGSystemBarsStatusBarOverlap != null) pc.statusBarOverlap = mPGSystemBarsStatusBarOverlap.isChecked();
             if(mPGSystemBarsNavBarOverlap != null) pc.navigationBarOverlap = mPGSystemBarsNavBarOverlap.isChecked();
             if(mPGSystemBarsStatusBarColor != null) pc.statusBarColor = mPGSystemBarsStatusBarColor.getColor();
+            if(mPGSystemBarsStatusBarLight != null) pc.statusBarLight = mPGSystemBarsStatusBarLight.isChecked();
             if(mPGSystemBarsNavigationBarColor != null) pc.navigationBarColor = mPGSystemBarsNavigationBarColor.getColor();
+            if(mPGSystemBarsNavigationBarLight != null) pc.navigationBarLight = mPGSystemBarsNavigationBarLight.isChecked();
             pc.statusBarHide = mPGSystemBarsHideStatusBar.isChecked();
             if(is_app_drawer) {
                 pc.autoExit = mPGMiscAutoExit.isChecked();
@@ -1660,6 +1670,7 @@ public class Customize extends ResourceWrapperActivity implements
                 fc.animationIn = (FolderAnimation) mPGFolderLookAnimOpen.getValueEnum();
                 fc.animationOut = (FolderAnimation) mPGFolderLookAnimClose.getValueEnum();
                 fc.animFade = mPGFolderLookAnimFade.isChecked();
+                fc.outsideTapClose = mPGFolderFeelOutsideTapClose.isChecked();
                 fc.autoClose = mPGFolderFeelAutoClose.isChecked();
                 if(!is_folder) {
                     fc.closeOther = mPGFolderFeelCloseOther.isChecked();
@@ -2099,7 +2110,9 @@ public class Customize extends ResourceWrapperActivity implements
     private LLPreferenceCheckBox mPGSystemBarsStatusBarOverlap;
     private LLPreferenceCheckBox mPGSystemBarsNavBarOverlap;
     private LLPreferenceColor mPGSystemBarsStatusBarColor;
+    private LLPreferenceCheckBox mPGSystemBarsStatusBarLight;
     private LLPreferenceColor mPGSystemBarsNavigationBarColor;
+    private LLPreferenceCheckBox mPGSystemBarsNavigationBarLight;
 
     private LLPreferenceColor mPGAppDrawerABTextColor;
     private LLPreference mPGAppDrawerABBackground;
@@ -2163,6 +2176,7 @@ public class Customize extends ResourceWrapperActivity implements
 	private LLPreferenceEventAction mPageEventMenu;
 
 	private LLPreference mPGFolderFeel;
+	private LLPreferenceCheckBox mPGFolderFeelOutsideTapClose;
 	private LLPreferenceCheckBox mPGFolderFeelAutoClose;
 	private LLPreferenceCheckBox mPGFolderFeelCloseOther;
 	private LLPreferenceCheckBox mPGFolderFeelAnimGlitchFix;
@@ -2226,6 +2240,7 @@ public class Customize extends ResourceWrapperActivity implements
 	private static final int ID_mPGZoomScrollDisableDiagonal = 90;
 	private static final int ID_mPGZoomScrollEnablePinch = 91;
 	private static final int ID_mPGFolderFeel = 92;
+	private static final int ID_mPGFolderFeelOutsideTapClose = 515;
 	private static final int ID_mPGFolderFeelAutoClose = 93;
 	private static final int ID_mPGFolderFeelAnimGlitchFix = 94;
 	private static final int ID_mPGMisc = 95;
@@ -2276,7 +2291,9 @@ public class Customize extends ResourceWrapperActivity implements
     private static final int ID_mPGSystemBarsNavBarOverlap = 164;
     private static final int ID_mPGSystemBars = 165;
     private static final int ID_mPGSystemBarsStatusBarColor = 166;
+    private static final int ID_mPGSystemBarsStatusBarLight = 513;
     private static final int ID_mPGSystemBarsNavigationBarColor = 167;
+    private static final int ID_mPGSystemBarsNavigationBarLight = 514;
     private static final int ID_mGCAppStyle = 168;
     private static final int ID_mPGADCategories = 190;
     private static final int ID_mPGBackgroundScaleType = 191;

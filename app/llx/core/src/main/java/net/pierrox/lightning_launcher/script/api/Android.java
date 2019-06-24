@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 /**
  * The Android object gives access to some platform services.
- * @deprecated use the android.widget.Toast class instead
+ * @deprecated use the android.widget.Toast class directly or the {@link Lightning#toast(String)} alternative instead
  */
 public class Android {
 	

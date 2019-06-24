@@ -1,12 +1,13 @@
 package net.pierrox.lightning_launcher.script.api;
 
 import net.pierrox.lightning_launcher.engine.variable.Value;
-import net.pierrox.lightning_launcher.engine.variable.Variable;
 import net.pierrox.lightning_launcher.engine.variable.VariableManager;
 
 /**
  * A VariableSet object enumerates known variables with their type and value.
  * It is also the entry point to modify variable through
+ *
+ * An instance of this object can be retrieved with {@link Lightning#getVariables()}.
  */
 public class VariableSet {
 

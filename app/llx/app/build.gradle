@@ -42,16 +42,16 @@ if(project.hasProperty("signing.properties") && new File(project.property("signi
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 28
 
     defaultConfig {
-        versionCode 325
-        versionName "14.3-beta3 (ec5b56b)"
+        versionCode 328
+        versionName "14.3-beta7 (x)"
         buildConfigField "boolean", "IS_BETA", "true" //  change in core too
+        buildConfigField "boolean", "HAS_UEC", "false"
 
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 28
     }
 
 //    dexOptions {

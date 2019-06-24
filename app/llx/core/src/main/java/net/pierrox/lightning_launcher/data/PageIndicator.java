@@ -35,8 +35,8 @@ public class PageIndicator extends Item implements ShortcutConfigStylable {
     public int dotsMarginX = 10;
     public int dotsMarginY = 10;
     public int dotsOuterRadius = 8;
-    public int dotsInnerRadius = 6;
-    public int dotsOuterStrokeWidth = 0;
+    public int dotsInnerRadius = 5;
+    public int dotsOuterStrokeWidth = 2;
     public int dotsOuterColor = Color.WHITE;
     public int dotsInnerColor = Color.WHITE;
     public String rawFormat = "%1$+5.0f  %2$+5.0f | %3$6.3f";

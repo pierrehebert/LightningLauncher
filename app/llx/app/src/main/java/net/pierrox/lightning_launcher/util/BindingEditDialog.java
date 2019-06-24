@@ -374,7 +374,9 @@ public class BindingEditDialog extends AlertDialog implements DialogInterface.On
             } else {
                 name = mUserVariables.get(childPosition).name;
             }
-            mFormulaEditText.getText().replace(mFormulaEditText.getSelectionStart(), mFormulaEditText.getSelectionEnd(), "$"+name);
+            int selstart = mFormulaEditText.getSelectionStart();
+            int selend = mFormulaEditText.getSelectionEnd();
+            mFormulaEditText.getText().replace(Math.min(selstart,selend), Math.max(selstart, selend), "$"+name);
             dismiss();
             return true;
         }
