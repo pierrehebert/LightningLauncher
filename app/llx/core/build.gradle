@@ -8,7 +8,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        buildConfigField "boolean", "IS_BETA", "true"
+        buildConfigField "boolean", "IS_BETA", "false"
 
         ndk {
             moduleName "ll"

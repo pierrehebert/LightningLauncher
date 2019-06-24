@@ -45,9 +45,9 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        versionCode 328
-        versionName "14.3-beta7 (x)"
-        buildConfigField "boolean", "IS_BETA", "true" //  change in core too
+        versionCode 330
+        versionName "14.3 (6de3540)"
+        buildConfigField "boolean", "IS_BETA", "false" //  change in core too
         buildConfigField "boolean", "HAS_UEC", "false"
 
         minSdkVersion 14
@@ -111,24 +111,20 @@ android {
                 abiFilter "armeabi"
             }
         }
-        //mips64 {
-        //    versionCode Integer.parseInt("6" + defaultConfig.versionCode)
-        //    ndk {
-        //        abiFilter "mips64"
-        //    }
-        //}
-        //mips {
-        //    versionCode Integer.parseInt("5" + defaultConfig.versionCode)
-        //    ndk {
-        //        abiFilter "mips"
-        //    }
-        //}
-        //armv64 {
-        //    versionCode Integer.parseInt("3" + defaultConfig.versionCode)
-        //    ndk {
-        //        abiFilter "arm64-v8a"
-        //    }
-        //}
+        armv64 {
+            dimension "abi"
+            versionCode Integer.parseInt("3" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "arm64-v8a"
+            }
+        }
+        x86_64 {
+            dimension "abi"
+            versionCode Integer.parseInt("9" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "x86_64"
+            }
+        }
     }
 }
 
