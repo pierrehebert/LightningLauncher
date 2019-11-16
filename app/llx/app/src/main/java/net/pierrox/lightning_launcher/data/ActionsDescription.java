@@ -33,7 +33,8 @@ public final class ActionsDescription {
             new Action(GlobalConfig.ZOOM_TO_ORIGIN, R.string.an_z100, Action.CAT_NAVIGATION, Action.FLAG_TYPE_DESKTOP | Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),
             new Action(GlobalConfig.ZOOM_FULL_SCALE, R.string.an_zfs, Action.CAT_NAVIGATION, Action.FLAG_TYPE_DESKTOP | Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),
             new Action(GlobalConfig.SWITCH_FULL_SCALE_OR_ORIGIN, R.string.an_zt, Action.CAT_NAVIGATION, Action.FLAG_TYPE_DESKTOP | Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),
-            new Action(GlobalConfig.BACK, R.string.an_b, Action.CAT_NAVIGATION, Action.FLAG_TYPE_DESKTOP, Build.VERSION_CODES.FROYO),
+            new Action(GlobalConfig.BACK, R.string.an_b, Action.CAT_NAVIGATION, Action.FLAG_TYPE_DESKTOP |Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),
+            new Action(GlobalConfig.CLOSE_APP_DRAWER, R.string.close_app_drawer, Action.CAT_NAVIGATION, Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),
 
 
         new Action(GlobalConfig.CATEGORY, R.string.acd_m, Action.CAT_MENU_STATUS_BAR, Action.FLAG_TYPE_DESKTOP |Action.FLAG_TYPE_APP_DRAWER, Build.VERSION_CODES.FROYO),

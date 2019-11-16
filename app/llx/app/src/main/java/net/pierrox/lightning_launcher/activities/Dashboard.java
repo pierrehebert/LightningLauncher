@@ -7313,6 +7313,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                     mHierarchyScreen.show(null);
                     break;
 
+                case GlobalConfig.CLOSE_APP_DRAWER:
+                    finish();
+                    break;
+
                 default:
                     return super.runAction(engine, source, ea, il, itemView);
             }

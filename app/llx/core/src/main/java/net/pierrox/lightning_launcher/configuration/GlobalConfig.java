@@ -82,6 +82,7 @@ public class GlobalConfig extends JsonLoader {
     public static final int HIDE_FLOATING_DESKTOP=43;
     public static final int OPEN_HIERARCHY_SCREEN=44;
     public static final int SHOW_APP_SHORTCUTS=45;
+    public static final int CLOSE_APP_DRAWER=46;
     // update script EventHandler accordingly
 
     public int version=1;

@@ -1322,4 +1322,6 @@
     <string name="srch_regexp">Regexp</string>
     <string name="srch_case">Match case</string>
     <string name="sc_ind">Autoindentation</string>
+
+    <string name="close_app_drawer">Close app drawer</string>
 </resources>
