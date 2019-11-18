@@ -1758,6 +1758,10 @@ public class AppDrawerX extends Dashboard implements EditTextIme.OnEditTextImeLi
                     zoomToOrigin(getCurrentRootItemLayout());
                     break;
 
+                case GlobalConfig.CLOSE_APP_DRAWER:
+                    finish();
+                    break;
+
                 default:
                     return super.runAction(engine, source, ea, il, itemView);
             }
