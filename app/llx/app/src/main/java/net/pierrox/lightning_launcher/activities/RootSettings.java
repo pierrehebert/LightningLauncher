@@ -38,6 +38,7 @@ public class RootSettings extends PreferenceActivity implements OnPreferenceClic
     private static final String KEY_TEMPLATES_BROWSE="tb";
     private static final String KEY_TEMPLATES_APPLY="ta";
     private static final String KEY_UPGRADE="u";
+    private static final String KEY_EXTENSIONS="e";
 
     private static final int REQUEST_SELECT_TEMPLATE = 1;
 
@@ -63,6 +64,7 @@ public class RootSettings extends PreferenceActivity implements OnPreferenceClic
 		setupPreference(KEY_GLOBAL_CONFIG, R.string.general_t, R.string.general_s);
 		setupPreference(KEY_CURRENT_PAGE, R.string.dashboard_t, R.string.dashboard_s);
 		setupPreference(KEY_APP_DRAWER, R.string.app_drawer_t, R.string.app_drawer_s);
+		setupPreference(KEY_EXTENSIONS, R.string.extensions, R.string.extensions_s);
 
         final LLApp app = LLApp.get();
         setupPreference(KEY_CONFIGURE_PAGES, R.string.configure_pages_t, app.isFreeVersion() ? R.string.tr_br_s : R.string.configure_pages_s);
@@ -149,6 +151,9 @@ public class RootSettings extends PreferenceActivity implements OnPreferenceClic
             Intent filter=new Intent(LLTemplateAPI.INTENT_QUERY_TEMPLATE);
             i.putExtra(Intent.EXTRA_INTENT, filter);
             startActivityForResult(i, REQUEST_SELECT_TEMPLATE);
+		} else if (KEY_EXTENSIONS.equals(key)) {
+			Intent i = new Intent(this, Extensions.class);
+			startActivity(i);
 		} else if(!KEY_RATE.equals(key) && !KEY_COMMUNITY.equals(key)) {
 			Intent intent=new Intent(this, Customize.class);
             ContainerPath path = null;

@@ -1322,4 +1322,9 @@
     <string name="srch_regexp">Regexp</string>
     <string name="srch_case">Match case</string>
     <string name="sc_ind">Autoindentation</string>
+
+    <string name="extensions">Extensions</string>
+    <string name="extensions_s">App Interoperability</string>
+    <string name="sesame">Sesame</string>
+    <string name="sesame_s">Enable sesame integration</string>
 </resources>

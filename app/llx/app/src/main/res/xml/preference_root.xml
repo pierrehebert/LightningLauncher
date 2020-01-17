@@ -17,6 +17,9 @@
         <Preference
             android:key="p"/>
 
+		<Preference
+				android:key="e"/>
+
 
 	</PreferenceCategory>
 

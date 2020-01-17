@@ -4079,7 +4079,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     @TargetApi(Build.VERSION_CODES.N_MR1)
     private void showAppShortcuts(ItemView itemView) {
         LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-        if(!launcherApps.hasShortcutHostPermission()) {
+        if(!SesameFrontend.isConnected() && !launcherApps.hasShortcutHostPermission()) {
             showDialog(DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION);
             return;
         }

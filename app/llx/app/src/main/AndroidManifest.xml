@@ -179,6 +179,12 @@
             android:label="@string/customize_ll"
     	    android:theme="@style/AppLightTranslucent" />
 
+        <activity
+                android:name="net.pierrox.lightning_launcher.activities.Extensions"
+                android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:excludeFromRecents="true"
+                android:label="@string/extensions"/>
+
 		<activity
             android:name="net.pierrox.lightning_launcher.activities.ScriptEditor"
             android:label="@string/sc_editor"
