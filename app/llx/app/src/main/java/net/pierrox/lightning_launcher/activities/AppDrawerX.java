@@ -41,6 +41,7 @@ import android.widget.ViewAnimator;
 
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.api.ScreenIdentity;
+import net.pierrox.lightning_launcher.appshortcuts.ShortcutDetails;
 import net.pierrox.lightning_launcher.configuration.GlobalConfig;
 import net.pierrox.lightning_launcher.configuration.ItemConfig;
 import net.pierrox.lightning_launcher.configuration.PageConfig;
@@ -331,7 +332,7 @@ public class AppDrawerX extends Dashboard implements EditTextIme.OnEditTextImeLi
     }
 
     @Override
-    protected void openBubble(int mode, ItemLayout itemLayout, ItemView itemView, Rect focus, List shortcuts) {
+    protected void openBubble(int mode, ItemLayout itemLayout, ItemView itemView, Rect focus, List<ShortcutDetails> shortcuts) {
         mItemLayout.cancelDelayedItemViewLoad();
         super.openBubble(mode, itemLayout, itemView, focus, shortcuts);
     }
@@ -1118,7 +1119,7 @@ public class AppDrawerX extends Dashboard implements EditTextIme.OnEditTextImeLi
     }
 
     @Override
-    protected void configureBubbleForItem(int mode, ItemView itemView, List shortcuts) {
+    protected void configureBubbleForItem(int mode, ItemView itemView, List<ShortcutDetails> shortcuts) {
         Item item = itemView.getItem();
         if(mode == BUBBLE_MODE_ITEM_EM) {
             boolean is_folder = item instanceof Folder;

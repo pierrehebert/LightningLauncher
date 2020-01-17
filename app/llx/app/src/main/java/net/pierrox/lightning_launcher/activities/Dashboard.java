@@ -2,123 +2,45 @@ package net.pierrox.lightning_launcher.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.ActivityManager;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.app.WallpaperManager;
+import android.app.*;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
-import android.content.ActivityNotFoundException;
-import android.content.BroadcastReceiver;
-import android.content.ClipData;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.ActivityInfo;
-import android.content.pm.LauncherActivityInfo;
-import android.content.pm.LauncherApps;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
+import android.content.*;
+import android.content.pm.*;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
-import android.content.pm.ShortcutInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.PixelFormat;
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
+import android.graphics.*;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Parcelable;
 import android.os.Process;
-import android.os.SystemClock;
-import android.os.UserHandle;
+import android.os.*;
 import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Pair;
 import android.util.SparseArray;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.HapticFeedbackConstants;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
+import android.view.*;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewAnimator;
-
+import android.view.animation.*;
+import android.widget.*;
+import androidx.annotation.Nullable;
 import com.boombuler.system.appwidgetpicker.AppWidgetPickerActivity;
 import com.google.android.hotword.client.HotwordServiceClient;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
-
 import net.pierrox.lightning_launcher.API;
 import net.pierrox.lightning_launcher.LLApp;
 import net.pierrox.lightning_launcher.Version;
 import net.pierrox.lightning_launcher.api.ScreenIdentity;
-import net.pierrox.lightning_launcher.configuration.DynamicTextConfig;
-import net.pierrox.lightning_launcher.configuration.FolderConfig;
-import net.pierrox.lightning_launcher.configuration.GlobalConfig;
-import net.pierrox.lightning_launcher.configuration.ItemConfig;
-import net.pierrox.lightning_launcher.configuration.PageConfig;
-import net.pierrox.lightning_launcher.configuration.ShortcutConfig;
-import net.pierrox.lightning_launcher.configuration.ShortcutConfigStylable;
-import net.pierrox.lightning_launcher.configuration.SystemConfig;
-import net.pierrox.lightning_launcher.data.Action;
-import net.pierrox.lightning_launcher.data.Box;
-import net.pierrox.lightning_launcher.data.ContainerPath;
-import net.pierrox.lightning_launcher.data.CustomView;
-import net.pierrox.lightning_launcher.data.DynamicText;
-import net.pierrox.lightning_launcher.data.EmbeddedFolder;
+import net.pierrox.lightning_launcher.appshortcuts.LauncherAppsShortcutDetails;
+import net.pierrox.lightning_launcher.appshortcuts.SesameShortcutDetails;
+import net.pierrox.lightning_launcher.appshortcuts.ShortcutDetails;
+import net.pierrox.lightning_launcher.configuration.*;
 import net.pierrox.lightning_launcher.data.Error;
-import net.pierrox.lightning_launcher.data.EventAction;
-import net.pierrox.lightning_launcher.data.FileUtils;
-import net.pierrox.lightning_launcher.data.Folder;
-import net.pierrox.lightning_launcher.data.Item;
-import net.pierrox.lightning_launcher.data.JsonLoader;
-import net.pierrox.lightning_launcher.data.LightningIntent;
-import net.pierrox.lightning_launcher.data.Page;
-import net.pierrox.lightning_launcher.data.PageIndicator;
-import net.pierrox.lightning_launcher.data.SavedItemGeometry;
-import net.pierrox.lightning_launcher.data.SelectionState;
-import net.pierrox.lightning_launcher.data.Shortcut;
-import net.pierrox.lightning_launcher.data.StopPoint;
-import net.pierrox.lightning_launcher.data.UndoStack;
-import net.pierrox.lightning_launcher.data.Unlocker;
-import net.pierrox.lightning_launcher.data.Utils;
-import net.pierrox.lightning_launcher.data.Widget;
+import net.pierrox.lightning_launcher.data.*;
 import net.pierrox.lightning_launcher.engine.LightningEngine;
 import net.pierrox.lightning_launcher.engine.Screen;
 import net.pierrox.lightning_launcher.script.Script;
@@ -128,24 +50,14 @@ import net.pierrox.lightning_launcher.script.api.ImageBitmap;
 import net.pierrox.lightning_launcher.util.AddItemDialog;
 import net.pierrox.lightning_launcher.util.PhoneUtils;
 import net.pierrox.lightning_launcher.util.Setup;
-import net.pierrox.lightning_launcher.views.BubbleLayout;
-import net.pierrox.lightning_launcher.views.CustomizeItemView;
-import net.pierrox.lightning_launcher.views.EditBarHiderView;
-import net.pierrox.lightning_launcher.views.FolderView;
-import net.pierrox.lightning_launcher.views.HandleView;
+import net.pierrox.lightning_launcher.views.*;
 import net.pierrox.lightning_launcher.views.HandleView.Handle;
-import net.pierrox.lightning_launcher.views.HierarchyScreen;
-import net.pierrox.lightning_launcher.views.ItemLayout;
-import net.pierrox.lightning_launcher.views.MyViewPager;
-import net.pierrox.lightning_launcher.views.SnappingContext;
-import net.pierrox.lightning_launcher.views.TransformLayout;
 import net.pierrox.lightning_launcher.views.item.EmbeddedFolderView;
 import net.pierrox.lightning_launcher.views.item.ItemView;
 import net.pierrox.lightning_launcher.views.item.StopPointView;
 import net.pierrox.lightning_launcher.views.item.WidgetView;
 import net.pierrox.lightning_launcher_extreme.BuildConfig;
 import net.pierrox.lightning_launcher_extreme.R;
-
 import ninja.sesame.lib.bridge.v1.SesameFrontend;
 import ninja.sesame.lib.bridge.v1.SesameShortcut;
 import org.mozilla.javascript.Function;
@@ -156,12 +68,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 
 
@@ -174,7 +81,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     private static final int DIALOG_IMPORT_LL=204;
     private static final int DIALOG_STOP_POINT=206;
     private static final int DIALOG_WRAP=207;
-    private static final int DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION =208;
+    public static final int DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION =208;
 
 	private static final String SIS_NAVIGATION="a";
 	private static final String SIS_ALLOCATED_APP_WIDGET_ID="b";
@@ -196,7 +103,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 //	private static final int EDIT_BACKGROUND_COLOR_MOVE_OK=0xa000a000;
 //	private static final int EDIT_BACKGROUND_COLOR_MOVE_KO=0xa0a00000;
 //	private static final int EDIT_BACKGROUND_COLOR_FOLDER=0xa0008000;
-	
+
 	private static final int REQUEST_SELECT_APP_FOR_ADD = 0;
 	private static final int REQUEST_SELECT_SHORTCUT_FOR_ADD1 = 1;
 	private static final int REQUEST_SELECT_APP_WIDGET_FOR_ADD = 3;
@@ -284,13 +191,13 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     protected Stack<Integer> mNavigationStack;
 
     private Dialog mDialog;
-    
+
 	private long mOnPauseDate;
 	private boolean mNewIntent;
 	private boolean mEatNextHome;
 
 //	private boolean mIsOptionsMenuOpened;
-	
+
 	private Animation mFadeInAnim;
 	private Animation mFadeOutAnim;
 	private AnimationSet mSlideHLeftInAnim;
@@ -306,12 +213,12 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
 
     private Item mCopyStyleFromItem;
-    
+
     private boolean mItemSwipeCaught=true;
-    
+
     private int mAllocatedAppWidgetId;
 //    private int mReplacedAppWidgetId=-1;
-    
+
     protected boolean mEditMode;
 
     private Page mEditPage;
@@ -741,13 +648,28 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 	}
 
     @Override
+    public void startActivity(Intent intent, @Nullable Bundle options) {
+        beforeStartActivity(intent);
+        super.startActivity(intent, options);
+        afterStartActivity(intent);
+    }
+
+    @Override
     public void startActivity(Intent intent) {
+        beforeStartActivity(intent);
+        super.startActivity(intent);
+        afterStartActivity(intent);
+    }
+
+    private void beforeStartActivity(Intent intent) {
         mPausedBecauseOfLaunch = true;
         if("ninja.sesame.app.edge".equals(intent.getPackage()) ||
-				(intent.getComponent() != null) && "ninja.sesame.app.edge".equals(intent.getComponent().getPackageName())) {
-        	SesameFrontend.addPackageAuth(this, intent);
-		}
-        super.startActivity(intent);
+                (intent.getComponent() != null) && "ninja.sesame.app.edge".equals(intent.getComponent().getPackageName())) {
+            SesameFrontend.addPackageAuth(this, intent);
+        }
+    }
+
+    private void afterStartActivity(Intent intent) {
         applyLaunchAnimation(mLastLaunchAnimation, true);
     }
 
@@ -3644,14 +3566,14 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         openBubble(mode, itemLayout, null, focus, null);
     }
 
-    private void openBubbleAppShortcuts(ItemView itemView, List shortcuts) {
+    private void openBubbleAppShortcuts(ItemView itemView, List<ShortcutDetails> shortcuts) {
         openBubble(BUBBLE_MODE_APP_SHORTCUTS, itemView.getParentItemLayout(), itemView, mScreen.computeItemViewBounds(itemView), shortcuts);
     }
 
     /**
      * Do not use directly, use the other versions of openBubble
      */
-    protected void openBubble(int mode, ItemLayout itemLayout, ItemView itemView, Rect focus, List shortcuts) {
+    protected void openBubble(int mode, ItemLayout itemLayout, ItemView itemView, Rect focus, List<ShortcutDetails> shortcuts) {
         if(mBubble == null) {
             mBubble=(BubbleLayout) getLayoutInflater().inflate(R.layout.bubble, null);
             mEditControlsView.addView(mBubble);
@@ -3767,52 +3689,36 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     }
 
     @TargetApi(Build.VERSION_CODES.N_MR1)
-    protected void addAppShortcutBubbleItems(List shortcuts) {
-        for (Object shortcut : shortcuts) {
+    protected void addAppShortcutBubbleItems(List<ShortcutDetails> shortcuts) {
+        for (ShortcutDetails shortcut : shortcuts) {
             addAppShortcutBubbleItem(shortcut);
         }
     }
 
     @TargetApi(Build.VERSION_CODES.N_MR1)
-    private void addAppShortcutBubbleItem(Object shortcutObject) {
-    	if(shortcutObject instanceof ShortcutInfo) {
-			ShortcutInfo shortcut = (ShortcutInfo) shortcutObject;
-			final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-			final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
-			final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcut, Utils.getLauncherIconDensity());
-			Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
-			ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
-			iconView.setImageBitmap(icon);
+    private void addAppShortcutBubbleItem(ShortcutDetails shortcut) {
+        final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
+        final Drawable iconDrawable = shortcut.getIcon(this);
+        Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+        ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
+        iconView.setImageBitmap(icon);
 
+        ((TextView) view.findViewById(android.R.id.text1)).setText(shortcut.getLabel());
+        view.findViewById(android.R.id.text2).setVisibility(View.GONE);
+        Drawable background = getDrawable(R.drawable.bubble_item_bg);
+        view.setBackground(background);
 
-			CharSequence label = shortcut.getLongLabel();
-			if (label == null || label.length() == 0) {
-				label = shortcut.getShortLabel();
-			}
-			((TextView) view.findViewById(android.R.id.text1)).setText(label);
-			view.findViewById(android.R.id.text2).setVisibility(View.GONE);
-			Drawable background = getDrawable(R.drawable.bubble_item_bg);
-			view.setBackground(background);
-
-        if(mAppShortcutClickListener == null) {
+        if (mAppShortcutClickListener == null) {
             mAppShortcutClickListener = new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     closeBubble();
-
-                    if(launcherApps.hasShortcutHostPermission()) {
-                        ShortcutInfo shortcutInfo = (ShortcutInfo) view.getTag();
-                        Rect bounds = new Rect();
-                        view.getHitRect(bounds);
-                        launcherApps.startShortcut(shortcutInfo, bounds, null);
-                    } else {
-                        showDialog(DIALOG_LAUNCHER_APPS_NO_HOST_PERMISSION);
-                    }
+                    ((ShortcutDetails) view.getTag()).launch(view);
                 }
             };
         }
 
-        if(mAppShortcutLongClickListener == null) {
+        if (mAppShortcutLongClickListener == null) {
             mAppShortcutLongClickListener = new OnLongClickListener() {
                 @TargetApi(Build.VERSION_CODES.N_MR1)
                 @Override
@@ -3821,10 +3727,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
                     view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
 
-                    ShortcutInfo shortcutInfo = (ShortcutInfo) view.getTag();
-                    ClipData clipData = ClipData.newPlainText("id", shortcutInfo.getId());
+                    ShortcutDetails shortcut = (ShortcutDetails) view.getTag();
+                    ClipData clipData = ClipData.newPlainText("id", shortcut.getId());
                     View shadowView = view.findViewById(android.R.id.icon);
-                    view.startDragAndDrop(clipData, new View.DragShadowBuilder(shadowView), shortcutInfo, 0);
+                    view.startDragAndDrop(clipData, new View.DragShadowBuilder(shadowView), shortcut, 0);
                     return true;
                 }
             };
@@ -3834,57 +3740,6 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         view.setOnLongClickListener(mAppShortcutLongClickListener);
         view.setTag(shortcut);
         mBubbleContent.addView(view);
-		} else if(shortcutObject instanceof SesameShortcut) {
-			SesameShortcut shortcut = (SesameShortcut) shortcutObject;
-			final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
-			final Drawable iconDrawable = Icon.createWithContentUri(shortcut.iconUri).loadDrawable(this);
-			Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
-			ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
-			iconView.setImageBitmap(icon);
-
-
-			CharSequence label = shortcut.plainLabel;
-			((TextView) view.findViewById(android.R.id.text1)).setText(label);
-			view.findViewById(android.R.id.text2).setVisibility(View.GONE);
-			Drawable background = getDrawable(R.drawable.bubble_item_bg);
-			view.setBackground(background);
-
-			if(mAppShortcutClickListener == null) {
-				mAppShortcutClickListener = new OnClickListener() {
-					@Override
-					public void onClick(View view) {
-						closeBubble();
-							SesameShortcut shortcutInfo = (SesameShortcut) view.getTag();
-							Rect bounds = new Rect();
-							view.getHitRect(bounds);
-							SesameFrontend.runAction(Dashboard.this, shortcutInfo.actions[0]);
-					}
-				};
-			}
-
-			if(mAppShortcutLongClickListener == null) {
-				mAppShortcutLongClickListener = new OnLongClickListener() {
-					@TargetApi(Build.VERSION_CODES.N_MR1)
-					@Override
-					public boolean onLongClick(View view) {
-						closeBubble();
-
-						view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
-
-						SesameShortcut shortcutInfo = (SesameShortcut) view.getTag();
-						ClipData clipData = ClipData.newPlainText("id", shortcutInfo.id);
-						View shadowView = view.findViewById(android.R.id.icon);
-						view.startDragAndDrop(clipData, new View.DragShadowBuilder(shadowView), shortcutInfo, 0);
-						return true;
-					}
-				};
-			}
-
-			view.setOnClickListener(mAppShortcutClickListener);
-			view.setOnLongClickListener(mAppShortcutLongClickListener);
-			view.setTag(shortcut);
-			mBubbleContent.addView(view);
-		}
     }
 
     private View.OnClickListener mAppShortcutClickListener;
@@ -4053,7 +3908,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         return true;
     }
 
-    protected void configureBubbleForItem(final int mode, final ItemView itemView, List shortcuts) {
+    protected void configureBubbleForItem(final int mode, final ItemView itemView, List<ShortcutDetails> shortcuts) {
         Item item = itemView.getItem();
         Class<?> item_class = item.getClass();
 
@@ -4245,16 +4100,26 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             }
         }
 
-        List<?> shortcuts = null;
-        if(activity != null) {
-        	if(SesameFrontend.isConnected()) {
-				shortcuts = SesameFrontend.getRecentAppShortcuts(activity.getPackageName(), true, 5);
-			} else {
-				LauncherApps.ShortcutQuery query = new LauncherApps.ShortcutQuery();
-				query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC | LauncherApps.ShortcutQuery.FLAG_MATCH_PINNED);
-				query.setActivity(activity);
-				shortcuts = launcherApps.getShortcuts(query, userHandle);
-			}
+        List<ShortcutDetails> shortcuts = null;
+        if (activity != null) {
+            if (SesameFrontend.isConnected()) {
+                List<SesameShortcut> sesameShortcuts = SesameFrontend.getRecentAppShortcuts(activity.getPackageName(), true, 5);
+                shortcuts = new ArrayList<>(sesameShortcuts.size());
+                for (SesameShortcut sesameShortcut : sesameShortcuts) {
+                    shortcuts.add(new SesameShortcutDetails(sesameShortcut));
+                }
+            } else {
+                LauncherApps.ShortcutQuery query = new LauncherApps.ShortcutQuery();
+                query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC | LauncherApps.ShortcutQuery.FLAG_MATCH_PINNED);
+                query.setActivity(activity);
+                List<ShortcutInfo> appsShortcuts = launcherApps.getShortcuts(query, userHandle);
+                if (appsShortcuts != null) {
+                    shortcuts = new ArrayList<>(appsShortcuts.size());
+                    for (ShortcutInfo sesameShortcut : appsShortcuts) {
+                        shortcuts.add(new LauncherAppsShortcutDetails(sesameShortcut));
+                    }
+                }
+            }
         }
 
         if(shortcuts == null || shortcuts.size() == 0) {
@@ -4277,17 +4142,17 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 			mTempRect.top=(int) ((mTempRect.top*ch+dy+ch/2)/ch);
 			if(mTempRect.top>=mTempRect.bottom) mTempRect.top=mTempRect.bottom-1;
 			break;
-			
+
 		case RIGHT:
 			mTempRect.right=(int) ((mTempRect.right*cw+dx+cw/2)/cw);
 			if(mTempRect.right<=mTempRect.left) mTempRect.right=mTempRect.left+1;
 			break;
-			
+
 		case BOTTOM:
 			mTempRect.bottom=(int) ((mTempRect.bottom*ch+dy+ch/2)/ch);
 			if(mTempRect.bottom<=mTempRect.top) mTempRect.bottom=mTempRect.top+1;
 			break;
-			
+
 		case LEFT:
 			mTempRect.left=(int) ((mTempRect.left*cw+dx+cw/2)/cw);
 			if(mTempRect.left>=mTempRect.right) mTempRect.left=mTempRect.right-1;
@@ -4295,7 +4160,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 		}
         item.getCell().set(mTempRect);
 	}
-	
+
 	private float moveHandleFree(ItemView itemView, float dx, float dy, boolean master, float angle_or_scale) {
         Item item = itemView.getItem();
         SavedItemGeometry tig = mTrackedItemsGeometry.get(item.getId());
@@ -4311,17 +4176,17 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 				if(master) scale=(tracked_item_height -dy)/ tracked_item_height;
 				m.postScale(1, scale, bounds.left, bounds.bottom);
 				break;
-				
+
 			case RIGHT:
                 if(master) scale=(tracked_item_width +dx)/tracked_item_width;
 				m.postScale(scale, 1, bounds.left, bounds.top);
 				break;
-				
+
 			case BOTTOM:
                 if(master) scale=(tracked_item_height +dy)/ tracked_item_height;
 				m.postScale(1, scale, bounds.left, bounds.top);
 				break;
-				
+
 			case LEFT:
                 if(master) scale=(tracked_item_width -dx)/tracked_item_width;
 				m.postScale(scale, 1, bounds.right, bounds.top);
@@ -4467,29 +4332,29 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 			int width=tig.transformedViewWidth;
 			int height=tig.transformedViewHeight;
 			switch(mTrackedHandle) {
-			case TOP: 
+			case TOP:
 				height-=dy;
 				if(height<0) height=0;
 				ty=tig.transformedViewHeight-height;
 				break;
-				
-			case RIGHT: 
+
+			case RIGHT:
 				width+=dx;
 				if(width<0) width=0;
 				break;
-				
-			case BOTTOM: 
+
+			case BOTTOM:
 				height+=dy;
 				if(height<0) height=0;
 				break;
-				
+
 			case LEFT:
 				width-=dx;
 				if(width<0) width=0;
 				tx=tig.transformedViewWidth-width;
 				break;
 			}
-			
+
 			m.postTranslate(tx, ty);
             item.setViewWidth(width);
             item.setViewHeight(height);
@@ -4521,7 +4386,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
                 mSnappingContext.applySnaps(m);
             }
-			
+
 
 			tl.requestLayout();
 		}
@@ -4608,7 +4473,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
         stopTracking(droppedItemView);
 	}
-	
+
 	private void getItemViewCell(ItemView itemView, float dx, float dy, int[] coords) {
         ItemLayout il = itemView.getParentItemLayout();
         Item item = itemView.getItem();
@@ -6558,26 +6423,13 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
         @Override
         public void onItemLayoutAppShortcutDropped(ItemLayout itemLayout, Object shortcutInfoObject, float x, float y) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1 && shortcutInfoObject instanceof ShortcutInfo) {
-                ShortcutInfo shortcutInfo = (ShortcutInfo) shortcutInfoObject;
-                CharSequence label = shortcutInfo.getLongLabel();
-                if(label == null || label.length() == 0) {
-                    label = shortcutInfo.getShortLabel();
-                }
+            if (shortcutInfoObject instanceof ShortcutDetails) {
+                ShortcutDetails shortcut = (ShortcutDetails) shortcutInfoObject;
                 LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-                Drawable drawable = launcherApps.getShortcutIconDrawable(shortcutInfo, Utils.getLauncherIconDensity());
+                Drawable drawable = shortcut.getIcon(Dashboard.this);
                 Bitmap icon = Utils.createBitmapFromDrawable(drawable);
-                Intent intent = new Intent(Shortcut.INTENT_ACTION_APP_SHORTCUT);
-                intent.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_ID, shortcutInfo.getId());
-                intent.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
-                intent.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
-                Utils.addShortcut(label.toString(), icon, intent, itemLayout.getPage(), x, y, 1, true);
-            } else if (shortcutInfoObject instanceof SesameShortcut) {
-            	SesameShortcut shortcut = (SesameShortcut) shortcutInfoObject;
-				Drawable drawable = Icon.createWithContentUri(shortcut.iconUri).loadDrawable(Dashboard.this);
-				Bitmap icon = Utils.createBitmapFromDrawable(drawable);
-            	Utils.addShortcut(shortcut.htmlLabel, icon, shortcut.actions[0].intent, itemLayout.getPage(), x,y, 1, true);
-			}
+                Utils.addShortcut(shortcut.getLabel().toString(), icon, shortcut.getIntent(), itemLayout.getPage(), x, y, 1, true);
+            }
         }
 
         @Override
