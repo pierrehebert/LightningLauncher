@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="net.pierrox.lightning_launcher_extreme"
-      android:sharedUserId="net.pierrox.lightning_launcher" >
+          xmlns:tools="http://schemas.android.com/tools"
+          package="net.pierrox.lightning_launcher_extreme"
+          android:sharedUserId="net.pierrox.lightning_launcher">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.SET_WALLPAPER"/>
@@ -27,6 +28,9 @@
 
     <!-- Tasker -->
     <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
+
+    <!-- Sesame -->
+    <uses-sdk tools:overrideLibrary="ninja.sesame.lib.bridge.v1"/>
 
     <permission
             android:name="net.pierrox.lightning_launcher.USE_SCRIPT_SERVICE"

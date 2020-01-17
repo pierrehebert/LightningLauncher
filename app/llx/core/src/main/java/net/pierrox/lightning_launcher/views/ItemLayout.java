@@ -1040,7 +1040,7 @@ public class ItemLayout extends ViewGroup {
 
             case DragEvent.ACTION_DROP:
                 mAutoScrolling = false;
-                mScreen.onItemLayoutAppShortcutDropped(this, (ShortcutInfo) event.getLocalState(), event.getX(), event.getY());
+                mScreen.onItemLayoutAppShortcutDropped(this, event.getLocalState(), event.getX(), event.getY());
                 return true;
         }
         return super.onDragEvent(event);

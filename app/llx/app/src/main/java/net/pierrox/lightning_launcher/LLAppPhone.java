@@ -19,6 +19,7 @@ import net.pierrox.lightning_launcher.prefs.LLPreference;
 import net.pierrox.lightning_launcher.script.Script;
 import net.pierrox.lightning_launcher.util.EmptyService;
 import net.pierrox.lightning_launcher.util.MPReceiver;
+import ninja.sesame.lib.bridge.v1.SesameFrontend;
 
 public abstract class LLAppPhone extends LLApp {
 
@@ -44,6 +45,9 @@ public abstract class LLAppPhone extends LLApp {
             intent_filter.addDataScheme("package");
 
             registerReceiver(mMPReceiver, intent_filter);
+        }
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            SesameFrontend.init(this, null);
         }
     }
 

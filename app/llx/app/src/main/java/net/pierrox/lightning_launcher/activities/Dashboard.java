@@ -37,6 +37,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -145,6 +146,8 @@ import net.pierrox.lightning_launcher.views.item.WidgetView;
 import net.pierrox.lightning_launcher_extreme.BuildConfig;
 import net.pierrox.lightning_launcher_extreme.R;
 
+import ninja.sesame.lib.bridge.v1.SesameFrontend;
+import ninja.sesame.lib.bridge.v1.SesameShortcut;
 import org.mozilla.javascript.Function;
 
 import java.io.File;
@@ -740,6 +743,10 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
     @Override
     public void startActivity(Intent intent) {
         mPausedBecauseOfLaunch = true;
+        if("ninja.sesame.app.edge".equals(intent.getPackage()) ||
+				(intent.getComponent() != null) && "ninja.sesame.app.edge".equals(intent.getComponent().getPackageName())) {
+        	SesameFrontend.addPackageAuth(this, intent);
+		}
         super.startActivity(intent);
         applyLaunchAnimation(mLastLaunchAnimation, true);
     }
@@ -3768,23 +3775,24 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
     @TargetApi(Build.VERSION_CODES.N_MR1)
     private void addAppShortcutBubbleItem(Object shortcutObject) {
-        ShortcutInfo shortcut = (ShortcutInfo) shortcutObject;
-        final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
-        final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
-        final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcut, Utils.getLauncherIconDensity());
-        Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
-        ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
-        iconView.setImageBitmap(icon);
+    	if(shortcutObject instanceof ShortcutInfo) {
+			ShortcutInfo shortcut = (ShortcutInfo) shortcutObject;
+			final LauncherApps launcherApps = (LauncherApps) getSystemService(LAUNCHER_APPS_SERVICE);
+			final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
+			final Drawable iconDrawable = launcherApps.getShortcutIconDrawable(shortcut, Utils.getLauncherIconDensity());
+			Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+			ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
+			iconView.setImageBitmap(icon);
 
 
-        CharSequence label = shortcut.getLongLabel();
-        if(label == null || label.length() == 0) {
-            label = shortcut.getShortLabel();
-        }
-        ((TextView)view.findViewById(android.R.id.text1)).setText(label);
-        view.findViewById(android.R.id.text2).setVisibility(View.GONE);
-        Drawable background = getDrawable(R.drawable.bubble_item_bg);
-        view.setBackground(background);
+			CharSequence label = shortcut.getLongLabel();
+			if (label == null || label.length() == 0) {
+				label = shortcut.getShortLabel();
+			}
+			((TextView) view.findViewById(android.R.id.text1)).setText(label);
+			view.findViewById(android.R.id.text2).setVisibility(View.GONE);
+			Drawable background = getDrawable(R.drawable.bubble_item_bg);
+			view.setBackground(background);
 
         if(mAppShortcutClickListener == null) {
             mAppShortcutClickListener = new OnClickListener() {
@@ -3826,6 +3834,57 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
         view.setOnLongClickListener(mAppShortcutLongClickListener);
         view.setTag(shortcut);
         mBubbleContent.addView(view);
+		} else if(shortcutObject instanceof SesameShortcut) {
+			SesameShortcut shortcut = (SesameShortcut) shortcutObject;
+			final View view = getLayoutInflater().inflate(R.layout.two_lines_list_item, null);
+			final Drawable iconDrawable = Icon.createWithContentUri(shortcut.iconUri).loadDrawable(this);
+			Bitmap icon = Utils.createBitmapFromDrawable(iconDrawable);
+			ImageView iconView = (ImageView) view.findViewById(android.R.id.icon);
+			iconView.setImageBitmap(icon);
+
+
+			CharSequence label = shortcut.plainLabel;
+			((TextView) view.findViewById(android.R.id.text1)).setText(label);
+			view.findViewById(android.R.id.text2).setVisibility(View.GONE);
+			Drawable background = getDrawable(R.drawable.bubble_item_bg);
+			view.setBackground(background);
+
+			if(mAppShortcutClickListener == null) {
+				mAppShortcutClickListener = new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						closeBubble();
+							SesameShortcut shortcutInfo = (SesameShortcut) view.getTag();
+							Rect bounds = new Rect();
+							view.getHitRect(bounds);
+							SesameFrontend.runAction(Dashboard.this, shortcutInfo.actions[0]);
+					}
+				};
+			}
+
+			if(mAppShortcutLongClickListener == null) {
+				mAppShortcutLongClickListener = new OnLongClickListener() {
+					@TargetApi(Build.VERSION_CODES.N_MR1)
+					@Override
+					public boolean onLongClick(View view) {
+						closeBubble();
+
+						view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+
+						SesameShortcut shortcutInfo = (SesameShortcut) view.getTag();
+						ClipData clipData = ClipData.newPlainText("id", shortcutInfo.id);
+						View shadowView = view.findViewById(android.R.id.icon);
+						view.startDragAndDrop(clipData, new View.DragShadowBuilder(shadowView), shortcutInfo, 0);
+						return true;
+					}
+				};
+			}
+
+			view.setOnClickListener(mAppShortcutClickListener);
+			view.setOnLongClickListener(mAppShortcutLongClickListener);
+			view.setTag(shortcut);
+			mBubbleContent.addView(view);
+		}
     }
 
     private View.OnClickListener mAppShortcutClickListener;
@@ -4186,12 +4245,16 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
             }
         }
 
-        List<ShortcutInfo> shortcuts = null;
+        List<?> shortcuts = null;
         if(activity != null) {
-            LauncherApps.ShortcutQuery query = new LauncherApps.ShortcutQuery();
-            query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC | LauncherApps.ShortcutQuery.FLAG_MATCH_PINNED);
-            query.setActivity(activity);
-            shortcuts = launcherApps.getShortcuts(query, userHandle);
+        	if(SesameFrontend.isConnected()) {
+				shortcuts = SesameFrontend.getRecentAppShortcuts(activity.getPackageName(), true, 5);
+			} else {
+				LauncherApps.ShortcutQuery query = new LauncherApps.ShortcutQuery();
+				query.setQueryFlags(LauncherApps.ShortcutQuery.FLAG_MATCH_MANIFEST | LauncherApps.ShortcutQuery.FLAG_MATCH_DYNAMIC | LauncherApps.ShortcutQuery.FLAG_MATCH_PINNED);
+				query.setActivity(activity);
+				shortcuts = launcherApps.getShortcuts(query, userHandle);
+			}
         }
 
         if(shortcuts == null || shortcuts.size() == 0) {
@@ -6495,7 +6558,7 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
 
         @Override
         public void onItemLayoutAppShortcutDropped(ItemLayout itemLayout, Object shortcutInfoObject, float x, float y) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1 && shortcutInfoObject instanceof ShortcutInfo) {
                 ShortcutInfo shortcutInfo = (ShortcutInfo) shortcutInfoObject;
                 CharSequence label = shortcutInfo.getLongLabel();
                 if(label == null || label.length() == 0) {
@@ -6509,7 +6572,12 @@ public class Dashboard extends ResourceWrapperActivity implements OnLongClickLis
                 intent.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_PKG, shortcutInfo.getPackage());
                 intent.putExtra(Shortcut.INTENT_EXTRA_APP_SHORTCUT_DISABLED_MSG, shortcutInfo.getDisabledMessage());
                 Utils.addShortcut(label.toString(), icon, intent, itemLayout.getPage(), x, y, 1, true);
-            }
+            } else if (shortcutInfoObject instanceof SesameShortcut) {
+            	SesameShortcut shortcut = (SesameShortcut) shortcutInfoObject;
+				Drawable drawable = Icon.createWithContentUri(shortcut.iconUri).loadDrawable(Dashboard.this);
+				Bitmap icon = Utils.createBitmapFromDrawable(drawable);
+            	Utils.addShortcut(shortcut.htmlLabel, icon, shortcut.actions[0].intent, itemLayout.getPage(), x,y, 1, true);
+			}
         }
 
         @Override
