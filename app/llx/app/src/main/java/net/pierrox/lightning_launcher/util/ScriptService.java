@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2022 Pierre Hébert
+Copyright (c) 2022 f43nd1r, Pierre Hébert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
