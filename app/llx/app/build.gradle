@@ -126,8 +126,14 @@ android {
             }
         }
     }
+    buildFeatures {
+        aidl true
+    }
+    namespace 'net.pierrox.lightning_launcher_extreme'
 }
 
 dependencies {
-    compile project(':core')
+    implementation project(':core')
+    implementation project(':plugin-api')
+    implementation 'net.pierrox.android:lsvg:1.0'
 }

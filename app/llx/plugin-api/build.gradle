@@ -7,9 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
     }
+    namespace 'net.pierrox.lightning_launcher.plugin'
 
 }
 

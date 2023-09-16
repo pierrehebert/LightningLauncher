@@ -6,8 +6,6 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
         buildConfigField "boolean", "IS_BETA", "false"
 
         ndk {
@@ -31,11 +29,12 @@ android {
             path 'src/main/jni/CMakeLists.txt'
         }
     }
+    namespace 'net.pierrox.lightning_launcher'
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/dx.jar')
-    compile 'net.pierrox.android:lsvg:1.0'
-    compile project(':plugin-api')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/dx.jar')
+    implementation 'net.pierrox.android:lsvg:1.0'
+    implementation project(':plugin-api')
 }

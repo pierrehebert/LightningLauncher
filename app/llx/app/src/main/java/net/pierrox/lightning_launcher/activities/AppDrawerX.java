@@ -321,7 +321,7 @@ public class AppDrawerX extends Dashboard implements EditTextIme.OnEditTextImeLi
         saveState();
     }
 
-    @SuppressWarnings("deprecation")
+    @SuppressWarnings("Deprecation")
     @Override
     protected Dialog onCreateDialog(int id) {
         AlertDialog.Builder builder;
